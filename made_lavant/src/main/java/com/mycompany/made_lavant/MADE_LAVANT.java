@@ -7,9 +7,10 @@ package com.mycompany.made_lavant;
 
 /**
  *
- * @autores Daniel Jorge Reis Caldeira - 202065555C Ewerson dos Santos Rodrigues
- * - 201965029AB Marcio Felipe Daniel Gonçalves - 202065519B Matheus Reis
- * Ribeiro - 201965090AB
+ * @autores Daniel Jorge Reis Caldeira - 202065555C
+ * Ewerson dos Santos Rodrigues - 201965029AB 
+ * Marcio Felipe Daniel Gonçalves - 202065519B 
+ * Matheus Reis Ribeiro - 201965090AB
  */
 public class MADE_LAVANT {
 
