@@ -13,11 +13,11 @@
     <build>
         <plugins>
             <plugin>
-                <artifactId>com.mycompany.made_lavant. MADE_LAVANT</artifactId>
+                <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>fully.qualified.MainClass</mainClass>
+                            <mainClass>com.mycompany.made_lavant.MADE_LAVANT</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
