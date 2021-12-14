@@ -16,5 +16,7 @@ package com.mycompany.made_lavant;
 public class MADE_LAVANT {
     public static void main(String[] args) {
         
+        System.out.print("Ola mundo!");
+        
     }
 }
