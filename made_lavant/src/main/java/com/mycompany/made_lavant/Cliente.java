@@ -13,7 +13,7 @@ public class Cliente extends Pessoa {
 
     protected String CPF;
 
-    public Cliente(String nome, Endereco endereco, String CPF) {
+    public Cliente(String nome, Endereço endereco, String CPF) {
         super(nome, endereco);
         if (verificaCPF(CPF)) {
             this.CPF = CPF;

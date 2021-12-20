@@ -12,13 +12,13 @@ package com.mycompany.made_lavant;
 public class Pessoa {
 
     protected String nome;
-    protected Endereco endereco;
+    protected Endereço endereco;
 
     public Pessoa(String nome) {
         this.nome = nome;
     }
 
-    public Pessoa(String nome, Endereco endereco) {
+    public Pessoa(String nome, Endereço endereco) {
         this.nome = nome;
         this.endereco = endereco;
     }
@@ -27,11 +27,11 @@ public class Pessoa {
         return nome;
     }
 
-    public Endereco getEndereco() {
+    public Endereço getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(Endereco endereco) {
+    public void setEndereco(Endereço endereco) {
         this.endereco = endereco;
     }
 

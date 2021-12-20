@@ -13,7 +13,7 @@ public class Funcionario extends Pessoa {
 
     protected String cod;
 
-    public Funcionario(String nome, Endereco endereco, String cod) {
+    public Funcionario(String nome, Endereço endereco, String cod) {
         super(nome, endereco);
         this.cod = cod;
     }
