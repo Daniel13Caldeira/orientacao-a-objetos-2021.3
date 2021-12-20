@@ -1,7 +1,7 @@
 
 package com.mycompany.made_lavant;
 
-public class Endereço {
+public class Endereco {
     protected  String cidade;
     protected  String cep;
     protected  String uf;
@@ -66,7 +66,7 @@ public class Endereço {
         this.numero = numero;
     }
 
-    public Endereço(String cidade, String cep, String uf, String bairro, String rua, String pais, int numero) {
+    public Endereco(String cidade, String cep, String uf, String bairro, String rua, String pais, int numero) {
         this.cidade = cidade;
         this.cep = cep;
         this.uf = uf;
