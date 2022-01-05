@@ -7,6 +7,7 @@ public class Produto {
     
     protected String nome;
     protected int codigo;
+    private static int codAtual=1; 
     protected double preco;
     protected Date validade;
     protected double quantidade;
@@ -39,22 +40,24 @@ public class Produto {
         this.quantidade = quantidade;
     }
 
-    public Produto(String nome, int codigo, double preco, Date validade, double quantidade) {
+    public Produto(String nome, double preco, Date validade, double quantidade) {
         this.nome = nome;
-        this.codigo = codigo;
+        this.codigo = codAtual;
+        codAtual++;
         this.preco = preco;
         this.validade = validade;
         this.quantidade = quantidade;
     }
 
-    public Produto(String nome, int codigo, double preco, double quantidade) {
+    public Produto(String nome, double preco, double quantidade) {
         this.nome = nome;
-        this.codigo = codigo;
+        this.codigo = codAtual;
+        codAtual++;
         this.preco = preco;
         this.quantidade = quantidade;
     }
     
-    public void removerProduto(){
+    public void remove(){
         
     }
     

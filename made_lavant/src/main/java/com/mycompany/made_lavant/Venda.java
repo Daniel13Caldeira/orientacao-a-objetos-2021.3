@@ -12,24 +12,22 @@ import java.util.Date;
  * @author ewe88
  */
 public class Venda {
-    
+
     protected Date data;
     protected Funcionario funcionario;
-    //protected Carrinho carrinho;
+    protected Carrinho carrinho;
 
-    public Venda(Date data, Funcionario funcionario) {
-        this.data = data;
+    public Venda(Funcionario funcionario, Carrinho carrinho /*int codCarrinho*/) {
+        this.data = new Date();
         this.funcionario = funcionario;
-        //this.carrinho = carrinho;
+        this.carrinho = carrinho;
     }
-    
-    public void efetuaVenda(){
-        
-        
+
+    public void efetuaVenda() {
+
     }
-    
-    public void cancelaVenda(){
-        
-        
+
+    public void cancelaVenda() {
+
     }
 }

@@ -27,6 +27,10 @@ public class Cliente extends Pessoa {
         }
     }
 
+    public void remove() {
+
+    }
+
     public String getCPF() {
         return CPF;
     }

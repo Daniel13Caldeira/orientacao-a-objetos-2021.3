@@ -26,4 +26,8 @@ public class Funcionario extends Pessoa {
     public String getCod() {
         return cod;
     }
+    
+    public void remove(){
+        
+    }
 }

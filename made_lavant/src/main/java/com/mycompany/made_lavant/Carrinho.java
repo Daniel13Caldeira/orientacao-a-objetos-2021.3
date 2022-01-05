@@ -4,39 +4,56 @@
  */
 package com.mycompany.made_lavant;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author matheusreis
  */
 public class Carrinho {
+
     protected Cliente cliente;
-    protected Produto produto;
+    protected ArrayList<Produto> produtos = new ArrayList<>();
     protected double preco;
-    
-public void adicionarProduto (){
-    
-}
-    
- public void removerProduto (){
-    
-} 
- 
- public String listarProduto (){
-    
-        return null;
-    
-}
- public void comprar (){
-    
-} 
- 
- public void cancelarComprar (){
-    
-} 
-  public double calcularPreco (){
-    
-        return 0;
-    
-}
-    
+    private static int codAtual=1;
+    protected int cod;
+
+    public Carrinho(Cliente cliente) {
+        this.cliente = cliente;
+        cod=codAtual;
+        codAtual++;
+    }
+
+    public int getCod() {
+        return cod;
+    }
+
+    public void adicionarProduto(String cod) {
+
+    }
+
+    public void removerProduto(String cod) {
+
+    }
+
+    public void listarProduto() {
+
+    }
+
+    public void enviar() {
+
+    }
+
+    public void excluir() {
+
+    }
+
+    public double calcularPreco() {
+        double total = 0;
+        for (int i = 0; i < this.produtos.size(); i++) {
+            total += this.produtos.get(i).getPreco();
+        }
+        return total;
+    }
+
 }

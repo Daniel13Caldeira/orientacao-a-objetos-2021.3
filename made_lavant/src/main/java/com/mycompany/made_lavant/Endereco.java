@@ -7,7 +7,6 @@ public class Endereco {
     protected  String uf;
     protected  String bairro;
     protected  String rua;
-    protected  String pais;
     protected  int numero;
 
     public String getCidade() {
@@ -50,14 +49,6 @@ public class Endereco {
         this.rua = rua;
     }
 
-    public String getPais() {
-        return pais;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
-
     public int getNumero() {
         return numero;
     }
@@ -72,7 +63,6 @@ public class Endereco {
         this.uf = uf;
         this.bairro = bairro;
         this.rua = rua;
-        this.pais = pais;
         this.numero = numero;
     }
      
