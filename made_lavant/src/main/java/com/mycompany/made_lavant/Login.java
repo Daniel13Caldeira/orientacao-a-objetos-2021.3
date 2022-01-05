@@ -42,7 +42,7 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
         jButton4.setBackground(new java.awt.Color(255, 253, 130));
-        jButton4.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(232, 72, 85));
         jButton4.setText("Confirmar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -72,7 +72,7 @@ public class Login extends javax.swing.JFrame {
         jLabel8.setText("Senha");
 
         jButton3.setBackground(new java.awt.Color(255, 253, 130));
-        jButton3.setFont(new java.awt.Font("Colonna MT", 0, 24)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
         jButton3.setForeground(new java.awt.Color(232, 72, 85));
         jButton3.setText("Cadastrar");
 

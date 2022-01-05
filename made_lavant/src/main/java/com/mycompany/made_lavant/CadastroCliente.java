@@ -52,6 +52,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cadastro");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
@@ -60,15 +61,15 @@ public class CadastroCliente extends javax.swing.JFrame {
         jLabel1.setText("Cadastro do Cliente");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel2.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(232, 72, 85));
         jLabel2.setText("Nome");
 
-        jLabel3.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(232, 72, 85));
         jLabel3.setText("Cidade");
 
-        jLabel4.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(232, 72, 85));
         jLabel4.setText("Rua");
 
@@ -91,32 +92,32 @@ public class CadastroCliente extends javax.swing.JFrame {
         });
 
         jButton1.setBackground(new java.awt.Color(255, 253, 130));
-        jButton1.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(232, 72, 85));
         jButton1.setText("Confirmar");
 
         jButton2.setBackground(new java.awt.Color(255, 253, 130));
-        jButton2.setFont(new java.awt.Font("Colonna MT", 0, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(232, 72, 85));
         jButton2.setText("Voltar");
 
-        jLabel5.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(232, 72, 85));
         jLabel5.setText("Bairro");
 
-        jLabel6.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(232, 72, 85));
         jLabel6.setText("Número");
 
-        jLabel7.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(232, 72, 85));
         jLabel7.setText("UF");
 
-        jLabel8.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(232, 72, 85));
         jLabel8.setText("CEP");
 
-        jLabel9.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(232, 72, 85));
         jLabel9.setText("CPF");
 
@@ -132,11 +133,11 @@ public class CadastroCliente extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Colonna MT", 0, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 253, 130));
         jLabel10.setText("MADE");
 
-        jLabel11.setFont(new java.awt.Font("Colonna MT", 0, 24)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(232, 72, 85));
         jLabel11.setText("Lavant");
 
@@ -194,7 +195,7 @@ public class CadastroCliente extends javax.swing.JFrame {
                             .addComponent(jLabel8))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                            .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                             .addComponent(jTextField5))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -238,13 +239,11 @@ public class CadastroCliente extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39))))
         );
