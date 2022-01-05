@@ -51,7 +51,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton17" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_sair" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="191" max="32767" attributes="0"/>
                   <Component id="jLabel13" min="-2" pref="229" max="-2" attributes="0"/>
                   <EmptySpace pref="231" max="32767" attributes="0"/>
@@ -61,10 +61,9 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel14" min="-2" pref="229" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton20" max="32767" attributes="0"/>
-                          <Component id="jLabel15" max="32767" attributes="0"/>
-                          <Component id="jButton18" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jButton19" alignment="0" min="-2" pref="229" max="-2" attributes="0"/>
+                          <Component id="btn_perfilCliente" max="32767" attributes="0"/>
+                          <Component id="btn_carrinhoCliente" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btn_produtosCliente" alignment="0" min="-2" pref="229" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -82,26 +81,24 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton17" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_sair" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton18" min="-2" pref="51" max="-2" attributes="0"/>
+                  <Component id="btn_carrinhoCliente" min="-2" pref="51" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton19" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="btn_produtosCliente" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="jButton20" min="-2" pref="46" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="jLabel15" min="-2" pref="31" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="btn_perfilCliente" min="-2" pref="46" max="-2" attributes="0"/>
+                  <EmptySpace pref="83" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton17">
+        <Component class="javax.swing.JButton" name="btn_sair">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -143,7 +140,7 @@
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton18">
+        <Component class="javax.swing.JButton" name="btn_carrinhoCliente">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -160,7 +157,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton19">
+        <Component class="javax.swing.JButton" name="btn_produtosCliente">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -174,10 +171,10 @@
             <Property name="text" type="java.lang.String" value="Produtos"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton19ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_produtosClienteActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton20">
+        <Component class="javax.swing.JButton" name="btn_perfilCliente">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -193,22 +190,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel15">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="47" green="30" red="2d" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="18" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="55" green="48" red="e8" type="rgb"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Hor&#xe1;rio de Funcionamento"/>
-            <Property name="horizontalTextPosition" type="int" value="0"/>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>

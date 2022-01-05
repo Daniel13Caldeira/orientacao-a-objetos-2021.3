@@ -26,6 +26,7 @@ public class JanelaCadastroFuncionario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -48,6 +49,9 @@ public class JanelaCadastroFuncionario extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jTextField8 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        btn_sairCadastroFunc = new javax.swing.JButton();
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro de Funcioario");
@@ -138,6 +142,21 @@ public class JanelaCadastroFuncionario extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(232, 72, 85));
         jButton2.setText("Voltar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        btn_sairCadastroFunc.setBackground(new java.awt.Color(255, 253, 130));
+        btn_sairCadastroFunc.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        btn_sairCadastroFunc.setForeground(new java.awt.Color(232, 72, 85));
+        btn_sairCadastroFunc.setText("Voltar");
+        btn_sairCadastroFunc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_sairCadastroFuncActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -170,7 +189,8 @@ public class JanelaCadastroFuncionario extends javax.swing.JFrame {
                         .addGap(9, 9, 9)
                         .addComponent(jTextField1))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btn_sairCadastroFunc)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -204,9 +224,15 @@ public class JanelaCadastroFuncionario extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(33, 33, 33)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap(27, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addGap(33, 33, 33))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btn_sairCadastroFunc)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -280,6 +306,16 @@ public class JanelaCadastroFuncionario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField8ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       this.setVisible(false);
+        new CRUDFUNCIONARIOS().setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btn_sairCadastroFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroFuncActionPerformed
+        this.setVisible(false);
+        new Login().setVisible(true);
+    }//GEN-LAST:event_btn_sairCadastroFuncActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -316,8 +352,15 @@ public class JanelaCadastroFuncionario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_sair;
+    private javax.swing.JButton btn_sair1;
+    private javax.swing.JButton btn_sair2;
+    private javax.swing.JButton btn_sair3;
+    private javax.swing.JButton btn_sair4;
+    private javax.swing.JButton btn_sairCadastroFunc;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

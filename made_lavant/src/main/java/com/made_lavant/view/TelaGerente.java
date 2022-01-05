@@ -146,19 +146,23 @@ public class TelaGerente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void produtoGerente_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoGerente_btn1ActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new TeladeProdutos().setVisible(true);
     }//GEN-LAST:event_produtoGerente_btn1ActionPerformed
 
     private void clienteGerente_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clienteGerente_btn1ActionPerformed
-        // TODO add your handling code here:
+       this.setVisible(false);
+        new CRUDcliente().setVisible(true);
     }//GEN-LAST:event_clienteGerente_btn1ActionPerformed
 
     private void Sair_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sair_btnActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new Login().setVisible(true);
     }//GEN-LAST:event_Sair_btnActionPerformed
 
     private void funcionariosGerente_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_funcionariosGerente_btnActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new CRUDFUNCIONARIOS().setVisible(true);
     }//GEN-LAST:event_funcionariosGerente_btnActionPerformed
 
     /**

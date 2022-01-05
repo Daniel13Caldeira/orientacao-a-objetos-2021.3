@@ -136,15 +136,18 @@ public class TelaFuncionario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void clienteFunc_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clienteFunc_btn1ActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new CRUDcliente().setVisible(true);
     }//GEN-LAST:event_clienteFunc_btn1ActionPerformed
 
     private void produtoFunc_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoFunc_btn1ActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new TeladeProdutos().setVisible(true);
     }//GEN-LAST:event_produtoFunc_btn1ActionPerformed
 
     private void Sair_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sair_btnActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new Login().setVisible(true);
     }//GEN-LAST:event_Sair_btnActionPerformed
 
     /**
