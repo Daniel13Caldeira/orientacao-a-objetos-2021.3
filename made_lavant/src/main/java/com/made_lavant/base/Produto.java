@@ -1,5 +1,5 @@
 
-package com.mycompany.made_lavant;
+package com.made_lavant.base;
 
 import java.util.Date;
 
