@@ -8,12 +8,12 @@ package com.made_lavant.view;
  *
  * @author matheusreis
  */
-public class JanelaCadastroFuncionario extends javax.swing.JFrame {
+public class CadastroFuncionario extends javax.swing.JFrame {
 
     /**
      * Creates new form JanelaCadastroFuncionario
      */
-    public JanelaCadastroFuncionario() {
+    public CadastroFuncionario() {
         initComponents();
     }
 
@@ -308,7 +308,7 @@ public class JanelaCadastroFuncionario extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        this.setVisible(false);
-        new CRUDFUNCIONARIOS().setVisible(true);
+        new CrudFuncionarios().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btn_sairCadastroFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroFuncActionPerformed
@@ -333,20 +333,21 @@ public class JanelaCadastroFuncionario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JanelaCadastroFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JanelaCadastroFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JanelaCadastroFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JanelaCadastroFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JanelaCadastroFuncionario().setVisible(true);
+                new CadastroFuncionario().setVisible(true);
             }
         });
     }

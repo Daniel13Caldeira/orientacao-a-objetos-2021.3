@@ -222,7 +222,7 @@ public class CadastroProduto extends javax.swing.JFrame {
 
     private void btn_sairCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroClienteActionPerformed
         this.setVisible(false);
-        new TeladeProdutos().setVisible(true);
+        new CrudProdutos().setVisible(true);
     }//GEN-LAST:event_btn_sairCadastroClienteActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -266,6 +266,9 @@ public class CadastroProduto extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(CadastroProduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

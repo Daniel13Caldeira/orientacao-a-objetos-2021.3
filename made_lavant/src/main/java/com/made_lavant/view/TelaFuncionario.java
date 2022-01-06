@@ -142,7 +142,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
 
     private void produtoFunc_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoFunc_btn1ActionPerformed
         this.setVisible(false);
-        new TeladeProdutos().setVisible(true);
+        new CrudProdutos().setVisible(true);
     }//GEN-LAST:event_produtoFunc_btn1ActionPerformed
 
     private void Sair_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sair_btnActionPerformed

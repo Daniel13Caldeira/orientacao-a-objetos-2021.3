@@ -247,7 +247,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         this.setVisible(false);
-        new TelaDeProdutosCliente().setVisible(true);
+        new CrudProdutos_Cliente().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

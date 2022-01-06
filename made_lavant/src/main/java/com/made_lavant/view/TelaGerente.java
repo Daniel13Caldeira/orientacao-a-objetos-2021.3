@@ -147,7 +147,7 @@ public class TelaGerente extends javax.swing.JFrame {
 
     private void produtoGerente_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoGerente_btn1ActionPerformed
         this.setVisible(false);
-        new TeladeProdutos().setVisible(true);
+        new CrudProdutos().setVisible(true);
     }//GEN-LAST:event_produtoGerente_btn1ActionPerformed
 
     private void carrinhoGerente_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhoGerente_btn1ActionPerformed
@@ -162,7 +162,7 @@ public class TelaGerente extends javax.swing.JFrame {
 
     private void funcionariosGerente_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_funcionariosGerente_btnActionPerformed
         this.setVisible(false);
-        new CRUDFUNCIONARIOS().setVisible(true);
+        new CrudFuncionarios().setVisible(true);
     }//GEN-LAST:event_funcionariosGerente_btnActionPerformed
 
     /**

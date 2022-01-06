@@ -235,7 +235,7 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
 
     private void btn_sairCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroClienteActionPerformed
         this.setVisible(false);
-        new CRUDFUNCIONARIOS().setVisible(true);
+        new CrudFuncionarios().setVisible(true);
     }//GEN-LAST:event_btn_sairCadastroClienteActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
