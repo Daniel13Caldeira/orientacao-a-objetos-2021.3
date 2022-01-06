@@ -216,11 +216,12 @@ public class DetalheProduto_Func extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.setVisible(false);
-        new CrudProdutos_Cliente().setVisible(true);
+        new CrudProdutos().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new Login().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

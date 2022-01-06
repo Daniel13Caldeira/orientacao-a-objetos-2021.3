@@ -247,7 +247,8 @@ public class DetalheCarrinho extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void sairBTN_detalherCarrinhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_detalherCarrinhoActionPerformed
-        // TODO add your handling code here:
+       this.setVisible(false);
+        new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_detalherCarrinhoActionPerformed
 
     /**
