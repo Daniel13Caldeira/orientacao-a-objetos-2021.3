@@ -151,7 +151,7 @@ public class JanelaCadastroFuncionario extends javax.swing.JFrame {
         btn_sairCadastroFunc.setBackground(new java.awt.Color(255, 253, 130));
         btn_sairCadastroFunc.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
         btn_sairCadastroFunc.setForeground(new java.awt.Color(232, 72, 85));
-        btn_sairCadastroFunc.setText("Voltar");
+        btn_sairCadastroFunc.setText("Sair");
         btn_sairCadastroFunc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_sairCadastroFuncActionPerformed(evt);
@@ -352,11 +352,6 @@ public class JanelaCadastroFuncionario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_sair;
-    private javax.swing.JButton btn_sair1;
-    private javax.swing.JButton btn_sair2;
-    private javax.swing.JButton btn_sair3;
-    private javax.swing.JButton btn_sair4;
     private javax.swing.JButton btn_sairCadastroFunc;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
