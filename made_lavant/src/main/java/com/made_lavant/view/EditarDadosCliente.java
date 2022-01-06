@@ -272,7 +272,7 @@ public class EditarDadosCliente extends javax.swing.JFrame {
 
     private void btn_sairCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroClienteActionPerformed
         this.setVisible(false);
-        new PerfilCliente().setVisible(true);
+        new Login().setVisible(true);
     }//GEN-LAST:event_btn_sairCadastroClienteActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -284,7 +284,8 @@ public class EditarDadosCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btn_sairCadastroCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroCliente1ActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new PerfilCliente().setVisible(true);
     }//GEN-LAST:event_btn_sairCadastroCliente1ActionPerformed
 
     /**

@@ -123,7 +123,7 @@ public class PerfilFuncionario extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(232, 72, 85));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText("Nome Cliente");
+        jLabel1.setText("Nome Funcionário");
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jLabel12.setBackground(new java.awt.Color(255, 253, 130));

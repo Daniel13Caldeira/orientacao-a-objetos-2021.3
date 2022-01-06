@@ -270,7 +270,8 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_sairCadastroClienteActionPerformed
 
     private void btn_sairCadastroCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroCliente1ActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new PerfilFuncionario().setVisible(true);
     }//GEN-LAST:event_btn_sairCadastroCliente1ActionPerformed
 
     /**

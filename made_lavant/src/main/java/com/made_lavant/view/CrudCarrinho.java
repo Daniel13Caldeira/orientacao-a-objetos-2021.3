@@ -48,17 +48,17 @@ public class CrudCarrinho extends javax.swing.JFrame {
 
         nome_Label.setBackground(new java.awt.Color(255, 255, 255));
         nome_Label.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        nome_Label.setForeground(new java.awt.Color(255, 255, 255));
+        nome_Label.setForeground(new java.awt.Color(255, 253, 130));
         nome_Label.setText("Nome");
 
         nProdutos_Label.setBackground(new java.awt.Color(255, 255, 255));
         nProdutos_Label.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        nProdutos_Label.setForeground(new java.awt.Color(255, 255, 255));
+        nProdutos_Label.setForeground(new java.awt.Color(255, 253, 130));
         nProdutos_Label.setText("000");
 
         total_Label.setBackground(new java.awt.Color(255, 255, 255));
         total_Label.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        total_Label.setForeground(new java.awt.Color(255, 255, 255));
+        total_Label.setForeground(new java.awt.Color(255, 253, 130));
         total_Label.setText("00,00");
 
         made_jLabel.setBackground(new java.awt.Color(255, 253, 130));
@@ -112,7 +112,7 @@ public class CrudCarrinho extends javax.swing.JFrame {
         topicNProd_jLabel.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
         topicNProd_jLabel.setForeground(new java.awt.Color(232, 72, 85));
         topicNProd_jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        topicNProd_jLabel.setText("Quantidade");
+        topicNProd_jLabel.setText("Código");
 
         topicTotal_jLabel.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
         topicTotal_jLabel.setForeground(new java.awt.Color(232, 72, 85));
@@ -141,22 +141,24 @@ public class CrudCarrinho extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(voltarBTN_CrudCarrinho))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 39, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(made_jLabel))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(nome_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(nProdutos_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(7, 56, Short.MAX_VALUE)
+                                        .addComponent(nProdutos_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(28, 28, 28))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(topicoCliente_jLabel)
-                                        .addGap(149, 149, 149)
-                                        .addComponent(topicNProd_jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(57, 57, 57))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(made_jLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                        .addGap(27, 27, 27)
+                                        .addComponent(topicNProd_jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nome_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(topicoCliente_jLabel))))
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lavant_label)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -179,22 +181,27 @@ public class CrudCarrinho extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(61, 61, 61)
-                        .addComponent(lavant_label)
-                        .addGap(60, 60, 60)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(topicoCliente_jLabel)
-                            .addComponent(topicNProd_jLabel)
-                            .addComponent(topicTotal_jLabel))
+                        .addComponent(lavant_label))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(made_jLabel)))
+                .addGap(60, 60, 60)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(topicTotal_jLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(nome_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nProdutos_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(total_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(venda_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(descricao_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(made_jLabel)))
+                        .addComponent(topicoCliente_jLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(nome_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(topicNProd_jLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(nProdutos_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(140, Short.MAX_VALUE))
         );
 

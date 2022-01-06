@@ -334,7 +334,7 @@
               <Color blue="55" green="48" red="e8" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="Nome Cliente"/>
+            <Property name="text" type="java.lang.String" value="Nome Funcion&#xe1;rio"/>
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
         </Component>
