@@ -71,7 +71,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="clienteFunc_btn1" min="-2" pref="152" max="-2" attributes="0"/>
+                                      <Component id="carrinhosFunc_btn1" min="-2" pref="152" max="-2" attributes="0"/>
                                       <Component id="produtoFunc_btn1" min="-2" pref="152" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -94,7 +94,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="produtoFunc_btn1" min="-2" pref="61" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="clienteFunc_btn1" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="carrinhosFunc_btn1" min="-2" pref="61" max="-2" attributes="0"/>
                   <EmptySpace pref="44" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -118,7 +118,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="produtoFunc_btn1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="clienteFunc_btn1">
+        <Component class="javax.swing.JButton" name="carrinhosFunc_btn1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -129,10 +129,10 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Clientes"/>
+            <Property name="text" type="java.lang.String" value="Carrinhos"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clienteFunc_btn1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carrinhosFunc_btn1ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="made_label">

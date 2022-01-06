@@ -28,7 +28,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         produtoFunc_btn1 = new javax.swing.JButton();
-        clienteFunc_btn1 = new javax.swing.JButton();
+        carrinhosFunc_btn1 = new javax.swing.JButton();
         made_label = new javax.swing.JLabel();
         lavant_btn = new javax.swing.JLabel();
         Sair_btn = new javax.swing.JButton();
@@ -53,13 +53,13 @@ public class TelaFuncionario extends javax.swing.JFrame {
             }
         });
 
-        clienteFunc_btn1.setBackground(new java.awt.Color(255, 253, 130));
-        clienteFunc_btn1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        clienteFunc_btn1.setForeground(new java.awt.Color(232, 72, 85));
-        clienteFunc_btn1.setText("Clientes");
-        clienteFunc_btn1.addActionListener(new java.awt.event.ActionListener() {
+        carrinhosFunc_btn1.setBackground(new java.awt.Color(255, 253, 130));
+        carrinhosFunc_btn1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        carrinhosFunc_btn1.setForeground(new java.awt.Color(232, 72, 85));
+        carrinhosFunc_btn1.setText("Carrinhos");
+        carrinhosFunc_btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clienteFunc_btn1ActionPerformed(evt);
+                carrinhosFunc_btn1ActionPerformed(evt);
             }
         });
 
@@ -101,7 +101,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(50, 50, 50)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(clienteFunc_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(carrinhosFunc_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(produtoFunc_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(229, Short.MAX_VALUE))
         );
@@ -117,7 +117,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(produtoFunc_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(clienteFunc_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(carrinhosFunc_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(44, Short.MAX_VALUE))
         );
 
@@ -135,10 +135,10 @@ public class TelaFuncionario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void clienteFunc_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clienteFunc_btn1ActionPerformed
+    private void carrinhosFunc_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhosFunc_btn1ActionPerformed
         this.setVisible(false);
-        new CRUDcliente().setVisible(true);
-    }//GEN-LAST:event_clienteFunc_btn1ActionPerformed
+        new CrudCarrinho().setVisible(true);
+    }//GEN-LAST:event_carrinhosFunc_btn1ActionPerformed
 
     private void produtoFunc_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoFunc_btn1ActionPerformed
         this.setVisible(false);
@@ -187,7 +187,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Sair_btn;
-    private javax.swing.JButton clienteFunc_btn1;
+    private javax.swing.JButton carrinhosFunc_btn1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lavant_btn;
     private javax.swing.JLabel made_label;

@@ -28,8 +28,8 @@ public class TelaCliente extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         btn_sair = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        made_Label = new javax.swing.JLabel();
+        lavant_Label = new javax.swing.JLabel();
         btn_carrinhoCliente = new javax.swing.JButton();
         btn_produtosCliente = new javax.swing.JButton();
         btn_perfilCliente = new javax.swing.JButton();
@@ -52,16 +52,16 @@ public class TelaCliente extends javax.swing.JFrame {
             }
         });
 
-        jLabel13.setFont(new java.awt.Font("Colonna MT", 0, 65)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel13.setText("MADE");
-        jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        made_Label.setFont(new java.awt.Font("Colonna MT", 0, 65)); // NOI18N
+        made_Label.setForeground(new java.awt.Color(255, 253, 130));
+        made_Label.setText("MADE");
+        made_Label.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel14.setFont(new java.awt.Font("Colonna MT", 1, 65)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel14.setText("Lavant");
-        jLabel14.setToolTipText("");
+        lavant_Label.setFont(new java.awt.Font("Colonna MT", 1, 65)); // NOI18N
+        lavant_Label.setForeground(new java.awt.Color(232, 72, 85));
+        lavant_Label.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lavant_Label.setText("Lavant");
+        lavant_Label.setToolTipText("");
 
         btn_carrinhoCliente.setBackground(new java.awt.Color(255, 253, 130));
         btn_carrinhoCliente.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
@@ -101,12 +101,12 @@ public class TelaCliente extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(btn_sair)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(made_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(231, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lavant_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(btn_perfilCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btn_carrinhoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -119,13 +119,13 @@ public class TelaCliente extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap(41, Short.MAX_VALUE)
-                        .addComponent(jLabel13)
+                        .addComponent(made_Label)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btn_sair)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jLabel14)
+                .addComponent(lavant_Label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_carrinhoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -209,8 +209,8 @@ public class TelaCliente extends javax.swing.JFrame {
     private javax.swing.JButton btn_perfilCliente;
     private javax.swing.JButton btn_produtosCliente;
     private javax.swing.JButton btn_sair;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lavant_Label;
+    private javax.swing.JLabel made_Label;
     // End of variables declaration//GEN-END:variables
 }

@@ -28,7 +28,7 @@ public class TelaGerente extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         produtoGerente_btn1 = new javax.swing.JButton();
-        clienteGerente_btn1 = new javax.swing.JButton();
+        carrinhoGerente_btn1 = new javax.swing.JButton();
         made_label = new javax.swing.JLabel();
         lavant_btn = new javax.swing.JLabel();
         Sair_btn = new javax.swing.JButton();
@@ -49,13 +49,13 @@ public class TelaGerente extends javax.swing.JFrame {
             }
         });
 
-        clienteGerente_btn1.setBackground(new java.awt.Color(255, 253, 130));
-        clienteGerente_btn1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        clienteGerente_btn1.setForeground(new java.awt.Color(232, 72, 85));
-        clienteGerente_btn1.setText("Clientes");
-        clienteGerente_btn1.addActionListener(new java.awt.event.ActionListener() {
+        carrinhoGerente_btn1.setBackground(new java.awt.Color(255, 253, 130));
+        carrinhoGerente_btn1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        carrinhoGerente_btn1.setForeground(new java.awt.Color(232, 72, 85));
+        carrinhoGerente_btn1.setText("Carrinho");
+        carrinhoGerente_btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clienteGerente_btn1ActionPerformed(evt);
+                carrinhoGerente_btn1ActionPerformed(evt);
             }
         });
 
@@ -109,7 +109,7 @@ public class TelaGerente extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(funcionariosGerente_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(clienteGerente_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(carrinhoGerente_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(produtoGerente_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -125,7 +125,7 @@ public class TelaGerente extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(produtoGerente_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(clienteGerente_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(carrinhoGerente_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(funcionariosGerente_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(30, Short.MAX_VALUE))
@@ -150,10 +150,10 @@ public class TelaGerente extends javax.swing.JFrame {
         new TeladeProdutos().setVisible(true);
     }//GEN-LAST:event_produtoGerente_btn1ActionPerformed
 
-    private void clienteGerente_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clienteGerente_btn1ActionPerformed
+    private void carrinhoGerente_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhoGerente_btn1ActionPerformed
        this.setVisible(false);
-        new CRUDcliente().setVisible(true);
-    }//GEN-LAST:event_clienteGerente_btn1ActionPerformed
+        new CrudCarrinho().setVisible(true);
+    }//GEN-LAST:event_carrinhoGerente_btn1ActionPerformed
 
     private void Sair_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sair_btnActionPerformed
         this.setVisible(false);
@@ -202,7 +202,7 @@ public class TelaGerente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Sair_btn;
-    private javax.swing.JButton clienteGerente_btn1;
+    private javax.swing.JButton carrinhoGerente_btn1;
     private javax.swing.JButton funcionariosGerente_btn;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lavant_btn;

@@ -53,13 +53,13 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btn_sair" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="191" max="32767" attributes="0"/>
-                  <Component id="jLabel13" min="-2" pref="229" max="-2" attributes="0"/>
+                  <Component id="made_Label" min="-2" pref="229" max="-2" attributes="0"/>
                   <EmptySpace pref="231" max="32767" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel14" min="-2" pref="229" max="-2" attributes="0"/>
+                      <Component id="lavant_Label" min="-2" pref="229" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="btn_perfilCliente" max="32767" attributes="0"/>
                           <Component id="btn_carrinhoCliente" alignment="0" max="32767" attributes="0"/>
@@ -76,7 +76,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace pref="41" max="32767" attributes="0"/>
-                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                          <Component id="made_Label" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -85,7 +85,7 @@
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                  <Component id="lavant_Label" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="btn_carrinhoCliente" min="-2" pref="51" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -115,7 +115,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel13">
+        <Component class="javax.swing.JLabel" name="made_Label">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="65" style="0"/>
@@ -127,7 +127,7 @@
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel14">
+        <Component class="javax.swing.JLabel" name="lavant_Label">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="65" style="1"/>
