@@ -39,6 +39,7 @@ public class CrudCarrinho extends javax.swing.JFrame {
         topicoCliente_jLabel = new javax.swing.JLabel();
         topicNProd_jLabel = new javax.swing.JLabel();
         topicTotal_jLabel = new javax.swing.JLabel();
+        voltarBTN_CrudCarrinho = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lista de Carrinhos");
@@ -48,17 +49,17 @@ public class CrudCarrinho extends javax.swing.JFrame {
         nome_Label.setBackground(new java.awt.Color(255, 255, 255));
         nome_Label.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         nome_Label.setForeground(new java.awt.Color(255, 255, 255));
-        nome_Label.setText("jLabel8");
+        nome_Label.setText("Nome");
 
         nProdutos_Label.setBackground(new java.awt.Color(255, 255, 255));
         nProdutos_Label.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         nProdutos_Label.setForeground(new java.awt.Color(255, 255, 255));
-        nProdutos_Label.setText("jLabel9");
+        nProdutos_Label.setText("000");
 
         total_Label.setBackground(new java.awt.Color(255, 255, 255));
         total_Label.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         total_Label.setForeground(new java.awt.Color(255, 255, 255));
-        total_Label.setText("jLabel12");
+        total_Label.setText("00,00");
 
         made_jLabel.setBackground(new java.awt.Color(255, 253, 130));
         made_jLabel.setFont(new java.awt.Font("Colonna MT", 0, 36)); // NOI18N
@@ -111,12 +112,22 @@ public class CrudCarrinho extends javax.swing.JFrame {
         topicNProd_jLabel.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
         topicNProd_jLabel.setForeground(new java.awt.Color(232, 72, 85));
         topicNProd_jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        topicNProd_jLabel.setText("Nº Produtos");
+        topicNProd_jLabel.setText("Quantidade");
 
         topicTotal_jLabel.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
         topicTotal_jLabel.setForeground(new java.awt.Color(232, 72, 85));
         topicTotal_jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        topicTotal_jLabel.setText("Total");
+        topicTotal_jLabel.setText("Preço Total");
+
+        voltarBTN_CrudCarrinho.setBackground(new java.awt.Color(255, 253, 130));
+        voltarBTN_CrudCarrinho.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        voltarBTN_CrudCarrinho.setForeground(new java.awt.Color(232, 72, 85));
+        voltarBTN_CrudCarrinho.setText("Voltar");
+        voltarBTN_CrudCarrinho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarBTN_CrudCarrinhoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -127,7 +138,8 @@ public class CrudCarrinho extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(sair_btn)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(voltarBTN_CrudCarrinho))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 39, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,21 +159,23 @@ public class CrudCarrinho extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lavant_label)
-                            .addComponent(topicTotal_jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(total_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(57, 57, 57)
                                 .addComponent(venda_btn)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(descricao_btn)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(descricao_btn))
+                            .addComponent(topicTotal_jLabel))))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(sair_btn)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sair_btn)
+                    .addComponent(voltarBTN_CrudCarrinho))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(61, 61, 61)
@@ -181,7 +195,7 @@ public class CrudCarrinho extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(made_jLabel)))
-                .addContainerGap(234, Short.MAX_VALUE))
+                .addContainerGap(140, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -212,6 +226,10 @@ public class CrudCarrinho extends javax.swing.JFrame {
         this.setVisible(false);
         new ConfirmacaoVenda().setVisible(true);
     }//GEN-LAST:event_venda_btnActionPerformed
+
+    private void voltarBTN_CrudCarrinhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CrudCarrinhoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_voltarBTN_CrudCarrinhoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -261,5 +279,6 @@ public class CrudCarrinho extends javax.swing.JFrame {
     private javax.swing.JLabel topicoCliente_jLabel;
     private javax.swing.JLabel total_Label;
     private javax.swing.JButton venda_btn;
+    private javax.swing.JButton voltarBTN_CrudCarrinho;
     // End of variables declaration//GEN-END:variables
 }
