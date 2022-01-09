@@ -4,6 +4,7 @@
  */
 package com.made_lavant.dados;
 
+import com.made_lavant.base.Cliente;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -27,9 +28,8 @@ public class ClienteDados {
         resultado = separa(resto, info - 1);
         return resultado;
     }
-
-    public void adicionar(String cod, String nome, String cidade, String rua, String bairro, int numero, String UF, String CEP) {
-        String info = cod + ';' + nome + ';' + cidade + ';' + rua + ';' + bairro + ';' + numero + ';' + UF + ';' + CEP + ';';
+public void adicionarSemEndereco(Cliente cliente) {
+        String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';';
         File arquivo = new File("dados\\cliente.txt");
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
@@ -42,10 +42,25 @@ public class ClienteDados {
         } catch (IOException ex) {
 
         }
+    }
+    public void adicionar(Cliente cliente) {
+        String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + cliente.getEndereco().getCidade() + ';' + cliente.getEndereco().getRua() + ';' + cliente.getEndereco().getBairro() + ';' + cliente.getEndereco().getNumero() + ';' + cliente.getEndereco().getUf() + ';' + cliente.getEndereco().getCep() + ';';
+        File arquivo = new File("dados\\cliente.txt");
+        try {
+            FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
+            BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
+            escritor.write(info);
+            escritor.newLine();
+            escritor.flush();
+            escritor.close();
+            escrita.close();
+        } catch (IOException ex) {
 
+        }
     }
 
-    public void remover(String cod) {
+    public void remover(Cliente cliente) {
+        String cod = cliente.getCPF();
         File arquivo = new File("dados\\cliente.txt");
         ArrayList<String> salvar = new ArrayList<>();//armazena as linhas que não serão apagadas
         try {
@@ -94,7 +109,8 @@ public class ClienteDados {
         return null;
     }
 
-    public String buscarNome(String cod) {
+    public String buscarNome(Cliente cliente) {
+        String cod = cliente.getCPF();
         String aux = buscar(cod);
         if (aux != null) {
             return separa(aux, 1);
@@ -102,7 +118,15 @@ public class ClienteDados {
         return null;
     }
 
-    public String buscarCodigo(String cod) {
+    public String buscarCPF(Cliente cliente) {
+        String cod = cliente.getCPF();
+        String aux = buscar(cod);
+        if (aux != null) {
+            return separa(aux, 0);
+        }
+        return null;
+    }
+    public String buscarCPF(String cod) {
         String aux = buscar(cod);
         if (aux != null) {
             return separa(aux, 0);
@@ -110,7 +134,8 @@ public class ClienteDados {
         return null;
     }
 
-    public String buscarRua(String cod) {
+    public String buscarRua(Cliente cliente) {
+        String cod = cliente.getCPF();
         String aux = buscar(cod);
         if (aux != null) {
             return separa(aux, 3);
@@ -118,7 +143,8 @@ public class ClienteDados {
         return null;
     }
 
-    public String buscarBairro(String cod) {
+    public String buscarBairro(Cliente cliente) {
+        String cod = cliente.getCPF();
         String aux = buscar(cod);
         if (aux != null) {
             return separa(aux, 4);
@@ -126,7 +152,8 @@ public class ClienteDados {
         return null;
     }
 
-    public String buscarCidade(String cod) {
+    public String buscarCidade(Cliente cliente) {
+        String cod = cliente.getCPF();
         String aux = buscar(cod);
         if (aux != null) {
             return separa(aux, 2);
@@ -134,7 +161,8 @@ public class ClienteDados {
         return null;
     }
 
-    public String buscarNumero(String cod) {
+    public String buscarNumero(Cliente cliente) {
+        String cod = cliente.getCPF();
         String aux = buscar(cod);
         if (aux != null) {
             return separa(aux, 5);
@@ -142,15 +170,17 @@ public class ClienteDados {
         return null;
     }
 
-    public String buscarUF(String cod) {
+    public String buscarUF(Cliente cliente) {
+        String cod = cliente.getCPF();
         String aux = buscar(cod);
         if (aux != null) {
             return separa(aux, 6);
         }
         return null;
     }
-
-    public String buscarCEP(String cod) {
+    
+    public String buscarCEP(Cliente cliente) {
+        String cod = cliente.getCPF();
         String aux = buscar(cod);
         if (aux != null) {
             return separa(aux, 7);
@@ -158,10 +188,16 @@ public class ClienteDados {
         return null;
     }
 
-    public void alterar(String cod, String nome, String cidade, String rua, String bairro, int numero, String UF, String CEP) {
-        if (buscar(cod)!=null) {
-            remover(cod);
-            adicionar(cod, nome, cidade, rua, bairro, numero, UF, CEP);
+    public void alterar(Cliente cliente) {
+        if (buscar(cliente.getCPF())!=null) {
+            remover(cliente);
+            adicionar(cliente);
+        }
+    }
+    public void alterarSemEndereco(Cliente cliente) {
+        if (buscar(cliente.getCPF())!=null) {
+            remover(cliente);
+            adicionarSemEndereco(cliente);
         }
     }
 }

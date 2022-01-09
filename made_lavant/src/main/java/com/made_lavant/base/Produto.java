@@ -1,4 +1,3 @@
-
 package com.made_lavant.base;
 
 import com.made_lavant.dados.Codigos;
@@ -6,6 +5,7 @@ import com.made_lavant.dados.ProdutoDados;
 import java.util.Date;
 
 public class Produto {
+
     protected String nome;
     protected int codigo;
     protected double preco;
@@ -39,6 +39,7 @@ public class Produto {
     }
 
     public void setQuantidade(double quantidade) {
+        this.quantidade = quantidade;
         ProdutoDados altera = new ProdutoDados();
         altera.alterar(this);
     }
@@ -65,12 +66,10 @@ public class Produto {
         ProdutoDados add = new ProdutoDados();
         add.adicionar(this);
     }
-    
-    public void remove(){
+
+    public void remove() {
         ProdutoDados remove = new ProdutoDados();
         remove.remover(this);
     }
-    
-    
-    
+
 }

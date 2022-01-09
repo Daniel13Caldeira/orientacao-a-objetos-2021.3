@@ -5,30 +5,53 @@
  */
 package com.made_lavant.base;
 
+import com.made_lavant.dados.ClienteDados;
+
 /**
  *
  * @author Daniel
  */
 public class Cliente extends Pessoa {
 
-    protected String CPF;
+    public String CPF;
 
     public Cliente(String nome, Endereco endereco, String CPF) {
         super(nome, endereco);
-        if (verificaCPF(CPF)) {
-            this.CPF = CPF;
-        }
+        this.CPF = CPF;
+        ClienteDados add = new ClienteDados();
+        add.adicionar(this);
+
     }
 
     public Cliente(String nome, String CPF) {
         super(nome);
-        if (verificaCPF(CPF)) {
-            this.CPF = CPF;
-        }
+        this.CPF = CPF;
+        ClienteDados add = new ClienteDados();
+        add.adicionarSemEndereco(this);
     }
 
     public void remove() {
+        ClienteDados remove = new ClienteDados();
+        remove.remover(this);
+    }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String bairro, String cep, String cidade, String numero, String rua, String uf) {
+        this.endereco.setBairro(bairro);
+        this.endereco.setCep(cep);
+        this.endereco.setCidade(cidade);
+        this.endereco.setNumero(numero);
+        this.endereco.setRua(rua);
+        this.endereco.setUf(uf);
+        ClienteDados altera = new ClienteDados();
+        altera.alterar(this);
     }
 
     public String getCPF() {
@@ -46,7 +69,7 @@ public class Cliente extends Pessoa {
             soma = 0;
         }
         if (soma != Integer.parseInt(CPF.charAt(9) + "")) {
-            return false;
+            return true;
         }
         j = 11;
         soma = 0;
@@ -59,7 +82,7 @@ public class Cliente extends Pessoa {
             soma = 0;
         }
         if (soma != Integer.parseInt(CPF.charAt(10) + "")) {
-            return false;
+            return true;
         }
         return true;
     }

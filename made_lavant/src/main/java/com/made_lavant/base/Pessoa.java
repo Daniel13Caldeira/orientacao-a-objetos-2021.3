@@ -22,22 +22,4 @@ public class Pessoa {
         this.nome = nome;
         this.endereco = endereco;
     }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String bairro,String cep, String cidade, int numero, String rua, String uf) {
-        this.endereco.setBairro(bairro);
-        this.endereco.setCep(cep);
-        this.endereco.setCidade(cidade);
-        this.endereco.setNumero(numero);
-        this.endereco.setRua(rua);
-        this.endereco.setUf(uf);
-    }
-
 }

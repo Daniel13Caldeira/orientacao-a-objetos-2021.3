@@ -1,13 +1,13 @@
-
 package com.made_lavant.base;
 
 public class Endereco {
-    protected  String cidade;
-    protected  String cep;
-    protected  String uf;
-    protected  String bairro;
-    protected  String rua;
-    protected  int numero;
+
+    protected String cidade;
+    protected String cep;
+    protected String uf;
+    protected String bairro;
+    protected String rua;
+    protected String numero;
 
     public String getCidade() {
         return cidade;
@@ -49,15 +49,15 @@ public class Endereco {
         this.rua = rua;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
-    public Endereco(String cidade, String cep, String uf, String bairro, String rua, String pais, int numero) {
+    public Endereco(String cidade, String cep, String uf, String bairro, String rua, String numero) {
         this.cidade = cidade;
         this.cep = cep;
         this.uf = uf;
@@ -65,8 +65,5 @@ public class Endereco {
         this.rua = rua;
         this.numero = numero;
     }
-     
-    
-    
-    
+
 }
