@@ -15,9 +15,10 @@ import com.made_lavant.dados.FuncionarioDados;
 public class Funcionario extends Pessoa {
 
     protected String cod;
+
     //cria um funcionário com endereço
-    public Funcionario(String nome, Endereco endereco, String identificador) {
-        super(nome, endereco);
+    public Funcionario(String nome, Endereco endereco, String senha, String identificador) {
+        super(nome, endereco, senha);
         Codigos codigos = new Codigos();
         if (identificador.equals("A")) {
             //cria gerente
@@ -26,15 +27,16 @@ public class Funcionario extends Pessoa {
             //cria funcionário
             this.cod = "B" + codigos.buscaFuncionario();
         }
-       //altera o código do próximo funcionário a ser criado
+        //altera o código do próximo funcionário a ser criado
         codigos.alterarFuncionario();
         FuncionarioDados add = new FuncionarioDados();
         //adicona o funcionário ao arquivo onde ficará salvo
         add.adicionar(this);
     }
+
     //cria funcionário sem endereço
-    public Funcionario(String nome, String identificador) {
-        super(nome);
+    public Funcionario(String nome, String senha, String identificador) {
+        super(nome, senha);
         Codigos codigos = new Codigos();
         if (identificador.equals("A")) {
             //cria gerente
@@ -50,6 +52,17 @@ public class Funcionario extends Pessoa {
         add.adicionarSemEndereco(this);
     }
 
+    public String getSenha() {
+        return senha;
+    }
+
+    //altera a senha
+    public void setSenha(String senha) {
+        this.senha = senha;
+        FuncionarioDados altera = new FuncionarioDados();
+        altera.alterar(this);
+    }
+
     public String getNome() {
         return nome;
     }
@@ -57,6 +70,7 @@ public class Funcionario extends Pessoa {
     public Endereco getEndereco() {
         return endereco;
     }
+
     //muda o endereço do funcionário
     public void setEndereco(String bairro, String cep, String cidade, String numero, String rua, String uf) {
         this.endereco.setBairro(bairro);
@@ -72,6 +86,7 @@ public class Funcionario extends Pessoa {
     public String getCod() {
         return cod;
     }
+
     //apaga um funcionário
     public void remove() {
         FuncionarioDados remove = new FuncionarioDados();

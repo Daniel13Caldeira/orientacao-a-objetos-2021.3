@@ -39,7 +39,7 @@ public class FuncionarioDados {
     //adiciona um funcionario sem endereço ao arquivo de salvamento
     public void adicionarSemEndereco(Funcionario funcionario) {
         //cria uma String com os dados do funcionário no formato padrão que está sendo utilizado
-        String info = funcionario.getCod() + ';' + funcionario.getNome() + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';';
+        String info = funcionario.getCod() + ';' + funcionario.getNome() + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + funcionario.getSenha() + ';';
         //define o arquivo de salvamento
         File arquivo = new File("dados\\funcionario.txt");
         try {
@@ -55,9 +55,10 @@ public class FuncionarioDados {
 
         }
     }
+
     //semelhante ao adicionarSemEndereço
     public void adicionar(Funcionario funcionario) {
-        String info = funcionario.getCod() + ';' + funcionario.getNome() + ';' + funcionario.getEndereco().getCidade() + ';' + funcionario.getEndereco().getRua() + ';' + funcionario.getEndereco().getBairro() + ';' + funcionario.getEndereco().getNumero() + ';' + funcionario.getEndereco().getUf() + ';' + funcionario.getEndereco().getCep() + ';';
+        String info = funcionario.getCod() + ';' + funcionario.getNome() + ';' + funcionario.getEndereco().getCidade() + ';' + funcionario.getEndereco().getRua() + ';' + funcionario.getEndereco().getBairro() + ';' + funcionario.getEndereco().getNumero() + ';' + funcionario.getEndereco().getUf() + ';' + funcionario.getEndereco().getCep() + ';' + funcionario.getSenha() + ';';
         File arquivo = new File("dados\\funcionario.txt");
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
@@ -72,6 +73,7 @@ public class FuncionarioDados {
         }
 
     }
+
     //remove um funcionário do arquivo de salvamento
     public void remover(Funcionario funcionario) {
         String cod = funcionario.getCod();
@@ -106,9 +108,9 @@ public class FuncionarioDados {
 
         }
     }
+
     //busca uma linha
-    private String buscar(Funcionario funcionario) {
-        String cod = funcionario.getCod();
+    private String buscar(String cod) {
         File arquivo = new File("dados\\funcionario.txt");
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
@@ -128,7 +130,7 @@ public class FuncionarioDados {
     //busca o nome de um funcionário
     public String buscarNome(Funcionario funcionario) {
         //busca o funcionario
-        String aux = buscar(funcionario);
+        String aux = buscar(funcionario.getCod());
         //se encontrar um funcionário, o nome é separado e retornado
         if (aux != null) {
             return separa(aux, 1);
@@ -136,75 +138,93 @@ public class FuncionarioDados {
         //se não for encontrado retorna null
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarCodigo(Funcionario funcionario) {
-        String aux = buscar(funcionario);
+        String aux = buscar(funcionario.getCod());
         if (aux != null) {
             return separa(aux, 0);
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarRua(Funcionario funcionario) {
-        String aux = buscar(funcionario);
+        String aux = buscar(funcionario.getCod());
         if (aux != null) {
             return separa(aux, 3);
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarBairro(Funcionario funcionario) {
-        String aux = buscar(funcionario);
+        String aux = buscar(funcionario.getCod());
         if (aux != null) {
             return separa(aux, 4);
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarCidade(Funcionario funcionario) {
-        String aux = buscar(funcionario);
+        String aux = buscar(funcionario.getCod());
         if (aux != null) {
             return separa(aux, 2);
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarNumero(Funcionario funcionario) {
-        String aux = buscar(funcionario);
+        String aux = buscar(funcionario.getCod());
         if (aux != null) {
             return separa(aux, 5);
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarUF(Funcionario funcionario) {
-        String aux = buscar(funcionario);
+        String aux = buscar(funcionario.getCod());
         if (aux != null) {
             return separa(aux, 6);
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarCEP(Funcionario funcionario) {
-        String aux = buscar(funcionario);
+        String aux = buscar(funcionario.getCod());
         if (aux != null) {
             return separa(aux, 7);
         }
         return null;
     }
+//semelhante a buscarNome
+
+    public String buscarSenha(Funcionario funcionario) {
+        String aux = buscar(funcionario.getCod());
+        if (aux != null) {
+            return separa(aux, 8);
+        }
+        return null;
+    }
+
     //edita os dados de um funcionário
     public void alterar(Funcionario funcionario) {
         //verifica se o funcionário existe
-        if (buscar(funcionario) != null) {
+        if (buscar(funcionario.getCod()) != null) {
             //remove o funcionário do arquivo de salvamento
             remover(funcionario);
             //adiciona o funcionário ao arquivo de salvamento com os novos dados
             adicionar(funcionario);
         }
     }
+
     //semelhante a alterar
     public void alterarSemEndereco(Funcionario funcionario) {
-        if (buscar(funcionario) != null) {
+        if (buscar(funcionario.getCod()) != null) {
             remover(funcionario);
             adicionarSemEndereco(funcionario);
         }

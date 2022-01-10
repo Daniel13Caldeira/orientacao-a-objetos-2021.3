@@ -56,6 +56,8 @@ public class CadastroCliente extends javax.swing.JFrame {
         btn_sairCadastroCliente = new javax.swing.JButton();
         clienteCadastrado = new javax.swing.JLabel();
         clienteCadastrado.setVisible(false);
+        jLabel12 = new javax.swing.JLabel();
+        senha_cadastroCliente = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro");
@@ -167,6 +169,16 @@ public class CadastroCliente extends javax.swing.JFrame {
         clienteCadastrado.setForeground(new java.awt.Color(232, 72, 85));
         clienteCadastrado.setText("Cliente já cadastrado");
 
+        jLabel12.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(232, 72, 85));
+        jLabel12.setText("Senha");
+
+        senha_cadastroCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                senha_cadastroClienteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -186,20 +198,18 @@ public class CadastroCliente extends javax.swing.JFrame {
                                         .addComponent(uf_cadastroCliente)
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel9)
-                                        .addGap(200, 200, 200))
+                                        .addGap(12, 12, 12)
+                                        .addComponent(cpf_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(bairro_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(121, 121, 121)
-                                                .addComponent(cpf_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(18, 18, Short.MAX_VALUE)))
+                                        .addComponent(bairro_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel6)
                                     .addComponent(jLabel8))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cep_cadastroCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                                    .addComponent(cep_cadastroCliente)
                                     .addComponent(numero_cadastroCliente)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(btn_sairCadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -220,15 +230,22 @@ public class CadastroCliente extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel11))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(clienteCadastrado)
-                                .addGap(110, 110, 110)
-                                .addComponent(confirmarBTN_cadastroCliente)))))
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel11)
+                        .addGap(258, 258, 258)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(clienteCadastrado)
+                .addGap(110, 110, 110)
+                .addComponent(confirmarBTN_cadastroCliente)
+                .addGap(20, 20, 20))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(senha_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 599, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -264,11 +281,15 @@ public class CadastroCliente extends javax.swing.JFrame {
                     .addComponent(jLabel9)
                     .addComponent(uf_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(senha_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(clienteCadastrado)
                     .addComponent(confirmarBTN_cadastroCliente))
-                .addGap(43, 43, 43)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -324,12 +345,6 @@ public class CadastroCliente extends javax.swing.JFrame {
     private void confirmarBTN_cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_cadastroClienteActionPerformed
         //diz se o cadastro pode ou não ser realizado
         boolean cadastro = true;
-        //verifica se o campo de nome está preenchido
-        if (nome_cadastroCliente.getText().equals("")) {
-            //se não estiver o cadastro não pode ser realizado
-            nome_cadastroCliente.setText("Campo obrigatório");
-            cadastro = false;
-        }
         //verifica se o campo de CPF está preenchido
         if (cpf_cadastroCliente.getText().equals("")) {
             //se não estiver o cadastro não pode ser realizado
@@ -343,49 +358,62 @@ public class CadastroCliente extends javax.swing.JFrame {
             } else {
                 //verifica se o cliente já está cadastrado, se ele já estiver, não pode ser cadastrado novamente
                 ClienteDados cliendeDados = new ClienteDados();
-                if (cliendeDados.buscarCPF(cpf_cadastroCliente.getText()) == null) {
-                    cadastro = true;
-                } else {
+                if (cliendeDados.buscarCPF(cpf_cadastroCliente.getText()) != null) {
                     cadastro = false;
                     clienteCadastrado.setVisible(true);
+                } else {
+                    clienteCadastrado.setVisible(false);
                 }
             }
         }
-        if (cadastro) {
-            //verifica se algum campo referente ao endereço foi cadastrado, se um deles for cadastrado, todos devem ser cadastrados
-            if (!(cidade_cadastroCliente.getText().equals("") && rua_cadastroCliente.getText().equals("") && bairro_cadastroCliente.getText().equals("") && numero_cadastroCliente.getText().equals("") && uf_cadastroCliente.getText().equals("") && cep_cadastroCliente.getText().equals(""))) {
-                if (cidade_cadastroCliente.getText().equals("")) {
-                    cidade_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
-                    cadastro = false;
-                }
-                if (bairro_cadastroCliente.getText().equals("")) {
-                    bairro_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
-                    cadastro = false;
-                }
-                if (rua_cadastroCliente.getText().equals("")) {
-                    rua_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
-                    cadastro = false;
-                }
-                if (uf_cadastroCliente.getText().equals("")) {
-                    uf_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
-                    cadastro = false;
-                }
-                if (numero_cadastroCliente.getText().equals("")) {
-                    numero_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
-                    cadastro = false;
-                }
-                if (cep_cadastroCliente.getText().equals("")) {
-                    cep_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
-                    cadastro = false;
-                }
-                if (cadastro) {
-                    //com todos os campos de endereço preenchidos, o cadastro será feito com o endereço
-                    Endereco endereco = new Endereco(cidade_cadastroCliente.getText(), cep_cadastroCliente.getText(), uf_cadastroCliente.getText(), bairro_cadastroCliente.getText(), rua_cadastroCliente.getText(), numero_cadastroCliente.getText());
-                    new Cliente(nome_cadastroCliente.getText(), endereco, cpf_cadastroCliente.getText());
-                }
-                //se nenhum campo de endereço estiver cadastrado, o cadastro será feito sem o endereço
-            } else {
-                new Cliente(nome_cadastroCliente.getText(), cpf_cadastroCliente.getText());
+        //verifica se o campo de nome está preenchido
+        if (nome_cadastroCliente.getText().equals("") || nome_cadastroCliente.getText().equals("Campo obrigatório")) {
+            //se não estiver o cadastro não pode ser realizado
+            nome_cadastroCliente.setText("Campo obrigatório");
+            cadastro = false;
+        }
+        //verifica se o campo senha foi preenchido
+        if (senha_cadastroCliente.getText().equals("") || senha_cadastroCliente.getText().equals("Campo obrigatório")) {
+            //se não estiver o cadastro não pode ser realizado
+            senha_cadastroCliente.setText("Campo obrigatório");
+            cadastro = false;
+        }
+
+        //verifica se algum campo referente ao endereço foi cadastrado, se um deles for cadastrado, todos devem ser cadastrados
+        if (!(cidade_cadastroCliente.getText().equals("") && rua_cadastroCliente.getText().equals("") && bairro_cadastroCliente.getText().equals("") && numero_cadastroCliente.getText().equals("") && uf_cadastroCliente.getText().equals("") && cep_cadastroCliente.getText().equals(""))) {
+            if (cidade_cadastroCliente.getText().equals("") || cidade_cadastroCliente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                cidade_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (bairro_cadastroCliente.getText().equals("") || bairro_cadastroCliente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                bairro_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (rua_cadastroCliente.getText().equals("") || rua_cadastroCliente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                rua_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (uf_cadastroCliente.getText().equals("") || uf_cadastroCliente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                uf_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (numero_cadastroCliente.getText().equals("") || numero_cadastroCliente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                numero_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (cep_cadastroCliente.getText().equals("") || cep_cadastroCliente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                cep_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (cadastro) {
+                //com todos os campos de endereço preenchidos, o cadastro será feito com o endereço
+                Endereco endereco = new Endereco(cidade_cadastroCliente.getText(), cep_cadastroCliente.getText(), uf_cadastroCliente.getText(), bairro_cadastroCliente.getText(), rua_cadastroCliente.getText(), numero_cadastroCliente.getText());
+                new Cliente(nome_cadastroCliente.getText(), endereco, cpf_cadastroCliente.getText(), senha_cadastroCliente.getText());
+            }
+            //se nenhum campo de endereço estiver cadastrado, o cadastro será feito sem o endereço
+        } else {
+            if (cadastro) {
+                new Cliente(nome_cadastroCliente.getText(), cpf_cadastroCliente.getText(), senha_cadastroCliente.getText());
             }
         }
         //retorna para a tela de login se o cadastro foi realizado
@@ -398,6 +426,10 @@ public class CadastroCliente extends javax.swing.JFrame {
     private void numero_cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numero_cadastroClienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_numero_cadastroClienteActionPerformed
+
+    private void senha_cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senha_cadastroClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_senha_cadastroClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -460,6 +492,7 @@ public class CadastroCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -473,6 +506,7 @@ public class CadastroCliente extends javax.swing.JFrame {
     private javax.swing.JTextField nome_cadastroCliente;
     private javax.swing.JTextField numero_cadastroCliente;
     private javax.swing.JTextField rua_cadastroCliente;
+    private javax.swing.JTextField senha_cadastroCliente;
     private javax.swing.JTextField uf_cadastroCliente;
     // End of variables declaration//GEN-END:variables
 }

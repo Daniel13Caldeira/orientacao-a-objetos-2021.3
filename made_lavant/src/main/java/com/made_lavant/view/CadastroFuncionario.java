@@ -351,7 +351,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         //identifica se está sendo cadastrado um funcionário ou um gerente
         String identificador = null;
         //se o nome não foi escrito o cadastro não pode ser realizado
-        if (nome_cadastroFuncionario.getText().equals("")) {
+        if (nome_cadastroFuncionario.getText().equals("") || nome_cadastroFuncionario.getText().equals("Campo obrigatório")) {
             nome_cadastroFuncionario.setText("Campo obrigatório");
             cadastro = false;
         }
@@ -360,6 +360,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             cadastro = false;
             tipoNaoSelecionado_cadastroFuncionário.setVisible(true);
         } else {
+            tipoNaoSelecionado_cadastroFuncionário.setVisible(false);
             //define o objeto criado como gerente
             if (BTNGerente_cadastroFuncionário.isSelected()) {
                 identificador = "A";
@@ -368,43 +369,43 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                 identificador = "B";
             }
         }
-        if (cadastro) {
             //verifica se algum campo referente ao endereço foi cadastrado, se um deles for cadastrado, todos devem ser cadastrados
             if (!(cidade_cadastroFuncionario.getText().equals("") && rua_cadastroFuncionario.getText().equals("") && bairro_cadastroFuncionario.getText().equals("") && numero_cadastroFuncionario.getText().equals("") && uf_cadastroFuncionario.getText().equals("") && cep_cadastroFuncionario.getText().equals(""))) {
-                if (cidade_cadastroFuncionario.getText().equals("")) {
+                if (cidade_cadastroFuncionario.getText().equals("") || cidade_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
                     cidade_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
                     cadastro = false;
                 }
-                if (bairro_cadastroFuncionario.getText().equals("")) {
+                if (bairro_cadastroFuncionario.getText().equals("") || bairro_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
                     bairro_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
                     cadastro = false;
                 }
-                if (rua_cadastroFuncionario.getText().equals("")) {
+                if (rua_cadastroFuncionario.getText().equals("") || rua_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
                     rua_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
                     cadastro = false;
                 }
-                if (uf_cadastroFuncionario.getText().equals("")) {
+                if (uf_cadastroFuncionario.getText().equals("") || uf_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
                     uf_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
                     cadastro = false;
                 }
-                if (numero_cadastroFuncionario.getText().equals("")) {
+                if (numero_cadastroFuncionario.getText().equals("") || numero_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
                     numero_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
                     cadastro = false;
                 }
-                if (cep_cadastroFuncionario.getText().equals("")) {
+                if (cep_cadastroFuncionario.getText().equals("") || cep_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
                     cep_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
                     cadastro = false;
                 }
                 if (cadastro) {
                     //com todos os campos de endereço preenchidos, o cadastro será feito com o endereço
                     Endereco endereco = new Endereco(cidade_cadastroFuncionario.getText(), cep_cadastroFuncionario.getText(), uf_cadastroFuncionario.getText(), bairro_cadastroFuncionario.getText(), rua_cadastroFuncionario.getText(), numero_cadastroFuncionario.getText());
-                    new Funcionario(nome_cadastroFuncionario.getText(), endereco, identificador);
+                    new Funcionario(nome_cadastroFuncionario.getText(), endereco, "madeLavant", identificador);
                 }
             } else {
                 //se nenhum campo de endereço estiver cadastrado, o cadastro será feito sem o endereço
-                new Funcionario(nome_cadastroFuncionario.getText(), identificador);
+                if (cadastro) {
+                    new Funcionario(nome_cadastroFuncionario.getText(), "madeLavant", identificador);
+                }
             }
-        }
         //retorna para a tela de crud de funcionários se o cadastro foi realizado
         if (cadastro) {
             this.setVisible(false);

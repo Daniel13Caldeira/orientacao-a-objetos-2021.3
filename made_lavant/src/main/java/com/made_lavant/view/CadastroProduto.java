@@ -254,15 +254,15 @@ public class CadastroProduto extends javax.swing.JFrame {
         //diz se o cadastro pode ser realizado
         boolean cadastro = true;
         //verifica se todos os campos obrigatórios foram preenchidos, se não, o cadastro não pode ser feito
-        if (nome_CadastroProdutoFunc.getText().equals("")) {
+        if (nome_CadastroProdutoFunc.getText().equals("") || nome_CadastroProdutoFunc.getText().equals("Campo obrigatório")) {
             nome_CadastroProdutoFunc.setText("Campo obrigatório");
             cadastro = false;
         }
-        if (preco_CadastroProdutoFunc.getText().equals("")) {
+        if (preco_CadastroProdutoFunc.getText().equals("") || preco_CadastroProdutoFunc.getText().equals("Campo obrigatório")) {
             preco_CadastroProdutoFunc.setText("Campo obrigatório");
             cadastro = false;
         }
-        if (quantidade_CadastroProdutoFunc.getText().equals("")) {
+        if (quantidade_CadastroProdutoFunc.getText().equals("") || quantidade_CadastroProdutoFunc.getText().equals("Campo obrigatório")) {
             quantidade_CadastroProdutoFunc.setText("Campo obrigatório");
             cadastro = false;
         }

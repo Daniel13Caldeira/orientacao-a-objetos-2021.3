@@ -38,7 +38,7 @@ public class ClienteDados {
     //adiciona um cliente sem endereço ao arquivo de salvamento
     public void adicionarSemEndereco(Cliente cliente) {
         //cria uma String com os dados do cliente no formato padrão que está sendo utilizado
-        String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';';
+        String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';'+cliente.getSenha()+';';
         //define o arquivo de salvamento
         File arquivo = new File("dados\\cliente.txt");
         try {
@@ -58,7 +58,7 @@ public class ClienteDados {
     //adiciona um cliente com endereço no arquivo de salvamento
     public void adicionar(Cliente cliente) {
         //cria uma String com os dados do cliente no formato padrão que está sendo utilizado
-        String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + cliente.getEndereco().getCidade() + ';' + cliente.getEndereco().getRua() + ';' + cliente.getEndereco().getBairro() + ';' + cliente.getEndereco().getNumero() + ';' + cliente.getEndereco().getUf() + ';' + cliente.getEndereco().getCep() + ';';
+        String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + cliente.getEndereco().getCidade() + ';' + cliente.getEndereco().getRua() + ';' + cliente.getEndereco().getBairro() + ';' + cliente.getEndereco().getNumero() + ';' + cliente.getEndereco().getUf() + ';' + cliente.getEndereco().getCep() + ';' + cliente.getSenha() + ';';
         //define o arquivo de salvamento
         File arquivo = new File("dados\\cliente.txt");
         try {
@@ -113,15 +113,14 @@ public class ClienteDados {
     }
 
     //busca uma linha
-    private String buscar(Cliente cliente) {
-        String cod = cliente.getCPF();
+    private String buscar(String cpf) {
         File arquivo = new File("dados\\cliente.txt");
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             String linha = leitor.readLine();//primeira linha
             while (linha != null) {//linha null = final do arquivo
-                if (separa(linha, 0).equalsIgnoreCase(cod)) {//procura pelas linha requerida
+                if (separa(linha, 0).equalsIgnoreCase(cpf)) {//procura pelas linha requerida
                     return linha;
                 }
                 linha = leitor.readLine();//pega proxima linha
@@ -135,7 +134,7 @@ public class ClienteDados {
     //busca o nome de um cliente
     public String buscarNome(Cliente cliente) {
         //busca o cliente
-        String aux = buscar(cliente);
+        String aux = buscar(cliente.getCPF());
         //se encontrar um cliente, o nome é separado e retornado
         if (aux != null) {
             return separa(aux, 1);
@@ -150,74 +149,89 @@ public class ClienteDados {
      * @return
      */
     //semelhante a buscarNome
-    public String buscarCPF(Cliente cliente) {
-        String aux = buscar(cliente);
+    public String buscarCPF(String cpf) {
+        String aux = buscar(cpf);
         if (aux != null) {
             return separa(aux, 0);
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarRua(Cliente cliente) {
-        String aux = buscar(cliente);
+        String aux = buscar(cliente.getCPF());
         if (aux != null) {
             return separa(aux, 3);
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarBairro(Cliente cliente) {
-        String aux = buscar(cliente);
+        String aux = buscar(cliente.getCPF());
         if (aux != null) {
             return separa(aux, 4);
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarCidade(Cliente cliente) {
-        String aux = buscar(cliente);
+        String aux = buscar(cliente.getCPF());
         if (aux != null) {
             return separa(aux, 2);
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarNumero(Cliente cliente) {
-        String aux = buscar(cliente);
+        String aux = buscar(cliente.getCPF());
         if (aux != null) {
             return separa(aux, 5);
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarUF(Cliente cliente) {
-        String aux = buscar(cliente);
+        String aux = buscar(cliente.getCPF());
         if (aux != null) {
             return separa(aux, 6);
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarCEP(Cliente cliente) {
-        String aux = buscar(cliente);
+        String aux = buscar(cliente.getCPF());
         if (aux != null) {
             return separa(aux, 7);
+        }
+        return null;
+    }
+    //semelhante a buscarNome
+    public String buscarSenha(Cliente cliente) {
+        String aux = buscar(cliente.getCPF());
+        if (aux != null) {
+            return separa(aux, 8);
         }
         return null;
     }
     //muda as informações de um cliente com endereço
     public void alterar(Cliente cliente) {
         //verifica se ele existe
-        if (buscar(cliente) != null) {
+        if (buscar(cliente.getCPF()) != null) {
             //remover o cliente do arquivo de salvamento
             remover(cliente);
             //adiciona o cliente ao arquivo de salvamento com os novos dados
             adicionar(cliente);
         }
     }
+
     //semelhante ao alterar, mas sem o endereço
     public void alterarSemEndereco(Cliente cliente) {
-        if (buscar(cliente) != null) {
+        if (buscar(cliente.getCPF()) != null) {
             remover(cliente);
             adicionarSemEndereco(cliente);
         }

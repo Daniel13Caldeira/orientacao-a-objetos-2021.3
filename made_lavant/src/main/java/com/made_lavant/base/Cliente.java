@@ -16,8 +16,8 @@ public class Cliente extends Pessoa {
     public String CPF;
 
     //cria um cliente com endereço
-    public Cliente(String nome, Endereco endereco, String CPF) {
-        super(nome, endereco);
+    public Cliente(String nome, Endereco endereco, String CPF, String senha) {
+        super(nome, endereco, senha);
         this.CPF = CPF;
         ClienteDados add = new ClienteDados();
         //adiciona ao arquivo onde é feita a armazenagem dos dados
@@ -26,13 +26,21 @@ public class Cliente extends Pessoa {
     }
 
     //cria cliente sem endereço
-    public Cliente(String nome, String CPF) {
-        super(nome);
+    public Cliente(String nome, String CPF, String senha) {
+        super(nome, senha);
         this.CPF = CPF;
         ClienteDados add = new ClienteDados();
         //adiciona ao arquivo onde é feita a armazenagem dos dados
         add.adicionarSemEndereco(this);
     }
+
+    //altera a senha
+    public void setSenha(String senha) {
+        this.senha = senha;
+        ClienteDados altera = new ClienteDados();
+        altera.alterar(this);
+    }
+
     //exclui um cliente
     public void remove() {
         ClienteDados remove = new ClienteDados();
@@ -43,9 +51,14 @@ public class Cliente extends Pessoa {
         return nome;
     }
 
+    public String getSenha() {
+        return senha;
+    }
+
     public Endereco getEndereco() {
         return endereco;
     }
+
     //muda o endereço do cliente
     public void setEndereco(String bairro, String cep, String cidade, String numero, String rua, String uf) {
         this.endereco.setBairro(bairro);
@@ -61,6 +74,7 @@ public class Cliente extends Pessoa {
     public String getCPF() {
         return CPF;
     }
+
     //verifica se o CPF do cliente é válido
     public static boolean verificaCPF(String CPF) {
         int j = 10, soma = 0;
