@@ -146,21 +146,25 @@ public class InicioGerente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void produtoGerente_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoGerente_btn1ActionPerformed
+        //vai para o crud de produtos
         this.setVisible(false);
         new CrudProdutos().setVisible(true);
     }//GEN-LAST:event_produtoGerente_btn1ActionPerformed
 
     private void carrinhoGerente_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhoGerente_btn1ActionPerformed
-       this.setVisible(false);
+        //vai para o crud de carrinhos
+        this.setVisible(false);
         new CrudCarrinho().setVisible(true);
     }//GEN-LAST:event_carrinhoGerente_btn1ActionPerformed
 
     private void Sair_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sair_btnActionPerformed
+        //vai para a tela de login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_Sair_btnActionPerformed
 
     private void funcionariosGerente_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_funcionariosGerente_btnActionPerformed
+        //vai para o crud de funcionários
         this.setVisible(false);
         new CrudFuncionarios().setVisible(true);
     }//GEN-LAST:event_funcionariosGerente_btnActionPerformed

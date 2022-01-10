@@ -19,22 +19,32 @@ import java.util.ArrayList;
  */
 public class ProdutoDados {
 
+    //separa o dado que deseja pegar da String de dados completa do produto
     public String separa(String linha, int info) {
+        //separa a primeira parte da String até o ;
         String resultado = linha.substring(0, linha.indexOf(';'));
+        //armazena o restante da string
         String resto = linha.substring(linha.indexOf(';') + 1);
+        //verifica se o resultado era o pretendido
         if (info == 0) {
+            //retorna o resultado
             return resultado;
         }
+        //chama novamente essa função com o resto da separação anterior
         resultado = separa(resto, info - 1);
         return resultado;
     }
 
+    //adiciona um produto sem endereço ao arquivo de salvamento
     public void adicionar(Produto produto) {
-        String info = String.valueOf(produto.getCodigo())+';'+produto.getNome()+';'+String.valueOf(produto.getPreco())+';'+String.valueOf(produto.getValidade())+';'+produto.getQuantidade()+';';
+        //cria uma String com os dados do produto no formato padrão que está sendo utilizado
+        String info = String.valueOf(produto.getCodigo()) + ';' + produto.getNome() + ';' + String.valueOf(produto.getPreco()) + ';' + String.valueOf(produto.getValidade()) + ';' + produto.getQuantidade() + ';';
+        //define o arquivo de salvamento
         File arquivo = new File("dados\\produto.txt");
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
+            //insere o produto e adiciona uma nova linha
             escritor.write(info);
             escritor.newLine();
             escritor.flush();
@@ -46,8 +56,9 @@ public class ProdutoDados {
 
     }
 
+    //remove um produto do arquivo de salvamento
     public void remover(Produto produto) {
-        String cod = produto.getCodigo()+"";
+        String cod = produto.getCodigo() + "";
         File arquivo = new File("dados\\produto.txt");
         ArrayList<String> salvar = new ArrayList<>();//armazena as linhas que não serão apagadas
         try {
@@ -79,15 +90,16 @@ public class ProdutoDados {
         }
     }
 
+    //busca uma linha
     private String buscar(Produto produto) {
-        String cod = produto.getCodigo()+"";
+        String cod = produto.getCodigo() + "";
         File arquivo = new File("dados\\produto.txt");
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             String linha = leitor.readLine();//primeira linha
             while (linha != null) {//linha null = final do arquivo
-                if (separa(linha, 0).equalsIgnoreCase(cod)) {//procura pelas linhas que não serão apagadas e as adiciona no array
+                if (separa(linha, 0).equalsIgnoreCase(cod)) {//procura pela linha requerida
                     return linha;
                 }
                 linha = leitor.readLine();//pega proxima linha
@@ -97,14 +109,18 @@ public class ProdutoDados {
         return null;
     }
 
+    //busca o nome de um produto
     public String buscarNome(Produto produto) {
+        //busca o produto
         String aux = buscar(produto);
+        //se encontrar um produto, o nome é separado e retornado
         if (aux != null) {
             return separa(aux, 1);
         }
+        //se não for encontrado retorna null
         return null;
     }
-
+    //semelhante a buscarNome
     public String buscarCodigo(Produto produto) {
         String aux = buscar(produto);
         if (aux != null) {
@@ -112,7 +128,7 @@ public class ProdutoDados {
         }
         return null;
     }
-
+    //semelhante a buscarNome
     public String buscarQuantidade(Produto produto) {
         String aux = buscar(produto);
         if (aux != null) {
@@ -120,7 +136,7 @@ public class ProdutoDados {
         }
         return null;
     }
-
+    //semelhante a buscarNome
     public String buscarValidade(Produto produto) {
         String aux = buscar(produto);
         if (aux != null) {
@@ -128,7 +144,7 @@ public class ProdutoDados {
         }
         return null;
     }
-
+    //semelhante a buscarNome
     public String buscarPreco(Produto produto) {
         String aux = buscar(produto);
         if (aux != null) {
@@ -136,10 +152,13 @@ public class ProdutoDados {
         }
         return null;
     }
-
+    //altera os dados de um produto
     public void alterar(Produto produto) {
-        if (buscar(produto)!=null) {
+        //busca um produto
+        if (buscar(produto) != null) {
+            //remove o produto do arquivo de salvamento
             remover(produto);
+            //adiciona o produto ao arquivo de salvamento com os novos dados
             adicionar(produto);
         }
     }

@@ -53,7 +53,6 @@ public class CadastroCliente extends javax.swing.JFrame {
         cep_cadastroCliente = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        btn_voltarCadastroCliente = new javax.swing.JButton();
         btn_sairCadastroCliente = new javax.swing.JButton();
         clienteCadastrado = new javax.swing.JLabel();
         clienteCadastrado.setVisible(false);
@@ -154,16 +153,6 @@ public class CadastroCliente extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(232, 72, 85));
         jLabel11.setText("Lavant");
 
-        btn_voltarCadastroCliente.setBackground(new java.awt.Color(255, 253, 130));
-        btn_voltarCadastroCliente.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
-        btn_voltarCadastroCliente.setForeground(new java.awt.Color(232, 72, 85));
-        btn_voltarCadastroCliente.setText("Voltar");
-        btn_voltarCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_voltarCadastroClienteActionPerformed(evt);
-            }
-        });
-
         btn_sairCadastroCliente.setBackground(new java.awt.Color(255, 253, 130));
         btn_sairCadastroCliente.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
         btn_sairCadastroCliente.setForeground(new java.awt.Color(232, 72, 85));
@@ -184,18 +173,6 @@ public class CadastroCliente extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap(481, Short.MAX_VALUE)
-                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(btn_voltarCadastroCliente)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addComponent(jLabel11)
-                        .addGap(43, 43, 43))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -243,9 +220,15 @@ public class CadastroCliente extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(clienteCadastrado)
-                        .addGap(110, 110, 110)
-                        .addComponent(confirmarBTN_cadastroCliente)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel11))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(clienteCadastrado)
+                                .addGap(110, 110, 110)
+                                .addComponent(confirmarBTN_cadastroCliente)))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -285,16 +268,13 @@ public class CadastroCliente extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(clienteCadastrado)
                     .addComponent(confirmarBTN_cadastroCliente))
-                .addGap(77, 77, 77)
+                .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btn_voltarCadastroCliente)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())))
+                        .addGap(26, 26, 26))
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -335,39 +315,44 @@ public class CadastroCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cpf_cadastroClienteActionPerformed
 
-    private void btn_voltarCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_voltarCadastroClienteActionPerformed
-        this.setVisible(false);
-        new Login().setVisible(true);    }//GEN-LAST:event_btn_voltarCadastroClienteActionPerformed
-
     private void btn_sairCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroClienteActionPerformed
+        //deixa de mostrar a tela atual e mostra a tela de login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_btn_sairCadastroClienteActionPerformed
 
     private void confirmarBTN_cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_cadastroClienteActionPerformed
+        //diz se o cadastro pode ou não ser realizado
         boolean cadastro = true;
+        //verifica se o campo de nome está preenchido
         if (nome_cadastroCliente.getText().equals("")) {
+            //se não estiver o cadastro não pode ser realizado
             nome_cadastroCliente.setText("Campo obrigatório");
             cadastro = false;
         }
+        //verifica se o campo de CPF está preenchido
         if (cpf_cadastroCliente.getText().equals("")) {
+            //se não estiver o cadastro não pode ser realizado
             cpf_cadastroCliente.setText("Campo obrigatório");
             cadastro = false;
         } else {
+            //verfica se o cpf é válido, se não for ele não pode ser cadastrado
             cadastro = Cliente.verificaCPF(cpf_cadastroCliente.getText());
             if (!cadastro) {
                 cpf_cadastroCliente.setText("CPF inválido");
             } else {
+                //verifica se o cliente já está cadastrado, se ele já estiver, não pode ser cadastrado novamente
                 ClienteDados cliendeDados = new ClienteDados();
                 if (cliendeDados.buscarCPF(cpf_cadastroCliente.getText()) == null) {
                     cadastro = true;
-                }else{
+                } else {
                     cadastro = false;
                     clienteCadastrado.setVisible(true);
                 }
             }
         }
         if (cadastro) {
+            //verifica se algum campo referente ao endereço foi cadastrado, se um deles for cadastrado, todos devem ser cadastrados
             if (!(cidade_cadastroCliente.getText().equals("") && rua_cadastroCliente.getText().equals("") && bairro_cadastroCliente.getText().equals("") && numero_cadastroCliente.getText().equals("") && uf_cadastroCliente.getText().equals("") && cep_cadastroCliente.getText().equals(""))) {
                 if (cidade_cadastroCliente.getText().equals("")) {
                     cidade_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
@@ -394,13 +379,16 @@ public class CadastroCliente extends javax.swing.JFrame {
                     cadastro = false;
                 }
                 if (cadastro) {
+                    //com todos os campos de endereço preenchidos, o cadastro será feito com o endereço
                     Endereco endereco = new Endereco(cidade_cadastroCliente.getText(), cep_cadastroCliente.getText(), uf_cadastroCliente.getText(), bairro_cadastroCliente.getText(), rua_cadastroCliente.getText(), numero_cadastroCliente.getText());
                     new Cliente(nome_cadastroCliente.getText(), endereco, cpf_cadastroCliente.getText());
                 }
+                //se nenhum campo de endereço estiver cadastrado, o cadastro será feito sem o endereço
             } else {
                 new Cliente(nome_cadastroCliente.getText(), cpf_cadastroCliente.getText());
             }
         }
+        //retorna para a tela de login se o cadastro foi realizado
         if (cadastro) {
             this.setVisible(false);
             new Login().setVisible(true);
@@ -464,7 +452,6 @@ public class CadastroCliente extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField bairro_cadastroCliente;
     private javax.swing.JButton btn_sairCadastroCliente;
-    private javax.swing.JButton btn_voltarCadastroCliente;
     private javax.swing.JTextField cep_cadastroCliente;
     private javax.swing.JTextField cidade_cadastroCliente;
     private javax.swing.JLabel clienteCadastrado;

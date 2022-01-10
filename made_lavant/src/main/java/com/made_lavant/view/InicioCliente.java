@@ -150,21 +150,25 @@ public class InicioCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        //vai para o perfil do cliente
         this.setVisible(false);
         new PerfilCliente().setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        //vai para o carrinho
         this.setVisible(false);
         new TelaCarrinho().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //retorna para a tela de login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btn_produtosClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_produtosClienteActionPerformed
+        //vai para o crud de produtos
         this.setVisible(false);
         new CrudProdutos_Cliente().setVisible(true);
     }//GEN-LAST:event_btn_produtosClienteActionPerformed

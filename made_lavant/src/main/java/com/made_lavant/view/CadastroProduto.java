@@ -245,12 +245,15 @@ public class CadastroProduto extends javax.swing.JFrame {
     }//GEN-LAST:event_quantidade_CadastroProdutoFuncActionPerformed
 
     private void btn_sairCadastroProdutoFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroProdutoFuncActionPerformed
+        //retorna para a tela de login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_btn_sairCadastroProdutoFuncActionPerformed
 
     private void BTNConfirmar_CadastroProdutoFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNConfirmar_CadastroProdutoFuncActionPerformed
+        //diz se o cadastro pode ser realizado
         boolean cadastro = true;
+        //verifica se todos os campos obrigatórios foram preenchidos, se não, o cadastro não pode ser feito
         if (nome_CadastroProdutoFunc.getText().equals("")) {
             nome_CadastroProdutoFunc.setText("Campo obrigatório");
             cadastro = false;
@@ -264,22 +267,29 @@ public class CadastroProduto extends javax.swing.JFrame {
             cadastro = false;
         }
         if (cadastro) {
+            //verifica se o campo de validade foi preenchido
             if (validade_CadastroProdutoFunc.getText().equals("")) {
+                //se não estiver preenchido o produto é cadastrado sem a validade
                 new Produto(nome_CadastroProdutoFunc.getText(), Double.parseDouble(preco_CadastroProdutoFunc.getText()), Double.parseDouble(quantidade_CadastroProdutoFunc.getText()));
             } else {
+                //define um formato para a data da validade
                 SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
                 Date validade = null;
                 try {
                     validade = formato.parse(validade_CadastroProdutoFunc.getText());
+                    //verifica se a data é válida
                     if (verificaDataValida(validade)) {
+                        //adiciona um produto com a validade
                         new Produto(nome_CadastroProdutoFunc.getText(), Double.parseDouble(preco_CadastroProdutoFunc.getText()), validade, Double.parseDouble(quantidade_CadastroProdutoFunc.getText()));
                     } else {
+                        //se a data for inválida o cadastro não pode ser feito
                         validade_CadastroProdutoFunc.setText("Data inválida");
                         cadastro = false;
                     }
                 } catch (ParseException ex) {
                 }
             }
+            //se o cadastro foi realizado retorna para o crud de produtos
             if (cadastro) {
                 this.setVisible(false);
                 new CrudProdutos().setVisible(true);
@@ -289,14 +299,18 @@ public class CadastroProduto extends javax.swing.JFrame {
 
     public static boolean verificaDataValida(Date data) {
         //Mon Oct 12 00:00:00 BRT 2020
+        //verifica se a data é anterior à atual
         if (data.before(Date.from(Instant.now()))) {
             return false;
         }
+        //transforma a data em uma string
         String aux = data + "";
+        //separa o dia, o mês e o ano da data
         int dia = Integer.parseInt(aux.charAt(8) + "") * 10 + Integer.parseInt(aux.charAt(9) + "");
         int ano = Integer.parseInt(aux.charAt(24) + "") * 1000 + Integer.parseInt(aux.charAt(25) + "") * 100 + Integer.parseInt(aux.charAt(26) + "") * 10 + Integer.parseInt(aux.charAt(27) + "");
         String mes = aux.substring(4, 7);
         int maxDias = 0;
+        //verifica qual o máximo de dias que pode ter de acordo com o mês e o ano da validade
         if (mes.equals("JAN") || mes.equals("MAR") || mes.equals("MAY") || mes.equals("JUL") || mes.equals("AUG") || mes.equals("OCT") || mes.equals("DEC")) {
             maxDias = 31;
         } else {
@@ -310,6 +324,7 @@ public class CadastroProduto extends javax.swing.JFrame {
                 }
             }
         }
+        //verifica se o dia inserido é válido
         if (dia > maxDias || maxDias == 0 || dia < 1) {
             return false;
         }

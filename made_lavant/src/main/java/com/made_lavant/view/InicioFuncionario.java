@@ -136,16 +136,19 @@ public class InicioFuncionario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void carrinhosFunc_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhosFunc_btn1ActionPerformed
+        //vai para o crud de carrinhos
         this.setVisible(false);
         new CrudCarrinho().setVisible(true);
     }//GEN-LAST:event_carrinhosFunc_btn1ActionPerformed
 
     private void produtoFunc_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoFunc_btn1ActionPerformed
+        //vai para o crud de produtos
         this.setVisible(false);
         new CrudProdutos().setVisible(true);
     }//GEN-LAST:event_produtoFunc_btn1ActionPerformed
 
     private void Sair_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sair_btnActionPerformed
+        //vai para o login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_Sair_btnActionPerformed
