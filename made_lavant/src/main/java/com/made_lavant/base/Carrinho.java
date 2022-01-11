@@ -4,6 +4,8 @@
  */
 package com.made_lavant.base;
 
+import com.made_lavant.dados.CarrinhoDados;
+import com.made_lavant.dados.Codigos;
 import java.util.ArrayList;
 
 /**
@@ -13,31 +15,43 @@ import java.util.ArrayList;
 public class Carrinho {
 
     protected Cliente cliente;
-    protected ArrayList<Produto> produtos = new ArrayList<>();
+    protected ArrayList<String> produtos = new ArrayList<>();
     protected double preco;
-    private static int codAtual=1;
     protected int cod;
+
+    public Cliente getCliente() {
+        return cliente;
+    }
 
     public Carrinho(Cliente cliente) {
         this.cliente = cliente;
-        cod=codAtual;
-        codAtual++;
+        Codigos codigos = new Codigos();
+        this.cod = codigos.buscaCarrinho();
+        //altera o código do próximo funcionário a ser criado
+        codigos.alterarCarrinho();
+        CarrinhoDados add = new CarrinhoDados();
+        //adicona o funcionário ao arquivo onde ficará salvo
+        add.criar(this);
     }
 
     public int getCod() {
         return cod;
     }
 
-    public void adicionarProduto(String cod) {
-
+    public void adicionarProduto(Produto produto) {
+        CarrinhoDados add = new CarrinhoDados();
+        add.adicionarProduto(this, produto);
     }
 
-    public void removerProduto(String cod) {
-
+    public void removerProduto(Produto produto) {
+        CarrinhoDados remove = new CarrinhoDados();
+        remove.removerProduto(this, produto);
     }
 
-    public void listarProduto() {
-
+    public ArrayList<String> getProdutos() {
+        CarrinhoDados busca = new CarrinhoDados();
+        this.produtos=busca.getProdutos(this);
+        return this.produtos;
     }
 
     public void enviar() {
@@ -50,9 +64,7 @@ public class Carrinho {
 
     public double calcularPreco() {
         double total = 0;
-        for (int i = 0; i < this.produtos.size(); i++) {
-            total += this.produtos.get(i).getPreco();
-        }
+       //codigo
         return total;
     }
 
