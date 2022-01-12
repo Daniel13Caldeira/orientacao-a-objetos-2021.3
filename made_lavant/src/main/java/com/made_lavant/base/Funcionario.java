@@ -52,21 +52,15 @@ public class Funcionario extends Pessoa {
         add.adicionarSemEndereco(this);
     }
 
-    public String getSenha() {
-        return senha;
-    }
-
     //altera a senha
+    @Override
     public void setSenha(String senha) {
         this.senha = senha;
         FuncionarioDados altera = new FuncionarioDados();
         altera.alterar(this);
     }
 
-    public String getNome() {
-        return nome;
-    }
-
+    @Override
     public Endereco getEndereco() {
         return endereco;
     }

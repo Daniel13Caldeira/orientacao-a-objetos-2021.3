@@ -35,6 +35,7 @@ public class Cliente extends Pessoa {
     }
 
     //altera a senha
+    @Override
     public void setSenha(String senha) {
         this.senha = senha;
         ClienteDados altera = new ClienteDados();
@@ -47,14 +48,7 @@ public class Cliente extends Pessoa {
         remove.remover(this);
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
+    @Override
     public Endereco getEndereco() {
         return endereco;
     }

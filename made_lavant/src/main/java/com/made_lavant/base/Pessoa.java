@@ -9,10 +9,30 @@ package com.made_lavant.base;
  *
  * @author Daniel
  */
-public class Pessoa {
+public abstract class Pessoa {
 
     protected String nome, senha;
     protected Endereco endereco;
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
 
     public Pessoa(String nome, String senha) {
         this.nome = nome;
