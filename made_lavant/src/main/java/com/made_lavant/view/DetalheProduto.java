@@ -4,11 +4,13 @@
  */
 package com.made_lavant.view;
 
+
 /**
  *
  * @author matheusreis
  */
 public class DetalheProduto extends javax.swing.JFrame {
+
     /**
      * Creates new form DetalheProduto
      */
@@ -28,7 +30,7 @@ public class DetalheProduto extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        nomeLB = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -55,10 +57,10 @@ public class DetalheProduto extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 253, 130));
         jLabel9.setText("00,00");
 
-        nomeLB.setBackground(new java.awt.Color(255, 255, 255));
-        nomeLB.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        nomeLB.setForeground(new java.awt.Color(255, 253, 130));
-        nomeLB.setText("Nome");
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel8.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 253, 130));
+        jLabel8.setText("Nome");
 
         jLabel1.setBackground(new java.awt.Color(255, 253, 130));
         jLabel1.setFont(new java.awt.Font("Colonna MT", 0, 45)); // NOI18N
@@ -154,7 +156,7 @@ public class DetalheProduto extends javax.swing.JFrame {
                                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(30, 30, 30)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(nomeLB, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -175,7 +177,7 @@ public class DetalheProduto extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(64, 64, 64)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nomeLB, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -268,8 +270,8 @@ public class DetalheProduto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel nomeLB;
     // End of variables declaration//GEN-END:variables
 }
