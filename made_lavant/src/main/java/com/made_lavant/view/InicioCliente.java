@@ -8,12 +8,12 @@ package com.made_lavant.view;
  *
  * @author Marcio
  */
-public class TelaCliente extends javax.swing.JFrame {
+public class InicioCliente extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaCliente
      */
-    public TelaCliente() {
+    public InicioCliente() {
         initComponents();
     }
 
@@ -27,13 +27,12 @@ public class TelaCliente extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jButton17 = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
+        btn_sair = new javax.swing.JButton();
+        made_Label = new javax.swing.JLabel();
+        lavant_Label = new javax.swing.JLabel();
+        btn_carrinhoCliente = new javax.swing.JButton();
+        btn_produtosCliente = new javax.swing.JButton();
+        btn_perfilCliente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TelaCliente");
@@ -43,63 +42,56 @@ public class TelaCliente extends javax.swing.JFrame {
         jPanel2.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
         jPanel2.setName("TelaCliente"); // NOI18N
 
-        jButton17.setBackground(new java.awt.Color(255, 253, 130));
-        jButton17.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton17.setForeground(new java.awt.Color(232, 72, 85));
-        jButton17.setText("Sair");
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        btn_sair.setBackground(new java.awt.Color(255, 253, 130));
+        btn_sair.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        btn_sair.setForeground(new java.awt.Color(232, 72, 85));
+        btn_sair.setText("Sair");
+        btn_sair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel13.setFont(new java.awt.Font("Colonna MT", 0, 65)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel13.setText("MADE");
-        jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        made_Label.setFont(new java.awt.Font("Colonna MT", 0, 65)); // NOI18N
+        made_Label.setForeground(new java.awt.Color(255, 253, 130));
+        made_Label.setText("MADE");
+        made_Label.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel14.setFont(new java.awt.Font("Colonna MT", 1, 65)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel14.setText("Lavant");
-        jLabel14.setToolTipText("");
+        lavant_Label.setFont(new java.awt.Font("Colonna MT", 1, 65)); // NOI18N
+        lavant_Label.setForeground(new java.awt.Color(232, 72, 85));
+        lavant_Label.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lavant_Label.setText("Lavant");
+        lavant_Label.setToolTipText("");
 
-        jButton18.setBackground(new java.awt.Color(255, 253, 130));
-        jButton18.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton18.setForeground(new java.awt.Color(232, 72, 85));
-        jButton18.setText("Carrinho");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
+        btn_carrinhoCliente.setBackground(new java.awt.Color(255, 253, 130));
+        btn_carrinhoCliente.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        btn_carrinhoCliente.setForeground(new java.awt.Color(232, 72, 85));
+        btn_carrinhoCliente.setText("Carrinho");
+        btn_carrinhoCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton19.setBackground(new java.awt.Color(255, 253, 130));
-        jButton19.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton19.setForeground(new java.awt.Color(232, 72, 85));
-        jButton19.setText("Produtos");
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
+        btn_produtosCliente.setBackground(new java.awt.Color(255, 253, 130));
+        btn_produtosCliente.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        btn_produtosCliente.setForeground(new java.awt.Color(232, 72, 85));
+        btn_produtosCliente.setText("Produtos");
+        btn_produtosCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
+                btn_produtosClienteActionPerformed(evt);
             }
         });
 
-        jButton20.setBackground(new java.awt.Color(255, 253, 130));
-        jButton20.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton20.setForeground(new java.awt.Color(232, 72, 85));
-        jButton20.setText("Perfil");
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
+        btn_perfilCliente.setBackground(new java.awt.Color(255, 253, 130));
+        btn_perfilCliente.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        btn_perfilCliente.setForeground(new java.awt.Color(232, 72, 85));
+        btn_perfilCliente.setText("Perfil");
+        btn_perfilCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-
-        jLabel15.setBackground(new java.awt.Color(45, 48, 71));
-        jLabel15.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("Horário de Funcionamento");
-        jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -107,19 +99,18 @@ public class TelaCliente extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton17)
+                .addComponent(btn_sair)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(made_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(231, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lavant_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btn_perfilCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_carrinhoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_produtosCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -128,22 +119,20 @@ public class TelaCliente extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap(41, Short.MAX_VALUE)
-                        .addComponent(jLabel13)
+                        .addComponent(made_Label)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton17)
+                        .addComponent(btn_sair)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jLabel14)
+                .addComponent(lavant_Label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_carrinhoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_produtosCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btn_perfilCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -161,20 +150,28 @@ public class TelaCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        //vai para o perfil do cliente
+        this.setVisible(false);
+        new PerfilCliente().setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        //vai para o carrinho
+        this.setVisible(false);
+        new TelaCarrinho().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        //retorna para a tela de login
+        this.setVisible(false);
+        new Login().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton19ActionPerformed
+    private void btn_produtosClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_produtosClienteActionPerformed
+        //vai para o crud de produtos
+        this.setVisible(false);
+        new CrudProdutos_Cliente().setVisible(true);
+    }//GEN-LAST:event_btn_produtosClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,32 +190,32 @@ public class TelaCliente extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InicioCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InicioCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InicioCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InicioCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaCliente().setVisible(true);
+                new InicioCliente().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
+    private javax.swing.JButton btn_carrinhoCliente;
+    private javax.swing.JButton btn_perfilCliente;
+    private javax.swing.JButton btn_produtosCliente;
+    private javax.swing.JButton btn_sair;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lavant_Label;
+    private javax.swing.JLabel made_Label;
     // End of variables declaration//GEN-END:variables
 }

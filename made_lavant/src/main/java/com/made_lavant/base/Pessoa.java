@@ -9,17 +9,16 @@ package com.made_lavant.base;
  *
  * @author Daniel
  */
-public class Pessoa {
+public abstract class Pessoa {
 
-    protected String nome;
+    protected String nome, senha;
     protected Endereco endereco;
 
-    public Pessoa(String nome) {
-        this.nome = nome;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
-    public Pessoa(String nome, Endereco endereco) {
-        this.nome = nome;
+    public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
 
@@ -27,17 +26,22 @@ public class Pessoa {
         return nome;
     }
 
+    public String getSenha() {
+        return senha;
+    }
+
     public Endereco getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(String bairro,String cep, String cidade, int numero, String rua, String uf) {
-        this.endereco.setBairro(bairro);
-        this.endereco.setCep(cep);
-        this.endereco.setCidade(cidade);
-        this.endereco.setNumero(numero);
-        this.endereco.setRua(rua);
-        this.endereco.setUf(uf);
+    public Pessoa(String nome, String senha) {
+        this.nome = nome;
+        this.senha = senha;
     }
 
+    public Pessoa(String nome, Endereco endereco, String senha) {
+        this.nome = nome;
+        this.endereco = endereco;
+        this.senha = senha;
+    }
 }

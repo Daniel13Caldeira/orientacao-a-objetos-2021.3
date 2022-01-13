@@ -5,6 +5,10 @@
  */
 package com.made_lavant.view;
 
+import com.made_lavant.base.Cliente;
+import com.made_lavant.base.Endereco;
+import com.made_lavant.dados.ClienteDados;
+
 /**
  *
  * @author ewe88
@@ -33,23 +37,27 @@ public class CadastroCliente extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        nome_cadastroCliente = new javax.swing.JTextField();
+        cidade_cadastroCliente = new javax.swing.JTextField();
+        rua_cadastroCliente = new javax.swing.JTextField();
+        confirmarBTN_cadastroCliente = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        bairro_cadastroCliente = new javax.swing.JTextField();
+        numero_cadastroCliente = new javax.swing.JTextField();
+        uf_cadastroCliente = new javax.swing.JTextField();
+        cpf_cadastroCliente = new javax.swing.JTextField();
+        cep_cadastroCliente = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        btn_sairCadastroCliente = new javax.swing.JButton();
+        clienteCadastrado = new javax.swing.JLabel();
+        clienteCadastrado.setVisible(false);
+        jLabel12 = new javax.swing.JLabel();
+        senha_cadastroCliente = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro");
@@ -73,33 +81,33 @@ public class CadastroCliente extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(232, 72, 85));
         jLabel4.setText("Rua");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        nome_cadastroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                nome_cadastroClienteActionPerformed(evt);
             }
         });
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        cidade_cadastroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                cidade_cadastroClienteActionPerformed(evt);
             }
         });
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        rua_cadastroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                rua_cadastroClienteActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(255, 253, 130));
-        jButton1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(232, 72, 85));
-        jButton1.setText("Confirmar");
-
-        jButton2.setBackground(new java.awt.Color(255, 253, 130));
-        jButton2.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(232, 72, 85));
-        jButton2.setText("Voltar");
+        confirmarBTN_cadastroCliente.setBackground(new java.awt.Color(255, 253, 130));
+        confirmarBTN_cadastroCliente.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        confirmarBTN_cadastroCliente.setForeground(new java.awt.Color(232, 72, 85));
+        confirmarBTN_cadastroCliente.setText("Confirmar");
+        confirmarBTN_cadastroCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmarBTN_cadastroClienteActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(232, 72, 85));
@@ -121,15 +129,21 @@ public class CadastroCliente extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(232, 72, 85));
         jLabel9.setText("CPF");
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        numero_cadastroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                numero_cadastroClienteActionPerformed(evt);
             }
         });
 
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        cpf_cadastroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                cpf_cadastroClienteActionPerformed(evt);
+            }
+        });
+
+        cep_cadastroCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cep_cadastroClienteActionPerformed(evt);
             }
         });
 
@@ -141,124 +155,165 @@ public class CadastroCliente extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(232, 72, 85));
         jLabel11.setText("Lavant");
 
+        btn_sairCadastroCliente.setBackground(new java.awt.Color(255, 253, 130));
+        btn_sairCadastroCliente.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        btn_sairCadastroCliente.setForeground(new java.awt.Color(232, 72, 85));
+        btn_sairCadastroCliente.setText("Sair");
+        btn_sairCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_sairCadastroClienteActionPerformed(evt);
+            }
+        });
+
+        clienteCadastrado.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        clienteCadastrado.setForeground(new java.awt.Color(232, 72, 85));
+        clienteCadastrado.setText("Cliente já cadastrado");
+
+        jLabel12.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(232, 72, 85));
+        jLabel12.setText("Senha");
+
+        senha_cadastroCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                senha_cadastroClienteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton2)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel7))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(uf_cadastroCliente)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel9)
+                                        .addGap(12, 12, 12)
+                                        .addComponent(cpf_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(bairro_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel8))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cep_cadastroCliente)
+                                    .addComponent(numero_cadastroCliente)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(btn_sairCadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel4))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rua_cadastroCliente)
+                                    .addComponent(nome_cadastroCliente)
+                                    .addComponent(cidade_cadastroCliente)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLabel1)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel11)
-                        .addGap(43, 43, 43))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(25, 25, 25)
-                        .addComponent(jTextField3))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(9, 9, 9)
-                        .addComponent(jTextField1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(35, 35, 35)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField7))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel8))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
-                            .addComponent(jTextField5))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(258, 258, 258)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(clienteCadastrado)
+                .addGap(110, 110, 110)
+                .addComponent(confirmarBTN_cadastroCliente)
+                .addGap(20, 20, 20))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(senha_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 599, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGap(42, 42, 42)
                 .addComponent(jLabel1)
+=======
+                .addContainerGap()
+                .addComponent(btn_sairCadastroCliente)
+                .addGap(28, 28, 28)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> 6c59f9dbb9b47ea2dac04a013a71df3093db77e5
                 .addGap(33, 33, 33)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nome_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cidade_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rua_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bairro_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(numero_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cep_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpf_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(uf_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addGap(69, 69, 69)
-                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(senha_cadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(clienteCadastrado)
+                    .addComponent(confirmarBTN_cadastroCliente))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39))))
+                        .addGap(26, 26, 26))
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 679, Short.MAX_VALUE)
+            .addGap(0, 690, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 491, Short.MAX_VALUE)
+            .addGap(0, 525, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -266,25 +321,120 @@ public class CadastroCliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void nome_cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nome_cadastroClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_nome_cadastroClienteActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void cidade_cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidade_cadastroClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_cidade_cadastroClienteActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void rua_cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rua_cadastroClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_rua_cadastroClienteActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void cep_cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cep_cadastroClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_cep_cadastroClienteActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void cpf_cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpf_cadastroClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_cpf_cadastroClienteActionPerformed
+
+    private void btn_sairCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroClienteActionPerformed
+        //deixa de mostrar a tela atual e mostra a tela de login
+        this.setVisible(false);
+        new Login().setVisible(true);
+    }//GEN-LAST:event_btn_sairCadastroClienteActionPerformed
+
+    private void confirmarBTN_cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_cadastroClienteActionPerformed
+        //diz se o cadastro pode ou não ser realizado
+        boolean cadastro = true;
+        //verifica se o campo de CPF está preenchido
+        if (cpf_cadastroCliente.getText().equals("")) {
+            //se não estiver o cadastro não pode ser realizado
+            cpf_cadastroCliente.setText("Campo obrigatório");
+            cadastro = false;
+        } else {
+            //verfica se o cpf é válido, se não for ele não pode ser cadastrado
+            cadastro = Cliente.verificaCPF(cpf_cadastroCliente.getText());
+            if (!cadastro) {
+                cpf_cadastroCliente.setText("CPF inválido");
+            } else {
+                //verifica se o cliente já está cadastrado, se ele já estiver, não pode ser cadastrado novamente
+                ClienteDados cliendeDados = new ClienteDados();
+                if (cliendeDados.buscarCPF(cpf_cadastroCliente.getText()) != null) {
+                    cadastro = false;
+                    clienteCadastrado.setVisible(true);
+                } else {
+                    clienteCadastrado.setVisible(false);
+                }
+            }
+        }
+        //verifica se o campo de nome está preenchido
+        if (nome_cadastroCliente.getText().equals("") || nome_cadastroCliente.getText().equals("Campo obrigatório")) {
+            //se não estiver o cadastro não pode ser realizado
+            nome_cadastroCliente.setText("Campo obrigatório");
+            cadastro = false;
+        }
+        //verifica se o campo senha foi preenchido
+        if (senha_cadastroCliente.getText().equals("") || senha_cadastroCliente.getText().equals("Campo obrigatório")) {
+            //se não estiver o cadastro não pode ser realizado
+            senha_cadastroCliente.setText("Campo obrigatório");
+            cadastro = false;
+        }
+
+        //verifica se algum campo referente ao endereço foi cadastrado, se um deles for cadastrado, todos devem ser cadastrados
+        if (!(cidade_cadastroCliente.getText().equals("") && rua_cadastroCliente.getText().equals("") && bairro_cadastroCliente.getText().equals("") && numero_cadastroCliente.getText().equals("") && uf_cadastroCliente.getText().equals("") && cep_cadastroCliente.getText().equals(""))) {
+            if (cidade_cadastroCliente.getText().equals("") || cidade_cadastroCliente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                cidade_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (bairro_cadastroCliente.getText().equals("") || bairro_cadastroCliente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                bairro_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (rua_cadastroCliente.getText().equals("") || rua_cadastroCliente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                rua_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (uf_cadastroCliente.getText().equals("") || uf_cadastroCliente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                uf_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (numero_cadastroCliente.getText().equals("") || numero_cadastroCliente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                numero_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (cep_cadastroCliente.getText().equals("") || cep_cadastroCliente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                cep_cadastroCliente.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (cadastro) {
+                //com todos os campos de endereço preenchidos, o cadastro será feito com o endereço
+                Endereco endereco = new Endereco(cidade_cadastroCliente.getText(), cep_cadastroCliente.getText(), uf_cadastroCliente.getText(), bairro_cadastroCliente.getText(), rua_cadastroCliente.getText(), numero_cadastroCliente.getText());
+                new Cliente(nome_cadastroCliente.getText(), endereco, cpf_cadastroCliente.getText(), senha_cadastroCliente.getText());
+            }
+            //se nenhum campo de endereço estiver cadastrado, o cadastro será feito sem o endereço
+        } else {
+            if (cadastro) {
+                new Cliente(nome_cadastroCliente.getText(), cpf_cadastroCliente.getText(), senha_cadastroCliente.getText());
+            }
+        }
+        //retorna para a tela de login se o cadastro foi realizado
+        if (cadastro) {
+            this.setVisible(false);
+            new Login().setVisible(true);
+        }
+    }//GEN-LAST:event_confirmarBTN_cadastroClienteActionPerformed
+
+    private void numero_cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numero_cadastroClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numero_cadastroClienteActionPerformed
+
+    private void senha_cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senha_cadastroClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_senha_cadastroClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -315,6 +465,18 @@ public class CadastroCliente extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -325,11 +487,17 @@ public class CadastroCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JTextField bairro_cadastroCliente;
+    private javax.swing.JButton btn_sairCadastroCliente;
+    private javax.swing.JTextField cep_cadastroCliente;
+    private javax.swing.JTextField cidade_cadastroCliente;
+    private javax.swing.JLabel clienteCadastrado;
+    private javax.swing.JButton confirmarBTN_cadastroCliente;
+    private javax.swing.JTextField cpf_cadastroCliente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -340,13 +508,10 @@ public class CadastroCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField nome_cadastroCliente;
+    private javax.swing.JTextField numero_cadastroCliente;
+    private javax.swing.JTextField rua_cadastroCliente;
+    private javax.swing.JTextField senha_cadastroCliente;
+    private javax.swing.JTextField uf_cadastroCliente;
     // End of variables declaration//GEN-END:variables
 }
