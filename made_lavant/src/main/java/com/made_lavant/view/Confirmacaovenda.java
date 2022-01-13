@@ -8,7 +8,7 @@ package com.made_lavant.view;
  *
  * @author Marcio
  */
-public class ConfirmacaoVenda extends javax.swing.JFrame {
+public  class ConfirmacaoVenda extends javax.swing.JFrame {
 
     /**
      * Creates new form Confirmacaodevenda
@@ -311,6 +311,10 @@ public class ConfirmacaoVenda extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ConfirmacaoVenda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>

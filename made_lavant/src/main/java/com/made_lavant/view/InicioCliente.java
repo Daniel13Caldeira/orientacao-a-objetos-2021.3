@@ -4,6 +4,9 @@
  */
 package com.made_lavant.view;
 
+import com.made_lavant.base.Carrinho;
+import com.made_lavant.base.Cliente;
+
 /**
  *
  * @author Marcio
