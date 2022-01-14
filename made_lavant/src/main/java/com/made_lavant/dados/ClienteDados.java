@@ -132,9 +132,9 @@ public class ClienteDados {
     }
 
     //busca o nome de um cliente
-    public String buscarNome(Cliente cliente) {
+    public String buscarNome(String cliente) {
         //busca o cliente
-        String aux = buscar(cliente.getCPF());
+        String aux = buscar(cliente);
         //se encontrar um cliente, o nome é separado e retornado
         if (aux != null) {
             return separa(aux, 1);
@@ -158,8 +158,8 @@ public class ClienteDados {
     }
 
     //semelhante a buscarNome
-    public String buscarRua(Cliente cliente) {
-        String aux = buscar(cliente.getCPF());
+    public String buscarRua(String cliente) {
+        String aux = buscar(cliente);
         if (aux != null) {
             return separa(aux, 3);
         }
@@ -167,8 +167,8 @@ public class ClienteDados {
     }
 
     //semelhante a buscarNome
-    public String buscarBairro(Cliente cliente) {
-        String aux = buscar(cliente.getCPF());
+    public String buscarBairro(String cliente) {
+        String aux = buscar(cliente);
         if (aux != null) {
             return separa(aux, 4);
         }
@@ -176,8 +176,8 @@ public class ClienteDados {
     }
 
     //semelhante a buscarNome
-    public String buscarCidade(Cliente cliente) {
-        String aux = buscar(cliente.getCPF());
+    public String buscarCidade(String cliente) {
+        String aux = buscar(cliente);
         if (aux != null) {
             return separa(aux, 2);
         }
@@ -185,8 +185,8 @@ public class ClienteDados {
     }
 
     //semelhante a buscarNome
-    public String buscarNumero(Cliente cliente) {
-        String aux = buscar(cliente.getCPF());
+    public String buscarNumero(String cliente) {
+        String aux = buscar(cliente);
         if (aux != null) {
             return separa(aux, 5);
         }
@@ -194,8 +194,8 @@ public class ClienteDados {
     }
 
     //semelhante a buscarNome
-    public String buscarUF(Cliente cliente) {
-        String aux = buscar(cliente.getCPF());
+    public String buscarUF(String cliente) {
+        String aux = buscar(cliente);
         if (aux != null) {
             return separa(aux, 6);
         }
@@ -203,8 +203,8 @@ public class ClienteDados {
     }
 
     //semelhante a buscarNome
-    public String buscarCEP(Cliente cliente) {
-        String aux = buscar(cliente.getCPF());
+    public String buscarCEP(String cliente) {
+        String aux = buscar(cliente);
         if (aux != null) {
             return separa(aux, 7);
         }
