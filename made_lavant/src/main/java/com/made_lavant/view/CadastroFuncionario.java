@@ -6,6 +6,7 @@ package com.made_lavant.view;
 
 import com.made_lavant.base.Endereco;
 import com.made_lavant.base.Funcionario;
+import javax.swing.JTextField;
 
 /**
  *
@@ -108,9 +109,27 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             }
         });
 
+        numero_cadastroFuncionario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                numero_cadastroFuncionarioKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                numero_cadastroFuncionarioKeyTyped(evt);
+            }
+        });
+
         cidade_cadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cidade_cadastroFuncionarioActionPerformed(evt);
+            }
+        });
+
+        uf_cadastroFuncionario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                uf_cadastroFuncionarioKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                uf_cadastroFuncionarioKeyTyped(evt);
             }
         });
 
@@ -133,6 +152,14 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         cep_cadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cep_cadastroFuncionarioActionPerformed(evt);
+            }
+        });
+        cep_cadastroFuncionario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                cep_cadastroFuncionarioKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cep_cadastroFuncionarioKeyTyped(evt);
             }
         });
 
@@ -369,49 +396,103 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                 identificador = "B";
             }
         }
-            //verifica se algum campo referente ao endereço foi cadastrado, se um deles for cadastrado, todos devem ser cadastrados
-            if (!(cidade_cadastroFuncionario.getText().equals("") && rua_cadastroFuncionario.getText().equals("") && bairro_cadastroFuncionario.getText().equals("") && numero_cadastroFuncionario.getText().equals("") && uf_cadastroFuncionario.getText().equals("") && cep_cadastroFuncionario.getText().equals(""))) {
-                if (cidade_cadastroFuncionario.getText().equals("") || cidade_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                    cidade_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
-                    cadastro = false;
-                }
-                if (bairro_cadastroFuncionario.getText().equals("") || bairro_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                    bairro_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
-                    cadastro = false;
-                }
-                if (rua_cadastroFuncionario.getText().equals("") || rua_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                    rua_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
-                    cadastro = false;
-                }
-                if (uf_cadastroFuncionario.getText().equals("") || uf_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                    uf_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
-                    cadastro = false;
-                }
-                if (numero_cadastroFuncionario.getText().equals("") || numero_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                    numero_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
-                    cadastro = false;
-                }
-                if (cep_cadastroFuncionario.getText().equals("") || cep_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                    cep_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
-                    cadastro = false;
-                }
-                if (cadastro) {
-                    //com todos os campos de endereço preenchidos, o cadastro será feito com o endereço
-                    Endereco endereco = new Endereco(cidade_cadastroFuncionario.getText(), cep_cadastroFuncionario.getText(), uf_cadastroFuncionario.getText(), bairro_cadastroFuncionario.getText(), rua_cadastroFuncionario.getText(), numero_cadastroFuncionario.getText());
-                    new Funcionario(nome_cadastroFuncionario.getText(), endereco, "madeLavant", identificador);
-                }
-            } else {
-                //se nenhum campo de endereço estiver cadastrado, o cadastro será feito sem o endereço
-                if (cadastro) {
-                    new Funcionario(nome_cadastroFuncionario.getText(), "madeLavant", identificador);
-                }
+        //verifica se algum campo referente ao endereço foi cadastrado, se um deles for cadastrado, todos devem ser cadastrados
+        if (!(cidade_cadastroFuncionario.getText().equals("") && rua_cadastroFuncionario.getText().equals("") && bairro_cadastroFuncionario.getText().equals("") && numero_cadastroFuncionario.getText().equals("") && uf_cadastroFuncionario.getText().equals("") && cep_cadastroFuncionario.getText().equals(""))) {
+            if (cidade_cadastroFuncionario.getText().equals("") || cidade_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                cidade_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
             }
+            if (bairro_cadastroFuncionario.getText().equals("") || bairro_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                bairro_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (rua_cadastroFuncionario.getText().equals("") || rua_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                rua_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (uf_cadastroFuncionario.getText().equals("") || uf_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                uf_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (numero_cadastroFuncionario.getText().equals("") || numero_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                numero_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (cep_cadastroFuncionario.getText().equals("") || cep_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                cep_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+                cadastro = false;
+            }
+            if (cadastro) {
+                //com todos os campos de endereço preenchidos, o cadastro será feito com o endereço
+                Endereco endereco = new Endereco(cidade_cadastroFuncionario.getText(), cep_cadastroFuncionario.getText(), uf_cadastroFuncionario.getText(), bairro_cadastroFuncionario.getText(), rua_cadastroFuncionario.getText(), numero_cadastroFuncionario.getText());
+                new Funcionario(nome_cadastroFuncionario.getText(), endereco, "madeLavant", identificador);
+            }
+        } else {
+            //se nenhum campo de endereço estiver cadastrado, o cadastro será feito sem o endereço
+            if (cadastro) {
+                new Funcionario(nome_cadastroFuncionario.getText(), "madeLavant", identificador);
+            }
+        }
         //retorna para a tela de crud de funcionários se o cadastro foi realizado
         if (cadastro) {
             this.setVisible(false);
             new CrudFuncionarios().setVisible(true);
         }
     }//GEN-LAST:event_btnConfirmar_cadastroFuncionarioActionPerformed
+
+    private void numero_cadastroFuncionarioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numero_cadastroFuncionarioKeyReleased
+        mascaraInt(numero_cadastroFuncionario);
+    }//GEN-LAST:event_numero_cadastroFuncionarioKeyReleased
+
+    private void numero_cadastroFuncionarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numero_cadastroFuncionarioKeyTyped
+        mascaraInt(numero_cadastroFuncionario);
+    }//GEN-LAST:event_numero_cadastroFuncionarioKeyTyped
+
+    private void cep_cadastroFuncionarioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cep_cadastroFuncionarioKeyReleased
+        mascaraCEP();
+    }//GEN-LAST:event_cep_cadastroFuncionarioKeyReleased
+
+    private void cep_cadastroFuncionarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cep_cadastroFuncionarioKeyTyped
+        mascaraCEP();
+    }//GEN-LAST:event_cep_cadastroFuncionarioKeyTyped
+
+    private void uf_cadastroFuncionarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_uf_cadastroFuncionarioKeyTyped
+        mascaraUF();
+    }//GEN-LAST:event_uf_cadastroFuncionarioKeyTyped
+
+    private void uf_cadastroFuncionarioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_uf_cadastroFuncionarioKeyReleased
+        mascaraUF();
+    }//GEN-LAST:event_uf_cadastroFuncionarioKeyReleased
+
+    private void mascaraUF() {
+        String texto = uf_cadastroFuncionario.getText();
+        if (texto.length() > 0) {
+            if (!(texto.length() <= 2 && ((texto.charAt(texto.length() - 1) >= 'a' && texto.charAt(texto.length() - 1) <= 'z') || (texto.charAt(texto.length() - 1) >= 'A' && texto.charAt(texto.length() - 1) <= 'Z')))) {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        uf_cadastroFuncionario.setText(texto);
+    }
+
+    private void mascaraCEP() {
+        String texto = cep_cadastroFuncionario.getText();
+        if (texto.length() > 0) {
+            if (texto.length() > 8 || texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        cep_cadastroFuncionario.setText(texto);
+    }
+
+    private void mascaraInt(JTextField textField) {
+        String texto = textField.getText();
+        if (texto.length() > 0) {
+            if (texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        textField.setText(texto);
+    }
 
     /**
      * @param args the command line arguments

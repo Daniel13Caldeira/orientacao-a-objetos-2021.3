@@ -57,24 +57,26 @@
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace pref="130" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="BTNConfirmar_CadastroProdutoFunc" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="nome_CadastroProdutoFunc" pref="381" max="32767" attributes="0"/>
-                                  <Component id="quantidade_CadastroProdutoFunc" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="preco_CadastroProdutoFunc" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="validade_CadastroProdutoFunc" alignment="0" max="32767" attributes="0"/>
-                              </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="dataInvalida_cadastroProduto" min="-2" pref="220" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="BTNConfirmar_CadastroProdutoFunc" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="nome_CadastroProdutoFunc" pref="381" max="32767" attributes="0"/>
+                              <Component id="quantidade_CadastroProdutoFunc" alignment="0" max="32767" attributes="0"/>
+                              <Component id="preco_CadastroProdutoFunc" alignment="0" max="32767" attributes="0"/>
+                              <Component id="validade_CadastroProdutoFunc" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -119,9 +121,11 @@
                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="validade_CadastroProdutoFunc" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <Component id="dataInvalida_cadastroProduto" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="BTNConfirmar_CadastroProdutoFunc" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="184" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
                   <Component id="btn_sairCadastroCliente" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -228,6 +232,8 @@
         <Component class="javax.swing.JTextField" name="quantidade_CadastroProdutoFunc">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quantidade_CadastroProdutoFuncActionPerformed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="quantidade_CadastroProdutoFuncKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="quantidade_CadastroProdutoFuncKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="nome_CadastroProdutoFunc">
@@ -238,11 +244,15 @@
         <Component class="javax.swing.JTextField" name="validade_CadastroProdutoFunc">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="validade_CadastroProdutoFuncActionPerformed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="validade_CadastroProdutoFuncKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="validade_CadastroProdutoFuncKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="preco_CadastroProdutoFunc">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="preco_CadastroProdutoFuncActionPerformed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="preco_CadastroProdutoFuncKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="preco_CadastroProdutoFuncKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BTNConfirmar_CadastroProdutoFunc">
@@ -278,6 +288,14 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_sairCadastroProdutoFuncActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="dataInvalida_cadastroProduto">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Data inv&#xe1;lida"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="dataInvalida_cadastroProduto.setVisible(false);&#xd;&#xa;"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
