@@ -128,9 +128,9 @@ public class FuncionarioDados {
     }
 
     //busca o nome de um funcionário
-    public String buscarNome(Funcionario funcionario) {
+    public String buscarNome(String funcionario) {
         //busca o funcionario
-        String aux = buscar(funcionario.getCod());
+        String aux = buscar(funcionario);
         //se encontrar um funcionário, o nome é separado e retornado
         if (aux != null) {
             return separa(aux, 1);
@@ -149,8 +149,8 @@ public class FuncionarioDados {
     }
 
     //semelhante a buscarNome
-    public String buscarRua(Funcionario funcionario) {
-        String aux = buscar(funcionario.getCod());
+    public String buscarRua(String funcionario) {
+        String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 3);
         }
@@ -158,8 +158,8 @@ public class FuncionarioDados {
     }
 
     //semelhante a buscarNome
-    public String buscarBairro(Funcionario funcionario) {
-        String aux = buscar(funcionario.getCod());
+    public String buscarBairro(String funcionario) {
+        String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 4);
         }
@@ -167,8 +167,8 @@ public class FuncionarioDados {
     }
 
     //semelhante a buscarNome
-    public String buscarCidade(Funcionario funcionario) {
-        String aux = buscar(funcionario.getCod());
+    public String buscarCidade(String funcionario) {
+        String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 2);
         }
@@ -176,8 +176,8 @@ public class FuncionarioDados {
     }
 
     //semelhante a buscarNome
-    public String buscarNumero(Funcionario funcionario) {
-        String aux = buscar(funcionario.getCod());
+    public String buscarNumero(String funcionario) {
+        String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 5);
         }
@@ -185,8 +185,8 @@ public class FuncionarioDados {
     }
 
     //semelhante a buscarNome
-    public String buscarUF(Funcionario funcionario) {
-        String aux = buscar(funcionario.getCod());
+    public String buscarUF(String funcionario) {
+        String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 6);
         }
@@ -194,8 +194,8 @@ public class FuncionarioDados {
     }
 
     //semelhante a buscarNome
-    public String buscarCEP(Funcionario funcionario) {
-        String aux = buscar(funcionario.getCod());
+    public String buscarCEP(String funcionario) {
+        String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 7);
         }

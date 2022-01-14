@@ -4,6 +4,8 @@
  */
 package com.made_lavant.view;
 
+import com.made_lavant.dados.FuncionarioDados;
+
 /**
  *
  * @author Marcio
@@ -293,6 +295,16 @@ public class PerfilFuncionario extends javax.swing.JFrame {
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(82, Short.MAX_VALUE))
         );
+
+        FuncionarioDados FuncionarioDados = new FuncionarioDados();
+        jLabel18.setText(FuncionarioDados.buscarNumero(Login.getCodigo()));
+        jLabel8.setText(FuncionarioDados.buscarCidade(Login.getCodigo()));
+        jLabel10.setText(FuncionarioDados.buscarUF(Login.getCodigo()));
+        jLabel1.setText(FuncionarioDados.buscarNome(Login.getCodigo()));
+        jLabel12.setText(FuncionarioDados.buscarCEP(Login.getCodigo()));
+        jLabel14.setText(FuncionarioDados.buscarBairro(Login.getCodigo()));
+        jLabel16.setText(FuncionarioDados.buscarRua(Login.getCodigo()));
+        jLabel6.setText(Login.getCodigo());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
