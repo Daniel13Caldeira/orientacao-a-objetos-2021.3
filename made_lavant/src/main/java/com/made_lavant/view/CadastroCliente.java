@@ -8,6 +8,7 @@ package com.made_lavant.view;
 import com.made_lavant.base.Cliente;
 import com.made_lavant.base.Endereco;
 import com.made_lavant.dados.ClienteDados;
+import javax.swing.JTextField;
 
 /**
  *
@@ -134,16 +135,44 @@ public class CadastroCliente extends javax.swing.JFrame {
                 numero_cadastroClienteActionPerformed(evt);
             }
         });
+        numero_cadastroCliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                numero_cadastroClienteKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                numero_cadastroClienteKeyTyped(evt);
+            }
+        });
 
-        cpf_cadastroCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpf_cadastroClienteActionPerformed(evt);
+        uf_cadastroCliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                uf_cadastroClienteKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                uf_cadastroClienteKeyTyped(evt);
+            }
+        });
+
+        cpf_cadastroCliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                cpf_cadastroClienteKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cpf_cadastroClienteKeyTyped(evt);
             }
         });
 
         cep_cadastroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cep_cadastroClienteActionPerformed(evt);
+            }
+        });
+        cep_cadastroCliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                cep_cadastroClienteKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cep_cadastroClienteKeyTyped(evt);
             }
         });
 
@@ -332,10 +361,6 @@ public class CadastroCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cep_cadastroClienteActionPerformed
 
-    private void cpf_cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpf_cadastroClienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cpf_cadastroClienteActionPerformed
-
     private void btn_sairCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroClienteActionPerformed
         //deixa de mostrar a tela atual e mostra a tela de login
         this.setVisible(false);
@@ -428,8 +453,80 @@ public class CadastroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_numero_cadastroClienteActionPerformed
 
     private void senha_cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senha_cadastroClienteActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_senha_cadastroClienteActionPerformed
+
+    private void cpf_cadastroClienteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cpf_cadastroClienteKeyReleased
+        mascaraCPF();
+    }//GEN-LAST:event_cpf_cadastroClienteKeyReleased
+
+    private void mascaraCPF() {
+        String texto = cpf_cadastroCliente.getText();
+        if (texto.length() > 0) {
+            if (texto.length() > 11 || texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        cpf_cadastroCliente.setText(texto);
+    }
+
+    private void cpf_cadastroClienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cpf_cadastroClienteKeyTyped
+        mascaraCPF();
+    }//GEN-LAST:event_cpf_cadastroClienteKeyTyped
+
+    private void numero_cadastroClienteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numero_cadastroClienteKeyReleased
+        mascaraInt(numero_cadastroCliente);
+    }//GEN-LAST:event_numero_cadastroClienteKeyReleased
+
+    private void numero_cadastroClienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numero_cadastroClienteKeyTyped
+        mascaraInt(numero_cadastroCliente);
+    }//GEN-LAST:event_numero_cadastroClienteKeyTyped
+
+    private void cep_cadastroClienteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cep_cadastroClienteKeyReleased
+        mascaraCEP();
+    }//GEN-LAST:event_cep_cadastroClienteKeyReleased
+
+    private void cep_cadastroClienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cep_cadastroClienteKeyTyped
+        mascaraCEP();
+    }//GEN-LAST:event_cep_cadastroClienteKeyTyped
+
+    private void uf_cadastroClienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_uf_cadastroClienteKeyTyped
+        mascaraUF();
+    }//GEN-LAST:event_uf_cadastroClienteKeyTyped
+
+    private void uf_cadastroClienteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_uf_cadastroClienteKeyReleased
+        mascaraUF();
+    }//GEN-LAST:event_uf_cadastroClienteKeyReleased
+
+    private void mascaraUF() {
+        String texto = uf_cadastroCliente.getText();
+        if (texto.length() > 0) {
+            if (!(texto.length() <= 2 && ((texto.charAt(texto.length() - 1) >= 'a' && texto.charAt(texto.length() - 1) <= 'z') || (texto.charAt(texto.length() - 1) >= 'A' && texto.charAt(texto.length() - 1) <= 'Z')))) {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        uf_cadastroCliente.setText(texto);
+    }
+
+    private void mascaraCEP() {
+        String texto = cep_cadastroCliente.getText();
+        if (texto.length() > 0) {
+            if (texto.length() > 8 || texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        cep_cadastroCliente.setText(texto);
+    }
+
+    private void mascaraInt(JTextField textField) {
+        String texto = textField.getText();
+        if (texto.length() > 0) {
+            if (texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        textField.setText(texto);
+    }
 
     /**
      * @param args the command line arguments

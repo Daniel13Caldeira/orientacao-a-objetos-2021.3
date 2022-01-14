@@ -2,14 +2,13 @@ package com.made_lavant.base;
 
 import com.made_lavant.dados.Codigos;
 import com.made_lavant.dados.ProdutoDados;
-import java.util.Date;
 
 public class Produto {
 
     protected String nome;
     protected int codigo;
     protected double preco;
-    protected Date validade;
+    protected String validade;
     protected double quantidade;
 
     public String getNome() {
@@ -31,7 +30,7 @@ public class Produto {
         altera.alterar(this);
     }
 
-    public Date getValidade() {
+    public String getValidade() {
         return validade;
     }
 
@@ -47,14 +46,14 @@ public class Produto {
     }
 
     //cria um produto com validade
-    public Produto(String nome, double preco, Date validade, double quantidade) {
+    public Produto(String nome, double preço, String validade, double quantidade){
         Codigos codigos = new Codigos();
         this.nome = nome;
+        this.validade = validade;
         this.codigo = codigos.buscaProduto();
         //muda o código do próximo produto cadastrado
         codigos.alterarPrduto();
         this.preco = preco;
-        this.validade = validade;
         this.quantidade = quantidade;
         ProdutoDados add = new ProdutoDados();
         //adiciona um produto ao arquivo onde ficará salvo

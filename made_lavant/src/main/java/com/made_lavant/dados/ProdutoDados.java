@@ -12,6 +12,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -38,7 +40,7 @@ public class ProdutoDados {
     //adiciona um produto sem endereço ao arquivo de salvamento
     public void adicionar(Produto produto) {
         //cria uma String com os dados do produto no formato padrão que está sendo utilizado
-        String info = String.valueOf(produto.getCodigo()) + ';' + produto.getNome() + ';' + String.valueOf(produto.getPreco()) + ';' + String.valueOf(produto.getValidade()) + ';' + produto.getQuantidade() + ';';
+        String info = String.valueOf(produto.getCodigo()) + ';' + produto.getNome() + ';' + produto.getPreco() + ';' + String.valueOf(produto.getValidade()) + ';' + produto.getQuantidade() + ';';
         //define o arquivo de salvamento
         File arquivo = new File("dados\\produto.txt");
         try {

@@ -6,6 +6,7 @@ package com.made_lavant.view;
 
 import com.made_lavant.base.Endereco;
 import com.made_lavant.base.Funcionario;
+import javax.swing.JTextField;
 
 /**
  *
@@ -30,23 +31,23 @@ public class CadastroGerente extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        uf_cadastroFuncionario = new javax.swing.JTextField();
+        uf_cadastroGerente = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        rua_cadastroFuncionario = new javax.swing.JTextField();
+        rua_cadastroGerente = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        btnConfirmar_cadastroFuncionario = new javax.swing.JButton();
+        btnConfirmar_cadastroGerente = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        cep_cadastroFuncionario = new javax.swing.JTextField();
+        cep_cadastroGerente = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        bairro_cadastroFuncionario = new javax.swing.JTextField();
+        bairro_cadastroGerente = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        nome_cadastroFuncionario = new javax.swing.JTextField();
+        nome_cadastroGerente = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        numero_cadastroFuncionario = new javax.swing.JTextField();
+        numero_cadastroGerente = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        cidade_cadastroFuncionario = new javax.swing.JTextField();
+        cidade_cadastroGerente = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,14 +55,23 @@ public class CadastroGerente extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
+        uf_cadastroGerente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                uf_cadastroGerenteKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                uf_cadastroGerenteKeyTyped(evt);
+            }
+        });
+
         jLabel1.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(232, 72, 85));
         jLabel1.setText("Cadastro do Gerente");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        rua_cadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+        rua_cadastroGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rua_cadastroFuncionarioActionPerformed(evt);
+                rua_cadastroGerenteActionPerformed(evt);
             }
         });
 
@@ -69,13 +79,13 @@ public class CadastroGerente extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(232, 72, 85));
         jLabel7.setText("UF");
 
-        btnConfirmar_cadastroFuncionario.setBackground(new java.awt.Color(255, 253, 130));
-        btnConfirmar_cadastroFuncionario.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        btnConfirmar_cadastroFuncionario.setForeground(new java.awt.Color(232, 72, 85));
-        btnConfirmar_cadastroFuncionario.setText("Confirmar");
-        btnConfirmar_cadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+        btnConfirmar_cadastroGerente.setBackground(new java.awt.Color(255, 253, 130));
+        btnConfirmar_cadastroGerente.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        btnConfirmar_cadastroGerente.setForeground(new java.awt.Color(232, 72, 85));
+        btnConfirmar_cadastroGerente.setText("Confirmar");
+        btnConfirmar_cadastroGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConfirmar_cadastroFuncionarioActionPerformed(evt);
+                btnConfirmar_cadastroGerenteActionPerformed(evt);
             }
         });
 
@@ -83,9 +93,17 @@ public class CadastroGerente extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(232, 72, 85));
         jLabel2.setText("Nome");
 
-        cep_cadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+        cep_cadastroGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cep_cadastroFuncionarioActionPerformed(evt);
+                cep_cadastroGerenteActionPerformed(evt);
+            }
+        });
+        cep_cadastroGerente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                cep_cadastroGerenteKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cep_cadastroGerenteKeyTyped(evt);
             }
         });
 
@@ -105,9 +123,9 @@ public class CadastroGerente extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 253, 130));
         jLabel10.setText("MADE");
 
-        nome_cadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+        nome_cadastroGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nome_cadastroFuncionarioActionPerformed(evt);
+                nome_cadastroGerenteActionPerformed(evt);
             }
         });
 
@@ -115,13 +133,22 @@ public class CadastroGerente extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(232, 72, 85));
         jLabel5.setText("Bairro");
 
+        numero_cadastroGerente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                numero_cadastroGerenteKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                numero_cadastroGerenteKeyTyped(evt);
+            }
+        });
+
         jLabel11.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(232, 72, 85));
         jLabel11.setText("Lavant");
 
-        cidade_cadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+        cidade_cadastroGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cidade_cadastroFuncionarioActionPerformed(evt);
+                cidade_cadastroGerenteActionPerformed(evt);
             }
         });
 
@@ -143,22 +170,22 @@ public class CadastroGerente extends javax.swing.JFrame {
                     .addComponent(jLabel4))
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nome_cadastroFuncionario)
-                    .addComponent(cidade_cadastroFuncionario)
-                    .addComponent(rua_cadastroFuncionario)
+                    .addComponent(nome_cadastroGerente)
+                    .addComponent(cidade_cadastroGerente)
+                    .addComponent(rua_cadastroGerente)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(bairro_cadastroFuncionario)
+                        .addComponent(bairro_cadastroGerente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(numero_cadastroFuncionario))
+                        .addComponent(numero_cadastroGerente))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 195, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(uf_cadastroFuncionario)
+                                .addComponent(uf_cadastroGerente)
                                 .addGap(37, 37, 37)
                                 .addComponent(jLabel8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
@@ -169,8 +196,8 @@ public class CadastroGerente extends javax.swing.JFrame {
                                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(13, 13, 13)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cep_cadastroFuncionario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnConfirmar_cadastroFuncionario, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addComponent(cep_cadastroGerente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnConfirmar_cadastroGerente, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -181,26 +208,26 @@ public class CadastroGerente extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(nome_cadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nome_cadastroGerente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(cidade_cadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cidade_cadastroGerente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(rua_cadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rua_cadastroGerente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(bairro_cadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bairro_cadastroGerente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
-                    .addComponent(numero_cadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(numero_cadastroGerente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cep_cadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cep_cadastroGerente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
-                    .addComponent(uf_cadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(uf_cadastroGerente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addGap(41, 41, 41)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -209,7 +236,7 @@ public class CadastroGerente extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnConfirmar_cadastroFuncionario)
+                        .addComponent(btnConfirmar_cadastroGerente)
                         .addGap(45, 45, 45)))
                 .addGap(53, 53, 53))
         );
@@ -228,54 +255,54 @@ public class CadastroGerente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rua_cadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rua_cadastroFuncionarioActionPerformed
+    private void rua_cadastroGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rua_cadastroGerenteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rua_cadastroFuncionarioActionPerformed
+    }//GEN-LAST:event_rua_cadastroGerenteActionPerformed
 
-    private void btnConfirmar_cadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmar_cadastroFuncionarioActionPerformed
+    private void btnConfirmar_cadastroGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmar_cadastroGerenteActionPerformed
         //diz se o cadastro pode ou não ser feito
         boolean cadastro = true;
         //identifica se está sendo cadastrado um funcionário ou um gerente
         //se o nome não foi escrito o cadastro não pode ser realizado
-        if (nome_cadastroFuncionario.getText().equals("") || nome_cadastroFuncionario.getText().equals("Campo obrigatório")) {
-            nome_cadastroFuncionario.setText("Campo obrigatório");
+        if (nome_cadastroGerente.getText().equals("") || nome_cadastroGerente.getText().equals("Campo obrigatório")) {
+            nome_cadastroGerente.setText("Campo obrigatório");
             cadastro = false;
         }
         //verifica se algum campo referente ao endereço foi cadastrado, se um deles for cadastrado, todos devem ser cadastrados
-        if (!(cidade_cadastroFuncionario.getText().equals("") && rua_cadastroFuncionario.getText().equals("") && bairro_cadastroFuncionario.getText().equals("") && numero_cadastroFuncionario.getText().equals("") && uf_cadastroFuncionario.getText().equals("") && cep_cadastroFuncionario.getText().equals(""))) {
-            if (cidade_cadastroFuncionario.getText().equals("") || cidade_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                cidade_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+        if (!(cidade_cadastroGerente.getText().equals("") && rua_cadastroGerente.getText().equals("") && bairro_cadastroGerente.getText().equals("") && numero_cadastroGerente.getText().equals("") && uf_cadastroGerente.getText().equals("") && cep_cadastroGerente.getText().equals(""))) {
+            if (cidade_cadastroGerente.getText().equals("") || cidade_cadastroGerente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                cidade_cadastroGerente.setText("Campo obrigatório se for cadastrar o endereço");
                 cadastro = false;
             }
-            if (bairro_cadastroFuncionario.getText().equals("") || bairro_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                bairro_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+            if (bairro_cadastroGerente.getText().equals("") || bairro_cadastroGerente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                bairro_cadastroGerente.setText("Campo obrigatório se for cadastrar o endereço");
                 cadastro = false;
             }
-            if (rua_cadastroFuncionario.getText().equals("") || rua_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                rua_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+            if (rua_cadastroGerente.getText().equals("") || rua_cadastroGerente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                rua_cadastroGerente.setText("Campo obrigatório se for cadastrar o endereço");
                 cadastro = false;
             }
-            if (uf_cadastroFuncionario.getText().equals("") || uf_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                uf_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+            if (uf_cadastroGerente.getText().equals("") || uf_cadastroGerente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                uf_cadastroGerente.setText("Campo obrigatório se for cadastrar o endereço");
                 cadastro = false;
             }
-            if (numero_cadastroFuncionario.getText().equals("") || numero_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                numero_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+            if (numero_cadastroGerente.getText().equals("") || numero_cadastroGerente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                numero_cadastroGerente.setText("Campo obrigatório se for cadastrar o endereço");
                 cadastro = false;
             }
-            if (cep_cadastroFuncionario.getText().equals("") || cep_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                cep_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+            if (cep_cadastroGerente.getText().equals("") || cep_cadastroGerente.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                cep_cadastroGerente.setText("Campo obrigatório se for cadastrar o endereço");
                 cadastro = false;
             }
             if (cadastro) {
                 //com todos os campos de endereço preenchidos, o cadastro será feito com o endereço
-                Endereco endereco = new Endereco(cidade_cadastroFuncionario.getText(), cep_cadastroFuncionario.getText(), uf_cadastroFuncionario.getText(), bairro_cadastroFuncionario.getText(), rua_cadastroFuncionario.getText(), numero_cadastroFuncionario.getText());
-                new Funcionario(nome_cadastroFuncionario.getText(), endereco, "madeLavant", "A");
+                Endereco endereco = new Endereco(cidade_cadastroGerente.getText(), cep_cadastroGerente.getText(), uf_cadastroGerente.getText(), bairro_cadastroGerente.getText(), rua_cadastroGerente.getText(), numero_cadastroGerente.getText());
+                new Funcionario(nome_cadastroGerente.getText(), endereco, "madeLavant", "A");
             }
         } else {
             //se nenhum campo de endereço estiver cadastrado, o cadastro será feito sem o endereço
             if (cadastro) {
-                new Funcionario(nome_cadastroFuncionario.getText(), "madeLavant", "A");
+                new Funcionario(nome_cadastroGerente.getText(), "madeLavant", "A");
             }
         }
         //retorna para a tela de crud de funcionários se o cadastro foi realizado
@@ -283,29 +310,79 @@ public class CadastroGerente extends javax.swing.JFrame {
             this.setVisible(false);
             new InicioGerente().setVisible(true);
         }
-    }//GEN-LAST:event_btnConfirmar_cadastroFuncionarioActionPerformed
+    }//GEN-LAST:event_btnConfirmar_cadastroGerenteActionPerformed
 
-    private void cep_cadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cep_cadastroFuncionarioActionPerformed
+    private void cep_cadastroGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cep_cadastroGerenteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cep_cadastroFuncionarioActionPerformed
+    }//GEN-LAST:event_cep_cadastroGerenteActionPerformed
 
-    private void nome_cadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nome_cadastroFuncionarioActionPerformed
+    private void nome_cadastroGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nome_cadastroGerenteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nome_cadastroFuncionarioActionPerformed
+    }//GEN-LAST:event_nome_cadastroGerenteActionPerformed
 
-    private void cidade_cadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidade_cadastroFuncionarioActionPerformed
+    private void cidade_cadastroGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidade_cadastroGerenteActionPerformed
+        mascaraInt(numero_cadastroGerente);
+    }//GEN-LAST:event_cidade_cadastroGerenteActionPerformed
+
+    private void numero_cadastroGerenteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numero_cadastroGerenteKeyReleased
+        mascaraInt(numero_cadastroGerente);
+    }//GEN-LAST:event_numero_cadastroGerenteKeyReleased
+
+    private void numero_cadastroGerenteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numero_cadastroGerenteKeyTyped
         // TODO add your handling code here:
-    }//GEN-LAST:event_cidade_cadastroFuncionarioActionPerformed
+    }//GEN-LAST:event_numero_cadastroGerenteKeyTyped
+
+    private void cep_cadastroGerenteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cep_cadastroGerenteKeyReleased
+        mascaraCEP();    }//GEN-LAST:event_cep_cadastroGerenteKeyReleased
+
+    private void cep_cadastroGerenteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cep_cadastroGerenteKeyTyped
+        mascaraCEP();    }//GEN-LAST:event_cep_cadastroGerenteKeyTyped
+
+    private void uf_cadastroGerenteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_uf_cadastroGerenteKeyReleased
+        mascaraUF();    }//GEN-LAST:event_uf_cadastroGerenteKeyReleased
+
+    private void uf_cadastroGerenteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_uf_cadastroGerenteKeyTyped
+        mascaraUF();    }//GEN-LAST:event_uf_cadastroGerenteKeyTyped
+
+    private void mascaraUF() {
+        String texto = uf_cadastroGerente.getText();
+        if (texto.length() > 0) {
+            if (!(texto.length() <= 2 && ((texto.charAt(texto.length() - 1) >= 'a' && texto.charAt(texto.length() - 1) <= 'z') || (texto.charAt(texto.length() - 1) >= 'A' && texto.charAt(texto.length() - 1) <= 'Z')))) {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        uf_cadastroGerente.setText(texto);
+    }
+
+    private void mascaraCEP() {
+        String texto = cep_cadastroGerente.getText();
+        if (texto.length() > 0) {
+            if (texto.length() > 8 || texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        cep_cadastroGerente.setText(texto);
+    }
+
+    private void mascaraInt(JTextField textField) {
+        String texto = textField.getText();
+        if (texto.length() > 0) {
+            if (texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        textField.setText(texto);
+    }
 
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField bairro_cadastroFuncionario;
-    private javax.swing.JButton btnConfirmar_cadastroFuncionario;
-    private javax.swing.JTextField cep_cadastroFuncionario;
-    private javax.swing.JTextField cidade_cadastroFuncionario;
+    private javax.swing.JTextField bairro_cadastroGerente;
+    private javax.swing.JButton btnConfirmar_cadastroGerente;
+    private javax.swing.JTextField cep_cadastroGerente;
+    private javax.swing.JTextField cidade_cadastroGerente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -317,9 +394,9 @@ public class CadastroGerente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField nome_cadastroFuncionario;
-    private javax.swing.JTextField numero_cadastroFuncionario;
-    private javax.swing.JTextField rua_cadastroFuncionario;
-    private javax.swing.JTextField uf_cadastroFuncionario;
+    private javax.swing.JTextField nome_cadastroGerente;
+    private javax.swing.JTextField numero_cadastroGerente;
+    private javax.swing.JTextField rua_cadastroGerente;
+    private javax.swing.JTextField uf_cadastroGerente;
     // End of variables declaration//GEN-END:variables
 }
