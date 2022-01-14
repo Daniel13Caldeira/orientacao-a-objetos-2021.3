@@ -17,7 +17,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.mycompany.made_lavant.MADE_LAVANT</mainClass>
+                            <mainClass>com.made_lavant.view.Login</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
