@@ -140,8 +140,8 @@ public class FuncionarioDados {
     }
 
     //semelhante a buscarNome
-    public String buscarCodigo(Funcionario funcionario) {
-        String aux = buscar(funcionario.getCod());
+    public String buscarCodigo(String funcionario) {
+        String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 0);
         }
@@ -203,8 +203,8 @@ public class FuncionarioDados {
     }
 //semelhante a buscarNome
 
-    public String buscarSenha(Funcionario funcionario) {
-        String aux = buscar(funcionario.getCod());
+    public String buscarSenha(String funcionario) {
+        String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 8);
         }
@@ -228,5 +228,16 @@ public class FuncionarioDados {
             remover(funcionario);
             adicionarSemEndereco(funcionario);
         }
+    }
+
+    public String vazio() {
+        File arquivo = new File("dados\\funcionario.txt");
+        try {
+            FileReader leitura = new FileReader(arquivo);//define o leitor
+            BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
+            String linha = leitor.readLine();//primeira linha}
+        } catch (Exception ex) {
+        }
+        return null;
     }
 }

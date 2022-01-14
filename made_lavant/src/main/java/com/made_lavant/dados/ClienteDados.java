@@ -211,8 +211,8 @@ public class ClienteDados {
         return null;
     }
     //semelhante a buscarNome
-    public String buscarSenha(Cliente cliente) {
-        String aux = buscar(cliente.getCPF());
+    public String buscarSenha(String cliente) {
+        String aux = buscar(cliente);
         if (aux != null) {
             return separa(aux, 8);
         }

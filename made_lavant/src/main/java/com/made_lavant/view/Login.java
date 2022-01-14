@@ -5,6 +5,9 @@
  */
 package com.made_lavant.view;
 
+import com.made_lavant.dados.ClienteDados;
+import com.made_lavant.dados.FuncionarioDados;
+
 /**
  *
  * @author ewe88
@@ -16,6 +19,10 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        FuncionarioDados func = new FuncionarioDados();
+        if (func.vazio() == null) {
+            //CadastroGerente
+        }
     }
 
     /**
@@ -33,9 +40,11 @@ public class Login extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txtLogin = new javax.swing.JTextField();
-        txtSenha = new javax.swing.JPasswordField();
+        user_Login = new javax.swing.JTextField();
+        senha_Login = new javax.swing.JPasswordField();
         jButton3 = new javax.swing.JButton();
+        naoCadastrado_Login = new javax.swing.JLabel();
+        naoCadastrado_Login.setVisible(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,19 +85,14 @@ public class Login extends javax.swing.JFrame {
         jButton3.setForeground(new java.awt.Color(232, 72, 85));
         jButton3.setText("Cadastrar");
 
+        naoCadastrado_Login.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        naoCadastrado_Login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        naoCadastrado_Login.setText("Usuário Não Cadastrado");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9))
-                    .addComponent(jButton4))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -97,14 +101,26 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(171, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel7))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel7))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(senha_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(user_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(naoCadastrado_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 171, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel9))
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,13 +134,15 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(jLabel9)
                         .addGap(82, 82, 82)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(user_Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
+                    .addComponent(senha_Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(naoCadastrado_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
                 .addComponent(jButton4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
                 .addComponent(jButton3)
@@ -146,7 +164,64 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        boolean flag = true;
+        if (user_Login.getText() == null || user_Login.getText().equals("Campo Obrigatório!")) {
+            user_Login.setText("Campo Obrigatório!");
+            flag = false;
+        }
+        if (senha_Login.getText() == null || senha_Login.getText().equals("Campo Obrigatório!")) {
+            senha_Login.setText("Campo Obrigatório!");
+            flag = false;
+        }
+        if (flag) {
+            if (user_Login.getText().charAt(0) == 'A' || user_Login.getText().charAt(0) == 'B') {
+                FuncionarioDados func = new FuncionarioDados();
+                String cod = func.buscarCodigo(user_Login.getText());
+                if (cod == null) {
+                    naoCadastrado_Login.setText("Usuário Não Cadastrado!");
+                    naoCadastrado_Login.setVisible(true);
+                    flag = false;
+                } else {
+                    naoCadastrado_Login.setVisible(false);
+                    String senha = func.buscarSenha(cod);
+                    if (senha.equals(senha_Login.getText())) {
+                        this.setVisible(false);
+                        if (user_Login.getText().charAt(0) == 'A') {
+                            new InicioGerente().setVisible(true);
+                        } else {
+                            new InicioFuncionario().setVisible(true);
+                        }
+                    }else{
+                        naoCadastrado_Login.setText("Senha Incorreta!");
+                        naoCadastrado_Login.setVisible(true);
+                    }
+                }
+            } else {
+                if (user_Login.getText().charAt(0) >= '0' && user_Login.getText().charAt(0) <= '9') {
+                    ClienteDados cliente = new ClienteDados();
+                    String cod = cliente.buscarCPF(user_Login.getText());
+                    if (cod == null) {
+                        naoCadastrado_Login.setText("Usuário Não Cadastrado!");
+                        naoCadastrado_Login.setVisible(true);
+                        flag = false;
+                    } else {
+                        naoCadastrado_Login.setVisible(false);
+                        String senha = cliente.buscarSenha(cod);
+                        if (senha.equals(senha_Login.getText())) {
+                            this.setVisible(false);
+                            new InicioCliente().setVisible(true);
+                        }else{
+                            naoCadastrado_Login.setText("Senha Incorreta!");
+                            naoCadastrado_Login.setVisible(true);
+                        }
+                    }
+                } else {
+                    naoCadastrado_Login.setText("Usuário Não Cadastrado!");
+                    naoCadastrado_Login.setVisible(true);
+                    flag = false;
+                }
+            }
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -192,7 +267,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtLogin;
-    private javax.swing.JPasswordField txtSenha;
+    private javax.swing.JLabel naoCadastrado_Login;
+    private javax.swing.JPasswordField senha_Login;
+    private javax.swing.JTextField user_Login;
     // End of variables declaration//GEN-END:variables
 }
