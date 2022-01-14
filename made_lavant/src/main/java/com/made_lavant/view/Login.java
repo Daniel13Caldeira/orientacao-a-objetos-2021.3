@@ -17,6 +17,12 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
+    protected static String codigo;
+
+    protected static String getCodigo() {
+        return Login.codigo;
+    }
+
     public Login() {
         initComponents();
     }
@@ -113,12 +119,12 @@ public class Login extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(senha_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(user_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(naoCadastrado_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel9))
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(naoCadastrado_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(181, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -164,12 +170,13 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         boolean flag = true;
-        if (user_Login.getText() == null || user_Login.getText().equals("Campo Obrigatório!")) {
+        if (user_Login.getText().equals("") || user_Login.getText().equals("Campo Obrigatório!")) {
             user_Login.setText("Campo Obrigatório!");
             flag = false;
         }
-        if (senha_Login.getText() == null || senha_Login.getText().equals("Campo Obrigatório!")) {
-            senha_Login.setText("Campo Obrigatório!");
+        if (senha_Login.getText().equals("") || senha_Login.getText().equals("Campo Obrigatório!")) {
+            naoCadastrado_Login.setText("Campo De Senha Obrigatório!");
+            naoCadastrado_Login.setVisible(true);
             flag = false;
         }
         if (flag) {
@@ -184,6 +191,7 @@ public class Login extends javax.swing.JFrame {
                     naoCadastrado_Login.setVisible(false);
                     String senha = func.buscarSenha(cod);
                     if (senha.equals(senha_Login.getText())) {
+                        Login.codigo = user_Login.getText();
                         this.setVisible(false);
                         if (user_Login.getText().charAt(0) == 'A') {
                             new InicioGerente().setVisible(true);
@@ -207,6 +215,7 @@ public class Login extends javax.swing.JFrame {
                         naoCadastrado_Login.setVisible(false);
                         String senha = cliente.buscarSenha(cod);
                         if (senha.equals(senha_Login.getText())) {
+                            Login.codigo = user_Login.getText();
                             this.setVisible(false);
                             new InicioCliente().setVisible(true);
                         } else {

@@ -64,13 +64,13 @@
                                       <Component id="user_Login" alignment="0" min="-2" pref="352" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="naoCadastrado_Login" min="-2" pref="230" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel6" min="-2" pref="182" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jButton4" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
+                              <Component id="naoCadastrado_Login" alignment="0" min="-2" pref="258" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="181" max="32767" attributes="0"/>
                       </Group>
