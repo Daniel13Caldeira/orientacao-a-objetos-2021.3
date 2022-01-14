@@ -19,10 +19,6 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
-        FuncionarioDados func = new FuncionarioDados();
-        if (func.vazio() == null) {
-            //CadastroGerente
-        }
     }
 
     /**
@@ -47,6 +43,7 @@ public class Login extends javax.swing.JFrame {
         naoCadastrado_Login.setVisible(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
@@ -84,8 +81,15 @@ public class Login extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
         jButton3.setForeground(new java.awt.Color(232, 72, 85));
         jButton3.setText("Cadastrar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
+        naoCadastrado_Login.setBackground(new java.awt.Color(232, 72, 85));
         naoCadastrado_Login.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        naoCadastrado_Login.setForeground(new java.awt.Color(232, 72, 85));
         naoCadastrado_Login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         naoCadastrado_Login.setText("Usuário Não Cadastrado");
 
@@ -93,13 +97,13 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(171, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3))
+                        .addComponent(jButton3)
+                        .addGap(164, 164, 164))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(171, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,18 +113,13 @@ public class Login extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(senha_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(user_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(naoCadastrado_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 171, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9))
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(naoCadastrado_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel9))
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(181, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,7 +190,7 @@ public class Login extends javax.swing.JFrame {
                         } else {
                             new InicioFuncionario().setVisible(true);
                         }
-                    }else{
+                    } else {
                         naoCadastrado_Login.setText("Senha Incorreta!");
                         naoCadastrado_Login.setVisible(true);
                     }
@@ -210,7 +209,7 @@ public class Login extends javax.swing.JFrame {
                         if (senha.equals(senha_Login.getText())) {
                             this.setVisible(false);
                             new InicioCliente().setVisible(true);
-                        }else{
+                        } else {
                             naoCadastrado_Login.setText("Senha Incorreta!");
                             naoCadastrado_Login.setVisible(true);
                         }
@@ -223,6 +222,11 @@ public class Login extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        this.setVisible(false);
+        new CadastroCliente().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -254,7 +258,11 @@ public class Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
+                if (vazio()) {
+                    new CadastroGerente().setVisible(true);
+                } else {
+                    new Login().setVisible(true);
+                }
             }
         });
     }
@@ -271,4 +279,12 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField senha_Login;
     private javax.swing.JTextField user_Login;
     // End of variables declaration//GEN-END:variables
+
+    private static boolean vazio() {
+        FuncionarioDados func = new FuncionarioDados();
+        if (func.vazio() == null) {
+            return true;
+        }
+        return false;
+    }
 }

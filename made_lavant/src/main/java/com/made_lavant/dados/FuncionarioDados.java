@@ -235,7 +235,7 @@ public class FuncionarioDados {
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
-            String linha = leitor.readLine();//primeira linha}
+            return leitor.readLine();//primeira linha}
         } catch (Exception ex) {
         }
         return null;
