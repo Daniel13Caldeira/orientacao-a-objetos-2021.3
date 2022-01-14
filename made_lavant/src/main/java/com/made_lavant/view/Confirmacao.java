@@ -8,12 +8,12 @@ package com.made_lavant.view;
  *
  * @author Marcio
  */
-public  class ConfirmacaoVenda extends javax.swing.JFrame {
+public  class Confirmacao extends javax.swing.JFrame {
 
     /**
      * Creates new form Confirmacaodevenda
      */
-    public ConfirmacaoVenda() {
+    public Confirmacao() {
         initComponents();
     }
 

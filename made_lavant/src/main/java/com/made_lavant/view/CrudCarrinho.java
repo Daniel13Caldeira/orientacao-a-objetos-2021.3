@@ -231,7 +231,7 @@ public class CrudCarrinho extends javax.swing.JFrame {
 
     private void venda_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_venda_btnActionPerformed
         this.setVisible(false);
-        new ConfirmacaoVenda().setVisible(true);
+        new Confirmacao().setVisible(true);
     }//GEN-LAST:event_venda_btnActionPerformed
 
     private void voltarBTN_CrudCarrinhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CrudCarrinhoActionPerformed
