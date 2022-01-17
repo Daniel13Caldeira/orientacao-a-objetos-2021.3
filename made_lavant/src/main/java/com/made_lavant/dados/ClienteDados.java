@@ -40,7 +40,14 @@ public class ClienteDados {
         //cria uma String com os dados do cliente no formato padrão que está sendo utilizado
         String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';'+cliente.getSenha()+';';
         //define o arquivo de salvamento
-        File arquivo = new File("dados\\cliente.txt");
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\cliente.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//cliente.txt");
+        }
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
@@ -60,7 +67,14 @@ public class ClienteDados {
         //cria uma String com os dados do cliente no formato padrão que está sendo utilizado
         String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + cliente.getEndereco().getCidade() + ';' + cliente.getEndereco().getRua() + ';' + cliente.getEndereco().getBairro() + ';' + cliente.getEndereco().getNumero() + ';' + cliente.getEndereco().getUf() + ';' + cliente.getEndereco().getCep() + ';' + cliente.getSenha() + ';';
         //define o arquivo de salvamento
-        File arquivo = new File("dados\\cliente.txt");
+                File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\cliente.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//cliente.txt");
+        }
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
@@ -80,7 +94,14 @@ public class ClienteDados {
         //codigo do cliente a ser removido
         String cod = cliente.getCPF();
         //arquivo de onde ele será removido
-        File arquivo = new File("dados\\cliente.txt");
+                File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\cliente.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//cliente.txt");
+        }
         //lista com os clientes que não serão removidos
         ArrayList<String> salvar = new ArrayList<>();//armazena as linhas que não serão apagadas
         try {
@@ -114,7 +135,14 @@ public class ClienteDados {
 
     //busca uma linha
     private String buscar(String cpf) {
-        File arquivo = new File("dados\\cliente.txt");
+                File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\cliente.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//cliente.txt");
+        }
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura

@@ -42,7 +42,14 @@ public class ProdutoDados {
         //cria uma String com os dados do produto no formato padrão que está sendo utilizado
         String info = String.valueOf(produto.getCodigo()) + ';' + produto.getNome() + ';' + produto.getPreco() + ';' + String.valueOf(produto.getValidade()) + ';' + produto.getQuantidade() + ';';
         //define o arquivo de salvamento
-        File arquivo = new File("dados\\produto.txt");
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\produto.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//produto.txt");
+        }
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
@@ -61,7 +68,14 @@ public class ProdutoDados {
     //remove um produto do arquivo de salvamento
     public void remover(Produto produto) {
         String cod = produto.getCodigo() + "";
-        File arquivo = new File("dados\\produto.txt");
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\produto.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//produto.txt");
+        }
         ArrayList<String> salvar = new ArrayList<>();//armazena as linhas que não serão apagadas
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
@@ -95,7 +109,14 @@ public class ProdutoDados {
     //busca uma linha
     private String buscar(Produto produto) {
         String cod = produto.getCodigo() + "";
-        File arquivo = new File("dados\\produto.txt");
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\produto.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//produto.txt");
+        }
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura

@@ -36,13 +36,21 @@ public class FuncionarioDados {
         return resultado;
     }
 
+        
     //adiciona um funcionario sem endereço ao arquivo de salvamento
     public void adicionarSemEndereco(Funcionario funcionario) {
         //cria uma String com os dados do funcionário no formato padrão que está sendo utilizado
         String info = funcionario.getCod() + ';' + funcionario.getNome() + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + funcionario.getSenha() + ';';
         //define o arquivo de salvamento
-        File arquivo = new File("dados\\funcionario.txt");
-        try {
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\funcionario.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//funcionario.txt");
+        }
+            try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
             //escreve e vai pra proxima linha
@@ -59,7 +67,14 @@ public class FuncionarioDados {
     //semelhante ao adicionarSemEndereço
     public void adicionar(Funcionario funcionario) {
         String info = funcionario.getCod() + ';' + funcionario.getNome() + ';' + funcionario.getEndereco().getCidade() + ';' + funcionario.getEndereco().getRua() + ';' + funcionario.getEndereco().getBairro() + ';' + funcionario.getEndereco().getNumero() + ';' + funcionario.getEndereco().getUf() + ';' + funcionario.getEndereco().getCep() + ';' + funcionario.getSenha() + ';';
-        File arquivo = new File("dados\\funcionario.txt");
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\funcionario.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//funcionario.txt");
+        }
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
@@ -78,7 +93,14 @@ public class FuncionarioDados {
     public void remover(Funcionario funcionario) {
         String cod = funcionario.getCod();
         //define o arquivo onde a remoção será feita
-        File arquivo = new File("dados\\funcionario.txt");
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\funcionario.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//funcionario.txt");
+        }
         ArrayList<String> salvar = new ArrayList<>();//armazena as linhas que não serão apagadas
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
@@ -111,7 +133,14 @@ public class FuncionarioDados {
 
     //busca uma linha
     private String buscar(String cod) {
-        File arquivo = new File("dados\\funcionario.txt");
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\funcionario.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//funcionario.txt");
+        }
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura

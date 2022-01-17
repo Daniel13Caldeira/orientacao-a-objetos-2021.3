@@ -41,7 +41,14 @@ public class CarrinhoDados {
 
     public void adicionarProduto(Carrinho carrinho, Produto produto) {
         //abre o arquivo para salvar produto
-        File arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//carrinhos//" + carrinho.getCod() + ".txt");
+        }
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escritaq
@@ -57,7 +64,14 @@ public class CarrinhoDados {
 
     public void removerProduto(Carrinho carrinho, Produto produto) {
         //abre o arquivo para salvar produto
-        File arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//carrinhos//" + carrinho.getCod() + ".txt");
+        }
         ArrayList<String> salvar = new ArrayList<>();//armazena as linhas que não serão apagadas
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
@@ -88,7 +102,14 @@ public class CarrinhoDados {
 
     public ArrayList<String> getProdutos(Carrinho carrinho) {
         //abre o arquivo para salvar produto
-        File arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//carrinhos//" + carrinho.getCod() + ".txt");
+        }
         ArrayList<String> produtos = new ArrayList<>();
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
