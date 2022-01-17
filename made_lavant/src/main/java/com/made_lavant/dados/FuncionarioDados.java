@@ -260,7 +260,14 @@ public class FuncionarioDados {
     }
 
     public String vazio() {
-        File arquivo = new File("dados\\funcionario.txt");
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\funcionario.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//funcionario.txt");
+        }
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
