@@ -24,7 +24,14 @@ public class CarrinhoDados {
     //adiciona um cliente com endereço no arquivo de salvamento
     public void criar(Carrinho carrinho) {
         //cria um arquivo para salvar o carrinho, o nome do arquivo é o codigo do carrinho e a primeira linha é o CPF do cliente
-        File arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
+        } else {
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//carrinhos//" + carrinho.getCod() + ".txt");
+        }
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escritaq
@@ -45,7 +52,7 @@ public class CarrinhoDados {
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//carrinhos//" + carrinho.getCod() + ".txt");
         }
@@ -68,7 +75,7 @@ public class CarrinhoDados {
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//carrinhos//" + carrinho.getCod() + ".txt");
         }
@@ -106,7 +113,7 @@ public class CarrinhoDados {
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//carrinhos//" + carrinho.getCod() + ".txt");
         }
