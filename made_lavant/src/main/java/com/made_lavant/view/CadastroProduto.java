@@ -37,136 +37,136 @@ public class CadastroProduto extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        btn_sairCadastroCliente = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        quantidade_CadastroProdutoFunc = new javax.swing.JTextField();
-        nome_CadastroProdutoFunc = new javax.swing.JTextField();
-        validade_CadastroProdutoFunc = new javax.swing.JTextField();
-        preco_CadastroProdutoFunc = new javax.swing.JTextField();
-        BTNConfirmar_CadastroProdutoFunc = new javax.swing.JButton();
-        btn_sairCadastroProdutoFunc = new javax.swing.JButton();
-        dataInvalida_cadastroProduto = new javax.swing.JLabel();
-        dataInvalida_cadastroProduto.setVisible(false);
+        madeLB_CP = new javax.swing.JLabel();
+        topicoQuantiLB_CP = new javax.swing.JLabel();
+        lavantLB_CP = new javax.swing.JLabel();
+        topicoValLB_CP = new javax.swing.JLabel();
+        voltarBTN_CP = new javax.swing.JButton();
+        titleLB_CP = new javax.swing.JLabel();
+        topicoNomeLB_CP = new javax.swing.JLabel();
+        topicoPrecoLB_CP = new javax.swing.JLabel();
+        quantidadeTF_CP = new javax.swing.JTextField();
+        nomeTF_CP = new javax.swing.JTextField();
+        validadeTF_CP = new javax.swing.JTextField();
+        precoTF_CP = new javax.swing.JTextField();
+        confirmarBTN_CP = new javax.swing.JButton();
+        sairBTN_CP = new javax.swing.JButton();
+        utilityLB_CP = new javax.swing.JLabel();
+        utilityLB_CP.setVisible(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        jLabel10.setFont(new java.awt.Font("Colonna MT", 0, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel10.setText("MADE");
+        madeLB_CP.setFont(new java.awt.Font("Colonna MT", 0, 24)); // NOI18N
+        madeLB_CP.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_CP.setText("MADE");
 
-        jLabel5.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel5.setText("Quantidade");
+        topicoQuantiLB_CP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoQuantiLB_CP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoQuantiLB_CP.setText("Quantidade");
 
-        jLabel11.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel11.setText("Lavant");
+        lavantLB_CP.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
+        lavantLB_CP.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_CP.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lavantLB_CP.setText("Lavant");
 
-        jLabel6.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel6.setText("Validade");
+        topicoValLB_CP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoValLB_CP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoValLB_CP.setText("Validade");
 
-        btn_sairCadastroCliente.setBackground(new java.awt.Color(255, 253, 130));
-        btn_sairCadastroCliente.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
-        btn_sairCadastroCliente.setForeground(new java.awt.Color(232, 72, 85));
-        btn_sairCadastroCliente.setText("Voltar");
-        btn_sairCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
+        voltarBTN_CP.setBackground(new java.awt.Color(255, 253, 130));
+        voltarBTN_CP.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        voltarBTN_CP.setForeground(new java.awt.Color(232, 72, 85));
+        voltarBTN_CP.setText("Voltar");
+        voltarBTN_CP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sairCadastroClienteActionPerformed(evt);
+                voltarBTN_CPActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel1.setText("Cadastro de Produto");
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        titleLB_CP.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
+        titleLB_CP.setForeground(new java.awt.Color(232, 72, 85));
+        titleLB_CP.setText("Cadastro de Produto");
+        titleLB_CP.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel2.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel2.setText("Nome");
+        topicoNomeLB_CP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoNomeLB_CP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoNomeLB_CP.setText("Nome");
 
-        jLabel9.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel9.setText("Preço");
+        topicoPrecoLB_CP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoPrecoLB_CP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoPrecoLB_CP.setText("Preço");
 
-        quantidade_CadastroProdutoFunc.addActionListener(new java.awt.event.ActionListener() {
+        quantidadeTF_CP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quantidade_CadastroProdutoFuncActionPerformed(evt);
+                quantidadeTF_CPActionPerformed(evt);
             }
         });
-        quantidade_CadastroProdutoFunc.addKeyListener(new java.awt.event.KeyAdapter() {
+        quantidadeTF_CP.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                quantidade_CadastroProdutoFuncKeyReleased(evt);
+                quantidadeTF_CPKeyReleased(evt);
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                quantidade_CadastroProdutoFuncKeyTyped(evt);
+                quantidadeTF_CPKeyTyped(evt);
             }
         });
 
-        nome_CadastroProdutoFunc.addActionListener(new java.awt.event.ActionListener() {
+        nomeTF_CP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nome_CadastroProdutoFuncActionPerformed(evt);
+                nomeTF_CPActionPerformed(evt);
             }
         });
 
-        validade_CadastroProdutoFunc.addActionListener(new java.awt.event.ActionListener() {
+        validadeTF_CP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                validade_CadastroProdutoFuncActionPerformed(evt);
+                validadeTF_CPActionPerformed(evt);
             }
         });
-        validade_CadastroProdutoFunc.addKeyListener(new java.awt.event.KeyAdapter() {
+        validadeTF_CP.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                validade_CadastroProdutoFuncKeyReleased(evt);
+                validadeTF_CPKeyReleased(evt);
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                validade_CadastroProdutoFuncKeyTyped(evt);
+                validadeTF_CPKeyTyped(evt);
             }
         });
 
-        preco_CadastroProdutoFunc.addActionListener(new java.awt.event.ActionListener() {
+        precoTF_CP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                preco_CadastroProdutoFuncActionPerformed(evt);
+                precoTF_CPActionPerformed(evt);
             }
         });
-        preco_CadastroProdutoFunc.addKeyListener(new java.awt.event.KeyAdapter() {
+        precoTF_CP.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                preco_CadastroProdutoFuncKeyReleased(evt);
+                precoTF_CPKeyReleased(evt);
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                preco_CadastroProdutoFuncKeyTyped(evt);
+                precoTF_CPKeyTyped(evt);
             }
         });
 
-        BTNConfirmar_CadastroProdutoFunc.setBackground(new java.awt.Color(255, 253, 130));
-        BTNConfirmar_CadastroProdutoFunc.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        BTNConfirmar_CadastroProdutoFunc.setForeground(new java.awt.Color(232, 72, 85));
-        BTNConfirmar_CadastroProdutoFunc.setText("Confirmar");
-        BTNConfirmar_CadastroProdutoFunc.addActionListener(new java.awt.event.ActionListener() {
+        confirmarBTN_CP.setBackground(new java.awt.Color(255, 253, 130));
+        confirmarBTN_CP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        confirmarBTN_CP.setForeground(new java.awt.Color(232, 72, 85));
+        confirmarBTN_CP.setText("Confirmar");
+        confirmarBTN_CP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTNConfirmar_CadastroProdutoFuncActionPerformed(evt);
+                confirmarBTN_CPActionPerformed(evt);
             }
         });
 
-        btn_sairCadastroProdutoFunc.setBackground(new java.awt.Color(255, 253, 130));
-        btn_sairCadastroProdutoFunc.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
-        btn_sairCadastroProdutoFunc.setForeground(new java.awt.Color(232, 72, 85));
-        btn_sairCadastroProdutoFunc.setText("Sair");
-        btn_sairCadastroProdutoFunc.addActionListener(new java.awt.event.ActionListener() {
+        sairBTN_CP.setBackground(new java.awt.Color(255, 253, 130));
+        sairBTN_CP.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        sairBTN_CP.setForeground(new java.awt.Color(232, 72, 85));
+        sairBTN_CP.setText("Sair");
+        sairBTN_CP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sairCadastroProdutoFuncActionPerformed(evt);
+                sairBTN_CPActionPerformed(evt);
             }
         });
 
-        dataInvalida_cadastroProduto.setText("Data inválida");
+        utilityLB_CP.setText("Data inválida");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -174,38 +174,38 @@ public class CadastroProduto extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_sairCadastroProdutoFunc)
+                .addComponent(sairBTN_CP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(madeLB_CP, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lavantLB_CP, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(130, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel6))
+                    .addComponent(topicoQuantiLB_CP)
+                    .addComponent(topicoNomeLB_CP)
+                    .addComponent(topicoPrecoLB_CP)
+                    .addComponent(topicoValLB_CP))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(dataInvalida_cadastroProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BTNConfirmar_CadastroProdutoFunc))
+                        .addComponent(utilityLB_CP, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                        .addComponent(confirmarBTN_CP))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel1)
+                        .addComponent(titleLB_CP)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(nome_CadastroProdutoFunc, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
-                            .addComponent(quantidade_CadastroProdutoFunc)
-                            .addComponent(preco_CadastroProdutoFunc)
-                            .addComponent(validade_CadastroProdutoFunc))))
+                            .addComponent(nomeTF_CP, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
+                            .addComponent(quantidadeTF_CP)
+                            .addComponent(precoTF_CP)
+                            .addComponent(validadeTF_CP))))
                 .addContainerGap(130, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_sairCadastroCliente)
+                .addComponent(voltarBTN_CP)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -213,34 +213,34 @@ public class CadastroProduto extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(btn_sairCadastroProdutoFunc))
+                    .addComponent(madeLB_CP)
+                    .addComponent(sairBTN_CP))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel11)
+                .addComponent(lavantLB_CP)
                 .addGap(7, 7, 7)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(titleLB_CP, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(nome_CadastroProdutoFunc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoNomeLB_CP)
+                    .addComponent(nomeTF_CP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(quantidade_CadastroProdutoFunc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoQuantiLB_CP)
+                    .addComponent(quantidadeTF_CP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(preco_CadastroProdutoFunc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoPrecoLB_CP)
+                    .addComponent(precoTF_CP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(validade_CadastroProdutoFunc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoValLB_CP)
+                    .addComponent(validadeTF_CP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(dataInvalida_cadastroProduto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(utilityLB_CP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BTNConfirmar_CadastroProdutoFunc)
+                .addComponent(confirmarBTN_CP)
                 .addGap(184, 184, 184)
-                .addComponent(btn_sairCadastroCliente)
+                .addComponent(voltarBTN_CP)
                 .addContainerGap())
         );
 
@@ -258,64 +258,64 @@ public class CadastroProduto extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_sairCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroClienteActionPerformed
+    private void voltarBTN_CPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CPActionPerformed
         this.setVisible(false);
         new CrudProdutos().setVisible(true);
-    }//GEN-LAST:event_btn_sairCadastroClienteActionPerformed
+    }//GEN-LAST:event_voltarBTN_CPActionPerformed
 
-    private void nome_CadastroProdutoFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nome_CadastroProdutoFuncActionPerformed
+    private void nomeTF_CPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTF_CPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nome_CadastroProdutoFuncActionPerformed
+    }//GEN-LAST:event_nomeTF_CPActionPerformed
 
-    private void preco_CadastroProdutoFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_preco_CadastroProdutoFuncActionPerformed
+    private void precoTF_CPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_precoTF_CPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_preco_CadastroProdutoFuncActionPerformed
+    }//GEN-LAST:event_precoTF_CPActionPerformed
 
-    private void validade_CadastroProdutoFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validade_CadastroProdutoFuncActionPerformed
+    private void validadeTF_CPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validadeTF_CPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_validade_CadastroProdutoFuncActionPerformed
+    }//GEN-LAST:event_validadeTF_CPActionPerformed
 
-    private void quantidade_CadastroProdutoFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantidade_CadastroProdutoFuncActionPerformed
+    private void quantidadeTF_CPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantidadeTF_CPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_quantidade_CadastroProdutoFuncActionPerformed
+    }//GEN-LAST:event_quantidadeTF_CPActionPerformed
 
-    private void btn_sairCadastroProdutoFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroProdutoFuncActionPerformed
+    private void sairBTN_CPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CPActionPerformed
         //retorna para a tela de login
         this.setVisible(false);
         new Login().setVisible(true);
-    }//GEN-LAST:event_btn_sairCadastroProdutoFuncActionPerformed
+    }//GEN-LAST:event_sairBTN_CPActionPerformed
 
-    private void BTNConfirmar_CadastroProdutoFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNConfirmar_CadastroProdutoFuncActionPerformed
+    private void confirmarBTN_CPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_CPActionPerformed
         //diz se o cadastro pode ser realizado
         boolean cadastro = true;
         //verifica se todos os campos obrigatórios foram preenchidos, se não, o cadastro não pode ser feito
-        if (nome_CadastroProdutoFunc.getText().equals("") || nome_CadastroProdutoFunc.getText().equals("Campo obrigatório")) {
-            nome_CadastroProdutoFunc.setText("Campo obrigatório");
+        if (nomeTF_CP.getText().equals("") || nomeTF_CP.getText().equals("Campo obrigatório")) {
+            nomeTF_CP.setText("Campo obrigatório");
             cadastro = false;
         }
-        if (preco_CadastroProdutoFunc.getText().equals("") || preco_CadastroProdutoFunc.getText().equals("Campo obrigatório")) {
-            preco_CadastroProdutoFunc.setText("Campo obrigatório");
+        if (precoTF_CP.getText().equals("") || precoTF_CP.getText().equals("Campo obrigatório")) {
+            precoTF_CP.setText("Campo obrigatório");
             cadastro = false;
         }
-        if (quantidade_CadastroProdutoFunc.getText().equals("") || quantidade_CadastroProdutoFunc.getText().equals("Campo obrigatório")) {
-            quantidade_CadastroProdutoFunc.setText("Campo obrigatório");
+        if (quantidadeTF_CP.getText().equals("") || quantidadeTF_CP.getText().equals("Campo obrigatório")) {
+            quantidadeTF_CP.setText("Campo obrigatório");
             cadastro = false;
         }
         if (cadastro) {
             //verifica se o campo de validade foi preenchido
-            if (validade_CadastroProdutoFunc.getText().equals("")) {
+            if (validadeTF_CP.getText().equals("")) {
                 //se não estiver preenchido o produto é cadastrado sem a validade
-                new Produto(nome_CadastroProdutoFunc.getText(), Double.parseDouble(preco_CadastroProdutoFunc.getText()), Double.parseDouble(quantidade_CadastroProdutoFunc.getText()));
+                new Produto(nomeTF_CP.getText(), Double.parseDouble(precoTF_CP.getText()), Double.parseDouble(quantidadeTF_CP.getText()));
             } else {
 
-                String validade = validade_CadastroProdutoFunc.getText();
+                String validade = validadeTF_CP.getText();
                 //verifica se a data é válida
                 if (verificaDataValida(validade)) {
                     //adiciona um produto com a validade
-                    new Produto(nome_CadastroProdutoFunc.getText(), Double.parseDouble(preco_CadastroProdutoFunc.getText()), validade, Double.parseDouble(quantidade_CadastroProdutoFunc.getText()));
+                    new Produto(nomeTF_CP.getText(), Double.parseDouble(precoTF_CP.getText()), validade, Double.parseDouble(quantidadeTF_CP.getText()));
                 } else {
                     //se a data for inválida o cadastro não pode ser feito
-                    dataInvalida_cadastroProduto.setVisible(true);
+                    utilityLB_CP.setVisible(true);
                     cadastro = false;
                 }
             }
@@ -325,10 +325,10 @@ public class CadastroProduto extends javax.swing.JFrame {
                 new CrudProdutos().setVisible(true);
             }
         }
-    }//GEN-LAST:event_BTNConfirmar_CadastroProdutoFuncActionPerformed
+    }//GEN-LAST:event_confirmarBTN_CPActionPerformed
 
     private void mascaraData() {
-        String texto = validade_CadastroProdutoFunc.getText();
+        String texto = validadeTF_CP.getText();
         if (texto.length() > 0) {
             if (texto.length() > 10 || texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
                 texto = texto.substring(0, texto.length() - 1);
@@ -337,7 +337,7 @@ public class CadastroProduto extends javax.swing.JFrame {
                 texto += "/";
             }
         }
-        validade_CadastroProdutoFunc.setText(texto);
+        validadeTF_CP.setText(texto);
     }
 
     private void mascaraDouble(JTextField textField) {
@@ -359,29 +359,29 @@ public class CadastroProduto extends javax.swing.JFrame {
         textField.setText(texto);
     }
 
-    private void validade_CadastroProdutoFuncKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_validade_CadastroProdutoFuncKeyReleased
+    private void validadeTF_CPKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_validadeTF_CPKeyReleased
         mascaraData();
-    }//GEN-LAST:event_validade_CadastroProdutoFuncKeyReleased
+    }//GEN-LAST:event_validadeTF_CPKeyReleased
 
-    private void validade_CadastroProdutoFuncKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_validade_CadastroProdutoFuncKeyTyped
+    private void validadeTF_CPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_validadeTF_CPKeyTyped
         mascaraData();
-    }//GEN-LAST:event_validade_CadastroProdutoFuncKeyTyped
+    }//GEN-LAST:event_validadeTF_CPKeyTyped
 
-    private void quantidade_CadastroProdutoFuncKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_quantidade_CadastroProdutoFuncKeyReleased
-        mascaraDouble(quantidade_CadastroProdutoFunc);
-    }//GEN-LAST:event_quantidade_CadastroProdutoFuncKeyReleased
+    private void quantidadeTF_CPKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_quantidadeTF_CPKeyReleased
+        mascaraDouble(quantidadeTF_CP);
+    }//GEN-LAST:event_quantidadeTF_CPKeyReleased
 
-    private void quantidade_CadastroProdutoFuncKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_quantidade_CadastroProdutoFuncKeyTyped
-        mascaraDouble(quantidade_CadastroProdutoFunc);
-    }//GEN-LAST:event_quantidade_CadastroProdutoFuncKeyTyped
+    private void quantidadeTF_CPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_quantidadeTF_CPKeyTyped
+        mascaraDouble(quantidadeTF_CP);
+    }//GEN-LAST:event_quantidadeTF_CPKeyTyped
 
-    private void preco_CadastroProdutoFuncKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_preco_CadastroProdutoFuncKeyReleased
-        mascaraDouble(preco_CadastroProdutoFunc);
-    }//GEN-LAST:event_preco_CadastroProdutoFuncKeyReleased
+    private void precoTF_CPKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_precoTF_CPKeyReleased
+        mascaraDouble(precoTF_CP);
+    }//GEN-LAST:event_precoTF_CPKeyReleased
 
-    private void preco_CadastroProdutoFuncKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_preco_CadastroProdutoFuncKeyTyped
-        mascaraDouble(preco_CadastroProdutoFunc);
-    }//GEN-LAST:event_preco_CadastroProdutoFuncKeyTyped
+    private void precoTF_CPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_precoTF_CPKeyTyped
+        mascaraDouble(precoTF_CP);
+    }//GEN-LAST:event_precoTF_CPKeyTyped
     private boolean verificaDataAnteriorAtual(int dia, int mes, int ano) {
         Date data = new Date();
         String atual = data + "";
@@ -510,21 +510,21 @@ public class CadastroProduto extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BTNConfirmar_CadastroProdutoFunc;
-    private javax.swing.JButton btn_sairCadastroCliente;
-    private javax.swing.JButton btn_sairCadastroProdutoFunc;
-    private javax.swing.JLabel dataInvalida_cadastroProduto;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton confirmarBTN_CP;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField nome_CadastroProdutoFunc;
-    private javax.swing.JTextField preco_CadastroProdutoFunc;
-    private javax.swing.JTextField quantidade_CadastroProdutoFunc;
-    private javax.swing.JTextField validade_CadastroProdutoFunc;
+    private javax.swing.JLabel lavantLB_CP;
+    private javax.swing.JLabel madeLB_CP;
+    private javax.swing.JTextField nomeTF_CP;
+    private javax.swing.JTextField precoTF_CP;
+    private javax.swing.JTextField quantidadeTF_CP;
+    private javax.swing.JButton sairBTN_CP;
+    private javax.swing.JLabel titleLB_CP;
+    private javax.swing.JLabel topicoNomeLB_CP;
+    private javax.swing.JLabel topicoPrecoLB_CP;
+    private javax.swing.JLabel topicoQuantiLB_CP;
+    private javax.swing.JLabel topicoValLB_CP;
+    private javax.swing.JLabel utilityLB_CP;
+    private javax.swing.JTextField validadeTF_CP;
+    private javax.swing.JButton voltarBTN_CP;
     // End of variables declaration//GEN-END:variables
 }

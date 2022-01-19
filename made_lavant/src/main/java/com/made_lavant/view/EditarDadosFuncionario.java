@@ -28,115 +28,115 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        btn_sairCadastroCliente = new javax.swing.JButton();
-        btn_sairCadastroCliente1 = new javax.swing.JButton();
+        madeLB_EDF = new javax.swing.JLabel();
+        bairroTF_EDF = new javax.swing.JTextField();
+        topicoRuaLB_EDF = new javax.swing.JLabel();
+        cepTF_EDF = new javax.swing.JTextField();
+        topicoCidadeLB_EDF = new javax.swing.JLabel();
+        ruaTF_EDF = new javax.swing.JTextField();
+        confirmarBTN_EDF = new javax.swing.JButton();
+        topicoNumeroLB_EDF = new javax.swing.JLabel();
+        ufTF_EDF = new javax.swing.JTextField();
+        topicoCepLB_EDF = new javax.swing.JLabel();
+        topicoUfLB_EDF = new javax.swing.JLabel();
+        lavantLB_EDF = new javax.swing.JLabel();
+        titleLB_EDF = new javax.swing.JLabel();
+        cidadeTF_EDF = new javax.swing.JTextField();
+        topicoBairroLB_EDF = new javax.swing.JLabel();
+        numeroTF_EDF = new javax.swing.JTextField();
+        sairBTN_EDF = new javax.swing.JButton();
+        voltarBTN_EDF = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Editar Funcionário");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        jLabel10.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel10.setText("MADE");
+        madeLB_EDF.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
+        madeLB_EDF.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_EDF.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        madeLB_EDF.setText("MADE");
 
-        jLabel4.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel4.setText("Rua");
+        topicoRuaLB_EDF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoRuaLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoRuaLB_EDF.setText("Rua");
 
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+        cepTF_EDF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
+                cepTF_EDFActionPerformed(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel3.setText("Cidade");
+        topicoCidadeLB_EDF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoCidadeLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoCidadeLB_EDF.setText("Cidade");
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        ruaTF_EDF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                ruaTF_EDFActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(255, 253, 130));
-        jButton1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(232, 72, 85));
-        jButton1.setText("Confirmar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        confirmarBTN_EDF.setBackground(new java.awt.Color(255, 253, 130));
+        confirmarBTN_EDF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        confirmarBTN_EDF.setForeground(new java.awt.Color(232, 72, 85));
+        confirmarBTN_EDF.setText("Confirmar");
+        confirmarBTN_EDF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                confirmarBTN_EDFActionPerformed(evt);
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel6.setText("Número");
+        topicoNumeroLB_EDF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoNumeroLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoNumeroLB_EDF.setText("Número");
 
-        jLabel8.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel8.setText("CEP");
+        topicoCepLB_EDF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoCepLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoCepLB_EDF.setText("CEP");
 
-        jLabel7.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel7.setText("UF");
+        topicoUfLB_EDF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoUfLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoUfLB_EDF.setText("UF");
 
-        jLabel11.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel11.setText("Lavant");
+        lavantLB_EDF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        lavantLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_EDF.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lavantLB_EDF.setText("Lavant");
 
-        jLabel1.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel1.setText("Editar Funcionário");
-        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        titleLB_EDF.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
+        titleLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
+        titleLB_EDF.setText("Editar Funcionário");
+        titleLB_EDF.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        titleLB_EDF.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        cidadeTF_EDF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                cidadeTF_EDFActionPerformed(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel5.setText("Bairro");
+        topicoBairroLB_EDF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoBairroLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoBairroLB_EDF.setText("Bairro");
 
-        btn_sairCadastroCliente.setBackground(new java.awt.Color(255, 253, 130));
-        btn_sairCadastroCliente.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
-        btn_sairCadastroCliente.setForeground(new java.awt.Color(232, 72, 85));
-        btn_sairCadastroCliente.setText("Sair");
-        btn_sairCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
+        sairBTN_EDF.setBackground(new java.awt.Color(255, 253, 130));
+        sairBTN_EDF.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        sairBTN_EDF.setForeground(new java.awt.Color(232, 72, 85));
+        sairBTN_EDF.setText("Sair");
+        sairBTN_EDF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sairCadastroClienteActionPerformed(evt);
+                sairBTN_EDFActionPerformed(evt);
             }
         });
 
-        btn_sairCadastroCliente1.setBackground(new java.awt.Color(255, 253, 130));
-        btn_sairCadastroCliente1.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
-        btn_sairCadastroCliente1.setForeground(new java.awt.Color(232, 72, 85));
-        btn_sairCadastroCliente1.setText("Voltar");
-        btn_sairCadastroCliente1.addActionListener(new java.awt.event.ActionListener() {
+        voltarBTN_EDF.setBackground(new java.awt.Color(255, 253, 130));
+        voltarBTN_EDF.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        voltarBTN_EDF.setForeground(new java.awt.Color(232, 72, 85));
+        voltarBTN_EDF.setText("Voltar");
+        voltarBTN_EDF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sairCadastroCliente1ActionPerformed(evt);
+                voltarBTN_EDFActionPerformed(evt);
             }
         });
 
@@ -146,52 +146,52 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_sairCadastroCliente)
+                .addComponent(sairBTN_EDF)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_sairCadastroCliente1)
+                .addComponent(voltarBTN_EDF)
                 .addGap(396, 396, 396)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lavantLB_EDF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(madeLB_EDF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(titleLB_EDF)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1))
+                        .addComponent(confirmarBTN_EDF))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(70, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel4)
+                                .addComponent(topicoRuaLB_EDF)
                                 .addGap(25, 25, 25)
-                                .addComponent(jTextField3))
+                                .addComponent(ruaTF_EDF))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
+                                .addComponent(topicoCidadeLB_EDF)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField2))
+                                .addComponent(cidadeTF_EDF))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
+                                        .addComponent(topicoUfLB_EDF)
                                         .addGap(35, 35, 35)
-                                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(ufTF_EDF, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
+                                        .addComponent(topicoBairroLB_EDF)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(bairroTF_EDF, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel8))
+                                    .addComponent(topicoNumeroLB_EDF)
+                                    .addComponent(topicoCepLB_EDF))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
-                                    .addComponent(jTextField5))))))
+                                    .addComponent(cepTF_EDF, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                                    .addComponent(numeroTF_EDF))))))
                 .addContainerGap(70, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -200,38 +200,38 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel10)
+                        .addComponent(madeLB_EDF)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel11))
+                        .addComponent(lavantLB_EDF))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn_sairCadastroCliente)
-                            .addComponent(btn_sairCadastroCliente1))))
+                            .addComponent(sairBTN_EDF)
+                            .addComponent(voltarBTN_EDF))))
                 .addGap(15, 15, 15)
-                .addComponent(jLabel1)
+                .addComponent(titleLB_EDF)
                 .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoCidadeLB_EDF)
+                    .addComponent(cidadeTF_EDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoRuaLB_EDF)
+                    .addComponent(ruaTF_EDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoBairroLB_EDF)
+                    .addComponent(bairroTF_EDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topicoNumeroLB_EDF)
+                    .addComponent(numeroTF_EDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
+                    .addComponent(cepTF_EDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topicoCepLB_EDF)
+                    .addComponent(ufTF_EDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topicoUfLB_EDF))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(confirmarBTN_EDF)
                 .addContainerGap())
         );
 
@@ -249,54 +249,54 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+    private void cepTF_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cepTF_EDFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
+    }//GEN-LAST:event_cepTF_EDFActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void ruaTF_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ruaTF_EDFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_ruaTF_EDFActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void confirmarBTN_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_EDFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_confirmarBTN_EDFActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void cidadeTF_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidadeTF_EDFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_cidadeTF_EDFActionPerformed
 
-    private void btn_sairCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroClienteActionPerformed
+    private void sairBTN_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_EDFActionPerformed
         this.setVisible(false);
         new PerfilCliente().setVisible(true);
-    }//GEN-LAST:event_btn_sairCadastroClienteActionPerformed
+    }//GEN-LAST:event_sairBTN_EDFActionPerformed
 
-    private void btn_sairCadastroCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroCliente1ActionPerformed
+    private void voltarBTN_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_EDFActionPerformed
         this.setVisible(false);
         new PerfilFuncionario().setVisible(true);
-    }//GEN-LAST:event_btn_sairCadastroCliente1ActionPerformed
+    }//GEN-LAST:event_voltarBTN_EDFActionPerformed
 
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_sairCadastroCliente;
-    private javax.swing.JButton btn_sairCadastroCliente1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JTextField bairroTF_EDF;
+    private javax.swing.JTextField cepTF_EDF;
+    private javax.swing.JTextField cidadeTF_EDF;
+    private javax.swing.JButton confirmarBTN_EDF;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JLabel lavantLB_EDF;
+    private javax.swing.JLabel madeLB_EDF;
+    private javax.swing.JTextField numeroTF_EDF;
+    private javax.swing.JTextField ruaTF_EDF;
+    private javax.swing.JButton sairBTN_EDF;
+    private javax.swing.JLabel titleLB_EDF;
+    private javax.swing.JLabel topicoBairroLB_EDF;
+    private javax.swing.JLabel topicoCepLB_EDF;
+    private javax.swing.JLabel topicoCidadeLB_EDF;
+    private javax.swing.JLabel topicoNumeroLB_EDF;
+    private javax.swing.JLabel topicoRuaLB_EDF;
+    private javax.swing.JLabel topicoUfLB_EDF;
+    private javax.swing.JTextField ufTF_EDF;
+    private javax.swing.JButton voltarBTN_EDF;
     // End of variables declaration//GEN-END:variables
 }

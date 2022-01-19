@@ -34,29 +34,29 @@ public class PerfilCliente extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
-        btn_editar = new javax.swing.JButton();
-        nome_perfilCliente = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        cpfLB_perfilCliente = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        ufLB_perfilCliente = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        btn_sair = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        editarBTN_PC = new javax.swing.JButton();
+        nomeLB_PC = new javax.swing.JLabel();
+        lavantLB_PC = new javax.swing.JLabel();
+        titleLB_PC = new javax.swing.JLabel();
+        topicoNomeLB_PC = new javax.swing.JLabel();
+        madeLB_PC = new javax.swing.JLabel();
+        cpfLB_PC = new javax.swing.JLabel();
+        topicoCpfLB_PC = new javax.swing.JLabel();
+        cidadeLB_PC = new javax.swing.JLabel();
+        topicoCidadeLB_PC = new javax.swing.JLabel();
+        ufLB_PC = new javax.swing.JLabel();
+        topicoUfLB_PC = new javax.swing.JLabel();
+        cepLB_PC = new javax.swing.JLabel();
+        topicoCepLB_PC = new javax.swing.JLabel();
+        bairroLB_PC = new javax.swing.JLabel();
+        topicoBairroLB_PC = new javax.swing.JLabel();
+        ruaLB_PC = new javax.swing.JLabel();
+        topicoRuaLB_PC = new javax.swing.JLabel();
+        numeroLB_PC = new javax.swing.JLabel();
+        topicoNumeroLB_PC = new javax.swing.JLabel();
+        title2LB_PC = new javax.swing.JLabel();
+        sairBTN_PC = new javax.swing.JButton();
+        voltarBTN_PC = new javax.swing.JButton();
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -69,154 +69,154 @@ public class PerfilCliente extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        btn_editar.setBackground(new java.awt.Color(255, 253, 130));
-        btn_editar.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        btn_editar.setForeground(new java.awt.Color(232, 72, 85));
-        btn_editar.setText("Editar");
-        btn_editar.addActionListener(new java.awt.event.ActionListener() {
+        editarBTN_PC.setBackground(new java.awt.Color(255, 253, 130));
+        editarBTN_PC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        editarBTN_PC.setForeground(new java.awt.Color(232, 72, 85));
+        editarBTN_PC.setText("Editar");
+        editarBTN_PC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_editarActionPerformed(evt);
+                editarBTN_PCActionPerformed(evt);
             }
         });
 
-        nome_perfilCliente.setBackground(new java.awt.Color(255, 253, 130));
-        nome_perfilCliente.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        nome_perfilCliente.setForeground(new java.awt.Color(232, 72, 85));
-        nome_perfilCliente.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        nome_perfilCliente.setText("Nome Cliente");
-        nome_perfilCliente.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        nomeLB_PC.setBackground(new java.awt.Color(255, 253, 130));
+        nomeLB_PC.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        nomeLB_PC.setForeground(new java.awt.Color(232, 72, 85));
+        nomeLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        nomeLB_PC.setText("Nome Cliente");
+        nomeLB_PC.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel2.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Lavant");
+        lavantLB_PC.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        lavantLB_PC.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lavantLB_PC.setText("Lavant");
 
-        jLabel3.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Seu perfil");
+        titleLB_PC.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        titleLB_PC.setForeground(new java.awt.Color(255, 253, 130));
+        titleLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        titleLB_PC.setText("Seu perfil");
 
-        jLabel4.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel4.setText("Nome:");
+        topicoNomeLB_PC.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoNomeLB_PC.setForeground(new java.awt.Color(255, 253, 130));
+        topicoNomeLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoNomeLB_PC.setText("Nome:");
 
-        jLabel5.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel5.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel5.setText("MADE");
-        jLabel5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        madeLB_PC.setBackground(new java.awt.Color(255, 253, 130));
+        madeLB_PC.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        madeLB_PC.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        madeLB_PC.setText("MADE");
+        madeLB_PC.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        cpfLB_perfilCliente.setBackground(new java.awt.Color(255, 253, 130));
-        cpfLB_perfilCliente.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        cpfLB_perfilCliente.setForeground(new java.awt.Color(232, 72, 85));
-        cpfLB_perfilCliente.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        cpfLB_perfilCliente.setText("123456789-10");
-        cpfLB_perfilCliente.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        cpfLB_PC.setBackground(new java.awt.Color(255, 253, 130));
+        cpfLB_PC.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        cpfLB_PC.setForeground(new java.awt.Color(232, 72, 85));
+        cpfLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        cpfLB_PC.setText("123456789-10");
+        cpfLB_PC.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel7.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel7.setText("CPF:");
-        jLabel7.setPreferredSize(new java.awt.Dimension(73, 22));
+        topicoCpfLB_PC.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoCpfLB_PC.setForeground(new java.awt.Color(255, 253, 130));
+        topicoCpfLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoCpfLB_PC.setText("CPF:");
+        topicoCpfLB_PC.setPreferredSize(new java.awt.Dimension(73, 22));
 
-        jLabel8.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel8.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel8.setText("Nome Cidade");
-        jLabel8.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        cidadeLB_PC.setBackground(new java.awt.Color(255, 253, 130));
+        cidadeLB_PC.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        cidadeLB_PC.setForeground(new java.awt.Color(232, 72, 85));
+        cidadeLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        cidadeLB_PC.setText("Nome Cidade");
+        cidadeLB_PC.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel9.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel9.setText("Cidade:");
+        topicoCidadeLB_PC.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoCidadeLB_PC.setForeground(new java.awt.Color(255, 253, 130));
+        topicoCidadeLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoCidadeLB_PC.setText("Cidade:");
 
-        ufLB_perfilCliente.setBackground(new java.awt.Color(255, 253, 130));
-        ufLB_perfilCliente.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        ufLB_perfilCliente.setForeground(new java.awt.Color(232, 72, 85));
-        ufLB_perfilCliente.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        ufLB_perfilCliente.setText("UF");
-        ufLB_perfilCliente.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        ufLB_PC.setBackground(new java.awt.Color(255, 253, 130));
+        ufLB_PC.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        ufLB_PC.setForeground(new java.awt.Color(232, 72, 85));
+        ufLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        ufLB_PC.setText("UF");
+        ufLB_PC.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel11.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel11.setText("UF:");
+        topicoUfLB_PC.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoUfLB_PC.setForeground(new java.awt.Color(255, 253, 130));
+        topicoUfLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoUfLB_PC.setText("UF:");
 
-        jLabel12.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel12.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel12.setText("00000-000");
-        jLabel12.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        cepLB_PC.setBackground(new java.awt.Color(255, 253, 130));
+        cepLB_PC.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        cepLB_PC.setForeground(new java.awt.Color(232, 72, 85));
+        cepLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        cepLB_PC.setText("00000-000");
+        cepLB_PC.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel13.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel13.setText("CEP:");
+        topicoCepLB_PC.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoCepLB_PC.setForeground(new java.awt.Color(255, 253, 130));
+        topicoCepLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoCepLB_PC.setText("CEP:");
 
-        jLabel14.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel14.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel14.setText("Nome Bairoo");
-        jLabel14.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        bairroLB_PC.setBackground(new java.awt.Color(255, 253, 130));
+        bairroLB_PC.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        bairroLB_PC.setForeground(new java.awt.Color(232, 72, 85));
+        bairroLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        bairroLB_PC.setText("Nome Bairoo");
+        bairroLB_PC.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel15.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel15.setText("Bairro:");
+        topicoBairroLB_PC.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoBairroLB_PC.setForeground(new java.awt.Color(255, 253, 130));
+        topicoBairroLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoBairroLB_PC.setText("Bairro:");
 
-        jLabel16.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel16.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel16.setText("Nome Rua");
-        jLabel16.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        ruaLB_PC.setBackground(new java.awt.Color(255, 253, 130));
+        ruaLB_PC.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        ruaLB_PC.setForeground(new java.awt.Color(232, 72, 85));
+        ruaLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        ruaLB_PC.setText("Nome Rua");
+        ruaLB_PC.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel17.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel17.setText("Rua:");
-        jLabel17.setMaximumSize(new java.awt.Dimension(73, 22));
-        jLabel17.setMinimumSize(new java.awt.Dimension(73, 22));
+        topicoRuaLB_PC.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoRuaLB_PC.setForeground(new java.awt.Color(255, 253, 130));
+        topicoRuaLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoRuaLB_PC.setText("Rua:");
+        topicoRuaLB_PC.setMaximumSize(new java.awt.Dimension(73, 22));
+        topicoRuaLB_PC.setMinimumSize(new java.awt.Dimension(73, 22));
 
-        jLabel18.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel18.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel18.setText("Numero");
-        jLabel18.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        numeroLB_PC.setBackground(new java.awt.Color(255, 253, 130));
+        numeroLB_PC.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        numeroLB_PC.setForeground(new java.awt.Color(232, 72, 85));
+        numeroLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        numeroLB_PC.setText("Numero");
+        numeroLB_PC.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel19.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel19.setText("Número:");
+        topicoNumeroLB_PC.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoNumeroLB_PC.setForeground(new java.awt.Color(255, 253, 130));
+        topicoNumeroLB_PC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoNumeroLB_PC.setText("Número:");
 
-        jLabel20.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("Endereço");
+        title2LB_PC.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        title2LB_PC.setForeground(new java.awt.Color(255, 253, 130));
+        title2LB_PC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        title2LB_PC.setText("Endereço");
 
-        btn_sair.setBackground(new java.awt.Color(255, 253, 130));
-        btn_sair.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        btn_sair.setForeground(new java.awt.Color(232, 72, 85));
-        btn_sair.setText("Sair");
-        btn_sair.addActionListener(new java.awt.event.ActionListener() {
+        sairBTN_PC.setBackground(new java.awt.Color(255, 253, 130));
+        sairBTN_PC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_PC.setForeground(new java.awt.Color(232, 72, 85));
+        sairBTN_PC.setText("Sair");
+        sairBTN_PC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sairActionPerformed(evt);
+                sairBTN_PCActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 253, 130));
-        jButton2.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(232, 72, 85));
-        jButton2.setText("Voltar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        voltarBTN_PC.setBackground(new java.awt.Color(255, 253, 130));
+        voltarBTN_PC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        voltarBTN_PC.setForeground(new java.awt.Color(232, 72, 85));
+        voltarBTN_PC.setText("Voltar");
+        voltarBTN_PC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                voltarBTN_PCActionPerformed(evt);
             }
         });
 
@@ -226,9 +226,9 @@ public class PerfilCliente extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_sair)
+                .addComponent(sairBTN_PC)
                 .addGap(18, 18, 18)
-                .addComponent(btn_editar)
+                .addComponent(editarBTN_PC)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -236,54 +236,54 @@ public class PerfilCliente extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(23, 23, 23)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(topicoCpfLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(topicoNomeLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cpfLB_perfilCliente)
-                                    .addComponent(nome_perfilCliente)))
+                                    .addComponent(cpfLB_PC)
+                                    .addComponent(nomeLB_PC)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(topicoUfLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(20, 20, 20))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(topicoBairroLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(topicoCidadeLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(topicoRuaLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(topicoCepLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(jLabel19)
+                                                .addComponent(topicoNumeroLB_PC)
                                                 .addGap(11, 11, 11)))
                                         .addGap(18, 18, 18)))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel18)
-                                                .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING))
-                                            .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING))
-                                        .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING))
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(ufLB_perfilCliente)))
+                                                .addComponent(numeroLB_PC)
+                                                .addComponent(ruaLB_PC, javax.swing.GroupLayout.Alignment.TRAILING))
+                                            .addComponent(cepLB_PC, javax.swing.GroupLayout.Alignment.TRAILING))
+                                        .addComponent(bairroLB_PC, javax.swing.GroupLayout.Alignment.TRAILING))
+                                    .addComponent(cidadeLB_PC, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(ufLB_PC)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel20)
+                                .addComponent(title2LB_PC)
                                 .addGap(130, 130, 130)))
                         .addContainerGap(210, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(62, 62, 62)
-                        .addComponent(jLabel5)
+                        .addComponent(madeLB_PC)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2))))
+                        .addComponent(voltarBTN_PC))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lavantLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(235, 235, 235)
-                .addComponent(jLabel3)
+                .addComponent(titleLB_PC)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -293,63 +293,63 @@ public class PerfilCliente extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn_sair)
-                            .addComponent(btn_editar)))
+                            .addComponent(sairBTN_PC)
+                            .addComponent(editarBTN_PC)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton2))
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(voltarBTN_PC))
+                    .addComponent(madeLB_PC, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(1, 1, 1)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lavantLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
-                .addComponent(jLabel3)
+                .addComponent(titleLB_PC)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nome_perfilCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoNomeLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nomeLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cpfLB_perfilCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoCpfLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpfLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(title2LB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ufLB_perfilCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoUfLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ufLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoCidadeLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cidadeLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoBairroLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bairroLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoCepLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cepLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoRuaLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ruaLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoNumeroLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(numeroLB_PC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23))
         );
 
         ClienteDados clienteDados = new ClienteDados();
-        nome_perfilCliente.setText(clienteDados.buscarNome(Login.getCodigo()));
+        nomeLB_PC.setText(clienteDados.buscarNome(Login.getCodigo()));
 
-        cpfLB_perfilCliente.setText(Login.getCodigo());
-        jLabel8.setText(clienteDados.buscarCidade(Login.getCodigo()));
-        ufLB_perfilCliente.setText(clienteDados.buscarUF(Login.getCodigo()));
-        jLabel12.setText(clienteDados.buscarCEP(Login.getCodigo()));
-        jLabel14.setText(clienteDados.buscarBairro(Login.getCodigo()));
-        jLabel16.setText(clienteDados.buscarRua(Login.getCodigo()));
-        jLabel18.setText(clienteDados.buscarNumero(Login.getCodigo()));
+        cpfLB_PC.setText(Login.getCodigo());
+        cidadeLB_PC.setText(clienteDados.buscarCidade(Login.getCodigo()));
+        ufLB_PC.setText(clienteDados.buscarUF(Login.getCodigo()));
+        cepLB_PC.setText(clienteDados.buscarCEP(Login.getCodigo()));
+        bairroLB_PC.setText(clienteDados.buscarBairro(Login.getCodigo()));
+        ruaLB_PC.setText(clienteDados.buscarRua(Login.getCodigo()));
+        numeroLB_PC.setText(clienteDados.buscarNumero(Login.getCodigo()));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -365,52 +365,52 @@ public class PerfilCliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editarActionPerformed
+    private void editarBTN_PCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBTN_PCActionPerformed
         this.setVisible(false);
         new EditarDadosCliente().setVisible(true);
-    }//GEN-LAST:event_btn_editarActionPerformed
+    }//GEN-LAST:event_editarBTN_PCActionPerformed
 
-    private void btn_sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairActionPerformed
+    private void sairBTN_PCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_PCActionPerformed
          this.setVisible(false);
         new Login().setVisible(true);
-    }//GEN-LAST:event_btn_sairActionPerformed
+    }//GEN-LAST:event_sairBTN_PCActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void voltarBTN_PCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_PCActionPerformed
         this.setVisible(false);
         new InicioCliente().setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_voltarBTN_PCActionPerformed
 
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_editar;
-    private javax.swing.JButton btn_sair;
-    private javax.swing.JLabel cpfLB_perfilCliente;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel bairroLB_PC;
+    private javax.swing.JLabel cepLB_PC;
+    private javax.swing.JLabel cidadeLB_PC;
+    private javax.swing.JLabel cpfLB_PC;
+    private javax.swing.JButton editarBTN_PC;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JLabel nome_perfilCliente;
-    private javax.swing.JLabel ufLB_perfilCliente;
+    private javax.swing.JLabel lavantLB_PC;
+    private javax.swing.JLabel madeLB_PC;
+    private javax.swing.JLabel nomeLB_PC;
+    private javax.swing.JLabel numeroLB_PC;
+    private javax.swing.JLabel ruaLB_PC;
+    private javax.swing.JButton sairBTN_PC;
+    private javax.swing.JLabel title2LB_PC;
+    private javax.swing.JLabel titleLB_PC;
+    private javax.swing.JLabel topicoBairroLB_PC;
+    private javax.swing.JLabel topicoCepLB_PC;
+    private javax.swing.JLabel topicoCidadeLB_PC;
+    private javax.swing.JLabel topicoCpfLB_PC;
+    private javax.swing.JLabel topicoNomeLB_PC;
+    private javax.swing.JLabel topicoNumeroLB_PC;
+    private javax.swing.JLabel topicoRuaLB_PC;
+    private javax.swing.JLabel topicoUfLB_PC;
+    private javax.swing.JLabel ufLB_PC;
+    private javax.swing.JButton voltarBTN_PC;
     // End of variables declaration//GEN-END:variables
 }

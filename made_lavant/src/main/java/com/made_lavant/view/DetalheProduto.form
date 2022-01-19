@@ -45,45 +45,45 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="156" max="-2" attributes="0"/>
+                  <Component id="madeLB_DP" min="-2" pref="156" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                          <Component id="sairBTN_DP" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="362" max="32767" attributes="0"/>
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <Component id="voltarBTN_DP" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jLabel6" min="-2" pref="89" max="-2" attributes="0"/>
-                                      <Component id="jLabel7" min="-2" pref="204" max="-2" attributes="0"/>
+                                      <Component id="topicoValLB_DP" min="-2" pref="89" max="-2" attributes="0"/>
+                                      <Component id="topicoQuantiDispLB_DP" min="-2" pref="204" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel5" min="-2" pref="89" max="-2" attributes="0"/>
+                                  <Component id="topicoCodLB_DP" min="-2" pref="89" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel4" min="-2" pref="89" max="-2" attributes="0"/>
+                                      <Component id="topicoNomeLB_DP" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoPrecoLB_DP" min="-2" pref="89" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="nomeLB_DetalheProduto" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="codigoLB_DetalheProduto" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                              <Component id="precoLB_DetalheProduto" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
-                              <Component id="quantidadeLB_DetalheProduto" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                              <Component id="jLabel2" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
-                              <Component id="validadeLB_DetalheProduto" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
+                              <Component id="nomeLB_DP" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="codigoLB_DP" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
+                              <Component id="precoLB_DP" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
+                              <Component id="quantiDispLB_DP" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                              <Component id="lavantLB_DP" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                              <Component id="valLB_DP" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -96,37 +96,37 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="voltarBTN_DP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="sairBTN_DP" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="madeLB_DP" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lavantLB_DP" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nomeLB_DetalheProduto" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="topicoNomeLB_DP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="nomeLB_DP" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="precoLB_DetalheProduto" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="topicoPrecoLB_DP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="precoLB_DP" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="codigoLB_DetalheProduto" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="topicoCodLB_DP" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="codigoLB_DP" min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="validadeLB_DetalheProduto" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="topicoValLB_DP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="valLB_DP" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="quantidadeLB_DetalheProduto" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="topicoQuantiDispLB_DP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="quantiDispLB_DP" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
               </Group>
@@ -134,7 +134,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="topicoPrecoLB_DP">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="16" style="1"/>
@@ -146,7 +146,7 @@
             <Property name="text" type="java.lang.String" value="Pre&#xe7;o"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="precoLB_DetalheProduto">
+        <Component class="javax.swing.JLabel" name="precoLB_DP">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -160,7 +160,7 @@
             <Property name="text" type="java.lang.String" value="00,00"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="nomeLB_DetalheProduto">
+        <Component class="javax.swing.JLabel" name="nomeLB_DP">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -174,7 +174,7 @@
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="madeLB_DP">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -190,7 +190,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="topicoNomeLB_DP">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -205,7 +205,7 @@
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="lavantLB_DP">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="45" style="1"/>
@@ -217,7 +217,7 @@
             <Property name="text" type="java.lang.String" value="Lavant"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="voltarBTN_DP">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -231,10 +231,10 @@
             <Property name="text" type="java.lang.String" value="Voltar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="voltarBTN_DPActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="topicoCodLB_DP">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="16" style="1"/>
@@ -246,7 +246,7 @@
             <Property name="text" type="java.lang.String" value="C&#xf3;digo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="codigoLB_DetalheProduto">
+        <Component class="javax.swing.JLabel" name="codigoLB_DP">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -260,7 +260,7 @@
             <Property name="text" type="java.lang.String" value="000"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="topicoValLB_DP">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="16" style="1"/>
@@ -272,7 +272,7 @@
             <Property name="text" type="java.lang.String" value="Validade"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="validadeLB_DetalheProduto">
+        <Component class="javax.swing.JLabel" name="valLB_DP">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -286,7 +286,7 @@
             <Property name="text" type="java.lang.String" value="dd/mm/aaaa"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="topicoQuantiDispLB_DP">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="16" style="1"/>
@@ -298,7 +298,7 @@
             <Property name="text" type="java.lang.String" value="Quantidade dispon&#xed;vel"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="quantidadeLB_DetalheProduto">
+        <Component class="javax.swing.JLabel" name="quantiDispLB_DP">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -312,7 +312,7 @@
             <Property name="text" type="java.lang.String" value="00"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="sairBTN_DP">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -326,7 +326,7 @@
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sairBTN_DPActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

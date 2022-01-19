@@ -48,29 +48,29 @@
                   <EmptySpace pref="171" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cadastrarBTN_LO" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoSenhaLB_LO" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoLoginLB_LO" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="senha_Login" alignment="0" min="-2" pref="352" max="-2" attributes="0"/>
-                                      <Component id="user_Login" alignment="0" min="-2" pref="352" max="-2" attributes="0"/>
+                                      <Component id="senhaPF_LO" alignment="0" min="-2" pref="352" max="-2" attributes="0"/>
+                                      <Component id="loginTF_LO" alignment="0" min="-2" pref="352" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel6" min="-2" pref="182" max="-2" attributes="0"/>
+                                  <Component id="madeLB_LO" min="-2" pref="182" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lavantLB_LO" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jButton4" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
-                              <Component id="naoCadastrado_Login" alignment="0" min="-2" pref="258" max="-2" attributes="0"/>
+                              <Component id="confirmarBTN_LO" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
+                              <Component id="utilityLB_LO" alignment="0" min="-2" pref="258" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="181" max="32767" attributes="0"/>
                       </Group>
@@ -84,36 +84,36 @@
                   <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <Component id="madeLB_LO" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          <Component id="lavantLB_LO" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="user_Login" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="loginTF_LO" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoLoginLB_LO" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="senha_Login" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoSenhaLB_LO" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="senhaPF_LO" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="naoCadastrado_Login" min="-2" pref="27" max="-2" attributes="0"/>
+                  <Component id="utilityLB_LO" min="-2" pref="27" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                  <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                  <Component id="confirmarBTN_LO" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="167" max="32767" attributes="0"/>
-                  <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cadastrarBTN_LO" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="confirmarBTN_LO">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -127,10 +127,10 @@
             <Property name="text" type="java.lang.String" value="Confirmar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="confirmarBTN_LOActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="topicoLoginLB_LO">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
@@ -144,7 +144,7 @@
             <Property name="text" type="java.lang.String" value="Login"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="madeLB_LO">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -158,7 +158,7 @@
             <Property name="text" type="java.lang.String" value="MADE"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="lavantLB_LO">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
@@ -172,7 +172,7 @@
             <Property name="text" type="java.lang.String" value="Lavant"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="topicoSenhaLB_LO">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
@@ -186,11 +186,11 @@
             <Property name="text" type="java.lang.String" value="Senha"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="user_Login">
+        <Component class="javax.swing.JTextField" name="loginTF_LO">
         </Component>
-        <Component class="javax.swing.JPasswordField" name="senha_Login">
+        <Component class="javax.swing.JPasswordField" name="senhaPF_LO">
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="cadastrarBTN_LO">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -204,10 +204,10 @@
             <Property name="text" type="java.lang.String" value="Cadastrar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadastrarBTN_LOActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="naoCadastrado_Login">
+        <Component class="javax.swing.JLabel" name="utilityLB_LO">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
@@ -222,7 +222,7 @@
             <Property name="text" type="java.lang.String" value="Usu&#xe1;rio N&#xe3;o Cadastrado"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="naoCadastrado_Login.setVisible(false);"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="utilityLB_LO.setVisible(false);"/>
           </AuxValues>
         </Component>
       </SubComponents>

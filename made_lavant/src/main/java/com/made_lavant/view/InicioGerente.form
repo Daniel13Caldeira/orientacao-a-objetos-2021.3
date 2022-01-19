@@ -48,13 +48,13 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Sair_btn" min="-2" max="-2" attributes="0"/>
+                          <Component id="sairBTN_IG" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace pref="250" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lavant_btn" alignment="0" min="-2" pref="267" max="-2" attributes="0"/>
-                              <Component id="made_label" alignment="0" min="-2" pref="267" max="-2" attributes="0"/>
+                              <Component id="lavantLB_IG" alignment="0" min="-2" pref="267" max="-2" attributes="0"/>
+                              <Component id="madeLB_IG" alignment="0" min="-2" pref="267" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -63,9 +63,9 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="funcionariosGerente_btn" min="-2" pref="152" max="-2" attributes="0"/>
-                      <Component id="carrinhoGerente_btn1" min="-2" pref="152" max="-2" attributes="0"/>
-                      <Component id="produtoGerente_btn1" min="-2" pref="152" max="-2" attributes="0"/>
+                      <Component id="funcionariosBTN_IG" min="-2" pref="152" max="-2" attributes="0"/>
+                      <Component id="carrinhoBTN_IG" min="-2" pref="152" max="-2" attributes="0"/>
+                      <Component id="produtoBTN_IG" min="-2" pref="152" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -75,24 +75,24 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                  <Component id="Sair_btn" min="-2" max="-2" attributes="0"/>
+                  <Component id="sairBTN_IG" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="34" max="32767" attributes="0"/>
-                  <Component id="made_label" min="-2" pref="58" max="-2" attributes="0"/>
+                  <Component id="madeLB_IG" min="-2" pref="58" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="lavant_btn" min="-2" pref="58" max="-2" attributes="0"/>
+                  <Component id="lavantLB_IG" min="-2" pref="58" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="produtoGerente_btn1" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="produtoBTN_IG" min="-2" pref="61" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="carrinhoGerente_btn1" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="carrinhoBTN_IG" min="-2" pref="61" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="funcionariosGerente_btn" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="funcionariosBTN_IG" min="-2" pref="61" max="-2" attributes="0"/>
                   <EmptySpace pref="30" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="produtoGerente_btn1">
+        <Component class="javax.swing.JButton" name="produtoBTN_IG">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -106,10 +106,10 @@
             <Property name="text" type="java.lang.String" value="Produtos"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="produtoGerente_btn1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="produtoBTN_IGActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="carrinhoGerente_btn1">
+        <Component class="javax.swing.JButton" name="carrinhoBTN_IG">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -123,10 +123,10 @@
             <Property name="text" type="java.lang.String" value="Carrinho"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carrinhoGerente_btn1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carrinhoBTN_IGActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="made_label">
+        <Component class="javax.swing.JLabel" name="madeLB_IG">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="53" green="53" red="54" type="rgb"/>
@@ -141,7 +141,7 @@
             <Property name="text" type="java.lang.String" value="MADE"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lavant_btn">
+        <Component class="javax.swing.JLabel" name="lavantLB_IG">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="65" style="1"/>
@@ -153,7 +153,7 @@
             <Property name="text" type="java.lang.String" value="Lavant"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Sair_btn">
+        <Component class="javax.swing.JButton" name="sairBTN_IG">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -167,10 +167,10 @@
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Sair_btnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sairBTN_IGActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="funcionariosGerente_btn">
+        <Component class="javax.swing.JButton" name="funcionariosBTN_IG">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -184,7 +184,7 @@
             <Property name="text" type="java.lang.String" value="Funcion&#xe1;rios"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="funcionariosGerente_btnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="funcionariosBTN_IGActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

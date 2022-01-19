@@ -29,105 +29,105 @@ public class DetalheProduto extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        precoLB_DetalheProduto = new javax.swing.JLabel();
-        nomeLB_DetalheProduto = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        codigoLB_DetalheProduto = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        validadeLB_DetalheProduto = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        quantidadeLB_DetalheProduto = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        topicoPrecoLB_DP = new javax.swing.JLabel();
+        precoLB_DP = new javax.swing.JLabel();
+        nomeLB_DP = new javax.swing.JLabel();
+        madeLB_DP = new javax.swing.JLabel();
+        topicoNomeLB_DP = new javax.swing.JLabel();
+        lavantLB_DP = new javax.swing.JLabel();
+        voltarBTN_DP = new javax.swing.JButton();
+        topicoCodLB_DP = new javax.swing.JLabel();
+        codigoLB_DP = new javax.swing.JLabel();
+        topicoValLB_DP = new javax.swing.JLabel();
+        valLB_DP = new javax.swing.JLabel();
+        topicoQuantiDispLB_DP = new javax.swing.JLabel();
+        quantiDispLB_DP = new javax.swing.JLabel();
+        sairBTN_DP = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        jLabel4.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel4.setText("Preço");
+        topicoPrecoLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoPrecoLB_DP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoPrecoLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoPrecoLB_DP.setText("Preço");
 
-        precoLB_DetalheProduto.setBackground(new java.awt.Color(255, 255, 255));
-        precoLB_DetalheProduto.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        precoLB_DetalheProduto.setForeground(new java.awt.Color(255, 253, 130));
-        precoLB_DetalheProduto.setText("00,00");
+        precoLB_DP.setBackground(new java.awt.Color(255, 255, 255));
+        precoLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        precoLB_DP.setForeground(new java.awt.Color(255, 253, 130));
+        precoLB_DP.setText("00,00");
 
-        nomeLB_DetalheProduto.setBackground(new java.awt.Color(255, 255, 255));
-        nomeLB_DetalheProduto.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        nomeLB_DetalheProduto.setForeground(new java.awt.Color(255, 253, 130));
-        nomeLB_DetalheProduto.setText("Nome");
+        nomeLB_DP.setBackground(new java.awt.Color(255, 255, 255));
+        nomeLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        nomeLB_DP.setForeground(new java.awt.Color(255, 253, 130));
+        nomeLB_DP.setText("Nome");
 
-        jLabel1.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel1.setFont(new java.awt.Font("Colonna MT", 0, 45)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText("MADE");
-        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        madeLB_DP.setBackground(new java.awt.Color(255, 253, 130));
+        madeLB_DP.setFont(new java.awt.Font("Colonna MT", 0, 45)); // NOI18N
+        madeLB_DP.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        madeLB_DP.setText("MADE");
+        madeLB_DP.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel3.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel3.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Nome");
+        topicoNomeLB_DP.setBackground(new java.awt.Color(255, 253, 130));
+        topicoNomeLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoNomeLB_DP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoNomeLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        topicoNomeLB_DP.setText("Nome");
 
-        jLabel2.setFont(new java.awt.Font("Colonna MT", 1, 45)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Lavant");
+        lavantLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 45)); // NOI18N
+        lavantLB_DP.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lavantLB_DP.setText("Lavant");
 
-        jButton1.setBackground(new java.awt.Color(255, 253, 130));
-        jButton1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(232, 72, 85));
-        jButton1.setText("Voltar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        voltarBTN_DP.setBackground(new java.awt.Color(255, 253, 130));
+        voltarBTN_DP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        voltarBTN_DP.setForeground(new java.awt.Color(232, 72, 85));
+        voltarBTN_DP.setText("Voltar");
+        voltarBTN_DP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                voltarBTN_DPActionPerformed(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel5.setText("Código");
+        topicoCodLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoCodLB_DP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoCodLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoCodLB_DP.setText("Código");
 
-        codigoLB_DetalheProduto.setBackground(new java.awt.Color(255, 255, 255));
-        codigoLB_DetalheProduto.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        codigoLB_DetalheProduto.setForeground(new java.awt.Color(255, 253, 130));
-        codigoLB_DetalheProduto.setText("000");
+        codigoLB_DP.setBackground(new java.awt.Color(255, 255, 255));
+        codigoLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        codigoLB_DP.setForeground(new java.awt.Color(255, 253, 130));
+        codigoLB_DP.setText("000");
 
-        jLabel6.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel6.setText("Validade");
+        topicoValLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoValLB_DP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoValLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoValLB_DP.setText("Validade");
 
-        validadeLB_DetalheProduto.setBackground(new java.awt.Color(255, 255, 255));
-        validadeLB_DetalheProduto.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        validadeLB_DetalheProduto.setForeground(new java.awt.Color(255, 253, 130));
-        validadeLB_DetalheProduto.setText("dd/mm/aaaa");
+        valLB_DP.setBackground(new java.awt.Color(255, 255, 255));
+        valLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        valLB_DP.setForeground(new java.awt.Color(255, 253, 130));
+        valLB_DP.setText("dd/mm/aaaa");
 
-        jLabel7.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel7.setText("Quantidade disponível");
+        topicoQuantiDispLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoQuantiDispLB_DP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoQuantiDispLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoQuantiDispLB_DP.setText("Quantidade disponível");
 
-        quantidadeLB_DetalheProduto.setBackground(new java.awt.Color(255, 255, 255));
-        quantidadeLB_DetalheProduto.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        quantidadeLB_DetalheProduto.setForeground(new java.awt.Color(255, 253, 130));
-        quantidadeLB_DetalheProduto.setText("00");
+        quantiDispLB_DP.setBackground(new java.awt.Color(255, 255, 255));
+        quantiDispLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        quantiDispLB_DP.setForeground(new java.awt.Color(255, 253, 130));
+        quantiDispLB_DP.setText("00");
 
-        jButton2.setBackground(new java.awt.Color(255, 253, 130));
-        jButton2.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(232, 72, 85));
-        jButton2.setText("Sair");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        sairBTN_DP.setBackground(new java.awt.Color(255, 253, 130));
+        sairBTN_DP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_DP.setForeground(new java.awt.Color(232, 72, 85));
+        sairBTN_DP.setText("Sair");
+        sairBTN_DP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                sairBTN_DPActionPerformed(evt);
             }
         });
 
@@ -137,37 +137,37 @@ public class DetalheProduto extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(madeLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton2)
+                        .addComponent(sairBTN_DP)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 362, Short.MAX_VALUE)
-                        .addComponent(jButton1))
+                        .addComponent(voltarBTN_DP))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(topicoValLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(topicoQuantiDispLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(35, 35, 35))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(topicoCodLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(topicoNomeLB_DP)
+                                    .addComponent(topicoPrecoLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomeLB_DetalheProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(codigoLB_DetalheProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(precoLB_DetalheProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(quantidadeLB_DetalheProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(validadeLB_DetalheProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(nomeLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(codigoLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(precoLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(quantiDispLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lavantLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(valLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(129, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -175,32 +175,32 @@ public class DetalheProduto extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(voltarBTN_DP)
+                    .addComponent(sairBTN_DP))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
+                .addComponent(madeLB_DP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(lavantLB_DP)
                 .addGap(64, 64, 64)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(nomeLB_DetalheProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoNomeLB_DP)
+                    .addComponent(nomeLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(precoLB_DetalheProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoPrecoLB_DP)
+                    .addComponent(precoLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(codigoLB_DetalheProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoCodLB_DP)
+                    .addComponent(codigoLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(validadeLB_DetalheProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoValLB_DP)
+                    .addComponent(valLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(quantidadeLB_DetalheProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoQuantiDispLB_DP)
+                    .addComponent(quantiDispLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(158, 158, 158))
         );
 
@@ -218,34 +218,34 @@ public class DetalheProduto extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void voltarBTN_DPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_DPActionPerformed
         this.setVisible(false);
         new CrudProdutos_Cliente().setVisible(true);        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_voltarBTN_DPActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void sairBTN_DPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_DPActionPerformed
         this.setVisible(false);
         new Login().setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_sairBTN_DPActionPerformed
 
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel codigoLB_DetalheProduto;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel codigoLB_DP;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel nomeLB_DetalheProduto;
-    private javax.swing.JLabel precoLB_DetalheProduto;
-    private javax.swing.JLabel quantidadeLB_DetalheProduto;
-    private javax.swing.JLabel validadeLB_DetalheProduto;
+    private javax.swing.JLabel lavantLB_DP;
+    private javax.swing.JLabel madeLB_DP;
+    private javax.swing.JLabel nomeLB_DP;
+    private javax.swing.JLabel precoLB_DP;
+    private javax.swing.JLabel quantiDispLB_DP;
+    private javax.swing.JButton sairBTN_DP;
+    private javax.swing.JLabel topicoCodLB_DP;
+    private javax.swing.JLabel topicoNomeLB_DP;
+    private javax.swing.JLabel topicoPrecoLB_DP;
+    private javax.swing.JLabel topicoQuantiDispLB_DP;
+    private javax.swing.JLabel topicoValLB_DP;
+    private javax.swing.JLabel valLB_DP;
+    private javax.swing.JButton voltarBTN_DP;
     // End of variables declaration//GEN-END:variables
 }

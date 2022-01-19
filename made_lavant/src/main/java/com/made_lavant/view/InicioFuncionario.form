@@ -61,18 +61,18 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Sair_btn" min="-2" max="-2" attributes="0"/>
+                          <Component id="sairBTN_IF" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace pref="228" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lavant_btn" min="-2" pref="267" max="-2" attributes="0"/>
-                              <Component id="made_label" min="-2" pref="267" max="-2" attributes="0"/>
+                              <Component id="lavantLB_IF" min="-2" pref="267" max="-2" attributes="0"/>
+                              <Component id="madeLB_IF" min="-2" pref="267" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="carrinhosFunc_btn1" min="-2" pref="152" max="-2" attributes="0"/>
-                                      <Component id="produtoFunc_btn1" min="-2" pref="152" max="-2" attributes="0"/>
+                                      <Component id="carrinhosBTN_IF" min="-2" pref="152" max="-2" attributes="0"/>
+                                      <Component id="produtosBTN_IF" min="-2" pref="152" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -86,22 +86,22 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                  <Component id="Sair_btn" min="-2" max="-2" attributes="0"/>
+                  <Component id="sairBTN_IF" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" pref="23" max="32767" attributes="0"/>
-                  <Component id="made_label" min="-2" pref="58" max="-2" attributes="0"/>
+                  <Component id="madeLB_IF" min="-2" pref="58" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="lavant_btn" min="-2" pref="58" max="-2" attributes="0"/>
+                  <Component id="lavantLB_IF" min="-2" pref="58" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="produtoFunc_btn1" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="produtosBTN_IF" min="-2" pref="61" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="carrinhosFunc_btn1" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="carrinhosBTN_IF" min="-2" pref="61" max="-2" attributes="0"/>
                   <EmptySpace pref="44" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="produtoFunc_btn1">
+        <Component class="javax.swing.JButton" name="produtosBTN_IF">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -115,10 +115,10 @@
             <Property name="text" type="java.lang.String" value="Produtos"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="produtoFunc_btn1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="produtosBTN_IFActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="carrinhosFunc_btn1">
+        <Component class="javax.swing.JButton" name="carrinhosBTN_IF">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -132,10 +132,10 @@
             <Property name="text" type="java.lang.String" value="Carrinhos"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carrinhosFunc_btn1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carrinhosBTN_IFActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="made_label">
+        <Component class="javax.swing.JLabel" name="madeLB_IF">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="53" green="53" red="54" type="rgb"/>
@@ -150,7 +150,7 @@
             <Property name="text" type="java.lang.String" value="MADE"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lavant_btn">
+        <Component class="javax.swing.JLabel" name="lavantLB_IF">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="65" style="1"/>
@@ -162,7 +162,7 @@
             <Property name="text" type="java.lang.String" value="Lavant"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Sair_btn">
+        <Component class="javax.swing.JButton" name="sairBTN_IF">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -176,7 +176,7 @@
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Sair_btnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sairBTN_IFActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

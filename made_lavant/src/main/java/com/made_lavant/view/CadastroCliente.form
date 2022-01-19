@@ -61,63 +61,63 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoBairroLB_CC" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoUfLB_CC" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="uf_cadastroCliente" max="32767" attributes="0"/>
+                                          <Component id="ufTF_CC" max="32767" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                          <Component id="topicoCpfLB_CC" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                          <Component id="cpf_cadastroCliente" min="-2" pref="170" max="-2" attributes="0"/>
+                                          <Component id="cpfTF_CC" min="-2" pref="170" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
-                                          <Component id="bairro_cadastroCliente" min="-2" pref="291" max="-2" attributes="0"/>
+                                          <Component id="bairroTF_CC" min="-2" pref="291" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoNumeroLB_CC" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoCepLB_CC" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="cep_cadastroCliente" max="32767" attributes="0"/>
-                                      <Component id="numero_cadastroCliente" max="32767" attributes="0"/>
+                                      <Component id="cepTF_CC" max="32767" attributes="0"/>
+                                      <Component id="numeroTF_CC" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="btn_sairCadastroCliente" min="-2" pref="75" max="-2" attributes="0"/>
+                                  <Component id="sairBTN_CC" min="-2" pref="75" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoCidadeLB_CC" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoNomeLB_CC" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoRuaLB_CC" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="rua_cadastroCliente" max="32767" attributes="0"/>
-                                      <Component id="nome_cadastroCliente" max="32767" attributes="0"/>
-                                      <Component id="cidade_cadastroCliente" max="32767" attributes="0"/>
+                                      <Component id="ruaTF_CC" max="32767" attributes="0"/>
+                                      <Component id="nomeTF_CC" max="32767" attributes="0"/>
+                                      <Component id="cidadeTF_CC" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="titleLB_CC" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="jLabel10" min="-2" pref="70" max="-2" attributes="0"/>
+                          <Component id="madeLB_CC" min="-2" pref="70" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                          <Component id="lavantLB_CC" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="258" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -125,16 +125,16 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="clienteCadastrado" min="-2" max="-2" attributes="0"/>
+                  <Component id="utilityLB_CC" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
-                  <Component id="confirmarBTN_cadastroCliente" min="-2" max="-2" attributes="0"/>
+                  <Component id="confirmarBTN_CC" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                  <Component id="topicoSenhaLB_CC" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="senha_cadastroCliente" min="-2" pref="599" max="-2" attributes="0"/>
+                  <Component id="senhaTF_CC" min="-2" pref="599" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -143,57 +143,57 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btn_sairCadastroCliente" min="-2" max="-2" attributes="0"/>
+                  <Component id="sairBTN_CC" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="titleLB_CC" min="-2" pref="23" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nome_cadastroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoNomeLB_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="nomeTF_CC" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cidade_cadastroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoCidadeLB_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cidadeTF_CC" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="rua_cadastroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoRuaLB_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ruaTF_CC" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="bairro_cadastroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="numero_cadastroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoBairroLB_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="bairroTF_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoNumeroLB_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="numeroTF_CC" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="cep_cadastroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cpf_cadastroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="uf_cadastroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cepTF_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoCepLB_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cpfTF_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoCpfLB_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ufTF_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoUfLB_CC" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="senha_cadastroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoSenhaLB_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="senhaTF_CC" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="clienteCadastrado" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="confirmarBTN_cadastroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="utilityLB_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="confirmarBTN_CC" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel10" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="madeLB_CC" min="-2" pref="37" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jLabel11" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
+                      <Component id="lavantLB_CC" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -201,7 +201,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="titleLB_CC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="36" style="1"/>
@@ -213,7 +213,7 @@
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="topicoNomeLB_CC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
@@ -224,7 +224,7 @@
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="topicoCidadeLB_CC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
@@ -235,7 +235,7 @@
             <Property name="text" type="java.lang.String" value="Cidade"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="topicoRuaLB_CC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
@@ -246,22 +246,22 @@
             <Property name="text" type="java.lang.String" value="Rua"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="nome_cadastroCliente">
+        <Component class="javax.swing.JTextField" name="nomeTF_CC">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nome_cadastroClienteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeTF_CCActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="cidade_cadastroCliente">
+        <Component class="javax.swing.JTextField" name="cidadeTF_CC">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cidade_cadastroClienteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cidadeTF_CCActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="rua_cadastroCliente">
+        <Component class="javax.swing.JTextField" name="ruaTF_CC">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rua_cadastroClienteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ruaTF_CCActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="confirmarBTN_cadastroCliente">
+        <Component class="javax.swing.JButton" name="confirmarBTN_CC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -275,10 +275,10 @@
             <Property name="text" type="java.lang.String" value="Confirmar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="confirmarBTN_cadastroClienteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="confirmarBTN_CCActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="topicoBairroLB_CC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
@@ -289,7 +289,7 @@
             <Property name="text" type="java.lang.String" value="Bairro"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="topicoNumeroLB_CC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
@@ -300,7 +300,7 @@
             <Property name="text" type="java.lang.String" value="N&#xfa;mero"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="topicoUfLB_CC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
@@ -311,7 +311,7 @@
             <Property name="text" type="java.lang.String" value="UF"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="topicoCepLB_CC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
@@ -322,7 +322,7 @@
             <Property name="text" type="java.lang.String" value="CEP"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="topicoCpfLB_CC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
@@ -333,35 +333,35 @@
             <Property name="text" type="java.lang.String" value="CPF"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="bairro_cadastroCliente">
+        <Component class="javax.swing.JTextField" name="bairroTF_CC">
         </Component>
-        <Component class="javax.swing.JTextField" name="numero_cadastroCliente">
+        <Component class="javax.swing.JTextField" name="numeroTF_CC">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numero_cadastroClienteActionPerformed"/>
-            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numero_cadastroClienteKeyReleased"/>
-            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numero_cadastroClienteKeyTyped"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numeroTF_CCActionPerformed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroTF_CCKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroTF_CCKeyTyped"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="uf_cadastroCliente">
+        <Component class="javax.swing.JTextField" name="ufTF_CC">
           <Events>
-            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="uf_cadastroClienteKeyReleased"/>
-            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="uf_cadastroClienteKeyTyped"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="ufTF_CCKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="ufTF_CCKeyTyped"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="cpf_cadastroCliente">
+        <Component class="javax.swing.JTextField" name="cpfTF_CC">
           <Events>
-            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cpf_cadastroClienteKeyReleased"/>
-            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cpf_cadastroClienteKeyTyped"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cpfTF_CCKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cpfTF_CCKeyTyped"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="cep_cadastroCliente">
+        <Component class="javax.swing.JTextField" name="cepTF_CC">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cep_cadastroClienteActionPerformed"/>
-            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cep_cadastroClienteKeyReleased"/>
-            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cep_cadastroClienteKeyTyped"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cepTF_CCActionPerformed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_CCKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_CCKeyTyped"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="madeLB_CC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="24" style="0"/>
@@ -372,7 +372,7 @@
             <Property name="text" type="java.lang.String" value="MADE"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel11">
+        <Component class="javax.swing.JLabel" name="lavantLB_CC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="24" style="1"/>
@@ -383,7 +383,7 @@
             <Property name="text" type="java.lang.String" value="Lavant"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_sairCadastroCliente">
+        <Component class="javax.swing.JButton" name="sairBTN_CC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -397,10 +397,10 @@
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_sairCadastroClienteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sairBTN_CCActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="clienteCadastrado">
+        <Component class="javax.swing.JLabel" name="utilityLB_CC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
@@ -411,10 +411,10 @@
             <Property name="text" type="java.lang.String" value="Cliente j&#xe1; cadastrado"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="clienteCadastrado.setVisible(false);&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="utilityLB_CC.setVisible(false);&#xd;&#xa;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel12">
+        <Component class="javax.swing.JLabel" name="topicoSenhaLB_CC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
@@ -425,9 +425,9 @@
             <Property name="text" type="java.lang.String" value="Senha"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="senha_cadastroCliente">
+        <Component class="javax.swing.JTextField" name="senhaTF_CC">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="senha_cadastroClienteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="senhaTF_CCActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

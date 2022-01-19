@@ -28,18 +28,18 @@ public class CrudFuncionarios extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        topicoIdLB_CRF = new javax.swing.JLabel();
+        nomeLB_CRF = new javax.swing.JLabel();
+        idLB_CRF = new javax.swing.JLabel();
+        madeLB_CRF = new javax.swing.JLabel();
+        addFuncBTN_CRF = new javax.swing.JButton();
+        lavantLB_CRF = new javax.swing.JLabel();
+        removerBTN_CRF = new javax.swing.JButton();
+        sairBTN_CRF = new javax.swing.JButton();
+        editarBTN_CRF = new javax.swing.JButton();
+        descricaoBTN_CRF = new javax.swing.JButton();
+        voltarBTN_CRF = new javax.swing.JButton();
+        topicoNomeLB_CRF = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lista de Funcionários");
@@ -47,99 +47,99 @@ public class CrudFuncionarios extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        jLabel4.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Identificação");
+        topicoIdLB_CRF.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoIdLB_CRF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoIdLB_CRF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        topicoIdLB_CRF.setText("Identificação");
 
-        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel8.setText("Nome");
+        nomeLB_CRF.setBackground(new java.awt.Color(255, 255, 255));
+        nomeLB_CRF.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        nomeLB_CRF.setForeground(new java.awt.Color(255, 253, 130));
+        nomeLB_CRF.setText("Nome");
 
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel9.setText("000");
+        idLB_CRF.setBackground(new java.awt.Color(255, 255, 255));
+        idLB_CRF.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        idLB_CRF.setForeground(new java.awt.Color(255, 253, 130));
+        idLB_CRF.setText("000");
 
-        jLabel1.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel1.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText("MADE");
-        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        madeLB_CRF.setBackground(new java.awt.Color(255, 253, 130));
+        madeLB_CRF.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        madeLB_CRF.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_CRF.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        madeLB_CRF.setText("MADE");
+        madeLB_CRF.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jButton3.setBackground(new java.awt.Color(255, 253, 130));
-        jButton3.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(232, 72, 85));
-        jButton3.setText("Adicionar Funcionário");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        addFuncBTN_CRF.setBackground(new java.awt.Color(255, 253, 130));
+        addFuncBTN_CRF.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        addFuncBTN_CRF.setForeground(new java.awt.Color(232, 72, 85));
+        addFuncBTN_CRF.setText("Adicionar Funcionário");
+        addFuncBTN_CRF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                addFuncBTN_CRFActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Lavant");
+        lavantLB_CRF.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        lavantLB_CRF.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_CRF.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lavantLB_CRF.setText("Lavant");
 
-        jButton4.setBackground(new java.awt.Color(255, 253, 130));
-        jButton4.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(232, 72, 85));
-        jButton4.setText("Remover");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        removerBTN_CRF.setBackground(new java.awt.Color(255, 253, 130));
+        removerBTN_CRF.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        removerBTN_CRF.setForeground(new java.awt.Color(232, 72, 85));
+        removerBTN_CRF.setText("Remover");
+        removerBTN_CRF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                removerBTN_CRFActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(255, 253, 130));
-        jButton1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(232, 72, 85));
-        jButton1.setText("Sair");
-        jButton1.setToolTipText("");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        sairBTN_CRF.setBackground(new java.awt.Color(255, 253, 130));
+        sairBTN_CRF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_CRF.setForeground(new java.awt.Color(232, 72, 85));
+        sairBTN_CRF.setText("Sair");
+        sairBTN_CRF.setToolTipText("");
+        sairBTN_CRF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                sairBTN_CRFActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(255, 253, 130));
-        jButton5.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(232, 72, 85));
-        jButton5.setText("Editar");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        editarBTN_CRF.setBackground(new java.awt.Color(255, 253, 130));
+        editarBTN_CRF.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        editarBTN_CRF.setForeground(new java.awt.Color(232, 72, 85));
+        editarBTN_CRF.setText("Editar");
+        editarBTN_CRF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                editarBTN_CRFActionPerformed(evt);
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(255, 253, 130));
-        jButton6.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(232, 72, 85));
-        jButton6.setText("Descrição");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        descricaoBTN_CRF.setBackground(new java.awt.Color(255, 253, 130));
+        descricaoBTN_CRF.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        descricaoBTN_CRF.setForeground(new java.awt.Color(232, 72, 85));
+        descricaoBTN_CRF.setText("Descrição");
+        descricaoBTN_CRF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                descricaoBTN_CRFActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 253, 130));
-        jButton2.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(232, 72, 85));
-        jButton2.setText("Voltar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        voltarBTN_CRF.setBackground(new java.awt.Color(255, 253, 130));
+        voltarBTN_CRF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        voltarBTN_CRF.setForeground(new java.awt.Color(232, 72, 85));
+        voltarBTN_CRF.setText("Voltar");
+        voltarBTN_CRF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                voltarBTN_CRFActionPerformed(evt);
             }
         });
 
-        jLabel3.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel3.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Nome");
+        topicoNomeLB_CRF.setBackground(new java.awt.Color(255, 253, 130));
+        topicoNomeLB_CRF.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoNomeLB_CRF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoNomeLB_CRF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        topicoNomeLB_CRF.setText("Nome");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -147,37 +147,37 @@ public class CrudFuncionarios extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(sairBTN_CRF)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(voltarBTN_CRF)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
+                        .addComponent(topicoNomeLB_CRF)
                         .addGap(149, 149, 149)
-                        .addComponent(jLabel4))
+                        .addComponent(topicoIdLB_CRF))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(nomeLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(21, 21, 21)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(idLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(151, 151, 151)
-                .addComponent(jButton4)
+                .addComponent(removerBTN_CRF)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton5)
+                .addComponent(editarBTN_CRF)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton6)
+                .addComponent(descricaoBTN_CRF)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
+                    .addComponent(addFuncBTN_CRF)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(49, 49, 49)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))))
+                            .addComponent(lavantLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(madeLB_CRF))))
                 .addGap(300, 300, 300))
         );
         jPanel1Layout.setVerticalGroup(
@@ -185,25 +185,25 @@ public class CrudFuncionarios extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(sairBTN_CRF)
+                    .addComponent(voltarBTN_CRF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(madeLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lavantLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(addFuncBTN_CRF)
                 .addGap(45, 45, 45)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                    .addComponent(topicoNomeLB_CRF)
+                    .addComponent(topicoIdLB_CRF))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nomeLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(idLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(removerBTN_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editarBTN_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(descricaoBTN_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(131, Short.MAX_VALUE))
         );
 
@@ -212,51 +212,51 @@ public class CrudFuncionarios extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void addFuncBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addFuncBTN_CRFActionPerformed
         this.setVisible(false);
         new CadastroFuncionario().setVisible(true);    
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_addFuncBTN_CRFActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void sairBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CRFActionPerformed
         this.setVisible(false);
         new Login().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_sairBTN_CRFActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void descricaoBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRFActionPerformed
         this.setVisible(false);
         new PerfilFuncionario().setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_descricaoBTN_CRFActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void editarBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBTN_CRFActionPerformed
         this.setVisible(false);
         new EditarDadosFuncionario().setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_editarBTN_CRFActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void voltarBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CRFActionPerformed
         this.setVisible(false);
         new InicioGerente().setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_voltarBTN_CRFActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void removerBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerBTN_CRFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_removerBTN_CRFActionPerformed
 
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton addFuncBTN_CRF;
+    private javax.swing.JButton descricaoBTN_CRF;
+    private javax.swing.JButton editarBTN_CRF;
+    private javax.swing.JLabel idLB_CRF;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lavantLB_CRF;
+    private javax.swing.JLabel madeLB_CRF;
+    private javax.swing.JLabel nomeLB_CRF;
+    private javax.swing.JButton removerBTN_CRF;
+    private javax.swing.JButton sairBTN_CRF;
+    private javax.swing.JLabel topicoIdLB_CRF;
+    private javax.swing.JLabel topicoNomeLB_CRF;
+    private javax.swing.JButton voltarBTN_CRF;
     // End of variables declaration//GEN-END:variables
 }

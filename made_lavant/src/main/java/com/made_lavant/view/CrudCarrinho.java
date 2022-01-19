@@ -29,104 +29,104 @@ public class CrudCarrinho extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        nome_Label = new javax.swing.JLabel();
-        nProdutos_Label = new javax.swing.JLabel();
-        total_Label = new javax.swing.JLabel();
-        made_jLabel = new javax.swing.JLabel();
-        venda_btn = new javax.swing.JButton();
-        lavant_label = new javax.swing.JLabel();
-        descricao_btn = new javax.swing.JButton();
-        sair_btn = new javax.swing.JButton();
-        topicoCliente_jLabel = new javax.swing.JLabel();
-        topicNProd_jLabel = new javax.swing.JLabel();
-        topicTotal_jLabel = new javax.swing.JLabel();
-        voltarBTN_CrudCarrinho = new javax.swing.JButton();
+        nomeClienteLB_CRC = new javax.swing.JLabel();
+        codigoCarrinhoLB_CRC = new javax.swing.JLabel();
+        totalLB_CRC = new javax.swing.JLabel();
+        madeLB_CRC = new javax.swing.JLabel();
+        confirmarBTN_CRC = new javax.swing.JButton();
+        lavantLB_CRC = new javax.swing.JLabel();
+        descricaoBTN_CRC = new javax.swing.JButton();
+        sairBTN_CRC = new javax.swing.JButton();
+        topicoNomeClienteLB_CRC = new javax.swing.JLabel();
+        topicoCodigoCarrinhoLB_CRC = new javax.swing.JLabel();
+        topicoTotalLB_CRC = new javax.swing.JLabel();
+        voltarBTN_CRC = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lista de Carrinhos");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        nome_Label.setBackground(new java.awt.Color(255, 255, 255));
-        nome_Label.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        nome_Label.setForeground(new java.awt.Color(255, 253, 130));
-        nome_Label.setText("Nome");
+        nomeClienteLB_CRC.setBackground(new java.awt.Color(255, 255, 255));
+        nomeClienteLB_CRC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        nomeClienteLB_CRC.setForeground(new java.awt.Color(255, 253, 130));
+        nomeClienteLB_CRC.setText("Nome");
 
-        nProdutos_Label.setBackground(new java.awt.Color(255, 255, 255));
-        nProdutos_Label.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        nProdutos_Label.setForeground(new java.awt.Color(255, 253, 130));
-        nProdutos_Label.setText("000");
+        codigoCarrinhoLB_CRC.setBackground(new java.awt.Color(255, 255, 255));
+        codigoCarrinhoLB_CRC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        codigoCarrinhoLB_CRC.setForeground(new java.awt.Color(255, 253, 130));
+        codigoCarrinhoLB_CRC.setText("000");
 
-        total_Label.setBackground(new java.awt.Color(255, 255, 255));
-        total_Label.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        total_Label.setForeground(new java.awt.Color(255, 253, 130));
-        total_Label.setText("00,00");
+        totalLB_CRC.setBackground(new java.awt.Color(255, 255, 255));
+        totalLB_CRC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        totalLB_CRC.setForeground(new java.awt.Color(255, 253, 130));
+        totalLB_CRC.setText("00,00");
 
-        made_jLabel.setBackground(new java.awt.Color(255, 253, 130));
-        made_jLabel.setFont(new java.awt.Font("Colonna MT", 0, 36)); // NOI18N
-        made_jLabel.setForeground(new java.awt.Color(255, 253, 130));
-        made_jLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        made_jLabel.setText("MADE");
-        made_jLabel.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        madeLB_CRC.setBackground(new java.awt.Color(255, 253, 130));
+        madeLB_CRC.setFont(new java.awt.Font("Colonna MT", 0, 36)); // NOI18N
+        madeLB_CRC.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_CRC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        madeLB_CRC.setText("MADE");
+        madeLB_CRC.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        venda_btn.setBackground(new java.awt.Color(255, 253, 130));
-        venda_btn.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        venda_btn.setForeground(new java.awt.Color(232, 72, 85));
-        venda_btn.setText("Confirmar venda");
-        venda_btn.addActionListener(new java.awt.event.ActionListener() {
+        confirmarBTN_CRC.setBackground(new java.awt.Color(255, 253, 130));
+        confirmarBTN_CRC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        confirmarBTN_CRC.setForeground(new java.awt.Color(232, 72, 85));
+        confirmarBTN_CRC.setText("Confirmar venda");
+        confirmarBTN_CRC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                venda_btnActionPerformed(evt);
+                confirmarBTN_CRCActionPerformed(evt);
             }
         });
 
-        lavant_label.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
-        lavant_label.setForeground(new java.awt.Color(232, 72, 85));
-        lavant_label.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lavant_label.setText("Lavant");
+        lavantLB_CRC.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
+        lavantLB_CRC.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_CRC.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lavantLB_CRC.setText("Lavant");
 
-        descricao_btn.setBackground(new java.awt.Color(255, 253, 130));
-        descricao_btn.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        descricao_btn.setForeground(new java.awt.Color(232, 72, 85));
-        descricao_btn.setText("Descrição");
-        descricao_btn.addActionListener(new java.awt.event.ActionListener() {
+        descricaoBTN_CRC.setBackground(new java.awt.Color(255, 253, 130));
+        descricaoBTN_CRC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        descricaoBTN_CRC.setForeground(new java.awt.Color(232, 72, 85));
+        descricaoBTN_CRC.setText("Descrição");
+        descricaoBTN_CRC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                descricao_btnActionPerformed(evt);
+                descricaoBTN_CRCActionPerformed(evt);
             }
         });
 
-        sair_btn.setBackground(new java.awt.Color(255, 253, 130));
-        sair_btn.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        sair_btn.setForeground(new java.awt.Color(232, 72, 85));
-        sair_btn.setText("Sair");
-        sair_btn.addActionListener(new java.awt.event.ActionListener() {
+        sairBTN_CRC.setBackground(new java.awt.Color(255, 253, 130));
+        sairBTN_CRC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_CRC.setForeground(new java.awt.Color(232, 72, 85));
+        sairBTN_CRC.setText("Sair");
+        sairBTN_CRC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sair_btnActionPerformed(evt);
+                sairBTN_CRCActionPerformed(evt);
             }
         });
 
-        topicoCliente_jLabel.setBackground(new java.awt.Color(255, 253, 130));
-        topicoCliente_jLabel.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        topicoCliente_jLabel.setForeground(new java.awt.Color(232, 72, 85));
-        topicoCliente_jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        topicoCliente_jLabel.setText("Cliente");
+        topicoNomeClienteLB_CRC.setBackground(new java.awt.Color(255, 253, 130));
+        topicoNomeClienteLB_CRC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoNomeClienteLB_CRC.setForeground(new java.awt.Color(232, 72, 85));
+        topicoNomeClienteLB_CRC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        topicoNomeClienteLB_CRC.setText("Cliente");
 
-        topicNProd_jLabel.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        topicNProd_jLabel.setForeground(new java.awt.Color(232, 72, 85));
-        topicNProd_jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        topicNProd_jLabel.setText("Código");
+        topicoCodigoCarrinhoLB_CRC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoCodigoCarrinhoLB_CRC.setForeground(new java.awt.Color(232, 72, 85));
+        topicoCodigoCarrinhoLB_CRC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        topicoCodigoCarrinhoLB_CRC.setText("Código");
 
-        topicTotal_jLabel.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        topicTotal_jLabel.setForeground(new java.awt.Color(232, 72, 85));
-        topicTotal_jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        topicTotal_jLabel.setText("Preço Total");
+        topicoTotalLB_CRC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoTotalLB_CRC.setForeground(new java.awt.Color(232, 72, 85));
+        topicoTotalLB_CRC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        topicoTotalLB_CRC.setText("Preço Total");
 
-        voltarBTN_CrudCarrinho.setBackground(new java.awt.Color(255, 253, 130));
-        voltarBTN_CrudCarrinho.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        voltarBTN_CrudCarrinho.setForeground(new java.awt.Color(232, 72, 85));
-        voltarBTN_CrudCarrinho.setText("Voltar");
-        voltarBTN_CrudCarrinho.addActionListener(new java.awt.event.ActionListener() {
+        voltarBTN_CRC.setBackground(new java.awt.Color(255, 253, 130));
+        voltarBTN_CRC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        voltarBTN_CRC.setForeground(new java.awt.Color(232, 72, 85));
+        voltarBTN_CRC.setText("Voltar");
+        voltarBTN_CRC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                voltarBTN_CrudCarrinhoActionPerformed(evt);
+                voltarBTN_CRCActionPerformed(evt);
             }
         });
 
@@ -138,38 +138,38 @@ public class CrudCarrinho extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(sair_btn)
+                        .addComponent(sairBTN_CRC)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(voltarBTN_CrudCarrinho))
+                        .addComponent(voltarBTN_CRC))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(made_jLabel))
+                                .addComponent(madeLB_CRC))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(7, 56, Short.MAX_VALUE)
-                                        .addComponent(nProdutos_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(codigoCarrinhoLB_CRC, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(28, 28, 28))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(27, 27, 27)
-                                        .addComponent(topicNProd_jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(topicoCodigoCarrinhoLB_CRC, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(nome_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(topicoCliente_jLabel))))
+                                    .addComponent(nomeClienteLB_CRC, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(topicoNomeClienteLB_CRC))))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lavant_label)
+                            .addComponent(lavantLB_CRC)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(total_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(totalLB_CRC, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(57, 57, 57)
-                                .addComponent(venda_btn)
+                                .addComponent(confirmarBTN_CRC)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(descricao_btn))
-                            .addComponent(topicTotal_jLabel))))
+                                .addComponent(descricaoBTN_CRC))
+                            .addComponent(topicoTotalLB_CRC))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -177,32 +177,32 @@ public class CrudCarrinho extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(sair_btn)
-                    .addComponent(voltarBTN_CrudCarrinho))
+                    .addComponent(sairBTN_CRC)
+                    .addComponent(voltarBTN_CRC))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(61, 61, 61)
-                        .addComponent(lavant_label))
+                        .addComponent(lavantLB_CRC))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
-                        .addComponent(made_jLabel)))
+                        .addComponent(madeLB_CRC)))
                 .addGap(60, 60, 60)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(topicTotal_jLabel)
+                        .addComponent(topicoTotalLB_CRC)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(total_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(venda_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(descricao_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(totalLB_CRC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(confirmarBTN_CRC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(descricaoBTN_CRC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(topicoCliente_jLabel)
+                        .addComponent(topicoNomeClienteLB_CRC)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(nome_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(nomeClienteLB_CRC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(topicNProd_jLabel)
+                        .addComponent(topicoCodigoCarrinhoLB_CRC)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(nProdutos_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(codigoCarrinhoLB_CRC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(140, Short.MAX_VALUE))
         );
 
@@ -220,42 +220,42 @@ public class CrudCarrinho extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void descricao_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricao_btnActionPerformed
+    private void descricaoBTN_CRCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRCActionPerformed
         this.setVisible(false);
         new DetalheCarrinho().setVisible(true);
-    }//GEN-LAST:event_descricao_btnActionPerformed
+    }//GEN-LAST:event_descricaoBTN_CRCActionPerformed
 
-    private void sair_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sair_btnActionPerformed
+    private void sairBTN_CRCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CRCActionPerformed
         this.setVisible(false);
         new Login().setVisible(true);
-    }//GEN-LAST:event_sair_btnActionPerformed
+    }//GEN-LAST:event_sairBTN_CRCActionPerformed
 
-    private void venda_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_venda_btnActionPerformed
+    private void confirmarBTN_CRCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_CRCActionPerformed
         this.setVisible(false);
         new Confirmacao().setVisible(true);
-    }//GEN-LAST:event_venda_btnActionPerformed
+    }//GEN-LAST:event_confirmarBTN_CRCActionPerformed
 
-    private void voltarBTN_CrudCarrinhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CrudCarrinhoActionPerformed
+    private void voltarBTN_CRCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CRCActionPerformed
         this.setVisible(false);
         new InicioFuncionario().setVisible(true);
-    }//GEN-LAST:event_voltarBTN_CrudCarrinhoActionPerformed
+    }//GEN-LAST:event_voltarBTN_CRCActionPerformed
 
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton descricao_btn;
+    private javax.swing.JLabel codigoCarrinhoLB_CRC;
+    private javax.swing.JButton confirmarBTN_CRC;
+    private javax.swing.JButton descricaoBTN_CRC;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lavant_label;
-    private javax.swing.JLabel made_jLabel;
-    private javax.swing.JLabel nProdutos_Label;
-    private javax.swing.JLabel nome_Label;
-    private javax.swing.JButton sair_btn;
-    private javax.swing.JLabel topicNProd_jLabel;
-    private javax.swing.JLabel topicTotal_jLabel;
-    private javax.swing.JLabel topicoCliente_jLabel;
-    private javax.swing.JLabel total_Label;
-    private javax.swing.JButton venda_btn;
-    private javax.swing.JButton voltarBTN_CrudCarrinho;
+    private javax.swing.JLabel lavantLB_CRC;
+    private javax.swing.JLabel madeLB_CRC;
+    private javax.swing.JLabel nomeClienteLB_CRC;
+    private javax.swing.JButton sairBTN_CRC;
+    private javax.swing.JLabel topicoCodigoCarrinhoLB_CRC;
+    private javax.swing.JLabel topicoNomeClienteLB_CRC;
+    private javax.swing.JLabel topicoTotalLB_CRC;
+    private javax.swing.JLabel totalLB_CRC;
+    private javax.swing.JButton voltarBTN_CRC;
     // End of variables declaration//GEN-END:variables
 }

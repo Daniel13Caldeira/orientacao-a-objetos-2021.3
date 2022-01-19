@@ -28,94 +28,94 @@ public class EditarProduto extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        btn_sairCadastroCliente = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        btn_sairCadastroCliente1 = new javax.swing.JButton();
+        topicoQuantiLB_EDP = new javax.swing.JLabel();
+        sairBTN_EDP = new javax.swing.JButton();
+        topicoPrecoLB_EDP = new javax.swing.JLabel();
+        quantiTF_EDP = new javax.swing.JTextField();
+        confirmarBTN_EDP = new javax.swing.JButton();
+        lavantLB_EDP = new javax.swing.JLabel();
+        precoTF_EDP = new javax.swing.JTextField();
+        titleLB_EDP = new javax.swing.JLabel();
+        madeLB_EDP = new javax.swing.JLabel();
+        topicoNomeLB_EDP = new javax.swing.JLabel();
+        nomeLB_EDP = new javax.swing.JLabel();
+        voltarBTN_EDP = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Editar Produto");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        jLabel4.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel4.setText("Quantidade");
+        topicoQuantiLB_EDP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoQuantiLB_EDP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoQuantiLB_EDP.setText("Quantidade");
 
-        btn_sairCadastroCliente.setBackground(new java.awt.Color(255, 253, 130));
-        btn_sairCadastroCliente.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
-        btn_sairCadastroCliente.setForeground(new java.awt.Color(232, 72, 85));
-        btn_sairCadastroCliente.setText("Sair");
-        btn_sairCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
+        sairBTN_EDP.setBackground(new java.awt.Color(255, 253, 130));
+        sairBTN_EDP.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        sairBTN_EDP.setForeground(new java.awt.Color(232, 72, 85));
+        sairBTN_EDP.setText("Sair");
+        sairBTN_EDP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sairCadastroClienteActionPerformed(evt);
+                sairBTN_EDPActionPerformed(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel3.setText("Preço");
+        topicoPrecoLB_EDP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoPrecoLB_EDP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoPrecoLB_EDP.setText("Preço");
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        quantiTF_EDP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                quantiTF_EDPActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(255, 253, 130));
-        jButton1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(232, 72, 85));
-        jButton1.setText("Confirmar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        confirmarBTN_EDP.setBackground(new java.awt.Color(255, 253, 130));
+        confirmarBTN_EDP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        confirmarBTN_EDP.setForeground(new java.awt.Color(232, 72, 85));
+        confirmarBTN_EDP.setText("Confirmar");
+        confirmarBTN_EDP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                confirmarBTN_EDPActionPerformed(evt);
             }
         });
 
-        jLabel11.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel11.setText("Lavant");
+        lavantLB_EDP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        lavantLB_EDP.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_EDP.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lavantLB_EDP.setText("Lavant");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        precoTF_EDP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                precoTF_EDPActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel1.setText("Editar Produto");
-        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        titleLB_EDP.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
+        titleLB_EDP.setForeground(new java.awt.Color(232, 72, 85));
+        titleLB_EDP.setText("Editar Produto");
+        titleLB_EDP.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        titleLB_EDP.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel10.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel10.setText("MADE");
+        madeLB_EDP.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
+        madeLB_EDP.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_EDP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        madeLB_EDP.setText("MADE");
 
-        jLabel2.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel2.setText("Nome");
+        topicoNomeLB_EDP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoNomeLB_EDP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoNomeLB_EDP.setText("Nome");
 
-        jLabel5.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel5.setText("jLabel5");
+        nomeLB_EDP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        nomeLB_EDP.setText("jLabel5");
 
-        btn_sairCadastroCliente1.setBackground(new java.awt.Color(255, 253, 130));
-        btn_sairCadastroCliente1.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
-        btn_sairCadastroCliente1.setForeground(new java.awt.Color(232, 72, 85));
-        btn_sairCadastroCliente1.setText("Voltar");
-        btn_sairCadastroCliente1.addActionListener(new java.awt.event.ActionListener() {
+        voltarBTN_EDP.setBackground(new java.awt.Color(255, 253, 130));
+        voltarBTN_EDP.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        voltarBTN_EDP.setForeground(new java.awt.Color(232, 72, 85));
+        voltarBTN_EDP.setText("Voltar");
+        voltarBTN_EDP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sairCadastroCliente1ActionPerformed(evt);
+                voltarBTN_EDPActionPerformed(evt);
             }
         });
 
@@ -125,31 +125,31 @@ public class EditarProduto extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_sairCadastroCliente)
+                .addComponent(sairBTN_EDP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_sairCadastroCliente1)
+                .addComponent(voltarBTN_EDP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lavantLB_EDP, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(madeLB_EDP, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(193, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
+                    .addComponent(titleLB_EDP)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(topicoQuantiLB_EDP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(topicoPrecoLB_EDP, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(30, 30, 30)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jButton1)
+                            .addComponent(precoTF_EDP)
+                            .addComponent(quantiTF_EDP, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(confirmarBTN_EDP)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
+                        .addComponent(topicoNomeLB_EDP)
                         .addGap(39, 39, 39)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(nomeLB_EDP, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(193, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -157,28 +157,28 @@ public class EditarProduto extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
+                    .addComponent(madeLB_EDP)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btn_sairCadastroCliente)
-                        .addComponent(btn_sairCadastroCliente1)))
+                        .addComponent(sairBTN_EDP)
+                        .addComponent(voltarBTN_EDP)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel11)
+                .addComponent(lavantLB_EDP)
                 .addGap(7, 7, 7)
-                .addComponent(jLabel1)
+                .addComponent(titleLB_EDP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoNomeLB_EDP)
+                    .addComponent(nomeLB_EDP, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoPrecoLB_EDP)
+                    .addComponent(precoTF_EDP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoQuantiLB_EDP)
+                    .addComponent(quantiTF_EDP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(62, 62, 62)
-                .addComponent(jButton1)
+                .addComponent(confirmarBTN_EDP)
                 .addGap(59, 59, 59))
         );
 
@@ -196,44 +196,44 @@ public class EditarProduto extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_sairCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroClienteActionPerformed
+    private void sairBTN_EDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_EDPActionPerformed
         this.setVisible(false);
         new Login().setVisible(true);
-    }//GEN-LAST:event_btn_sairCadastroClienteActionPerformed
+    }//GEN-LAST:event_sairBTN_EDPActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void quantiTF_EDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantiTF_EDPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_quantiTF_EDPActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void confirmarBTN_EDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_EDPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_confirmarBTN_EDPActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void precoTF_EDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_precoTF_EDPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_precoTF_EDPActionPerformed
 
-    private void btn_sairCadastroCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroCliente1ActionPerformed
+    private void voltarBTN_EDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_EDPActionPerformed
        this.setVisible(false);
        new DetalheProduto_Func().setVisible(true);
-    }//GEN-LAST:event_btn_sairCadastroCliente1ActionPerformed
+    }//GEN-LAST:event_voltarBTN_EDPActionPerformed
 
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_sairCadastroCliente;
-    private javax.swing.JButton btn_sairCadastroCliente1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JButton confirmarBTN_EDP;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel lavantLB_EDP;
+    private javax.swing.JLabel madeLB_EDP;
+    private javax.swing.JLabel nomeLB_EDP;
+    private javax.swing.JTextField precoTF_EDP;
+    private javax.swing.JTextField quantiTF_EDP;
+    private javax.swing.JButton sairBTN_EDP;
+    private javax.swing.JLabel titleLB_EDP;
+    private javax.swing.JLabel topicoNomeLB_EDP;
+    private javax.swing.JLabel topicoPrecoLB_EDP;
+    private javax.swing.JLabel topicoQuantiLB_EDP;
+    private javax.swing.JButton voltarBTN_EDP;
     // End of variables declaration//GEN-END:variables
 }

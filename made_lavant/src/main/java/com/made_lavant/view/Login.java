@@ -38,67 +38,67 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        user_Login = new javax.swing.JTextField();
-        senha_Login = new javax.swing.JPasswordField();
-        jButton3 = new javax.swing.JButton();
-        naoCadastrado_Login = new javax.swing.JLabel();
-        naoCadastrado_Login.setVisible(false);
+        confirmarBTN_LO = new javax.swing.JButton();
+        topicoLoginLB_LO = new javax.swing.JLabel();
+        madeLB_LO = new javax.swing.JLabel();
+        lavantLB_LO = new javax.swing.JLabel();
+        topicoSenhaLB_LO = new javax.swing.JLabel();
+        loginTF_LO = new javax.swing.JTextField();
+        senhaPF_LO = new javax.swing.JPasswordField();
+        cadastrarBTN_LO = new javax.swing.JButton();
+        utilityLB_LO = new javax.swing.JLabel();
+        utilityLB_LO.setVisible(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        jButton4.setBackground(new java.awt.Color(255, 253, 130));
-        jButton4.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(232, 72, 85));
-        jButton4.setText("Confirmar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        confirmarBTN_LO.setBackground(new java.awt.Color(255, 253, 130));
+        confirmarBTN_LO.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        confirmarBTN_LO.setForeground(new java.awt.Color(232, 72, 85));
+        confirmarBTN_LO.setText("Confirmar");
+        confirmarBTN_LO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                confirmarBTN_LOActionPerformed(evt);
             }
         });
 
-        jLabel7.setBackground(new java.awt.Color(232, 72, 85));
-        jLabel7.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel7.setText("Login");
+        topicoLoginLB_LO.setBackground(new java.awt.Color(232, 72, 85));
+        topicoLoginLB_LO.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
+        topicoLoginLB_LO.setForeground(new java.awt.Color(232, 72, 85));
+        topicoLoginLB_LO.setText("Login");
 
-        jLabel6.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel6.setFont(new java.awt.Font("Colonna MT", 0, 65)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel6.setText("MADE");
+        madeLB_LO.setBackground(new java.awt.Color(255, 253, 130));
+        madeLB_LO.setFont(new java.awt.Font("Colonna MT", 0, 65)); // NOI18N
+        madeLB_LO.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_LO.setText("MADE");
 
-        jLabel9.setBackground(new java.awt.Color(232, 72, 85));
-        jLabel9.setFont(new java.awt.Font("Colonna MT", 1, 65)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel9.setText("Lavant");
+        lavantLB_LO.setBackground(new java.awt.Color(232, 72, 85));
+        lavantLB_LO.setFont(new java.awt.Font("Colonna MT", 1, 65)); // NOI18N
+        lavantLB_LO.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_LO.setText("Lavant");
 
-        jLabel8.setBackground(new java.awt.Color(232, 72, 85));
-        jLabel8.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel8.setText("Senha");
+        topicoSenhaLB_LO.setBackground(new java.awt.Color(232, 72, 85));
+        topicoSenhaLB_LO.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
+        topicoSenhaLB_LO.setForeground(new java.awt.Color(232, 72, 85));
+        topicoSenhaLB_LO.setText("Senha");
 
-        jButton3.setBackground(new java.awt.Color(255, 253, 130));
-        jButton3.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(232, 72, 85));
-        jButton3.setText("Cadastrar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        cadastrarBTN_LO.setBackground(new java.awt.Color(255, 253, 130));
+        cadastrarBTN_LO.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
+        cadastrarBTN_LO.setForeground(new java.awt.Color(232, 72, 85));
+        cadastrarBTN_LO.setText("Cadastrar");
+        cadastrarBTN_LO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                cadastrarBTN_LOActionPerformed(evt);
             }
         });
 
-        naoCadastrado_Login.setBackground(new java.awt.Color(232, 72, 85));
-        naoCadastrado_Login.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        naoCadastrado_Login.setForeground(new java.awt.Color(232, 72, 85));
-        naoCadastrado_Login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        naoCadastrado_Login.setText("Usuário Não Cadastrado");
+        utilityLB_LO.setBackground(new java.awt.Color(232, 72, 85));
+        utilityLB_LO.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        utilityLB_LO.setForeground(new java.awt.Color(232, 72, 85));
+        utilityLB_LO.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        utilityLB_LO.setText("Usuário Não Cadastrado");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -108,24 +108,24 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(171, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(cadastrarBTN_LO)
                         .addGap(164, 164, 164))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel7))
+                                    .addComponent(topicoSenhaLB_LO)
+                                    .addComponent(topicoLoginLB_LO))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(senha_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(user_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(senhaPF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(loginTF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(madeLB_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel9))
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(naoCadastrado_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lavantLB_LO))
+                            .addComponent(confirmarBTN_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(utilityLB_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(181, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -134,24 +134,24 @@ public class Login extends javax.swing.JFrame {
                 .addGap(81, 81, 81)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
+                        .addComponent(madeLB_LO)
                         .addGap(151, 151, 151))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
+                        .addComponent(lavantLB_LO)
                         .addGap(82, 82, 82)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(user_Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
+                    .addComponent(loginTF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topicoLoginLB_LO))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(senha_Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoSenhaLB_LO)
+                    .addComponent(senhaPF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(naoCadastrado_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(utilityLB_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
-                .addComponent(jButton4)
+                .addComponent(confirmarBTN_LO)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(cadastrarBTN_LO)
                 .addContainerGap())
         );
 
@@ -169,74 +169,74 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void confirmarBTN_LOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_LOActionPerformed
         boolean flag = true;
-        if (user_Login.getText().equals("") || user_Login.getText().equals("Campo Obrigatório!")) {
-            user_Login.setText("Campo Obrigatório!");
+        if (loginTF_LO.getText().equals("") || loginTF_LO.getText().equals("Campo Obrigatório!")) {
+            loginTF_LO.setText("Campo Obrigatório!");
             flag = false;
         }
-        if (senha_Login.getText().equals("") || senha_Login.getText().equals("Campo Obrigatório!")) {
-            naoCadastrado_Login.setText("Campo De Senha Obrigatório!");
-            naoCadastrado_Login.setVisible(true);
+        if (senhaPF_LO.getText().equals("") || senhaPF_LO.getText().equals("Campo Obrigatório!")) {
+            utilityLB_LO.setText("Campo De Senha Obrigatório!");
+            utilityLB_LO.setVisible(true);
             flag = false;
         }
         if (flag) {
-            if (user_Login.getText().charAt(0) == 'A' || user_Login.getText().charAt(0) == 'B') {
+            if (loginTF_LO.getText().charAt(0) == 'A' || loginTF_LO.getText().charAt(0) == 'B') {
                 FuncionarioDados func = new FuncionarioDados();
-                String cod = func.buscarCodigo(user_Login.getText());
+                String cod = func.buscarCodigo(loginTF_LO.getText());
                 if (cod == null) {
-                    naoCadastrado_Login.setText("Usuário Não Cadastrado!");
-                    naoCadastrado_Login.setVisible(true);
+                    utilityLB_LO.setText("Usuário Não Cadastrado!");
+                    utilityLB_LO.setVisible(true);
                     flag = false;
                 } else {
-                    naoCadastrado_Login.setVisible(false);
+                    utilityLB_LO.setVisible(false);
                     String senha = func.buscarSenha(cod);
-                    if (senha.equals(senha_Login.getText())) {
-                        Login.codigo = user_Login.getText();
+                    if (senha.equals(senhaPF_LO.getText())) {
+                        Login.codigo = loginTF_LO.getText();
                         this.setVisible(false);
-                        if (user_Login.getText().charAt(0) == 'A') {
+                        if (loginTF_LO.getText().charAt(0) == 'A') {
                             new InicioGerente().setVisible(true);
                         } else {
                             new InicioFuncionario().setVisible(true);
                         }
                     } else {
-                        naoCadastrado_Login.setText("Senha Incorreta!");
-                        naoCadastrado_Login.setVisible(true);
+                        utilityLB_LO.setText("Senha Incorreta!");
+                        utilityLB_LO.setVisible(true);
                     }
                 }
             } else {
-                if (user_Login.getText().charAt(0) >= '0' && user_Login.getText().charAt(0) <= '9') {
+                if (loginTF_LO.getText().charAt(0) >= '0' && loginTF_LO.getText().charAt(0) <= '9') {
                     ClienteDados cliente = new ClienteDados();
-                    String cod = cliente.buscarCPF(user_Login.getText());
+                    String cod = cliente.buscarCPF(loginTF_LO.getText());
                     if (cod == null) {
-                        naoCadastrado_Login.setText("Usuário Não Cadastrado!");
-                        naoCadastrado_Login.setVisible(true);
+                        utilityLB_LO.setText("Usuário Não Cadastrado!");
+                        utilityLB_LO.setVisible(true);
                         flag = false;
                     } else {
-                        naoCadastrado_Login.setVisible(false);
+                        utilityLB_LO.setVisible(false);
                         String senha = cliente.buscarSenha(cod);
-                        if (senha.equals(senha_Login.getText())) {
-                            Login.codigo = user_Login.getText();
+                        if (senha.equals(senhaPF_LO.getText())) {
+                            Login.codigo = loginTF_LO.getText();
                             this.setVisible(false);
                             new InicioCliente().setVisible(true);
                         } else {
-                            naoCadastrado_Login.setText("Senha Incorreta!");
-                            naoCadastrado_Login.setVisible(true);
+                            utilityLB_LO.setText("Senha Incorreta!");
+                            utilityLB_LO.setVisible(true);
                         }
                     }
                 } else {
-                    naoCadastrado_Login.setText("Usuário Não Cadastrado!");
-                    naoCadastrado_Login.setVisible(true);
+                    utilityLB_LO.setText("Usuário Não Cadastrado!");
+                    utilityLB_LO.setVisible(true);
                     flag = false;
                 }
             }
         }
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_confirmarBTN_LOActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void cadastrarBTN_LOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarBTN_LOActionPerformed
         this.setVisible(false);
         new CadastroCliente().setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_cadastrarBTN_LOActionPerformed
 
     /**
      * @param args the command line arguments
@@ -278,16 +278,16 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton cadastrarBTN_LO;
+    private javax.swing.JButton confirmarBTN_LO;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel naoCadastrado_Login;
-    private javax.swing.JPasswordField senha_Login;
-    private javax.swing.JTextField user_Login;
+    private javax.swing.JLabel lavantLB_LO;
+    private javax.swing.JTextField loginTF_LO;
+    private javax.swing.JLabel madeLB_LO;
+    private javax.swing.JPasswordField senhaPF_LO;
+    private javax.swing.JLabel topicoLoginLB_LO;
+    private javax.swing.JLabel topicoSenhaLB_LO;
+    private javax.swing.JLabel utilityLB_LO;
     // End of variables declaration//GEN-END:variables
 
     private static boolean vazio() {

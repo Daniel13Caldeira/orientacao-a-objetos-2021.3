@@ -45,38 +45,38 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btn_sairCadastroProdutoFunc" min="-2" max="-2" attributes="0"/>
+                  <Component id="sairBTN_CP" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jLabel10" min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="madeLB_CP" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jLabel11" min="-2" pref="90" max="-2" attributes="0"/>
+                  <Component id="lavantLB_CP" min="-2" pref="90" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace pref="130" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoQuantiLB_CP" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoNomeLB_CP" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoPrecoLB_CP" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoValLB_CP" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="dataInvalida_cadastroProduto" min="-2" pref="220" max="-2" attributes="0"/>
+                          <Component id="utilityLB_CP" min="-2" pref="220" max="-2" attributes="0"/>
                           <EmptySpace pref="46" max="32767" attributes="0"/>
-                          <Component id="BTNConfirmar_CadastroProdutoFunc" min="-2" max="-2" attributes="0"/>
+                          <Component id="confirmarBTN_CP" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="titleLB_CP" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="nome_CadastroProdutoFunc" pref="381" max="32767" attributes="0"/>
-                              <Component id="quantidade_CadastroProdutoFunc" alignment="0" max="32767" attributes="0"/>
-                              <Component id="preco_CadastroProdutoFunc" alignment="0" max="32767" attributes="0"/>
-                              <Component id="validade_CadastroProdutoFunc" alignment="0" max="32767" attributes="0"/>
+                              <Component id="nomeTF_CP" pref="381" max="32767" attributes="0"/>
+                              <Component id="quantidadeTF_CP" alignment="0" max="32767" attributes="0"/>
+                              <Component id="precoTF_CP" alignment="0" max="32767" attributes="0"/>
+                              <Component id="validadeTF_CP" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -84,7 +84,7 @@
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btn_sairCadastroCliente" min="-2" max="-2" attributes="0"/>
+                  <Component id="voltarBTN_CP" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -94,46 +94,46 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn_sairCadastroProdutoFunc" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="madeLB_CP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="sairBTN_CP" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                  <Component id="lavantLB_CP" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="titleLB_CP" min="-2" pref="23" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nome_CadastroProdutoFunc" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoNomeLB_CP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="nomeTF_CP" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="quantidade_CadastroProdutoFunc" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoQuantiLB_CP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="quantidadeTF_CP" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="preco_CadastroProdutoFunc" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoPrecoLB_CP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="precoTF_CP" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="validade_CadastroProdutoFunc" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoValLB_CP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="validadeTF_CP" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                  <Component id="dataInvalida_cadastroProduto" max="32767" attributes="0"/>
+                  <Component id="utilityLB_CP" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="BTNConfirmar_CadastroProdutoFunc" min="-2" max="-2" attributes="0"/>
+                  <Component id="confirmarBTN_CP" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
-                  <Component id="btn_sairCadastroCliente" min="-2" max="-2" attributes="0"/>
+                  <Component id="voltarBTN_CP" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="madeLB_CP">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="24" style="0"/>
@@ -144,7 +144,7 @@
             <Property name="text" type="java.lang.String" value="MADE"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="topicoQuantiLB_CP">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
@@ -155,7 +155,7 @@
             <Property name="text" type="java.lang.String" value="Quantidade"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel11">
+        <Component class="javax.swing.JLabel" name="lavantLB_CP">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="24" style="1"/>
@@ -167,7 +167,7 @@
             <Property name="text" type="java.lang.String" value="Lavant"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="topicoValLB_CP">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
@@ -178,7 +178,7 @@
             <Property name="text" type="java.lang.String" value="Validade"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_sairCadastroCliente">
+        <Component class="javax.swing.JButton" name="voltarBTN_CP">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -192,10 +192,10 @@
             <Property name="text" type="java.lang.String" value="Voltar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_sairCadastroClienteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="voltarBTN_CPActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="titleLB_CP">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="36" style="1"/>
@@ -207,7 +207,7 @@
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="topicoNomeLB_CP">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
@@ -218,7 +218,7 @@
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="topicoPrecoLB_CP">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
@@ -229,33 +229,33 @@
             <Property name="text" type="java.lang.String" value="Pre&#xe7;o"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="quantidade_CadastroProdutoFunc">
+        <Component class="javax.swing.JTextField" name="quantidadeTF_CP">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quantidade_CadastroProdutoFuncActionPerformed"/>
-            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="quantidade_CadastroProdutoFuncKeyReleased"/>
-            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="quantidade_CadastroProdutoFuncKeyTyped"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quantidadeTF_CPActionPerformed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="quantidadeTF_CPKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="quantidadeTF_CPKeyTyped"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="nome_CadastroProdutoFunc">
+        <Component class="javax.swing.JTextField" name="nomeTF_CP">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nome_CadastroProdutoFuncActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeTF_CPActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="validade_CadastroProdutoFunc">
+        <Component class="javax.swing.JTextField" name="validadeTF_CP">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="validade_CadastroProdutoFuncActionPerformed"/>
-            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="validade_CadastroProdutoFuncKeyReleased"/>
-            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="validade_CadastroProdutoFuncKeyTyped"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="validadeTF_CPActionPerformed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="validadeTF_CPKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="validadeTF_CPKeyTyped"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="preco_CadastroProdutoFunc">
+        <Component class="javax.swing.JTextField" name="precoTF_CP">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="preco_CadastroProdutoFuncActionPerformed"/>
-            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="preco_CadastroProdutoFuncKeyReleased"/>
-            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="preco_CadastroProdutoFuncKeyTyped"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="precoTF_CPActionPerformed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="precoTF_CPKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="precoTF_CPKeyTyped"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="BTNConfirmar_CadastroProdutoFunc">
+        <Component class="javax.swing.JButton" name="confirmarBTN_CP">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -269,10 +269,10 @@
             <Property name="text" type="java.lang.String" value="Confirmar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTNConfirmar_CadastroProdutoFuncActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="confirmarBTN_CPActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_sairCadastroProdutoFunc">
+        <Component class="javax.swing.JButton" name="sairBTN_CP">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -286,15 +286,15 @@
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_sairCadastroProdutoFuncActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sairBTN_CPActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="dataInvalida_cadastroProduto">
+        <Component class="javax.swing.JLabel" name="utilityLB_CP">
           <Properties>
             <Property name="text" type="java.lang.String" value="Data inv&#xe1;lida"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="dataInvalida_cadastroProduto.setVisible(false);&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="utilityLB_CP.setVisible(false);&#xd;&#xa;"/>
           </AuxValues>
         </Component>
       </SubComponents>

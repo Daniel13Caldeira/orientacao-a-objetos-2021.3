@@ -28,66 +28,66 @@ public class InicioGerente extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        produtoGerente_btn1 = new javax.swing.JButton();
-        carrinhoGerente_btn1 = new javax.swing.JButton();
-        made_label = new javax.swing.JLabel();
-        lavant_btn = new javax.swing.JLabel();
-        Sair_btn = new javax.swing.JButton();
-        funcionariosGerente_btn = new javax.swing.JButton();
+        produtoBTN_IG = new javax.swing.JButton();
+        carrinhoBTN_IG = new javax.swing.JButton();
+        madeLB_IG = new javax.swing.JLabel();
+        lavantLB_IG = new javax.swing.JLabel();
+        sairBTN_IG = new javax.swing.JButton();
+        funcionariosBTN_IG = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela de Início - Gerente");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        produtoGerente_btn1.setBackground(new java.awt.Color(255, 253, 130));
-        produtoGerente_btn1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        produtoGerente_btn1.setForeground(new java.awt.Color(232, 72, 85));
-        produtoGerente_btn1.setText("Produtos");
-        produtoGerente_btn1.addActionListener(new java.awt.event.ActionListener() {
+        produtoBTN_IG.setBackground(new java.awt.Color(255, 253, 130));
+        produtoBTN_IG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        produtoBTN_IG.setForeground(new java.awt.Color(232, 72, 85));
+        produtoBTN_IG.setText("Produtos");
+        produtoBTN_IG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                produtoGerente_btn1ActionPerformed(evt);
+                produtoBTN_IGActionPerformed(evt);
             }
         });
 
-        carrinhoGerente_btn1.setBackground(new java.awt.Color(255, 253, 130));
-        carrinhoGerente_btn1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        carrinhoGerente_btn1.setForeground(new java.awt.Color(232, 72, 85));
-        carrinhoGerente_btn1.setText("Carrinho");
-        carrinhoGerente_btn1.addActionListener(new java.awt.event.ActionListener() {
+        carrinhoBTN_IG.setBackground(new java.awt.Color(255, 253, 130));
+        carrinhoBTN_IG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        carrinhoBTN_IG.setForeground(new java.awt.Color(232, 72, 85));
+        carrinhoBTN_IG.setText("Carrinho");
+        carrinhoBTN_IG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                carrinhoGerente_btn1ActionPerformed(evt);
+                carrinhoBTN_IGActionPerformed(evt);
             }
         });
 
-        made_label.setBackground(new java.awt.Color(84, 83, 83));
-        made_label.setFont(new java.awt.Font("Colonna MT", 0, 65)); // NOI18N
-        made_label.setForeground(new java.awt.Color(255, 253, 130));
-        made_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        made_label.setText("MADE");
+        madeLB_IG.setBackground(new java.awt.Color(84, 83, 83));
+        madeLB_IG.setFont(new java.awt.Font("Colonna MT", 0, 65)); // NOI18N
+        madeLB_IG.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_IG.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        madeLB_IG.setText("MADE");
 
-        lavant_btn.setFont(new java.awt.Font("Colonna MT", 1, 65)); // NOI18N
-        lavant_btn.setForeground(new java.awt.Color(232, 72, 85));
-        lavant_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lavant_btn.setText("Lavant");
+        lavantLB_IG.setFont(new java.awt.Font("Colonna MT", 1, 65)); // NOI18N
+        lavantLB_IG.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_IG.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lavantLB_IG.setText("Lavant");
 
-        Sair_btn.setBackground(new java.awt.Color(255, 253, 130));
-        Sair_btn.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        Sair_btn.setForeground(new java.awt.Color(232, 72, 85));
-        Sair_btn.setText("Sair");
-        Sair_btn.addActionListener(new java.awt.event.ActionListener() {
+        sairBTN_IG.setBackground(new java.awt.Color(255, 253, 130));
+        sairBTN_IG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_IG.setForeground(new java.awt.Color(232, 72, 85));
+        sairBTN_IG.setText("Sair");
+        sairBTN_IG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Sair_btnActionPerformed(evt);
+                sairBTN_IGActionPerformed(evt);
             }
         });
 
-        funcionariosGerente_btn.setBackground(new java.awt.Color(255, 253, 130));
-        funcionariosGerente_btn.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        funcionariosGerente_btn.setForeground(new java.awt.Color(232, 72, 85));
-        funcionariosGerente_btn.setText("Funcionários");
-        funcionariosGerente_btn.addActionListener(new java.awt.event.ActionListener() {
+        funcionariosBTN_IG.setBackground(new java.awt.Color(255, 253, 130));
+        funcionariosBTN_IG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        funcionariosBTN_IG.setForeground(new java.awt.Color(232, 72, 85));
+        funcionariosBTN_IG.setText("Funcionários");
+        funcionariosBTN_IG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                funcionariosGerente_btnActionPerformed(evt);
+                funcionariosBTN_IGActionPerformed(evt);
             }
         });
 
@@ -99,36 +99,36 @@ public class InicioGerente extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(Sair_btn))
+                        .addComponent(sairBTN_IG))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(250, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lavant_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(made_label, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(lavantLB_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(madeLB_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(251, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(funcionariosGerente_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(carrinhoGerente_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(produtoGerente_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(funcionariosBTN_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(carrinhoBTN_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(produtoBTN_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(9, 9, 9)
-                .addComponent(Sair_btn)
+                .addComponent(sairBTN_IG)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addComponent(made_label, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(madeLB_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lavant_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lavantLB_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(produtoGerente_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(produtoBTN_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(carrinhoGerente_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(carrinhoBTN_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(funcionariosGerente_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(funcionariosBTN_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
@@ -146,40 +146,40 @@ public class InicioGerente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void produtoGerente_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoGerente_btn1ActionPerformed
+    private void produtoBTN_IGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoBTN_IGActionPerformed
         //vai para o crud de produtos
         this.setVisible(false);
         new CrudProdutos().setVisible(true);
-    }//GEN-LAST:event_produtoGerente_btn1ActionPerformed
+    }//GEN-LAST:event_produtoBTN_IGActionPerformed
 
-    private void carrinhoGerente_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhoGerente_btn1ActionPerformed
+    private void carrinhoBTN_IGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhoBTN_IGActionPerformed
         //vai para o crud de carrinhos
         this.setVisible(false);
         new CrudCarrinho().setVisible(true);
-    }//GEN-LAST:event_carrinhoGerente_btn1ActionPerformed
+    }//GEN-LAST:event_carrinhoBTN_IGActionPerformed
 
-    private void Sair_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sair_btnActionPerformed
+    private void sairBTN_IGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_IGActionPerformed
         //vai para a tela de login
         this.setVisible(false);
         new Login().setVisible(true);
-    }//GEN-LAST:event_Sair_btnActionPerformed
+    }//GEN-LAST:event_sairBTN_IGActionPerformed
 
-    private void funcionariosGerente_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_funcionariosGerente_btnActionPerformed
+    private void funcionariosBTN_IGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_funcionariosBTN_IGActionPerformed
         //vai para o crud de funcionários
         this.setVisible(false);
         new CrudFuncionarios().setVisible(true);
-    }//GEN-LAST:event_funcionariosGerente_btnActionPerformed
+    }//GEN-LAST:event_funcionariosBTN_IGActionPerformed
 
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Sair_btn;
-    private javax.swing.JButton carrinhoGerente_btn1;
-    private javax.swing.JButton funcionariosGerente_btn;
+    private javax.swing.JButton carrinhoBTN_IG;
+    private javax.swing.JButton funcionariosBTN_IG;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lavant_btn;
-    private javax.swing.JLabel made_label;
-    private javax.swing.JButton produtoGerente_btn1;
+    private javax.swing.JLabel lavantLB_IG;
+    private javax.swing.JLabel madeLB_IG;
+    private javax.swing.JButton produtoBTN_IG;
+    private javax.swing.JButton sairBTN_IG;
     // End of variables declaration//GEN-END:variables
 }

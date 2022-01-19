@@ -28,139 +28,139 @@ public  class Confirmacao extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        madeLB_CON = new javax.swing.JLabel();
+        lavantLB_CON = new javax.swing.JLabel();
+        sairBTN_CON = new javax.swing.JButton();
+        topicoNomeProdLB_CON = new javax.swing.JLabel();
+        topicoCodLB_CON = new javax.swing.JLabel();
+        topicoPrecoLB_CON = new javax.swing.JLabel();
+        nomeProdLB_CON = new javax.swing.JLabel();
+        codigoLB_CON = new javax.swing.JLabel();
+        precoLB_CON = new javax.swing.JLabel();
+        topicoTotalLB_CON = new javax.swing.JLabel();
+        totalLB_CON = new javax.swing.JLabel();
+        topicoNomeClienteLB_CON = new javax.swing.JLabel();
+        nomeClienteLB_CON = new javax.swing.JLabel();
+        topicoNumCarrinhoLB_CON = new javax.swing.JLabel();
+        numCarrinhoLB_CON = new javax.swing.JLabel();
+        topicoQuantidadeLB_CON = new javax.swing.JLabel();
+        quantidadeLB_CON = new javax.swing.JLabel();
+        confirmarBTN_CON = new javax.swing.JButton();
+        alterarCarrinhoBTN_CON = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Confirmacao de Venda");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        jLabel3.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel3.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel3.setText("MADE");
-        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        madeLB_CON.setBackground(new java.awt.Color(255, 253, 130));
+        madeLB_CON.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        madeLB_CON.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_CON.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        madeLB_CON.setText("MADE");
+        madeLB_CON.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel4.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText("Lavant");
+        lavantLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        lavantLB_CON.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_CON.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lavantLB_CON.setText("Lavant");
 
-        jButton2.setBackground(new java.awt.Color(255, 253, 130));
-        jButton2.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(232, 72, 85));
-        jButton2.setText("Sair");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        sairBTN_CON.setBackground(new java.awt.Color(255, 253, 130));
+        sairBTN_CON.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_CON.setForeground(new java.awt.Color(232, 72, 85));
+        sairBTN_CON.setText("Sair");
+        sairBTN_CON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                sairBTN_CONActionPerformed(evt);
             }
         });
 
-        jLabel5.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel5.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel5.setText("Nome");
+        topicoNomeProdLB_CON.setBackground(new java.awt.Color(255, 253, 130));
+        topicoNomeProdLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoNomeProdLB_CON.setForeground(new java.awt.Color(232, 72, 85));
+        topicoNomeProdLB_CON.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoNomeProdLB_CON.setText("Nome");
 
-        jLabel6.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel6.setText("Código");
+        topicoCodLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoCodLB_CON.setForeground(new java.awt.Color(232, 72, 85));
+        topicoCodLB_CON.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoCodLB_CON.setText("Código");
 
-        jLabel7.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel7.setText("Preço");
+        topicoPrecoLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoPrecoLB_CON.setForeground(new java.awt.Color(232, 72, 85));
+        topicoPrecoLB_CON.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoPrecoLB_CON.setText("Preço");
 
-        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel8.setText("Nome");
+        nomeProdLB_CON.setBackground(new java.awt.Color(255, 255, 255));
+        nomeProdLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        nomeProdLB_CON.setForeground(new java.awt.Color(255, 253, 130));
+        nomeProdLB_CON.setText("Nome");
 
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel9.setText("000");
+        codigoLB_CON.setBackground(new java.awt.Color(255, 255, 255));
+        codigoLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        codigoLB_CON.setForeground(new java.awt.Color(255, 253, 130));
+        codigoLB_CON.setText("000");
 
-        jLabel12.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel12.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel12.setText("00,00");
+        precoLB_CON.setBackground(new java.awt.Color(255, 255, 255));
+        precoLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        precoLB_CON.setForeground(new java.awt.Color(255, 253, 130));
+        precoLB_CON.setText("00,00");
 
-        jLabel10.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel10.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("Total");
+        topicoTotalLB_CON.setBackground(new java.awt.Color(255, 253, 130));
+        topicoTotalLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoTotalLB_CON.setForeground(new java.awt.Color(232, 72, 85));
+        topicoTotalLB_CON.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        topicoTotalLB_CON.setText("Total");
 
-        jLabel11.setFont(new java.awt.Font("Colonna MT", 1, 11)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel11.setText("0000,00");
+        totalLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 11)); // NOI18N
+        totalLB_CON.setForeground(new java.awt.Color(255, 253, 130));
+        totalLB_CON.setText("0000,00");
 
-        jLabel13.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel13.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel13.setText("Nome Do Cliente");
+        topicoNomeClienteLB_CON.setBackground(new java.awt.Color(255, 253, 130));
+        topicoNomeClienteLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        topicoNomeClienteLB_CON.setForeground(new java.awt.Color(232, 72, 85));
+        topicoNomeClienteLB_CON.setText("Nome Do Cliente");
 
-        jLabel14.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel14.setFont(new java.awt.Font("Colonna MT", 1, 11)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel14.setText("Nome");
+        nomeClienteLB_CON.setBackground(new java.awt.Color(255, 253, 130));
+        nomeClienteLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 11)); // NOI18N
+        nomeClienteLB_CON.setForeground(new java.awt.Color(255, 253, 130));
+        nomeClienteLB_CON.setText("Nome");
 
-        jLabel15.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel15.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel15.setText("Nº Do Carrinho");
+        topicoNumCarrinhoLB_CON.setBackground(new java.awt.Color(255, 253, 130));
+        topicoNumCarrinhoLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        topicoNumCarrinhoLB_CON.setForeground(new java.awt.Color(232, 72, 85));
+        topicoNumCarrinhoLB_CON.setText("Nº Do Carrinho");
 
-        jLabel16.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel16.setFont(new java.awt.Font("Colonna MT", 1, 11)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel16.setText("000");
+        numCarrinhoLB_CON.setBackground(new java.awt.Color(255, 253, 130));
+        numCarrinhoLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 11)); // NOI18N
+        numCarrinhoLB_CON.setForeground(new java.awt.Color(255, 253, 130));
+        numCarrinhoLB_CON.setText("000");
 
-        jLabel17.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel17.setText("Quantidade");
+        topicoQuantidadeLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoQuantidadeLB_CON.setForeground(new java.awt.Color(232, 72, 85));
+        topicoQuantidadeLB_CON.setText("Quantidade");
 
-        jLabel18.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel18.setText("00");
+        quantidadeLB_CON.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        quantidadeLB_CON.setForeground(new java.awt.Color(255, 253, 130));
+        quantidadeLB_CON.setText("00");
 
-        jButton3.setBackground(new java.awt.Color(255, 253, 130));
-        jButton3.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(232, 72, 85));
-        jButton3.setText("Confirmar Carrinho");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        confirmarBTN_CON.setBackground(new java.awt.Color(255, 253, 130));
+        confirmarBTN_CON.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        confirmarBTN_CON.setForeground(new java.awt.Color(232, 72, 85));
+        confirmarBTN_CON.setText("Confirmar Carrinho");
+        confirmarBTN_CON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                confirmarBTN_CONActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(255, 253, 130));
-        jButton4.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(232, 72, 85));
-        jButton4.setText("Alterar Carrinho");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        alterarCarrinhoBTN_CON.setBackground(new java.awt.Color(255, 253, 130));
+        alterarCarrinhoBTN_CON.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        alterarCarrinhoBTN_CON.setForeground(new java.awt.Color(232, 72, 85));
+        alterarCarrinhoBTN_CON.setText("Alterar Carrinho");
+        alterarCarrinhoBTN_CON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                alterarCarrinhoBTN_CONActionPerformed(evt);
             }
         });
 
@@ -172,52 +172,52 @@ public  class Confirmacao extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(topicoNomeClienteLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(nomeClienteLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(53, 53, 53))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton2)
+                        .addComponent(sairBTN_CON)
                         .addGap(258, 258, 258)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel15)
+                        .addComponent(topicoNumCarrinhoLB_CON)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(numCarrinhoLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(topicoTotalLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(totalLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nomeProdLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(topicoNomeProdLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(topicoCodLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(codigoLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(topicoQuantidadeLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(quantidadeLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(precoLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(topicoPrecoLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(confirmarBTN_CON)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(alterarCarrinhoBTN_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(169, 169, 169)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))))
+                            .addComponent(lavantLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(madeLB_CON))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -225,36 +225,36 @@ public  class Confirmacao extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE))
+                    .addComponent(topicoTotalLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(sairBTN_CON)
+                    .addComponent(totalLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(madeLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lavantLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoNomeClienteLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nomeClienteLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topicoNumCarrinhoLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(numCarrinhoLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4))
+                    .addComponent(confirmarBTN_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(alterarCarrinhoBTN_CON))
                 .addGap(52, 52, 52)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
+                    .addComponent(topicoNomeProdLB_CON)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel7)
-                        .addComponent(jLabel6)
-                        .addComponent(jLabel17)))
+                        .addComponent(topicoPrecoLB_CON)
+                        .addComponent(topicoCodLB_CON)
+                        .addComponent(topicoQuantidadeLB_CON)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nomeProdLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codigoLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(precoLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(quantidadeLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(58, Short.MAX_VALUE))
         );
 
@@ -272,44 +272,44 @@ public  class Confirmacao extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void sairBTN_CONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CONActionPerformed
        this.setVisible(false);
        new Login().setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_sairBTN_CONActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void confirmarBTN_CONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_CONActionPerformed
        this.setVisible(false);
        new InicioFuncionario().setVisible(true); // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_confirmarBTN_CONActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void alterarCarrinhoBTN_CONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarCarrinhoBTN_CONActionPerformed
        this.setVisible(false);
        new CrudCarrinho().setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_alterarCarrinhoBTN_CONActionPerformed
 
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton alterarCarrinhoBTN_CON;
+    private javax.swing.JLabel codigoLB_CON;
+    private javax.swing.JButton confirmarBTN_CON;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lavantLB_CON;
+    private javax.swing.JLabel madeLB_CON;
+    private javax.swing.JLabel nomeClienteLB_CON;
+    private javax.swing.JLabel nomeProdLB_CON;
+    private javax.swing.JLabel numCarrinhoLB_CON;
+    private javax.swing.JLabel precoLB_CON;
+    private javax.swing.JLabel quantidadeLB_CON;
+    private javax.swing.JButton sairBTN_CON;
+    private javax.swing.JLabel topicoCodLB_CON;
+    private javax.swing.JLabel topicoNomeClienteLB_CON;
+    private javax.swing.JLabel topicoNomeProdLB_CON;
+    private javax.swing.JLabel topicoNumCarrinhoLB_CON;
+    private javax.swing.JLabel topicoPrecoLB_CON;
+    private javax.swing.JLabel topicoQuantidadeLB_CON;
+    private javax.swing.JLabel topicoTotalLB_CON;
+    private javax.swing.JLabel totalLB_CON;
     // End of variables declaration//GEN-END:variables
 }

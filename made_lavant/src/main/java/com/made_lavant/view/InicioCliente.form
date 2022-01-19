@@ -51,19 +51,19 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btn_sair" min="-2" max="-2" attributes="0"/>
+                  <Component id="sairBTN_IC" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="191" max="32767" attributes="0"/>
-                  <Component id="made_Label" min="-2" pref="229" max="-2" attributes="0"/>
+                  <Component id="madeLB_IC" min="-2" pref="229" max="-2" attributes="0"/>
                   <EmptySpace pref="231" max="32767" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lavant_Label" min="-2" pref="229" max="-2" attributes="0"/>
+                      <Component id="lavantLB_IC" min="-2" pref="229" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="btn_perfilCliente" max="32767" attributes="0"/>
-                          <Component id="btn_carrinhoCliente" alignment="0" max="32767" attributes="0"/>
-                          <Component id="btn_produtosCliente" alignment="0" min="-2" pref="229" max="-2" attributes="0"/>
+                          <Component id="perfilBTN_IC" max="32767" attributes="0"/>
+                          <Component id="carrinhoBTN_IC" alignment="0" max="32767" attributes="0"/>
+                          <Component id="produtosBTN_IC" alignment="0" min="-2" pref="229" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -76,29 +76,29 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace pref="41" max="32767" attributes="0"/>
-                          <Component id="made_Label" min="-2" max="-2" attributes="0"/>
+                          <Component id="madeLB_IC" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btn_sair" min="-2" max="-2" attributes="0"/>
+                          <Component id="sairBTN_IC" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="lavant_Label" min="-2" max="-2" attributes="0"/>
+                  <Component id="lavantLB_IC" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="btn_carrinhoCliente" min="-2" pref="51" max="-2" attributes="0"/>
+                  <Component id="carrinhoBTN_IC" min="-2" pref="51" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btn_produtosCliente" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="produtosBTN_IC" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="btn_perfilCliente" min="-2" pref="46" max="-2" attributes="0"/>
+                  <Component id="perfilBTN_IC" min="-2" pref="46" max="-2" attributes="0"/>
                   <EmptySpace pref="83" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="btn_sair">
+        <Component class="javax.swing.JButton" name="sairBTN_IC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -115,7 +115,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="made_Label">
+        <Component class="javax.swing.JLabel" name="madeLB_IC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="65" style="0"/>
@@ -127,7 +127,7 @@
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lavant_Label">
+        <Component class="javax.swing.JLabel" name="lavantLB_IC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="65" style="1"/>
@@ -140,7 +140,7 @@
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_carrinhoCliente">
+        <Component class="javax.swing.JButton" name="carrinhoBTN_IC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -157,7 +157,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_produtosCliente">
+        <Component class="javax.swing.JButton" name="produtosBTN_IC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -171,10 +171,10 @@
             <Property name="text" type="java.lang.String" value="Produtos"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_produtosClienteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="produtosBTN_ICActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_perfilCliente">
+        <Component class="javax.swing.JButton" name="perfilBTN_IC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>

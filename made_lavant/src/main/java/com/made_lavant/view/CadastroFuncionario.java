@@ -34,182 +34,182 @@ public class CadastroFuncionario extends javax.swing.JFrame {
 
         tipoFuncionario_btnGroup = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        bairro_cadastroFuncionario = new javax.swing.JTextField();
-        nome_cadastroFuncionario = new javax.swing.JTextField();
-        numero_cadastroFuncionario = new javax.swing.JTextField();
-        cidade_cadastroFuncionario = new javax.swing.JTextField();
-        uf_cadastroFuncionario = new javax.swing.JTextField();
-        rua_cadastroFuncionario = new javax.swing.JTextField();
-        btnConfirmar_cadastroFuncionario = new javax.swing.JButton();
-        cep_cadastroFuncionario = new javax.swing.JTextField();
-        btnVoltar_cadastroFuncionario = new javax.swing.JButton();
-        btn_sairCadastroFuncionario = new javax.swing.JButton();
-        BTNGerente_cadastroFuncionário = new javax.swing.JRadioButton();
-        BTNFuncionario_cadastroFuncionário = new javax.swing.JRadioButton();
-        tipoNaoSelecionado_cadastroFuncionário = new javax.swing.JLabel();
-        tipoNaoSelecionado_cadastroFuncionário.setVisible(false);
+        madeLB_CF = new javax.swing.JLabel();
+        topicoBairroLB_CF = new javax.swing.JLabel();
+        lavantLB_CF = new javax.swing.JLabel();
+        topicoNumeroLB_CF = new javax.swing.JLabel();
+        titleLB_CF = new javax.swing.JLabel();
+        topicoUfLB_CF = new javax.swing.JLabel();
+        topicoNomeLB_CF = new javax.swing.JLabel();
+        topicoCepLB_CF = new javax.swing.JLabel();
+        topicoCidadeLB_CF = new javax.swing.JLabel();
+        topicoRuaLB_CF = new javax.swing.JLabel();
+        bairroTF_CF = new javax.swing.JTextField();
+        nomeTF_CF = new javax.swing.JTextField();
+        numeroTF_CF = new javax.swing.JTextField();
+        cidadeTF_CF = new javax.swing.JTextField();
+        ufTF_CF = new javax.swing.JTextField();
+        ruaTF_CF = new javax.swing.JTextField();
+        confirmarBTN_CF = new javax.swing.JButton();
+        cepTF_CF = new javax.swing.JTextField();
+        voltarBTN_CF = new javax.swing.JButton();
+        sairBTN_CF = new javax.swing.JButton();
+        gerenteBTN_CF = new javax.swing.JRadioButton();
+        funcionarioBTN_CF = new javax.swing.JRadioButton();
+        utilityLB_CF = new javax.swing.JLabel();
+        utilityLB_CF.setVisible(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro de Funcioario");
 
         jPanel2.setBackground(new java.awt.Color(45, 48, 71));
 
-        jLabel10.setFont(new java.awt.Font("Colonna MT", 0, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel10.setText("MADE");
+        madeLB_CF.setFont(new java.awt.Font("Colonna MT", 0, 24)); // NOI18N
+        madeLB_CF.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_CF.setText("MADE");
 
-        jLabel5.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel5.setText("Bairro");
+        topicoBairroLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoBairroLB_CF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoBairroLB_CF.setText("Bairro");
 
-        jLabel11.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel11.setText("Lavant");
+        lavantLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
+        lavantLB_CF.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_CF.setText("Lavant");
 
-        jLabel6.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel6.setText("Número");
+        topicoNumeroLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoNumeroLB_CF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoNumeroLB_CF.setText("Número");
 
-        jLabel1.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel1.setText("Cadastro do Funcionário");
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        titleLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
+        titleLB_CF.setForeground(new java.awt.Color(232, 72, 85));
+        titleLB_CF.setText("Cadastro do Funcionário");
+        titleLB_CF.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel7.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel7.setText("UF");
+        topicoUfLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoUfLB_CF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoUfLB_CF.setText("UF");
 
-        jLabel2.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel2.setText("Nome");
+        topicoNomeLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoNomeLB_CF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoNomeLB_CF.setText("Nome");
 
-        jLabel8.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel8.setText("CEP");
+        topicoCepLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoCepLB_CF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoCepLB_CF.setText("CEP");
 
-        jLabel3.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel3.setText("Cidade");
+        topicoCidadeLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoCidadeLB_CF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoCidadeLB_CF.setText("Cidade");
 
-        jLabel4.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel4.setText("Rua");
+        topicoRuaLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoRuaLB_CF.setForeground(new java.awt.Color(232, 72, 85));
+        topicoRuaLB_CF.setText("Rua");
 
-        nome_cadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+        nomeTF_CF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nome_cadastroFuncionarioActionPerformed(evt);
+                nomeTF_CFActionPerformed(evt);
             }
         });
 
-        numero_cadastroFuncionario.addKeyListener(new java.awt.event.KeyAdapter() {
+        numeroTF_CF.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                numero_cadastroFuncionarioKeyReleased(evt);
+                numeroTF_CFKeyReleased(evt);
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                numero_cadastroFuncionarioKeyTyped(evt);
+                numeroTF_CFKeyTyped(evt);
             }
         });
 
-        cidade_cadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+        cidadeTF_CF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cidade_cadastroFuncionarioActionPerformed(evt);
+                cidadeTF_CFActionPerformed(evt);
             }
         });
 
-        uf_cadastroFuncionario.addKeyListener(new java.awt.event.KeyAdapter() {
+        ufTF_CF.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                uf_cadastroFuncionarioKeyReleased(evt);
+                ufTF_CFKeyReleased(evt);
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                uf_cadastroFuncionarioKeyTyped(evt);
+                ufTF_CFKeyTyped(evt);
             }
         });
 
-        rua_cadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+        ruaTF_CF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rua_cadastroFuncionarioActionPerformed(evt);
+                ruaTF_CFActionPerformed(evt);
             }
         });
 
-        btnConfirmar_cadastroFuncionario.setBackground(new java.awt.Color(255, 253, 130));
-        btnConfirmar_cadastroFuncionario.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        btnConfirmar_cadastroFuncionario.setForeground(new java.awt.Color(232, 72, 85));
-        btnConfirmar_cadastroFuncionario.setText("Confirmar");
-        btnConfirmar_cadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+        confirmarBTN_CF.setBackground(new java.awt.Color(255, 253, 130));
+        confirmarBTN_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        confirmarBTN_CF.setForeground(new java.awt.Color(232, 72, 85));
+        confirmarBTN_CF.setText("Confirmar");
+        confirmarBTN_CF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConfirmar_cadastroFuncionarioActionPerformed(evt);
+                confirmarBTN_CFActionPerformed(evt);
             }
         });
 
-        cep_cadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+        cepTF_CF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cep_cadastroFuncionarioActionPerformed(evt);
+                cepTF_CFActionPerformed(evt);
             }
         });
-        cep_cadastroFuncionario.addKeyListener(new java.awt.event.KeyAdapter() {
+        cepTF_CF.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                cep_cadastroFuncionarioKeyReleased(evt);
+                cepTF_CFKeyReleased(evt);
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                cep_cadastroFuncionarioKeyTyped(evt);
+                cepTF_CFKeyTyped(evt);
             }
         });
 
-        btnVoltar_cadastroFuncionario.setBackground(new java.awt.Color(255, 253, 130));
-        btnVoltar_cadastroFuncionario.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
-        btnVoltar_cadastroFuncionario.setForeground(new java.awt.Color(232, 72, 85));
-        btnVoltar_cadastroFuncionario.setText("Voltar");
-        btnVoltar_cadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+        voltarBTN_CF.setBackground(new java.awt.Color(255, 253, 130));
+        voltarBTN_CF.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        voltarBTN_CF.setForeground(new java.awt.Color(232, 72, 85));
+        voltarBTN_CF.setText("Voltar");
+        voltarBTN_CF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVoltar_cadastroFuncionarioActionPerformed(evt);
+                voltarBTN_CFActionPerformed(evt);
             }
         });
 
-        btn_sairCadastroFuncionario.setBackground(new java.awt.Color(255, 253, 130));
-        btn_sairCadastroFuncionario.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
-        btn_sairCadastroFuncionario.setForeground(new java.awt.Color(232, 72, 85));
-        btn_sairCadastroFuncionario.setText("Sair");
-        btn_sairCadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+        sairBTN_CF.setBackground(new java.awt.Color(255, 253, 130));
+        sairBTN_CF.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        sairBTN_CF.setForeground(new java.awt.Color(232, 72, 85));
+        sairBTN_CF.setText("Sair");
+        sairBTN_CF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sairCadastroFuncionarioActionPerformed(evt);
+                sairBTN_CFActionPerformed(evt);
             }
         });
 
-        BTNGerente_cadastroFuncionário.setBackground(new java.awt.Color(45, 48, 71));
-        tipoFuncionario_btnGroup.add(BTNGerente_cadastroFuncionário);
-        BTNGerente_cadastroFuncionário.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
-        BTNGerente_cadastroFuncionário.setForeground(new java.awt.Color(232, 72, 85));
-        BTNGerente_cadastroFuncionário.setText("Gerente");
-        BTNGerente_cadastroFuncionário.addActionListener(new java.awt.event.ActionListener() {
+        gerenteBTN_CF.setBackground(new java.awt.Color(45, 48, 71));
+        tipoFuncionario_btnGroup.add(gerenteBTN_CF);
+        gerenteBTN_CF.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        gerenteBTN_CF.setForeground(new java.awt.Color(232, 72, 85));
+        gerenteBTN_CF.setText("Gerente");
+        gerenteBTN_CF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTNGerente_cadastroFuncionárioActionPerformed(evt);
+                gerenteBTN_CFActionPerformed(evt);
             }
         });
 
-        BTNFuncionario_cadastroFuncionário.setBackground(new java.awt.Color(45, 48, 71));
-        tipoFuncionario_btnGroup.add(BTNFuncionario_cadastroFuncionário);
-        BTNFuncionario_cadastroFuncionário.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
-        BTNFuncionario_cadastroFuncionário.setForeground(new java.awt.Color(232, 72, 85));
-        BTNFuncionario_cadastroFuncionário.setText("Funcionario");
-        BTNFuncionario_cadastroFuncionário.addActionListener(new java.awt.event.ActionListener() {
+        funcionarioBTN_CF.setBackground(new java.awt.Color(45, 48, 71));
+        tipoFuncionario_btnGroup.add(funcionarioBTN_CF);
+        funcionarioBTN_CF.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        funcionarioBTN_CF.setForeground(new java.awt.Color(232, 72, 85));
+        funcionarioBTN_CF.setText("Funcionario");
+        funcionarioBTN_CF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTNFuncionario_cadastroFuncionárioActionPerformed(evt);
+                funcionarioBTN_CFActionPerformed(evt);
             }
         });
 
-        tipoNaoSelecionado_cadastroFuncionário.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
-        tipoNaoSelecionado_cadastroFuncionário.setForeground(new java.awt.Color(232, 72, 85));
-        tipoNaoSelecionado_cadastroFuncionário.setText("Marque se é um funcionário ou um gerente que está sendo cadastrado");
+        utilityLB_CF.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        utilityLB_CF.setForeground(new java.awt.Color(232, 72, 85));
+        utilityLB_CF.setText("Marque se é um funcionário ou um gerente que está sendo cadastrado");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -220,54 +220,54 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnVoltar_cadastroFuncionario)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
+                            .addComponent(voltarBTN_CF)
+                            .addComponent(topicoUfLB_CF)
+                            .addComponent(topicoBairroLB_CF)
+                            .addComponent(topicoNomeLB_CF)
+                            .addComponent(topicoCidadeLB_CF)
+                            .addComponent(topicoRuaLB_CF))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nome_cadastroFuncionario)
-                            .addComponent(cidade_cadastroFuncionario)
-                            .addComponent(rua_cadastroFuncionario)
+                            .addComponent(nomeTF_CF)
+                            .addComponent(cidadeTF_CF)
+                            .addComponent(ruaTF_CF)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bairro_cadastroFuncionario)
+                                .addComponent(bairroTF_CF)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel6)
+                                .addComponent(topicoNumeroLB_CF)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(numero_cadastroFuncionario))
+                                .addComponent(numeroTF_CF))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
+                                .addComponent(titleLB_CF)
                                 .addGap(0, 210, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(uf_cadastroFuncionario)
+                                        .addComponent(ufTF_CF)
                                         .addGap(37, 37, 37)
-                                        .addComponent(jLabel8)
+                                        .addComponent(topicoCepLB_CF)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel11)
-                                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(lavantLB_CF)
+                                            .addComponent(madeLB_CF, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(13, 13, 13)))
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cep_cadastroFuncionario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnConfirmar_cadastroFuncionario, javax.swing.GroupLayout.Alignment.TRAILING)))))
+                                    .addComponent(cepTF_CF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(confirmarBTN_CF, javax.swing.GroupLayout.Alignment.TRAILING)))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(20, 20, 20)
-                                .addComponent(btn_sairCadastroFuncionario))
+                                .addComponent(sairBTN_CF))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(BTNGerente_cadastroFuncionário)
+                                .addComponent(gerenteBTN_CF)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(BTNFuncionario_cadastroFuncionário, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(funcionarioBTN_CF, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(32, 32, 32)
-                                .addComponent(tipoNaoSelecionado_cadastroFuncionário)))
+                                .addComponent(utilityLB_CF)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -275,51 +275,51 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_sairCadastroFuncionario)
+                .addComponent(sairBTN_CF)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
+                .addComponent(titleLB_CF)
                 .addGap(33, 33, 33)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(nome_cadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoNomeLB_CF)
+                    .addComponent(nomeTF_CF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(cidade_cadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoCidadeLB_CF)
+                    .addComponent(cidadeTF_CF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(rua_cadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoRuaLB_CF)
+                    .addComponent(ruaTF_CF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(bairro_cadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(numero_cadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoBairroLB_CF)
+                    .addComponent(bairroTF_CF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topicoNumeroLB_CF)
+                    .addComponent(numeroTF_CF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cep_cadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8)
-                    .addComponent(uf_cadastroFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
+                    .addComponent(cepTF_CF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topicoCepLB_CF)
+                    .addComponent(ufTF_CF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topicoUfLB_CF))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BTNGerente_cadastroFuncionário)
-                            .addComponent(BTNFuncionario_cadastroFuncionário)
-                            .addComponent(tipoNaoSelecionado_cadastroFuncionário))
+                            .addComponent(gerenteBTN_CF)
+                            .addComponent(funcionarioBTN_CF)
+                            .addComponent(utilityLB_CF))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(41, 41, 41)
-                                .addComponent(btnVoltar_cadastroFuncionario))
+                                .addComponent(voltarBTN_CF))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
-                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(madeLB_CF, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(lavantLB_CF, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnConfirmar_cadastroFuncionario)
+                        .addComponent(confirmarBTN_CF)
                         .addGap(45, 45, 45)))
                 .addGap(53, 53, 53))
         );
@@ -338,60 +338,60 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nome_cadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nome_cadastroFuncionarioActionPerformed
+    private void nomeTF_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTF_CFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nome_cadastroFuncionarioActionPerformed
+    }//GEN-LAST:event_nomeTF_CFActionPerformed
 
-    private void cidade_cadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidade_cadastroFuncionarioActionPerformed
+    private void cidadeTF_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidadeTF_CFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cidade_cadastroFuncionarioActionPerformed
+    }//GEN-LAST:event_cidadeTF_CFActionPerformed
 
-    private void rua_cadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rua_cadastroFuncionarioActionPerformed
+    private void ruaTF_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ruaTF_CFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rua_cadastroFuncionarioActionPerformed
+    }//GEN-LAST:event_ruaTF_CFActionPerformed
 
-    private void cep_cadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cep_cadastroFuncionarioActionPerformed
+    private void cepTF_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cepTF_CFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cep_cadastroFuncionarioActionPerformed
+    }//GEN-LAST:event_cepTF_CFActionPerformed
 
-    private void btnVoltar_cadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltar_cadastroFuncionarioActionPerformed
+    private void voltarBTN_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CFActionPerformed
         //volta para o crud de funcionários
         this.setVisible(false);
         new CrudFuncionarios().setVisible(true);
-    }//GEN-LAST:event_btnVoltar_cadastroFuncionarioActionPerformed
+    }//GEN-LAST:event_voltarBTN_CFActionPerformed
 
-    private void btn_sairCadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairCadastroFuncionarioActionPerformed
+    private void sairBTN_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CFActionPerformed
         //volta para a tela de login
         this.setVisible(false);
         new Login().setVisible(true);
-    }//GEN-LAST:event_btn_sairCadastroFuncionarioActionPerformed
+    }//GEN-LAST:event_sairBTN_CFActionPerformed
 
-    private void BTNGerente_cadastroFuncionárioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNGerente_cadastroFuncionárioActionPerformed
+    private void gerenteBTN_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gerenteBTN_CFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BTNGerente_cadastroFuncionárioActionPerformed
+    }//GEN-LAST:event_gerenteBTN_CFActionPerformed
 
-    private void BTNFuncionario_cadastroFuncionárioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNFuncionario_cadastroFuncionárioActionPerformed
+    private void funcionarioBTN_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_funcionarioBTN_CFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BTNFuncionario_cadastroFuncionárioActionPerformed
+    }//GEN-LAST:event_funcionarioBTN_CFActionPerformed
 
-    private void btnConfirmar_cadastroFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmar_cadastroFuncionarioActionPerformed
+    private void confirmarBTN_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_CFActionPerformed
         //diz se o cadastro pode ou não ser feito
         boolean cadastro = true;
         //identifica se está sendo cadastrado um funcionário ou um gerente
         String identificador = null;
         //se o nome não foi escrito o cadastro não pode ser realizado
-        if (nome_cadastroFuncionario.getText().equals("") || nome_cadastroFuncionario.getText().equals("Campo obrigatório")) {
-            nome_cadastroFuncionario.setText("Campo obrigatório");
+        if (nomeTF_CF.getText().equals("") || nomeTF_CF.getText().equals("Campo obrigatório")) {
+            nomeTF_CF.setText("Campo obrigatório");
             cadastro = false;
         }
         //se nenhuma opção foi escolhida o cadastro não pode ser realizado
-        if (!BTNFuncionario_cadastroFuncionário.isSelected() && !BTNGerente_cadastroFuncionário.isSelected()) {
+        if (!funcionarioBTN_CF.isSelected() && !gerenteBTN_CF.isSelected()) {
             cadastro = false;
-            tipoNaoSelecionado_cadastroFuncionário.setVisible(true);
+            utilityLB_CF.setVisible(true);
         } else {
-            tipoNaoSelecionado_cadastroFuncionário.setVisible(false);
+            utilityLB_CF.setVisible(false);
             //define o objeto criado como gerente
-            if (BTNGerente_cadastroFuncionário.isSelected()) {
+            if (gerenteBTN_CF.isSelected()) {
                 identificador = "A";
             } else {
                 //define o objeto criado como funcionário
@@ -399,40 +399,40 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             }
         }
         //verifica se algum campo referente ao endereço foi cadastrado, se um deles for cadastrado, todos devem ser cadastrados
-        if (!(cidade_cadastroFuncionario.getText().equals("") && rua_cadastroFuncionario.getText().equals("") && bairro_cadastroFuncionario.getText().equals("") && numero_cadastroFuncionario.getText().equals("") && uf_cadastroFuncionario.getText().equals("") && cep_cadastroFuncionario.getText().equals(""))) {
-            if (cidade_cadastroFuncionario.getText().equals("") || cidade_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                cidade_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+        if (!(cidadeTF_CF.getText().equals("") && ruaTF_CF.getText().equals("") && bairroTF_CF.getText().equals("") && numeroTF_CF.getText().equals("") && ufTF_CF.getText().equals("") && cepTF_CF.getText().equals(""))) {
+            if (cidadeTF_CF.getText().equals("") || cidadeTF_CF.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                cidadeTF_CF.setText("Campo obrigatório se for cadastrar o endereço");
                 cadastro = false;
             }
-            if (bairro_cadastroFuncionario.getText().equals("") || bairro_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                bairro_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+            if (bairroTF_CF.getText().equals("") || bairroTF_CF.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                bairroTF_CF.setText("Campo obrigatório se for cadastrar o endereço");
                 cadastro = false;
             }
-            if (rua_cadastroFuncionario.getText().equals("") || rua_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                rua_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+            if (ruaTF_CF.getText().equals("") || ruaTF_CF.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                ruaTF_CF.setText("Campo obrigatório se for cadastrar o endereço");
                 cadastro = false;
             }
-            if (uf_cadastroFuncionario.getText().equals("") || uf_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                uf_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+            if (ufTF_CF.getText().equals("") || ufTF_CF.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                ufTF_CF.setText("Campo obrigatório se for cadastrar o endereço");
                 cadastro = false;
             }
-            if (numero_cadastroFuncionario.getText().equals("") || numero_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                numero_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+            if (numeroTF_CF.getText().equals("") || numeroTF_CF.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                numeroTF_CF.setText("Campo obrigatório se for cadastrar o endereço");
                 cadastro = false;
             }
-            if (cep_cadastroFuncionario.getText().equals("") || cep_cadastroFuncionario.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
-                cep_cadastroFuncionario.setText("Campo obrigatório se for cadastrar o endereço");
+            if (cepTF_CF.getText().equals("") || cepTF_CF.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
+                cepTF_CF.setText("Campo obrigatório se for cadastrar o endereço");
                 cadastro = false;
             }
             if (cadastro) {
                 //com todos os campos de endereço preenchidos, o cadastro será feito com o endereço
-                Endereco endereco = new Endereco(cidade_cadastroFuncionario.getText(), cep_cadastroFuncionario.getText(), uf_cadastroFuncionario.getText(), bairro_cadastroFuncionario.getText(), rua_cadastroFuncionario.getText(), numero_cadastroFuncionario.getText());
-                new Funcionario(nome_cadastroFuncionario.getText(), endereco, "madeLavant", identificador);
+                Endereco endereco = new Endereco(cidadeTF_CF.getText(), cepTF_CF.getText(), ufTF_CF.getText(), bairroTF_CF.getText(), ruaTF_CF.getText(), numeroTF_CF.getText());
+                new Funcionario(nomeTF_CF.getText(), endereco, "madeLavant", identificador);
             }
         } else {
             //se nenhum campo de endereço estiver cadastrado, o cadastro será feito sem o endereço
             if (cadastro) {
-                new Funcionario(nome_cadastroFuncionario.getText(), "madeLavant", identificador);
+                new Funcionario(nomeTF_CF.getText(), "madeLavant", identificador);
             }
         }
         //retorna para a tela de crud de funcionários se o cadastro foi realizado
@@ -440,50 +440,50 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             this.setVisible(false);
             new CrudFuncionarios().setVisible(true);
         }
-    }//GEN-LAST:event_btnConfirmar_cadastroFuncionarioActionPerformed
+    }//GEN-LAST:event_confirmarBTN_CFActionPerformed
 
-    private void numero_cadastroFuncionarioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numero_cadastroFuncionarioKeyReleased
-        mascaraInt(numero_cadastroFuncionario);
-    }//GEN-LAST:event_numero_cadastroFuncionarioKeyReleased
+    private void numeroTF_CFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numeroTF_CFKeyReleased
+        mascaraInt(numeroTF_CF);
+    }//GEN-LAST:event_numeroTF_CFKeyReleased
 
-    private void numero_cadastroFuncionarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numero_cadastroFuncionarioKeyTyped
-        mascaraInt(numero_cadastroFuncionario);
-    }//GEN-LAST:event_numero_cadastroFuncionarioKeyTyped
+    private void numeroTF_CFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numeroTF_CFKeyTyped
+        mascaraInt(numeroTF_CF);
+    }//GEN-LAST:event_numeroTF_CFKeyTyped
 
-    private void cep_cadastroFuncionarioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cep_cadastroFuncionarioKeyReleased
+    private void cepTF_CFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cepTF_CFKeyReleased
         mascaraCEP();
-    }//GEN-LAST:event_cep_cadastroFuncionarioKeyReleased
+    }//GEN-LAST:event_cepTF_CFKeyReleased
 
-    private void cep_cadastroFuncionarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cep_cadastroFuncionarioKeyTyped
+    private void cepTF_CFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cepTF_CFKeyTyped
         mascaraCEP();
-    }//GEN-LAST:event_cep_cadastroFuncionarioKeyTyped
+    }//GEN-LAST:event_cepTF_CFKeyTyped
 
-    private void uf_cadastroFuncionarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_uf_cadastroFuncionarioKeyTyped
+    private void ufTF_CFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ufTF_CFKeyTyped
         mascaraUF();
-    }//GEN-LAST:event_uf_cadastroFuncionarioKeyTyped
+    }//GEN-LAST:event_ufTF_CFKeyTyped
 
-    private void uf_cadastroFuncionarioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_uf_cadastroFuncionarioKeyReleased
+    private void ufTF_CFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ufTF_CFKeyReleased
         mascaraUF();
-    }//GEN-LAST:event_uf_cadastroFuncionarioKeyReleased
+    }//GEN-LAST:event_ufTF_CFKeyReleased
 
     private void mascaraUF() {
-        String texto = uf_cadastroFuncionario.getText();
+        String texto = ufTF_CF.getText();
         if (texto.length() > 0) {
             if (!(texto.length() <= 2 && ((texto.charAt(texto.length() - 1) >= 'a' && texto.charAt(texto.length() - 1) <= 'z') || (texto.charAt(texto.length() - 1) >= 'A' && texto.charAt(texto.length() - 1) <= 'Z')))) {
                 texto = texto.substring(0, texto.length() - 1);
             }
         }
-        uf_cadastroFuncionario.setText(texto);
+        ufTF_CF.setText(texto);
     }
 
     private void mascaraCEP() {
-        String texto = cep_cadastroFuncionario.getText();
+        String texto = cepTF_CF.getText();
         if (texto.length() > 0) {
             if (texto.length() > 8 || texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
                 texto = texto.substring(0, texto.length() - 1);
             }
         }
-        cep_cadastroFuncionario.setText(texto);
+        cepTF_CF.setText(texto);
     }
 
     private void mascaraInt(JTextField textField) {
@@ -500,30 +500,30 @@ public class CadastroFuncionario extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton BTNFuncionario_cadastroFuncionário;
-    private javax.swing.JRadioButton BTNGerente_cadastroFuncionário;
-    private javax.swing.JTextField bairro_cadastroFuncionario;
-    private javax.swing.JButton btnConfirmar_cadastroFuncionario;
-    private javax.swing.JButton btnVoltar_cadastroFuncionario;
-    private javax.swing.JButton btn_sairCadastroFuncionario;
-    private javax.swing.JTextField cep_cadastroFuncionario;
-    private javax.swing.JTextField cidade_cadastroFuncionario;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JTextField bairroTF_CF;
+    private javax.swing.JTextField cepTF_CF;
+    private javax.swing.JTextField cidadeTF_CF;
+    private javax.swing.JButton confirmarBTN_CF;
+    private javax.swing.JRadioButton funcionarioBTN_CF;
+    private javax.swing.JRadioButton gerenteBTN_CF;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField nome_cadastroFuncionario;
-    private javax.swing.JTextField numero_cadastroFuncionario;
-    private javax.swing.JTextField rua_cadastroFuncionario;
+    private javax.swing.JLabel lavantLB_CF;
+    private javax.swing.JLabel madeLB_CF;
+    private javax.swing.JTextField nomeTF_CF;
+    private javax.swing.JTextField numeroTF_CF;
+    private javax.swing.JTextField ruaTF_CF;
+    private javax.swing.JButton sairBTN_CF;
     private javax.swing.ButtonGroup tipoFuncionario_btnGroup;
-    private javax.swing.JLabel tipoNaoSelecionado_cadastroFuncionário;
-    private javax.swing.JTextField uf_cadastroFuncionario;
+    private javax.swing.JLabel titleLB_CF;
+    private javax.swing.JLabel topicoBairroLB_CF;
+    private javax.swing.JLabel topicoCepLB_CF;
+    private javax.swing.JLabel topicoCidadeLB_CF;
+    private javax.swing.JLabel topicoNomeLB_CF;
+    private javax.swing.JLabel topicoNumeroLB_CF;
+    private javax.swing.JLabel topicoRuaLB_CF;
+    private javax.swing.JLabel topicoUfLB_CF;
+    private javax.swing.JTextField ufTF_CF;
+    private javax.swing.JLabel utilityLB_CF;
+    private javax.swing.JButton voltarBTN_CF;
     // End of variables declaration//GEN-END:variables
 }

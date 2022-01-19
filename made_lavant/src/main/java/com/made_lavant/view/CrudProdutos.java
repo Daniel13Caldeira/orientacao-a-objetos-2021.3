@@ -28,126 +28,126 @@ public class CrudProdutos extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        madeLB_CRP = new javax.swing.JLabel();
+        lavantLB_CRP = new javax.swing.JLabel();
+        sairBTN_CRP = new javax.swing.JButton();
+        voltarBTN_CRP = new javax.swing.JButton();
+        topicoNomeLB_CRP = new javax.swing.JLabel();
+        topicoCodLB_CRP = new javax.swing.JLabel();
+        topicoPrecoLB_CRP = new javax.swing.JLabel();
+        nomeLB_CRP = new javax.swing.JLabel();
+        codLB_CRP = new javax.swing.JLabel();
+        precoLB_CRP = new javax.swing.JLabel();
+        addProdBTN_CRP = new javax.swing.JButton();
+        removerBTN_CRP = new javax.swing.JButton();
+        editarBTN_CRP = new javax.swing.JButton();
+        descricaoBTN_CRP = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TeladeProdutosFuncionario");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        jLabel1.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel1.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText("MADE");
-        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        madeLB_CRP.setBackground(new java.awt.Color(255, 253, 130));
+        madeLB_CRP.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        madeLB_CRP.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_CRP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        madeLB_CRP.setText("MADE");
+        madeLB_CRP.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel2.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Lavant");
+        lavantLB_CRP.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        lavantLB_CRP.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_CRP.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lavantLB_CRP.setText("Lavant");
 
-        jButton1.setBackground(new java.awt.Color(255, 253, 130));
-        jButton1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(232, 72, 85));
-        jButton1.setText("Sair");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        sairBTN_CRP.setBackground(new java.awt.Color(255, 253, 130));
+        sairBTN_CRP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_CRP.setForeground(new java.awt.Color(232, 72, 85));
+        sairBTN_CRP.setText("Sair");
+        sairBTN_CRP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                sairBTN_CRPActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 253, 130));
-        jButton2.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(232, 72, 85));
-        jButton2.setText("Voltar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        voltarBTN_CRP.setBackground(new java.awt.Color(255, 253, 130));
+        voltarBTN_CRP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        voltarBTN_CRP.setForeground(new java.awt.Color(232, 72, 85));
+        voltarBTN_CRP.setText("Voltar");
+        voltarBTN_CRP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                voltarBTN_CRPActionPerformed(evt);
             }
         });
 
-        jLabel3.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel3.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Nome");
+        topicoNomeLB_CRP.setBackground(new java.awt.Color(255, 253, 130));
+        topicoNomeLB_CRP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoNomeLB_CRP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoNomeLB_CRP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        topicoNomeLB_CRP.setText("Nome");
 
-        jLabel4.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Código");
+        topicoCodLB_CRP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoCodLB_CRP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoCodLB_CRP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        topicoCodLB_CRP.setText("Código");
 
-        jLabel7.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Preço");
+        topicoPrecoLB_CRP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoPrecoLB_CRP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoPrecoLB_CRP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        topicoPrecoLB_CRP.setText("Preço");
 
-        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel8.setText("Nome");
+        nomeLB_CRP.setBackground(new java.awt.Color(255, 255, 255));
+        nomeLB_CRP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        nomeLB_CRP.setForeground(new java.awt.Color(255, 253, 130));
+        nomeLB_CRP.setText("Nome");
 
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel9.setText("000");
+        codLB_CRP.setBackground(new java.awt.Color(255, 255, 255));
+        codLB_CRP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        codLB_CRP.setForeground(new java.awt.Color(255, 253, 130));
+        codLB_CRP.setText("000");
 
-        jLabel12.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel12.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel12.setText("00,00");
+        precoLB_CRP.setBackground(new java.awt.Color(255, 255, 255));
+        precoLB_CRP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        precoLB_CRP.setForeground(new java.awt.Color(255, 253, 130));
+        precoLB_CRP.setText("00,00");
 
-        jButton3.setBackground(new java.awt.Color(255, 253, 130));
-        jButton3.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(232, 72, 85));
-        jButton3.setText("Adicionar Produto");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        addProdBTN_CRP.setBackground(new java.awt.Color(255, 253, 130));
+        addProdBTN_CRP.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        addProdBTN_CRP.setForeground(new java.awt.Color(232, 72, 85));
+        addProdBTN_CRP.setText("Adicionar Produto");
+        addProdBTN_CRP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                addProdBTN_CRPActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(255, 253, 130));
-        jButton4.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(232, 72, 85));
-        jButton4.setText("Remover");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        removerBTN_CRP.setBackground(new java.awt.Color(255, 253, 130));
+        removerBTN_CRP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        removerBTN_CRP.setForeground(new java.awt.Color(232, 72, 85));
+        removerBTN_CRP.setText("Remover");
+        removerBTN_CRP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                removerBTN_CRPActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(255, 253, 130));
-        jButton5.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(232, 72, 85));
-        jButton5.setText("Editar");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        editarBTN_CRP.setBackground(new java.awt.Color(255, 253, 130));
+        editarBTN_CRP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        editarBTN_CRP.setForeground(new java.awt.Color(232, 72, 85));
+        editarBTN_CRP.setText("Editar");
+        editarBTN_CRP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                editarBTN_CRPActionPerformed(evt);
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(255, 253, 130));
-        jButton6.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(232, 72, 85));
-        jButton6.setText("Descrição");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        descricaoBTN_CRP.setBackground(new java.awt.Color(255, 253, 130));
+        descricaoBTN_CRP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        descricaoBTN_CRP.setForeground(new java.awt.Color(232, 72, 85));
+        descricaoBTN_CRP.setText("Descrição");
+        descricaoBTN_CRP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                descricaoBTN_CRPActionPerformed(evt);
             }
         });
 
@@ -157,42 +157,42 @@ public class CrudProdutos extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(sairBTN_CRP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(voltarBTN_CRP)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
+                        .addComponent(topicoNomeLB_CRP)
                         .addGap(149, 149, 149)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(topicoCodLB_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(nomeLB_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(21, 21, 21)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(codLB_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(46, 46, 46)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topicoPrecoLB_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(precoLB_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(28, 28, 28)
-                        .addComponent(jButton4)
+                        .addComponent(removerBTN_CRP)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton5)
+                        .addComponent(editarBTN_CRP)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton6)))
+                        .addComponent(descricaoBTN_CRP)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
+                    .addComponent(addProdBTN_CRP)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))))
+                            .addComponent(lavantLB_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(madeLB_CRP))))
                 .addGap(285, 285, 285))
         );
         jPanel1Layout.setVerticalGroup(
@@ -200,27 +200,27 @@ public class CrudProdutos extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(sairBTN_CRP)
+                    .addComponent(voltarBTN_CRP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(29, 29, 29)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(madeLB_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lavantLB_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
+                .addComponent(addProdBTN_CRP)
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel7))
+                    .addComponent(topicoNomeLB_CRP)
+                    .addComponent(topicoCodLB_CRP)
+                    .addComponent(topicoPrecoLB_CRP))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nomeLB_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codLB_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(precoLB_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(removerBTN_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editarBTN_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(descricaoBTN_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(209, Short.MAX_VALUE))
         );
 
@@ -238,53 +238,53 @@ public class CrudProdutos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void sairBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CRPActionPerformed
         this.setVisible(false);
         new Login().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_sairBTN_CRPActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void voltarBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CRPActionPerformed
         this.setVisible(false);
         new InicioFuncionario().setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_voltarBTN_CRPActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void addProdBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProdBTN_CRPActionPerformed
         this.setVisible(false);
         new CadastroProduto().setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_addProdBTN_CRPActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void descricaoBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRPActionPerformed
         this.setVisible(false);
         new DetalheProduto_Func().setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_descricaoBTN_CRPActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void editarBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBTN_CRPActionPerformed
         this.setVisible(false);
         new EditarProduto().setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_editarBTN_CRPActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void removerBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerBTN_CRPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_removerBTN_CRPActionPerformed
 
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton addProdBTN_CRP;
+    private javax.swing.JLabel codLB_CRP;
+    private javax.swing.JButton descricaoBTN_CRP;
+    private javax.swing.JButton editarBTN_CRP;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lavantLB_CRP;
+    private javax.swing.JLabel madeLB_CRP;
+    private javax.swing.JLabel nomeLB_CRP;
+    private javax.swing.JLabel precoLB_CRP;
+    private javax.swing.JButton removerBTN_CRP;
+    private javax.swing.JButton sairBTN_CRP;
+    private javax.swing.JLabel topicoCodLB_CRP;
+    private javax.swing.JLabel topicoNomeLB_CRP;
+    private javax.swing.JLabel topicoPrecoLB_CRP;
+    private javax.swing.JButton voltarBTN_CRP;
     // End of variables declaration//GEN-END:variables
 }

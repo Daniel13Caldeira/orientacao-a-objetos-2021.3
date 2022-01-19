@@ -30,22 +30,22 @@ public class DetalheCarrinho extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton32 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        sairBTN_detalherCarrinho = new javax.swing.JButton();
+        topicoTotalLB_DC = new javax.swing.JLabel();
+        madeLB_DC = new javax.swing.JLabel();
+        lavantLB_DC = new javax.swing.JLabel();
+        voltarBTN_DC = new javax.swing.JButton();
+        topicoNomeLB_DC = new javax.swing.JLabel();
+        topicoCodLB_DC = new javax.swing.JLabel();
+        topicoQuantiLB_DC = new javax.swing.JLabel();
+        topicoValiLB_DC = new javax.swing.JLabel();
+        topicoPrecoLB_DC = new javax.swing.JLabel();
+        nomeLB_DC = new javax.swing.JLabel();
+        codLB_DC = new javax.swing.JLabel();
+        precoLB_DC = new javax.swing.JLabel();
+        quantiLB_DC = new javax.swing.JLabel();
+        valiLB_DC = new javax.swing.JLabel();
+        totalLB_DC = new javax.swing.JLabel();
+        sairBTN_DC = new javax.swing.JButton();
 
         jLabel18.setBackground(new java.awt.Color(255, 255, 255));
         jLabel18.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
@@ -61,95 +61,95 @@ public class DetalheCarrinho extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        jLabel10.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel10.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("Total");
+        topicoTotalLB_DC.setBackground(new java.awt.Color(255, 253, 130));
+        topicoTotalLB_DC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoTotalLB_DC.setForeground(new java.awt.Color(232, 72, 85));
+        topicoTotalLB_DC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        topicoTotalLB_DC.setText("Total");
 
-        jLabel3.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel3.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel3.setText("MADE");
-        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        madeLB_DC.setBackground(new java.awt.Color(255, 253, 130));
+        madeLB_DC.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        madeLB_DC.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_DC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        madeLB_DC.setText("MADE");
+        madeLB_DC.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jLabel4.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText("Lavant");
+        lavantLB_DC.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        lavantLB_DC.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_DC.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lavantLB_DC.setText("Lavant");
 
-        jButton32.setBackground(new java.awt.Color(255, 253, 130));
-        jButton32.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        jButton32.setForeground(new java.awt.Color(232, 72, 85));
-        jButton32.setText("Voltar");
-        jButton32.addActionListener(new java.awt.event.ActionListener() {
+        voltarBTN_DC.setBackground(new java.awt.Color(255, 253, 130));
+        voltarBTN_DC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        voltarBTN_DC.setForeground(new java.awt.Color(232, 72, 85));
+        voltarBTN_DC.setText("Voltar");
+        voltarBTN_DC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton32ActionPerformed(evt);
+                voltarBTN_DCActionPerformed(evt);
             }
         });
 
-        jLabel5.setBackground(new java.awt.Color(255, 253, 130));
-        jLabel5.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel5.setText("Nome");
+        topicoNomeLB_DC.setBackground(new java.awt.Color(255, 253, 130));
+        topicoNomeLB_DC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoNomeLB_DC.setForeground(new java.awt.Color(232, 72, 85));
+        topicoNomeLB_DC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoNomeLB_DC.setText("Nome");
 
-        jLabel6.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel6.setText("Código");
+        topicoCodLB_DC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoCodLB_DC.setForeground(new java.awt.Color(232, 72, 85));
+        topicoCodLB_DC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoCodLB_DC.setText("Código");
 
-        jLabel17.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel17.setText("Quantidade");
+        topicoQuantiLB_DC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoQuantiLB_DC.setForeground(new java.awt.Color(232, 72, 85));
+        topicoQuantiLB_DC.setText("Quantidade");
 
-        jLabel7.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel7.setText("Validade");
+        topicoValiLB_DC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoValiLB_DC.setForeground(new java.awt.Color(232, 72, 85));
+        topicoValiLB_DC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoValiLB_DC.setText("Validade");
 
-        jLabel1.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(232, 72, 85));
-        jLabel1.setText("Preço");
+        topicoPrecoLB_DC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoPrecoLB_DC.setForeground(new java.awt.Color(232, 72, 85));
+        topicoPrecoLB_DC.setText("Preço");
 
-        jLabel13.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel13.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel13.setText("Nome");
+        nomeLB_DC.setBackground(new java.awt.Color(255, 255, 255));
+        nomeLB_DC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        nomeLB_DC.setForeground(new java.awt.Color(255, 253, 130));
+        nomeLB_DC.setText("Nome");
 
-        jLabel14.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel14.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel14.setText("000");
+        codLB_DC.setBackground(new java.awt.Color(255, 255, 255));
+        codLB_DC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        codLB_DC.setForeground(new java.awt.Color(255, 253, 130));
+        codLB_DC.setText("000");
 
-        jLabel15.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel15.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel15.setText("00,00");
+        precoLB_DC.setBackground(new java.awt.Color(255, 255, 255));
+        precoLB_DC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        precoLB_DC.setForeground(new java.awt.Color(255, 253, 130));
+        precoLB_DC.setText("00,00");
 
-        jLabel16.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel16.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel16.setText("000");
+        quantiLB_DC.setBackground(new java.awt.Color(255, 255, 255));
+        quantiLB_DC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        quantiLB_DC.setForeground(new java.awt.Color(255, 253, 130));
+        quantiLB_DC.setText("000");
 
-        jLabel19.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel19.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel19.setText("dd/mm/aaaa");
+        valiLB_DC.setBackground(new java.awt.Color(255, 255, 255));
+        valiLB_DC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        valiLB_DC.setForeground(new java.awt.Color(255, 253, 130));
+        valiLB_DC.setText("dd/mm/aaaa");
 
-        jLabel21.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel21.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(255, 253, 130));
-        jLabel21.setText("000");
+        totalLB_DC.setBackground(new java.awt.Color(255, 255, 255));
+        totalLB_DC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        totalLB_DC.setForeground(new java.awt.Color(255, 253, 130));
+        totalLB_DC.setText("000");
 
-        sairBTN_detalherCarrinho.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_detalherCarrinho.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        sairBTN_detalherCarrinho.setForeground(new java.awt.Color(232, 72, 85));
-        sairBTN_detalherCarrinho.setText("Sair");
-        sairBTN_detalherCarrinho.addActionListener(new java.awt.event.ActionListener() {
+        sairBTN_DC.setBackground(new java.awt.Color(255, 253, 130));
+        sairBTN_DC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_DC.setForeground(new java.awt.Color(232, 72, 85));
+        sairBTN_DC.setText("Sair");
+        sairBTN_DC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sairBTN_detalherCarrinhoActionPerformed(evt);
+                sairBTN_DCActionPerformed(evt);
             }
         });
 
@@ -163,39 +163,39 @@ public class DetalheCarrinho extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 27, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
+                            .addComponent(lavantLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(madeLB_DC)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE))
+                                    .addComponent(nomeLB_DC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(topicoNomeLB_DC, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(topicoCodLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(codLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(topicoQuantiLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(11, 11, 11)
-                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(topicoValiLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(quantiLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(valiLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(precoLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(topicoPrecoLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 80, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(sairBTN_detalherCarrinho)
+                        .addComponent(sairBTN_DC)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton32)
+                        .addComponent(voltarBTN_DC)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(topicoTotalLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(totalLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -203,28 +203,28 @@ public class DetalheCarrinho extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton32)
-                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(sairBTN_detalherCarrinho))
+                    .addComponent(topicoTotalLB_DC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(voltarBTN_DC)
+                    .addComponent(totalLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sairBTN_DC))
                 .addGap(43, 43, 43)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(madeLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lavantLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel17)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
+                    .addComponent(topicoValiLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topicoCodLB_DC)
+                    .addComponent(topicoQuantiLB_DC)
+                    .addComponent(topicoPrecoLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topicoNomeLB_DC))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nomeLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(precoLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(valiLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(quantiLB_DC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(301, 301, 301))
         );
 
@@ -242,38 +242,38 @@ public class DetalheCarrinho extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
+    private void voltarBTN_DCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_DCActionPerformed
         this.setVisible(false);
         new CrudCarrinho().setVisible(true);
-    }//GEN-LAST:event_jButton32ActionPerformed
+    }//GEN-LAST:event_voltarBTN_DCActionPerformed
 
-    private void sairBTN_detalherCarrinhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_detalherCarrinhoActionPerformed
+    private void sairBTN_DCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_DCActionPerformed
        this.setVisible(false);
         new Login().setVisible(true);
-    }//GEN-LAST:event_sairBTN_detalherCarrinhoActionPerformed
+    }//GEN-LAST:event_sairBTN_DCActionPerformed
 
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton32;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel codLB_DC;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton sairBTN_detalherCarrinho;
+    private javax.swing.JLabel lavantLB_DC;
+    private javax.swing.JLabel madeLB_DC;
+    private javax.swing.JLabel nomeLB_DC;
+    private javax.swing.JLabel precoLB_DC;
+    private javax.swing.JLabel quantiLB_DC;
+    private javax.swing.JButton sairBTN_DC;
+    private javax.swing.JLabel topicoCodLB_DC;
+    private javax.swing.JLabel topicoNomeLB_DC;
+    private javax.swing.JLabel topicoPrecoLB_DC;
+    private javax.swing.JLabel topicoQuantiLB_DC;
+    private javax.swing.JLabel topicoTotalLB_DC;
+    private javax.swing.JLabel topicoValiLB_DC;
+    private javax.swing.JLabel totalLB_DC;
+    private javax.swing.JLabel valiLB_DC;
+    private javax.swing.JButton voltarBTN_DC;
     // End of variables declaration//GEN-END:variables
 }

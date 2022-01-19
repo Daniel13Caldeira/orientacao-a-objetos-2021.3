@@ -28,11 +28,11 @@ public class InicioFuncionario extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        produtoFunc_btn1 = new javax.swing.JButton();
-        carrinhosFunc_btn1 = new javax.swing.JButton();
-        made_label = new javax.swing.JLabel();
-        lavant_btn = new javax.swing.JLabel();
-        Sair_btn = new javax.swing.JButton();
+        produtosBTN_IF = new javax.swing.JButton();
+        carrinhosBTN_IF = new javax.swing.JButton();
+        madeLB_IF = new javax.swing.JLabel();
+        lavantLB_IF = new javax.swing.JLabel();
+        sairBTN_IF = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela de Início - Funcionários");
@@ -44,44 +44,44 @@ public class InicioFuncionario extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        produtoFunc_btn1.setBackground(new java.awt.Color(255, 253, 130));
-        produtoFunc_btn1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        produtoFunc_btn1.setForeground(new java.awt.Color(232, 72, 85));
-        produtoFunc_btn1.setText("Produtos");
-        produtoFunc_btn1.addActionListener(new java.awt.event.ActionListener() {
+        produtosBTN_IF.setBackground(new java.awt.Color(255, 253, 130));
+        produtosBTN_IF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        produtosBTN_IF.setForeground(new java.awt.Color(232, 72, 85));
+        produtosBTN_IF.setText("Produtos");
+        produtosBTN_IF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                produtoFunc_btn1ActionPerformed(evt);
+                produtosBTN_IFActionPerformed(evt);
             }
         });
 
-        carrinhosFunc_btn1.setBackground(new java.awt.Color(255, 253, 130));
-        carrinhosFunc_btn1.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        carrinhosFunc_btn1.setForeground(new java.awt.Color(232, 72, 85));
-        carrinhosFunc_btn1.setText("Carrinhos");
-        carrinhosFunc_btn1.addActionListener(new java.awt.event.ActionListener() {
+        carrinhosBTN_IF.setBackground(new java.awt.Color(255, 253, 130));
+        carrinhosBTN_IF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        carrinhosBTN_IF.setForeground(new java.awt.Color(232, 72, 85));
+        carrinhosBTN_IF.setText("Carrinhos");
+        carrinhosBTN_IF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                carrinhosFunc_btn1ActionPerformed(evt);
+                carrinhosBTN_IFActionPerformed(evt);
             }
         });
 
-        made_label.setBackground(new java.awt.Color(84, 83, 83));
-        made_label.setFont(new java.awt.Font("Colonna MT", 0, 65)); // NOI18N
-        made_label.setForeground(new java.awt.Color(255, 253, 130));
-        made_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        made_label.setText("MADE");
+        madeLB_IF.setBackground(new java.awt.Color(84, 83, 83));
+        madeLB_IF.setFont(new java.awt.Font("Colonna MT", 0, 65)); // NOI18N
+        madeLB_IF.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_IF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        madeLB_IF.setText("MADE");
 
-        lavant_btn.setFont(new java.awt.Font("Colonna MT", 1, 65)); // NOI18N
-        lavant_btn.setForeground(new java.awt.Color(232, 72, 85));
-        lavant_btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lavant_btn.setText("Lavant");
+        lavantLB_IF.setFont(new java.awt.Font("Colonna MT", 1, 65)); // NOI18N
+        lavantLB_IF.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_IF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lavantLB_IF.setText("Lavant");
 
-        Sair_btn.setBackground(new java.awt.Color(255, 253, 130));
-        Sair_btn.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
-        Sair_btn.setForeground(new java.awt.Color(232, 72, 85));
-        Sair_btn.setText("Sair");
-        Sair_btn.addActionListener(new java.awt.event.ActionListener() {
+        sairBTN_IF.setBackground(new java.awt.Color(255, 253, 130));
+        sairBTN_IF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_IF.setForeground(new java.awt.Color(232, 72, 85));
+        sairBTN_IF.setText("Sair");
+        sairBTN_IF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Sair_btnActionPerformed(evt);
+                sairBTN_IFActionPerformed(evt);
             }
         });
 
@@ -93,32 +93,32 @@ public class InicioFuncionario extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(Sair_btn))
+                        .addComponent(sairBTN_IF))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(228, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lavant_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(made_label, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lavantLB_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(madeLB_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(50, 50, 50)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(carrinhosFunc_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(produtoFunc_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(carrinhosBTN_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(produtosBTN_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(229, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(9, 9, 9)
-                .addComponent(Sair_btn)
+                .addComponent(sairBTN_IF)
                 .addGap(18, 23, Short.MAX_VALUE)
-                .addComponent(made_label, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(madeLB_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lavant_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lavantLB_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(produtoFunc_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(produtosBTN_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(carrinhosFunc_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(carrinhosBTN_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(44, Short.MAX_VALUE))
         );
 
@@ -136,34 +136,34 @@ public class InicioFuncionario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void carrinhosFunc_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhosFunc_btn1ActionPerformed
+    private void carrinhosBTN_IFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhosBTN_IFActionPerformed
         //vai para o crud de carrinhos
         this.setVisible(false);
         new CrudCarrinho().setVisible(true);
-    }//GEN-LAST:event_carrinhosFunc_btn1ActionPerformed
+    }//GEN-LAST:event_carrinhosBTN_IFActionPerformed
 
-    private void produtoFunc_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoFunc_btn1ActionPerformed
+    private void produtosBTN_IFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtosBTN_IFActionPerformed
         //vai para o crud de produtos
         this.setVisible(false);
         new CrudProdutos().setVisible(true);
-    }//GEN-LAST:event_produtoFunc_btn1ActionPerformed
+    }//GEN-LAST:event_produtosBTN_IFActionPerformed
 
-    private void Sair_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sair_btnActionPerformed
+    private void sairBTN_IFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_IFActionPerformed
         //vai para o login
         this.setVisible(false);
         new Login().setVisible(true);
-    }//GEN-LAST:event_Sair_btnActionPerformed
+    }//GEN-LAST:event_sairBTN_IFActionPerformed
 
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Sair_btn;
-    private javax.swing.JButton carrinhosFunc_btn1;
+    private javax.swing.JButton carrinhosBTN_IF;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lavant_btn;
-    private javax.swing.JLabel made_label;
-    private javax.swing.JButton produtoFunc_btn1;
+    private javax.swing.JLabel lavantLB_IF;
+    private javax.swing.JLabel madeLB_IF;
+    private javax.swing.JButton produtosBTN_IF;
+    private javax.swing.JButton sairBTN_IF;
     // End of variables declaration//GEN-END:variables
 
 }

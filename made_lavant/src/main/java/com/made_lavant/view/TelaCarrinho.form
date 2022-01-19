@@ -48,50 +48,50 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="btnSair_telaCarrinho" min="-2" max="-2" attributes="0"/>
+                          <Component id="sairBTN_TC" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="btnVoltar_telaCarrinho" min="-2" max="-2" attributes="0"/>
+                          <Component id="voltarBTN_TC" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jLabel10" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="topicoTotalLB_TC" min="-2" pref="71" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="precoTotal_telaCarrinho" min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="totalLB_TC" min="-2" pref="69" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace pref="4" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jLabel8" alignment="1" max="32767" attributes="0"/>
-                              <Component id="jLabel5" alignment="1" min="-2" pref="131" max="-2" attributes="0"/>
+                              <Component id="nomeLB_TC" alignment="1" max="32767" attributes="0"/>
+                              <Component id="topicoNomeLB_TC" alignment="1" min="-2" pref="131" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel6" alignment="0" min="-2" pref="89" max="-2" attributes="0"/>
-                              <Component id="jLabel9" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                              <Component id="topicoCodLB_TC" alignment="0" min="-2" pref="89" max="-2" attributes="0"/>
+                              <Component id="codLB_TC" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jLabel17" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jLabel18" alignment="0" min="-2" pref="84" max="-2" attributes="0"/>
+                              <Component id="TopicoQuantiLB_TC" alignment="0" max="32767" attributes="0"/>
+                              <Component id="quantiLB_TC" alignment="0" min="-2" pref="84" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                  <Component id="jLabel7" min="-2" pref="76" max="-2" attributes="0"/>
+                                  <Component id="topicoValLB_TC" min="-2" pref="76" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jLabel12" pref="81" max="32767" attributes="0"/>
+                                  <Component id="valLB_TC" pref="81" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Component id="precoLB_TC" min="-2" pref="60" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="btnRemoverProduto_telaCarrinho" min="-2" max="-2" attributes="0"/>
+                                  <Component id="removerBTN_TC" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jLabel1" min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Component id="topicoPrecoLB_TC" min="-2" pref="47" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="68" max="32767" attributes="0"/>
@@ -99,9 +99,9 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btnAdicionarProduto_telaCarrinho" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel4" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
-                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addProdBTN_TC" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lavantLB_TC" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
+                              <Component id="madeLB_TC" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
@@ -115,36 +115,36 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel10" alignment="3" max="32767" attributes="0"/>
-                      <Component id="btnSair_telaCarrinho" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="precoTotal_telaCarrinho" alignment="3" max="32767" attributes="0"/>
-                      <Component id="btnVoltar_telaCarrinho" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoTotalLB_TC" alignment="3" max="32767" attributes="0"/>
+                      <Component id="sairBTN_TC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="totalLB_TC" alignment="3" max="32767" attributes="0"/>
+                      <Component id="voltarBTN_TC" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="jLabel3" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="madeLB_TC" min="-2" pref="31" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel4" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="lavantLB_TC" min="-2" pref="22" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnAdicionarProduto_telaCarrinho" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="addProdBTN_TC" min="-2" pref="30" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel7" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel1" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoValLB_TC" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="topicoCodLB_TC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="TopicoQuantiLB_TC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="topicoPrecoLB_TC" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="topicoNomeLB_TC" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel8" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="jLabel9" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="jLabel12" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="jLabel18" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="nomeLB_TC" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="codLB_TC" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="valLB_TC" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="quantiLB_TC" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel2" alignment="3" max="32767" attributes="0"/>
-                          <Component id="btnRemoverProduto_telaCarrinho" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="precoLB_TC" alignment="3" max="32767" attributes="0"/>
+                          <Component id="removerBTN_TC" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="316" max="-2" attributes="0"/>
@@ -153,7 +153,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel12">
+        <Component class="javax.swing.JLabel" name="valLB_TC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -167,7 +167,7 @@
             <Property name="text" type="java.lang.String" value="dd/mm/aaaa"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="topicoTotalLB_TC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -182,7 +182,7 @@
             <Property name="text" type="java.lang.String" value="Total"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="precoTotal_telaCarrinho">
+        <Component class="javax.swing.JLabel" name="totalLB_TC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="11" style="1"/>
@@ -193,7 +193,7 @@
             <Property name="text" type="java.lang.String" value="jLabel11"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="madeLB_TC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -209,7 +209,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="lavantLB_TC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="20" style="1"/>
@@ -221,7 +221,7 @@
             <Property name="text" type="java.lang.String" value="Lavant"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnSair_telaCarrinho">
+        <Component class="javax.swing.JButton" name="sairBTN_TC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -235,10 +235,10 @@
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSair_telaCarrinhoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sairBTN_TCActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="topicoNomeLB_TC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -253,7 +253,7 @@
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="topicoCodLB_TC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="16" style="1"/>
@@ -265,7 +265,7 @@
             <Property name="text" type="java.lang.String" value="C&#xf3;digo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel17">
+        <Component class="javax.swing.JLabel" name="TopicoQuantiLB_TC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="16" style="1"/>
@@ -276,7 +276,7 @@
             <Property name="text" type="java.lang.String" value="Quantidade"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="topicoValLB_TC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="16" style="1"/>
@@ -288,7 +288,7 @@
             <Property name="text" type="java.lang.String" value="Validade"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel18">
+        <Component class="javax.swing.JLabel" name="quantiLB_TC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="13" style="1"/>
@@ -299,7 +299,7 @@
             <Property name="text" type="java.lang.String" value="000"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="nomeLB_TC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -313,7 +313,7 @@
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnAdicionarProduto_telaCarrinho">
+        <Component class="javax.swing.JButton" name="addProdBTN_TC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -327,10 +327,10 @@
             <Property name="text" type="java.lang.String" value="Adicionar Produto"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdicionarProduto_telaCarrinhoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addProdBTN_TCActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="codLB_TC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -344,7 +344,7 @@
             <Property name="text" type="java.lang.String" value="000"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="topicoPrecoLB_TC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="16" style="1"/>
@@ -355,7 +355,7 @@
             <Property name="text" type="java.lang.String" value="Pre&#xe7;o"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="precoLB_TC">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="13" style="1"/>
@@ -366,7 +366,7 @@
             <Property name="text" type="java.lang.String" value="00.00"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnRemoverProduto_telaCarrinho">
+        <Component class="javax.swing.JButton" name="removerBTN_TC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -377,7 +377,7 @@
             <Property name="text" type="java.lang.String" value="Remover"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnVoltar_telaCarrinho">
+        <Component class="javax.swing.JButton" name="voltarBTN_TC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
@@ -391,7 +391,7 @@
             <Property name="text" type="java.lang.String" value="Voltar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltar_telaCarrinhoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="voltarBTN_TCActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
