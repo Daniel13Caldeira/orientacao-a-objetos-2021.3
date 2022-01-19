@@ -15,6 +15,7 @@ public class InicioFuncionario extends javax.swing.JFrame {
      */
     public InicioFuncionario() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

@@ -17,6 +17,7 @@ public class PerfilCliente extends javax.swing.JFrame {
      */
     public PerfilCliente() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

@@ -15,6 +15,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
      */
     public TelaCarrinho() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

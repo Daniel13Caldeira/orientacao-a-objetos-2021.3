@@ -15,6 +15,7 @@ public class EditarDadosCliente extends javax.swing.JFrame {
      */
     public EditarDadosCliente() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

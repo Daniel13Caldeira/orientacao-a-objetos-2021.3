@@ -15,6 +15,7 @@ public class DetalheProduto_Func extends javax.swing.JFrame {
      */
     public DetalheProduto_Func() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

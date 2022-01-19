@@ -15,6 +15,7 @@ public class EditarProduto extends javax.swing.JFrame {
      */
     public EditarProduto() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

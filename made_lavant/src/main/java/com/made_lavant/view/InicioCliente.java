@@ -18,6 +18,7 @@ public class InicioCliente extends javax.swing.JFrame {
      */
     public InicioCliente() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

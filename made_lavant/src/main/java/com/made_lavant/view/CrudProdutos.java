@@ -15,6 +15,7 @@ public class CrudProdutos extends javax.swing.JFrame {
      */
     public CrudProdutos() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

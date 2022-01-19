@@ -15,6 +15,7 @@ public class CrudFuncionarios extends javax.swing.JFrame {
      */
     public CrudFuncionarios() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

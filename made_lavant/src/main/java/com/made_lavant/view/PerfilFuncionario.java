@@ -17,6 +17,7 @@ public class PerfilFuncionario extends javax.swing.JFrame {
      */
     public PerfilFuncionario() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

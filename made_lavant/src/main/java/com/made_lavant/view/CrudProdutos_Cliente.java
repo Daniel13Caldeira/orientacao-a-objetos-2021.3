@@ -15,6 +15,7 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
      */
     public CrudProdutos_Cliente() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

@@ -15,6 +15,7 @@ public  class Confirmacao extends javax.swing.JFrame {
      */
     public Confirmacao() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

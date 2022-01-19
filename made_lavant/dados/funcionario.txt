@@ -1,2 +1,2 @@
-A3;gerente;null;null;null;null;null;null;madeLavant;
-A4;ger;null;null;null;null;null;null;madeLavant;
+A0;Gerente_teste;null;null;null;null;null;null;123;
+B1;Funcionario_teste;null;null;null;null;null;null;123;

@@ -24,6 +24,7 @@ public class CadastroProduto extends javax.swing.JFrame {
      */
     public CadastroProduto() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

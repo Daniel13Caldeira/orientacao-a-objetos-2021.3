@@ -15,6 +15,7 @@ public class DetalheCarrinho extends javax.swing.JFrame {
      */
     public DetalheCarrinho() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

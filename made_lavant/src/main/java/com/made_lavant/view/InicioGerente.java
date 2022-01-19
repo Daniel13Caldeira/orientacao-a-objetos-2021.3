@@ -15,6 +15,7 @@ public class InicioGerente extends javax.swing.JFrame {
      */
     public InicioGerente() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

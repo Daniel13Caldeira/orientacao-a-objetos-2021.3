@@ -16,6 +16,7 @@ public class CrudCarrinho extends javax.swing.JFrame {
      */
     public CrudCarrinho() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

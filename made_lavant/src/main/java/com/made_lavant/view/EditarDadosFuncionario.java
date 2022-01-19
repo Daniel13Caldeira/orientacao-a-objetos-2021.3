@@ -15,6 +15,7 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
      */
     public EditarDadosFuncionario() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**

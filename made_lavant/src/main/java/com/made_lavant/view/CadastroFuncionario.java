@@ -19,6 +19,8 @@ public class CadastroFuncionario extends javax.swing.JFrame {
      */
     public CadastroFuncionario() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+
     }
 
     /**

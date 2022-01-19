@@ -19,6 +19,7 @@ public class CadastroGerente extends javax.swing.JFrame {
      */
     public CadastroGerente() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
