@@ -4,6 +4,9 @@
  */
 package com.made_lavant.view;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Daniel
@@ -28,9 +31,6 @@ public class CrudFuncionarios extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        topicoIdLB_CRF = new javax.swing.JLabel();
-        nomeLB_CRF = new javax.swing.JLabel();
-        idLB_CRF = new javax.swing.JLabel();
         madeLB_CRF = new javax.swing.JLabel();
         addFuncBTN_CRF = new javax.swing.JButton();
         lavantLB_CRF = new javax.swing.JLabel();
@@ -39,28 +39,15 @@ public class CrudFuncionarios extends javax.swing.JFrame {
         editarBTN_CRF = new javax.swing.JButton();
         descricaoBTN_CRF = new javax.swing.JButton();
         voltarBTN_CRF = new javax.swing.JButton();
-        topicoNomeLB_CRF = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTFuncionario = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lista de Funcionários");
         getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
-
-        topicoIdLB_CRF.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        topicoIdLB_CRF.setForeground(new java.awt.Color(232, 72, 85));
-        topicoIdLB_CRF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        topicoIdLB_CRF.setText("Identificação");
-
-        nomeLB_CRF.setBackground(new java.awt.Color(255, 255, 255));
-        nomeLB_CRF.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        nomeLB_CRF.setForeground(new java.awt.Color(255, 253, 130));
-        nomeLB_CRF.setText("Nome");
-
-        idLB_CRF.setBackground(new java.awt.Color(255, 255, 255));
-        idLB_CRF.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        idLB_CRF.setForeground(new java.awt.Color(255, 253, 130));
-        idLB_CRF.setText("000");
 
         madeLB_CRF.setBackground(new java.awt.Color(255, 253, 130));
         madeLB_CRF.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
@@ -135,50 +122,60 @@ public class CrudFuncionarios extends javax.swing.JFrame {
             }
         });
 
-        topicoNomeLB_CRF.setBackground(new java.awt.Color(255, 253, 130));
-        topicoNomeLB_CRF.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        topicoNomeLB_CRF.setForeground(new java.awt.Color(232, 72, 85));
-        topicoNomeLB_CRF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        topicoNomeLB_CRF.setText("Nome");
+        jTFuncionario.setBackground(new java.awt.Color(45, 48, 71));
+        jTFuncionario.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "NOME", "IDENTIFICAÇÃO"
+            }
+        ));
+        jScrollPane1.setViewportView(jTFuncionario);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(sairBTN_CRF)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(voltarBTN_CRF)
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(topicoNomeLB_CRF)
-                        .addGap(149, 149, 149)
-                        .addComponent(topicoIdLB_CRF))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(nomeLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21)
-                        .addComponent(idLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(151, 151, 151)
-                .addComponent(removerBTN_CRF)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(editarBTN_CRF)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(descricaoBTN_CRF)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(addFuncBTN_CRF)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(sairBTN_CRF)
+                        .addGap(194, 194, 194)
+                        .addComponent(addFuncBTN_CRF)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
+                        .addComponent(voltarBTN_CRF)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lavantLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(madeLB_CRF))))
-                .addGap(300, 300, 300))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(removerBTN_CRF)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(editarBTN_CRF)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(descricaoBTN_CRF)
+                                .addContainerGap())
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lavantLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(madeLB_CRF))
+                                .addGap(352, 352, 352))))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,25 +183,19 @@ public class CrudFuncionarios extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(sairBTN_CRF)
-                    .addComponent(voltarBTN_CRF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(voltarBTN_CRF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(addFuncBTN_CRF))
                 .addGap(18, 18, 18)
                 .addComponent(madeLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lavantLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(addFuncBTN_CRF)
-                .addGap(45, 45, 45)
+                .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(topicoNomeLB_CRF)
-                    .addComponent(topicoIdLB_CRF))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nomeLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(idLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(removerBTN_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(descricaoBTN_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(editarBTN_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(descricaoBTN_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(131, Short.MAX_VALUE))
+                    .addComponent(removerBTN_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         getContentPane().add(jPanel1);
@@ -239,6 +230,13 @@ public class CrudFuncionarios extends javax.swing.JFrame {
 
     private void removerBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerBTN_CRFActionPerformed
         // TODO add your handling code here:
+        if(jTFuncionario.getSelectedRow()!= -1){
+            DefaultTableModel dtmProdutos = (DefaultTableModel)jTFuncionario.getModel();
+            dtmProdutos.removeRow(jTFuncionario.getSelectedRow());
+        }else{
+            
+            JOptionPane.showMessageDialog(null, "NENHUM FUNCIONÁRIO SELECIONADO!");
+        }
     }//GEN-LAST:event_removerBTN_CRFActionPerformed
 
     /**
@@ -248,15 +246,14 @@ public class CrudFuncionarios extends javax.swing.JFrame {
     private javax.swing.JButton addFuncBTN_CRF;
     private javax.swing.JButton descricaoBTN_CRF;
     private javax.swing.JButton editarBTN_CRF;
-    private javax.swing.JLabel idLB_CRF;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTFuncionario;
     private javax.swing.JLabel lavantLB_CRF;
     private javax.swing.JLabel madeLB_CRF;
-    private javax.swing.JLabel nomeLB_CRF;
     private javax.swing.JButton removerBTN_CRF;
     private javax.swing.JButton sairBTN_CRF;
-    private javax.swing.JLabel topicoIdLB_CRF;
-    private javax.swing.JLabel topicoNomeLB_CRF;
     private javax.swing.JButton voltarBTN_CRF;
     // End of variables declaration//GEN-END:variables
 }

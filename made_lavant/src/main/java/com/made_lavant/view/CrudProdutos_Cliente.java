@@ -33,14 +33,11 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
         lavantLB_CRPC = new javax.swing.JLabel();
         sairBTN_CRPC = new javax.swing.JButton();
         voltarBTN_CRPC = new javax.swing.JButton();
-        topicoNomeLB_CRPC = new javax.swing.JLabel();
-        topicoCodLB_CRPC = new javax.swing.JLabel();
-        topicoPrecoLB_CRPC = new javax.swing.JLabel();
         addCarrinhoBTN_CRPC = new javax.swing.JButton();
         descricaoBTN_CRPC = new javax.swing.JButton();
-        nomeLB_CRPC = new javax.swing.JLabel();
-        codLB_CRPC = new javax.swing.JLabel();
-        precoLB_CRPC = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTProdCliente = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TelaDeProdutosCliente");
@@ -79,22 +76,6 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
             }
         });
 
-        topicoNomeLB_CRPC.setBackground(new java.awt.Color(255, 253, 130));
-        topicoNomeLB_CRPC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        topicoNomeLB_CRPC.setForeground(new java.awt.Color(232, 72, 85));
-        topicoNomeLB_CRPC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        topicoNomeLB_CRPC.setText("Nome");
-
-        topicoCodLB_CRPC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        topicoCodLB_CRPC.setForeground(new java.awt.Color(232, 72, 85));
-        topicoCodLB_CRPC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        topicoCodLB_CRPC.setText("Código");
-
-        topicoPrecoLB_CRPC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        topicoPrecoLB_CRPC.setForeground(new java.awt.Color(232, 72, 85));
-        topicoPrecoLB_CRPC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        topicoPrecoLB_CRPC.setText("Preço");
-
         addCarrinhoBTN_CRPC.setBackground(new java.awt.Color(255, 253, 130));
         addCarrinhoBTN_CRPC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         addCarrinhoBTN_CRPC.setForeground(new java.awt.Color(232, 72, 85));
@@ -110,20 +91,28 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
             }
         });
 
-        nomeLB_CRPC.setBackground(new java.awt.Color(255, 255, 255));
-        nomeLB_CRPC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        nomeLB_CRPC.setForeground(new java.awt.Color(255, 253, 130));
-        nomeLB_CRPC.setText("Nome");
+        jTProdCliente.setBackground(new java.awt.Color(45, 48, 71));
+        jTProdCliente.setFont(new java.awt.Font("Colonna MT", 0, 11)); // NOI18N
+        jTProdCliente.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
 
-        codLB_CRPC.setBackground(new java.awt.Color(255, 255, 255));
-        codLB_CRPC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        codLB_CRPC.setForeground(new java.awt.Color(255, 253, 130));
-        codLB_CRPC.setText("000");
+            },
+            new String [] {
+                "PRODUTO", "CÓDIGO", "PREÇO"
+            }
+        ));
+        jScrollPane1.setViewportView(jTProdCliente);
 
-        precoLB_CRPC.setBackground(new java.awt.Color(255, 255, 255));
-        precoLB_CRPC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        precoLB_CRPC.setForeground(new java.awt.Color(255, 253, 130));
-        precoLB_CRPC.setText("00,00");
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1)
+        );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -137,28 +126,16 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(voltarBTN_CRPC))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(topicoNomeLB_CRPC)
-                                .addGap(149, 149, 149)
-                                .addComponent(topicoCodLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(67, 67, 67)
-                                .addComponent(topicoPrecoLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lavantLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(madeLB_CRPC)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(nomeLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(21, 21, 21)
-                                .addComponent(codLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(46, 46, 46)
-                                .addComponent(precoLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(28, 28, 28)
-                                .addComponent(addCarrinhoBTN_CRPC)
-                                .addGap(18, 18, 18)
-                                .addComponent(descricaoBTN_CRPC)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(madeLB_CRPC)
+                        .addGap(0, 664, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(lavantLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(addCarrinhoBTN_CRPC)
+                        .addGap(18, 18, 18)
+                        .addComponent(descricaoBTN_CRPC)))
                 .addContainerGap())
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,20 +147,12 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addComponent(madeLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lavantLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(topicoNomeLB_CRPC)
-                    .addComponent(topicoCodLB_CRPC)
-                    .addComponent(topicoPrecoLB_CRPC))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addCarrinhoBTN_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lavantLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(descricaoBTN_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nomeLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(codLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(precoLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(116, Short.MAX_VALUE))
+                    .addComponent(addCarrinhoBTN_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -231,18 +200,15 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addCarrinhoBTN_CRPC;
-    private javax.swing.JLabel codLB_CRPC;
     private javax.swing.JButton descricaoBTN_CRPC;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTProdCliente;
     private javax.swing.JLabel lavantLB_CRPC;
     private javax.swing.JLabel madeLB_CRPC;
-    private javax.swing.JLabel nomeLB_CRPC;
-    private javax.swing.JLabel precoLB_CRPC;
     private javax.swing.JButton sairBTN_CRPC;
-    private javax.swing.JLabel topicoCodLB_CRPC;
-    private javax.swing.JLabel topicoNomeLB_CRPC;
-    private javax.swing.JLabel topicoPrecoLB_CRPC;
     private javax.swing.JButton voltarBTN_CRPC;
     // End of variables declaration//GEN-END:variables
 }

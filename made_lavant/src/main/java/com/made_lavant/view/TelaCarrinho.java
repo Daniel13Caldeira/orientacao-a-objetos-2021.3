@@ -4,6 +4,9 @@
  */
 package com.made_lavant.view;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author matheusreis
@@ -28,35 +31,23 @@ public class TelaCarrinho extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        valLB_TC = new javax.swing.JLabel();
         topicoTotalLB_TC = new javax.swing.JLabel();
         totalLB_TC = new javax.swing.JLabel();
         madeLB_TC = new javax.swing.JLabel();
         lavantLB_TC = new javax.swing.JLabel();
         sairBTN_TC = new javax.swing.JButton();
-        topicoNomeLB_TC = new javax.swing.JLabel();
-        topicoCodLB_TC = new javax.swing.JLabel();
-        TopicoQuantiLB_TC = new javax.swing.JLabel();
-        topicoValLB_TC = new javax.swing.JLabel();
-        quantiLB_TC = new javax.swing.JLabel();
-        nomeLB_TC = new javax.swing.JLabel();
         addProdBTN_TC = new javax.swing.JButton();
-        codLB_TC = new javax.swing.JLabel();
-        topicoPrecoLB_TC = new javax.swing.JLabel();
-        precoLB_TC = new javax.swing.JLabel();
         removerBTN_TC = new javax.swing.JButton();
         voltarBTN_TC = new javax.swing.JButton();
         visualizarBTN_TC = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTCarrinho = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Carrinho");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
-
-        valLB_TC.setBackground(new java.awt.Color(255, 255, 255));
-        valLB_TC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        valLB_TC.setForeground(new java.awt.Color(255, 253, 130));
-        valLB_TC.setText("dd/mm/aaaa");
 
         topicoTotalLB_TC.setBackground(new java.awt.Color(255, 253, 130));
         topicoTotalLB_TC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
@@ -90,35 +81,6 @@ public class TelaCarrinho extends javax.swing.JFrame {
             }
         });
 
-        topicoNomeLB_TC.setBackground(new java.awt.Color(255, 253, 130));
-        topicoNomeLB_TC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        topicoNomeLB_TC.setForeground(new java.awt.Color(232, 72, 85));
-        topicoNomeLB_TC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        topicoNomeLB_TC.setText("Nome");
-
-        topicoCodLB_TC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        topicoCodLB_TC.setForeground(new java.awt.Color(232, 72, 85));
-        topicoCodLB_TC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        topicoCodLB_TC.setText("Código");
-
-        TopicoQuantiLB_TC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        TopicoQuantiLB_TC.setForeground(new java.awt.Color(232, 72, 85));
-        TopicoQuantiLB_TC.setText("Quantidade");
-
-        topicoValLB_TC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        topicoValLB_TC.setForeground(new java.awt.Color(232, 72, 85));
-        topicoValLB_TC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        topicoValLB_TC.setText("Validade");
-
-        quantiLB_TC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        quantiLB_TC.setForeground(new java.awt.Color(255, 253, 130));
-        quantiLB_TC.setText("000");
-
-        nomeLB_TC.setBackground(new java.awt.Color(255, 255, 255));
-        nomeLB_TC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        nomeLB_TC.setForeground(new java.awt.Color(255, 253, 130));
-        nomeLB_TC.setText("Nome");
-
         addProdBTN_TC.setBackground(new java.awt.Color(255, 253, 130));
         addProdBTN_TC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         addProdBTN_TC.setForeground(new java.awt.Color(232, 72, 85));
@@ -129,22 +91,14 @@ public class TelaCarrinho extends javax.swing.JFrame {
             }
         });
 
-        codLB_TC.setBackground(new java.awt.Color(255, 255, 255));
-        codLB_TC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        codLB_TC.setForeground(new java.awt.Color(255, 253, 130));
-        codLB_TC.setText("000");
-
-        topicoPrecoLB_TC.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        topicoPrecoLB_TC.setForeground(new java.awt.Color(232, 72, 85));
-        topicoPrecoLB_TC.setText("Preço");
-
-        precoLB_TC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        precoLB_TC.setForeground(new java.awt.Color(255, 253, 130));
-        precoLB_TC.setText("00.00");
-
         removerBTN_TC.setBackground(new java.awt.Color(255, 253, 130));
         removerBTN_TC.setForeground(new java.awt.Color(232, 72, 85));
         removerBTN_TC.setText("Remover");
+        removerBTN_TC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removerBTN_TCActionPerformed(evt);
+            }
+        });
 
         voltarBTN_TC.setBackground(new java.awt.Color(255, 253, 130));
         voltarBTN_TC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
@@ -166,6 +120,29 @@ public class TelaCarrinho extends javax.swing.JFrame {
             }
         });
 
+        jTCarrinho.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "NOME", "CÓDIGO", "QUANTIDADE", "VALIDADE", "PREÇO"
+            }
+        ));
+        jScrollPane1.setViewportView(jTCarrinho);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -177,51 +154,26 @@ public class TelaCarrinho extends javax.swing.JFrame {
                         .addComponent(sairBTN_TC)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(voltarBTN_TC)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                        .addComponent(addProdBTN_TC)
+                        .addGap(67, 67, 67)
                         .addComponent(topicoTotalLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(totalLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 4, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(nomeLB_TC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(topicoNomeLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(topicoCodLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(codLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(TopicoQuantiLB_TC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(quantiLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(11, 11, 11)
-                                .addComponent(topicoValLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(valLB_TC, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(precoLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(removerBTN_TC))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(topicoPrecoLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 68, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(removerBTN_TC))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(addProdBTN_TC)
                             .addComponent(lavantLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(madeLB_TC))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 561, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(visualizarBTN_TC)))
                 .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,31 +183,17 @@ public class TelaCarrinho extends javax.swing.JFrame {
                     .addComponent(topicoTotalLB_TC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(sairBTN_TC)
                     .addComponent(totalLB_TC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(voltarBTN_TC))
+                    .addComponent(voltarBTN_TC)
+                    .addComponent(addProdBTN_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addComponent(madeLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lavantLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(removerBTN_TC)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(addProdBTN_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(topicoValLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(topicoCodLB_TC)
-                    .addComponent(TopicoQuantiLB_TC)
-                    .addComponent(topicoPrecoLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(topicoNomeLB_TC))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(nomeLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(codLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(valLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(quantiLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(precoLB_TC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(removerBTN_TC)))
-                .addGap(276, 276, 276)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(visualizarBTN_TC)
                 .addContainerGap())
         );
@@ -295,28 +233,32 @@ public class TelaCarrinho extends javax.swing.JFrame {
         new CrudCarrinho().setVisible(true);        
     }//GEN-LAST:event_visualizarBTN_TCActionPerformed
 
+    private void removerBTN_TCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerBTN_TCActionPerformed
+        // TODO add your handling code here:
+        if(jTCarrinho.getSelectedRow()!= -1){
+            DefaultTableModel dtmProdutos = (DefaultTableModel)jTCarrinho.getModel();
+            dtmProdutos.removeRow(jTCarrinho.getSelectedRow());
+        }else{
+            
+            JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
+        }
+    }//GEN-LAST:event_removerBTN_TCActionPerformed
+
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel TopicoQuantiLB_TC;
     private javax.swing.JButton addProdBTN_TC;
-    private javax.swing.JLabel codLB_TC;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTCarrinho;
     private javax.swing.JLabel lavantLB_TC;
     private javax.swing.JLabel madeLB_TC;
-    private javax.swing.JLabel nomeLB_TC;
-    private javax.swing.JLabel precoLB_TC;
-    private javax.swing.JLabel quantiLB_TC;
     private javax.swing.JButton removerBTN_TC;
     private javax.swing.JButton sairBTN_TC;
-    private javax.swing.JLabel topicoCodLB_TC;
-    private javax.swing.JLabel topicoNomeLB_TC;
-    private javax.swing.JLabel topicoPrecoLB_TC;
     private javax.swing.JLabel topicoTotalLB_TC;
-    private javax.swing.JLabel topicoValLB_TC;
     private javax.swing.JLabel totalLB_TC;
-    private javax.swing.JLabel valLB_TC;
     private javax.swing.JButton visualizarBTN_TC;
     private javax.swing.JButton voltarBTN_TC;
     // End of variables declaration//GEN-END:variables
