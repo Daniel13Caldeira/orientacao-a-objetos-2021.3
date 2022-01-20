@@ -46,6 +46,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
         precoLB_TC = new javax.swing.JLabel();
         removerBTN_TC = new javax.swing.JButton();
         voltarBTN_TC = new javax.swing.JButton();
+        visualizarBTN_TC = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Carrinho");
@@ -155,6 +156,16 @@ public class TelaCarrinho extends javax.swing.JFrame {
             }
         });
 
+        visualizarBTN_TC.setBackground(new java.awt.Color(255, 253, 130));
+        visualizarBTN_TC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        visualizarBTN_TC.setForeground(new java.awt.Color(232, 72, 85));
+        visualizarBTN_TC.setText("Vizualizar carrinho");
+        visualizarBTN_TC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                visualizarBTN_TCActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -206,7 +217,10 @@ public class TelaCarrinho extends javax.swing.JFrame {
                             .addComponent(addProdBTN_TC)
                             .addComponent(lavantLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(madeLB_TC))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(visualizarBTN_TC)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -241,7 +255,9 @@ public class TelaCarrinho extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(precoLB_TC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(removerBTN_TC)))
-                .addGap(316, 316, 316))
+                .addGap(276, 276, 276)
+                .addComponent(visualizarBTN_TC)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -273,6 +289,12 @@ public class TelaCarrinho extends javax.swing.JFrame {
         new InicioCliente().setVisible(true);
     }//GEN-LAST:event_voltarBTN_TCActionPerformed
 
+    private void visualizarBTN_TCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_visualizarBTN_TCActionPerformed
+        
+        this.setVisible(false);
+        new CrudCarrinho().setVisible(true);        
+    }//GEN-LAST:event_visualizarBTN_TCActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -295,6 +317,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
     private javax.swing.JLabel topicoValLB_TC;
     private javax.swing.JLabel totalLB_TC;
     private javax.swing.JLabel valLB_TC;
+    private javax.swing.JButton visualizarBTN_TC;
     private javax.swing.JButton voltarBTN_TC;
     // End of variables declaration//GEN-END:variables
 }
