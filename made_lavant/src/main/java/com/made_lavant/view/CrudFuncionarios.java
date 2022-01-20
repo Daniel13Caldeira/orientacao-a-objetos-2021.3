@@ -214,13 +214,29 @@ public class CrudFuncionarios extends javax.swing.JFrame {
     }//GEN-LAST:event_sairBTN_CRFActionPerformed
 
     private void descricaoBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRFActionPerformed
-        this.setVisible(false);
-        new PerfilFuncionario().setVisible(true);
+        
+        if(jTFuncionario.getSelectedRow()!= -1){
+            DefaultTableModel dtmProdutos = (DefaultTableModel)jTFuncionario.getModel();
+            this.setVisible(false);
+            new PerfilFuncionario().setVisible(true);
+        }else{
+            
+            JOptionPane.showMessageDialog(null, "NENHUM FUNCIONÁRIO SELECIONADO!");
+        }
+        
     }//GEN-LAST:event_descricaoBTN_CRFActionPerformed
 
     private void editarBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBTN_CRFActionPerformed
-        this.setVisible(false);
-        new EditarDadosFuncionario().setVisible(true);
+        
+        if(jTFuncionario.getSelectedRow()!= -1){
+            DefaultTableModel dtmProdutos = (DefaultTableModel)jTFuncionario.getModel();
+            this.setVisible(false);
+            new EditarDadosFuncionario().setVisible(true);
+        }else{
+            
+            JOptionPane.showMessageDialog(null, "NENHUM FUNCIONÁRIO SELECIONADO!");
+        }
+        
     }//GEN-LAST:event_editarBTN_CRFActionPerformed
 
     private void voltarBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CRFActionPerformed

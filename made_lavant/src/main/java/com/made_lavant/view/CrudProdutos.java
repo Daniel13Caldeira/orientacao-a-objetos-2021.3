@@ -225,13 +225,31 @@ public class CrudProdutos extends javax.swing.JFrame {
     }//GEN-LAST:event_addProdBTN_CRPActionPerformed
 
     private void descricaoBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRPActionPerformed
-        this.setVisible(false);
-        new DetalheProduto_Func().setVisible(true);
+        
+        if(jTProdutos.getSelectedRow()!= -1){
+            DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdutos.getModel();
+            
+            this.setVisible(false);
+            new DetalheProduto_Func().setVisible(true);
+        }else{
+            
+            JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
+        }
+        
     }//GEN-LAST:event_descricaoBTN_CRPActionPerformed
 
     private void editarBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBTN_CRPActionPerformed
-        this.setVisible(false);
-        new EditarProduto().setVisible(true);
+        
+        if(jTProdutos.getSelectedRow()!= -1){
+            DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdutos.getModel();
+            
+            this.setVisible(false);
+            new EditarProduto().setVisible(true);
+        }else{
+            
+            JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
+        }
+        
     }//GEN-LAST:event_editarBTN_CRPActionPerformed
 
     private void removerBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerBTN_CRPActionPerformed

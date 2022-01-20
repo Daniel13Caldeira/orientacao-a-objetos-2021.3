@@ -4,6 +4,9 @@
  */
 package com.made_lavant.view;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Marcio
@@ -80,6 +83,11 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
         addCarrinhoBTN_CRPC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         addCarrinhoBTN_CRPC.setForeground(new java.awt.Color(232, 72, 85));
         addCarrinhoBTN_CRPC.setText("Adicionar ao Carrinho");
+        addCarrinhoBTN_CRPC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addCarrinhoBTN_CRPCActionPerformed(evt);
+            }
+        });
 
         descricaoBTN_CRPC.setBackground(new java.awt.Color(255, 253, 130));
         descricaoBTN_CRPC.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
@@ -191,9 +199,30 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
     }//GEN-LAST:event_voltarBTN_CRPCActionPerformed
 
     private void descricaoBTN_CRPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRPCActionPerformed
-        this.setVisible(false);
-        new DetalheProduto().setVisible(true);
+        
+        if(jTProdCliente.getSelectedRow()!= -1){
+            DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdCliente.getModel();
+            
+            this.setVisible(false);
+            new DetalheProduto().setVisible(true);
+        }else{
+            
+            JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
+        }
+        
     }//GEN-LAST:event_descricaoBTN_CRPCActionPerformed
+
+    private void addCarrinhoBTN_CRPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCarrinhoBTN_CRPCActionPerformed
+        // TODO add your handling code here:
+        if(jTProdCliente.getSelectedRow()!= -1){
+            DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdCliente.getModel();
+            
+            
+        }else{
+            
+            JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
+        }
+    }//GEN-LAST:event_addCarrinhoBTN_CRPCActionPerformed
 
     /**
      * @param args the command line arguments
