@@ -33,6 +33,7 @@ public class InicioFuncionario extends javax.swing.JFrame {
         madeLB_IF = new javax.swing.JLabel();
         lavantLB_IF = new javax.swing.JLabel();
         sairBTN_IF = new javax.swing.JButton();
+        perfilBTN_IF = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela de Início - Funcionários");
@@ -85,6 +86,16 @@ public class InicioFuncionario extends javax.swing.JFrame {
             }
         });
 
+        perfilBTN_IF.setBackground(new java.awt.Color(255, 253, 130));
+        perfilBTN_IF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        perfilBTN_IF.setForeground(new java.awt.Color(232, 72, 85));
+        perfilBTN_IF.setText("Perfil");
+        perfilBTN_IF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                perfilBTN_IFActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -101,9 +112,10 @@ public class InicioFuncionario extends javax.swing.JFrame {
                             .addComponent(madeLB_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(50, 50, 50)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(carrinhosBTN_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(produtosBTN_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(carrinhosBTN_IF, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                                    .addComponent(produtosBTN_IF, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                                    .addComponent(perfilBTN_IF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap(229, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -111,7 +123,7 @@ public class InicioFuncionario extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(9, 9, 9)
                 .addComponent(sairBTN_IF)
-                .addGap(18, 23, Short.MAX_VALUE)
+                .addGap(18, 92, Short.MAX_VALUE)
                 .addComponent(madeLB_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lavantLB_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -119,7 +131,9 @@ public class InicioFuncionario extends javax.swing.JFrame {
                 .addComponent(produtosBTN_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(carrinhosBTN_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(perfilBTN_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -154,6 +168,11 @@ public class InicioFuncionario extends javax.swing.JFrame {
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_IFActionPerformed
 
+    private void perfilBTN_IFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilBTN_IFActionPerformed
+        this.setVisible(false);
+        new PerfilFuncionarioTelaInicial().setVisible(true);
+    }//GEN-LAST:event_perfilBTN_IFActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -162,6 +181,7 @@ public class InicioFuncionario extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lavantLB_IF;
     private javax.swing.JLabel madeLB_IF;
+    private javax.swing.JButton perfilBTN_IF;
     private javax.swing.JButton produtosBTN_IF;
     private javax.swing.JButton sairBTN_IF;
     // End of variables declaration//GEN-END:variables

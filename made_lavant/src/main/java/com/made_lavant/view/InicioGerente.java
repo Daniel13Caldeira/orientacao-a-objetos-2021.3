@@ -34,6 +34,7 @@ public class InicioGerente extends javax.swing.JFrame {
         lavantLB_IG = new javax.swing.JLabel();
         sairBTN_IG = new javax.swing.JButton();
         funcionariosBTN_IG = new javax.swing.JButton();
+        perfilBTN_IG = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela de Início - Gerente");
@@ -91,27 +92,37 @@ public class InicioGerente extends javax.swing.JFrame {
             }
         });
 
+        perfilBTN_IG.setBackground(new java.awt.Color(255, 253, 130));
+        perfilBTN_IG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        perfilBTN_IG.setForeground(new java.awt.Color(232, 72, 85));
+        perfilBTN_IG.setText("Perfil");
+        perfilBTN_IG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                perfilBTN_IGActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(sairBTN_IG)
+                .addContainerGap(695, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(sairBTN_IG))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(250, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lavantLB_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(madeLB_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(251, Short.MAX_VALUE))
+                    .addComponent(lavantLB_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(madeLB_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(funcionariosBTN_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(carrinhoBTN_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(produtoBTN_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(funcionariosBTN_IG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(carrinhoBTN_IG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(produtoBTN_IG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(perfilBTN_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -119,17 +130,19 @@ public class InicioGerente extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(9, 9, 9)
                 .addComponent(sairBTN_IG)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
                 .addComponent(madeLB_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lavantLB_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(produtoBTN_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(carrinhoBTN_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(funcionariosBTN_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(perfilBTN_IG, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -149,13 +162,13 @@ public class InicioGerente extends javax.swing.JFrame {
     private void produtoBTN_IGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoBTN_IGActionPerformed
         //vai para o crud de produtos
         this.setVisible(false);
-        new CrudProdutos().setVisible(true);
+        new CrudProdutosGerente().setVisible(true);
     }//GEN-LAST:event_produtoBTN_IGActionPerformed
 
     private void carrinhoBTN_IGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhoBTN_IGActionPerformed
         //vai para o crud de carrinhos
         this.setVisible(false);
-        new CrudCarrinho().setVisible(true);
+        new CrudCarrinhoGerente().setVisible(true);
     }//GEN-LAST:event_carrinhoBTN_IGActionPerformed
 
     private void sairBTN_IGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_IGActionPerformed
@@ -170,6 +183,11 @@ public class InicioGerente extends javax.swing.JFrame {
         new CrudFuncionarios().setVisible(true);
     }//GEN-LAST:event_funcionariosBTN_IGActionPerformed
 
+    private void perfilBTN_IGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilBTN_IGActionPerformed
+        this.setVisible(false);
+        new PerfilGerente().setVisible(true);
+    }//GEN-LAST:event_perfilBTN_IGActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -179,6 +197,7 @@ public class InicioGerente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lavantLB_IG;
     private javax.swing.JLabel madeLB_IG;
+    private javax.swing.JButton perfilBTN_IG;
     private javax.swing.JButton produtoBTN_IG;
     private javax.swing.JButton sairBTN_IG;
     // End of variables declaration//GEN-END:variables
