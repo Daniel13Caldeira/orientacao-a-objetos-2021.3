@@ -70,9 +70,10 @@
                               <Component id="madeLB_IF" min="-2" pref="267" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="carrinhosBTN_IF" min="-2" pref="152" max="-2" attributes="0"/>
-                                      <Component id="produtosBTN_IF" min="-2" pref="152" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="carrinhosBTN_IF" pref="152" max="32767" attributes="0"/>
+                                      <Component id="produtosBTN_IF" pref="152" max="32767" attributes="0"/>
+                                      <Component id="perfilBTN_IF" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -87,7 +88,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                   <Component id="sairBTN_IF" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" pref="23" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" pref="92" max="32767" attributes="0"/>
                   <Component id="madeLB_IF" min="-2" pref="58" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="lavantLB_IF" min="-2" pref="58" max="-2" attributes="0"/>
@@ -95,7 +96,9 @@
                   <Component id="produtosBTN_IF" min="-2" pref="61" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="carrinhosBTN_IF" min="-2" pref="61" max="-2" attributes="0"/>
-                  <EmptySpace pref="44" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="perfilBTN_IF" min="-2" pref="58" max="-2" attributes="0"/>
+                  <EmptySpace pref="37" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -177,6 +180,23 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sairBTN_IFActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="perfilBTN_IF">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="82" green="fd" red="ff" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Colonna MT" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="55" green="48" red="e8" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Perfil"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="perfilBTN_IFActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
