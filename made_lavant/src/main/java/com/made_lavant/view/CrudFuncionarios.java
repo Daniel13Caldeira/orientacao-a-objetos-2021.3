@@ -4,6 +4,12 @@
  */
 package com.made_lavant.view;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -12,6 +18,7 @@ import javax.swing.table.DefaultTableModel;
  * @author Daniel
  */
 public class CrudFuncionarios extends javax.swing.JFrame {
+    
 
     /**
      * Creates new form CRUDFUNCIONARIOS
@@ -19,6 +26,36 @@ public class CrudFuncionarios extends javax.swing.JFrame {
     public CrudFuncionarios() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        lerArquivo();
+    }
+    
+    public void lerArquivo(){
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\funcionario.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//funcionario.txt");
+        }
+            try {
+            FileReader fr = new FileReader(arquivo); //define o escritor
+            BufferedReader br = new BufferedReader(fr);//buffer de escrita
+            //escreve e vai pra proxima linha
+            String aux;
+            String dados[];
+            DefaultTableModel model = (DefaultTableModel) jTFuncionario.getModel();
+            //Object[] linha;  //alguma linha
+                    
+            while (br.ready()) {
+                aux = br.readLine();
+                dados = aux.split(";");
+                Object[] linha = {dados[1],dados[0]};
+                model.addRow(linha);
+        }
+            }catch (IOException e) {
+                System.out.println(e);
+        }
     }
 
     /**
@@ -123,6 +160,7 @@ public class CrudFuncionarios extends javax.swing.JFrame {
         });
 
         jTFuncionario.setBackground(new java.awt.Color(45, 48, 71));
+        jTFuncionario.setForeground(new java.awt.Color(255, 255, 255));
         jTFuncionario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -131,6 +169,7 @@ public class CrudFuncionarios extends javax.swing.JFrame {
                 "NOME", "IDENTIFICAÇÃO"
             }
         ));
+        jTFuncionario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane1.setViewportView(jTFuncionario);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

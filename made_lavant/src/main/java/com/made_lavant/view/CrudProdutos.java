@@ -4,6 +4,12 @@
  */
 package com.made_lavant.view;
 
+import com.made_lavant.base.Produto;
+import com.made_lavant.dados.ProdutoDados;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
 /**
@@ -11,6 +17,7 @@ import javax.swing.JOptionPane;
  * @author Marcio
  */
 public class CrudProdutos extends javax.swing.JFrame {
+    
 
     /**
      * Creates new form TeladeProdutos
@@ -18,6 +25,39 @@ public class CrudProdutos extends javax.swing.JFrame {
     public CrudProdutos() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        lerArquivo();
+    }
+    
+    public void lerArquivo(){
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\produto.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//produto.txt");
+        }
+        try {
+            FileReader fr = new FileReader(arquivo); //define o escritor
+            BufferedReader br = new BufferedReader(fr);//buffer de escrita
+            //insere o produto e adiciona uma nova linha
+            
+            String aux;
+            String dados[];
+            DefaultTableModel model = (DefaultTableModel) jTProdutos.getModel();
+            //Object[] linha;  //alguma linha
+                    
+            while (br.ready()) {
+                aux = br.readLine();
+                dados = aux.split(";");
+                Object[] linha = {dados[1],dados[0],dados[2]};
+                model.addRow(linha);
+                
+            }
+        } catch (IOException e) {
+            System.out.println(e);
+
+        }
     }
 
     /**
@@ -120,6 +160,7 @@ public class CrudProdutos extends javax.swing.JFrame {
         });
 
         jTProdutos.setBackground(new java.awt.Color(45, 48, 71));
+        jTProdutos.setForeground(new java.awt.Color(255, 255, 255));
         jTProdutos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -257,6 +298,7 @@ public class CrudProdutos extends javax.swing.JFrame {
         if(jTProdutos.getSelectedRow()!= -1){
             DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdutos.getModel();
             dtmProdutos.removeRow(jTProdutos.getSelectedRow());
+            //remover(Produto produto);
         }else{
             
             JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
