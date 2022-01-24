@@ -98,6 +98,7 @@ public class DetalheCarrinho extends javax.swing.JFrame {
         });
 
         jTDetalhe.setBackground(new java.awt.Color(45, 48, 71));
+        jTDetalhe.setForeground(new java.awt.Color(255, 255, 255));
         jTDetalhe.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 

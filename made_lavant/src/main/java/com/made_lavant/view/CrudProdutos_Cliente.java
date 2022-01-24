@@ -4,6 +4,12 @@
  */
 package com.made_lavant.view;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -12,6 +18,10 @@ import javax.swing.table.DefaultTableModel;
  * @author Marcio
  */
 public class CrudProdutos_Cliente extends javax.swing.JFrame {
+    
+   
+    
+    
 
     /**
      * Creates new form TelaDeProdutosCliente
@@ -19,6 +29,39 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
     public CrudProdutos_Cliente() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        lerArquivo();
+    }
+    
+    public void lerArquivo(){
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\produto.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//produto.txt");
+        }
+        try {
+            FileReader fr = new FileReader(arquivo); //define o escritor
+            BufferedReader br = new BufferedReader(fr);//buffer de escrita
+            //insere o produto e adiciona uma nova linha
+            
+            String aux;
+            String dados[];
+            DefaultTableModel model = (DefaultTableModel) jTProdCliente.getModel();
+            //Object[] linha;  //alguma linha
+                    
+            while (br.ready()) {
+                aux = br.readLine();
+                dados = aux.split(";");
+                Object[] linha = {dados[1],dados[0],dados[2]};
+                model.addRow(linha);
+                
+            }
+        } catch (IOException e) {
+            System.out.println(e);
+
+        }
     }
 
     /**
@@ -41,6 +84,8 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTProdCliente = new javax.swing.JTable();
+        jTextFieldQuantidade = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TelaDeProdutosCliente");
@@ -100,7 +145,8 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
         });
 
         jTProdCliente.setBackground(new java.awt.Color(45, 48, 71));
-        jTProdCliente.setFont(new java.awt.Font("Colonna MT", 0, 11)); // NOI18N
+        jTProdCliente.setFont(new java.awt.Font("Colonna MT", 0, 14)); // NOI18N
+        jTProdCliente.setForeground(new java.awt.Color(255, 255, 255));
         jTProdCliente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -109,18 +155,31 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
                 "PRODUTO", "CÓDIGO", "PREÇO"
             }
         ));
+        jTProdCliente.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jTProdClienteComponentShown(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTProdCliente);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 737, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1)
         );
+
+        jTextFieldQuantidade.setText("jTextField1");
+
+        jLabel1.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(232, 72, 85));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Quantidade");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -133,12 +192,15 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
                         .addComponent(sairBTN_CRPC)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(voltarBTN_CRPC))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(madeLB_CRPC)
-                        .addGap(0, 664, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lavantLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lavantLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(madeLB_CRPC))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextFieldQuantidade)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
                         .addComponent(addCarrinhoBTN_CRPC)
                         .addGap(18, 18, 18)
                         .addComponent(descricaoBTN_CRPC)))
@@ -153,12 +215,16 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
                     .addComponent(sairBTN_CRPC)
                     .addComponent(voltarBTN_CRPC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(36, 36, 36)
-                .addComponent(madeLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lavantLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(descricaoBTN_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addCarrinhoBTN_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(madeLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldQuantidade)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lavantLB_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(descricaoBTN_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(addCarrinhoBTN_CRPC, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -214,9 +280,15 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
 
     private void addCarrinhoBTN_CRPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCarrinhoBTN_CRPCActionPerformed
         // TODO add your handling code here:
+        
         if(jTProdCliente.getSelectedRow()!= -1){
+            String quantidade = jTextFieldQuantidade.getText();
             DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdCliente.getModel();
-            
+            if(quantidade.length()== 0){
+                JOptionPane.showMessageDialog(null, "QUANTIDADE VAZIA!");
+            }else{
+                
+            }
             
         }else{
             
@@ -224,17 +296,24 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_addCarrinhoBTN_CRPCActionPerformed
 
+    private void jTProdClienteComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jTProdClienteComponentShown
+        // TODO add your handling code here:
+        System.out.println("ola");
+    }//GEN-LAST:event_jTProdClienteComponentShown
+
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addCarrinhoBTN_CRPC;
     private javax.swing.JButton descricaoBTN_CRPC;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTProdCliente;
+    private javax.swing.JTextField jTextFieldQuantidade;
     private javax.swing.JLabel lavantLB_CRPC;
     private javax.swing.JLabel madeLB_CRPC;
     private javax.swing.JButton sairBTN_CRPC;
