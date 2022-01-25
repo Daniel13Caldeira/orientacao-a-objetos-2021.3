@@ -36,7 +36,7 @@ public class DetalheCarrinhoGerente extends javax.swing.JFrame {
         sairBTN_DCG = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTDetalhe = new javax.swing.JTable();
+        jTDetalheGerente = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,8 +85,8 @@ public class DetalheCarrinhoGerente extends javax.swing.JFrame {
             }
         });
 
-        jTDetalhe.setBackground(new java.awt.Color(45, 48, 71));
-        jTDetalhe.setModel(new javax.swing.table.DefaultTableModel(
+        jTDetalheGerente.setBackground(new java.awt.Color(45, 48, 71));
+        jTDetalheGerente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -94,7 +94,7 @@ public class DetalheCarrinhoGerente extends javax.swing.JFrame {
                 "PRODUTO", "CÓDIGO", "QUANTIDADE", "VALIDADE", "PREÇO"
             }
         ));
-        jScrollPane1.setViewportView(jTDetalhe);
+        jScrollPane1.setViewportView(jTDetalheGerente);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -179,7 +179,7 @@ public class DetalheCarrinhoGerente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTDetalhe;
+    private javax.swing.JTable jTDetalheGerente;
     private javax.swing.JLabel lavantLB_DCG;
     private javax.swing.JLabel madeLB_DCG;
     private javax.swing.JButton sairBTN_DCG;

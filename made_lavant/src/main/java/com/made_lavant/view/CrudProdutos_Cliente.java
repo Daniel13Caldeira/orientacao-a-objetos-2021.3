@@ -4,12 +4,14 @@
  */
 package com.made_lavant.view;
 
+import com.made_lavant.base.Produto;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Hashtable;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -19,7 +21,14 @@ import javax.swing.table.DefaultTableModel;
  */
 public class CrudProdutos_Cliente extends javax.swing.JFrame {
     
-   
+   Hashtable<String, String> ht; 
+   public static void main(String[] args) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new CrudProdutos_Cliente().setVisible(true);
+            }
+        });
+    }
     
     
 
@@ -29,7 +38,9 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
     public CrudProdutos_Cliente() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        ht = new Hashtable<>();
         lerArquivo();
+        
     }
     
     public void lerArquivo(){
@@ -56,12 +67,41 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
                 dados = aux.split(";");
                 Object[] linha = {dados[1],dados[0],dados[2]};
                 model.addRow(linha);
+                ht.put(dados[0], aux);
                 
             }
         } catch (IOException e) {
             System.out.println(e);
 
         }
+    }
+    
+    public void adicionar(String info, String cod) {
+        //cria uma String com os dados do produto no formato padrão que está sendo utilizado
+        //String info = String.valueOf(produto.getCodigo()) + ';' + produto.getNome() + ';' + produto.getPreco() + ';' + String.valueOf(produto.getValidade()) + ';' + produto.getQuantidade() + ';';
+        //define o arquivo de salvamento
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\carrinhos\\"+ cod + ".txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//carrinhos//"+ cod + ".txt");
+        }
+        try {
+            FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
+            BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
+            //insere o produto e adiciona uma nova linha
+            escritor.write(info);
+            escritor.newLine();
+            escritor.flush();
+            escritor.close();
+            escrita.close();
+        } catch (IOException e) {
+            System.out.println(e);
+
+        }
+
     }
 
     /**
@@ -287,6 +327,12 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
             if(quantidade.length()== 0){
                 JOptionPane.showMessageDialog(null, "QUANTIDADE VAZIA!");
             }else{
+                String aux;
+                String cod = jTProdCliente.getValueAt(jTProdCliente.getSelectedRow(), 1).toString();
+                aux = ht.get(cod);
+                String dados[] = aux.split(";");
+                String info = dados[0] + ";" + dados[1] + ";" + dados[2] + ";" + dados[3] + ";" + dados[4]; 
+                adicionar(info,"a"); //trocar pela variavel
                 
             }
             

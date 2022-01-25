@@ -4,6 +4,10 @@
  */
 package com.made_lavant.view;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -19,6 +23,39 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
     public CrudProdutosGerente() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        lerArquivo();
+    }
+    
+     public void lerArquivo(){
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\produto.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//produto.txt");
+        }
+        try {
+            FileReader fr = new FileReader(arquivo); //define o escritor
+            BufferedReader br = new BufferedReader(fr);//buffer de escrita
+            //insere o produto e adiciona uma nova linha
+            
+            String aux;
+            String dados[];
+            DefaultTableModel model = (DefaultTableModel) jTProdutosGerente.getModel();
+            //Object[] linha;  //alguma linha
+                    
+            while (br.ready()) {
+                aux = br.readLine();
+                dados = aux.split(";");
+                Object[] linha = {dados[1],dados[0],dados[2]};
+                model.addRow(linha);
+                
+            }
+        } catch (IOException e) {
+            System.out.println(e);
+
+        }
     }
 
     /**
@@ -41,7 +78,7 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
         descricaoBTN_CRPG = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTProdutos = new javax.swing.JTable();
+        jTProdutosGerente = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -119,8 +156,8 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
             }
         });
 
-        jTProdutos.setBackground(new java.awt.Color(45, 48, 71));
-        jTProdutos.setModel(new javax.swing.table.DefaultTableModel(
+        jTProdutosGerente.setBackground(new java.awt.Color(45, 48, 71));
+        jTProdutosGerente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -128,7 +165,7 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
                 "PRODUTO", "CÓDIGO", "PREÇO"
             }
         ));
-        jScrollPane1.setViewportView(jTProdutos);
+        jScrollPane1.setViewportView(jTProdutosGerente);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -226,9 +263,9 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
 
     private void removerBTN_CRPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerBTN_CRPGActionPerformed
         // TODO add your handling code here:
-        if(jTProdutos.getSelectedRow()!= -1){
-            DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdutos.getModel();
-            dtmProdutos.removeRow(jTProdutos.getSelectedRow());
+        if(jTProdutosGerente.getSelectedRow()!= -1){
+            DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdutosGerente.getModel();
+            dtmProdutos.removeRow(jTProdutosGerente.getSelectedRow());
         }else{
 
             JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
@@ -238,8 +275,8 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
 
     private void editarBTN_CRPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBTN_CRPGActionPerformed
 
-        if(jTProdutos.getSelectedRow()!= -1){
-            DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdutos.getModel();
+        if(jTProdutosGerente.getSelectedRow()!= -1){
+            DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdutosGerente.getModel();
 
             this.setVisible(false);
             new EditarProdutoGerente().setVisible(true);
@@ -252,8 +289,8 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
 
     private void descricaoBTN_CRPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRPGActionPerformed
 
-        if(jTProdutos.getSelectedRow()!= -1){
-            DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdutos.getModel();
+        if(jTProdutosGerente.getSelectedRow()!= -1){
+            DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdutosGerente.getModel();
 
             this.setVisible(false);
             new DetalheProduto_Gerente().setVisible(true);
@@ -275,7 +312,7 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTProdutos;
+    private javax.swing.JTable jTProdutosGerente;
     private javax.swing.JLabel lavantLB_CRPG;
     private javax.swing.JLabel madeLB_CRPG;
     private javax.swing.JButton removerBTN_CRPG;
