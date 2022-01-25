@@ -176,6 +176,7 @@ public class ProdutoDados {
         return null;
     }
     //altera os dados de um produto
+    
     public void alterar(Produto produto) {
         //busca um produto
         if (buscar(produto) != null) {
@@ -185,4 +186,5 @@ public class ProdutoDados {
             adicionar(produto);
         }
     }
+
 }

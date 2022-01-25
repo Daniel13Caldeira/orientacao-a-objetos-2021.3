@@ -4,11 +4,23 @@
  */
 package com.made_lavant.view;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Marcio
  */
 public class DetalheCarrinho extends javax.swing.JFrame {
+    
+    protected static String total;
+
+    protected static String getTotal() {
+        return DetalheCarrinho.total;
+    }
 
     /**
      * Creates new form DetalheCarrinho
@@ -16,6 +28,56 @@ public class DetalheCarrinho extends javax.swing.JFrame {
     public DetalheCarrinho() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        lerArquivo();
+    }
+    
+    public void lerArquivo(){
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\carrinhos\\a.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//carrinhos//a.txt");
+        }
+        try {
+            FileReader fr = new FileReader(arquivo); //define o escritor
+            BufferedReader br = new BufferedReader(fr);//buffer de escrita
+            //insere o produto e adiciona uma nova linha
+            
+            String aux;
+            String dados[];
+            DefaultTableModel model = (DefaultTableModel) jTDetalhe.getModel();
+            //Object[] linha;  //alguma linha
+                    
+            while (br.ready()) {
+                aux = br.readLine();
+                dados = aux.split(";");
+                Object[] linha = {dados[1],dados[0],dados[4],dados[3],dados[2]};
+                model.addRow(linha);
+                total += dados[2];
+                
+            }
+        } catch (IOException e) {
+            System.out.println(e);
+
+        }
+    }
+    
+    public String separa(String linha, int info) {
+//        //separa a primeira parte da String até o ;
+//        String resultado = linha.substring(0, linha.indexOf(';'));
+//        //armazena o restante da string
+//        String resto = linha.substring(linha.indexOf(';') + 1);
+//        //verifica se o resultado era o pretendido
+//        if (info == 0) {
+//            //retorna o resultado
+//            return resultado;
+//        }
+//        //chama novamente essa função com o resto da separação anterior
+//        resultado = separa(resto, info - 1);
+//        return resultado;
+          return linha.split(";")[info];
     }
 
     /**
@@ -161,6 +223,8 @@ public class DetalheCarrinho extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        totalLB_DC.setText(getTotal());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
