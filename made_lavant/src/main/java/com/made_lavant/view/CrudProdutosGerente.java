@@ -16,6 +16,12 @@ import javax.swing.table.DefaultTableModel;
  * @author Marcio
  */
 public class CrudProdutosGerente extends javax.swing.JFrame {
+    
+    protected static String codigo;
+
+    protected static String getCodigo() {
+        return CrudProdutosGerente.codigo;
+    }
 
     /**
      * Creates new form CrudProdutosGerente
@@ -291,6 +297,7 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
 
         if(jTProdutosGerente.getSelectedRow()!= -1){
             DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdutosGerente.getModel();
+            codigo = jTProdutosGerente.getValueAt(jTProdutosGerente.getSelectedRow(), 1).toString();
 
             this.setVisible(false);
             new DetalheProduto_Gerente().setVisible(true);

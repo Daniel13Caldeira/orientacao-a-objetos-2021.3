@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -43,40 +43,26 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lavantLB_DPG" alignment="0" pref="156" max="32767" attributes="0"/>
-                      <Component id="madeLB_DPG" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="sairBTN_DPG" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="76" max="32767" attributes="0"/>
+                  <EmptySpace pref="60" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="topicoNomeLB_DPG" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="topicoQuantiDispLB_DPG" alignment="0" min="-2" pref="178" max="-2" attributes="0"/>
-                                      <Component id="topicoPrecoLB_DPG" alignment="0" min="-2" pref="89" max="-2" attributes="0"/>
-                                      <Component id="topicoCodLB_DPG" alignment="0" min="-2" pref="89" max="-2" attributes="0"/>
-                                      <Component id="topicoValLB_DPG" alignment="0" min="-2" pref="89" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="nomeLB_DPG" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                      <Component id="codLB_DPG" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                                      <Component id="precoLB_DPG" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="quantiDispLB_DPG" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="valLB_DPG" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
+                              <Component id="topicoQuantiDispLB_DPG" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="topicoValLB_DPG" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="topicoCodLB_DPG" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="topicoPrecoLB_DPG" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="topicoNomeLB_DPG" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="nomeLB_DPG" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="codLB_DPG" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
+                              <Component id="precoLB_DPG" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
+                              <Component id="quantiDispLB_DPG" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                              <Component id="valLB_DPG" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                       </Group>
@@ -85,6 +71,16 @@
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+              </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                  <Component id="madeLB_DPG" min="-2" pref="156" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="lavantLB_DPG" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -100,7 +96,7 @@
                   <Component id="madeLB_DPG" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lavantLB_DPG" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="nomeLB_DPG" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="topicoNomeLB_DPG" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -144,6 +140,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="00,00"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ProdutoDados ProdutoDados = new ProdutoDados();&#xa;precoLB_DPG.setText(ProdutoDados.buscarPreco(CrudProdutosGerente.getCodigo()));"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoQuantiDispLB_DPG">
           <Properties>
@@ -182,6 +181,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="dd/mm/aaaa"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="valLB_DPG.setText(ProdutoDados.buscarValidade(CrudProdutosGerente.getCodigo()));"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoValLB_DPG">
           <Properties>
@@ -208,6 +210,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="000"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="codLB_DPG.setText(ProdutoDados.buscarCodigo(CrudProdutosGerente.getCodigo()));"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoCodLB_DPG">
           <Properties>
@@ -311,6 +316,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="nomeLB_DPG.setText(ProdutoDados.buscarNome(CrudProdutosGerente.getCodigo()));"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="quantiDispLB_DPG">
           <Properties>
@@ -325,6 +333,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="00"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="quantiDispLB_DPG.setText(ProdutoDados.buscarQuantidade(CrudProdutosGerente.getCodigo()));"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

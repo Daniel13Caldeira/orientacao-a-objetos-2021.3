@@ -21,6 +21,12 @@ import javax.swing.table.DefaultTableModel;
  */
 public class CrudProdutos_Cliente extends javax.swing.JFrame {
     
+     protected static String codigo;
+
+    protected static String getCodigo() {
+        return CrudProdutos_Cliente.codigo;
+    }
+    
    Hashtable<String, String> ht; 
    public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -308,6 +314,7 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
         
         if(jTProdCliente.getSelectedRow()!= -1){
             DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdCliente.getModel();
+            codigo = jTProdCliente.getValueAt(jTProdCliente.getSelectedRow(), 1).toString();
             
             this.setVisible(false);
             new DetalheProduto().setVisible(true);

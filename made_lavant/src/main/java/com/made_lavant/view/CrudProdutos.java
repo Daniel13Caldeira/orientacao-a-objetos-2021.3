@@ -20,6 +20,13 @@ import javax.swing.JOptionPane;
  * @author Marcio
  */
 public class CrudProdutos extends javax.swing.JFrame {
+    
+    protected static String codigo;
+
+    protected static String getCodigo() {
+        return CrudProdutos.codigo;
+    }
+    
     public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -337,6 +344,7 @@ public class CrudProdutos extends javax.swing.JFrame {
         
         if(jTProdutos.getSelectedRow()!= -1){
             DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdutos.getModel();
+            codigo = jTProdutos.getValueAt(jTProdutos.getSelectedRow(), 1).toString();
             
             this.setVisible(false);
             new DetalheProduto_Func().setVisible(true);
@@ -351,6 +359,7 @@ public class CrudProdutos extends javax.swing.JFrame {
         
         if(jTProdutos.getSelectedRow()!= -1){
             DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdutos.getModel();
+            codigo = jTProdutos.getValueAt(jTProdutos.getSelectedRow(), 1).toString();
             
             this.setVisible(false);
             new EditarProduto().setVisible(true);

@@ -107,8 +107,8 @@ public class ProdutoDados {
     }
 
     //busca uma linha
-    private String buscar(Produto produto) {
-        String cod = produto.getCodigo() + "";
+    private String buscar(String produto) {
+        String cod = produto ;
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
@@ -133,7 +133,7 @@ public class ProdutoDados {
     }
 
     //busca o nome de um produto
-    public String buscarNome(Produto produto) {
+    public String buscarNome(String produto) {
         //busca o produto
         String aux = buscar(produto);
         //se encontrar um produto, o nome é separado e retornado
@@ -144,7 +144,7 @@ public class ProdutoDados {
         return null;
     }
     //semelhante a buscarNome
-    public String buscarCodigo(Produto produto) {
+    public String buscarCodigo(String produto) {
         String aux = buscar(produto);
         if (aux != null) {
             return separa(aux, 0);
@@ -152,15 +152,7 @@ public class ProdutoDados {
         return null;
     }
     //semelhante a buscarNome
-    public String buscarQuantidade(Produto produto) {
-        String aux = buscar(produto);
-        if (aux != null) {
-            return separa(aux, 3);
-        }
-        return null;
-    }
-    //semelhante a buscarNome
-    public String buscarValidade(Produto produto) {
+    public String buscarQuantidade(String produto) {
         String aux = buscar(produto);
         if (aux != null) {
             return separa(aux, 4);
@@ -168,7 +160,15 @@ public class ProdutoDados {
         return null;
     }
     //semelhante a buscarNome
-    public String buscarPreco(Produto produto) {
+    public String buscarValidade(String produto) {
+        String aux = buscar(produto);
+        if (aux != null) {
+            return separa(aux, 3);
+        }
+        return null;
+    }
+    //semelhante a buscarNome
+    public String buscarPreco(String produto) {
         String aux = buscar(produto);
         if (aux != null) {
             return separa(aux, 2);
