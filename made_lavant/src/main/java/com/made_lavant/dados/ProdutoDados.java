@@ -179,7 +179,7 @@ public class ProdutoDados {
     
     public void alterar(Produto produto) {
         //busca um produto
-        if (buscar(produto) != null) {
+        if (buscar(produto.getCodigo()+"") != null) {
             //remove o produto do arquivo de salvamento
             remover(produto);
             //adiciona o produto ao arquivo de salvamento com os novos dados

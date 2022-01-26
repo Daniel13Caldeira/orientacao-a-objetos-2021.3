@@ -194,7 +194,7 @@
             <Property name="text" type="java.lang.String" value="000"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="totalLB_DC.setText(getTotal());&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="totalLB_DC.setText(DetalheCarrinho.getTotal());&#xd;&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="sairBTN_DC">

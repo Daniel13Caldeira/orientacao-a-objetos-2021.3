@@ -4,6 +4,12 @@
  */
 package com.made_lavant.view;
 
+
+import com.made_lavant.dados.CarrinhoDados;
+import com.made_lavant.base.Carrinho;
+import com.made_lavant.base.Cliente;
+import com.made_lavant.base.Produto;
+import static com.sun.tools.javac.util.Constants.format;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -17,6 +23,7 @@ import javax.swing.table.DefaultTableModel;
 public class DetalheCarrinho extends javax.swing.JFrame {
     
     protected static String total;
+    protected static float soma;
 
     protected static String getTotal() {
         return DetalheCarrinho.total;
@@ -55,9 +62,14 @@ public class DetalheCarrinho extends javax.swing.JFrame {
                 dados = aux.split(";");
                 Object[] linha = {dados[1],dados[0],dados[4],dados[3],dados[2]};
                 model.addRow(linha);
-                total += dados[2];
+                float f = 12.0f;
+                String valor = dados[2];
+                soma  += Float.parseFloat(valor);
+                total = String.valueOf(soma);
                 
             }
+            System.out.println(getTotal());
+
         } catch (IOException e) {
             System.out.println(e);
 
@@ -224,7 +236,7 @@ public class DetalheCarrinho extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        totalLB_DC.setText(getTotal());
+        totalLB_DC.setText(DetalheCarrinho.getTotal());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
