@@ -170,7 +170,7 @@ public class InicioFuncionario extends javax.swing.JFrame {
 
     private void perfilBTN_IFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilBTN_IFActionPerformed
         this.setVisible(false);
-        new PerfilFuncionarioTelaInicial().setVisible(true);
+        new PerfilFuncionario().setVisible(true);
     }//GEN-LAST:event_perfilBTN_IFActionPerformed
 
     /**

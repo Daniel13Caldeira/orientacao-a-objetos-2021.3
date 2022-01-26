@@ -1,2 +1,2 @@
 B1;Funcionario_teste;null;null;null;null;null;null;123;
-A0;Gerente_teste;as;as;as;12;as;122112;123;
+A0;Gerente_teste;null;null;null;null;null;null;123;

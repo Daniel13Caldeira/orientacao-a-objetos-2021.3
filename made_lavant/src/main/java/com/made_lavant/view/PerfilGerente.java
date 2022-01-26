@@ -51,6 +51,7 @@ public class PerfilGerente extends javax.swing.JFrame {
         numeroLB_PG = new javax.swing.JLabel();
         topicoCepLB_PG = new javax.swing.JLabel();
         cidadeLB_PG = new javax.swing.JLabel();
+        editarBTN_PG = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -192,6 +193,16 @@ public class PerfilGerente extends javax.swing.JFrame {
         cidadeLB_PG.setText("Nome Cidade");
         cidadeLB_PG.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        editarBTN_PG.setBackground(new java.awt.Color(255, 253, 130));
+        editarBTN_PG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        editarBTN_PG.setForeground(new java.awt.Color(232, 72, 85));
+        editarBTN_PG.setText("Editar");
+        editarBTN_PG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarBTN_PGActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -201,6 +212,8 @@ public class PerfilGerente extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(sairBTN_PG)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(editarBTN_PG)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(madeLB_PG)
@@ -246,7 +259,9 @@ public class PerfilGerente extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sairBTN_PG)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(sairBTN_PG)
+                        .addComponent(editarBTN_PG))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -326,11 +341,17 @@ public class PerfilGerente extends javax.swing.JFrame {
         new InicioGerente().setVisible(true);
     }//GEN-LAST:event_voltarBTN_PGActionPerformed
 
+    private void editarBTN_PGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBTN_PGActionPerformed
+        this.setVisible(false);
+        new EditarDadosGerente().setVisible(true);
+    }//GEN-LAST:event_editarBTN_PGActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bairroLB_PG;
     private javax.swing.JLabel cepLB_PG;
     private javax.swing.JLabel cidadeLB_PG;
+    private javax.swing.JButton editarBTN_PG;
     private javax.swing.JLabel idLB_PG;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lavantLB_PG;

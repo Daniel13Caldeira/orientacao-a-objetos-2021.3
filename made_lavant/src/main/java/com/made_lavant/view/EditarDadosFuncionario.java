@@ -7,6 +7,7 @@ package com.made_lavant.view;
 import com.made_lavant.base.Endereco;
 import com.made_lavant.base.Funcionario;
 import com.made_lavant.dados.FuncionarioDados;
+import javax.swing.JTextField;
 
 /**
  *
@@ -60,8 +61,8 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
         numeroTF_EDF = new javax.swing.JTextField();
         sairBTN_EDF = new javax.swing.JButton();
         voltarBTN_EDF = new javax.swing.JButton();
-        topicoSenhaLB_EDF = new javax.swing.JLabel();
         senhaTF_EDF = new javax.swing.JTextField();
+        topicoSenhaLB_EDF = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Editar Funcionário");
@@ -80,6 +81,14 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
         cepTF_EDF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cepTF_EDFActionPerformed(evt);
+            }
+        });
+        cepTF_EDF.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                cepTF_EDFKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cepTF_EDFKeyTyped(evt);
             }
         });
 
@@ -107,6 +116,15 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
         topicoNumeroLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
         topicoNumeroLB_EDF.setText("Número");
 
+        ufTF_EDF.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                ufTF_EDFKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                ufTF_EDFKeyTyped(evt);
+            }
+        });
+
         topicoCepLB_EDF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         topicoCepLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
         topicoCepLB_EDF.setText("CEP");
@@ -131,10 +149,24 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
                 cidadeTF_EDFActionPerformed(evt);
             }
         });
+        cidadeTF_EDF.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                cidadeTF_EDFKeyReleased(evt);
+            }
+        });
 
         topicoBairroLB_EDF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         topicoBairroLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
         topicoBairroLB_EDF.setText("Bairro");
+
+        numeroTF_EDF.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                numeroTF_EDFKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                numeroTF_EDFKeyTyped(evt);
+            }
+        });
 
         sairBTN_EDF.setBackground(new java.awt.Color(255, 253, 130));
         sairBTN_EDF.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
@@ -156,6 +188,8 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
             }
         });
 
+        topicoSenhaLB_EDF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoSenhaLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
         topicoSenhaLB_EDF.setText("Senha");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -180,8 +214,7 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
                 .addContainerGap(70, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(topicoSenhaLB_EDF)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(confirmarBTN_EDF))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(topicoRuaLB_EDF)
@@ -198,7 +231,9 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(bairroTF_EDF, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(topicoUfLB_EDF)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(topicoUfLB_EDF)
+                                    .addComponent(topicoSenhaLB_EDF))
                                 .addGap(35, 35, 35)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(ufTF_EDF, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -253,8 +288,8 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(confirmarBTN_EDF)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(topicoSenhaLB_EDF)
-                        .addComponent(senhaTF_EDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(senhaTF_EDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(topicoSenhaLB_EDF)))
                 .addContainerGap())
         );
 
@@ -318,7 +353,7 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
                 //String cod, String nome, Endereco endereco, String senha
                 funcionario.alterar(new Funcionario(Login.getCodigo(), funcionario.buscarNome(Login.getCodigo()), new Endereco(cidadeTF_EDF.getText(), cepTF_EDF.getText(), ufTF_EDF.getText(), bairroTF_EDF.getText(), ruaTF_EDF.getText(), numeroTF_EDF.getText()), senhaTF_EDF.getText()));
                 this.setVisible(false);
-                new CrudFuncionarios().setVisible(true);
+                new PerfilFuncionario().setVisible(true);
             }
         } else {
             //se nenhum campo de endereço estiver cadastrado, o cadastro será feito sem o endereço
@@ -327,7 +362,7 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
                 //String cod, String nome, Endereco endereco, String senha
                 funcionario.alterar(new Funcionario(Login.getCodigo(), funcionario.buscarNome(Login.getCodigo()), new Endereco("null", "null", "null", "null", "null", "null"), senhaTF_EDF.getText()));
                 this.setVisible(false);
-                new CrudFuncionarios().setVisible(true);
+                new PerfilFuncionario().setVisible(true);
             }
         }
     }//GEN-LAST:event_confirmarBTN_EDFActionPerformed
@@ -338,7 +373,7 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
 
     private void sairBTN_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_EDFActionPerformed
         this.setVisible(false);
-        new PerfilCliente().setVisible(true);
+        new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_EDFActionPerformed
 
     private void voltarBTN_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_EDFActionPerformed
@@ -346,9 +381,66 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
         new PerfilFuncionario().setVisible(true);
     }//GEN-LAST:event_voltarBTN_EDFActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void cidadeTF_EDFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cidadeTF_EDFKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cidadeTF_EDFKeyReleased
+
+    private void ufTF_EDFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ufTF_EDFKeyReleased
+        mascaraUF();
+    }//GEN-LAST:event_ufTF_EDFKeyReleased
+
+    private void ufTF_EDFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ufTF_EDFKeyTyped
+        mascaraUF();
+    }//GEN-LAST:event_ufTF_EDFKeyTyped
+
+    private void cepTF_EDFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cepTF_EDFKeyReleased
+        mascaraCEP();
+    }//GEN-LAST:event_cepTF_EDFKeyReleased
+
+    private void cepTF_EDFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cepTF_EDFKeyTyped
+        mascaraCEP();
+    }//GEN-LAST:event_cepTF_EDFKeyTyped
+
+    private void numeroTF_EDFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numeroTF_EDFKeyReleased
+        mascaraInt(numeroTF_EDF);
+    }//GEN-LAST:event_numeroTF_EDFKeyReleased
+
+    private void numeroTF_EDFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numeroTF_EDFKeyTyped
+        mascaraInt(numeroTF_EDF);
+    }//GEN-LAST:event_numeroTF_EDFKeyTyped
+
+
+    private void mascaraUF() {
+        String texto = ufTF_EDF.getText();
+        if (texto.length() > 0) {
+            if (!(texto.length() <= 2 && ((texto.charAt(texto.length() - 1) >= 'a' && texto.charAt(texto.length() - 1) <= 'z') || (texto.charAt(texto.length() - 1) >= 'A' && texto.charAt(texto.length() - 1) <= 'Z')))) {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        ufTF_EDF.setText(texto);
+    }
+
+    private void mascaraCEP() {
+        String texto = cepTF_EDF.getText();
+        if (texto.length() > 0) {
+            if (texto.length() > 8 || texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        cepTF_EDF.setText(texto);
+    }
+
+    private void mascaraInt(JTextField textField) {
+        String texto = textField.getText();
+        if (texto.length() > 0) {
+            if (texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        textField.setText(texto);
+    }
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField bairroTF_EDF;
     private javax.swing.JTextField cepTF_EDF;

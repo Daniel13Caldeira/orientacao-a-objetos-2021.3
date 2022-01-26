@@ -73,7 +73,6 @@ public class CrudFuncionarios extends javax.swing.JFrame {
         lavantLB_CRF = new javax.swing.JLabel();
         removerBTN_CRF = new javax.swing.JButton();
         sairBTN_CRF = new javax.swing.JButton();
-        editarBTN_CRF = new javax.swing.JButton();
         descricaoBTN_CRF = new javax.swing.JButton();
         voltarBTN_CRF = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -126,16 +125,6 @@ public class CrudFuncionarios extends javax.swing.JFrame {
         sairBTN_CRF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sairBTN_CRFActionPerformed(evt);
-            }
-        });
-
-        editarBTN_CRF.setBackground(new java.awt.Color(255, 253, 130));
-        editarBTN_CRF.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        editarBTN_CRF.setForeground(new java.awt.Color(232, 72, 85));
-        editarBTN_CRF.setText("Editar");
-        editarBTN_CRF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editarBTN_CRFActionPerformed(evt);
             }
         });
 
@@ -197,7 +186,7 @@ public class CrudFuncionarios extends javax.swing.JFrame {
                         .addComponent(sairBTN_CRF)
                         .addGap(194, 194, 194)
                         .addComponent(addFuncBTN_CRF)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
                         .addComponent(voltarBTN_CRF)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -205,11 +194,9 @@ public class CrudFuncionarios extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(removerBTN_CRF)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(editarBTN_CRF)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(26, 26, 26)
                                 .addComponent(descricaoBTN_CRF)
-                                .addContainerGap())
+                                .addGap(79, 79, 79))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lavantLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -230,8 +217,7 @@ public class CrudFuncionarios extends javax.swing.JFrame {
                 .addComponent(lavantLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(descricaoBTN_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(editarBTN_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(descricaoBTN_CRF)
                     .addComponent(removerBTN_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -257,26 +243,13 @@ public class CrudFuncionarios extends javax.swing.JFrame {
         if(jTFuncionario.getSelectedRow()!= -1){
             DefaultTableModel dtmProdutos = (DefaultTableModel)jTFuncionario.getModel();
             this.setVisible(false);
-            new PerfilFuncionario().setVisible(true);
+            new PerfilFuncionario_Crud().setVisible(true);
         }else{
             
             JOptionPane.showMessageDialog(null, "NENHUM FUNCIONÁRIO SELECIONADO!");
         }
         
     }//GEN-LAST:event_descricaoBTN_CRFActionPerformed
-
-    private void editarBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBTN_CRFActionPerformed
-        
-        if(jTFuncionario.getSelectedRow()!= -1){
-            DefaultTableModel dtmProdutos = (DefaultTableModel)jTFuncionario.getModel();
-            this.setVisible(false);
-            new EditarDadosFuncionario().setVisible(true);
-        }else{
-            
-            JOptionPane.showMessageDialog(null, "NENHUM FUNCIONÁRIO SELECIONADO!");
-        }
-        
-    }//GEN-LAST:event_editarBTN_CRFActionPerformed
 
     private void voltarBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CRFActionPerformed
         this.setVisible(false);
@@ -300,7 +273,6 @@ public class CrudFuncionarios extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addFuncBTN_CRF;
     private javax.swing.JButton descricaoBTN_CRF;
-    private javax.swing.JButton editarBTN_CRF;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

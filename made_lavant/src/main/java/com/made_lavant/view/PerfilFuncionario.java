@@ -51,6 +51,7 @@ public class PerfilFuncionario extends javax.swing.JFrame {
         ruaLB_PF = new javax.swing.JLabel();
         idLB_PF = new javax.swing.JLabel();
         voltarBTN_PF = new javax.swing.JButton();
+        editarBTN_PF = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Perfil Funcionário");
@@ -194,6 +195,16 @@ public class PerfilFuncionario extends javax.swing.JFrame {
             }
         });
 
+        editarBTN_PF.setBackground(new java.awt.Color(255, 253, 130));
+        editarBTN_PF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        editarBTN_PF.setForeground(new java.awt.Color(232, 72, 85));
+        editarBTN_PF.setText("Editar");
+        editarBTN_PF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarBTN_PFActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -203,6 +214,8 @@ public class PerfilFuncionario extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(sairBTN_PF)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(editarBTN_PF)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(madeLB_PF)
@@ -248,7 +261,9 @@ public class PerfilFuncionario extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sairBTN_PF)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(sairBTN_PF)
+                        .addComponent(editarBTN_PF))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -325,8 +340,13 @@ public class PerfilFuncionario extends javax.swing.JFrame {
 
     private void voltarBTN_PFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_PFActionPerformed
         this.setVisible(false);
-        new CrudFuncionarios().setVisible(true);
+        new InicioFuncionario().setVisible(true);
     }//GEN-LAST:event_voltarBTN_PFActionPerformed
+
+    private void editarBTN_PFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBTN_PFActionPerformed
+        this.setVisible(false);
+        new EditarDadosFuncionario().setVisible(true);
+    }//GEN-LAST:event_editarBTN_PFActionPerformed
 
     /**
      * @param args the command line arguments
@@ -335,6 +355,7 @@ public class PerfilFuncionario extends javax.swing.JFrame {
     private javax.swing.JLabel bairroLB_PF;
     private javax.swing.JLabel cepLB_PF;
     private javax.swing.JLabel cidadeLB_PF;
+    private javax.swing.JButton editarBTN_PF;
     private javax.swing.JLabel idLB_PF;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lavantLB_PF;
