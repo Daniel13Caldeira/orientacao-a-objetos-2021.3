@@ -5,9 +5,12 @@
 package com.made_lavant.view;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -22,6 +25,8 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
     protected static String getCodigo() {
         return CrudProdutosGerente.codigo;
     }
+    
+    
 
     /**
      * Creates new form CrudProdutosGerente
@@ -62,6 +67,64 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
             System.out.println(e);
 
         }
+    }
+     
+     public void remover(String cod) {
+        //String cod = produto.getCodigo() + "";
+        System.out.println("cod: " + cod);
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\produto.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//produto.txt");
+        }
+        ArrayList<String> salvar = new ArrayList<>();//armazena as linhas que não serão apagadas
+        try {
+            FileReader leitura = new FileReader(arquivo);//define o leitor
+            BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
+            String linha = leitor.readLine();//primeira linha
+            while (linha != null) {//linha null = final do arquivo
+                if (!(separa(linha, 0).equalsIgnoreCase(cod))) {//procura pelas linhas que não serão apagadas e as adiciona no array
+                    salvar.add(linha);
+                }
+                linha = leitor.readLine();//pega proxima linha
+            }
+            leitor.close();
+            leitura.close();
+            FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
+            escritaAux.close();
+            FileWriter escrita = new FileWriter(arquivo, true);//define o escritor
+            BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
+            for (int i = 0; i < salvar.size(); i++) {//escreve o que estava no array no arquivo
+                escritor.write(salvar.get(i));
+                escritor.newLine();
+                escritor.flush();
+            }
+            escrita.close();
+            escritor.close();
+
+        } catch (IOException e) {
+            System.out.println(e);
+
+        }
+    }
+    
+    public String separa(String linha, int info) {
+//        //separa a primeira parte da String até o ;
+//        String resultado = linha.substring(0, linha.indexOf(';'));
+//        //armazena o restante da string
+//        String resto = linha.substring(linha.indexOf(';') + 1);
+//        //verifica se o resultado era o pretendido
+//        if (info == 0) {
+//            //retorna o resultado
+//            return resultado;
+//        }
+//        //chama novamente essa função com o resto da separação anterior
+//        resultado = separa(resto, info - 1);
+//        return resultado;
+          return linha.split(";")[info];
     }
 
     /**
@@ -163,6 +226,7 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
         });
 
         jTProdutosGerente.setBackground(new java.awt.Color(45, 48, 71));
+        jTProdutosGerente.setForeground(new java.awt.Color(255, 255, 255));
         jTProdutosGerente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -271,7 +335,10 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(jTProdutosGerente.getSelectedRow()!= -1){
             DefaultTableModel dtmProdutos = (DefaultTableModel)jTProdutosGerente.getModel();
+            String cod = jTProdutosGerente.getValueAt(jTProdutosGerente.getSelectedRow(), 1).toString();
             dtmProdutos.removeRow(jTProdutosGerente.getSelectedRow());
+            remover(cod);
+            
         }else{
 
             JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");

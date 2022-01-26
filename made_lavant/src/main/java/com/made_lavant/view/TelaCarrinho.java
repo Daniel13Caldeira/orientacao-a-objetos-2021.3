@@ -4,6 +4,14 @@
  */
 package com.made_lavant.view;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Hashtable;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -16,9 +24,106 @@ public class TelaCarrinho extends javax.swing.JFrame {
     /**
      * Creates new form TelaCarrinho
      */
+    Hashtable<String, String> ht;
+    
+    
+    
     public TelaCarrinho() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        ht = new Hashtable<>();
+        lerArquivo();
+    }
+    
+    public void lerArquivo(){
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\carrinhos\\a.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//carrinhos//a.txt");
+        }
+        try {
+            FileReader fr = new FileReader(arquivo); //define o escritor
+            BufferedReader br = new BufferedReader(fr);//buffer de escrita
+            //insere o produto e adiciona uma nova linha
+            
+            String aux;
+            String dados[];
+            DefaultTableModel model = (DefaultTableModel) jTCarrinho.getModel();
+            //Object[] linha;  //alguma linha
+                    
+            while (br.ready()) {
+                aux = br.readLine();
+                dados = aux.split(";");
+                Object[] linha = {dados[1],dados[0],dados[2], dados[3], dados[4]};
+                model.addRow(linha);
+                ht.put(dados[0], aux);
+                
+            }
+        } catch (IOException e) {
+            System.out.println(e);
+
+        }
+    }
+    
+    public void remover(String cod) {
+        //String cod = produto.getCodigo() + "";
+        System.out.println("cod: " + cod);
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\carrinhos\\a.txt");
+        }else{
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//carrinhos//a.txt");
+        }
+        ArrayList<String> salvar = new ArrayList<>();//armazena as linhas que não serão apagadas
+        try {
+            FileReader leitura = new FileReader(arquivo);//define o leitor
+            BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
+            String linha = leitor.readLine();//primeira linha
+            while (linha != null) {//linha null = final do arquivo
+                if (!(separa(linha, 0).equalsIgnoreCase(cod))) {//procura pelas linhas que não serão apagadas e as adiciona no array
+                    salvar.add(linha);
+                }
+                linha = leitor.readLine();//pega proxima linha
+            }
+            leitor.close();
+            leitura.close();
+            FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
+            escritaAux.close();
+            FileWriter escrita = new FileWriter(arquivo, true);//define o escritor
+            BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
+            for (int i = 0; i < salvar.size(); i++) {//escreve o que estava no array no arquivo
+                escritor.write(salvar.get(i));
+                escritor.newLine();
+                escritor.flush();
+            }
+            escrita.close();
+            escritor.close();
+
+        } catch (IOException e) {
+            System.out.println(e);
+
+        }
+    }
+    
+    public String separa(String linha, int info) {
+//        //separa a primeira parte da String até o ;
+//        String resultado = linha.substring(0, linha.indexOf(';'));
+//        //armazena o restante da string
+//        String resto = linha.substring(linha.indexOf(';') + 1);
+//        //verifica se o resultado era o pretendido
+//        if (info == 0) {
+//            //retorna o resultado
+//            return resultado;
+//        }
+//        //chama novamente essa função com o resto da separação anterior
+//        resultado = separa(resto, info - 1);
+//        return resultado;
+          return linha.split(";")[info];
     }
 
     /**
@@ -121,6 +226,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
         });
 
         jTCarrinho.setBackground(new java.awt.Color(45, 48, 71));
+        jTCarrinho.setForeground(new java.awt.Color(255, 255, 255));
         jTCarrinho.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -236,7 +342,9 @@ public class TelaCarrinho extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(jTCarrinho.getSelectedRow()!= -1){
             DefaultTableModel dtmProdutos = (DefaultTableModel)jTCarrinho.getModel();
+            String cod = jTCarrinho.getValueAt(jTCarrinho.getSelectedRow(), 1).toString();
             dtmProdutos.removeRow(jTCarrinho.getSelectedRow());
+             remover(cod);
         }else{
             
             JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
