@@ -119,7 +119,10 @@
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="topicoSenhaLB_EDC" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="senhaTF_EDC" min="-2" pref="330" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="confirmarBTN_EDC" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -148,34 +151,42 @@
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                  <Component id="titleLB_EDC" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="topicoCidadeLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cidadeTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="titleLB_EDC" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="topicoCidadeLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cidadeTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="topicoRuaLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ruaTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="topicoBairroLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="bairroTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="topicoNumeroLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="numeroTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cepTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="topicoCepLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ufTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="topicoUfLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="confirmarBTN_EDC" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="topicoSenhaLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="senhaTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="topicoRuaLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ruaTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="topicoBairroLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="bairroTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="topicoNumeroLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="numeroTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="cepTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="topicoCepLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ufTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="topicoUfLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="confirmarBTN_EDC" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -247,6 +258,8 @@
         <Component class="javax.swing.JTextField" name="cepTF_EDC">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cepTF_EDCActionPerformed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_EDCKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_EDCKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoRuaLB_EDC">
@@ -275,6 +288,10 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="numeroTF_EDC">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroTF_EDCKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroTF_EDCKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoBairroLB_EDC">
           <Properties>
@@ -305,6 +322,10 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="ufTF_EDC">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="ufTF_EDCKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="ufTF_EDCKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoNumeroLB_EDC">
           <Properties>
@@ -355,6 +376,19 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="voltarBTN_EDCActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="topicoSenhaLB_EDC">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Colonna MT" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="55" green="48" red="e8" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Senha"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="senhaTF_EDC">
         </Component>
       </SubComponents>
     </Container>

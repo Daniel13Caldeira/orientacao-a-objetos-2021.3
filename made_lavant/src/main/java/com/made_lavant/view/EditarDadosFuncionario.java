@@ -56,13 +56,13 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
         topicoUfLB_EDF = new javax.swing.JLabel();
         lavantLB_EDF = new javax.swing.JLabel();
         titleLB_EDF = new javax.swing.JLabel();
-        cidadeTF_EDF = new javax.swing.JTextField();
         topicoBairroLB_EDF = new javax.swing.JLabel();
         numeroTF_EDF = new javax.swing.JTextField();
         sairBTN_EDF = new javax.swing.JButton();
         voltarBTN_EDF = new javax.swing.JButton();
         senhaTF_EDF = new javax.swing.JTextField();
         topicoSenhaLB_EDF = new javax.swing.JLabel();
+        cidadeTF_EDF = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Editar Funcionário");
@@ -144,17 +144,6 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
         titleLB_EDF.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         titleLB_EDF.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        cidadeTF_EDF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cidadeTF_EDFActionPerformed(evt);
-            }
-        });
-        cidadeTF_EDF.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                cidadeTF_EDFKeyReleased(evt);
-            }
-        });
-
         topicoBairroLB_EDF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         topicoBairroLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
         topicoBairroLB_EDF.setText("Bairro");
@@ -211,7 +200,7 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
                 .addComponent(titleLB_EDF)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(70, Short.MAX_VALUE)
+                .addGap(70, 70, 70)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -222,7 +211,7 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
                         .addComponent(ruaTF_EDF))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(topicoCidadeLB_EDF)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(cidadeTF_EDF))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -246,7 +235,7 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cepTF_EDF, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
                             .addComponent(numeroTF_EDF))))
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addGap(70, 70, 70))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -350,26 +339,20 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
             }
             if (edicao) {
                 FuncionarioDados funcionario = new FuncionarioDados();
-                //String cod, String nome, Endereco endereco, String senha
                 funcionario.alterar(new Funcionario(Login.getCodigo(), funcionario.buscarNome(Login.getCodigo()), new Endereco(cidadeTF_EDF.getText(), cepTF_EDF.getText(), ufTF_EDF.getText(), bairroTF_EDF.getText(), ruaTF_EDF.getText(), numeroTF_EDF.getText()), senhaTF_EDF.getText()));
                 this.setVisible(false);
                 new PerfilFuncionario().setVisible(true);
             }
         } else {
-            //se nenhum campo de endereço estiver cadastrado, o cadastro será feito sem o endereço
+            //se nenhum campo de endereço estiver preenchido, a edição será feita sem o endereço
             if (edicao) {
                 FuncionarioDados funcionario = new FuncionarioDados();
-                //String cod, String nome, Endereco endereco, String senha
                 funcionario.alterar(new Funcionario(Login.getCodigo(), funcionario.buscarNome(Login.getCodigo()), new Endereco("null", "null", "null", "null", "null", "null"), senhaTF_EDF.getText()));
                 this.setVisible(false);
                 new PerfilFuncionario().setVisible(true);
             }
         }
     }//GEN-LAST:event_confirmarBTN_EDFActionPerformed
-
-    private void cidadeTF_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidadeTF_EDFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cidadeTF_EDFActionPerformed
 
     private void sairBTN_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_EDFActionPerformed
         this.setVisible(false);
@@ -380,10 +363,6 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
         this.setVisible(false);
         new PerfilFuncionario().setVisible(true);
     }//GEN-LAST:event_voltarBTN_EDFActionPerformed
-
-    private void cidadeTF_EDFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cidadeTF_EDFKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cidadeTF_EDFKeyReleased
 
     private void ufTF_EDFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ufTF_EDFKeyReleased
         mascaraUF();
