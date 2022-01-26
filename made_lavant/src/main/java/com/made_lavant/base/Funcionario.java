@@ -52,6 +52,11 @@ public class Funcionario extends Pessoa {
         add.adicionarSemEndereco(this);
     }
 
+    public Funcionario(String cod, String nome, Endereco endereco, String senha) {
+        super(nome, endereco, senha);
+        this.cod = cod;
+    }
+
     //altera a senha
     @Override
     public void setSenha(String senha) {
