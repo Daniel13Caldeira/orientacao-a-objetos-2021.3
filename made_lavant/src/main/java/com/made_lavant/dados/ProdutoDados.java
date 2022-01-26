@@ -46,7 +46,7 @@ public class ProdutoDados {
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\produto.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//produto.txt");
         }
@@ -72,7 +72,7 @@ public class ProdutoDados {
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\produto.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//produto.txt");
         }
@@ -108,12 +108,12 @@ public class ProdutoDados {
 
     //busca uma linha
     private String buscar(String produto) {
-        String cod = produto ;
+        String cod = produto;
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\produto.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//produto.txt");
         }
@@ -143,6 +143,7 @@ public class ProdutoDados {
         //se não for encontrado retorna null
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarCodigo(String produto) {
         String aux = buscar(produto);
@@ -151,6 +152,7 @@ public class ProdutoDados {
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarQuantidade(String produto) {
         String aux = buscar(produto);
@@ -159,6 +161,7 @@ public class ProdutoDados {
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarValidade(String produto) {
         String aux = buscar(produto);
@@ -167,6 +170,7 @@ public class ProdutoDados {
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarPreco(String produto) {
         String aux = buscar(produto);
@@ -176,7 +180,7 @@ public class ProdutoDados {
         return null;
     }
     //altera os dados de um produto
-    
+
     public void alterar(Produto produto) {
         //busca um produto
         if (buscar(produto.getCodigo()+"") != null) {
