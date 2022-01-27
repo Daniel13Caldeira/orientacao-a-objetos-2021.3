@@ -7,6 +7,7 @@ package com.made_lavant.view;
 
 import com.made_lavant.dados.ClienteDados;
 import com.made_lavant.dados.FuncionarioDados;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -26,7 +27,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
-   }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -193,11 +194,25 @@ public class Login extends javax.swing.JFrame {
                     String senha = func.buscarSenha(cod);
                     if (senha.equals(senhaPF_LO.getText())) {
                         Login.codigo = loginTF_LO.getText();
-                        this.setVisible(false);
                         if (loginTF_LO.getText().charAt(0) == 'A') {
-                            new InicioGerente().setVisible(true);
+                            if (func.buscarSenha(loginTF_LO.getText()).equals("madeLavant")) {
+                                JOptionPane.showMessageDialog(null, "Senha padrão detectada!\nRedirecionando para tela de edição.");
+                                this.setVisible(false);
+                                new EditarDadosGerente().setVisible(true);
+                            } else {
+                                this.setVisible(false);
+                                new InicioGerente().setVisible(true);
+
+                            }
                         } else {
-                            new InicioFuncionario().setVisible(true);
+                            if (func.buscarSenha(loginTF_LO.getText()).equals("madeLavant")) {
+                                JOptionPane.showMessageDialog(null, "Senha padrão detectada!\nRedirecionando para tela de edição.");
+                                this.setVisible(false);
+                                new EditarDadosFuncionario().setVisible(true);
+                            } else {
+                                this.setVisible(false);
+                                new InicioFuncionario().setVisible(true);
+                            }
                         }
                     } else {
                         utilityLB_LO.setText("Senha Incorreta!");

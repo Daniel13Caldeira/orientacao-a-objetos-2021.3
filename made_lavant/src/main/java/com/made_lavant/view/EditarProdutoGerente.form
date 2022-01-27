@@ -158,6 +158,8 @@
         <Component class="javax.swing.JTextField" name="precoTF_EDPG">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="precoTF_EDPGActionPerformed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="precoTF_EDPGKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="precoTF_EDPGKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lavantLB_EDPG">
@@ -192,6 +194,8 @@
         <Component class="javax.swing.JTextField" name="quantiTF_EDPG">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quantiTF_EDPGActionPerformed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="quantiTF_EDPGKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="quantiTF_EDPGKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoPrecoLB_EDPG">
@@ -254,6 +258,9 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Colonna MT" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="55" green="48" red="e8" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel5"/>
           </Properties>

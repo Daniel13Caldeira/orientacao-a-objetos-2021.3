@@ -46,7 +46,7 @@ public class Produto {
     }
 
     //cria um produto com validade
-    public Produto(String nome, double preço, String validade, double quantidade){
+    public Produto(String nome, double preco, String validade, double quantidade){
         Codigos codigos = new Codigos();
         this.nome = nome;
         this.validade = validade;
@@ -72,6 +72,13 @@ public class Produto {
         ProdutoDados add = new ProdutoDados();
         //adiciona um produto ao arquivo onde ficará salvo
         add.adicionar(this);
+    }
+    public Produto(int cod, double preco, double quantidade){
+        ProdutoDados prod = new ProdutoDados();
+        this.codigo= cod;
+        this.nome= prod.buscarNome(cod+"");
+        this.preco=preco;
+        this.quantidade=quantidade;
     }
 
     //apaga um produto

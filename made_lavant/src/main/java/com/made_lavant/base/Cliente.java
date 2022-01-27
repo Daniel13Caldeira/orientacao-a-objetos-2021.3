@@ -34,6 +34,11 @@ public class Cliente extends Pessoa {
         add.adicionarSemEndereco(this);
     }
 
+    public Cliente(String cpf, String nome, Endereco endereco, String senha) {
+        super(nome, endereco, senha);
+        this.CPF = cpf;
+    }
+
     //altera a senha
     @Override
     public void setSenha(String senha) {

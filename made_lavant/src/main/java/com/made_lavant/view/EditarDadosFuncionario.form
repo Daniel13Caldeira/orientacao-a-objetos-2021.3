@@ -62,11 +62,10 @@
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
-                  <EmptySpace pref="70" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="topicoSenhaLB_EDF" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Component id="confirmarBTN_EDF" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -76,7 +75,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="topicoCidadeLB_EDF" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="cidadeTF_EDF" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -87,7 +86,10 @@
                                   <Component id="bairroTF_EDF" min="-2" pref="291" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="topicoUfLB_EDF" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="topicoUfLB_EDF" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoSenhaLB_EDF" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="ufTF_EDF" min="-2" pref="61" max="-2" attributes="0"/>
@@ -107,7 +109,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="70" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -159,8 +161,8 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="confirmarBTN_EDF" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="topicoSenhaLB_EDF" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="senhaTF_EDF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="topicoSenhaLB_EDF" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -197,6 +199,8 @@
         <Component class="javax.swing.JTextField" name="cepTF_EDF">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cepTF_EDFActionPerformed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_EDFKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_EDFKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoCidadeLB_EDF">
@@ -244,6 +248,10 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="ufTF_EDF">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="ufTF_EDFKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="ufTF_EDFKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoCepLB_EDF">
           <Properties>
@@ -292,11 +300,6 @@
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="cidadeTF_EDF">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cidadeTF_EDFActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="topicoBairroLB_EDF">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -309,6 +312,10 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="numeroTF_EDF">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroTF_EDFKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroTF_EDFKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="sairBTN_EDF">
           <Properties>
@@ -344,12 +351,20 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="voltarBTN_EDFActionPerformed"/>
           </Events>
         </Component>
+        <Component class="javax.swing.JTextField" name="senhaTF_EDF">
+        </Component>
         <Component class="javax.swing.JLabel" name="topicoSenhaLB_EDF">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Colonna MT" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="55" green="48" red="e8" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Senha"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="senhaTF_EDF">
+        <Component class="javax.swing.JTextField" name="cidadeTF_EDF">
         </Component>
       </SubComponents>
     </Container>

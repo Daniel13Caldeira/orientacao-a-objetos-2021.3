@@ -28,13 +28,7 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
     }
     
    Hashtable<String, String> ht; 
-   public static void main(String[] args) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CrudProdutos_Cliente().setVisible(true);
-            }
-        });
-    }
+   
     
     
 

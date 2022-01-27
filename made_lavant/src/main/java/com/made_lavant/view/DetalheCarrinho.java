@@ -62,13 +62,11 @@ public class DetalheCarrinho extends javax.swing.JFrame {
                 dados = aux.split(";");
                 Object[] linha = {dados[1],dados[0],dados[4],dados[3],dados[2]};
                 model.addRow(linha);
-                float f = 12.0f;
                 String valor = dados[2];
                 soma  += Float.parseFloat(valor);
                 total = String.valueOf(soma);
                 
             }
-            System.out.println(getTotal());
 
         } catch (IOException e) {
             System.out.println(e);
