@@ -4,6 +4,10 @@
  */
 package com.made_lavant.view;
 
+import com.made_lavant.base.Produto;
+import com.made_lavant.dados.ProdutoDados;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Marcio
@@ -15,6 +19,10 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
      */
     public EditarProdutoGerente() {
         initComponents();
+        ProdutoDados prod = new ProdutoDados();
+        nomeLB_EDPG.setText(prod.buscarNome(CrudProdutos.getCodigo()));
+        quantiTF_EDPG.setText(prod.buscarQuantidade(CrudProdutos.getCodigo()));
+        precoTF_EDPG.setText(prod.buscarPreco(CrudProdutos.getCodigo()));
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -65,6 +73,14 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
                 precoTF_EDPGActionPerformed(evt);
             }
         });
+        precoTF_EDPG.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                precoTF_EDPGKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                precoTF_EDPGKeyTyped(evt);
+            }
+        });
 
         lavantLB_EDPG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         lavantLB_EDPG.setForeground(new java.awt.Color(232, 72, 85));
@@ -84,6 +100,14 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
         quantiTF_EDPG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 quantiTF_EDPGActionPerformed(evt);
+            }
+        });
+        quantiTF_EDPG.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                quantiTF_EDPGKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                quantiTF_EDPGKeyTyped(evt);
             }
         });
 
@@ -116,6 +140,7 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
         });
 
         nomeLB_EDPG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        nomeLB_EDPG.setForeground(new java.awt.Color(232, 72, 85));
         nomeLB_EDPG.setText("jLabel5");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -200,7 +225,21 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
     }//GEN-LAST:event_precoTF_EDPGActionPerformed
 
     private void confirmarBTN_EDPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_EDPGActionPerformed
-        // TODO add your handling code here:
+        boolean edicao = true;
+        if (precoTF_EDPG.getText().equals("") || precoTF_EDPG.getText().equals("Campo obrigatório")) {
+            precoTF_EDPG.setText("Campo obrigatório");
+            edicao = false;
+        }
+        if (quantiTF_EDPG.getText().equals("") || quantiTF_EDPG.getText().equals("Campo obrigatório")) {
+            quantiTF_EDPG.setText("Campo obrigatório");
+            edicao = false;
+        }
+        if (edicao) {
+            ProdutoDados prod = new ProdutoDados();
+            prod.alterar(new Produto((Integer.parseInt(CrudProdutos.getCodigo())), (Double.parseDouble(precoTF_EDPG.getText())), (Double.parseDouble(quantiTF_EDPG.getText()))));
+            this.setVisible(false);
+            new DetalheProduto_Gerente().setVisible(true);
+        }
     }//GEN-LAST:event_confirmarBTN_EDPGActionPerformed
 
     private void quantiTF_EDPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantiTF_EDPGActionPerformed
@@ -217,6 +256,39 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
         new CrudProdutosGerente().setVisible(true);
     }//GEN-LAST:event_voltarBTN_EDPGActionPerformed
 
+    private void precoTF_EDPGKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_precoTF_EDPGKeyReleased
+        mascaraDouble(precoTF_EDPG);
+    }//GEN-LAST:event_precoTF_EDPGKeyReleased
+
+    private void precoTF_EDPGKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_precoTF_EDPGKeyTyped
+        mascaraDouble(precoTF_EDPG);
+    }//GEN-LAST:event_precoTF_EDPGKeyTyped
+
+    private void quantiTF_EDPGKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_quantiTF_EDPGKeyReleased
+        mascaraDouble(quantiTF_EDPG);
+    }//GEN-LAST:event_quantiTF_EDPGKeyReleased
+
+    private void quantiTF_EDPGKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_quantiTF_EDPGKeyTyped
+        mascaraDouble(quantiTF_EDPG);
+    }//GEN-LAST:event_quantiTF_EDPGKeyTyped
+    private void mascaraDouble(JTextField textField) {
+        String texto = textField.getText();
+        if (texto.length() > 0) {
+            if (!(texto.charAt(texto.length() - 1) == '.' || (texto.charAt(texto.length() - 1) >= '0' && texto.charAt(texto.length() - 1) <= '9'))) {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+            int cont = 0;
+            for (int i = 0; i < texto.length(); i++) {
+                if (texto.charAt(i) == '.') {
+                    cont++;
+                }
+            }
+            if (cont > 1) {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        textField.setText(texto);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton confirmarBTN_EDPG;
