@@ -1,2 +1,0 @@
-B1;Funcionario_teste;null;null;null;null;null;null;123;
-A0;Gerente_teste;null;null;null;null;null;null;123;

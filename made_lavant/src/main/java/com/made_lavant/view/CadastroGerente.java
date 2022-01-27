@@ -6,6 +6,8 @@ package com.made_lavant.view;
 
 import com.made_lavant.base.Endereco;
 import com.made_lavant.base.Funcionario;
+import com.made_lavant.dados.Codigos;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -207,8 +209,8 @@ public class CadastroGerente extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addComponent(titleLB_CG)
                 .addGap(33, 33, 33)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(topicoNomeLB_CG)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(topicoNomeLB_CG, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(nomeTF_CG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -308,8 +310,12 @@ public class CadastroGerente extends javax.swing.JFrame {
         }
         //retorna para a tela de crud de funcionários se o cadastro foi realizado
         if (cadastro) {
+            Codigos cod = new Codigos();
+            JOptionPane.showMessageDialog(null, "Gerente cadastrado com sucesso\n"
+                    + "Login: " + "A" + (cod.buscaFuncionario() - 1) + "\n"
+                    + "Senha(Padrão): madeLavant");
             this.setVisible(false);
-            new InicioGerente().setVisible(true);
+            new Login().setVisible(true);
         }
     }//GEN-LAST:event_confirmarBTN_CGActionPerformed
 

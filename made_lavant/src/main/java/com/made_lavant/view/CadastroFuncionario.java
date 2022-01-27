@@ -6,6 +6,8 @@ package com.made_lavant.view;
 
 import com.made_lavant.base.Endereco;
 import com.made_lavant.base.Funcionario;
+import com.made_lavant.dados.Codigos;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -437,6 +439,17 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         }
         //retorna para a tela de crud de funcionários se o cadastro foi realizado
         if (cadastro) {
+            if (identificador.equals("A")) {
+                Codigos cod = new Codigos();
+                JOptionPane.showMessageDialog(null, "Gerente cadastrado com sucesso!\n"
+                        + "Login: " + "A" + (cod.buscaFuncionario() - 1) + "\n"
+                        + "Senha(Padrão): madeLavant");
+            } else {
+                Codigos cod = new Codigos();
+                JOptionPane.showMessageDialog(null, "Funcionário cadastrado com sucesso!\n"
+                        + "Login: " + "B" + (cod.buscaFuncionario() - 1) + "\n"
+                        + "Senha(Padrão): madeLavant");
+            }
             this.setVisible(false);
             new CrudFuncionarios().setVisible(true);
         }
