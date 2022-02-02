@@ -4,13 +4,22 @@
  */
 package com.made_lavant.base;
 
+import java.util.Date;
+
 /**
  *
  * @author danie
  */
-public class VendaProntaEntrega extends Venda{
-    public VendaProntaEntrega(Funcionario funcionario, int carrinho) {
-        super(funcionario, carrinho);
+public class VendaProntaEntrega implements Venda {
+
+    String funcionario;
+    int carrinho;
+    Date data;
+
+    public VendaProntaEntrega(String funcionario, int carrinho) {
+        this.funcionario = funcionario;
+        this.carrinho = carrinho;
+        this.data = new Date();
     }
 
     @Override

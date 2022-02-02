@@ -38,19 +38,19 @@ public class Carrinho {
         return cod;
     }
 
-    public void adicionarProduto(Produto produto) {
+    public void adicionarProduto(int produto, double quantidade) {
         CarrinhoDados add = new CarrinhoDados();
-        add.adicionarProduto(this, produto);
+        add.adicionarProduto(this.cod, produto, quantidade);
     }
 
-    public void removerProduto(Produto produto) {
+    public void removerProduto(int produto) {
         CarrinhoDados remove = new CarrinhoDados();
-        remove.removerProduto(this, produto);
+        remove.removerProduto(this.cod, produto);
     }
 
     public ArrayList<String> getProdutos() {
         CarrinhoDados busca = new CarrinhoDados();
-        this.produtos=busca.getProdutos(this);
+        this.produtos = busca.getProdutos(this.cod);
         return this.produtos;
     }
 
@@ -64,7 +64,7 @@ public class Carrinho {
 
     public double calcularPreco() {
         double total = 0;
-       //codigo
+        //codigo
         return total;
     }
 
