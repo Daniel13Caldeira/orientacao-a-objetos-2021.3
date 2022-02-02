@@ -111,4 +111,19 @@ public class Cliente extends Pessoa {
         }
         return true;
     }
+
+    @Override
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    @Override
+    public String getNome() {
+        return this.nome;
+    }
+
+    @Override
+    public String getSenha() {
+        return this.senha;
+    }
 }

@@ -11,23 +11,19 @@ import java.util.Date;
  *
  * @author ewe88
  */
-public class Venda {
+public abstract class Venda {
 
     protected Date data;
     protected Funcionario funcionario;
-    protected Carrinho carrinho;
+    protected int carrinho;
 
-    public Venda(Funcionario funcionario, Carrinho carrinho /*int codCarrinho*/) {
+    public Venda(Funcionario funcionario, int carrinho) {
         this.data = new Date();
         this.funcionario = funcionario;
         this.carrinho = carrinho;
     }
 
-    public void efetuaVenda() {
+    public abstract void efetuaVenda();
 
-    }
-
-    public void cancelaVenda() {
-
-    }
+    public abstract void cancelaVenda();
 }

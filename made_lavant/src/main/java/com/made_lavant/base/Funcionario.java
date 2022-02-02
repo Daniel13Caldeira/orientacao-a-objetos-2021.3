@@ -91,4 +91,19 @@ public class Funcionario extends Pessoa {
         FuncionarioDados remove = new FuncionarioDados();
         remove.remover(this);
     }
+
+    @Override
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    @Override
+    public String getNome() {
+        return this.nome;
+    }
+
+    @Override
+    public String getSenha() {
+        return this.senha;
+    }
 }

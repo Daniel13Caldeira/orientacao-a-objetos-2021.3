@@ -14,25 +14,15 @@ public abstract class Pessoa {
     protected String nome, senha;
     protected Endereco endereco;
 
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
+    public abstract void setSenha(String senha);
 
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
+    public abstract void setEndereco(Endereco endereco);
 
-    public String getNome() {
-        return nome;
-    }
+    public abstract String getNome();
 
-    public String getSenha() {
-        return senha;
-    }
+    public abstract String getSenha();
 
-    public Endereco getEndereco() {
-        return endereco;
-    }
+    public abstract Endereco getEndereco();
 
     public Pessoa(String nome, String senha) {
         this.nome = nome;
