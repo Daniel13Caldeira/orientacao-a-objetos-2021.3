@@ -12,8 +12,7 @@ public class Produto {
     protected double quantidade;
 
     public String getNome() {
-        ProdutoDados produto = new ProdutoDados();
-        return produto.buscarNome(this.codigo);
+        return this.nome;
     }
 
     public int getCodigo() {
@@ -21,18 +20,15 @@ public class Produto {
     }
 
     public double getPreco() {
-        ProdutoDados produto = new ProdutoDados();
-        return Double.parseDouble(produto.buscarPreco(this.codigo));
+        return this.preco;
     }
 
     public String getValidade() {
-        ProdutoDados produto = new ProdutoDados();
-        return produto.buscarValidade(this.codigo);
+        return this.validade;
     }
 
     public double getQuantidade() {
-        ProdutoDados produto = new ProdutoDados();
-        return Double.parseDouble(produto.buscarQuantidade(this.codigo));
+        return this.quantidade;
     }
 
     //cria um produto com validade

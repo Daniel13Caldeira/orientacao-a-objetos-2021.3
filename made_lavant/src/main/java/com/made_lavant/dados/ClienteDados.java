@@ -38,7 +38,7 @@ public class ClienteDados {
     //adiciona um cliente sem endereço ao arquivo de salvamento
     public void adicionarSemEndereco(Cliente cliente) {
         //cria uma String com os dados do cliente no formato padrão que está sendo utilizado
-        String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + cliente.getSenha() + ';';
+        String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + cliente.getSenha() + ';';
         //define o arquivo de salvamento
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {

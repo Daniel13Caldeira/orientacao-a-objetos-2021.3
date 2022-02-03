@@ -68,13 +68,11 @@ public class Funcionario extends Pessoa {
 
     @Override
     public String getNome() {
-        FuncionarioDados funcionario = new FuncionarioDados();
-        return funcionario.buscarNome(this.cod);
+        return this.nome;
     }
 
     @Override
     public String getSenha() {
-        FuncionarioDados funcionario = new FuncionarioDados();
-        return funcionario.buscarSenha(this.cod);
+        return this.senha;
     }
 }

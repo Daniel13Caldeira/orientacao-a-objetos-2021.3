@@ -18,6 +18,7 @@ public class Cliente extends Pessoa {
     //cria um cliente com endereço
     public Cliente(String nome, Endereco endereco, String CPF, String senha) {
         super(nome, endereco, senha);
+        System.out.println(nome + " " + senha);
         this.CPF = CPF;
         ClienteDados add = new ClienteDados();
         //adiciona ao arquivo onde é feita a armazenagem dos dados
@@ -88,13 +89,11 @@ public class Cliente extends Pessoa {
 
     @Override
     public String getNome() {
-        ClienteDados cliente = new ClienteDados();
-        return cliente.buscarNome(this.CPF);
+        return this.nome;
     }
 
     @Override
     public String getSenha() {
-        ClienteDados cliente = new ClienteDados();
-        return cliente.buscarSenha(this.CPF);
+        return this.senha;
     }
 }
