@@ -12,7 +12,8 @@ public class Produto {
     protected double quantidade;
 
     public String getNome() {
-        return nome;
+        ProdutoDados produto = new ProdutoDados();
+        return produto.buscarNome(this.codigo);
     }
 
     public int getCodigo() {
@@ -20,33 +21,22 @@ public class Produto {
     }
 
     public double getPreco() {
-        return preco;
-    }
-
-    //muda o preço do produto
-    public void setPreco(double preco) {
-        this.preco = preco;
-        ProdutoDados altera = new ProdutoDados();
-        altera.alterar(this);
+        ProdutoDados produto = new ProdutoDados();
+        return Double.parseDouble(produto.buscarPreco(this.codigo));
     }
 
     public String getValidade() {
-        return validade;
+        ProdutoDados produto = new ProdutoDados();
+        return produto.buscarValidade(this.codigo);
     }
 
     public double getQuantidade() {
-        return quantidade;
-    }
-
-    //muda a quantidade do produto
-    public void setQuantidade(double quantidade) {
-        this.quantidade = quantidade;
-        ProdutoDados altera = new ProdutoDados();
-        altera.alterar(this);
+        ProdutoDados produto = new ProdutoDados();
+        return Double.parseDouble(produto.buscarQuantidade(this.codigo));
     }
 
     //cria um produto com validade
-    public Produto(String nome, double preco, String validade, double quantidade){
+    public Produto(String nome, double preco, String validade, double quantidade) {
         Codigos codigos = new Codigos();
         this.nome = nome;
         this.validade = validade;
@@ -73,18 +63,12 @@ public class Produto {
         //adiciona um produto ao arquivo onde ficará salvo
         add.adicionar(this);
     }
-    public Produto(int cod, double preco, double quantidade){
+
+    public Produto(int cod, double preco, double quantidade) {
         ProdutoDados prod = new ProdutoDados();
-        this.codigo= cod;
-        this.nome= prod.buscarNome(cod+"");
-        this.preco=preco;
-        this.quantidade=quantidade;
+        this.codigo = cod;
+        this.nome = prod.buscarNome(cod);
+        this.preco = preco;
+        this.quantidade = quantidade;
     }
-
-    //apaga um produto
-    public void remove() {
-        ProdutoDados remove = new ProdutoDados();
-        remove.remover(this);
-    }
-
 }

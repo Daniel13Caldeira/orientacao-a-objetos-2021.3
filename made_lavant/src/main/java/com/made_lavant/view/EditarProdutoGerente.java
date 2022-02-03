@@ -20,9 +20,9 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
     public EditarProdutoGerente() {
         initComponents();
         ProdutoDados prod = new ProdutoDados();
-        nomeLB_EDPG.setText(prod.buscarNome(CrudProdutos.getCodigo()));
-        quantiTF_EDPG.setText(prod.buscarQuantidade(CrudProdutos.getCodigo()));
-        precoTF_EDPG.setText(prod.buscarPreco(CrudProdutos.getCodigo()));
+        nomeLB_EDPG.setText(prod.buscarNome(Integer.parseInt(CrudProdutosGerente.getCodigo())));
+        quantiTF_EDPG.setText(prod.buscarQuantidade(Integer.parseInt(CrudProdutosGerente.getCodigo())));
+        precoTF_EDPG.setText(prod.buscarPreco(Integer.parseInt(CrudProdutosGerente.getCodigo())));
         setExtendedState(MAXIMIZED_BOTH);
     }
 

@@ -14,10 +14,6 @@ public abstract class Pessoa {
     protected String nome, senha;
     protected Endereco endereco;
 
-    public abstract void setSenha(String senha);
-
-    public abstract void setEndereco(Endereco endereco);
-
     public abstract String getNome();
 
     public abstract String getSenha();

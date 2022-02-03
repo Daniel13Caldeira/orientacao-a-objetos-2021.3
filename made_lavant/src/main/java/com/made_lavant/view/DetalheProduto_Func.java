@@ -203,11 +203,11 @@ public class DetalheProduto_Func extends javax.swing.JFrame {
         );
 
         ProdutoDados ProdutoDados = new ProdutoDados();
-        codLB_DPF.setText(ProdutoDados.buscarCodigo(CrudProdutos.getCodigo()));
-        valLB_DPF.setText(ProdutoDados.buscarValidade(CrudProdutos.getCodigo()));
-        precoLB_DPF.setText(ProdutoDados.buscarPreco(CrudProdutos.getCodigo()));
-        quantiDispLB_DPF.setText(ProdutoDados.buscarQuantidade(CrudProdutos.getCodigo()));
-        nomeLB_DPF.setText(ProdutoDados.buscarNome(CrudProdutos.getCodigo()));
+        codLB_DPF.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutos.getCodigo())));
+        valLB_DPF.setText(ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos.getCodigo())));
+        precoLB_DPF.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutos.getCodigo())));
+        quantiDispLB_DPF.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutos.getCodigo())));
+        nomeLB_DPF.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutos.getCodigo())));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

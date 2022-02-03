@@ -90,8 +90,7 @@ public class FuncionarioDados {
     }
 
     //remove um funcionário do arquivo de salvamento
-    public void remover(Funcionario funcionario) {
-        String cod = funcionario.getCod();
+    public void remover(String cod) {
         //define o arquivo onde a remoção será feita
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -245,7 +244,7 @@ public class FuncionarioDados {
         //verifica se o funcionário existe
         if (buscar(funcionario.getCod()) != null) {
             //remove o funcionário do arquivo de salvamento
-            remover(funcionario);
+            remover(funcionario.getCod());
             //adiciona o funcionário ao arquivo de salvamento com os novos dados
             adicionar(funcionario);
         }
@@ -254,7 +253,7 @@ public class FuncionarioDados {
     //semelhante a alterar
     public void alterarSemEndereco(Funcionario funcionario) {
         if (buscar(funcionario.getCod()) != null) {
-            remover(funcionario);
+            remover(funcionario.getCod());
             adicionarSemEndereco(funcionario);
         }
     }

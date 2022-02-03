@@ -141,7 +141,7 @@
             <Property name="text" type="java.lang.String" value="00,00"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ProdutoDados ProdutoDados = new ProdutoDados();&#xa;precoLB_DPG.setText(ProdutoDados.buscarPreco(CrudProdutosGerente.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ProdutoDados ProdutoDados = new ProdutoDados();&#xa;precoLB_DPG.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutosGerente.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoQuantiDispLB_DPG">
@@ -182,7 +182,7 @@
             <Property name="text" type="java.lang.String" value="dd/mm/aaaa"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="valLB_DPG.setText(ProdutoDados.buscarValidade(CrudProdutosGerente.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="valLB_DPG.setText(ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutosGerente.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoValLB_DPG">
@@ -211,7 +211,7 @@
             <Property name="text" type="java.lang.String" value="000"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="codLB_DPG.setText(ProdutoDados.buscarCodigo(CrudProdutosGerente.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="codLB_DPG.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutosGerente.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoCodLB_DPG">
@@ -317,7 +317,7 @@
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="nomeLB_DPG.setText(ProdutoDados.buscarNome(CrudProdutosGerente.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="nomeLB_DPG.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutosGerente.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="quantiDispLB_DPG">
@@ -334,7 +334,7 @@
             <Property name="text" type="java.lang.String" value="00"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="quantiDispLB_DPG.setText(ProdutoDados.buscarQuantidade(CrudProdutosGerente.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="quantiDispLB_DPG.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutosGerente.getCodigo())));"/>
           </AuxValues>
         </Component>
       </SubComponents>

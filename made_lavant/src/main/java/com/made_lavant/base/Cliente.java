@@ -39,35 +39,9 @@ public class Cliente extends Pessoa {
         this.CPF = cpf;
     }
 
-    //altera a senha
-    @Override
-    public void setSenha(String senha) {
-        this.senha = senha;
-        ClienteDados altera = new ClienteDados();
-        altera.alterar(this);
-    }
-
-    //exclui um cliente
-    public void remove() {
-        ClienteDados remove = new ClienteDados();
-        remove.remover(this);
-    }
-
     @Override
     public Endereco getEndereco() {
         return endereco;
-    }
-
-    //muda o endereço do cliente
-    public void setEndereco(String bairro, String cep, String cidade, String numero, String rua, String uf) {
-        this.endereco.setBairro(bairro);
-        this.endereco.setCep(cep);
-        this.endereco.setCidade(cidade);
-        this.endereco.setNumero(numero);
-        this.endereco.setRua(rua);
-        this.endereco.setUf(uf);
-        ClienteDados altera = new ClienteDados();
-        altera.alterar(this);
     }
 
     public String getCPF() {
@@ -113,17 +87,14 @@ public class Cliente extends Pessoa {
     }
 
     @Override
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
-
-    @Override
     public String getNome() {
-        return this.nome;
+        ClienteDados cliente = new ClienteDados();
+        return cliente.buscarNome(this.CPF);
     }
 
     @Override
     public String getSenha() {
-        return this.senha;
+        ClienteDados cliente = new ClienteDados();
+        return cliente.buscarSenha(this.CPF);
     }
 }

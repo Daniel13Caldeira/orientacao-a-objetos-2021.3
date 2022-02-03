@@ -12,8 +12,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -60,14 +58,13 @@ public class ProdutoDados {
             escritor.close();
             escrita.close();
         } catch (IOException ex) {
-
+            
         }
-
+        
     }
 
     //remove um produto do arquivo de salvamento
-    public void remover(Produto produto) {
-        String cod = produto.getCodigo() + "";
+    public void remover(int cod) {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
@@ -82,7 +79,7 @@ public class ProdutoDados {
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             String linha = leitor.readLine();//primeira linha
             while (linha != null) {//linha null = final do arquivo
-                if (!(separa(linha, 0).equalsIgnoreCase(cod))) {//procura pelas linhas que não serão apagadas e as adiciona no array
+                if (!(separa(linha, 0).equalsIgnoreCase(String.valueOf(cod)))) {//procura pelas linhas que não serão apagadas e as adiciona no array
                     salvar.add(linha);
                 }
                 linha = leitor.readLine();//pega proxima linha
@@ -100,15 +97,14 @@ public class ProdutoDados {
             }
             escrita.close();
             escritor.close();
-
+            
         } catch (IOException ex) {
-
+            
         }
     }
 
     //busca uma linha
-    private String buscar(String produto) {
-        String cod = produto;
+    private String buscar(int cod) {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
@@ -122,7 +118,7 @@ public class ProdutoDados {
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             String linha = leitor.readLine();//primeira linha
             while (linha != null) {//linha null = final do arquivo
-                if (separa(linha, 0).equalsIgnoreCase(cod)) {//procura pela linha requerida
+                if (separa(linha, 0).equalsIgnoreCase(String.valueOf(cod))) {//procura pela linha requerida
                     return linha;
                 }
                 linha = leitor.readLine();//pega proxima linha
@@ -133,7 +129,7 @@ public class ProdutoDados {
     }
 
     //busca o nome de um produto
-    public String buscarNome(String produto) {
+    public String buscarNome(int produto) {
         //busca o produto
         String aux = buscar(produto);
         //se encontrar um produto, o nome é separado e retornado
@@ -145,7 +141,7 @@ public class ProdutoDados {
     }
 
     //semelhante a buscarNome
-    public String buscarCodigo(String produto) {
+    public String buscarCodigo(int produto) {
         String aux = buscar(produto);
         if (aux != null) {
             return separa(aux, 0);
@@ -154,7 +150,7 @@ public class ProdutoDados {
     }
 
     //semelhante a buscarNome
-    public String buscarQuantidade(String produto) {
+    public String buscarQuantidade(int produto) {
         String aux = buscar(produto);
         if (aux != null) {
             return separa(aux, 4);
@@ -163,7 +159,7 @@ public class ProdutoDados {
     }
 
     //semelhante a buscarNome
-    public String buscarValidade(String produto) {
+    public String buscarValidade(int produto) {
         String aux = buscar(produto);
         if (aux != null) {
             return separa(aux, 3);
@@ -172,7 +168,7 @@ public class ProdutoDados {
     }
 
     //semelhante a buscarNome
-    public String buscarPreco(String produto) {
+    public String buscarPreco(int produto) {
         String aux = buscar(produto);
         if (aux != null) {
             return separa(aux, 2);
@@ -183,12 +179,12 @@ public class ProdutoDados {
 
     public void alterar(Produto produto) {
         //busca um produto
-        if (buscar(produto.getCodigo()+"") != null) {
+        if (buscar(produto.getCodigo()) != null) {
             //remove o produto do arquivo de salvamento
-            remover(produto);
+            remover(produto.getCodigo());
             //adiciona o produto ao arquivo de salvamento com os novos dados
             adicionar(produto);
         }
     }
-
+    
 }

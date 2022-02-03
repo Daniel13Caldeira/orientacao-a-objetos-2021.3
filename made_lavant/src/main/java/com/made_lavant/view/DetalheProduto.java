@@ -209,11 +209,11 @@ public class DetalheProduto extends javax.swing.JFrame {
         );
 
         ProdutoDados ProdutoDados = new ProdutoDados();
-        precoLB_DP.setText(ProdutoDados.buscarPreco(CrudProdutos_Cliente.getCodigo()));
-        nomeLB_DP.setText(ProdutoDados.buscarNome(CrudProdutos_Cliente.getCodigo()));
-        codigoLB_DP.setText(ProdutoDados.buscarCodigo(CrudProdutos_Cliente.getCodigo()));
-        valLB_DP.setText(ProdutoDados.buscarValidade(CrudProdutos_Cliente.getCodigo()));
-        quantiDispLB_DP.setText(ProdutoDados.buscarQuantidade(CrudProdutos_Cliente.getCodigo()));
+        precoLB_DP.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
+        nomeLB_DP.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
+        codigoLB_DP.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
+        valLB_DP.setText(ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
+        quantiDispLB_DP.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

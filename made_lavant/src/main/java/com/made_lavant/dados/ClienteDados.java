@@ -38,13 +38,13 @@ public class ClienteDados {
     //adiciona um cliente sem endereço ao arquivo de salvamento
     public void adicionarSemEndereco(Cliente cliente) {
         //cria uma String com os dados do cliente no formato padrão que está sendo utilizado
-        String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';'+cliente.getSenha()+';';
+        String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + cliente.getSenha() + ';';
         //define o arquivo de salvamento
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\cliente.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//cliente.txt");
         }
@@ -67,11 +67,11 @@ public class ClienteDados {
         //cria uma String com os dados do cliente no formato padrão que está sendo utilizado
         String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + cliente.getEndereco().getCidade() + ';' + cliente.getEndereco().getRua() + ';' + cliente.getEndereco().getBairro() + ';' + cliente.getEndereco().getNumero() + ';' + cliente.getEndereco().getUf() + ';' + cliente.getEndereco().getCep() + ';' + cliente.getSenha() + ';';
         //define o arquivo de salvamento
-                File arquivo;
+        File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\cliente.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//cliente.txt");
         }
@@ -90,15 +90,13 @@ public class ClienteDados {
     }
 
     //remove um cliente do arquivo de salvamento
-    public void remover(Cliente cliente) {
-        //codigo do cliente a ser removido
-        String cod = cliente.getCPF();
+    public void remover(String cpf) {
         //arquivo de onde ele será removido
-                File arquivo;
+        File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\cliente.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//cliente.txt");
         }
@@ -109,7 +107,7 @@ public class ClienteDados {
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             String linha = leitor.readLine();//primeira linha
             while (linha != null) {//linha null = final do arquivo
-                if (!(separa(linha, 0).equalsIgnoreCase(cod))) {//procura pelas linhas que não serão apagadas e as adiciona no array
+                if (!(separa(linha, 0).equalsIgnoreCase(cpf))) {//procura pelas linhas que não serão apagadas e as adiciona no array
                     salvar.add(linha);
                 }
                 linha = leitor.readLine();//pega proxima linha
@@ -135,11 +133,11 @@ public class ClienteDados {
 
     //busca uma linha
     private String buscar(String cpf) {
-                File arquivo;
+        File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\cliente.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//cliente.txt");
         }
@@ -171,11 +169,6 @@ public class ClienteDados {
         return null;
     }
 
-    /**
-     *
-     * @param cliente
-     * @return
-     */
     //semelhante a buscarNome
     public String buscarCPF(String cpf) {
         String aux = buscar(cpf);
@@ -238,6 +231,7 @@ public class ClienteDados {
         }
         return null;
     }
+
     //semelhante a buscarNome
     public String buscarSenha(String cliente) {
         String aux = buscar(cliente);
@@ -246,12 +240,13 @@ public class ClienteDados {
         }
         return null;
     }
+
     //muda as informações de um cliente com endereço
     public void alterar(Cliente cliente) {
         //verifica se ele existe
         if (buscar(cliente.getCPF()) != null) {
             //remover o cliente do arquivo de salvamento
-            remover(cliente);
+            remover(cliente.getCPF());
             //adiciona o cliente ao arquivo de salvamento com os novos dados
             adicionar(cliente);
         }
@@ -260,7 +255,7 @@ public class ClienteDados {
     //semelhante ao alterar, mas sem o endereço
     public void alterarSemEndereco(Cliente cliente) {
         if (buscar(cliente.getCPF()) != null) {
-            remover(cliente);
+            remover(cliente.getCPF());
             adicionarSemEndereco(cliente);
         }
     }

@@ -160,7 +160,7 @@
             <Property name="text" type="java.lang.String" value="00,00"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ProdutoDados ProdutoDados = new ProdutoDados();&#xd;&#xa;precoLB_DP.setText(ProdutoDados.buscarPreco(CrudProdutos_Cliente.getCodigo()));&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ProdutoDados ProdutoDados = new ProdutoDados();&#xa;precoLB_DP.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="nomeLB_DP">
@@ -177,7 +177,7 @@
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="nomeLB_DP.setText(ProdutoDados.buscarNome(CrudProdutos_Cliente.getCodigo()));&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="nomeLB_DP.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="madeLB_DP">
@@ -266,7 +266,7 @@
             <Property name="text" type="java.lang.String" value="000"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="codigoLB_DP.setText(ProdutoDados.buscarCodigo(CrudProdutos_Cliente.getCodigo()));&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="codigoLB_DP.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoValLB_DP">
@@ -295,7 +295,7 @@
             <Property name="text" type="java.lang.String" value="dd/mm/aaaa"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="valLB_DP.setText(ProdutoDados.buscarValidade(CrudProdutos_Cliente.getCodigo()));&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="valLB_DP.setText(ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoQuantiDispLB_DP">
@@ -324,7 +324,7 @@
             <Property name="text" type="java.lang.String" value="00"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="quantiDispLB_DP.setText(ProdutoDados.buscarQuantidade(CrudProdutos_Cliente.getCodigo()));&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="quantiDispLB_DP.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="sairBTN_DP">

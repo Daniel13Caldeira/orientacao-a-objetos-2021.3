@@ -57,53 +57,24 @@ public class Funcionario extends Pessoa {
         this.cod = cod;
     }
 
-    //altera a senha
-    @Override
-    public void setSenha(String senha) {
-        this.senha = senha;
-        FuncionarioDados altera = new FuncionarioDados();
-        altera.alterar(this);
-    }
-
     @Override
     public Endereco getEndereco() {
         return endereco;
-    }
-
-    //muda o endereço do funcionário
-    public void setEndereco(String bairro, String cep, String cidade, String numero, String rua, String uf) {
-        this.endereco.setBairro(bairro);
-        this.endereco.setCep(cep);
-        this.endereco.setCidade(cidade);
-        this.endereco.setNumero(numero);
-        this.endereco.setRua(rua);
-        this.endereco.setUf(uf);
-        FuncionarioDados altera = new FuncionarioDados();
-        altera.alterar(this);
     }
 
     public String getCod() {
         return cod;
     }
 
-    //apaga um funcionário
-    public void remove() {
-        FuncionarioDados remove = new FuncionarioDados();
-        remove.remover(this);
-    }
-
-    @Override
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
-
     @Override
     public String getNome() {
-        return this.nome;
+        FuncionarioDados funcionario = new FuncionarioDados();
+        return funcionario.buscarNome(this.cod);
     }
 
     @Override
     public String getSenha() {
-        return this.senha;
+        FuncionarioDados funcionario = new FuncionarioDados();
+        return funcionario.buscarSenha(this.cod);
     }
 }
