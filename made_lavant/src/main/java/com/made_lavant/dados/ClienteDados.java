@@ -12,6 +12,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -58,7 +59,7 @@ public class ClienteDados {
             escritor.close();//fecha o buffer
             escrita.close();//fecha o escritor
         } catch (IOException ex) {
-
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
     }
 
@@ -85,7 +86,7 @@ public class ClienteDados {
             escritor.close();//fecha o buffer
             escrita.close();//fecha o escritor
         } catch (IOException ex) {
-
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
     }
 
@@ -114,8 +115,16 @@ public class ClienteDados {
             }
             leitor.close();//fecha o buffer
             leitura.close();//fecha o leitor
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
+        }
+        try {
             FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
             escritaAux.close();//fecha o escritot
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
+        }
+        try {
             FileWriter escrita = new FileWriter(arquivo, true);//define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
             for (int i = 0; i < salvar.size(); i++) {//escreve o que estava no array no arquivo
@@ -125,9 +134,8 @@ public class ClienteDados {
             }
             escrita.close();
             escritor.close();
-
         } catch (IOException ex) {
-
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
     }
 
@@ -151,7 +159,8 @@ public class ClienteDados {
                 }
                 linha = leitor.readLine();//pega proxima linha
             }
-        } catch (Exception ex) {
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
         }
         //retorna null se não for encontrado
         return null;

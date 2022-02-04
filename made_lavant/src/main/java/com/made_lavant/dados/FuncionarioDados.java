@@ -12,6 +12,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -36,7 +37,6 @@ public class FuncionarioDados {
         return resultado;
     }
 
-        
     //adiciona um funcionario sem endereço ao arquivo de salvamento
     public void adicionarSemEndereco(Funcionario funcionario) {
         //cria uma String com os dados do funcionário no formato padrão que está sendo utilizado
@@ -46,11 +46,11 @@ public class FuncionarioDados {
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\funcionario.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//funcionario.txt");
         }
-            try {
+        try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
             //escreve e vai pra proxima linha
@@ -60,7 +60,7 @@ public class FuncionarioDados {
             escritor.close();//fecha o buffer
             escrita.close();//fecha o escritor
         } catch (IOException ex) {
-
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
     }
 
@@ -71,7 +71,7 @@ public class FuncionarioDados {
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\funcionario.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//funcionario.txt");
         }
@@ -84,7 +84,7 @@ public class FuncionarioDados {
             escritor.close();
             escrita.close();
         } catch (IOException ex) {
-
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
 
     }
@@ -96,7 +96,7 @@ public class FuncionarioDados {
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\funcionario.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//funcionario.txt");
         }
@@ -113,8 +113,16 @@ public class FuncionarioDados {
             }
             leitor.close();
             leitura.close();
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
+        }
+        try {
             FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
             escritaAux.close();
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
+        }
+        try {
             FileWriter escrita = new FileWriter(arquivo, true);//define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
             for (int i = 0; i < salvar.size(); i++) {//escreve o que estava no array no arquivo
@@ -126,17 +134,17 @@ public class FuncionarioDados {
             escritor.close();
 
         } catch (IOException ex) {
-
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
     }
-
     //busca uma linha
+
     private String buscar(String cod) {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\funcionario.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//funcionario.txt");
         }
@@ -150,7 +158,8 @@ public class FuncionarioDados {
                 }
                 linha = leitor.readLine();//pega proxima linha
             }
-        } catch (Exception ex) {
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
         }
         return null;
     }
@@ -263,7 +272,7 @@ public class FuncionarioDados {
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\funcionario.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//funcionario.txt");
         }
@@ -271,7 +280,8 @@ public class FuncionarioDados {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             return leitor.readLine();//primeira linha}
-        } catch (Exception ex) {
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
         }
         return null;
     }

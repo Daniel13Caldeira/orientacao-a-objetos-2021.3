@@ -12,6 +12,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -58,9 +59,9 @@ public class ProdutoDados {
             escritor.close();
             escrita.close();
         } catch (IOException ex) {
-            
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
-        
+
     }
 
     //remove um produto do arquivo de salvamento
@@ -86,8 +87,16 @@ public class ProdutoDados {
             }
             leitor.close();
             leitura.close();
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
+        }
+        try {
             FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
             escritaAux.close();
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
+        }
+        try {
             FileWriter escrita = new FileWriter(arquivo, true);//define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
             for (int i = 0; i < salvar.size(); i++) {//escreve o que estava no array no arquivo
@@ -97,13 +106,14 @@ public class ProdutoDados {
             }
             escrita.close();
             escritor.close();
-            
+
         } catch (IOException ex) {
-            
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
+
         }
     }
-
     //busca uma linha
+
     private String buscar(int cod) {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -124,6 +134,7 @@ public class ProdutoDados {
                 linha = leitor.readLine();//pega proxima linha
             }
         } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
         }
         return null;
     }
@@ -186,5 +197,5 @@ public class ProdutoDados {
             adicionar(produto);
         }
     }
-    
+
 }

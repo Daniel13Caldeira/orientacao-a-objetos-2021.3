@@ -10,8 +10,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -26,7 +25,7 @@ public class Codigos {
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\codigos.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//codigos.txt");
         }
@@ -35,7 +34,9 @@ public class Codigos {
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             //lê a primeira linha do arquivo, onde está o código do carrinho e retorna o valor encontrado
             return Integer.parseInt(leitor.readLine());
-        } catch (Exception ex) {
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
+
         }
         //se não for encontrado um valor, será retornado o valor 0
         return 0;
@@ -48,7 +49,7 @@ public class Codigos {
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\codigos.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//codigos.txt");
         }
@@ -58,7 +59,9 @@ public class Codigos {
             leitor.readLine();
             //retorna a linha 2, onde está o código do produto
             return Integer.parseInt(leitor.readLine());//primeira linha
-        } catch (Exception ex) {
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
+
         }
         //se a linha estiver vazia retorna o valor 0
         return 0;
@@ -71,7 +74,7 @@ public class Codigos {
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\codigos.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//codigos.txt");
         }
@@ -82,7 +85,8 @@ public class Codigos {
             leitor.readLine();
             //retorna a linha 3, onde está o código do funcionário
             return Integer.parseInt(leitor.readLine());
-        } catch (Exception ex) {
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
         }
         //se a linha estiver vazia retorna o valor 0
         return 0;
@@ -127,7 +131,7 @@ public class Codigos {
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             arquivo = new File("dados\\codigos.txt");
-        }else{
+        } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//codigos.txt");
         }
@@ -144,6 +148,7 @@ public class Codigos {
             escritor.close();
             escrita.close();
         } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
     }
 
@@ -153,15 +158,16 @@ public class Codigos {
             //arquivo que será apagado
             File arquivo;
             if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
+                //File arquivo = new File("caminho win");
                 arquivo = new File("dados\\codigos.txt");
-            }else{
+            } else {
                 //File arquivo = new File("caminho linux");
                 arquivo = new File("dados//codigos.txt");
             }
             escrita = new FileWriter(arquivo, false); //apaga todo o arquivo
             escrita.close();
         } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
     }
 }

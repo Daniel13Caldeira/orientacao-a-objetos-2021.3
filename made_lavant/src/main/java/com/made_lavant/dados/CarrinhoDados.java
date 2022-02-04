@@ -5,18 +5,14 @@
 package com.made_lavant.dados;
 
 import com.made_lavant.base.Carrinho;
-import com.made_lavant.base.Cliente;
-import com.made_lavant.base.Produto;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -44,24 +40,27 @@ public class CarrinhoDados {
     public void criar(Carrinho carrinho) {
         //cria um arquivo para salvar o carrinho, o nome do arquivo é o codigo do carrinho e a primeira linha é o CPF do cliente
         File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//carrinhos//" + carrinho.getCod() + ".txt");
-        }
+        FileWriter escrita;
         try {
-            FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
-            BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escritaq
-            //escreve o CPF do cliente e vai pra próxima linha
-            escritor.write(carrinho.getCliente().getCPF());
-            escritor.newLine();
-            escritor.flush();
-            escritor.close();//fecha o buffer
-            escrita.close();//fecha o escritor
+            if (System.getProperty("os.name").toLowerCase().contains("win")) {
+                //File arquivo = new File("caminho win");
+                arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
+            } else {
+                //File arquivo = new File("caminho linux");
+                arquivo = new File("dados//carrinhos//" + carrinho.getCod() + ".txt");
+            }
+            if (arquivo.canWrite()) {
+                escrita = new FileWriter(arquivo, true); //define o escritor
+                BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escritaq
+                //escreve o CPF do cliente e vai pra próxima linha
+                escritor.write(carrinho.getCliente().getCPF());
+                escritor.newLine();
+                escritor.flush();
+                escritor.close();//fecha o buffer
+                escrita.close();//fecha o escritor
+            }
         } catch (IOException ex) {
-
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
     }
 
@@ -76,14 +75,23 @@ public class CarrinhoDados {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//carrinhos//" + carrinho + ".txt");
         }
+        String linha = null;
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
-            String linha = leitor.readLine();//primeira linha
+            linha = leitor.readLine();//primeira linha
             leitor.close();
             leitura.close();
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
+        }
+        try {
             FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
             escritaAux.close();
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
+        }
+        try {
             FileWriter escrita = new FileWriter(arquivo, true);//define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
             escritor.write(linha);
@@ -92,6 +100,7 @@ public class CarrinhoDados {
             escrita.close();
             escritor.close();
         } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
     }
 
@@ -115,6 +124,7 @@ public class CarrinhoDados {
             escritor.close();//fecha o buffer
             escrita.close();//fecha o escritor
         } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
     }
 
@@ -141,8 +151,16 @@ public class CarrinhoDados {
             }
             leitor.close();
             leitura.close();
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
+        }
+        try {
             FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
             escritaAux.close();
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
+        }
+        try {
             FileWriter escrita = new FileWriter(arquivo, true);//define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
             for (int i = 0; i < salvar.size(); i++) {//escreve o que estava no array no arquivo
@@ -153,6 +171,7 @@ public class CarrinhoDados {
             escrita.close();
             escritor.close();
         } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
     }
 
@@ -176,7 +195,8 @@ public class CarrinhoDados {
                 produtos.add(linha);//adiciona o codigo do produto na lista
                 linha = leitor.readLine();//próxima linha
             }
-        } catch (Exception ex) {
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível lero arquivo no momento", "Erro", 0);
         }
         //retorna a lista de códigos de produtos
         return produtos;
@@ -202,7 +222,8 @@ public class CarrinhoDados {
                 }
                 linha = leitor.readLine();//pega proxima linha
             }
-        } catch (Exception ex) {
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
         }
         //retorna null se não for encontrado
         return null;
@@ -221,8 +242,8 @@ public class CarrinhoDados {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             return leitor.readLine();
-        } catch (Exception ex) {
-
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
         }
         return null;
     }
