@@ -1,5 +1,6 @@
 package com.made_lavant.view;
 
+import static com.made_lavant.view.CrudProdutos.codigo;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -319,6 +320,7 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
 
         if (jTProdutosGerente.getSelectedRow() != -1) {
             DefaultTableModel dtmProdutos = (DefaultTableModel) jTProdutosGerente.getModel();
+            codigo = jTProdutosGerente.getValueAt(jTProdutosGerente.getSelectedRow(), 1).toString();
 
             this.setVisible(false);
             new EditarProdutoGerente().setVisible(true);
