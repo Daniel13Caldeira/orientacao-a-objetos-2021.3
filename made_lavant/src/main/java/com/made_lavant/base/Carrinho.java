@@ -5,7 +5,6 @@
 package com.made_lavant.base;
 
 import com.made_lavant.dados.CarrinhoDados;
-import com.made_lavant.dados.Codigos;
 import java.util.ArrayList;
 
 /**
@@ -27,7 +26,7 @@ public class Carrinho {
         //altera o código do próximo funcionário a ser criado
         CarrinhoDados add = new CarrinhoDados();
         //adicona o funcionário ao arquivo onde ficará salvo
-        add.criar(this);
+        add.criar(cliente.getCPF());
     }
 
     public void adicionarProduto(int produto, double quantidade) {

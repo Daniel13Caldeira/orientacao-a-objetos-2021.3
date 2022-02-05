@@ -18,30 +18,6 @@ import javax.swing.JOptionPane;
  */
 public class Codigos {
 
-    //busca o código do próximo carrinho a ser adicionado
-    public int buscaCarrinho() {
-        //arquivo de onde será feita a leitura
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\codigos.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//codigos.txt");
-        }
-        try {
-            FileReader leitura = new FileReader(arquivo);//define o leitor
-            BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
-            //lê a primeira linha do arquivo, onde está o código do carrinho e retorna o valor encontrado
-            return Integer.parseInt(leitor.readLine());
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
-
-        }
-        //se não for encontrado um valor, será retornado o valor 0
-        return 0;
-    }
-
     //busca o código do próximo produto a ser adicionado
     public int buscaProduto() {
         //arquivo onde será feita a leitura
@@ -56,8 +32,7 @@ public class Codigos {
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
-            leitor.readLine();
-            //retorna a linha 2, onde está o código do produto
+            //retorna a linha 1, onde está o código do produto
             return Integer.parseInt(leitor.readLine());//primeira linha
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
@@ -82,8 +57,7 @@ public class Codigos {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             leitor.readLine();
-            leitor.readLine();
-            //retorna a linha 3, onde está o código do funcionário
+            //retorna a linha 2, onde está o código do funcionário
             return Integer.parseInt(leitor.readLine());
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
@@ -94,38 +68,35 @@ public class Codigos {
 
     public void alterarFuncionario() {
         //pega o código do carrinho, do produto e do funcionário
-        int codCarrinho = buscaCarrinho();
         int codProduto = buscaProduto();
         int codFuncionario = buscaFuncionario() + 1;//adiciona 1 no funcionário
         //apaga todo o arquivo
         apagar();
         //insere os códigos atualizados
-        escreve(codCarrinho, codProduto, codFuncionario);
+        escreve(codProduto, codFuncionario);
     }
 
     public void alterarCarrinho() {
         //pega o código do carrinho, do produto e do funcionário
-        int codCarrinho = buscaCarrinho() + 1;//adiciona 1 no carrinho
         int codProduto = buscaProduto();
         int codFuncionario = buscaFuncionario();
         //apaga todo o arquivo
         apagar();
         //insere os códigos atualizados
-        escreve(codCarrinho, codProduto, codFuncionario);
+        escreve(codProduto, codFuncionario);
     }
 
     public void alterarPrduto() {
         //pega o código do carrinho, do produto e do funcionário
-        int codCarrinho = buscaCarrinho();
         int codProduto = buscaProduto() + 1;//adiciona 1 no produto
         int codFuncionario = buscaFuncionario();
         //apaga todo o arquivo
         apagar();
         //insere os códigos atualizados
-        escreve(codCarrinho, codProduto, codFuncionario);
+        escreve(codProduto, codFuncionario);
     }
 
-    public void escreve(int codCarrinho, int codProduto, int codFuncionario) {
+    public void escreve(int codProduto, int codFuncionario) {
         //arquivo onde será feita a escrita
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -139,8 +110,6 @@ public class Codigos {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
             //insere os códigos
-            escritor.write(codCarrinho + "");
-            escritor.newLine();
             escritor.write(codProduto + "");
             escritor.newLine();
             escritor.write(codFuncionario + "");

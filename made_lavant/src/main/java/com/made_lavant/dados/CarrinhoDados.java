@@ -13,6 +13,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -38,16 +40,21 @@ public class CarrinhoDados {
     }
 
     //adiciona um cliente com endereço no arquivo de salvamento
-    public void criar(Carrinho carrinho) {
+    public void criar(String cliente) {
         //cria um arquivo para salvar o carrinho, o nome do arquivo é o CPF do cliente
+        File arquivo = null;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
-            File arquivo = new File("dados\\carrinhos\\" + carrinho.getCliente().getCPF() + ".txt");
+            arquivo = new File("dados\\carrinhos\\" + cliente + ".txt");
         } else {
             //File arquivo = new File("caminho linux");
-            File arquivo = new File("dados//carrinhos//" + carrinho.getCliente().getCPF() + ".txt");
+            arquivo = new File("dados//carrinhos//" + cliente + ".txt");
         }
-
+        try {
+            arquivo.createNewFile();
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Arquivo já existe", "Erro", 0);
+        }
     }
 
 //apaga todos os produtos do carrinho
