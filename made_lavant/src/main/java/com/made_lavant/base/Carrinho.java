@@ -15,9 +15,8 @@ import java.util.ArrayList;
 public class Carrinho {
 
     protected Cliente cliente;
-    protected ArrayList<String> produtos = new ArrayList<>();
+    protected ArrayList<Produto> produtos = new ArrayList<>();
     protected double preco;
-    protected int cod;
 
     public Cliente getCliente() {
         return cliente;
@@ -25,32 +24,25 @@ public class Carrinho {
 
     public Carrinho(Cliente cliente) {
         this.cliente = cliente;
-        Codigos codigos = new Codigos();
-        this.cod = codigos.buscaCarrinho();
         //altera o código do próximo funcionário a ser criado
-        codigos.alterarCarrinho();
         CarrinhoDados add = new CarrinhoDados();
         //adicona o funcionário ao arquivo onde ficará salvo
         add.criar(this);
     }
 
-    public int getCod() {
-        return cod;
-    }
-
     public void adicionarProduto(int produto, double quantidade) {
         CarrinhoDados add = new CarrinhoDados();
-        add.adicionarProduto(this.cod, produto, quantidade);
+        add.adicionarProduto(this.cliente.getCPF(), produto, quantidade);
     }
 
     public void removerProduto(int produto) {
         CarrinhoDados remove = new CarrinhoDados();
-        remove.removerProduto(this.cod, produto);
+        remove.removerProduto(this.cliente.getCPF(), produto);
     }
 
-    public ArrayList<String> getProdutos() {
+    public ArrayList<Produto> getProdutos() {
         CarrinhoDados busca = new CarrinhoDados();
-        this.produtos = busca.getProdutos(this.cod);
+        this.produtos = busca.getProdutos(this.cliente.getCPF());
         return this.produtos;
     }
 

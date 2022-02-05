@@ -15,6 +15,14 @@ public class Produto {
         return this.nome;
     }
 
+    public Produto(String nome, int codigo, double preco, String validade, double quantidade) {
+        this.nome = nome;
+        this.codigo = codigo;
+        this.preco = preco;
+        this.validade = validade;
+        this.quantidade = quantidade;
+    }
+
     public int getCodigo() {
         return codigo;
     }

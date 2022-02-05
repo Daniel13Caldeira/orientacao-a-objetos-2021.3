@@ -5,7 +5,7 @@
 package com.made_lavant.dados;
 
 import com.made_lavant.base.Carrinho;
-import com.made_lavant.base.Cliente;
+import com.made_lavant.base.Produto;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -39,34 +39,19 @@ public class CarrinhoDados {
 
     //adiciona um cliente com endereço no arquivo de salvamento
     public void criar(Carrinho carrinho) {
-        //cria um arquivo para salvar o carrinho, o nome do arquivo é o codigo do carrinho e a primeira linha é o CPF do cliente
-        File arquivo;
-        FileWriter escrita;
-
+        //cria um arquivo para salvar o carrinho, o nome do arquivo é o CPF do cliente
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
+            File arquivo = new File("dados\\carrinhos\\" + carrinho.getCliente().getCPF() + ".txt");
         } else {
             //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//carrinhos//" + carrinho.getCod() + ".txt");
+            File arquivo = new File("dados//carrinhos//" + carrinho.getCliente().getCPF() + ".txt");
         }
-        try {
-            escrita = new FileWriter(arquivo, true); //define o escritor
-            BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escritaq
-            //escreve o CPF do cliente e vai pra próxima linha
-            escritor.write(carrinho.getCliente().getCPF());
-            escritor.newLine();
-            escritor.flush();
-            escritor.close();//fecha o buffer
-            escrita.close();//fecha o escritor
 
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
-        }
     }
 
 //apaga todos os produtos do carrinho
-    public void limparCarrinho(int carrinho) {
+    public void limparCarrinho(String carrinho) {
         //abre o arquivo para salvar produto
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -76,36 +61,15 @@ public class CarrinhoDados {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//carrinhos//" + carrinho + ".txt");
         }
-        String linha = null;
-        try {
-            FileReader leitura = new FileReader(arquivo);//define o leitor
-            BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
-            linha = leitor.readLine();//primeira linha
-            leitor.close();
-            leitura.close();
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
-        }
         try {
             FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
             escritaAux.close();
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
-        try {
-            FileWriter escrita = new FileWriter(arquivo, true);//define o escritor
-            BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
-            escritor.write(linha);
-            escritor.newLine();
-            escritor.flush();
-            escrita.close();
-            escritor.close();
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
-        }
     }
 
-    public void adicionarProduto(int carrinho, int produto, double quantidade) {
+    public void adicionarProduto(String carrinho, int produto, double quantidade) {
         //abre o arquivo para salvar produto
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -129,7 +93,7 @@ public class CarrinhoDados {
         }
     }
 
-    public void removerProduto(int carrinho, int produto) {
+    public void removerProduto(String carrinho, int produto) {
         //abre o arquivo para salvar produto
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -145,7 +109,7 @@ public class CarrinhoDados {
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             String linha = leitor.readLine();//primeira linha
             while (linha != null) {//linha null = final do arquivo
-                if (!(linha.equals(produto + ""))) {//procura pelas linhas que não serão apagadas e as adiciona no array
+                if (!(separa(linha,0).equals(produto + ""))) {//procura pelas linhas que não serão apagadas e as adiciona no array
                     salvar.add(linha);
                 }
                 linha = leitor.readLine();//pega proxima linha
@@ -176,9 +140,10 @@ public class CarrinhoDados {
         }
     }
 
-    public ArrayList<String> getProdutos(int carrinho) {
+    public ArrayList<Produto> getProdutos(String carrinho) {
         //abre o arquivo para salvar produto
         File arquivo;
+        ProdutoDados pd = new ProdutoDados();
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //Filearquivo = new File("caminho win");
             arquivo = new File("dados\\carrinhos\\" + carrinho + ".txt");
@@ -186,14 +151,14 @@ public class CarrinhoDados {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//carrinhos//" + carrinho + ".txt ");
         }
-        ArrayList<String> produtos = new ArrayList<>();
+        ArrayList<Produto> produtos = new ArrayList<>();
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             leitor.readLine();//pula a linha com o cpf do cliente
             String linha = leitor.readLine();//primeira linha
             while (linha != null) {
-                produtos.add(linha);//adiciona o codigo do produto na lista
+                produtos.add(new Produto(pd.buscarNome(Integer.parseInt(separa(linha,0))), Integer.parseInt(separa(linha,0)), Double.parseDouble(pd.buscarPreco(Integer.parseInt(separa(linha,0)))),pd.buscarValidade(Integer.parseInt(separa(linha,0))), Double.parseDouble(separa(linha, 1))));//adiciona o produto na lista
                 linha = leitor.readLine();//próxima linha
             }
         } catch (IOException ex) {
@@ -203,7 +168,7 @@ public class CarrinhoDados {
         return produtos;
     }
 
-    private String buscar(String cpf) {
+    private String buscar(String codigo) {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
@@ -218,7 +183,7 @@ public class CarrinhoDados {
             leitor.readLine();
             String linha = leitor.readLine();//primeira linha com produto
             while (linha != null) {//linha null = final do arquivo
-                if (separa(linha, 0).equalsIgnoreCase(cpf)) {//procura pelas linha requerida
+                if (separa(linha, 0).equalsIgnoreCase(codigo)) {//procura pelas linha requerida
                     return linha;
                 }
                 linha = leitor.readLine();//pega proxima linha
@@ -227,25 +192,6 @@ public class CarrinhoDados {
             JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
         }
         //retorna null se não for encontrado
-        return null;
-    }
-
-    public String getCliente() {
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\cliente.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//cliente.txt");
-        }
-        try {
-            FileReader leitura = new FileReader(arquivo);//define o leitor
-            BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
-            return leitor.readLine();
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
-        }
         return null;
     }
 
