@@ -1,6 +1,6 @@
-
 package com.made_lavant.view;
 
+import com.made_lavant.base.Carrinho;
 import com.made_lavant.base.Cliente;
 import com.made_lavant.base.Endereco;
 import com.made_lavant.dados.ClienteDados;
@@ -384,7 +384,7 @@ public class CadastroCliente extends javax.swing.JFrame {
             senhaTF_CC.setText("Campo obrigatório");
             cadastro = false;
         }
-
+        Cliente cliente = null;
         //verifica se algum campo referente ao endereço foi cadastrado, se um deles for cadastrado, todos devem ser cadastrados
         if (!(cidadeTF_CC.getText().equals("") && ruaTF_CC.getText().equals("") && bairroTF_CC.getText().equals("") && numeroTF_CC.getText().equals("") && ufTF_CC.getText().equals("") && cepTF_CC.getText().equals(""))) {
             if (cidadeTF_CC.getText().equals("") || cidadeTF_CC.getText().equals("Campo obrigatório se for cadastrar o endereço")) {
@@ -414,16 +414,17 @@ public class CadastroCliente extends javax.swing.JFrame {
             if (cadastro) {
                 //com todos os campos de endereço preenchidos, o cadastro será feito com o endereço
                 Endereco endereco = new Endereco(cidadeTF_CC.getText(), cepTF_CC.getText(), ufTF_CC.getText(), bairroTF_CC.getText(), ruaTF_CC.getText(), numeroTF_CC.getText());
-                Cliente cliente = new Cliente(nomeTF_CC.getText(), endereco, cpfTF_CC.getText(), senhaTF_CC.getText());
+                cliente = new Cliente(nomeTF_CC.getText(), endereco, cpfTF_CC.getText(), senhaTF_CC.getText());
             }
             //se nenhum campo de endereço estiver cadastrado, o cadastro será feito sem o endereço
         } else {
             if (cadastro) {
-                Cliente cliente = new Cliente(nomeTF_CC.getText(), cpfTF_CC.getText(), senhaTF_CC.getText());
+                cliente = new Cliente(nomeTF_CC.getText(), cpfTF_CC.getText(), senhaTF_CC.getText());
             }
         }
         //retorna para a tela de login se o cadastro foi realizado
         if (cadastro) {
+            new Carrinho(cliente);
             this.setVisible(false);
             new Login().setVisible(true);
         }
@@ -437,7 +438,7 @@ public class CadastroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_senhaTF_CCActionPerformed
 
     private void cpfTF_CCKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cpfTF_CCKeyReleased
-        
+
         mascaraCPF();
     }//GEN-LAST:event_cpfTF_CCKeyReleased
 

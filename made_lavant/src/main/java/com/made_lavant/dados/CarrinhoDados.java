@@ -5,6 +5,7 @@
 package com.made_lavant.dados;
 
 import com.made_lavant.base.Carrinho;
+import com.made_lavant.base.Cliente;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -41,30 +42,30 @@ public class CarrinhoDados {
         //cria um arquivo para salvar o carrinho, o nome do arquivo é o codigo do carrinho e a primeira linha é o CPF do cliente
         File arquivo;
         FileWriter escrita;
+
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
+        } else {
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//carrinhos//" + carrinho.getCod() + ".txt");
+        }
         try {
-            if (System.getProperty("os.name").toLowerCase().contains("win")) {
-                //File arquivo = new File("caminho win");
-                arquivo = new File("dados\\carrinhos\\" + carrinho.getCod() + ".txt");
-            } else {
-                //File arquivo = new File("caminho linux");
-                arquivo = new File("dados//carrinhos//" + carrinho.getCod() + ".txt");
-            }
-            if (arquivo.canWrite()) {
-                escrita = new FileWriter(arquivo, true); //define o escritor
-                BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escritaq
-                //escreve o CPF do cliente e vai pra próxima linha
-                escritor.write(carrinho.getCliente().getCPF());
-                escritor.newLine();
-                escritor.flush();
-                escritor.close();//fecha o buffer
-                escrita.close();//fecha o escritor
-            }
+            escrita = new FileWriter(arquivo, true); //define o escritor
+            BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escritaq
+            //escreve o CPF do cliente e vai pra próxima linha
+            escritor.write(carrinho.getCliente().getCPF());
+            escritor.newLine();
+            escritor.flush();
+            escritor.close();//fecha o buffer
+            escrita.close();//fecha o escritor
+
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
         }
     }
 
-    //apaga todos os produtos do carrinho
+//apaga todos os produtos do carrinho
     public void limparCarrinho(int carrinho) {
         //abre o arquivo para salvar produto
         File arquivo;
