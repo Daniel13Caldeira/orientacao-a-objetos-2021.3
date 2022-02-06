@@ -236,7 +236,7 @@ public class EditarProduto extends javax.swing.JFrame {
 
     private void voltarBTN_EDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_EDPActionPerformed
         this.setVisible(false);
-        new DetalheProduto_Func().setVisible(true);
+        new CrudProdutos().setVisible(true);
     }//GEN-LAST:event_voltarBTN_EDPActionPerformed
 
     private void precoTF_EDPKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_precoTF_EDPKeyReleased

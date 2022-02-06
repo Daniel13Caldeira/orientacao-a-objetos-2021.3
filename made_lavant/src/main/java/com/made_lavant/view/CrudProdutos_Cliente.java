@@ -287,7 +287,7 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
 
     private void voltarBTN_CRPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CRPCActionPerformed
         this.setVisible(false);
-        new InicioCliente().setVisible(true);
+        new TelaCarrinho().setVisible(true);
     }//GEN-LAST:event_voltarBTN_CRPCActionPerformed
 
     private void descricaoBTN_CRPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRPCActionPerformed
