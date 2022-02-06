@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.made_lavant.base;
 
 import com.made_lavant.dados.Codigos;
 import com.made_lavant.dados.FuncionarioDados;
 
-/**
- *
- * @author Daniel
- */
 public class Funcionario extends Pessoa {
 
     protected String cod;
@@ -53,6 +44,7 @@ public class Funcionario extends Pessoa {
     }
 
     public Funcionario(String cod, String nome, Endereco endereco, String senha) {
+        //Construtor que auxilia na edição com ordem de parametros diferente dos construtores de cadastro
         super(nome, endereco, senha);
         this.cod = cod;
     }

@@ -358,7 +358,7 @@ public class CadastroCliente extends javax.swing.JFrame {
             cadastro = false;
         } else {
             //verfica se o cpf é válido, se não for ele não pode ser cadastrado
-            cadastro = Cliente.verificaCPF(cpfTF_CC.getText());
+            cadastro = Cliente.verificaCpf(cpfTF_CC.getText());
             if (!cadastro) {
                 cpfTF_CC.setText("CPF inválido");
             } else {

@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.made_lavant.dados;
 
 import com.made_lavant.base.Cliente;
@@ -14,10 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Daniel
- */
+
 public class ClienteDados {
 
     //separa o dado que deseja pegar da String de dados completa do cliente
@@ -39,7 +33,7 @@ public class ClienteDados {
     //adiciona um cliente sem endereço ao arquivo de salvamento
     public void adicionarSemEndereco(Cliente cliente) {
         //cria uma String com os dados do cliente no formato padrão que está sendo utilizado
-        String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + cliente.getSenha() + ';';
+        String info = cliente.getCpf() + ';' + cliente.getNome() + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + cliente.getSenha() + ';';
         //define o arquivo de salvamento
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -66,7 +60,7 @@ public class ClienteDados {
     //adiciona um cliente com endereço no arquivo de salvamento
     public void adicionar(Cliente cliente) {
         //cria uma String com os dados do cliente no formato padrão que está sendo utilizado
-        String info = cliente.getCPF() + ';' + cliente.getNome() + ';' + cliente.getEndereco().getCidade() + ';' + cliente.getEndereco().getRua() + ';' + cliente.getEndereco().getBairro() + ';' + cliente.getEndereco().getNumero() + ';' + cliente.getEndereco().getUf() + ';' + cliente.getEndereco().getCep() + ';' + cliente.getSenha() + ';';
+        String info = cliente.getCpf() + ';' + cliente.getNome() + ';' + cliente.getEndereco().getCidade() + ';' + cliente.getEndereco().getRua() + ';' + cliente.getEndereco().getBairro() + ';' + cliente.getEndereco().getNumero() + ';' + cliente.getEndereco().getUf() + ';' + cliente.getEndereco().getCep() + ';' + cliente.getSenha() + ';';
         //define o arquivo de salvamento
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -253,9 +247,9 @@ public class ClienteDados {
     //muda as informações de um cliente com endereço
     public void alterar(Cliente cliente) {
         //verifica se ele existe
-        if (buscar(cliente.getCPF()) != null) {
+        if (buscar(cliente.getCpf()) != null) {
             //remover o cliente do arquivo de salvamento
-            remover(cliente.getCPF());
+            remover(cliente.getCpf());
             //adiciona o cliente ao arquivo de salvamento com os novos dados
             adicionar(cliente);
         }
@@ -263,8 +257,8 @@ public class ClienteDados {
 
     //semelhante ao alterar, mas sem o endereço
     public void alterarSemEndereco(Cliente cliente) {
-        if (buscar(cliente.getCPF()) != null) {
-            remover(cliente.getCPF());
+        if (buscar(cliente.getCpf()) != null) {
+            remover(cliente.getCpf());
             adicionarSemEndereco(cliente);
         }
     }

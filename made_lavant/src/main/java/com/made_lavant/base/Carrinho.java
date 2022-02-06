@@ -1,16 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.made_lavant.base;
 
 import com.made_lavant.dados.CarrinhoDados;
 import java.util.ArrayList;
 
-/**
- *
- * @author matheusreis
- */
+
 public class Carrinho {
 
     protected Cliente cliente;
@@ -26,22 +20,22 @@ public class Carrinho {
         //altera o código do próximo funcionário a ser criado
         CarrinhoDados add = new CarrinhoDados();
         //adicona o funcionário ao arquivo onde ficará salvo
-        add.criar(cliente.getCPF());
+        add.criar(cliente.getCpf());
     }
 
     public void adicionarProduto(int produto, double quantidade) {
         CarrinhoDados add = new CarrinhoDados();
-        add.adicionarProduto(this.cliente.getCPF(), produto, quantidade);
+        add.adicionarProduto(this.cliente.getCpf(), produto, quantidade);
     }
 
     public void removerProduto(int produto) {
         CarrinhoDados remove = new CarrinhoDados();
-        remove.removerProduto(this.cliente.getCPF(), produto);
+        remove.removerProduto(this.cliente.getCpf(), produto);
     }
 
     public ArrayList<Produto> getProdutos() {
         CarrinhoDados busca = new CarrinhoDados();
-        this.produtos = busca.getProdutos(this.cliente.getCPF());
+        this.produtos = busca.getProdutos(this.cliente.getCpf());
         return this.produtos;
     }
 
