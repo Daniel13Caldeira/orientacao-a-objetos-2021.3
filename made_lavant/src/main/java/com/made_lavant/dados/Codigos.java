@@ -1,4 +1,3 @@
-
 package com.made_lavant.dados;
 
 import java.io.BufferedReader;
@@ -9,8 +8,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 
-
 public class Codigos {
+
+    private void erro(File arquivo) {
+        if (!arquivo.exists()) {
+            try {
+                arquivo.createNewFile();
+            } catch (IOException ex1) {
+                JOptionPane.showMessageDialog(null, "erro");
+            }
+        }
+    }
 
     //busca o código do próximo produto a ser adicionado
     public int buscaProduto() {
@@ -29,8 +37,7 @@ public class Codigos {
             //retorna a linha 1, onde está o código do produto
             return Integer.parseInt(leitor.readLine());//primeira linha
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
-
+            erro(arquivo);
         }
         //se a linha estiver vazia retorna o valor 0
         return 0;
@@ -54,7 +61,7 @@ public class Codigos {
             //retorna a linha 2, onde está o código do funcionário
             return Integer.parseInt(leitor.readLine());
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
+            erro(arquivo);
         }
         //se a linha estiver vazia retorna o valor 0
         return 0;
@@ -111,15 +118,15 @@ public class Codigos {
             escritor.close();
             escrita.close();
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
+            erro(arquivo);
         }
     }
 
     public void apagar() {
         FileWriter escrita = null;
+        File arquivo = null;
         try {
             //arquivo que será apagado
-            File arquivo;
             if (System.getProperty("os.name").toLowerCase().contains("win")) {
                 //File arquivo = new File("caminho win");
                 arquivo = new File("dados\\codigos.txt");
@@ -130,7 +137,7 @@ public class Codigos {
             escrita = new FileWriter(arquivo, false); //apaga todo o arquivo
             escrita.close();
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
+            erro(arquivo);
         }
     }
 }

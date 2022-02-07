@@ -1,5 +1,7 @@
 package com.made_lavant.view;
 
+import com.made_lavant.dados.CarrinhoDados;
+import com.made_lavant.dados.ClienteDados;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -119,8 +121,9 @@ public class TelaCarrinho extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTCarrinho = new javax.swing.JTable();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        entregaRBTN_TC = new javax.swing.JRadioButton();
+        buscaRBTN_TC = new javax.swing.JRadioButton();
+        finalizarBTN_TC = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Carrinho");
@@ -213,22 +216,24 @@ public class TelaCarrinho extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jRadioButton1.setBackground(new java.awt.Color(45, 48, 71));
-        selecaoBG_TC.add(jRadioButton1);
-        jRadioButton1.setForeground(new java.awt.Color(232, 72, 85));
-        jRadioButton1.setText("Delivery");
-        jRadioButton1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        entregaRBTN_TC.setBackground(new java.awt.Color(45, 48, 71));
+        selecaoBG_TC.add(entregaRBTN_TC);
+        entregaRBTN_TC.setForeground(new java.awt.Color(232, 72, 85));
+        entregaRBTN_TC.setText("Delivery");
+        entregaRBTN_TC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        buscaRBTN_TC.setBackground(new java.awt.Color(45, 48, 71));
+        selecaoBG_TC.add(buscaRBTN_TC);
+        buscaRBTN_TC.setForeground(new java.awt.Color(232, 72, 85));
+        buscaRBTN_TC.setText("Buscar no local");
+        buscaRBTN_TC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        finalizarBTN_TC.setText("Finalizar compra");
+        finalizarBTN_TC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                finalizarBTN_TCActionPerformed(evt);
             }
         });
-
-        jRadioButton2.setBackground(new java.awt.Color(45, 48, 71));
-        selecaoBG_TC.add(jRadioButton2);
-        jRadioButton2.setForeground(new java.awt.Color(232, 72, 85));
-        jRadioButton2.setText("Buscar no local");
-        jRadioButton2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -259,11 +264,15 @@ public class TelaCarrinho extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(removerBTN_TC)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jRadioButton1)
+                        .addComponent(entregaRBTN_TC)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton2)
+                        .addComponent(buscaRBTN_TC)
                         .addGap(50, 50, 50))))
             .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(finalizarBTN_TC)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -282,11 +291,13 @@ public class TelaCarrinho extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(removerBTN_TC)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(entregaRBTN_TC)
+                    .addComponent(buscaRBTN_TC))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(finalizarBTN_TC)
+                .addGap(8, 8, 8))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -330,17 +341,37 @@ public class TelaCarrinho extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_removerBTN_TCActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    private void finalizarBTN_TCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarBTN_TCActionPerformed
+        CarrinhoDados cd = new CarrinhoDados();
+        boolean flag = true;
+        if (entregaRBTN_TC.isSelected()) {
+            cd.setTipoVenda(Login.getCodigo(), "entrega");
+            ClienteDados cld = new ClienteDados();
+            if (cld.buscarBairro(Login.getCodigo()).equals("null")) {
+                JOptionPane.showMessageDialog(null, "Cadastre um endereço ou selecione a opção para busca o seu pedido", "Endereço não cadastrado", 0);
+                flag = false;
+            }
+        } else {
+            if (buscaRBTN_TC.isSelected()) {
+                cd.setTipoVenda(Login.getCodigo(), "busca");
+            } else {
+                JOptionPane.showMessageDialog(null, "Selecione uma opção de venda", "Erro", 0);
+                flag = false;
+            }
+        }
+        if (flag) {
+            cd.setPronto(Login.getCodigo(), true);
+        }
+    }//GEN-LAST:event_finalizarBTN_TCActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addProdBTN_TC;
+    private javax.swing.JRadioButton buscaRBTN_TC;
+    private javax.swing.JRadioButton entregaRBTN_TC;
+    private javax.swing.JButton finalizarBTN_TC;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTCarrinho;
     private javax.swing.JLabel lavantLB_TC;

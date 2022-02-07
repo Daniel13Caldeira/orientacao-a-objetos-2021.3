@@ -1,4 +1,3 @@
-
 package com.made_lavant.dados;
 
 import com.made_lavant.base.Produto;
@@ -11,8 +10,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-
 public class ProdutoDados {
+
+    private void erro(File arquivo) {
+        if (!arquivo.exists()) {
+            try {
+                arquivo.createNewFile();
+            } catch (IOException ex1) {
+                JOptionPane.showMessageDialog(null, "erro");
+            }
+        }
+    }
 
     //separa o dado que deseja pegar da String de dados completa do produto
     public String separa(String linha, int info) {
@@ -53,7 +61,7 @@ public class ProdutoDados {
             escritor.close();
             escrita.close();
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
+            erro(arquivo);
         }
 
     }
@@ -82,13 +90,13 @@ public class ProdutoDados {
             leitor.close();
             leitura.close();
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
+            erro(arquivo);
         }
         try {
             FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
             escritaAux.close();
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
+            erro(arquivo);
         }
         try {
             FileWriter escrita = new FileWriter(arquivo, true);//define o escritor
@@ -102,8 +110,7 @@ public class ProdutoDados {
             escritor.close();
 
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
-
+            erro(arquivo);
         }
     }
     //busca uma linha
@@ -128,7 +135,7 @@ public class ProdutoDados {
                 linha = leitor.readLine();//pega proxima linha
             }
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
+            erro(arquivo);
         }
         return null;
     }

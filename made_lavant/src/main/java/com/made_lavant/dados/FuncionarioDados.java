@@ -1,4 +1,3 @@
-
 package com.made_lavant.dados;
 
 import com.made_lavant.base.Funcionario;
@@ -11,9 +10,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-
 public class FuncionarioDados {
+
     //codigo;nome;cidade;rua;bairro;numero;UF;CEP;
+    private void erro(File arquivo) {
+        if (!arquivo.exists()) {
+            try {
+                arquivo.createNewFile();
+            } catch (IOException ex1) {
+                JOptionPane.showMessageDialog(null, "erro");
+            }
+        }
+    }
 
     //separa o dado que deseja pegar da String de dados completa do funcionário
     public String separa(String linha, int info) {
@@ -54,7 +62,7 @@ public class FuncionarioDados {
             escritor.close();//fecha o buffer
             escrita.close();//fecha o escritor
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
+            erro(arquivo);
         }
     }
 
@@ -78,7 +86,7 @@ public class FuncionarioDados {
             escritor.close();
             escrita.close();
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
+            erro(arquivo);
         }
 
     }
@@ -108,13 +116,13 @@ public class FuncionarioDados {
             leitor.close();
             leitura.close();
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
+            erro(arquivo);
         }
         try {
             FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
             escritaAux.close();
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
+            erro(arquivo);
         }
         try {
             FileWriter escrita = new FileWriter(arquivo, true);//define o escritor
@@ -128,7 +136,7 @@ public class FuncionarioDados {
             escritor.close();
 
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível escrever no arquivo no momento", "Erro", 0);
+            erro(arquivo);
         }
     }
     //busca uma linha
@@ -153,7 +161,7 @@ public class FuncionarioDados {
                 linha = leitor.readLine();//pega proxima linha
             }
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
+            erro(arquivo);
         }
         return null;
     }
@@ -275,7 +283,7 @@ public class FuncionarioDados {
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             return leitor.readLine();//primeira linha}
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
+            erro(arquivo);
         }
         return null;
     }
