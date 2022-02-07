@@ -172,7 +172,6 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
 
         jTProdCliente.setBackground(new java.awt.Color(45, 48, 71));
         jTProdCliente.setFont(new java.awt.Font("Colonna MT", 0, 14)); // NOI18N
-        jTProdCliente.setForeground(new java.awt.Color(255, 255, 255));
         jTProdCliente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -200,6 +199,11 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
         );
 
         jTextFieldQuantidade.setText("jTextField1");
+        jTextFieldQuantidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldQuantidadeActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(232, 72, 85));
@@ -331,6 +335,10 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
     private void jTProdClienteComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jTProdClienteComponentShown
         System.out.println("ola");
     }//GEN-LAST:event_jTProdClienteComponentShown
+
+    private void jTextFieldQuantidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldQuantidadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldQuantidadeActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addCarrinhoBTN_CRPC;

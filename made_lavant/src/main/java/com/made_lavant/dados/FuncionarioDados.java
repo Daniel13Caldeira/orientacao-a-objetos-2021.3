@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.made_lavant.dados;
 
 import com.made_lavant.base.Funcionario;
@@ -14,10 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Daniel
- */
+
 public class FuncionarioDados {
     //codigo;nome;cidade;rua;bairro;numero;UF;CEP;
 

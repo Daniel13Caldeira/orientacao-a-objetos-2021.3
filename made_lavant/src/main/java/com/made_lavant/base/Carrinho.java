@@ -23,34 +23,5 @@ public class Carrinho {
         add.criar(cliente.getCpf());
     }
 
-    public void adicionarProduto(int produto, double quantidade) {
-        CarrinhoDados add = new CarrinhoDados();
-        add.adicionarProduto(this.cliente.getCpf(), produto, quantidade);
-    }
-
-    public void removerProduto(int produto) {
-        CarrinhoDados remove = new CarrinhoDados();
-        remove.removerProduto(this.cliente.getCpf(), produto);
-    }
-
-    public ArrayList<Produto> getProdutos() {
-        CarrinhoDados busca = new CarrinhoDados();
-        this.produtos = busca.getProdutos(this.cliente.getCpf());
-        return this.produtos;
-    }
-
-    public void enviar() {
-
-    }
-
-    public void excluir() {
-
-    }
-
-    public double calcularPreco() {
-        double total = 0;
-        //codigo
-        return total;
-    }
 
 }

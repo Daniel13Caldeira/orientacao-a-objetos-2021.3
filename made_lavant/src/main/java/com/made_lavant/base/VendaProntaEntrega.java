@@ -20,8 +20,4 @@ public class VendaProntaEntrega implements Venda {
 
     }
 
-    @Override
-    public void cancelaVenda() {
-
-    }
 }

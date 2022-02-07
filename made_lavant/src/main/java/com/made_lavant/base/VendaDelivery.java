@@ -21,9 +21,5 @@ public class VendaDelivery implements Venda {
 
     }
 
-    @Override
-    public void cancelaVenda() {
-
-    }
 
 }

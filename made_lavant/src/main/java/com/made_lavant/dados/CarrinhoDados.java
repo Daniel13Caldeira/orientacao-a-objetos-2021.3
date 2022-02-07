@@ -1,10 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.made_lavant.dados;
 
-import com.made_lavant.base.Carrinho;
 import com.made_lavant.base.Produto;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -13,14 +9,9 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Daniel
- */
+
 public class CarrinhoDados {
 
     //separa o dado que deseja pegar da String de dados completa do cliente
