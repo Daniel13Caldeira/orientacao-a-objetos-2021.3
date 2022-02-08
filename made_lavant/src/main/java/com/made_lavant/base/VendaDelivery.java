@@ -7,35 +7,33 @@ import javax.swing.JOptionPane;
 
 public class VendaDelivery implements Venda {
 
-    String funcionario;
-    int carrinho;
+    String carrinho;
     Date data;
 
-    public VendaDelivery(String funcionario, int carrinho) {
-        this.funcionario = funcionario;
+    public VendaDelivery( String carrinho) {
         this.carrinho = carrinho;
         this.data = new Date();
     }
 
     @Override
-    public void efetuaVenda(String cpfCliente) {
+    public void efetuaVenda() {
         CarrinhoDados limpa = new CarrinhoDados();
         ClienteDados cliente = new ClienteDados();
-        String msg = "Cidade: " + cliente.buscarCidade(cpfCliente) + "\nRua: " + cliente.buscarRua(cpfCliente)
-                + "\nBairro: " + cliente.buscarBairro(cpfCliente) + "\nNúmero: " + cliente.buscarNumero(cpfCliente) + "\nCEP: "
-                + cliente.buscarCEP(cpfCliente) + "\nUF:" + cliente.buscarUF(cpfCliente);
-        JOptionPane.showMessageDialog(null, "Venda finalizada com sucesso!\nA entrega do cliente " + cliente.buscarNome(cpfCliente) + " deve ser realizada no seguinte Endereço:\n"
+        String msg = "Cidade: " + cliente.buscarCidade(this.carrinho) + "\nRua: " + cliente.buscarRua(this.carrinho)
+                + "\nBairro: " + cliente.buscarBairro(this.carrinho) + "\nNúmero: " + cliente.buscarNumero(this.carrinho) + "\nCEP: "
+                + cliente.buscarCEP(this.carrinho) + "\nUF:" + cliente.buscarUF(this.carrinho);
+        JOptionPane.showMessageDialog(null, "Venda finalizada com sucesso!\nA entrega do cliente " + cliente.buscarNome(this.carrinho) + " deve ser realizada no seguinte Endereço:\n"
                 + msg, "VENDA", JOptionPane.INFORMATION_MESSAGE);
-        limpa.limparCarrinhoConfirmar(cpfCliente);
+        limpa.limparCarrinhoConfirmar(this.carrinho);
     }
 
     @Override
-    public void cancelaVenda(String cpfCliente) {
+    public void cancelaVenda() {
         ClienteDados cliente = new ClienteDados();
         CarrinhoDados limpa = new CarrinhoDados();
-        limpa.limparCarrinhoCancelar(cpfCliente);
+        limpa.limparCarrinhoCancelar(this.carrinho);
         JOptionPane.showMessageDialog(null, "Venda Cancelada!\nCarrinho do cliente "
-                + cliente.buscarNome(cpfCliente) + " foi limpo com sucesso.", "VENDA", JOptionPane.INFORMATION_MESSAGE);
+                + cliente.buscarNome(this.carrinho) + " foi limpo com sucesso.", "VENDA", JOptionPane.INFORMATION_MESSAGE);
 
     }
 }

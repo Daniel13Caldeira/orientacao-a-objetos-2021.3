@@ -1,15 +1,17 @@
-
 package com.made_lavant.view;
-
 
 public class CrudCarrinho extends javax.swing.JFrame {
 
+    protected static String codigo;
+
+    public static String getCodigo() {
+        return codigo;
+    }
 
     public CrudCarrinho() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

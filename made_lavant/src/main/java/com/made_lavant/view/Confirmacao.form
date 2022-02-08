@@ -47,70 +47,39 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="topicoNomeClienteLB_CON" min="-2" pref="117" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="nomeClienteLB_CON" min="-2" pref="128" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="sairBTN_CON" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="258" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="topicoNumCarrinhoLB_CON" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="numCarrinhoLB_CON" min="-2" pref="69" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="323" max="-2" attributes="0"/>
                           <Component id="topicoTotalLB_CON" min="-2" pref="71" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="totalLB_CON" min="-2" pref="69" max="-2" attributes="0"/>
                       </Group>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="nomeProdLB_CON" max="32767" attributes="0"/>
-                              <Component id="topicoNomeProdLB_CON" min="-2" pref="131" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="topicoCodLB_CON" alignment="0" min="-2" pref="89" max="-2" attributes="0"/>
-                              <Component id="codigoLB_CON" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="topicoQuantidadeLB_CON" max="32767" attributes="0"/>
-                              <Component id="quantidadeLB_CON" min="-2" pref="84" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="precoLB_CON" min="-2" pref="77" max="-2" attributes="0"/>
-                              <Component id="topicoPrecoLB_CON" min="-2" pref="76" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="confirmarBTN_CON" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="alterarCarrinhoBTN_CON" min="-2" pref="179" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="169" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="237" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="lavantLB_CON" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
                               <Component id="madeLB_CON" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="alterarCarrinhoBTN_CON" min="-2" pref="179" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="cancelarBTN_CON" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="confirmarBTN_CON" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="23" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="topicoNomeClienteLB_CON" min="-2" pref="117" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <Component id="nomeClienteLB_CON" min="-2" pref="128" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -120,42 +89,25 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="topicoTotalLB_CON" alignment="3" max="32767" attributes="0"/>
-                      <Component id="sairBTN_CON" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="totalLB_CON" alignment="3" pref="29" max="32767" attributes="0"/>
+                      <Component id="totalLB_CON" alignment="3" max="32767" attributes="0"/>
+                      <Component id="sairBTN_CON" alignment="1" pref="32" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="madeLB_CON" min="-2" pref="31" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lavantLB_CON" min="-2" pref="22" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="topicoNomeClienteLB_CON" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="nomeClienteLB_CON" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="topicoNumCarrinhoLB_CON" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="numCarrinhoLB_CON" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="confirmarBTN_CON" alignment="3" max="32767" attributes="0"/>
-                      <Component id="alterarCarrinhoBTN_CON" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="topicoNomeProdLB_CON" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="topicoPrecoLB_CON" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="topicoCodLB_CON" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="topicoQuantidadeLB_CON" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nomeProdLB_CON" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="codigoLB_CON" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="precoLB_CON" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="quantidadeLB_CON" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="58" max="32767" attributes="0"/>
+                  <Component id="alterarCarrinhoBTN_CON" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="cancelarBTN_CON" min="-2" pref="30" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="confirmarBTN_CON" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -205,87 +157,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sairBTN_CONActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="topicoNomeProdLB_CON">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="82" green="fd" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="16" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="55" green="48" red="e8" type="rgb"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="Nome"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="topicoCodLB_CON">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="16" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="55" green="48" red="e8" type="rgb"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="C&#xf3;digo"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="topicoPrecoLB_CON">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="16" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="55" green="48" red="e8" type="rgb"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="Pre&#xe7;o"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="nomeProdLB_CON">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="13" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="82" green="fd" red="ff" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Nome"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="codigoLB_CON">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="13" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="82" green="fd" red="ff" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="000"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="precoLB_CON">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="13" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="82" green="fd" red="ff" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="00,00"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoTotalLB_CON">
           <Properties>
@@ -341,56 +212,6 @@
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="topicoNumCarrinhoLB_CON">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="82" green="fd" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="13" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="55" green="48" red="e8" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="N&#xba; Do Carrinho"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="numCarrinhoLB_CON">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="82" green="fd" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="11" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="82" green="fd" red="ff" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="000"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="topicoQuantidadeLB_CON">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="16" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="55" green="48" red="e8" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Quantidade"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="quantidadeLB_CON">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="13" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="82" green="fd" red="ff" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="00"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JButton" name="confirmarBTN_CON">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -402,7 +223,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Confirmar Carrinho"/>
+            <Property name="text" type="java.lang.String" value="Confirmar Venda"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="confirmarBTN_CONActionPerformed"/>
@@ -423,6 +244,20 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="alterarCarrinhoBTN_CONActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="cancelarBTN_CON">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="82" green="fd" red="ff" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="55" green="48" red="e8" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Cancelar Venda"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelarBTN_CONActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

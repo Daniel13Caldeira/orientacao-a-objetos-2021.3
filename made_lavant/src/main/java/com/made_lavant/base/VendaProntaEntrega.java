@@ -7,32 +7,30 @@ import javax.swing.JOptionPane;
 
 public class VendaProntaEntrega implements Venda {
 
-    String funcionario;
-    int carrinho;
+    String carrinho;
     Date data;
 
-    public VendaProntaEntrega(String funcionario, int carrinho) {
-        this.funcionario = funcionario;
+    public VendaProntaEntrega( String carrinho) {
         this.carrinho = carrinho;
         this.data = new Date();
     }
 
     @Override
-    public void efetuaVenda(String cpfCliente) {
+    public void efetuaVenda() {
         CarrinhoDados limpa = new CarrinhoDados();
         ClienteDados cliente = new ClienteDados();
-        JOptionPane.showMessageDialog(null, "Venda finalizada com sucesso!\nAguarde o cliente " + cliente.buscarNome(cpfCliente)
+        JOptionPane.showMessageDialog(null, "Venda finalizada com sucesso!\nAguarde o cliente " + cliente.buscarNome(this.carrinho)
                 + " vir buscar seus produtos", "VENDA", JOptionPane.INFORMATION_MESSAGE);
-        limpa.limparCarrinhoConfirmar(cpfCliente);
+        limpa.limparCarrinhoConfirmar(this.carrinho);
     }
 
     @Override
-    public void cancelaVenda(String cpfCliente) {
+    public void cancelaVenda() {
         ClienteDados cliente = new ClienteDados();
         CarrinhoDados limpa = new CarrinhoDados();
-        limpa.limparCarrinhoCancelar(cpfCliente);
+        limpa.limparCarrinhoCancelar(this.carrinho);
         JOptionPane.showMessageDialog(null, "Venda Cancelada!\nLista de produtos do carrinho do cliente "
-                + cliente.buscarNome(cpfCliente) + " pode ser desfeita!", "VENDA", JOptionPane.INFORMATION_MESSAGE);
+                + cliente.buscarNome(this.carrinho) + " pode ser desfeita!", "VENDA", JOptionPane.INFORMATION_MESSAGE);
 
     }
 }
