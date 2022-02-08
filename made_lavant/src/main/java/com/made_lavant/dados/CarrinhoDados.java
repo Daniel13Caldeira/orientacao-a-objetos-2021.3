@@ -72,7 +72,7 @@ public class CarrinhoDados {
     }
 
     //apaga todos os produtos do carrinho
-    public void limparCarrinho(String carrinho) {
+    public void limparCarrinhoConfirmar(String carrinho) {
         //abre o arquivo para salvar produto
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -81,6 +81,55 @@ public class CarrinhoDados {
         } else {
             //File arquivo = new File("caminho linux");
             arquivo = new File("dados//carrinhos//" + carrinho + ".txt");
+        }
+        try {
+            FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
+            escritaAux.close();
+        } catch (IOException ex) {
+            erro(arquivo);
+        }
+        try {
+            FileWriter escrita = new FileWriter(arquivo, true);//define o escritor
+            BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
+            escritor.write("false");
+            escritor.newLine();
+            escritor.flush();
+            escritor.write("busca");
+            escritor.newLine();
+            escritor.flush();
+            escrita.close();
+            escritor.close();
+        } catch (IOException ex) {
+            erro(arquivo);
+        }
+    }
+
+    public void limparCarrinhoCancelar(String carrinho) {
+        //abre o arquivo para salvar produto
+
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\carrinhos\\" + carrinho + ".txt");
+        } else {
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//carrinhos//" + carrinho + ".txt");
+        }
+        try {
+            FileReader leitura = new FileReader(arquivo);//define o leitor
+            BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
+            leitor.readLine();
+            leitor.readLine();
+            String linha = leitor.readLine();//primeira linha
+            while (linha != null) {//linha null = final do arquivo
+                ProdutoDados pd = new ProdutoDados();
+                pd.alterar(new Produto(pd.buscarNome(Integer.parseInt(separa(linha, 0))), Integer.parseInt(separa(linha, 0)), Double.parseDouble(pd.buscarPreco(Integer.parseInt(separa(linha, 0)))), pd.buscarValidade(Integer.parseInt(separa(linha, 0))), Double.parseDouble(pd.buscarQuantidade(Integer.parseInt(separa(linha, 0)))) + Double.parseDouble(separa(linha, 1))));
+                linha = leitor.readLine();//pega proxima linha
+            }
+            leitor.close();
+            leitura.close();
+        } catch (IOException ex) {
+            erro(arquivo);
         }
         try {
             FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
@@ -126,6 +175,8 @@ public class CarrinhoDados {
         } catch (IOException ex) {
             erro(arquivo);
         }
+        ProdutoDados pd = new ProdutoDados();
+        pd.alterar(new Produto(pd.buscarNome(produto), produto, Double.parseDouble(pd.buscarPreco(produto)), pd.buscarValidade(produto), Double.parseDouble(pd.buscarQuantidade(produto)) - quantidade));
     }
 
     public void removerProduto(String carrinho, int produto) {
@@ -148,6 +199,9 @@ public class CarrinhoDados {
             while (linha != null) {//linha null = final do arquivo
                 if (!(separa(linha, 0).equals(produto + ""))) {//procura pelas linhas que não serão apagadas e as adiciona no array
                     salvar.add(linha);
+                } else {
+                    ProdutoDados pd = new ProdutoDados();
+                    pd.alterar(new Produto(pd.buscarNome(produto), produto, Double.parseDouble(pd.buscarPreco(produto)), pd.buscarValidade(produto), Double.parseDouble(pd.buscarQuantidade(produto)) + Double.parseDouble(separa(linha, 1))));
                 }
                 linha = leitor.readLine();//pega proxima linha
             }
@@ -175,6 +229,8 @@ public class CarrinhoDados {
         } catch (IOException ex) {
             erro(arquivo);
         }
+        ProdutoDados pd = new ProdutoDados();
+        pd.alterar(new Produto(pd.buscarNome(produto), produto, Double.parseDouble(pd.buscarPreco(produto)), pd.buscarValidade(produto), Double.parseDouble(pd.buscarQuantidade(produto)) + Double.parseDouble(separa(carrinho, produto))));
     }
 
     public ArrayList<Produto> getProdutos(String carrinho) {
