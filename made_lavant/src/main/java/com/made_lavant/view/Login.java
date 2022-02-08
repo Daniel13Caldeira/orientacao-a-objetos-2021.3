@@ -14,8 +14,7 @@ public class Login extends javax.swing.JFrame {
     }
 
     public Login() {
-        ProdutoDados pd = new ProdutoDados();
-        pd.verificaValidade();
+        ProdutoDados.verificaValidade();
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
     }
@@ -92,7 +91,7 @@ public class Login extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(171, Short.MAX_VALUE)
+                .addContainerGap(161, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(cadastrarBTN_LO)
@@ -108,12 +107,12 @@ public class Login extends javax.swing.JFrame {
                                     .addComponent(senhaPF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(loginTF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(madeLB_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(madeLB_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lavantLB_LO))
                             .addComponent(confirmarBTN_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(utilityLB_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(181, Short.MAX_VALUE))))
+                        .addContainerGap(171, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,19 +168,18 @@ public class Login extends javax.swing.JFrame {
         }
         if (flag) {
             if (loginTF_LO.getText().charAt(0) == 'A' || loginTF_LO.getText().charAt(0) == 'B') {
-                FuncionarioDados func = new FuncionarioDados();
-                String cod = func.buscarCodigo(loginTF_LO.getText());
+                String cod = FuncionarioDados.buscarCodigo(loginTF_LO.getText());
                 if (cod == null) {
                     utilityLB_LO.setText("Usuário Não Cadastrado!");
                     utilityLB_LO.setVisible(true);
                     flag = false;
                 } else {
                     utilityLB_LO.setVisible(false);
-                    String senha = func.buscarSenha(cod);
+                    String senha = FuncionarioDados.buscarSenha(cod);
                     if (senha.equals(senhaPF_LO.getText())) {
                         Login.codigo = loginTF_LO.getText();
                         if (loginTF_LO.getText().charAt(0) == 'A') {
-                            if (func.buscarSenha(loginTF_LO.getText()).equals("madeLavant")) {
+                            if (FuncionarioDados.buscarSenha(loginTF_LO.getText()).equals("madeLavant")) {
                                 JOptionPane.showMessageDialog(null, "Senha padrão detectada!\nRedirecionando para tela de edição.");
                                 this.setVisible(false);
                                 new EditarDadosGerente().setVisible(true);
@@ -191,7 +189,7 @@ public class Login extends javax.swing.JFrame {
 
                             }
                         } else {
-                            if (func.buscarSenha(loginTF_LO.getText()).equals("madeLavant")) {
+                            if (FuncionarioDados.buscarSenha(loginTF_LO.getText()).equals("madeLavant")) {
                                 JOptionPane.showMessageDialog(null, "Senha padrão detectada!\nRedirecionando para tela de edição.");
                                 this.setVisible(false);
                                 new EditarDadosFuncionario().setVisible(true);
@@ -207,15 +205,14 @@ public class Login extends javax.swing.JFrame {
                 }
             } else {
                 if (loginTF_LO.getText().charAt(0) >= '0' && loginTF_LO.getText().charAt(0) <= '9') {
-                    ClienteDados cliente = new ClienteDados();
-                    String cod = cliente.buscarCPF(loginTF_LO.getText());
+                    String cod = ClienteDados.buscarCPF(loginTF_LO.getText());
                     if (cod == null) {
                         utilityLB_LO.setText("Usuário Não Cadastrado!");
                         utilityLB_LO.setVisible(true);
                         flag = false;
                     } else {
                         utilityLB_LO.setVisible(false);
-                        String senha = cliente.buscarSenha(cod);
+                        String senha = ClienteDados.buscarSenha(cod);
                         if (senha.equals(senhaPF_LO.getText())) {
                             Login.codigo = loginTF_LO.getText();
                             this.setVisible(false);
@@ -283,8 +280,7 @@ public class Login extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private static boolean vazio() {
-        FuncionarioDados func = new FuncionarioDados();
-        if (func.vazio() == null) {
+        if (FuncionarioDados.vazio() == null) {
             return true;
         }
         return false;

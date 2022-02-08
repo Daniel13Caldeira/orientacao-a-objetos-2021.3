@@ -257,7 +257,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="cepTF_EDC">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cepTF_EDCActionPerformed"/>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_EDCKeyReleased"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_EDCKeyTyped"/>
           </Events>
@@ -305,9 +304,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="cidadeTF_EDC">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cidadeTF_EDCActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lavantLB_EDC">
           <Properties>
@@ -339,9 +335,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="ruaTF_EDC">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ruaTF_EDCActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="sairBTN_EDC">
           <Properties>

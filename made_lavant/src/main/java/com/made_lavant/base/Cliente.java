@@ -13,9 +13,7 @@ public class Cliente extends Pessoa {
         super(nome, endereco, senha);
         System.out.println(nome + " " + senha);
         this.cpf = cpf;
-        ClienteDados add = new ClienteDados();
-        //adiciona ao arquivo onde é feita a armazenagem dos dados
-        add.adicionar(this);
+        ClienteDados.adicionar(this);
 
     }
 
@@ -23,9 +21,7 @@ public class Cliente extends Pessoa {
     public Cliente(String nome, String cpf, String senha) {
         super(nome, senha);
         this.cpf = cpf;
-        ClienteDados add = new ClienteDados();
-        //adiciona ao arquivo onde é feita a armazenagem dos dados
-        add.adicionarSemEndereco(this);
+        ClienteDados.adicionarSemEndereco(this);
     }
 
     public Cliente(String cpf, String nome, Endereco endereco, String senha) {

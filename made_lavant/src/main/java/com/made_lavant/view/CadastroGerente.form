@@ -167,9 +167,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="ruaTF_CG">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ruaTF_CGActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoUfLB_CG">
           <Properties>
@@ -212,7 +209,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="cepTF_CG">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cepTF_CGActionPerformed"/>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_CGKeyReleased"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_CGKeyTyped"/>
           </Events>
@@ -264,9 +260,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="nomeTF_CG">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeTF_CGActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoBairroLB_CG">
           <Properties>
@@ -297,9 +290,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="cidadeTF_CG">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cidadeTF_CGActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoNumeroLB_CG">
           <Properties>

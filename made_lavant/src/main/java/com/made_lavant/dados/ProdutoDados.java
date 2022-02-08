@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 public class ProdutoDados {
 
-    private void erro(File arquivo) {
+    private static void erro(File arquivo) {
         if (!arquivo.exists()) {
             try {
                 arquivo.createNewFile();
@@ -24,7 +24,7 @@ public class ProdutoDados {
     }
 
     //separa o dado que deseja pegar da String de dados completa do produto
-    public String separa(String linha, int info) {
+    public static String separa(String linha, int info) {
         //separa a primeira parte da String até o ;
         String resultado = linha.substring(0, linha.indexOf(';'));
         //armazena o restante da string
@@ -40,7 +40,7 @@ public class ProdutoDados {
     }
 
     //adiciona um produto sem endereço ao arquivo de salvamento
-    public void adicionar(Produto produto) {
+    public static void adicionar(Produto produto) {
         //cria uma String com os dados do produto no formato padrão que está sendo utilizado
         String info = String.valueOf(produto.getCodigo()) + ';' + produto.getNome() + ';' + produto.getPreco() + ';' + String.valueOf(produto.getValidade()) + ';' + produto.getQuantidade() + ';';
         //define o arquivo de salvamento
@@ -68,7 +68,7 @@ public class ProdutoDados {
     }
 
     //remove um produto do arquivo de salvamento
-    public void remover(int cod) {
+    public static void remover(int cod) {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
@@ -116,7 +116,7 @@ public class ProdutoDados {
     }
     //busca uma linha
 
-    private String buscar(int cod) {
+    private static String buscar(int cod) {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
@@ -142,7 +142,7 @@ public class ProdutoDados {
     }
 
     //busca o nome de um produto
-    public String buscarNome(int produto) {
+    public static String buscarNome(int produto) {
         //busca o produto
         String aux = buscar(produto);
         //se encontrar um produto, o nome é separado e retornado
@@ -154,7 +154,7 @@ public class ProdutoDados {
     }
 
     //semelhante a buscarNome
-    public String buscarCodigo(int produto) {
+    public static String buscarCodigo(int produto) {
         String aux = buscar(produto);
         if (aux != null) {
             return separa(aux, 0);
@@ -163,7 +163,7 @@ public class ProdutoDados {
     }
 
     //semelhante a buscarNome
-    public String buscarQuantidade(int produto) {
+    public static String buscarQuantidade(int produto) {
         String aux = buscar(produto);
         if (aux != null) {
             return separa(aux, 4);
@@ -172,7 +172,7 @@ public class ProdutoDados {
     }
 
     //semelhante a buscarNome
-    public String buscarValidade(int produto) {
+    public static String buscarValidade(int produto) {
         String aux = buscar(produto);
         if (aux != null) {
             return separa(aux, 3);
@@ -181,7 +181,7 @@ public class ProdutoDados {
     }
 
     //semelhante a buscarNome
-    public String buscarPreco(int produto) {
+    public static String buscarPreco(int produto) {
         String aux = buscar(produto);
         if (aux != null) {
             return separa(aux, 2);
@@ -190,7 +190,7 @@ public class ProdutoDados {
     }
     //altera os dados de um produto
 
-    public void alterar(Produto produto) {
+    public static void alterar(Produto produto) {
         //busca um produto
         if (buscar(produto.getCodigo()) != null) {
             //remove o produto do arquivo de salvamento
@@ -200,7 +200,7 @@ public class ProdutoDados {
         }
     }
 
-    private boolean verificaDataAnteriorAtual(String dataProd) {
+    private static boolean verificaDataAnteriorAtual(String dataProd) {
         Date data = new Date();
         int dia = Integer.parseInt(dataProd.charAt(0) + "" + dataProd.charAt(1));
         int mes = Integer.parseInt(dataProd.charAt(3) + "" + dataProd.charAt(4));
@@ -277,7 +277,7 @@ public class ProdutoDados {
         return false;
     }
 
-    public void verificaValidade() {
+    public static void verificaValidade() {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");

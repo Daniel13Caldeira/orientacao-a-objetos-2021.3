@@ -224,7 +224,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="FuncionarioDados FuncionarioDados = new FuncionarioDados();&#xa;numeroLB_PF.setText(FuncionarioDados.buscarNumero(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="numeroLB_PF.setText(FuncionarioDados.buscarNumero(Login.getCodigo()));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="cidadeLB_PF">

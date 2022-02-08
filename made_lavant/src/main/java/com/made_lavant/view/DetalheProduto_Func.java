@@ -1,7 +1,6 @@
 package com.made_lavant.view;
 
 import com.made_lavant.dados.ProdutoDados;
-import com.made_lavant.base.Produto;
 
 public class DetalheProduto_Func extends javax.swing.JFrame {
 
@@ -185,7 +184,6 @@ public class DetalheProduto_Func extends javax.swing.JFrame {
                 .addGap(158, 158, 158))
         );
 
-        ProdutoDados ProdutoDados = new ProdutoDados();
         codLB_DPF.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutos.getCodigo())));
         valLB_DPF.setText(ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos.getCodigo())));
         precoLB_DPF.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutos.getCodigo())));

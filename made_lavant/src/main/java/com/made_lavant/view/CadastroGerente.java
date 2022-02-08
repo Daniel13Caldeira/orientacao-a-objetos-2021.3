@@ -1,4 +1,3 @@
-
 package com.made_lavant.view;
 
 import com.made_lavant.base.Endereco;
@@ -57,12 +56,6 @@ public class CadastroGerente extends javax.swing.JFrame {
         titleLB_CG.setText("Cadastro do Gerente");
         titleLB_CG.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        ruaTF_CG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ruaTF_CGActionPerformed(evt);
-            }
-        });
-
         topicoUfLB_CG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         topicoUfLB_CG.setForeground(new java.awt.Color(232, 72, 85));
         topicoUfLB_CG.setText("UF");
@@ -81,11 +74,6 @@ public class CadastroGerente extends javax.swing.JFrame {
         topicoNomeLB_CG.setForeground(new java.awt.Color(232, 72, 85));
         topicoNomeLB_CG.setText("Nome");
 
-        cepTF_CG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cepTF_CGActionPerformed(evt);
-            }
-        });
         cepTF_CG.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 cepTF_CGKeyReleased(evt);
@@ -111,12 +99,6 @@ public class CadastroGerente extends javax.swing.JFrame {
         madeLB_CG.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_CG.setText("MADE");
 
-        nomeTF_CG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTF_CGActionPerformed(evt);
-            }
-        });
-
         topicoBairroLB_CG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         topicoBairroLB_CG.setForeground(new java.awt.Color(232, 72, 85));
         topicoBairroLB_CG.setText("Bairro");
@@ -133,12 +115,6 @@ public class CadastroGerente extends javax.swing.JFrame {
         lavantLB_CG.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
         lavantLB_CG.setForeground(new java.awt.Color(232, 72, 85));
         lavantLB_CG.setText("Lavant");
-
-        cidadeTF_CG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cidadeTF_CGActionPerformed(evt);
-            }
-        });
 
         topicoNumeroLB_CG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         topicoNumeroLB_CG.setForeground(new java.awt.Color(232, 72, 85));
@@ -243,9 +219,6 @@ public class CadastroGerente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ruaTF_CGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ruaTF_CGActionPerformed
-    }//GEN-LAST:event_ruaTF_CGActionPerformed
-
     private void confirmarBTN_CGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_CGActionPerformed
         //diz se o cadastro pode ou não ser feito
         boolean cadastro = true;
@@ -294,24 +267,13 @@ public class CadastroGerente extends javax.swing.JFrame {
         }
         //retorna para a tela de crud de funcionários se o cadastro foi realizado
         if (cadastro) {
-            Codigos cod = new Codigos();
             JOptionPane.showMessageDialog(null, "Gerente cadastrado com sucesso\n"
-                    + "Login: " + "A" + (cod.buscaFuncionario() - 1) + "\n"
+                    + "Login: " + "A" + (Codigos.buscaFuncionario() - 1) + "\n"
                     + "Senha(Padrão): madeLavant");
             this.setVisible(false);
             new Login().setVisible(true);
         }
     }//GEN-LAST:event_confirmarBTN_CGActionPerformed
-
-    private void cepTF_CGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cepTF_CGActionPerformed
-    }//GEN-LAST:event_cepTF_CGActionPerformed
-
-    private void nomeTF_CGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTF_CGActionPerformed
-    }//GEN-LAST:event_nomeTF_CGActionPerformed
-
-    private void cidadeTF_CGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidadeTF_CGActionPerformed
-        mascaraInt(numeroTF_CG);
-    }//GEN-LAST:event_cidadeTF_CGActionPerformed
 
     private void numeroTF_CGKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numeroTF_CGKeyReleased
         mascaraInt(numeroTF_CG);

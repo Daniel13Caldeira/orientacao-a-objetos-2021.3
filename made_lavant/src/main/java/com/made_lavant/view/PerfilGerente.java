@@ -295,7 +295,6 @@ public class PerfilGerente extends javax.swing.JFrame {
                 .addContainerGap(50, Short.MAX_VALUE))
         );
 
-        FuncionarioDados FuncionarioDados = new FuncionarioDados();
         bairroLB_PG.setText(FuncionarioDados.buscarBairro(Login.getCodigo()));
         ufLB_PG.setText(FuncionarioDados.buscarUF(Login.getCodigo()));
         ruaLB_PG.setText(FuncionarioDados.buscarRua(Login.getCodigo()));

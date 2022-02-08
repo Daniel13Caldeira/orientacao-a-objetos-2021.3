@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 public class CarrinhoDados {
 
-    private void erro(File arquivo) {
+    private static void erro(File arquivo) {
         if (!arquivo.exists()) {
             try {
                 arquivo.createNewFile();
@@ -23,7 +23,7 @@ public class CarrinhoDados {
     }
 
     //separa o dado que deseja pegar da String de dados completa do cliente
-    public String separa(String linha, int info) {
+    public static String separa(String linha, int info) {
         //separa a primeira parte da String até o ;
         String resultado = linha.substring(0, linha.indexOf(';'));
         //armazena o restante da string
@@ -39,7 +39,7 @@ public class CarrinhoDados {
     }
 
     //adiciona um cliente com endereço no arquivo de salvamento
-    public void criar(String cliente) {
+    public static void criar(String cliente) {
         //cria um arquivo para salvar o carrinho, o nome do arquivo é o CPF do cliente
         File arquivo = null;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -72,7 +72,7 @@ public class CarrinhoDados {
     }
 
     //apaga todos os produtos do carrinho
-    public void limparCarrinhoConfirmar(String carrinho) {
+    public static void limparCarrinhoConfirmar(String carrinho) {
         //abre o arquivo para salvar produto
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -104,7 +104,7 @@ public class CarrinhoDados {
         }
     }
 
-    public void limparCarrinhoCancelar(String carrinho) {
+    public static void limparCarrinhoCancelar(String carrinho) {
         //abre o arquivo para salvar produto
 
         File arquivo;
@@ -153,7 +153,7 @@ public class CarrinhoDados {
         }
     }
 
-    public void adicionarProduto(String carrinho, int produto, double quantidade) {
+    public static void adicionarProduto(String carrinho, int produto, double quantidade) {
         //abre o arquivo para salvar produto
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -179,7 +179,7 @@ public class CarrinhoDados {
         pd.alterar(new Produto(pd.buscarNome(produto), produto, Double.parseDouble(pd.buscarPreco(produto)), pd.buscarValidade(produto), Double.parseDouble(pd.buscarQuantidade(produto)) - quantidade));
     }
 
-    public void removerProduto(String carrinho, int produto) {
+    public static void removerProduto(String carrinho, int produto) {
         //abre o arquivo para salvar produto
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -233,7 +233,7 @@ public class CarrinhoDados {
         pd.alterar(new Produto(pd.buscarNome(produto), produto, Double.parseDouble(pd.buscarPreco(produto)), pd.buscarValidade(produto), Double.parseDouble(pd.buscarQuantidade(produto)) + Double.parseDouble(separa(carrinho, produto))));
     }
 
-    public ArrayList<Produto> getProdutos(String carrinho) {
+    public static ArrayList<Produto> getProdutos(String carrinho) {
         //abre o arquivo para salvar produto
         File arquivo;
         ProdutoDados pd = new ProdutoDados();
@@ -262,7 +262,7 @@ public class CarrinhoDados {
         return produtos;
     }
 
-    private String buscar(String codigo) {
+    private static String buscar(String codigo) {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
@@ -290,7 +290,7 @@ public class CarrinhoDados {
         return null;
     }
 
-    public String getTipoVenda(String carrinho) {
+    public static String getTipoVenda(String carrinho) {
         File arquivo;
         ProdutoDados pd = new ProdutoDados();
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -312,7 +312,7 @@ public class CarrinhoDados {
         return null;
     }
 
-    public void setTipoVenda(String carrinho, String tipo) {
+    public static void setTipoVenda(String carrinho, String tipo) {
         //abre o arquivo para salvar produto
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -366,7 +366,7 @@ public class CarrinhoDados {
         }
     }
 
-    public void setPronto(String carrinho, boolean flag) {
+    public static void setPronto(String carrinho, boolean flag) {
         //abre o arquivo para salvar produto
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -415,7 +415,7 @@ public class CarrinhoDados {
         }
     }
 
-    public boolean getPronto(String carrinho) {
+    public static boolean getPronto(String carrinho) {
         File arquivo;
         ProdutoDados pd = new ProdutoDados();
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -441,7 +441,7 @@ public class CarrinhoDados {
     }
 
     //busca o nome de um cliente
-    public String buscarProduto(String produto) {
+    public static String buscarProduto(String produto) {
         //busca o cliente
         String aux = buscar(produto);
         //se encontrar um cliente, o nome é separado e retornado
@@ -453,7 +453,7 @@ public class CarrinhoDados {
     }
 
     //semelhante a buscarNome
-    public String buscarQuantidade(String produto) {
+    public static String buscarQuantidade(String produto) {
         String aux = buscar(produto);
         if (aux != null) {
             return separa(aux, 1);

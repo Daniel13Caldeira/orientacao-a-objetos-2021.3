@@ -67,24 +67,6 @@ public class CadastroCliente extends javax.swing.JFrame {
         topicoRuaLB_CC.setForeground(new java.awt.Color(232, 72, 85));
         topicoRuaLB_CC.setText("Rua");
 
-        nomeTF_CC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTF_CCActionPerformed(evt);
-            }
-        });
-
-        cidadeTF_CC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cidadeTF_CCActionPerformed(evt);
-            }
-        });
-
-        ruaTF_CC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ruaTF_CCActionPerformed(evt);
-            }
-        });
-
         confirmarBTN_CC.setBackground(new java.awt.Color(255, 253, 130));
         confirmarBTN_CC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         confirmarBTN_CC.setForeground(new java.awt.Color(232, 72, 85));
@@ -115,11 +97,6 @@ public class CadastroCliente extends javax.swing.JFrame {
         topicoCpfLB_CC.setForeground(new java.awt.Color(232, 72, 85));
         topicoCpfLB_CC.setText("CPF");
 
-        numeroTF_CC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numeroTF_CCActionPerformed(evt);
-            }
-        });
         numeroTF_CC.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 numeroTF_CCKeyReleased(evt);
@@ -147,11 +124,6 @@ public class CadastroCliente extends javax.swing.JFrame {
             }
         });
 
-        cepTF_CC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cepTF_CCActionPerformed(evt);
-            }
-        });
         cepTF_CC.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 cepTF_CCKeyReleased(evt);
@@ -186,12 +158,6 @@ public class CadastroCliente extends javax.swing.JFrame {
         topicoSenhaLB_CC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         topicoSenhaLB_CC.setForeground(new java.awt.Color(232, 72, 85));
         topicoSenhaLB_CC.setText("Senha");
-
-        senhaTF_CC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                senhaTF_CCActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -330,18 +296,6 @@ public class CadastroCliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nomeTF_CCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTF_CCActionPerformed
-    }//GEN-LAST:event_nomeTF_CCActionPerformed
-
-    private void cidadeTF_CCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidadeTF_CCActionPerformed
-    }//GEN-LAST:event_cidadeTF_CCActionPerformed
-
-    private void ruaTF_CCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ruaTF_CCActionPerformed
-    }//GEN-LAST:event_ruaTF_CCActionPerformed
-
-    private void cepTF_CCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cepTF_CCActionPerformed
-    }//GEN-LAST:event_cepTF_CCActionPerformed
-
     private void sairBTN_CCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CCActionPerformed
         //deixa de mostrar a tela atual e mostra a tela de login
         this.setVisible(false);
@@ -363,8 +317,7 @@ public class CadastroCliente extends javax.swing.JFrame {
                 cpfTF_CC.setText("CPF inválido");
             } else {
                 //verifica se o cliente já está cadastrado, se ele já estiver, não pode ser cadastrado novamente
-                ClienteDados cliendeDados = new ClienteDados();
-                if (cliendeDados.buscarCPF(cpfTF_CC.getText()) != null) {
+                if (ClienteDados.buscarCPF(cpfTF_CC.getText()) != null) {
                     cadastro = false;
                     utilityLB_CC.setVisible(true);
                 } else {
@@ -430,15 +383,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_confirmarBTN_CCActionPerformed
 
-    private void numeroTF_CCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numeroTF_CCActionPerformed
-    }//GEN-LAST:event_numeroTF_CCActionPerformed
-
-    private void senhaTF_CCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaTF_CCActionPerformed
-
-    }//GEN-LAST:event_senhaTF_CCActionPerformed
-
     private void cpfTF_CCKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cpfTF_CCKeyReleased
-
         mascaraCPF();
     }//GEN-LAST:event_cpfTF_CCKeyReleased
 

@@ -342,25 +342,23 @@ public class TelaCarrinho extends javax.swing.JFrame {
     }//GEN-LAST:event_removerBTN_TCActionPerformed
 
     private void finalizarBTN_TCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarBTN_TCActionPerformed
-        CarrinhoDados cd = new CarrinhoDados();
         boolean flag = true;
         if (entregaRBTN_TC.isSelected()) {
-            cd.setTipoVenda(Login.getCodigo(), "entrega");
-            ClienteDados cld = new ClienteDados();
-            if (cld.buscarBairro(Login.getCodigo()).equals("null")) {
+            CarrinhoDados.setTipoVenda(Login.getCodigo(), "entrega");
+            if (ClienteDados.buscarBairro(Login.getCodigo()).equals("null")) {
                 JOptionPane.showMessageDialog(null, "Cadastre um endereço ou selecione a opção para busca o seu pedido", "Endereço não cadastrado", 0);
                 flag = false;
             }
         } else {
             if (buscaRBTN_TC.isSelected()) {
-                cd.setTipoVenda(Login.getCodigo(), "busca");
+                CarrinhoDados.setTipoVenda(Login.getCodigo(), "busca");
             } else {
                 JOptionPane.showMessageDialog(null, "Selecione uma opção de venda", "Erro", 0);
                 flag = false;
             }
         }
         if (flag) {
-            cd.setPronto(Login.getCodigo(), true);
+            CarrinhoDados.setPronto(Login.getCodigo(), true);
         }
     }//GEN-LAST:event_finalizarBTN_TCActionPerformed
 

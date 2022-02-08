@@ -3,9 +3,12 @@ package com.made_lavant.view;
 import com.made_lavant.base.Produto;
 import com.made_lavant.base.VendaDelivery;
 import com.made_lavant.base.VendaProntaEntrega;
+<<<<<<< HEAD
+=======
 import com.made_lavant.dados.CarrinhoDados;
 import com.made_lavant.dados.ClienteDados;
 import java.util.ArrayList;
+>>>>>>> 4609cb4c309f2b464e1f4d029496a0825487c923
 
 public class ConfirmacaoGerente extends javax.swing.JFrame {
 

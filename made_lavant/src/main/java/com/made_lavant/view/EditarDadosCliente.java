@@ -12,15 +12,14 @@ public class EditarDadosCliente extends javax.swing.JFrame {
 
     public EditarDadosCliente() {
         initComponents();
-        ClienteDados cliente = new ClienteDados();
-        senhaTF_EDC.setText(cliente.buscarSenha(Login.getCodigo()));
-        if (!cliente.buscarBairro(Login.getCodigo()).equals("null")) {
-            bairroTF_EDC.setText(cliente.buscarBairro(Login.getCodigo()));
-            cidadeTF_EDC.setText(cliente.buscarCidade(Login.getCodigo()));
-            ruaTF_EDC.setText(cliente.buscarRua(Login.getCodigo()));
-            ufTF_EDC.setText(cliente.buscarUF(Login.getCodigo()));
-            numeroTF_EDC.setText(cliente.buscarNumero(Login.getCodigo()));
-            cepTF_EDC.setText(cliente.buscarCEP(Login.getCodigo()));
+        senhaTF_EDC.setText(ClienteDados.buscarSenha(Login.getCodigo()));
+        if (!ClienteDados.buscarBairro(Login.getCodigo()).equals("null")) {
+            bairroTF_EDC.setText(ClienteDados.buscarBairro(Login.getCodigo()));
+            cidadeTF_EDC.setText(ClienteDados.buscarCidade(Login.getCodigo()));
+            ruaTF_EDC.setText(ClienteDados.buscarRua(Login.getCodigo()));
+            ufTF_EDC.setText(ClienteDados.buscarUF(Login.getCodigo()));
+            numeroTF_EDC.setText(ClienteDados.buscarNumero(Login.getCodigo()));
+            cepTF_EDC.setText(ClienteDados.buscarCEP(Login.getCodigo()));
         }
         setExtendedState(MAXIMIZED_BOTH);
     }
@@ -96,11 +95,6 @@ public class EditarDadosCliente extends javax.swing.JFrame {
         topicoCidadeLB_EDC.setForeground(new java.awt.Color(232, 72, 85));
         topicoCidadeLB_EDC.setText("Cidade");
 
-        cepTF_EDC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cepTF_EDCActionPerformed(evt);
-            }
-        });
         cepTF_EDC.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 cepTF_EDCKeyReleased(evt);
@@ -132,12 +126,6 @@ public class EditarDadosCliente extends javax.swing.JFrame {
         topicoBairroLB_EDC.setForeground(new java.awt.Color(232, 72, 85));
         topicoBairroLB_EDC.setText("Bairro");
 
-        cidadeTF_EDC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cidadeTF_EDCActionPerformed(evt);
-            }
-        });
-
         lavantLB_EDC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         lavantLB_EDC.setForeground(new java.awt.Color(232, 72, 85));
         lavantLB_EDC.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -155,12 +143,6 @@ public class EditarDadosCliente extends javax.swing.JFrame {
         topicoNumeroLB_EDC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         topicoNumeroLB_EDC.setForeground(new java.awt.Color(232, 72, 85));
         topicoNumeroLB_EDC.setText("Número");
-
-        ruaTF_EDC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ruaTF_EDCActionPerformed(evt);
-            }
-        });
 
         sairBTN_EDC.setBackground(new java.awt.Color(255, 253, 130));
         sairBTN_EDC.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
@@ -302,15 +284,6 @@ public class EditarDadosCliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cepTF_EDCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cepTF_EDCActionPerformed
-    }//GEN-LAST:event_cepTF_EDCActionPerformed
-
-    private void cidadeTF_EDCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidadeTF_EDCActionPerformed
-    }//GEN-LAST:event_cidadeTF_EDCActionPerformed
-
-    private void ruaTF_EDCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ruaTF_EDCActionPerformed
-    }//GEN-LAST:event_ruaTF_EDCActionPerformed
-
     private void sairBTN_EDCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_EDCActionPerformed
         this.setVisible(false);
         new Login().setVisible(true);
@@ -350,16 +323,14 @@ public class EditarDadosCliente extends javax.swing.JFrame {
                 edicao = false;
             }
             if (edicao) {
-                ClienteDados cliente = new ClienteDados();
-                cliente.alterar(new Cliente(Login.getCodigo(), cliente.buscarNome(Login.getCodigo()), new Endereco(cidadeTF_EDC.getText(), cepTF_EDC.getText(), ufTF_EDC.getText(), bairroTF_EDC.getText(), ruaTF_EDC.getText(), numeroTF_EDC.getText()), senhaTF_EDC.getText()));
+                ClienteDados.alterar(new Cliente(Login.getCodigo(), ClienteDados.buscarNome(Login.getCodigo()), new Endereco(cidadeTF_EDC.getText(), cepTF_EDC.getText(), ufTF_EDC.getText(), bairroTF_EDC.getText(), ruaTF_EDC.getText(), numeroTF_EDC.getText()), senhaTF_EDC.getText()));
                 this.setVisible(false);
                 new PerfilCliente().setVisible(true);
             }
         } else {
             //se nenhum campo de endereço estiver preenchido, a edição será feita sem o endereço
             if (edicao) {
-                ClienteDados cliente = new ClienteDados();
-                cliente.alterar(new Cliente(Login.getCodigo(), cliente.buscarNome(Login.getCodigo()), new Endereco("null", "null", "null", "null", "null", "null"), senhaTF_EDC.getText()));
+                ClienteDados.alterar(new Cliente(Login.getCodigo(), ClienteDados.buscarNome(Login.getCodigo()), new Endereco("null", "null", "null", "null", "null", "null"), senhaTF_EDC.getText()));
                 this.setVisible(false);
                 new PerfilCliente().setVisible(true);
             }

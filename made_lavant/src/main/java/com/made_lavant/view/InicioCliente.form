@@ -112,7 +112,7 @@
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sairInicioClineteBTNActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="madeLB_IC">
@@ -154,7 +154,7 @@
             <Property name="text" type="java.lang.String" value="Carrinho"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carrinhoBTNActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="produtosBTN_IC">
@@ -188,7 +188,7 @@
             <Property name="text" type="java.lang.String" value="Perfil"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="perfilClienteBTNActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

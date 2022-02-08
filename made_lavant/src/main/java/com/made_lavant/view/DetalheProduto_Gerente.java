@@ -186,7 +186,6 @@ public class DetalheProduto_Gerente extends javax.swing.JFrame {
                 .addGap(158, 158, 158))
         );
 
-        ProdutoDados ProdutoDados = new ProdutoDados();
         precoLB_DPG.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutosGerente.getCodigo())));
         valLB_DPG.setText(ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutosGerente.getCodigo())));
         codLB_DPG.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutosGerente.getCodigo())));

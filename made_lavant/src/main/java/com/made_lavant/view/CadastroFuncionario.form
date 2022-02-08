@@ -304,9 +304,6 @@
         <Component class="javax.swing.JTextField" name="bairroTF_CF">
         </Component>
         <Component class="javax.swing.JTextField" name="nomeTF_CF">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeTF_CFActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="numeroTF_CF">
           <Events>
@@ -315,9 +312,6 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="cidadeTF_CF">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cidadeTF_CFActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="ufTF_CF">
           <Events>
@@ -326,9 +320,6 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="ruaTF_CF">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ruaTF_CFActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="confirmarBTN_CF">
           <Properties>
@@ -349,7 +340,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="cepTF_CF">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cepTF_CFActionPerformed"/>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_CFKeyReleased"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_CFKeyTyped"/>
           </Events>
@@ -404,9 +394,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Gerente"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="gerenteBTN_CFActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="funcionarioBTN_CF">
           <Properties>
@@ -424,9 +411,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Funcionario"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="funcionarioBTN_CFActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="utilityLB_CF">
           <Properties>

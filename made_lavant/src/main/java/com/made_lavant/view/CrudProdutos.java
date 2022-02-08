@@ -1,7 +1,5 @@
 package com.made_lavant.view;
 
-import com.made_lavant.base.Produto;
-import com.made_lavant.dados.ProdutoDados;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;

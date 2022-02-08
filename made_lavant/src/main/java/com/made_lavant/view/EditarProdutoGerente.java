@@ -8,10 +8,9 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
 
     public EditarProdutoGerente() {
         initComponents();
-        ProdutoDados prod = new ProdutoDados();
-        nomeLB_EDPG.setText(prod.buscarNome(Integer.parseInt(CrudProdutosGerente.getCodigo())));
-        quantiTF_EDPG.setText(prod.buscarQuantidade(Integer.parseInt(CrudProdutosGerente.getCodigo())));
-        precoTF_EDPG.setText(prod.buscarPreco(Integer.parseInt(CrudProdutosGerente.getCodigo())));
+        nomeLB_EDPG.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutosGerente.getCodigo())));
+        quantiTF_EDPG.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutosGerente.getCodigo())));
+        precoTF_EDPG.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutosGerente.getCodigo())));
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -52,11 +51,6 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
         titleLB_EDPG.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         titleLB_EDPG.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        precoTF_EDPG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                precoTF_EDPGActionPerformed(evt);
-            }
-        });
         precoTF_EDPG.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 precoTF_EDPGKeyReleased(evt);
@@ -81,11 +75,6 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
             }
         });
 
-        quantiTF_EDPG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quantiTF_EDPGActionPerformed(evt);
-            }
-        });
         quantiTF_EDPG.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 quantiTF_EDPGKeyReleased(evt);
@@ -204,9 +193,6 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void precoTF_EDPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_precoTF_EDPGActionPerformed
-    }//GEN-LAST:event_precoTF_EDPGActionPerformed
-
     private void confirmarBTN_EDPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_EDPGActionPerformed
         boolean edicao = true;
         if (precoTF_EDPG.getText().equals("") || precoTF_EDPG.getText().equals("Campo obrigatório")) {
@@ -218,15 +204,11 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
             edicao = false;
         }
         if (edicao) {
-            ProdutoDados prod = new ProdutoDados();
-            prod.alterar(new Produto((Integer.parseInt(CrudProdutos.getCodigo())), (Double.parseDouble(precoTF_EDPG.getText())), (Double.parseDouble(quantiTF_EDPG.getText()))));
+            ProdutoDados.alterar(new Produto((Integer.parseInt(CrudProdutos.getCodigo())), (Double.parseDouble(precoTF_EDPG.getText())), (Double.parseDouble(quantiTF_EDPG.getText()))));
             this.setVisible(false);
             new DetalheProduto_Gerente().setVisible(true);
         }
     }//GEN-LAST:event_confirmarBTN_EDPGActionPerformed
-
-    private void quantiTF_EDPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantiTF_EDPGActionPerformed
-    }//GEN-LAST:event_quantiTF_EDPGActionPerformed
 
     private void sairBTN_EDPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_EDPGActionPerformed
         this.setVisible(false);

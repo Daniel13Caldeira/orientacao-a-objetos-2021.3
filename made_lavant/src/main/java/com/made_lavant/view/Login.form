@@ -45,7 +45,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace pref="171" max="32767" attributes="0"/>
+                  <EmptySpace pref="161" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="cadastrarBTN_LO" min="-2" max="-2" attributes="0"/>
@@ -65,14 +65,14 @@
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="madeLB_LO" min="-2" pref="182" max="-2" attributes="0"/>
+                                  <Component id="madeLB_LO" min="-2" pref="281" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="lavantLB_LO" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="confirmarBTN_LO" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
                               <Component id="utilityLB_LO" alignment="0" min="-2" pref="258" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="181" max="32767" attributes="0"/>
+                          <EmptySpace pref="171" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>

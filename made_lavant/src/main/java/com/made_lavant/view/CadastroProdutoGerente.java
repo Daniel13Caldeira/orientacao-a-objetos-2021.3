@@ -92,11 +92,6 @@ public class CadastroProdutoGerente extends javax.swing.JFrame {
         topicoPrecoLB_CPG.setForeground(new java.awt.Color(232, 72, 85));
         topicoPrecoLB_CPG.setText("Preço");
 
-        quantidadeTF_CPG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quantidadeTF_CPGActionPerformed(evt);
-            }
-        });
         quantidadeTF_CPG.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 quantidadeTF_CPGKeyReleased(evt);
@@ -106,17 +101,6 @@ public class CadastroProdutoGerente extends javax.swing.JFrame {
             }
         });
 
-        nomeTF_CPG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTF_CPGActionPerformed(evt);
-            }
-        });
-
-        validadeTF_CPG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                validadeTF_CPGActionPerformed(evt);
-            }
-        });
         validadeTF_CPG.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 validadeTF_CPGKeyReleased(evt);
@@ -130,11 +114,6 @@ public class CadastroProdutoGerente extends javax.swing.JFrame {
         madeLB_CPG.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_CPG.setText("MADE");
 
-        precoTF_CPG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                precoTF_CPGActionPerformed(evt);
-            }
-        });
         precoTF_CPG.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 precoTF_CPGKeyReleased(evt);
@@ -291,9 +270,6 @@ public class CadastroProdutoGerente extends javax.swing.JFrame {
         new CrudProdutosGerente().setVisible(true);
     }//GEN-LAST:event_voltarBTN_CPGActionPerformed
 
-    private void quantidadeTF_CPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantidadeTF_CPGActionPerformed
-    }//GEN-LAST:event_quantidadeTF_CPGActionPerformed
-
     private void quantidadeTF_CPGKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_quantidadeTF_CPGKeyReleased
         mascaraDouble(quantidadeTF_CPG);
     }//GEN-LAST:event_quantidadeTF_CPGKeyReleased
@@ -302,12 +278,6 @@ public class CadastroProdutoGerente extends javax.swing.JFrame {
         mascaraDouble(quantidadeTF_CPG);
     }//GEN-LAST:event_quantidadeTF_CPGKeyTyped
 
-    private void nomeTF_CPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTF_CPGActionPerformed
-    }//GEN-LAST:event_nomeTF_CPGActionPerformed
-
-    private void validadeTF_CPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validadeTF_CPGActionPerformed
-    }//GEN-LAST:event_validadeTF_CPGActionPerformed
-
     private void validadeTF_CPGKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_validadeTF_CPGKeyReleased
         mascaraData();
     }//GEN-LAST:event_validadeTF_CPGKeyReleased
@@ -315,9 +285,6 @@ public class CadastroProdutoGerente extends javax.swing.JFrame {
     private void validadeTF_CPGKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_validadeTF_CPGKeyTyped
         mascaraData();
     }//GEN-LAST:event_validadeTF_CPGKeyTyped
-
-    private void precoTF_CPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_precoTF_CPGActionPerformed
-    }//GEN-LAST:event_precoTF_CPGActionPerformed
 
     private void precoTF_CPGKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_precoTF_CPGKeyReleased
         mascaraDouble(precoTF_CPG);

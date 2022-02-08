@@ -17,20 +17,16 @@ public class VendaProntaEntrega implements Venda {
 
     @Override
     public void efetuaVenda() {
-        CarrinhoDados limpa = new CarrinhoDados();
-        ClienteDados cliente = new ClienteDados();
-        JOptionPane.showMessageDialog(null, "Venda finalizada com sucesso!\nAguarde o cliente " + cliente.buscarNome(this.carrinho)
+        JOptionPane.showMessageDialog(null, "Venda finalizada com sucesso!\nAguarde o cliente " + ClienteDados.buscarNome(this.carrinho)
                 + " vir buscar seus produtos", "VENDA", JOptionPane.INFORMATION_MESSAGE);
-        limpa.limparCarrinhoConfirmar(this.carrinho);
+        CarrinhoDados.limparCarrinhoConfirmar(this.carrinho);
     }
 
     @Override
     public void cancelaVenda() {
-        ClienteDados cliente = new ClienteDados();
-        CarrinhoDados limpa = new CarrinhoDados();
-        limpa.limparCarrinhoCancelar(this.carrinho);
+        CarrinhoDados.limparCarrinhoCancelar(this.carrinho);
         JOptionPane.showMessageDialog(null, "Venda Cancelada!\nLista de produtos do carrinho do cliente "
-                + cliente.buscarNome(this.carrinho) + " pode ser desfeita!", "VENDA", JOptionPane.INFORMATION_MESSAGE);
+                + ClienteDados.buscarNome(this.carrinho) + " pode ser desfeita!", "VENDA", JOptionPane.INFORMATION_MESSAGE);
 
     }
 }

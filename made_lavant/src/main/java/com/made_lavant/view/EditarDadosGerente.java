@@ -11,15 +11,14 @@ public class EditarDadosGerente extends javax.swing.JFrame {
 
     public EditarDadosGerente() {
         initComponents();
-        FuncionarioDados funcionario = new FuncionarioDados();
-        senhaTF_EDG.setText(funcionario.buscarSenha(Login.getCodigo()));
-        if (!funcionario.buscarBairro(Login.getCodigo()).equals("null")) {
-            bairroTF_EDG.setText(funcionario.buscarBairro(Login.getCodigo()));
-            cidadeTF_EDG.setText(funcionario.buscarCidade(Login.getCodigo()));
-            ruaTF_EDG.setText(funcionario.buscarRua(Login.getCodigo()));
-            ufTF_EDG.setText(funcionario.buscarUF(Login.getCodigo()));
-            numeroTF_EDG.setText(funcionario.buscarNumero(Login.getCodigo()));
-            cepTF_EDG.setText(funcionario.buscarCEP(Login.getCodigo()));
+        senhaTF_EDG.setText(FuncionarioDados.buscarSenha(Login.getCodigo()));
+        if (!FuncionarioDados.buscarBairro(Login.getCodigo()).equals("null")) {
+            bairroTF_EDG.setText(FuncionarioDados.buscarBairro(Login.getCodigo()));
+            cidadeTF_EDG.setText(FuncionarioDados.buscarCidade(Login.getCodigo()));
+            ruaTF_EDG.setText(FuncionarioDados.buscarRua(Login.getCodigo()));
+            ufTF_EDG.setText(FuncionarioDados.buscarUF(Login.getCodigo()));
+            numeroTF_EDG.setText(FuncionarioDados.buscarNumero(Login.getCodigo()));
+            cepTF_EDG.setText(FuncionarioDados.buscarCEP(Login.getCodigo()));
         }
         setExtendedState(MAXIMIZED_BOTH);
     }
@@ -87,17 +86,6 @@ public class EditarDadosGerente extends javax.swing.JFrame {
         topicoRuaLB_EDG.setForeground(new java.awt.Color(232, 72, 85));
         topicoRuaLB_EDG.setText("Rua");
 
-        cidadeTF_EDG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cidadeTF_EDGActionPerformed(evt);
-            }
-        });
-
-        cepTF_EDG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cepTF_EDGActionPerformed(evt);
-            }
-        });
         cepTF_EDG.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 cepTF_EDGKeyReleased(evt);
@@ -121,12 +109,6 @@ public class EditarDadosGerente extends javax.swing.JFrame {
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 numeroTF_EDGKeyTyped(evt);
-            }
-        });
-
-        ruaTF_EDG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ruaTF_EDGActionPerformed(evt);
             }
         });
 
@@ -194,7 +176,6 @@ public class EditarDadosGerente extends javax.swing.JFrame {
                             .addComponent(madeLB_EDG, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(27, 27, 27))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -290,15 +271,6 @@ public class EditarDadosGerente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cidadeTF_EDGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidadeTF_EDGActionPerformed
-    }//GEN-LAST:event_cidadeTF_EDGActionPerformed
-
-    private void cepTF_EDGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cepTF_EDGActionPerformed
-    }//GEN-LAST:event_cepTF_EDGActionPerformed
-
-    private void ruaTF_EDGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ruaTF_EDGActionPerformed
-    }//GEN-LAST:event_ruaTF_EDGActionPerformed
-
     private void sairBTN_EDGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_EDGActionPerformed
         this.setVisible(false);
         new Login().setVisible(true);
@@ -347,9 +319,8 @@ public class EditarDadosGerente extends javax.swing.JFrame {
         } else {
             //se nenhum campo de endereço estiver cadastrado, o cadastro será feito sem o endereço
             if (edicao) {
-                FuncionarioDados funcionario = new FuncionarioDados();
                 //String cod, String nome, Endereco endereco, String senha
-                funcionario.alterar(new Funcionario(Login.getCodigo(), funcionario.buscarNome(Login.getCodigo()), new Endereco("null", "null", "null", "null", "null", "null"), senhaTF_EDG.getText()));
+                FuncionarioDados.alterar(new Funcionario(Login.getCodigo(), FuncionarioDados.buscarNome(Login.getCodigo()), new Endereco("null", "null", "null", "null", "null", "null"), senhaTF_EDG.getText()));
                 this.setVisible(false);
                 new PerfilGerente().setVisible(true);
             }

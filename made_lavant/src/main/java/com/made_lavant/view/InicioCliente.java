@@ -37,7 +37,7 @@ public class InicioCliente extends javax.swing.JFrame {
         sairBTN_IC.setText("Sair");
         sairBTN_IC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                sairInicioClineteBTNActionPerformed(evt);
             }
         });
 
@@ -58,7 +58,7 @@ public class InicioCliente extends javax.swing.JFrame {
         carrinhoBTN_IC.setText("Carrinho");
         carrinhoBTN_IC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                carrinhoBTNActionPerformed(evt);
             }
         });
 
@@ -78,7 +78,7 @@ public class InicioCliente extends javax.swing.JFrame {
         perfilBTN_IC.setText("Perfil");
         perfilBTN_IC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                perfilClienteBTNActionPerformed(evt);
             }
         });
 
@@ -138,23 +138,23 @@ public class InicioCliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void perfilClienteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilClienteBTNActionPerformed
         //vai para o perfil do cliente
         this.setVisible(false);
         new PerfilCliente().setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_perfilClienteBTNActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void carrinhoBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhoBTNActionPerformed
         //vai para o carrinho
         this.setVisible(false);
         new TelaCarrinho().setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_carrinhoBTNActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void sairInicioClineteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairInicioClineteBTNActionPerformed
         //retorna para a tela de login
         this.setVisible(false);
         new Login().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_sairInicioClineteBTNActionPerformed
 
     private void produtosBTN_ICActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtosBTN_ICActionPerformed
         //vai para o crud de produtos

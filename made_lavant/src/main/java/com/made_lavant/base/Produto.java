@@ -41,37 +41,30 @@ public class Produto {
 
     //cria um produto com validade
     public Produto(String nome, double preco, String validade, double quantidade) {
-        Codigos codigos = new Codigos();
         this.nome = nome;
         this.validade = validade;
-        this.codigo = codigos.buscaProduto();
+        this.codigo = Codigos.buscaProduto();
         //muda o código do próximo produto cadastrado
-        codigos.alterarPrduto();
+        Codigos.alterarPrduto();
         this.preco = preco;
         this.quantidade = quantidade;
-        ProdutoDados add = new ProdutoDados();
-        //adiciona um produto ao arquivo onde ficará salvo
-        add.adicionar(this);
+        ProdutoDados.adicionar(this);
     }
 
     //cria um produto sem validade
     public Produto(String nome, double preco, double quantidade) {
-        Codigos codigos = new Codigos();
         this.nome = nome;
-        this.codigo = codigos.buscaProduto();
+        this.codigo = Codigos.buscaProduto();
         //muda o código do próximo produto cadastrado
-        codigos.alterarPrduto();
+        Codigos.alterarPrduto();
         this.preco = preco;
         this.quantidade = quantidade;
-        ProdutoDados add = new ProdutoDados();
-        //adiciona um produto ao arquivo onde ficará salvo
-        add.adicionar(this);
+        ProdutoDados.adicionar(this);
     }
 
     public Produto(int cod, double preco, double quantidade) {
-        ProdutoDados prod = new ProdutoDados();
         this.codigo = cod;
-        this.nome = prod.buscarNome(cod);
+        this.nome = ProdutoDados.buscarNome(cod);
         this.preco = preco;
         this.quantidade = quantidade;
     }

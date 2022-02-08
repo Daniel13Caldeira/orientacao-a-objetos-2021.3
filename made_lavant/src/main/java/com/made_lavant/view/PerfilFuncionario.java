@@ -297,7 +297,6 @@ public class PerfilFuncionario extends javax.swing.JFrame {
                 .addContainerGap(74, Short.MAX_VALUE))
         );
 
-        FuncionarioDados FuncionarioDados = new FuncionarioDados();
         numeroLB_PF.setText(FuncionarioDados.buscarNumero(Login.getCodigo()));
         cidadeLB_PF.setText(FuncionarioDados.buscarCidade(Login.getCodigo()));
         ufLB_PF.setText(FuncionarioDados.buscarUF(Login.getCodigo()));

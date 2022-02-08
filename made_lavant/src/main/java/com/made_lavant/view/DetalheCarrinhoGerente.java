@@ -1,9 +1,5 @@
 package com.made_lavant.view;
 
-import com.made_lavant.dados.CarrinhoDados;
-import com.made_lavant.base.Carrinho;
-import com.made_lavant.base.Cliente;
-import com.made_lavant.base.Produto;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;

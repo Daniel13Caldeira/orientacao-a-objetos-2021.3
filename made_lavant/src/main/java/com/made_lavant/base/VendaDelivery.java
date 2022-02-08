@@ -17,23 +17,20 @@ public class VendaDelivery implements Venda {
 
     @Override
     public void efetuaVenda() {
-        CarrinhoDados limpa = new CarrinhoDados();
-        ClienteDados cliente = new ClienteDados();
-        String msg = "Cidade: " + cliente.buscarCidade(this.carrinho) + "\nRua: " + cliente.buscarRua(this.carrinho)
-                + "\nBairro: " + cliente.buscarBairro(this.carrinho) + "\nNúmero: " + cliente.buscarNumero(this.carrinho) + "\nCEP: "
-                + cliente.buscarCEP(this.carrinho) + "\nUF:" + cliente.buscarUF(this.carrinho);
-        JOptionPane.showMessageDialog(null, "Venda finalizada com sucesso!\nA entrega do cliente " + cliente.buscarNome(this.carrinho) + " deve ser realizada no seguinte Endereço:\n"
+        String msg = "Cidade: " + ClienteDados.buscarCidade(this.carrinho) + "\nRua: " + ClienteDados.buscarRua(this.carrinho)
+                + "\nBairro: " + ClienteDados.buscarBairro(this.carrinho) + "\nNúmero: " + ClienteDados.buscarNumero(this.carrinho) + "\nCEP: "
+                + ClienteDados.buscarCEP(this.carrinho) + "\nUF:" + ClienteDados.buscarUF(this.carrinho);
+        JOptionPane.showMessageDialog(null, "Venda finalizada com sucesso!\nA entrega do cliente " + ClienteDados.buscarNome(this.carrinho) + " deve ser realizada no seguinte Endereço:\n"
                 + msg, "VENDA", JOptionPane.INFORMATION_MESSAGE);
-        limpa.limparCarrinhoConfirmar(this.carrinho);
+        CarrinhoDados.limparCarrinhoConfirmar(this.carrinho);
     }
 
     @Override
     public void cancelaVenda() {
-        ClienteDados cliente = new ClienteDados();
         CarrinhoDados limpa = new CarrinhoDados();
-        limpa.limparCarrinhoCancelar(this.carrinho);
+        CarrinhoDados.limparCarrinhoCancelar(this.carrinho);
         JOptionPane.showMessageDialog(null, "Venda Cancelada!\nCarrinho do cliente "
-                + cliente.buscarNome(this.carrinho) + " foi limpo com sucesso.", "VENDA", JOptionPane.INFORMATION_MESSAGE);
+                + ClienteDados.buscarNome(this.carrinho) + " foi limpo com sucesso.", "VENDA", JOptionPane.INFORMATION_MESSAGE);
 
     }
 }

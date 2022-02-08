@@ -279,7 +279,6 @@ public class PerfilFuncionario_Crud extends javax.swing.JFrame {
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        FuncionarioDados FuncionarioDados = new FuncionarioDados();
         cidadeLB_PFC.setText(FuncionarioDados.buscarCidade(Login.getCodigo()));
         bairroLB_PFC.setText(FuncionarioDados.buscarBairro(Login.getCodigo()));
         ufLB_PFC.setText(FuncionarioDados.buscarUF(Login.getCodigo()));

@@ -1,7 +1,6 @@
 package com.made_lavant.view;
 
 import com.made_lavant.dados.ProdutoDados;
-import com.made_lavant.base.Produto;
 
 public class DetalheProduto extends javax.swing.JFrame {
 
@@ -190,7 +189,6 @@ public class DetalheProduto extends javax.swing.JFrame {
                 .addGap(158, 158, 158))
         );
 
-        ProdutoDados ProdutoDados = new ProdutoDados();
         precoLB_DP.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
         nomeLB_DP.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
         codigoLB_DP.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));

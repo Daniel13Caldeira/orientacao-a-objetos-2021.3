@@ -253,7 +253,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ClienteDados clienteDados = new ClienteDados();&#xa;nomeLB_PC.setText(clienteDados.buscarNome(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="nomeLB_PC.setText(ClienteDados.buscarNome(Login.getCodigo()));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="lavantLB_PC">
@@ -324,7 +324,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="&#xa;cpfLB_PC.setText(Login.getCodigo());"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="cpfLB_PC.setText(Login.getCodigo());"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoCpfLB_PC">
@@ -358,7 +358,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="cidadeLB_PC.setText(clienteDados.buscarCidade(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="cidadeLB_PC.setText(ClienteDados.buscarCidade(Login.getCodigo()));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoCidadeLB_PC">
@@ -389,7 +389,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ufLB_PC.setText(clienteDados.buscarUF(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ufLB_PC.setText(ClienteDados.buscarUF(Login.getCodigo()));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoUfLB_PC">
@@ -420,7 +420,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="cepLB_PC.setText(clienteDados.buscarCEP(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="cepLB_PC.setText(ClienteDados.buscarCEP(Login.getCodigo()));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoCepLB_PC">
@@ -451,7 +451,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="bairroLB_PC.setText(clienteDados.buscarBairro(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="bairroLB_PC.setText(ClienteDados.buscarBairro(Login.getCodigo()));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoBairroLB_PC">
@@ -482,7 +482,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ruaLB_PC.setText(clienteDados.buscarRua(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ruaLB_PC.setText(ClienteDados.buscarRua(Login.getCodigo()));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoRuaLB_PC">
@@ -519,7 +519,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="numeroLB_PC.setText(clienteDados.buscarNumero(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="numeroLB_PC.setText(ClienteDados.buscarNumero(Login.getCodigo()));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoNumeroLB_PC">

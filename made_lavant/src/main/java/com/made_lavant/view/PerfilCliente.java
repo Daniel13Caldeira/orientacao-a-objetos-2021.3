@@ -328,16 +328,14 @@ public class PerfilCliente extends javax.swing.JFrame {
                 .addGap(23, 23, 23))
         );
 
-        ClienteDados clienteDados = new ClienteDados();
-        nomeLB_PC.setText(clienteDados.buscarNome(Login.getCodigo()));
-
+        nomeLB_PC.setText(ClienteDados.buscarNome(Login.getCodigo()));
         cpfLB_PC.setText(Login.getCodigo());
-        cidadeLB_PC.setText(clienteDados.buscarCidade(Login.getCodigo()));
-        ufLB_PC.setText(clienteDados.buscarUF(Login.getCodigo()));
-        cepLB_PC.setText(clienteDados.buscarCEP(Login.getCodigo()));
-        bairroLB_PC.setText(clienteDados.buscarBairro(Login.getCodigo()));
-        ruaLB_PC.setText(clienteDados.buscarRua(Login.getCodigo()));
-        numeroLB_PC.setText(clienteDados.buscarNumero(Login.getCodigo()));
+        cidadeLB_PC.setText(ClienteDados.buscarCidade(Login.getCodigo()));
+        ufLB_PC.setText(ClienteDados.buscarUF(Login.getCodigo()));
+        cepLB_PC.setText(ClienteDados.buscarCEP(Login.getCodigo()));
+        bairroLB_PC.setText(ClienteDados.buscarBairro(Login.getCodigo()));
+        ruaLB_PC.setText(ClienteDados.buscarRua(Login.getCodigo()));
+        numeroLB_PC.setText(ClienteDados.buscarNumero(Login.getCodigo()));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

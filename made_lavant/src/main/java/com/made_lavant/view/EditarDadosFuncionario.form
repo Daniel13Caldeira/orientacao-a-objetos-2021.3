@@ -198,7 +198,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="cepTF_EDF">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cepTF_EDFActionPerformed"/>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_EDFKeyReleased"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_EDFKeyTyped"/>
           </Events>
@@ -215,9 +214,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="ruaTF_EDF">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ruaTF_EDFActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="confirmarBTN_EDF">
           <Properties>

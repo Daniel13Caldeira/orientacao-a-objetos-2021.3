@@ -91,7 +91,11 @@
                       <Component id="sairBTN_CON" alignment="1" pref="32" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="topicoTotalLB_CON" alignment="3" max="32767" attributes="0"/>
+<<<<<<< HEAD
+                          <Component id="totalLB_CON" alignment="3" max="32767" attributes="0"/>
+=======
                           <Component id="totalLB_CON" alignment="3" pref="20" max="32767" attributes="0"/>
+>>>>>>> 4609cb4c309f2b464e1f4d029496a0825487c923
                       </Group>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>

@@ -8,10 +8,9 @@ public class EditarProduto extends javax.swing.JFrame {
 
     public EditarProduto() {
         initComponents();
-        ProdutoDados prod = new ProdutoDados();
-        nomeLB_EDP.setText(prod.buscarNome(Integer.parseInt(CrudProdutos.getCodigo())));
-        quantiTF_EDP.setText(prod.buscarQuantidade(Integer.parseInt(CrudProdutos.getCodigo())));
-        precoTF_EDP.setText(prod.buscarPreco(Integer.parseInt(CrudProdutos.getCodigo())));
+        nomeLB_EDP.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutos.getCodigo())));
+        quantiTF_EDP.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutos.getCodigo())));
+        precoTF_EDP.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutos.getCodigo())));
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -56,11 +55,6 @@ public class EditarProduto extends javax.swing.JFrame {
         topicoPrecoLB_EDP.setForeground(new java.awt.Color(232, 72, 85));
         topicoPrecoLB_EDP.setText("Preço");
 
-        quantiTF_EDP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quantiTF_EDPActionPerformed(evt);
-            }
-        });
         quantiTF_EDP.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 quantiTF_EDPKeyReleased(evt);
@@ -210,9 +204,6 @@ public class EditarProduto extends javax.swing.JFrame {
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_EDPActionPerformed
 
-    private void quantiTF_EDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantiTF_EDPActionPerformed
-    }//GEN-LAST:event_quantiTF_EDPActionPerformed
-
     private void confirmarBTN_EDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_EDPActionPerformed
         boolean edicao = true;
         if (precoTF_EDP.getText().equals("") || precoTF_EDP.getText().equals("Campo obrigatório")) {
@@ -224,8 +215,7 @@ public class EditarProduto extends javax.swing.JFrame {
             edicao = false;
         }
         if (edicao) {
-            ProdutoDados prod = new ProdutoDados();
-            prod.alterar(new Produto((Integer.parseInt(CrudProdutos.getCodigo())), (Double.parseDouble(precoTF_EDP.getText())), (Double.parseDouble(quantiTF_EDP.getText()))));
+            ProdutoDados.alterar(new Produto((Integer.parseInt(CrudProdutos.getCodigo())), (Double.parseDouble(precoTF_EDP.getText())), (Double.parseDouble(quantiTF_EDP.getText()))));
             this.setVisible(false);
             new DetalheProduto_Func().setVisible(true);
         }

@@ -1,6 +1,5 @@
 package com.made_lavant.view;
 
-import static com.made_lavant.view.CrudProdutos.codigo;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;

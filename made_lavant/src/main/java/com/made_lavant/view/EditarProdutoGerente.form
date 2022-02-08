@@ -157,7 +157,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="precoTF_EDPG">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="precoTF_EDPGActionPerformed"/>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="precoTF_EDPGKeyReleased"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="precoTF_EDPGKeyTyped"/>
           </Events>
@@ -193,7 +192,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="quantiTF_EDPG">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quantiTF_EDPGActionPerformed"/>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="quantiTF_EDPGKeyReleased"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="quantiTF_EDPGKeyTyped"/>
           </Events>

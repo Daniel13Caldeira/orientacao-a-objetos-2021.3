@@ -189,7 +189,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="FuncionarioDados FuncionarioDados = new FuncionarioDados();&#xd;&#xa;bairroLB_PG.setText(FuncionarioDados.buscarBairro(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="bairroLB_PG.setText(FuncionarioDados.buscarBairro(Login.getCodigo()));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoNumeroLB_PG">

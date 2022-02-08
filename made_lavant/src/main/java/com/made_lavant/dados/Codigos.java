@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 public class Codigos {
 
-    private void erro(File arquivo) {
+    private static void erro(File arquivo) {
         if (!arquivo.exists()) {
             try {
                 arquivo.createNewFile();
@@ -21,7 +21,7 @@ public class Codigos {
     }
 
     //busca o código do próximo produto a ser adicionado
-    public int buscaProduto() {
+    public static int buscaProduto() {
         //arquivo onde será feita a leitura
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -44,7 +44,7 @@ public class Codigos {
     }
 
     //busca o código do próximo funcionário a ser adicionado
-    public int buscaFuncionario() {
+    public static int buscaFuncionario() {
         //arquivo onde vai ser feita a leitura
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -67,7 +67,7 @@ public class Codigos {
         return 0;
     }
 
-    public void alterarFuncionario() {
+    public static void alterarFuncionario() {
         //pega o código do carrinho, do produto e do funcionário
         int codProduto = buscaProduto();
         int codFuncionario = buscaFuncionario() + 1;//adiciona 1 no funcionário
@@ -77,7 +77,7 @@ public class Codigos {
         escreve(codProduto, codFuncionario);
     }
 
-    public void alterarCarrinho() {
+    public static void alterarCarrinho() {
         //pega o código do carrinho, do produto e do funcionário
         int codProduto = buscaProduto();
         int codFuncionario = buscaFuncionario();
@@ -87,7 +87,7 @@ public class Codigos {
         escreve(codProduto, codFuncionario);
     }
 
-    public void alterarPrduto() {
+    public static void alterarPrduto() {
         //pega o código do carrinho, do produto e do funcionário
         int codProduto = buscaProduto() + 1;//adiciona 1 no produto
         int codFuncionario = buscaFuncionario();
@@ -97,7 +97,7 @@ public class Codigos {
         escreve(codProduto, codFuncionario);
     }
 
-    public void escreve(int codProduto, int codFuncionario) {
+    public static void escreve(int codProduto, int codFuncionario) {
         //arquivo onde será feita a escrita
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -122,7 +122,7 @@ public class Codigos {
         }
     }
 
-    public void apagar() {
+    public static void apagar() {
         FileWriter escrita = null;
         File arquivo = null;
         try {

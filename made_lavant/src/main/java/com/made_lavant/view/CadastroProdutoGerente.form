@@ -251,19 +251,14 @@
         </Component>
         <Component class="javax.swing.JTextField" name="quantidadeTF_CPG">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quantidadeTF_CPGActionPerformed"/>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="quantidadeTF_CPGKeyReleased"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="quantidadeTF_CPGKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="nomeTF_CPG">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeTF_CPGActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="validadeTF_CPG">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="validadeTF_CPGActionPerformed"/>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="validadeTF_CPGKeyReleased"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="validadeTF_CPGKeyTyped"/>
           </Events>
@@ -281,7 +276,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="precoTF_CPG">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="precoTF_CPGActionPerformed"/>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="precoTF_CPGKeyReleased"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="precoTF_CPGKeyTyped"/>
           </Events>

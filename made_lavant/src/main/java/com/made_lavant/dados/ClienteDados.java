@@ -12,18 +12,18 @@ import javax.swing.JOptionPane;
 
 public class ClienteDados {
 
-    private void erro(File arquivo){
+    private static void erro(File arquivo) {
         if (!arquivo.exists()) {
-                try {
-                    arquivo.createNewFile();
-                } catch (IOException ex1) {
-                    JOptionPane.showMessageDialog(null, "erro");
-                }
+            try {
+                arquivo.createNewFile();
+            } catch (IOException ex1) {
+                JOptionPane.showMessageDialog(null, "erro");
             }
+        }
     }
-    
+
     //separa o dado que deseja pegar da String de dados completa do cliente
-    public String separa(String linha, int info) {
+    public static String separa(String linha, int info) {
         //separa a primeira parte da String até o ;
         String resultado = linha.substring(0, linha.indexOf(';'));
         //armazena o restante da string
@@ -39,7 +39,7 @@ public class ClienteDados {
     }
 
     //adiciona um cliente sem endereço ao arquivo de salvamento
-    public void adicionarSemEndereco(Cliente cliente) {
+    public static void adicionarSemEndereco(Cliente cliente) {
         //cria uma String com os dados do cliente no formato padrão que está sendo utilizado
         String info = cliente.getCpf() + ';' + cliente.getNome() + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + cliente.getSenha() + ';';
         //define o arquivo de salvamento
@@ -66,7 +66,7 @@ public class ClienteDados {
     }
 
     //adiciona um cliente com endereço no arquivo de salvamento
-    public void adicionar(Cliente cliente) {
+    public static void adicionar(Cliente cliente) {
         //cria uma String com os dados do cliente no formato padrão que está sendo utilizado
         String info = cliente.getCpf() + ';' + cliente.getNome() + ';' + cliente.getEndereco().getCidade() + ';' + cliente.getEndereco().getRua() + ';' + cliente.getEndereco().getBairro() + ';' + cliente.getEndereco().getNumero() + ';' + cliente.getEndereco().getUf() + ';' + cliente.getEndereco().getCep() + ';' + cliente.getSenha() + ';';
         //define o arquivo de salvamento
@@ -93,7 +93,7 @@ public class ClienteDados {
     }
 
     //remove um cliente do arquivo de salvamento
-    public void remover(String cpf) {
+    public static void remover(String cpf) {
         //arquivo de onde ele será removido
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -142,7 +142,7 @@ public class ClienteDados {
     }
 
     //busca uma linha
-    private String buscar(String cpf) {
+    private static String buscar(String cpf) {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
@@ -169,7 +169,7 @@ public class ClienteDados {
     }
 
     //busca o nome de um cliente
-    public String buscarNome(String cliente) {
+    public static String buscarNome(String cliente) {
         //busca o cliente
         String aux = buscar(cliente);
         //se encontrar um cliente, o nome é separado e retornado
@@ -181,7 +181,7 @@ public class ClienteDados {
     }
 
     //semelhante a buscarNome
-    public String buscarCPF(String cpf) {
+    public static String buscarCPF(String cpf) {
         String aux = buscar(cpf);
         if (aux != null) {
             return separa(aux, 0);
@@ -190,7 +190,7 @@ public class ClienteDados {
     }
 
     //semelhante a buscarNome
-    public String buscarRua(String cliente) {
+    public static String buscarRua(String cliente) {
         String aux = buscar(cliente);
         if (aux != null) {
             return separa(aux, 3);
@@ -199,7 +199,7 @@ public class ClienteDados {
     }
 
     //semelhante a buscarNome
-    public String buscarBairro(String cliente) {
+    public static String buscarBairro(String cliente) {
         String aux = buscar(cliente);
         if (aux != null) {
             return separa(aux, 4);
@@ -208,7 +208,7 @@ public class ClienteDados {
     }
 
     //semelhante a buscarNome
-    public String buscarCidade(String cliente) {
+    public static String buscarCidade(String cliente) {
         String aux = buscar(cliente);
         if (aux != null) {
             return separa(aux, 2);
@@ -217,7 +217,7 @@ public class ClienteDados {
     }
 
     //semelhante a buscarNome
-    public String buscarNumero(String cliente) {
+    public static String buscarNumero(String cliente) {
         String aux = buscar(cliente);
         if (aux != null) {
             return separa(aux, 5);
@@ -226,7 +226,7 @@ public class ClienteDados {
     }
 
     //semelhante a buscarNome
-    public String buscarUF(String cliente) {
+    public static String buscarUF(String cliente) {
         String aux = buscar(cliente);
         if (aux != null) {
             return separa(aux, 6);
@@ -235,7 +235,7 @@ public class ClienteDados {
     }
 
     //semelhante a buscarNome
-    public String buscarCEP(String cliente) {
+    public static String buscarCEP(String cliente) {
         String aux = buscar(cliente);
         if (aux != null) {
             return separa(aux, 7);
@@ -244,7 +244,7 @@ public class ClienteDados {
     }
 
     //semelhante a buscarNome
-    public String buscarSenha(String cliente) {
+    public static String buscarSenha(String cliente) {
         String aux = buscar(cliente);
         if (aux != null) {
             return separa(aux, 8);
@@ -253,7 +253,7 @@ public class ClienteDados {
     }
 
     //muda as informações de um cliente com endereço
-    public void alterar(Cliente cliente) {
+    public static void alterar(Cliente cliente) {
         //verifica se ele existe
         if (buscar(cliente.getCpf()) != null) {
             //remover o cliente do arquivo de salvamento
@@ -264,7 +264,7 @@ public class ClienteDados {
     }
 
     //semelhante ao alterar, mas sem o endereço
-    public void alterarSemEndereco(Cliente cliente) {
+    public static void alterarSemEndereco(Cliente cliente) {
         if (buscar(cliente.getCpf()) != null) {
             remover(cliente.getCpf());
             adicionarSemEndereco(cliente);

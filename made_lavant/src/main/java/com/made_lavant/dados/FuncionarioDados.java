@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 public class FuncionarioDados {
 
     //codigo;nome;cidade;rua;bairro;numero;UF;CEP;
-    private void erro(File arquivo) {
+    private static void erro(File arquivo) {
         if (!arquivo.exists()) {
             try {
                 arquivo.createNewFile();
@@ -24,7 +24,7 @@ public class FuncionarioDados {
     }
 
     //separa o dado que deseja pegar da String de dados completa do funcionário
-    public String separa(String linha, int info) {
+    public static String separa(String linha, int info) {
         //separa a primeira parte da String até o ;
         String resultado = linha.substring(0, linha.indexOf(';'));
         //armazena o restante da string
@@ -40,7 +40,7 @@ public class FuncionarioDados {
     }
 
     //adiciona um funcionario sem endereço ao arquivo de salvamento
-    public void adicionarSemEndereco(Funcionario funcionario) {
+    public static void adicionarSemEndereco(Funcionario funcionario) {
         //cria uma String com os dados do funcionário no formato padrão que está sendo utilizado
         String info = funcionario.getCod() + ';' + funcionario.getNome() + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + funcionario.getSenha() + ';';
         //define o arquivo de salvamento
@@ -67,7 +67,7 @@ public class FuncionarioDados {
     }
 
     //semelhante ao adicionarSemEndereço
-    public void adicionar(Funcionario funcionario) {
+    public static void adicionar(Funcionario funcionario) {
         String info = funcionario.getCod() + ';' + funcionario.getNome() + ';' + funcionario.getEndereco().getCidade() + ';' + funcionario.getEndereco().getRua() + ';' + funcionario.getEndereco().getBairro() + ';' + funcionario.getEndereco().getNumero() + ';' + funcionario.getEndereco().getUf() + ';' + funcionario.getEndereco().getCep() + ';' + funcionario.getSenha() + ';';
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -92,7 +92,7 @@ public class FuncionarioDados {
     }
 
     //remove um funcionário do arquivo de salvamento
-    public void remover(String cod) {
+    public static void remover(String cod) {
         //define o arquivo onde a remoção será feita
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -141,7 +141,7 @@ public class FuncionarioDados {
     }
     //busca uma linha
 
-    private String buscar(String cod) {
+    private static String buscar(String cod) {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
@@ -167,7 +167,7 @@ public class FuncionarioDados {
     }
 
     //busca o nome de um funcionário
-    public String buscarNome(String funcionario) {
+    public static String buscarNome(String funcionario) {
         //busca o funcionario
         String aux = buscar(funcionario);
         //se encontrar um funcionário, o nome é separado e retornado
@@ -179,7 +179,7 @@ public class FuncionarioDados {
     }
 
     //semelhante a buscarNome
-    public String buscarCodigo(String funcionario) {
+    public static String buscarCodigo(String funcionario) {
         String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 0);
@@ -188,7 +188,7 @@ public class FuncionarioDados {
     }
 
     //semelhante a buscarNome
-    public String buscarRua(String funcionario) {
+    public static String buscarRua(String funcionario) {
         String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 3);
@@ -197,7 +197,7 @@ public class FuncionarioDados {
     }
 
     //semelhante a buscarNome
-    public String buscarBairro(String funcionario) {
+    public static String buscarBairro(String funcionario) {
         String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 4);
@@ -206,7 +206,7 @@ public class FuncionarioDados {
     }
 
     //semelhante a buscarNome
-    public String buscarCidade(String funcionario) {
+    public static String buscarCidade(String funcionario) {
         String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 2);
@@ -215,7 +215,7 @@ public class FuncionarioDados {
     }
 
     //semelhante a buscarNome
-    public String buscarNumero(String funcionario) {
+    public static String buscarNumero(String funcionario) {
         String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 5);
@@ -224,7 +224,7 @@ public class FuncionarioDados {
     }
 
     //semelhante a buscarNome
-    public String buscarUF(String funcionario) {
+    public static String buscarUF(String funcionario) {
         String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 6);
@@ -233,7 +233,7 @@ public class FuncionarioDados {
     }
 
     //semelhante a buscarNome
-    public String buscarCEP(String funcionario) {
+    public static String buscarCEP(String funcionario) {
         String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 7);
@@ -242,7 +242,7 @@ public class FuncionarioDados {
     }
 //semelhante a buscarNome
 
-    public String buscarSenha(String funcionario) {
+    public static String buscarSenha(String funcionario) {
         String aux = buscar(funcionario);
         if (aux != null) {
             return separa(aux, 8);
@@ -251,7 +251,7 @@ public class FuncionarioDados {
     }
 
     //edita os dados de um funcionário
-    public void alterar(Funcionario funcionario) {
+    public static void alterar(Funcionario funcionario) {
         //verifica se o funcionário existe
         if (buscar(funcionario.getCod()) != null) {
             //remove o funcionário do arquivo de salvamento
@@ -262,14 +262,14 @@ public class FuncionarioDados {
     }
 
     //semelhante a alterar
-    public void alterarSemEndereco(Funcionario funcionario) {
+    public static void alterarSemEndereco(Funcionario funcionario) {
         if (buscar(funcionario.getCod()) != null) {
             remover(funcionario.getCod());
             adicionarSemEndereco(funcionario);
         }
     }
 
-    public String vazio() {
+    public static String vazio() {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");

@@ -12,15 +12,14 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
 
     public EditarDadosFuncionario() {
         initComponents();
-        FuncionarioDados funcionario = new FuncionarioDados();
-        senhaTF_EDF.setText(funcionario.buscarSenha(Login.getCodigo()));
-        if (!funcionario.buscarBairro(Login.getCodigo()).equals("null")) {
-            bairroTF_EDF.setText(funcionario.buscarBairro(Login.getCodigo()));
-            cidadeTF_EDF.setText(funcionario.buscarCidade(Login.getCodigo()));
-            ruaTF_EDF.setText(funcionario.buscarRua(Login.getCodigo()));
-            ufTF_EDF.setText(funcionario.buscarUF(Login.getCodigo()));
-            numeroTF_EDF.setText(funcionario.buscarNumero(Login.getCodigo()));
-            cepTF_EDF.setText(funcionario.buscarCEP(Login.getCodigo()));
+        senhaTF_EDF.setText(FuncionarioDados.buscarSenha(Login.getCodigo()));
+        if (!FuncionarioDados.buscarBairro(Login.getCodigo()).equals("null")) {
+            bairroTF_EDF.setText(FuncionarioDados.buscarBairro(Login.getCodigo()));
+            cidadeTF_EDF.setText(FuncionarioDados.buscarCidade(Login.getCodigo()));
+            ruaTF_EDF.setText(FuncionarioDados.buscarRua(Login.getCodigo()));
+            ufTF_EDF.setText(FuncionarioDados.buscarUF(Login.getCodigo()));
+            numeroTF_EDF.setText(FuncionarioDados.buscarNumero(Login.getCodigo()));
+            cepTF_EDF.setText(FuncionarioDados.buscarCEP(Login.getCodigo()));
         }
         setExtendedState(MAXIMIZED_BOTH);
     }
@@ -65,11 +64,6 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
         topicoRuaLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
         topicoRuaLB_EDF.setText("Rua");
 
-        cepTF_EDF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cepTF_EDFActionPerformed(evt);
-            }
-        });
         cepTF_EDF.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 cepTF_EDFKeyReleased(evt);
@@ -82,12 +76,6 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
         topicoCidadeLB_EDF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         topicoCidadeLB_EDF.setForeground(new java.awt.Color(232, 72, 85));
         topicoCidadeLB_EDF.setText("Cidade");
-
-        ruaTF_EDF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ruaTF_EDFActionPerformed(evt);
-            }
-        });
 
         confirmarBTN_EDF.setBackground(new java.awt.Color(255, 253, 130));
         confirmarBTN_EDF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
@@ -283,12 +271,6 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cepTF_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cepTF_EDFActionPerformed
-    }//GEN-LAST:event_cepTF_EDFActionPerformed
-
-    private void ruaTF_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ruaTF_EDFActionPerformed
-    }//GEN-LAST:event_ruaTF_EDFActionPerformed
-
     private void confirmarBTN_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_EDFActionPerformed
         //diz se a edição pode ou não ser feita
         boolean edicao = true;
@@ -323,16 +305,15 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
                 edicao = false;
             }
             if (edicao) {
-                FuncionarioDados funcionario = new FuncionarioDados();
-                funcionario.alterar(new Funcionario(Login.getCodigo(), funcionario.buscarNome(Login.getCodigo()), new Endereco(cidadeTF_EDF.getText(), cepTF_EDF.getText(), ufTF_EDF.getText(), bairroTF_EDF.getText(), ruaTF_EDF.getText(), numeroTF_EDF.getText()), senhaTF_EDF.getText()));
+                FuncionarioDados.alterar(new Funcionario(Login.getCodigo(), FuncionarioDados.buscarNome(Login.getCodigo()), new Endereco(cidadeTF_EDF.getText(), cepTF_EDF.getText(), ufTF_EDF.getText(), bairroTF_EDF.getText(), ruaTF_EDF.getText(), numeroTF_EDF.getText()), senhaTF_EDF.getText()));
                 this.setVisible(false);
                 new PerfilFuncionario().setVisible(true);
             }
         } else {
             //se nenhum campo de endereço estiver preenchido, a edição será feita sem o endereço
             if (edicao) {
-                FuncionarioDados funcionario = new FuncionarioDados();
-                funcionario.alterar(new Funcionario(Login.getCodigo(), funcionario.buscarNome(Login.getCodigo()), new Endereco("null", "null", "null", "null", "null", "null"), senhaTF_EDF.getText()));
+                FuncionarioDados FuncionarioDados = new FuncionarioDados();
+                FuncionarioDados.alterar(new Funcionario(Login.getCodigo(), FuncionarioDados.buscarNome(Login.getCodigo()), new Endereco("null", "null", "null", "null", "null", "null"), senhaTF_EDF.getText()));
                 this.setVisible(false);
                 new PerfilFuncionario().setVisible(true);
             }

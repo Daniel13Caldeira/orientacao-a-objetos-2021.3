@@ -3,9 +3,12 @@ package com.made_lavant.view;
 import com.made_lavant.base.Produto;
 import com.made_lavant.base.VendaDelivery;
 import com.made_lavant.base.VendaProntaEntrega;
+<<<<<<< HEAD
+=======
 import com.made_lavant.dados.CarrinhoDados;
 import com.made_lavant.dados.ClienteDados;
 import java.util.ArrayList;
+>>>>>>> 4609cb4c309f2b464e1f4d029496a0825487c923
 
 public class Confirmacao extends javax.swing.JFrame {
 
@@ -146,10 +149,17 @@ public class Confirmacao extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
+                    .addComponent(sairBTN_CON, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(topicoTotalLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(totalLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+=======
                     .addComponent(sairBTN_CON, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(topicoTotalLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(totalLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)))
+>>>>>>> 4609cb4c309f2b464e1f4d029496a0825487c923
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(madeLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)

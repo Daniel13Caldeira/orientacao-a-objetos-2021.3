@@ -94,12 +94,6 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         topicoRuaLB_CF.setForeground(new java.awt.Color(232, 72, 85));
         topicoRuaLB_CF.setText("Rua");
 
-        nomeTF_CF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTF_CFActionPerformed(evt);
-            }
-        });
-
         numeroTF_CF.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 numeroTF_CFKeyReleased(evt);
@@ -109,24 +103,12 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             }
         });
 
-        cidadeTF_CF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cidadeTF_CFActionPerformed(evt);
-            }
-        });
-
         ufTF_CF.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 ufTF_CFKeyReleased(evt);
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 ufTF_CFKeyTyped(evt);
-            }
-        });
-
-        ruaTF_CF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ruaTF_CFActionPerformed(evt);
             }
         });
 
@@ -140,11 +122,6 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             }
         });
 
-        cepTF_CF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cepTF_CFActionPerformed(evt);
-            }
-        });
         cepTF_CF.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 cepTF_CFKeyReleased(evt);
@@ -179,22 +156,12 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         gerenteBTN_CF.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         gerenteBTN_CF.setForeground(new java.awt.Color(232, 72, 85));
         gerenteBTN_CF.setText("Gerente");
-        gerenteBTN_CF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                gerenteBTN_CFActionPerformed(evt);
-            }
-        });
 
         funcionarioBTN_CF.setBackground(new java.awt.Color(45, 48, 71));
         tipoFuncionario_btnGroup.add(funcionarioBTN_CF);
         funcionarioBTN_CF.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         funcionarioBTN_CF.setForeground(new java.awt.Color(232, 72, 85));
         funcionarioBTN_CF.setText("Funcionario");
-        funcionarioBTN_CF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                funcionarioBTN_CFActionPerformed(evt);
-            }
-        });
 
         utilityLB_CF.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         utilityLB_CF.setForeground(new java.awt.Color(232, 72, 85));
@@ -327,18 +294,6 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nomeTF_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTF_CFActionPerformed
-    }//GEN-LAST:event_nomeTF_CFActionPerformed
-
-    private void cidadeTF_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidadeTF_CFActionPerformed
-    }//GEN-LAST:event_cidadeTF_CFActionPerformed
-
-    private void ruaTF_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ruaTF_CFActionPerformed
-    }//GEN-LAST:event_ruaTF_CFActionPerformed
-
-    private void cepTF_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cepTF_CFActionPerformed
-    }//GEN-LAST:event_cepTF_CFActionPerformed
-
     private void voltarBTN_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CFActionPerformed
         //volta para o crud de funcionários
         this.setVisible(false);
@@ -350,12 +305,6 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_CFActionPerformed
-
-    private void gerenteBTN_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gerenteBTN_CFActionPerformed
-    }//GEN-LAST:event_gerenteBTN_CFActionPerformed
-
-    private void funcionarioBTN_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_funcionarioBTN_CFActionPerformed
-    }//GEN-LAST:event_funcionarioBTN_CFActionPerformed
 
     private void confirmarBTN_CFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_CFActionPerformed
         //diz se o cadastro pode ou não ser feito
@@ -421,14 +370,12 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         //retorna para a tela de crud de funcionários se o cadastro foi realizado
         if (cadastro) {
             if (identificador.equals("A")) {
-                Codigos cod = new Codigos();
                 JOptionPane.showMessageDialog(null, "Gerente cadastrado com sucesso!\n"
-                        + "Login: " + "A" + (cod.buscaFuncionario() - 1) + "\n"
+                        + "Login: " + "A" + (Codigos.buscaFuncionario() - 1) + "\n"
                         + "Senha(Padrão): madeLavant");
             } else {
-                Codigos cod = new Codigos();
                 JOptionPane.showMessageDialog(null, "Funcionário cadastrado com sucesso!\n"
-                        + "Login: " + "B" + (cod.buscaFuncionario() - 1) + "\n"
+                        + "Login: " + "B" + (Codigos.buscaFuncionario() - 1) + "\n"
                         + "Senha(Padrão): madeLavant");
             }
             this.setVisible(false);

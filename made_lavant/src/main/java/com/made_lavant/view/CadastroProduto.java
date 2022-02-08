@@ -2,11 +2,7 @@
 package com.made_lavant.view;
 
 import com.made_lavant.base.Produto;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
 import java.util.Date;
-import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 
@@ -84,11 +80,6 @@ public class CadastroProduto extends javax.swing.JFrame {
         topicoPrecoLB_CP.setForeground(new java.awt.Color(232, 72, 85));
         topicoPrecoLB_CP.setText("Preço");
 
-        quantidadeTF_CP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quantidadeTF_CPActionPerformed(evt);
-            }
-        });
         quantidadeTF_CP.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 quantidadeTF_CPKeyReleased(evt);
@@ -98,17 +89,6 @@ public class CadastroProduto extends javax.swing.JFrame {
             }
         });
 
-        nomeTF_CP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTF_CPActionPerformed(evt);
-            }
-        });
-
-        validadeTF_CP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                validadeTF_CPActionPerformed(evt);
-            }
-        });
         validadeTF_CP.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 validadeTF_CPKeyReleased(evt);
@@ -118,11 +98,6 @@ public class CadastroProduto extends javax.swing.JFrame {
             }
         });
 
-        precoTF_CP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                precoTF_CPActionPerformed(evt);
-            }
-        });
         precoTF_CP.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 precoTF_CPKeyReleased(evt);
@@ -249,18 +224,6 @@ public class CadastroProduto extends javax.swing.JFrame {
         new CrudProdutos().setVisible(true);
     }//GEN-LAST:event_voltarBTN_CPActionPerformed
 
-    private void nomeTF_CPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTF_CPActionPerformed
-    }//GEN-LAST:event_nomeTF_CPActionPerformed
-
-    private void precoTF_CPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_precoTF_CPActionPerformed
-    }//GEN-LAST:event_precoTF_CPActionPerformed
-
-    private void validadeTF_CPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validadeTF_CPActionPerformed
-    }//GEN-LAST:event_validadeTF_CPActionPerformed
-
-    private void quantidadeTF_CPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantidadeTF_CPActionPerformed
-    }//GEN-LAST:event_quantidadeTF_CPActionPerformed
-
     private void sairBTN_CPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CPActionPerformed
         //retorna para a tela de login
         this.setVisible(false);
@@ -287,14 +250,14 @@ public class CadastroProduto extends javax.swing.JFrame {
             //verifica se o campo de validade foi preenchido
             if (validadeTF_CP.getText().equals("")) {
                 //se não estiver preenchido o produto é cadastrado sem a validade
-                Produto produto = new Produto(nomeTF_CP.getText(), Double.parseDouble(precoTF_CP.getText()), Double.parseDouble(quantidadeTF_CP.getText()));
+                new Produto(nomeTF_CP.getText(), Double.parseDouble(precoTF_CP.getText()), Double.parseDouble(quantidadeTF_CP.getText()));
             } else {
 
                 String validade = validadeTF_CP.getText();
                 //verifica se a data é válida
                 if (verificaDataValida(validade)) {
                     //adiciona um produto com a validade
-                    Produto produto = new Produto(nomeTF_CP.getText(), Double.parseDouble(precoTF_CP.getText()), validade, Double.parseDouble(quantidadeTF_CP.getText()));
+                    new Produto(nomeTF_CP.getText(), Double.parseDouble(precoTF_CP.getText()), validade, Double.parseDouble(quantidadeTF_CP.getText()));
                 } else {
                     //se a data for inválida o cadastro não pode ser feito
                     utilityLB_CP.setVisible(true);

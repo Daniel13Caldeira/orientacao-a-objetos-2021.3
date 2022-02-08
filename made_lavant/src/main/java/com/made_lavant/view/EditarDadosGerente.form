@@ -259,13 +259,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="cidadeTF_EDG">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cidadeTF_EDGActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="cepTF_EDG">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cepTF_EDGActionPerformed"/>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_EDGKeyReleased"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cepTF_EDGKeyTyped"/>
           </Events>
@@ -299,9 +295,6 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="ruaTF_EDG">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ruaTF_EDGActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="sairBTN_EDG">
           <Properties>
