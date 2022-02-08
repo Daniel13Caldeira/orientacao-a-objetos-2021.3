@@ -1,10 +1,15 @@
 package com.made_lavant.view;
 
+import com.made_lavant.base.Produto;
 import com.made_lavant.base.VendaDelivery;
 import com.made_lavant.base.VendaProntaEntrega;
 import com.made_lavant.dados.CarrinhoDados;
+import com.made_lavant.dados.ClienteDados;
+import java.util.ArrayList;
 
 public class ConfirmacaoGerente extends javax.swing.JFrame {
+
+    private ArrayList<Produto> listaDeProdutos = new ArrayList();
 
     public ConfirmacaoGerente() {
         initComponents();
@@ -158,6 +163,16 @@ public class ConfirmacaoGerente extends javax.swing.JFrame {
                 .addComponent(confirmarBTN_CONG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(61, 61, 61))
         );
+
+        CarrinhoDados carrinho = new CarrinhoDados();
+        double soma =0;
+        this.listaDeProdutos = carrinho.getProdutos(CrudCarrinhoGerente.getCodigo());
+        for(int i=0;i<this.listaDeProdutos.size();i++){
+            soma+=this.listaDeProdutos.get(i).getPreco();
+        }
+        totalLB_CONG.setText(soma+"");
+        ClienteDados cliente = new ClienteDados();
+        nomeClienteLB_CONG.setText(cliente.buscarNome(CrudCarrinhoGerente.getCodigo()));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

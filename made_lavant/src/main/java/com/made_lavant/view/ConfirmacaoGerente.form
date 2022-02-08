@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -181,6 +181,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="0000,00"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="CarrinhoDados carrinho = new CarrinhoDados();&#xd;&#xa;double soma =0;&#xd;&#xa;this.listaDeProdutos = carrinho.getProdutos(CrudCarrinhoGerente.getCodigo());&#xd;&#xa;for(int i=0;i&lt;this.listaDeProdutos.size();i++){&#xd;&#xa;    soma+=this.listaDeProdutos.get(i).getPreco();&#xd;&#xa;}&#xd;&#xa;totalLB_CONG.setText(soma+&quot;&quot;);&#xd;&#xa;"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoNomeClienteLB_CONG">
           <Properties>
@@ -209,6 +212,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ClienteDados cliente = new ClienteDados();&#xd;&#xa;nomeClienteLB_CONG.setText(cliente.buscarNome(CrudCarrinhoGerente.getCodigo()));&#xd;&#xa;"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="confirmarBTN_CONG">
           <Properties>

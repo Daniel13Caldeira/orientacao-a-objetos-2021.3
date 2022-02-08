@@ -1,10 +1,15 @@
 package com.made_lavant.view;
 
+import com.made_lavant.base.Produto;
 import com.made_lavant.base.VendaDelivery;
 import com.made_lavant.base.VendaProntaEntrega;
 import com.made_lavant.dados.CarrinhoDados;
+import com.made_lavant.dados.ClienteDados;
+import java.util.ArrayList;
 
 public class Confirmacao extends javax.swing.JFrame {
+
+    private ArrayList<Produto> listaDeProdutos = new ArrayList();
 
     public Confirmacao() {
         initComponents();
@@ -140,10 +145,11 @@ public class Confirmacao extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(topicoTotalLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(totalLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(sairBTN_CON, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(sairBTN_CON, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(topicoTotalLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(totalLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(madeLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -160,6 +166,16 @@ public class Confirmacao extends javax.swing.JFrame {
                 .addComponent(confirmarBTN_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(72, 72, 72))
         );
+
+        CarrinhoDados carrinho = new CarrinhoDados();
+        double soma =0;
+        this.listaDeProdutos = carrinho.getProdutos(CrudCarrinho.getCodigo());
+        for(int i=0;i<this.listaDeProdutos.size();i++){
+            soma+=this.listaDeProdutos.get(i).getPreco();
+        }
+        totalLB_CON.setText(soma+"");
+        ClienteDados cliente = new ClienteDados();
+        nomeClienteLB_CON.setText(cliente.buscarNome(CrudCarrinho.getCodigo()));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
