@@ -2,6 +2,7 @@ package com.made_lavant.view;
 
 import com.made_lavant.dados.ClienteDados;
 import com.made_lavant.dados.FuncionarioDados;
+import com.made_lavant.dados.ProdutoDados;
 import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
@@ -13,6 +14,8 @@ public class Login extends javax.swing.JFrame {
     }
 
     public Login() {
+        ProdutoDados pd = new ProdutoDados();
+        pd.verificaValidade();
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
     }

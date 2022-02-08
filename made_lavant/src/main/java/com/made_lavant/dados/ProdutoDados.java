@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 public class ProdutoDados {
@@ -199,4 +200,104 @@ public class ProdutoDados {
         }
     }
 
+    private boolean verificaDataAnteriorAtual(String dataProd) {
+        Date data = new Date();
+        int dia = Integer.parseInt(dataProd.charAt(0) + "" + dataProd.charAt(1));
+        int mes = Integer.parseInt(dataProd.charAt(3) + "" + dataProd.charAt(4));
+        int ano = Integer.parseInt(dataProd.charAt(6) + "" + dataProd.charAt(7) + "" + dataProd.charAt(8) + "" + dataProd.charAt(9));
+        String atual = data + "";
+        //Fri Jan 14 1 5 : 0 0 : 2 9 B R T  2022
+        //012 456 89 1112131415161718192021 23242526
+        int anoAtual = Integer.parseInt(atual.charAt(24) + "") * 1000 + Integer.parseInt(atual.charAt(25) + "") * 100 + Integer.parseInt(atual.charAt(26) + "") * 10 + Integer.parseInt(atual.charAt(27) + "");
+        if (anoAtual > ano) {
+            return true;
+        }
+        if (anoAtual < ano) {
+            return false;
+        }
+        String mesAtualAux = atual.substring(4, 7);
+        int mesAtual = 0;
+        if (mesAtualAux.equalsIgnoreCase("jan")) {
+            mesAtual = 1;
+        } else {
+            if (mesAtualAux.equalsIgnoreCase("feb")) {
+                mesAtual = 2;
+            } else {
+                if (mesAtualAux.equalsIgnoreCase("mar")) {
+                    mesAtual = 3;
+                } else {
+                    if (mesAtualAux.equalsIgnoreCase("apr")) {
+                        mesAtual = 4;
+                    } else {
+                        if (mesAtualAux.equalsIgnoreCase("may")) {
+                            mesAtual = 5;
+                        } else {
+                            if (mesAtualAux.equalsIgnoreCase("jun")) {
+                                mesAtual = 6;
+                            } else {
+                                if (mesAtualAux.equalsIgnoreCase("jul")) {
+                                    mesAtual = 7;
+                                } else {
+                                    if (mesAtualAux.equalsIgnoreCase("aug")) {
+                                        mesAtual = 8;
+                                    } else {
+                                        if (mesAtualAux.equalsIgnoreCase("sep")) {
+                                            mesAtual = 9;
+                                        } else {
+                                            if (mesAtualAux.equalsIgnoreCase("oct")) {
+                                                mesAtual = 10;
+                                            } else {
+                                                if (mesAtualAux.equalsIgnoreCase("nov")) {
+                                                    mesAtual = 11;
+                                                } else {
+                                                    if (mesAtualAux.equalsIgnoreCase("dec")) {
+                                                        mesAtual = 12;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (mesAtual > mes) {
+            return true;
+        }
+        if (mesAtual < mes) {
+            return false;
+        }
+        int diaAtual = Integer.parseInt(atual.charAt(8) + "") * 10 + Integer.parseInt(atual.charAt(9) + "");
+        if (diaAtual > dia) {
+            return true;
+        }
+        return false;
+    }
+
+    public void verificaValidade() {
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\produto.txt");
+        } else {
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//produto.txt");
+        }
+        try {
+            FileReader leitura = new FileReader(arquivo);//define o leitor
+            BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
+            String linha = leitor.readLine();//primeira linha
+            while (linha != null) {//linha null = final do arquivo
+                if (verificaDataAnteriorAtual(buscarValidade(Integer.parseInt(separa(linha, 0))))) {//procura pela linha requerida
+                    remover(Integer.parseInt(separa(linha, 0)));
+                }
+                linha = leitor.readLine();//pega proxima linha
+            }
+        } catch (Exception ex) {
+            erro(arquivo);
+        }
+    }
 }
