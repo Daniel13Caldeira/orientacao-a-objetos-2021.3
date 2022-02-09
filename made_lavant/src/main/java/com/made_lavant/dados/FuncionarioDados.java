@@ -1,5 +1,6 @@
 package com.made_lavant.dados;
 
+import com.made_lavant.base.Endereco;
 import com.made_lavant.base.Funcionario;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -286,5 +287,31 @@ public class FuncionarioDados {
             erro(arquivo);
         }
         return null;
+    }
+
+    public static ArrayList<Funcionario> getProdutos() {
+        //abre o arquivo para salvar produto
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\produto.txt");
+        } else {
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//produto.txt");
+        }
+        ArrayList<Funcionario> funcionarios = new ArrayList<>();
+        try {
+            FileReader leitura = new FileReader(arquivo);//define o leitor
+            BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
+            String linha = leitor.readLine();//primeira linha com produto
+            while (linha != null) {
+                funcionarios.add(new Funcionario(separa(linha, 0), buscarNome(linha), new Endereco(buscarCidade(linha), buscarCEP(linha), buscarUF(linha), buscarBairro(linha), buscarRua(linha), buscarNumero(linha)), buscarSenha(linha)));//adiciona o produto na lista
+                linha = leitor.readLine();//próxima linha
+            }
+        } catch (IOException ex) {
+            erro(arquivo);
+        }
+        //retorna a lista de códigos de produtos
+        return funcionarios;
     }
 }

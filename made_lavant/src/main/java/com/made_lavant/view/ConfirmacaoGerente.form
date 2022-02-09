@@ -182,7 +182,7 @@
             <Property name="text" type="java.lang.String" value="0000,00"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="CarrinhoDados carrinho = new CarrinhoDados();&#xd;&#xa;double soma =0;&#xd;&#xa;this.listaDeProdutos = carrinho.getProdutos(CrudCarrinhoGerente.getCodigo());&#xd;&#xa;for(int i=0;i&lt;this.listaDeProdutos.size();i++){&#xd;&#xa;    soma+=this.listaDeProdutos.get(i).getPreco();&#xd;&#xa;}&#xd;&#xa;totalLB_CONG.setText(soma+&quot;&quot;);&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="double soma =0;&#xd;&#xa;this.listaDeProdutos = CarrinhoDados.getProdutos(CrudCarrinhoGerente.getCodigo());&#xd;&#xa;for(int i=0;i&lt;this.listaDeProdutos.size();i++){&#xd;&#xa;    soma+=this.listaDeProdutos.get(i).getPreco();&#xd;&#xa;}&#xd;&#xa;totalLB_CONG.setText(soma+&quot;&quot;);"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoNomeClienteLB_CONG">
@@ -213,7 +213,7 @@
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ClienteDados cliente = new ClienteDados();&#xd;&#xa;nomeClienteLB_CONG.setText(cliente.buscarNome(CrudCarrinhoGerente.getCodigo()));&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="nomeClienteLB_CONG.setText(ClienteDados.buscarNome(CrudCarrinhoGerente.getCodigo()));&#xd;&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="confirmarBTN_CONG">

@@ -1,5 +1,7 @@
 package com.made_lavant.dados;
 
+import com.made_lavant.base.Carrinho;
+import com.made_lavant.base.Cliente;
 import com.made_lavant.base.Produto;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -35,6 +37,7 @@ public class CarrinhoDados {
         }
         //chama novamente essa função com o resto da separação anterior
         resultado = separa(resto, info - 1);
+        //retorna a informação buscada
         return resultado;
     }
 
@@ -236,7 +239,6 @@ public class CarrinhoDados {
     public static ArrayList<Produto> getProdutos(String carrinho) {
         //abre o arquivo para salvar produto
         File arquivo;
-        ProdutoDados pd = new ProdutoDados();
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //Filearquivo = new File("caminho win");
             arquivo = new File("dados\\carrinhos\\" + carrinho + ".txt");
@@ -252,7 +254,7 @@ public class CarrinhoDados {
             leitor.readLine();
             String linha = leitor.readLine();//primeira linha com produto
             while (linha != null) {
-                produtos.add(new Produto(pd.buscarNome(Integer.parseInt(separa(linha, 0))), Integer.parseInt(separa(linha, 0)), Double.parseDouble(pd.buscarPreco(Integer.parseInt(separa(linha, 0)))), pd.buscarValidade(Integer.parseInt(separa(linha, 0))), Double.parseDouble(separa(linha, 1))));//adiciona o produto na lista
+                produtos.add(new Produto(ProdutoDados.buscarNome(Integer.parseInt(separa(linha, 0))), Integer.parseInt(separa(linha, 0)), Double.parseDouble(ProdutoDados.buscarPreco(Integer.parseInt(separa(linha, 0)))), ProdutoDados.buscarValidade(Integer.parseInt(separa(linha, 0))), Double.parseDouble(buscarQuantidade(separa(linha, 0)))));//adiciona o produto na lista
                 linha = leitor.readLine();//próxima linha
             }
         } catch (IOException ex) {
@@ -265,11 +267,11 @@ public class CarrinhoDados {
     private static String buscar(String codigo) {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\cliente.txt");
+            //Filearquivo = new File("caminho win");
+            arquivo = new File("dados\\carrinhos\\" + codigo + ".txt");
         } else {
             //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//cliente.txt");
+            arquivo = new File("dados//carrinhos//" + codigo + ".txt ");
         }
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
@@ -459,5 +461,33 @@ public class CarrinhoDados {
             return separa(aux, 1);
         }
         return null;
+    }
+
+    public static ArrayList<Carrinho> getProdutos() {
+        //abre o arquivo para salvar produto
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\cliente.txt");
+        } else {
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//cliente.txt");
+        }
+        ArrayList<Carrinho> carrinhos = new ArrayList<>();
+        try {
+            FileReader leitura = new FileReader(arquivo);//define o leitor
+            BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
+            String linha = leitor.readLine();//primeira linha com produto
+            while (linha != null) {
+                if (getPronto(separa(linha, 0))) {
+                    carrinhos.add(new Carrinho(new Cliente(ClienteDados.buscarCPF(separa(linha, 0))), getProdutos(linha)));
+                }
+                linha = leitor.readLine();//próxima linha
+            }
+        } catch (IOException ex) {
+            erro(arquivo);
+        }
+        //retorna a lista de códigos de produtos
+        return carrinhos;
     }
 }

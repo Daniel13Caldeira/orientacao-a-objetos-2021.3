@@ -135,7 +135,7 @@ public class ProdutoDados {
                 }
                 linha = leitor.readLine();//pega proxima linha
             }
-        } catch (Exception ex) {
+        } catch (IOException ex) {
             erro(arquivo);
         }
         return null;
@@ -291,13 +291,40 @@ public class ProdutoDados {
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             String linha = leitor.readLine();//primeira linha
             while (linha != null) {//linha null = final do arquivo
-                if (verificaDataAnteriorAtual(buscarValidade(Integer.parseInt(separa(linha, 0))))) {//procura pela linha requerida
-                    remover(Integer.parseInt(separa(linha, 0)));
-                }
+                    if ((!buscarValidade(Integer.parseInt(separa(linha, 0))).equals("null")) && verificaDataAnteriorAtual(buscarValidade(Integer.parseInt(separa(linha, 0))))) {//procura pela linha requerida
+                        remover(Integer.parseInt(separa(linha, 0)));
+                    }
+                
                 linha = leitor.readLine();//pega proxima linha
             }
-        } catch (Exception ex) {
+        } catch (IOException ex) {
             erro(arquivo);
         }
+    }
+
+    public static ArrayList<Produto> getProdutos() {
+        //abre o arquivo para salvar produto
+        File arquivo;
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            arquivo = new File("dados\\produto.txt");
+        } else {
+            //File arquivo = new File("caminho linux");
+            arquivo = new File("dados//produto.txt");
+        }
+        ArrayList<Produto> produtos = new ArrayList<>();
+        try {
+            FileReader leitura = new FileReader(arquivo);//define o leitor
+            BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
+            String linha = leitor.readLine();//primeira linha com produto
+            while (linha != null) {
+                produtos.add(new Produto(buscarNome(Integer.parseInt(separa(linha, 0))), Integer.parseInt(separa(linha, 0)), Double.parseDouble(buscarPreco(Integer.parseInt(separa(linha, 0)))), buscarValidade(Integer.parseInt(separa(linha, 0))), Double.parseDouble(buscarQuantidade(Integer.parseInt(separa(linha, 0))))));//adiciona o produto na lista
+                linha = leitor.readLine();//próxima linha
+            }
+        } catch (IOException ex) {
+            erro(arquivo);
+        }
+        //retorna a lista de códigos de produtos
+        return produtos;
     }
 }

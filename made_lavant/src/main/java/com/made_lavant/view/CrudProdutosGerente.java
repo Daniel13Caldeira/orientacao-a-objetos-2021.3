@@ -1,11 +1,7 @@
 package com.made_lavant.view;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import com.made_lavant.base.Produto;
+import com.made_lavant.dados.ProdutoDados;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -21,85 +17,17 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
     public CrudProdutosGerente() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
-        lerArquivo();
+        preencherTabela();
     }
 
-    public void lerArquivo() {
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\produto.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//produto.txt");
+   private void preencherTabela(){
+        ArrayList<Produto> produtos = ProdutoDados.getProdutos();
+        DefaultTableModel model = (DefaultTableModel) jTProdutosGerente.getModel();
+        //Object[] linha;  //alguma linha
+        for (int i = 0; i < produtos.size(); i++) {
+            Object[] linha = {produtos.get(i).getNome(), produtos.get(i).getCodigo(), produtos.get(i).getPreco()};
+            model.addRow(linha);
         }
-        try {
-            FileReader fr = new FileReader(arquivo); //define o escritor
-            BufferedReader br = new BufferedReader(fr);//buffer de escrita
-            //insere o produto e adiciona uma nova linha
-
-            String aux;
-            String dados[];
-            DefaultTableModel model = (DefaultTableModel) jTProdutosGerente.getModel();
-            //Object[] linha;  //alguma linha
-
-            while (br.ready()) {
-                aux = br.readLine();
-                dados = aux.split(";");
-                Object[] linha = {dados[1], dados[0], dados[2]};
-                model.addRow(linha);
-
-            }
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
-
-        }
-    }
-
-    public void remover(String cod) {
-        //String cod = produto.getCodigo() + "";
-        System.out.println("cod: " + cod);
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\produto.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//produto.txt");
-        }
-        ArrayList<String> salvar = new ArrayList<>();//armazena as linhas que não serão apagadas
-        try {
-            FileReader leitura = new FileReader(arquivo);//define o leitor
-            BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
-            String linha = leitor.readLine();//primeira linha
-            while (linha != null) {//linha null = final do arquivo
-                if (!(separa(linha, 0).equalsIgnoreCase(cod))) {//procura pelas linhas que não serão apagadas e as adiciona no array
-                    salvar.add(linha);
-                }
-                linha = leitor.readLine();//pega proxima linha
-            }
-            leitor.close();
-            leitura.close();
-            FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
-            escritaAux.close();
-            FileWriter escrita = new FileWriter(arquivo, true);//define o escritor
-            BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
-            for (int i = 0; i < salvar.size(); i++) {//escreve o que estava no array no arquivo
-                escritor.write(salvar.get(i));
-                escritor.newLine();
-                escritor.flush();
-            }
-            escrita.close();
-            escritor.close();
-
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
-
-        }
-    }
-
-    public String separa(String linha, int info) {
-        return linha.split(";")[info];
     }
 
     @SuppressWarnings("unchecked")
@@ -306,10 +234,8 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
             DefaultTableModel dtmProdutos = (DefaultTableModel) jTProdutosGerente.getModel();
             String cod = jTProdutosGerente.getValueAt(jTProdutosGerente.getSelectedRow(), 1).toString();
             dtmProdutos.removeRow(jTProdutosGerente.getSelectedRow());
-            remover(cod);
-
+            ProdutoDados.remover(Integer.parseInt(cod));
         } else {
-
             JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
         }
 
