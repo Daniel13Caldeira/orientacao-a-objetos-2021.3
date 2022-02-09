@@ -474,7 +474,7 @@ public class CarrinhoDados {
             String linha = leitor.readLine();//primeira linha com produto
             while (linha != null) {
                 if (getPronto(separa(linha, 0))) {
-                    carrinhos.add(new Carrinho(new Cliente(ClienteDados.buscarCPF(separa(linha, 0))), getProdutos(linha)));
+                    carrinhos.add(new Carrinho(new Cliente(ClienteDados.buscarNome(separa(linha, 0)),ClienteDados.buscarCPF(separa(linha, 0)),ClienteDados.buscarSenha(separa(linha, 0))), getProdutos(linha)));
                 }
                 linha = leitor.readLine();//próxima linha
             }
