@@ -2,6 +2,9 @@ package com.made_lavant.view;
 
 import com.made_lavant.dados.CarrinhoDados;
 import com.made_lavant.dados.ClienteDados;
+import com.made_lavant.base.Produto;
+import com.made_lavant.dados.ProdutoDados;
+import com.made_lavant.base.Carrinho;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -21,10 +24,22 @@ public class TelaCarrinho extends javax.swing.JFrame {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
         ht = new Hashtable<>();
-        lerArquivo();
+        //lerArquivo();
+        preencherTabela();
+    }
+    
+    private void preencherTabela() {
+        ArrayList<Produto> produtos = CarrinhoDados.getProdutos(Login.getCodigo());
+        DefaultTableModel model = (DefaultTableModel) jTCarrinho.getModel();
+        //Object[] linha;  //alguma linha
+        
+        for (int i = 0; i < produtos.size(); i++) {
+            Object[] linha = {produtos.get(i).getNome(), produtos.get(i).getCodigo(), produtos.get(i).getPreco()};
+            model.addRow(linha);
+        }
     }
 
-    public void lerArquivo() {
+    /*public void lerArquivo() {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
@@ -103,7 +118,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
 
         return linha.split(";")[info];
     }
-
+*/
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -334,7 +349,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
             DefaultTableModel dtmProdutos = (DefaultTableModel) jTCarrinho.getModel();
             String cod = jTCarrinho.getValueAt(jTCarrinho.getSelectedRow(), 1).toString();
             dtmProdutos.removeRow(jTCarrinho.getSelectedRow());
-            remover(cod);
+            CarrinhoDados.removerProduto(cod, WIDTH);
         } else {
 
             JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");

@@ -457,7 +457,7 @@ public class CarrinhoDados {
         return null;
     }
 
-    public static ArrayList<Carrinho> getProdutos() {
+    public static ArrayList<Carrinho> getCarrinhos() {
         //abre o arquivo para salvar produto
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
