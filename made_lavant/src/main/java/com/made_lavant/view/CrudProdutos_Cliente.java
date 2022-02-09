@@ -251,7 +251,14 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
     private void adicionarBTN_CDCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarBTN_CDCActionPerformed
         if (jTProdCliente.getSelectedRow() != -1) {
             codigo = jTProdCliente.getValueAt(jTProdCliente.getSelectedRow(), 1).toString();
-            CarrinhoDados.adicionarProduto(Login.getCodigo(), Integer.parseInt(codigo), Double.parseDouble(jTextFieldQuantidade.getText()));
+            
+            if (Double.parseDouble(jTextFieldQuantidade.getText())== 0) {
+                
+                    JOptionPane.showMessageDialog(null, "NENHUMA QUANTIDADE SELECIONADA!");
+            }else{
+                CarrinhoDados.adicionarProduto(Login.getCodigo(), Integer.parseInt(codigo), Double.parseDouble(jTextFieldQuantidade.getText()));
+            }
+            
         } else {
             JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
         }

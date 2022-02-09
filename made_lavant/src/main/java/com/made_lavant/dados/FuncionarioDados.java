@@ -289,15 +289,15 @@ public class FuncionarioDados {
         return null;
     }
 
-    public static ArrayList<Funcionario> getProdutos() {
+    public static ArrayList<Funcionario> getFuncionarios() {
         //abre o arquivo para salvar produto
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\produto.txt");
+            arquivo = new File("dados\\funcionario.txt");
         } else {
             //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//produto.txt");
+            arquivo = new File("dados//funcionario.txt");
         }
         ArrayList<Funcionario> funcionarios = new ArrayList<>();
         try {

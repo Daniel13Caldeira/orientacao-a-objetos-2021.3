@@ -1,9 +1,12 @@
 package com.made_lavant.view;
 
+import com.made_lavant.base.Funcionario;
+import com.made_lavant.dados.FuncionarioDados;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -12,35 +15,17 @@ public class CrudFuncionarios extends javax.swing.JFrame {
     public CrudFuncionarios() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
-        lerArquivo();
+        preencherTabela();
     }
-
-    public void lerArquivo() {
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\funcionario.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//funcionario.txt");
-        }
-        try {
-            FileReader fr = new FileReader(arquivo); //define o escritor
-            BufferedReader br = new BufferedReader(fr);//buffer de escrita
-            //escreve e vai pra proxima linha
-            String aux;
-            String dados[];
-            DefaultTableModel model = (DefaultTableModel) jTFuncionario.getModel();
-            //Object[] linha;  //alguma linha
-
-            while (br.ready()) {
-                aux = br.readLine();
-                dados = aux.split(";");
-                Object[] linha = {dados[1], dados[0]};
-                model.addRow(linha);
-            }
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
+    
+    private void preencherTabela() {
+        ArrayList<Funcionario> funcionarios = FuncionarioDados.getFuncionarios();
+        //ArrayList<Funcionario> codigos = FuncionarioDados.buscarCodigo(funcionario);
+        DefaultTableModel model = (DefaultTableModel) jTFuncionario.getModel();
+        //Object[] linha;  //alguma linha
+        for (int i = 0; i < funcionarios.size(); i++) {
+            Object[] linha = {funcionarios.get(i).getNome(), funcionarios.get(i).getCod()};
+            model.addRow(linha);
         }
     }
 
@@ -240,7 +225,9 @@ public class CrudFuncionarios extends javax.swing.JFrame {
     private void removerBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerBTN_CRFActionPerformed
         if (jTFuncionario.getSelectedRow() != -1) {
             DefaultTableModel dtmProdutos = (DefaultTableModel) jTFuncionario.getModel();
+            String cod = jTFuncionario.getValueAt(jTFuncionario.getSelectedRow(), 1).toString();
             dtmProdutos.removeRow(jTFuncionario.getSelectedRow());
+            FuncionarioDados.remover(cod);
         } else {
 
             JOptionPane.showMessageDialog(null, "NENHUM FUNCIONÁRIO SELECIONADO!");

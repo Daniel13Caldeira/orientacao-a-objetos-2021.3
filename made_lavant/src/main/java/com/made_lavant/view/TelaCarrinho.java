@@ -1,5 +1,6 @@
 package com.made_lavant.view;
 
+import com.made_lavant.base.Produto;
 import com.made_lavant.dados.CarrinhoDados;
 import com.made_lavant.dados.ClienteDados;
 import java.io.BufferedReader;
@@ -21,87 +22,18 @@ public class TelaCarrinho extends javax.swing.JFrame {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
         ht = new Hashtable<>();
-        lerArquivo();
+        preencherTabela();
     }
-
-    public void lerArquivo() {
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\carrinhos\\a.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//carrinhos//a.txt");
+    
+    private void preencherTabela() {
+        ArrayList<Produto> produtos = CarrinhoDados.getProdutos(Login.getCodigo());
+        DefaultTableModel model = (DefaultTableModel) jTCarrinho.getModel();
+        //Object[] linha;  //alguma linha
+        
+        for (int i = 0; i < produtos.size(); i++) {
+            Object[] linha = {produtos.get(i).getNome(), produtos.get(i).getCodigo(), produtos.get(i).getPreco()};
+            model.addRow(linha);
         }
-        try {
-            FileReader fr = new FileReader(arquivo); //define o escritor
-            BufferedReader br = new BufferedReader(fr);//buffer de escrita
-            //insere o produto e adiciona uma nova linha
-
-            String aux;
-            String dados[];
-            DefaultTableModel model = (DefaultTableModel) jTCarrinho.getModel();
-            //Object[] linha;  //alguma linha
-
-            while (br.ready()) {
-                aux = br.readLine();
-                dados = aux.split(";");
-                Object[] linha = {dados[1], dados[0], dados[2], dados[3], dados[4]};
-                model.addRow(linha);
-                ht.put(dados[0], aux);
-
-            }
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
-
-        }
-    }
-
-    public void remover(String cod) {
-        //String cod = produto.getCodigo() + "";
-        System.out.println("cod: " + cod);
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\carrinhos\\a.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//carrinhos//a.txt");
-        }
-        ArrayList<String> salvar = new ArrayList<>();//armazena as linhas que não serão apagadas
-        try {
-            FileReader leitura = new FileReader(arquivo);//define o leitor
-            BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
-            String linha = leitor.readLine();//primeira linha
-            while (linha != null) {//linha null = final do arquivo
-                if (!(separa(linha, 0).equalsIgnoreCase(cod))) {//procura pelas linhas que não serão apagadas e as adiciona no array
-                    salvar.add(linha);
-                }
-                linha = leitor.readLine();//pega proxima linha
-            }
-            leitor.close();
-            leitura.close();
-            FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
-            escritaAux.close();
-            FileWriter escrita = new FileWriter(arquivo, true);//define o escritor
-            BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
-            for (int i = 0; i < salvar.size(); i++) {//escreve o que estava no array no arquivo
-                escritor.write(salvar.get(i));
-                escritor.newLine();
-                escritor.flush();
-            }
-            escrita.close();
-            escritor.close();
-
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
-
-        }
-    }
-
-    public String separa(String linha, int info) {
-
-        return linha.split(";")[info];
     }
 
     @SuppressWarnings("unchecked")
@@ -334,7 +266,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
             DefaultTableModel dtmProdutos = (DefaultTableModel) jTCarrinho.getModel();
             String cod = jTCarrinho.getValueAt(jTCarrinho.getSelectedRow(), 1).toString();
             dtmProdutos.removeRow(jTCarrinho.getSelectedRow());
-            remover(cod);
+            CarrinhoDados.removerProduto(cod, WIDTH);
         } else {
 
             JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
