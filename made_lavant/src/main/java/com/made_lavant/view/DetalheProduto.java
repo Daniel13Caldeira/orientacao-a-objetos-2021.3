@@ -192,7 +192,10 @@ public class DetalheProduto extends javax.swing.JFrame {
         precoLB_DP.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
         nomeLB_DP.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
         codigoLB_DP.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
-        valLB_DP.setText(ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
+        String val = ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo()));
+        if (!val.equals("null")){
+            valLB_DP.setText(val);
+        }else valLB_DP.setText("Indeterminado");
         quantiDispLB_DP.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

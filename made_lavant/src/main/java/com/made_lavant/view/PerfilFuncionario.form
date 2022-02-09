@@ -137,9 +137,9 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="titleLB_PF" min="-2" pref="22" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="topicoUfLB_PF" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                       <Component id="ufLB_PF" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
@@ -224,7 +224,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="numeroLB_PF.setText(FuncionarioDados.buscarNumero(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String num = FuncionarioDados.buscarNumero(Login.getCodigo());&#xa;if (!num.equals(&quot;null&quot;)){&#xa;    numeroLB_PF.setText(num);&#xa;}else numeroLB_PF.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="cidadeLB_PF">
@@ -243,7 +243,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="cidadeLB_PF.setText(FuncionarioDados.buscarCidade(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String cidade = FuncionarioDados.buscarCidade(Login.getCodigo());&#xa;if (!cidade.equals(&quot;null&quot;)){&#xa;    cidadeLB_PF.setText(cidade);&#xa;}else cidadeLB_PF.setText(&quot; &quot;);"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoNumeroLB_PF">
@@ -298,7 +298,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ufLB_PF.setText(FuncionarioDados.buscarUF(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String uf = FuncionarioDados.buscarUF(Login.getCodigo());&#xa;if (!uf.equals(&quot;null&quot;)){&#xa;    ufLB_PF.setText(uf);&#xa;}else ufLB_PF.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="sairBTN_PF">
@@ -365,7 +365,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="cepLB_PF.setText(FuncionarioDados.buscarCEP(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String cep = FuncionarioDados.buscarCEP(Login.getCodigo());&#xa;        if (!cep.equals(&quot;null&quot;)){&#xa;            cepLB_PF.setText(cep);&#xa;        }else cepLB_PF.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="lavantLB_PF">
@@ -408,7 +408,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="bairroLB_PF.setText(FuncionarioDados.buscarBairro(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String bairro = FuncionarioDados.buscarBairro(Login.getCodigo());&#xa;        if (!bairro.equals(&quot;null&quot;)){&#xa;            bairroLB_PF.setText(bairro);&#xa;        }else bairroLB_PF.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoNomeLB_PF">
@@ -467,7 +467,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="ruaLB_PF.setText(FuncionarioDados.buscarRua(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="String rua = FuncionarioDados.buscarRua(Login.getCodigo());&#xa;if (!rua.equals(&quot;null&quot;)){&#xa;    ruaLB_PF.setText(rua);&#xa;}else ruaLB_PF.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="idLB_PF">

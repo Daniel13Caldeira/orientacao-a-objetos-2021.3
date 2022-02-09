@@ -1,20 +1,19 @@
 package com.made_lavant.view;
 
+import com.made_lavant.base.Produto;
+import com.made_lavant.dados.CarrinhoDados;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class DetalheCarrinhoGerente extends javax.swing.JFrame {
 
-    protected static String total;
-    protected static float soma;
+private ArrayList<Produto> listaDeProdutos;
 
-    protected static String getTotal() {
-        return DetalheCarrinho.total;
-    }
 
     public DetalheCarrinhoGerente() {
         initComponents();
@@ -27,10 +26,10 @@ public class DetalheCarrinhoGerente extends javax.swing.JFrame {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\carrinhos\\a.txt");
+            arquivo = new File("dados\\carrinhos\\" +CrudCarrinhoGerente.getCodigo()+".txt");
         } else {
             //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//carrinhos//a.txt");
+            arquivo = new File("dados//carrinhos//" +CrudCarrinhoGerente.getCodigo()+".txt");
         }
         try {
             FileReader fr = new FileReader(arquivo); //define o escritor
@@ -47,9 +46,6 @@ public class DetalheCarrinhoGerente extends javax.swing.JFrame {
                 dados = aux.split(";");
                 Object[] linha = {dados[1], dados[0], dados[4], dados[3], dados[2]};
                 model.addRow(linha);
-                String valor = dados[2];
-                soma += Float.parseFloat(valor);
-                total = String.valueOf(soma);
 
             }
 
@@ -191,7 +187,12 @@ public class DetalheCarrinhoGerente extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        totalLB_DCG.setText(DetalheCarrinhoGerente.getTotal());
+        double soma =0;
+        this.listaDeProdutos = CarrinhoDados.getProdutos(CrudCarrinhoGerente.getCodigo());
+        for(int i=0;i<this.listaDeProdutos.size();i++){
+            soma+=this.listaDeProdutos.get(i).getPreco()*this.listaDeProdutos.get(i).getQuantidade();
+        }
+        totalLB_DCG.setText(soma+"");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

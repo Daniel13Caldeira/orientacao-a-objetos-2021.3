@@ -189,7 +189,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="bairroLB_PG.setText(FuncionarioDados.buscarBairro(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String bairro = FuncionarioDados.buscarBairro(Login.getCodigo());&#xa;if (!bairro.equals(&quot;null&quot;)){&#xa;    bairroLB_PG.setText(bairro);&#xa;}else bairroLB_PG.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoNumeroLB_PG">
@@ -284,7 +284,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="ufLB_PG.setText(FuncionarioDados.buscarUF(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String uf = FuncionarioDados.buscarUF(Login.getCodigo());&#xa;if (!uf.equals(&quot;null&quot;)){&#xa;    ufLB_PG.setText(uf);&#xa;}else ufLB_PG.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="ruaLB_PG">
@@ -303,7 +303,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="ruaLB_PG.setText(FuncionarioDados.buscarRua(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="String rua = FuncionarioDados.buscarRua(Login.getCodigo());&#xa;if (!rua.equals(&quot;null&quot;)){&#xa;    ruaLB_PG.setText(rua);&#xa;}else ruaLB_PG.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="sairBTN_PG">
@@ -424,7 +424,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="cepLB_PG.setText(FuncionarioDados.buscarCEP(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String cep = FuncionarioDados.buscarCEP(Login.getCodigo());&#xa;if (!cep.equals(&quot;null&quot;)){&#xa;    cepLB_PG.setText(cep);&#xa;}else cepLB_PG.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoIdLB_PG">
@@ -470,7 +470,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="numeroLB_PG.setText(FuncionarioDados.buscarNumero(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String num = FuncionarioDados.buscarNumero(Login.getCodigo());&#xa;if (!num.equals(&quot;null&quot;)){&#xa;    numeroLB_PG.setText(num);&#xa;}else numeroLB_PG.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoCepLB_PG">
@@ -501,7 +501,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="cidadeLB_PG.setText(FuncionarioDados.buscarCidade(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String cidade = FuncionarioDados.buscarCidade(Login.getCodigo());&#xa;if (!cidade.equals(&quot;null&quot;)){&#xa;    cidadeLB_PG.setText(cidade);&#xa;}else cidadeLB_PG.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="editarBTN_PG">

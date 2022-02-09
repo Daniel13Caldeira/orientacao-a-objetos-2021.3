@@ -209,7 +209,7 @@
             <Property name="text" type="java.lang.String" value="dd/mm/aaaa"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="valLB_DPF.setText(ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos.getCodigo())));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String val = ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos.getCodigo()));&#xa;if (!val.equals(&quot;null&quot;)){&#xa;    valLB_DPF.setText(val);&#xa;}else valLB_DPF.setText(&quot;Indeterminado&quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoPrecoLB_DPF">

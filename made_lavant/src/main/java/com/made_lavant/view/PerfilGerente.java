@@ -10,6 +10,21 @@ public class PerfilGerente extends javax.swing.JFrame {
     public PerfilGerente() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        SemEndereco();
+    }
+    
+    public void SemEndereco(){
+        String cidade = FuncionarioDados.buscarCidade(Login.getCodigo());
+        if (cidade.equals("null")){
+            titleLB_PG.setVisible(false);
+            topicoBairroLB_PG.setVisible(false);
+            topicoCepLB_PG.setVisible(false);
+            topicoNumeroLB_PG.setVisible(false);
+            topicoRuaLB_PG.setVisible(false);
+            topicoUfLB_PG.setVisible(false);
+            topicoCidadeLB_PG.setVisible(false);
+        }
+        
     }
 
 
@@ -295,14 +310,32 @@ public class PerfilGerente extends javax.swing.JFrame {
                 .addContainerGap(50, Short.MAX_VALUE))
         );
 
-        bairroLB_PG.setText(FuncionarioDados.buscarBairro(Login.getCodigo()));
-        ufLB_PG.setText(FuncionarioDados.buscarUF(Login.getCodigo()));
-        ruaLB_PG.setText(FuncionarioDados.buscarRua(Login.getCodigo()));
+        String bairro = FuncionarioDados.buscarBairro(Login.getCodigo());
+        if (!bairro.equals("null")){
+            bairroLB_PG.setText(bairro);
+        }else bairroLB_PG.setText(" ");
+        String uf = FuncionarioDados.buscarUF(Login.getCodigo());
+        if (!uf.equals("null")){
+            ufLB_PG.setText(uf);
+        }else ufLB_PG.setText(" ");
+        String rua = FuncionarioDados.buscarRua(Login.getCodigo());
+        if (!rua.equals("null")){
+            ruaLB_PG.setText(rua);
+        }else ruaLB_PG.setText(" ");
         idLB_PG.setText(Login.getCodigo());
         nomeLB_PG.setText(FuncionarioDados.buscarNome(Login.getCodigo()));
-        cepLB_PG.setText(FuncionarioDados.buscarCEP(Login.getCodigo()));
-        numeroLB_PG.setText(FuncionarioDados.buscarNumero(Login.getCodigo()));
-        cidadeLB_PG.setText(FuncionarioDados.buscarCidade(Login.getCodigo()));
+        String cep = FuncionarioDados.buscarCEP(Login.getCodigo());
+        if (!cep.equals("null")){
+            cepLB_PG.setText(cep);
+        }else cepLB_PG.setText(" ");
+        String num = FuncionarioDados.buscarNumero(Login.getCodigo());
+        if (!num.equals("null")){
+            numeroLB_PG.setText(num);
+        }else numeroLB_PG.setText(" ");
+        String cidade = FuncionarioDados.buscarCidade(Login.getCodigo());
+        if (!cidade.equals("null")){
+            cidadeLB_PG.setText(cidade);
+        }else cidadeLB_PG.setText(" ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

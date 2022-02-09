@@ -9,6 +9,21 @@ public class PerfilFuncionario_Crud extends javax.swing.JFrame {
     public PerfilFuncionario_Crud() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        SemEndereco();
+    }
+    
+    public void SemEndereco(){
+        String cidade = FuncionarioDados.buscarCidade(Login.getCodigo());
+        if (cidade.equals("null")){
+            titleLB_PFC.setVisible(false);
+            topicoBairroLB_PFC.setVisible(false);
+            topicoCepLB_PFC.setVisible(false);
+            topicoNumeroLB_PFC.setVisible(false);
+            topicoRuaLB_PFC.setVisible(false);
+            topicoUfLB_PFC.setVisible(false);
+            topicoCidadeLB_PFC.setVisible(false);
+        }
+        
     }
 
 
@@ -279,14 +294,32 @@ public class PerfilFuncionario_Crud extends javax.swing.JFrame {
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        cidadeLB_PFC.setText(FuncionarioDados.buscarCidade(Login.getCodigo()));
-        bairroLB_PFC.setText(FuncionarioDados.buscarBairro(Login.getCodigo()));
-        ufLB_PFC.setText(FuncionarioDados.buscarUF(Login.getCodigo()));
-        ruaLB_PFC.setText(FuncionarioDados.buscarRua(Login.getCodigo()));
+        String cidade = FuncionarioDados.buscarCidade(Login.getCodigo());
+        if (!cidade.equals("null")){
+            cidadeLB_PFC.setText(cidade);
+        }else cidadeLB_PFC.setText(" ");
+        String bairro = FuncionarioDados.buscarBairro(Login.getCodigo());
+        if (!bairro.equals("null")){
+            bairroLB_PFC.setText(bairro);
+        }else bairroLB_PFC.setText(" ");
+        String uf = FuncionarioDados.buscarUF(Login.getCodigo());
+        if (!uf.equals("null")){
+            ufLB_PFC.setText(uf);
+        }else ufLB_PFC.setText(" ");
+        String rua = FuncionarioDados.buscarRua(Login.getCodigo());
+        if (!rua.equals("null")){
+            ruaLB_PFC.setText(rua);
+        }else ruaLB_PFC.setText(" ");
         idLB_PFC.setText(Login.getCodigo());
         nomeLB_PFC.setText(FuncionarioDados.buscarNome(Login.getCodigo()));
-        cepLB_PFC.setText(FuncionarioDados.buscarCEP(Login.getCodigo()));
-        numeroLB_PFC.setText(FuncionarioDados.buscarNumero(Login.getCodigo()));
+        String cep = FuncionarioDados.buscarCEP(Login.getCodigo());
+        if (!cep.equals("null")){
+            cepLB_PFC.setText(cep);
+        }else cepLB_PFC.setText(" ");
+        String num = FuncionarioDados.buscarNumero(Login.getCodigo());
+        if (!num.equals("null")){
+            numeroLB_PFC.setText(num);
+        }else numeroLB_PFC.setText(" ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

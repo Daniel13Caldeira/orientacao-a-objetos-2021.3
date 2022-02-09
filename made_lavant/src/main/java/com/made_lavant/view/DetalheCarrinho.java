@@ -1,21 +1,20 @@
 
 package com.made_lavant.view;
 
+import com.made_lavant.base.Produto;
+import com.made_lavant.dados.CarrinhoDados;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class DetalheCarrinho extends javax.swing.JFrame {
     
-    protected static String total;
-    protected static float soma;
+    private ArrayList<Produto> listaDeProdutos;
 
-    protected static String getTotal() {
-        return DetalheCarrinho.total;
-    }
     public DetalheCarrinho() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
@@ -23,13 +22,15 @@ public class DetalheCarrinho extends javax.swing.JFrame {
     }
     
     public void lerArquivo(){
+        
+        
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\carrinhos\\a.txt");
+            arquivo = new File("dados\\carrinhos\\" +CrudCarrinho.getCodigo()+".txt");
         }else{
             //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//carrinhos//a.txt");
+            arquivo = new File("dados//carrinhos//" +CrudCarrinho.getCodigo()+".txt");
         }
         try {
             FileReader fr = new FileReader(arquivo); //define o escritor
@@ -46,16 +47,13 @@ public class DetalheCarrinho extends javax.swing.JFrame {
                 dados = aux.split(";");
                 Object[] linha = {dados[1],dados[0],dados[4],dados[3],dados[2]};
                 model.addRow(linha);
-                String valor = dados[2];
-                soma  += Float.parseFloat(valor);
-                total = String.valueOf(soma);
-                
             }
 
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
 
         }
+
     }
     
     public String separa(String linha, int info) {
@@ -201,7 +199,12 @@ public class DetalheCarrinho extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        totalLB_DC.setText(DetalheCarrinho.getTotal());
+        double soma =0;
+        this.listaDeProdutos = CarrinhoDados.getProdutos(CrudCarrinho.getCodigo());
+        for(int i=0;i<this.listaDeProdutos.size();i++){
+            soma+=this.listaDeProdutos.get(i).getPreco()*this.listaDeProdutos.get(i).getQuantidade();
+        }
+        totalLB_DC.setText(soma+"");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

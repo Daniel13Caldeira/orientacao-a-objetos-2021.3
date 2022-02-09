@@ -10,6 +10,21 @@ public class PerfilFuncionario extends javax.swing.JFrame {
     public PerfilFuncionario() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        SemEndereco();
+    }
+    
+    public void SemEndereco(){
+        String cidade = FuncionarioDados.buscarCidade(Login.getCodigo());
+        if (cidade.equals("null")){
+            titleLB_PF.setVisible(false);
+            topicoBairroLB_PF.setVisible(false);
+            topicoCepLB_PF.setVisible(false);
+            topicoNumeroLB_PF.setVisible(false);
+            topicoRuaLB_PF.setVisible(false);
+            topicoUfLB_PF.setVisible(false);
+            topicoCidadeLB_PF.setVisible(false);
+        }
+        
     }
 
 
@@ -268,9 +283,9 @@ public class PerfilFuncionario extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(topicoIdLB_PF, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(idLB_PF, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(33, 33, 33)
+                .addGap(18, 18, 18)
                 .addComponent(titleLB_PF, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoUfLB_PF, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ufLB_PF, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -297,13 +312,31 @@ public class PerfilFuncionario extends javax.swing.JFrame {
                 .addContainerGap(74, Short.MAX_VALUE))
         );
 
-        numeroLB_PF.setText(FuncionarioDados.buscarNumero(Login.getCodigo()));
-        cidadeLB_PF.setText(FuncionarioDados.buscarCidade(Login.getCodigo()));
-        ufLB_PF.setText(FuncionarioDados.buscarUF(Login.getCodigo()));
+        String num = FuncionarioDados.buscarNumero(Login.getCodigo());
+        if (!num.equals("null")){
+            numeroLB_PF.setText(num);
+        }else numeroLB_PF.setText(" ");
+        String cidade = FuncionarioDados.buscarCidade(Login.getCodigo());
+        if (!cidade.equals("null")){
+            cidadeLB_PF.setText(cidade);
+        }else cidadeLB_PF.setText(" ");
+        String uf = FuncionarioDados.buscarUF(Login.getCodigo());
+        if (!uf.equals("null")){
+            ufLB_PF.setText(uf);
+        }else ufLB_PF.setText(" ");
         nomeLB_PF.setText(FuncionarioDados.buscarNome(Login.getCodigo()));
-        cepLB_PF.setText(FuncionarioDados.buscarCEP(Login.getCodigo()));
-        bairroLB_PF.setText(FuncionarioDados.buscarBairro(Login.getCodigo()));
-        ruaLB_PF.setText(FuncionarioDados.buscarRua(Login.getCodigo()));
+        String cep = FuncionarioDados.buscarCEP(Login.getCodigo());
+        if (!cep.equals("null")){
+            cepLB_PF.setText(cep);
+        }else cepLB_PF.setText(" ");
+        String bairro = FuncionarioDados.buscarBairro(Login.getCodigo());
+        if (!bairro.equals("null")){
+            bairroLB_PF.setText(bairro);
+        }else bairroLB_PF.setText(" ");
+        String rua = FuncionarioDados.buscarRua(Login.getCodigo());
+        if (!rua.equals("null")){
+            ruaLB_PF.setText(rua);
+        }else ruaLB_PF.setText(" ");
         idLB_PF.setText(Login.getCodigo());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

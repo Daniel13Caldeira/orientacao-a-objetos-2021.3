@@ -295,7 +295,7 @@
             <Property name="text" type="java.lang.String" value="dd/mm/aaaa"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="valLB_DP.setText(ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String val = ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo()));&#xa;if (!val.equals(&quot;null&quot;)){&#xa;    valLB_DP.setText(val);&#xa;}else valLB_DP.setText(&quot;Indeterminado&quot;);"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoQuantiDispLB_DP">

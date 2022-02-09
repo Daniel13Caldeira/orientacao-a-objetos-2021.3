@@ -185,7 +185,10 @@ public class DetalheProduto_Func extends javax.swing.JFrame {
         );
 
         codLB_DPF.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutos.getCodigo())));
-        valLB_DPF.setText(ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos.getCodigo())));
+        String val = ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos.getCodigo()));
+        if (!val.equals("null")){
+            valLB_DPF.setText(val);
+        }else valLB_DPF.setText("Indeterminado");
         precoLB_DPF.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutos.getCodigo())));
         quantiDispLB_DPF.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutos.getCodigo())));
         nomeLB_DPF.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutos.getCodigo())));

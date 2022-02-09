@@ -187,7 +187,10 @@ public class DetalheProduto_Gerente extends javax.swing.JFrame {
         );
 
         precoLB_DPG.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutosGerente.getCodigo())));
-        valLB_DPG.setText(ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutosGerente.getCodigo())));
+        String val = ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutosGerente.getCodigo()));
+        if (!val.equals("null")){
+            valLB_DPG.setText(val);
+        }else valLB_DPG.setText("Indeterminado");
         codLB_DPG.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutosGerente.getCodigo())));
         nomeLB_DPG.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutosGerente.getCodigo())));
         quantiDispLB_DPG.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutosGerente.getCodigo())));

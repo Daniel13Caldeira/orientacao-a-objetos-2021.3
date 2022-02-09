@@ -10,6 +10,21 @@ public class PerfilCliente extends javax.swing.JFrame {
     public PerfilCliente() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        SemEndereco();
+    }
+    
+    public void SemEndereco(){
+        String cidade = ClienteDados.buscarCidade(Login.getCodigo());
+        if (cidade.equals("null")){
+            title2LB_PC.setVisible(false);
+            topicoBairroLB_PC.setVisible(false);
+            topicoCepLB_PC.setVisible(false);
+            topicoNumeroLB_PC.setVisible(false);
+            topicoRuaLB_PC.setVisible(false);
+            topicoUfLB_PC.setVisible(false);
+            topicoCidadeLB_PC.setVisible(false);
+        }
+        
     }
 
 
@@ -330,12 +345,31 @@ public class PerfilCliente extends javax.swing.JFrame {
 
         nomeLB_PC.setText(ClienteDados.buscarNome(Login.getCodigo()));
         cpfLB_PC.setText(Login.getCodigo());
-        cidadeLB_PC.setText(ClienteDados.buscarCidade(Login.getCodigo()));
-        ufLB_PC.setText(ClienteDados.buscarUF(Login.getCodigo()));
-        cepLB_PC.setText(ClienteDados.buscarCEP(Login.getCodigo()));
-        bairroLB_PC.setText(ClienteDados.buscarBairro(Login.getCodigo()));
-        ruaLB_PC.setText(ClienteDados.buscarRua(Login.getCodigo()));
-        numeroLB_PC.setText(ClienteDados.buscarNumero(Login.getCodigo()));
+        String cidade = ClienteDados.buscarCidade(Login.getCodigo());
+        if (!cidade.equals("null")){
+            cidadeLB_PC.setText(cidade);
+        }else cidadeLB_PC.setText(" ");
+        String uf = ClienteDados.buscarUF(Login.getCodigo());
+        if (!uf.equals("null")){
+            ufLB_PC.setText(uf);
+        }else ufLB_PC.setText(" ");
+        String cep = ClienteDados.buscarCEP(Login.getCodigo());
+        if (!cep.equals("null")){
+            cepLB_PC.setText(cep);
+        }else cepLB_PC.setText(" ");
+        String bairro = ClienteDados.buscarBairro(Login.getCodigo());
+        if (!bairro.equals("null")){
+            bairroLB_PC.setText(bairro);
+        }else bairroLB_PC.setText(" ");
+
+        String rua = ClienteDados.buscarRua(Login.getCodigo());
+        if (!rua.equals("null")){
+            ruaLB_PC.setText(rua);
+        }else ruaLB_PC.setText(" ");
+        String num = ClienteDados.buscarNumero(Login.getCodigo());
+        if (!num.equals("null")){
+            numeroLB_PC.setText(num);
+        }else numeroLB_PC.setText(" ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
