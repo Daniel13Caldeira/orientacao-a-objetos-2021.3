@@ -2,6 +2,7 @@ package com.made_lavant.view;
 
 import com.made_lavant.base.Funcionario;
 import com.made_lavant.dados.FuncionarioDados;
+import static com.made_lavant.view.CrudProdutos.codigo;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -12,12 +13,18 @@ import javax.swing.table.DefaultTableModel;
 
 public class CrudFuncionarios extends javax.swing.JFrame {
 
+    protected static String codigo;
+
+    protected static String getCodigo() {
+        return CrudFuncionarios.codigo;
+    }
+
     public CrudFuncionarios() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
         preencherTabela();
     }
-    
+
     private void preencherTabela() {
         ArrayList<Funcionario> funcionarios = FuncionarioDados.getFuncionarios();
         //ArrayList<Funcionario> codigos = FuncionarioDados.buscarCodigo(funcionario);
@@ -207,7 +214,8 @@ public class CrudFuncionarios extends javax.swing.JFrame {
     private void descricaoBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRFActionPerformed
 
         if (jTFuncionario.getSelectedRow() != -1) {
-            DefaultTableModel dtmProdutos = (DefaultTableModel) jTFuncionario.getModel();
+            DefaultTableModel dtmFuncionarios = (DefaultTableModel) jTFuncionario.getModel();
+            codigo = jTFuncionario.getValueAt(jTFuncionario.getSelectedRow(), 1).toString();
             this.setVisible(false);
             new PerfilFuncionario_Crud().setVisible(true);
         } else {
@@ -224,9 +232,9 @@ public class CrudFuncionarios extends javax.swing.JFrame {
 
     private void removerBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerBTN_CRFActionPerformed
         if (jTFuncionario.getSelectedRow() != -1) {
-            DefaultTableModel dtmProdutos = (DefaultTableModel) jTFuncionario.getModel();
+            DefaultTableModel dtmFuncionarios = (DefaultTableModel) jTFuncionario.getModel();
             String cod = jTFuncionario.getValueAt(jTFuncionario.getSelectedRow(), 1).toString();
-            dtmProdutos.removeRow(jTFuncionario.getSelectedRow());
+            dtmFuncionarios.removeRow(jTFuncionario.getSelectedRow());
             FuncionarioDados.remover(cod);
         } else {
 
