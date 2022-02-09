@@ -1,3 +1,4 @@
+
 package com.made_lavant.view;
 
 import com.made_lavant.base.Produto;
@@ -7,14 +8,16 @@ import com.made_lavant.dados.CarrinhoDados;
 import com.made_lavant.dados.ClienteDados;
 import java.util.ArrayList;
 
+
 public class Confirmacao extends javax.swing.JFrame {
 
-    private ArrayList<Produto> listaDeProdutos = new ArrayList();
+    private ArrayList<Produto> listaDeProdutos;
+
 
     public Confirmacao() {
         initComponents();
-        setExtendedState(MAXIMIZED_BOTH);
     }
+
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -33,7 +36,6 @@ public class Confirmacao extends javax.swing.JFrame {
         cancelarBTN_CON = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Confirmacao de Venda");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
@@ -82,7 +84,7 @@ public class Confirmacao extends javax.swing.JFrame {
         confirmarBTN_CON.setBackground(new java.awt.Color(255, 253, 130));
         confirmarBTN_CON.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         confirmarBTN_CON.setForeground(new java.awt.Color(232, 72, 85));
-        confirmarBTN_CON.setText("Confirmar Venda");
+        confirmarBTN_CON.setText("Confirmar Carrinho");
         confirmarBTN_CON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 confirmarBTN_CONActionPerformed(evt);
@@ -113,44 +115,42 @@ public class Confirmacao extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(sairBTN_CON)
+                .addGap(289, 289, 289)
+                .addComponent(topicoTotalLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(totalLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(sairBTN_CON)
-                        .addGap(323, 323, 323)
-                        .addComponent(topicoTotalLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(totalLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(237, 237, 237)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lavantLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(madeLB_CON)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(172, 172, 172)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(alterarCarrinhoBTN_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(cancelarBTN_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(confirmarBTN_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(23, Short.MAX_VALUE))
+                    .addComponent(lavantLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(madeLB_CON))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(169, 169, 169)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(alterarCarrinhoBTN_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(confirmarBTN_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cancelarBTN_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(topicoNomeClienteLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(nomeClienteLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(151, 151, 151))
+                .addGap(118, 118, 118))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sairBTN_CON, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(topicoTotalLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(totalLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(topicoTotalLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(sairBTN_CON)
+                    .addComponent(totalLB_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(madeLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lavantLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -160,22 +160,20 @@ public class Confirmacao extends javax.swing.JFrame {
                     .addComponent(nomeClienteLB_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(alterarCarrinhoBTN_CON)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cancelarBTN_CON, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(confirmarBTN_CON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(72, 72, 72))
+                .addGap(61, 61, 61))
         );
 
-        CarrinhoDados carrinho = new CarrinhoDados();
         double soma =0;
-        this.listaDeProdutos = carrinho.getProdutos(CrudCarrinho.getCodigo());
+        this.listaDeProdutos = CarrinhoDados.getProdutos(CrudCarrinho.getCodigo());
         for(int i=0;i<this.listaDeProdutos.size();i++){
-            soma+=this.listaDeProdutos.get(i).getPreco();
+            soma+=this.listaDeProdutos.get(i).getPreco()*this.listaDeProdutos.get(i).getQuantidade();
         }
         totalLB_CON.setText(soma+"");
-        ClienteDados cliente = new ClienteDados();
-        nomeClienteLB_CON.setText(cliente.buscarNome(CrudCarrinho.getCodigo()));
+        nomeClienteLB_CON.setText(ClienteDados.buscarNome(CrudCarrinho.getCodigo()));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -185,7 +183,7 @@ public class Confirmacao extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -198,17 +196,14 @@ public class Confirmacao extends javax.swing.JFrame {
 
     private void confirmarBTN_CONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_CONActionPerformed
         boolean flag = false;
-        if (CrudCarrinho.getCodigo().equals("entrega")) {
+        if (CarrinhoDados.getTipoVenda(CrudCarrinho.getCodigo()).equals("entrega")) {
             VendaDelivery confirma = new VendaDelivery(CrudCarrinho.getCodigo());
             confirma.efetuaVenda();
             flag = true;
-
         } else {
-            if (CrudCarrinho.getCodigo().equals("busca")) {
-                VendaProntaEntrega confirma = new VendaProntaEntrega(CrudCarrinho.getCodigo());
-                confirma.efetuaVenda();
-                flag = true;
-            }
+            VendaProntaEntrega confirma = new VendaProntaEntrega(CrudCarrinho.getCodigo());
+            confirma.efetuaVenda();
+            flag = true;
         }
         if (flag) {
             this.setVisible(false);
@@ -218,23 +213,19 @@ public class Confirmacao extends javax.swing.JFrame {
 
     private void alterarCarrinhoBTN_CONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarCarrinhoBTN_CONActionPerformed
         this.setVisible(false);
-        new CrudCarrinho().setVisible(true);
+        new CrudCarrinhoGerente().setVisible(true);
     }//GEN-LAST:event_alterarCarrinhoBTN_CONActionPerformed
 
     private void cancelarBTN_CONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarBTN_CONActionPerformed
         boolean flag = false;
-        if (CrudCarrinho.getCodigo().equals("entrega")) {
+        if (CarrinhoDados.getTipoVenda(CrudCarrinho.getCodigo()).equals("entrega")) {
             VendaDelivery cancela = new VendaDelivery(CrudCarrinho.getCodigo());
             cancela.cancelaVenda();
             flag = true;
-
         } else {
-            if (CrudCarrinho.getCodigo().equals("busca")) {
-                VendaProntaEntrega cancela = new VendaProntaEntrega(CrudCarrinho.getCodigo());
-                cancela.cancelaVenda();
-                flag = true;
-
-            }
+            VendaProntaEntrega cancela = new VendaProntaEntrega(CrudCarrinho.getCodigo());
+            cancela.cancelaVenda();
+            flag = true;
         }
         if (flag) {
             this.setVisible(false);

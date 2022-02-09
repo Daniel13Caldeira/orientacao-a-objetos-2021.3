@@ -146,7 +146,7 @@ public class ConfirmacaoGerente extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoTotalLB_CONG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(sairBTN_CONG)
-                    .addComponent(totalLB_CONG, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE))
+                    .addComponent(totalLB_CONG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(madeLB_CONG, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -164,15 +164,13 @@ public class ConfirmacaoGerente extends javax.swing.JFrame {
                 .addGap(61, 61, 61))
         );
 
-        CarrinhoDados carrinho = new CarrinhoDados();
         double soma =0;
-        this.listaDeProdutos = carrinho.getProdutos(CrudCarrinhoGerente.getCodigo());
+        this.listaDeProdutos = CarrinhoDados.getProdutos(CrudCarrinhoGerente.getCodigo());
         for(int i=0;i<this.listaDeProdutos.size();i++){
-            soma+=this.listaDeProdutos.get(i).getPreco();
+            soma+=this.listaDeProdutos.get(i).getPreco()*this.listaDeProdutos.get(i).getQuantidade();
         }
         totalLB_CONG.setText(soma+"");
-        ClienteDados cliente = new ClienteDados();
-        nomeClienteLB_CONG.setText(cliente.buscarNome(CrudCarrinhoGerente.getCodigo()));
+        nomeClienteLB_CONG.setText(ClienteDados.buscarNome(CrudCarrinhoGerente.getCodigo()));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -197,17 +195,14 @@ public class ConfirmacaoGerente extends javax.swing.JFrame {
 
     private void confirmarBTN_CONGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_CONGActionPerformed
         boolean flag = false;
-        if (CrudCarrinhoGerente.getCodigo().equals("entrega")) {
+        if (CarrinhoDados.getTipoVenda(CrudCarrinhoGerente.getCodigo()).equals("entrega")) {
             VendaDelivery confirma = new VendaDelivery(CrudCarrinhoGerente.getCodigo());
             confirma.efetuaVenda();
             flag = true;
-
         } else {
-            if (CrudCarrinhoGerente.getCodigo().equals("busca")) {
                 VendaProntaEntrega confirma = new VendaProntaEntrega(CrudCarrinhoGerente.getCodigo());
                 confirma.efetuaVenda();
                 flag = true;
-            }
         }
         if (flag) {
             this.setVisible(false);
@@ -222,16 +217,14 @@ public class ConfirmacaoGerente extends javax.swing.JFrame {
 
     private void cancelarBTN_CONGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarBTN_CONGActionPerformed
         boolean flag = false;
-        if (CrudCarrinhoGerente.getCodigo().equals("entrega")) {
+        if (CarrinhoDados.getTipoVenda(CrudCarrinhoGerente.getCodigo()).equals("entrega")) {
             VendaDelivery cancela = new VendaDelivery(CrudCarrinhoGerente.getCodigo());
             cancela.cancelaVenda();
             flag = true;
         } else {
-            if (CrudCarrinhoGerente.getCodigo().equals("busca")) {
                 VendaProntaEntrega cancela = new VendaProntaEntrega(CrudCarrinhoGerente.getCodigo());
                 cancela.cancelaVenda();
                 flag = true;
-            }
         }
         if (flag) {
             this.setVisible(false);
