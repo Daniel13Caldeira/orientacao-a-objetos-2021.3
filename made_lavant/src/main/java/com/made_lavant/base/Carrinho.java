@@ -5,22 +5,24 @@ import java.util.ArrayList;
 
 public class Carrinho {
 
+    //Cliente ao qual pertence o carrinho
     protected Cliente cliente;
+    //Produtos que estão no carrinho
     protected ArrayList<Produto> produtos;
 
+    //Retorna o cliente ao qual pertence o carrinho
     public Cliente getCliente() {
         return cliente;
     }
 
-    public Carrinho(Cliente cliente,ArrayList<Produto> produtos) {
+    //Constroi um carrinho para adicionar no CRUD de carrinhos
+    public Carrinho(Cliente cliente, ArrayList<Produto> produtos) {
         this.cliente = cliente;
-        //altera o código do próximo funcionário a ser criado
-        CarrinhoDados.criar(cliente.getCpf());
     }
 
+    //Controi um carrinho
     public Carrinho(Cliente cliente) {
         this.cliente = cliente;
-        //altera o código do próximo funcionário a ser criado
         CarrinhoDados.criar(cliente.getCpf());
     }
 

@@ -20,17 +20,20 @@ public class Codigos {
         }
     }
 
+    private static File abreArquivo() {
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            return new File("dados\\codigos.txt");
+        } else {
+            //File arquivo = new File("caminho linux");
+            return new File("dados//codigos.txt");
+        }
+    }
+
     //busca o código do próximo produto a ser adicionado
     public static int buscaProduto() {
         //arquivo onde será feita a leitura
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\codigos.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//codigos.txt");
-        }
+        File arquivo = abreArquivo();
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
@@ -46,14 +49,7 @@ public class Codigos {
     //busca o código do próximo funcionário a ser adicionado
     public static int buscaFuncionario() {
         //arquivo onde vai ser feita a leitura
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\codigos.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//codigos.txt");
-        }
+        File arquivo = abreArquivo();
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
@@ -99,14 +95,7 @@ public class Codigos {
 
     public static void escreve(int codProduto, int codFuncionario) {
         //arquivo onde será feita a escrita
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\codigos.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//codigos.txt");
-        }
+        File arquivo = abreArquivo();
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
@@ -123,18 +112,9 @@ public class Codigos {
     }
 
     public static void apagar() {
-        FileWriter escrita = null;
-        File arquivo = null;
+        File arquivo = abreArquivo();
         try {
-            //arquivo que será apagado
-            if (System.getProperty("os.name").toLowerCase().contains("win")) {
-                //File arquivo = new File("caminho win");
-                arquivo = new File("dados\\codigos.txt");
-            } else {
-                //File arquivo = new File("caminho linux");
-                arquivo = new File("dados//codigos.txt");
-            }
-            escrita = new FileWriter(arquivo, false); //apaga todo o arquivo
+            FileWriter escrita = new FileWriter(arquivo, false); //apaga todo o arquivo
             escrita.close();
         } catch (IOException ex) {
             erro(arquivo);

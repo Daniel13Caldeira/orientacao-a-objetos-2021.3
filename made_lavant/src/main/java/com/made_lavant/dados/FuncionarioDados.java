@@ -40,19 +40,23 @@ public class FuncionarioDados {
         return resultado;
     }
 
+    private static File abreArquivo() {
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            return new File("dados\\funcionario.txt");
+        } else {
+            //File arquivo = new File("caminho linux");
+            return new File("dados//funcionario.txt");
+        }
+    }
+
     //adiciona um funcionario sem endereço ao arquivo de salvamento
     public static void adicionarSemEndereco(Funcionario funcionario) {
         //cria uma String com os dados do funcionário no formato padrão que está sendo utilizado
         String info = funcionario.getCod() + ';' + funcionario.getNome() + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + funcionario.getSenha() + ';';
         //define o arquivo de salvamento
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\funcionario.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//funcionario.txt");
-        }
+        File arquivo = abreArquivo();
+
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
@@ -70,14 +74,7 @@ public class FuncionarioDados {
     //semelhante ao adicionarSemEndereço
     public static void adicionar(Funcionario funcionario) {
         String info = funcionario.getCod() + ';' + funcionario.getNome() + ';' + funcionario.getEndereco().getCidade() + ';' + funcionario.getEndereco().getRua() + ';' + funcionario.getEndereco().getBairro() + ';' + funcionario.getEndereco().getNumero() + ';' + funcionario.getEndereco().getUf() + ';' + funcionario.getEndereco().getCep() + ';' + funcionario.getSenha() + ';';
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\funcionario.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//funcionario.txt");
-        }
+        File arquivo = abreArquivo();
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
@@ -95,14 +92,7 @@ public class FuncionarioDados {
     //remove um funcionário do arquivo de salvamento
     public static void remover(String cod) {
         //define o arquivo onde a remoção será feita
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\funcionario.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//funcionario.txt");
-        }
+        File arquivo = abreArquivo();
         ArrayList<String> salvar = new ArrayList<>();//armazena as linhas que não serão apagadas
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
@@ -143,14 +133,7 @@ public class FuncionarioDados {
     //busca uma linha
 
     private static String buscar(String cod) {
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\funcionario.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//funcionario.txt");
-        }
+        File arquivo = abreArquivo();
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
@@ -271,14 +254,7 @@ public class FuncionarioDados {
     }
 
     public static String vazio() {
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\funcionario.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//funcionario.txt");
-        }
+        File arquivo = abreArquivo();
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
@@ -290,21 +266,15 @@ public class FuncionarioDados {
     }
 
     public static ArrayList<Funcionario> getFuncionarios() {
-        //abre o arquivo para salvar produto
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\funcionario.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//funcionario.txt");
-        }
+        //abre o arquivo para pegar os funcionarios
+        File arquivo = abreArquivo();
         ArrayList<Funcionario> funcionarios = new ArrayList<>();
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             String linha = leitor.readLine();//primeira linha com produto
             while (linha != null) {
+                //adiciona o funcionario na lista
                 funcionarios.add(new Funcionario(separa(linha, 0), buscarNome(linha), new Endereco(buscarCidade(linha), buscarCEP(linha), buscarUF(linha), buscarBairro(linha), buscarRua(linha), buscarNumero(linha)), buscarSenha(linha)));//adiciona o produto na lista
                 linha = leitor.readLine();//próxima linha
             }

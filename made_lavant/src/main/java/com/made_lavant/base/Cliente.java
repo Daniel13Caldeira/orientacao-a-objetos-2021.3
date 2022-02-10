@@ -1,40 +1,43 @@
-
 package com.made_lavant.base;
 
 import com.made_lavant.dados.ClienteDados;
 
-
 public class Cliente extends Pessoa {
 
+    //CPF do cliente
     public String cpf;
 
-    //cria um cliente com endereço
+    //Constroi um cliente com endereço
     public Cliente(String nome, Endereco endereco, String cpf, String senha) {
+        //construtor da classe Pessoa
         super(nome, endereco, senha);
-        System.out.println(nome + " " + senha);
         this.cpf = cpf;
+        //Cria um cliente
         ClienteDados.adicionar(this);
-
     }
 
-    //cria cliente sem endereço
+    //Constroi cliente sem endereço
     public Cliente(String nome, String cpf, String senha) {
+        //construtor da classe Pessoa
         super(nome, senha);
         this.cpf = cpf;
+        //Cria um cliente
         ClienteDados.adicionarSemEndereco(this);
     }
 
+    //Constroi um cliente. Este construtor auxilia na edição com ordem de parametros diferente dos construtores de cadastro
     public Cliente(String cpf, String nome, Endereco endereco, String senha) {
-        //Construtor que auxilia na edição com ordem de parametros diferente dos construtores de cadastro
         super(nome, endereco, senha);
         this.cpf = cpf;
     }
 
+    //Retorna o endereço do cliente
     @Override
     public Endereco getEndereco() {
         return endereco;
     }
 
+    //Retorna o CPF do cliente
     public String getCpf() {
         return cpf;
     }
@@ -77,11 +80,13 @@ public class Cliente extends Pessoa {
         return true;
     }
 
+    //Retorna o nome do cliente
     @Override
     public String getNome() {
         return this.nome;
     }
 
+    //Retorna a senha do cliente
     @Override
     public String getSenha() {
         return this.senha;

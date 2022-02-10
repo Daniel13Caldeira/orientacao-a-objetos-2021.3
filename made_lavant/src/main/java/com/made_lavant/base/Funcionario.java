@@ -9,6 +9,7 @@ public class Funcionario extends Pessoa {
 
     //cria um funcionário com endereço
     public Funcionario(String nome, Endereco endereco, String senha, String identificador) {
+        //Construtor da classe Pessoa com endereço
         super(nome, endereco, senha);
         if (identificador.equals("A")) {
             //cria gerente
@@ -24,6 +25,7 @@ public class Funcionario extends Pessoa {
 
     //cria funcionário sem endereço
     public Funcionario(String nome, String senha, String identificador) {
+        //Construtor da classe Pessoa sem endereço
         super(nome, senha);
         if (identificador.equals("A")) {
             //cria gerente
@@ -36,27 +38,31 @@ public class Funcionario extends Pessoa {
         Codigos.alterarFuncionario();
         FuncionarioDados.adicionarSemEndereco(this);
     }
-
+    
+    //Construtor que auxilia na edição com ordem de parametros diferente dos construtores de cadastro
     public Funcionario(String cod, String nome, Endereco endereco, String senha) {
-        //Construtor que auxilia na edição com ordem de parametros diferente dos construtores de cadastro
         super(nome, endereco, senha);
         this.cod = cod;
     }
 
+    //Retorna o endereço do funcionário
     @Override
     public Endereco getEndereco() {
         return endereco;
     }
 
+    //Retorna o código do funcionário
     public String getCod() {
         return cod;
     }
 
+    //Retorna o nome do funcionário
     @Override
     public String getNome() {
         return this.nome;
     }
 
+    //Retorna a senha do funcionário
     @Override
     public String getSenha() {
         return this.senha;

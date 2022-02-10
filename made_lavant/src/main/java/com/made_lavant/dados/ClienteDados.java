@@ -37,20 +37,21 @@ public class ClienteDados {
         resultado = separa(resto, info - 1);
         return resultado;
     }
-
+    private static File abreArquivo(){
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            return new File("dados\\cliente.txt");
+        } else {
+            //File arquivo = new File("caminho linux");
+            return new File("dados//cliente.txt");
+        }
+    }
     //adiciona um cliente sem endereço ao arquivo de salvamento
     public static void adicionarSemEndereco(Cliente cliente) {
         //cria uma String com os dados do cliente no formato padrão que está sendo utilizado
         String info = cliente.getCpf() + ';' + cliente.getNome() + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + "null" + ';' + cliente.getSenha() + ';';
         //define o arquivo de salvamento
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\cliente.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//cliente.txt");
-        }
+        File arquivo = abreArquivo();
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
@@ -70,14 +71,7 @@ public class ClienteDados {
         //cria uma String com os dados do cliente no formato padrão que está sendo utilizado
         String info = cliente.getCpf() + ';' + cliente.getNome() + ';' + cliente.getEndereco().getCidade() + ';' + cliente.getEndereco().getRua() + ';' + cliente.getEndereco().getBairro() + ';' + cliente.getEndereco().getNumero() + ';' + cliente.getEndereco().getUf() + ';' + cliente.getEndereco().getCep() + ';' + cliente.getSenha() + ';';
         //define o arquivo de salvamento
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\cliente.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//cliente.txt");
-        }
+        File arquivo = abreArquivo();
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
@@ -95,14 +89,7 @@ public class ClienteDados {
     //remove um cliente do arquivo de salvamento
     public static void remover(String cpf) {
         //arquivo de onde ele será removido
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\cliente.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//cliente.txt");
-        }
+        File arquivo = abreArquivo();
         //lista com os clientes que não serão removidos
         ArrayList<String> salvar = new ArrayList<>();//armazena as linhas que não serão apagadas
         try {
@@ -143,14 +130,7 @@ public class ClienteDados {
 
     //busca uma linha
     private static String buscar(String cpf) {
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\cliente.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//cliente.txt");
-        }
+        File arquivo = abreArquivo();
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura

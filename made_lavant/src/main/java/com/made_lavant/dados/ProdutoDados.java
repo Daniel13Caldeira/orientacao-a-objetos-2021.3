@@ -39,19 +39,22 @@ public class ProdutoDados {
         return resultado;
     }
 
+    private static File abreArquivo() {
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            //File arquivo = new File("caminho win");
+            return new File("dados\\produto.txt");
+        } else {
+            //File arquivo = new File("caminho linux");
+            return new File("dados//produto.txt");
+        }
+    }
+
     //adiciona um produto sem endereço ao arquivo de salvamento
     public static void adicionar(Produto produto) {
         //cria uma String com os dados do produto no formato padrão que está sendo utilizado
         String info = String.valueOf(produto.getCodigo()) + ';' + produto.getNome() + ';' + produto.getPreco() + ';' + String.valueOf(produto.getValidade()) + ';' + produto.getQuantidade() + ';';
         //define o arquivo de salvamento
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\produto.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//produto.txt");
-        }
+        File arquivo = abreArquivo();
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
             BufferedWriter escritor = new BufferedWriter(escrita);//buffer de escrita
@@ -69,14 +72,7 @@ public class ProdutoDados {
 
     //remove um produto do arquivo de salvamento
     public static void remover(int cod) {
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\produto.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//produto.txt");
-        }
+        File arquivo = abreArquivo();
         ArrayList<String> salvar = new ArrayList<>();//armazena as linhas que não serão apagadas
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
@@ -117,14 +113,7 @@ public class ProdutoDados {
     //busca uma linha
 
     private static String buscar(int cod) {
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\produto.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//produto.txt");
-        }
+        File arquivo = abreArquivo();
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
@@ -201,20 +190,24 @@ public class ProdutoDados {
     }
 
     private static boolean verificaDataAnteriorAtual(String dataProd) {
+        //data atual do sistema
         Date data = new Date();
+        String atual = data + "";
+        //separa a validade e, dia mes e ano
         int dia = Integer.parseInt(dataProd.charAt(0) + "" + dataProd.charAt(1));
         int mes = Integer.parseInt(dataProd.charAt(3) + "" + dataProd.charAt(4));
         int ano = Integer.parseInt(dataProd.charAt(6) + "" + dataProd.charAt(7) + "" + dataProd.charAt(8) + "" + dataProd.charAt(9));
-        String atual = data + "";
-        //Fri Jan 14 1 5 : 0 0 : 2 9 B R T  2022
-        //012 456 89 1112131415161718192021 23242526
+        // separa o ano da data atual
         int anoAtual = Integer.parseInt(atual.charAt(24) + "") * 1000 + Integer.parseInt(atual.charAt(25) + "") * 100 + Integer.parseInt(atual.charAt(26) + "") * 10 + Integer.parseInt(atual.charAt(27) + "");
+        //verifica se o ano da data atual é maior do que o ano da data da validade e retorna que a data de validade é anterior à data atual
         if (anoAtual > ano) {
             return true;
         }
+        //verifica se o ano da data atual é menor do que o ano da data da validade e retorna que a data de validade é posterior à data atual
         if (anoAtual < ano) {
             return false;
         }
+        //pega o valor numérico do mês da data atual
         String mesAtualAux = atual.substring(4, 7);
         int mesAtual = 0;
         if (mesAtualAux.equalsIgnoreCase("jan")) {
@@ -264,37 +257,35 @@ public class ProdutoDados {
                 }
             }
         }
+        //verifica se o mês da data atual é maior do que o mês da data da validade e retorna que a data de validade é anterior à data atual
         if (mesAtual > mes) {
             return true;
         }
+        //verifica se o mês da data atual é menor do que o mês da data da validade e retorna que a data de validade é posterior à data atual
         if (mesAtual < mes) {
             return false;
         }
+        //pega o dia da data atual
         int diaAtual = Integer.parseInt(atual.charAt(8) + "") * 10 + Integer.parseInt(atual.charAt(9) + "");
+        //verifica se o dia da data atual é maior do que o dia da data da validade e retorna que a data de validade é anterior à data atual
         if (diaAtual > dia) {
             return true;
         }
+        //se o dia da data atual é menor ou igual do que o dia da data da validade e retorna que a data de validade é posterior à data atual
         return false;
     }
 
     public static void verificaValidade() {
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\produto.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//produto.txt");
-        }
+        File arquivo = abreArquivo();
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             String linha = leitor.readLine();//primeira linha
             while (linha != null) {//linha null = final do arquivo
-                    if ((!buscarValidade(Integer.parseInt(separa(linha, 0))).equals("null")) && verificaDataAnteriorAtual(buscarValidade(Integer.parseInt(separa(linha, 0))))) {//procura pela linha requerida
-                        remover(Integer.parseInt(separa(linha, 0)));
-                    }
-                
+                if ((!buscarValidade(Integer.parseInt(separa(linha, 0))).equals("null")) && verificaDataAnteriorAtual(buscarValidade(Integer.parseInt(separa(linha, 0))))) {//procura pela linha requerida
+                    remover(Integer.parseInt(separa(linha, 0)));
+                }
+
                 linha = leitor.readLine();//pega proxima linha
             }
         } catch (IOException ex) {
@@ -304,14 +295,7 @@ public class ProdutoDados {
 
     public static ArrayList<Produto> getProdutos() {
         //abre o arquivo para salvar produto
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\produto.txt");
-        } else {
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//produto.txt");
-        }
+        File arquivo = abreArquivo();
         ArrayList<Produto> produtos = new ArrayList<>();
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
