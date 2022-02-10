@@ -37,28 +37,30 @@ public class CadastroProduto extends javax.swing.JFrame {
         utilityLB_CP.setVisible(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cadastro de Produtos");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        madeLB_CP.setFont(new java.awt.Font("Colonna MT", 0, 24)); // NOI18N
+        madeLB_CP.setFont(madeLB_CP.getFont().deriveFont(madeLB_CP.getFont().getStyle() | java.awt.Font.BOLD, madeLB_CP.getFont().getSize()+13));
         madeLB_CP.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_CP.setText("MADE");
 
-        topicoQuantiLB_CP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoQuantiLB_CP.setFont(topicoQuantiLB_CP.getFont().deriveFont(topicoQuantiLB_CP.getFont().getStyle() & ~java.awt.Font.BOLD, topicoQuantiLB_CP.getFont().getSize()+7));
         topicoQuantiLB_CP.setForeground(new java.awt.Color(232, 72, 85));
         topicoQuantiLB_CP.setText("Quantidade");
 
-        lavantLB_CP.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
+        lavantLB_CP.setFont(lavantLB_CP.getFont().deriveFont(lavantLB_CP.getFont().getStyle() | java.awt.Font.BOLD, lavantLB_CP.getFont().getSize()+13));
         lavantLB_CP.setForeground(new java.awt.Color(232, 72, 85));
         lavantLB_CP.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_CP.setText("Lavant");
 
-        topicoValLB_CP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoValLB_CP.setFont(topicoValLB_CP.getFont().deriveFont(topicoValLB_CP.getFont().getStyle() & ~java.awt.Font.BOLD, topicoValLB_CP.getFont().getSize()+7));
         topicoValLB_CP.setForeground(new java.awt.Color(232, 72, 85));
         topicoValLB_CP.setText("Validade");
 
         voltarBTN_CP.setBackground(new java.awt.Color(255, 253, 130));
-        voltarBTN_CP.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        voltarBTN_CP.setFont(voltarBTN_CP.getFont().deriveFont(voltarBTN_CP.getFont().getStyle() & ~java.awt.Font.BOLD, voltarBTN_CP.getFont().getSize()+7));
         voltarBTN_CP.setForeground(new java.awt.Color(232, 72, 85));
         voltarBTN_CP.setText("Voltar");
         voltarBTN_CP.addActionListener(new java.awt.event.ActionListener() {
@@ -67,16 +69,16 @@ public class CadastroProduto extends javax.swing.JFrame {
             }
         });
 
-        titleLB_CP.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
+        titleLB_CP.setFont(titleLB_CP.getFont().deriveFont(titleLB_CP.getFont().getStyle() | java.awt.Font.BOLD, titleLB_CP.getFont().getSize()+25));
         titleLB_CP.setForeground(new java.awt.Color(232, 72, 85));
         titleLB_CP.setText("Cadastro de Produto");
         titleLB_CP.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        topicoNomeLB_CP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoNomeLB_CP.setFont(topicoNomeLB_CP.getFont().deriveFont(topicoNomeLB_CP.getFont().getStyle() & ~java.awt.Font.BOLD, topicoNomeLB_CP.getFont().getSize()+7));
         topicoNomeLB_CP.setForeground(new java.awt.Color(232, 72, 85));
         topicoNomeLB_CP.setText("Nome");
 
-        topicoPrecoLB_CP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoPrecoLB_CP.setFont(topicoPrecoLB_CP.getFont().deriveFont(topicoPrecoLB_CP.getFont().getStyle() & ~java.awt.Font.BOLD, topicoPrecoLB_CP.getFont().getSize()+7));
         topicoPrecoLB_CP.setForeground(new java.awt.Color(232, 72, 85));
         topicoPrecoLB_CP.setText("Preço");
 
@@ -108,7 +110,7 @@ public class CadastroProduto extends javax.swing.JFrame {
         });
 
         confirmarBTN_CP.setBackground(new java.awt.Color(255, 253, 130));
-        confirmarBTN_CP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        confirmarBTN_CP.setFont(confirmarBTN_CP.getFont().deriveFont(confirmarBTN_CP.getFont().getStyle() & ~java.awt.Font.BOLD, confirmarBTN_CP.getFont().getSize()+7));
         confirmarBTN_CP.setForeground(new java.awt.Color(232, 72, 85));
         confirmarBTN_CP.setText("Confirmar");
         confirmarBTN_CP.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +120,7 @@ public class CadastroProduto extends javax.swing.JFrame {
         });
 
         sairBTN_CP.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_CP.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        sairBTN_CP.setFont(sairBTN_CP.getFont().deriveFont(sairBTN_CP.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_CP.getFont().getSize()+7));
         sairBTN_CP.setForeground(new java.awt.Color(232, 72, 85));
         sairBTN_CP.setText("Sair");
         sairBTN_CP.addActionListener(new java.awt.event.ActionListener() {
@@ -127,6 +129,8 @@ public class CadastroProduto extends javax.swing.JFrame {
             }
         });
 
+        utilityLB_CP.setFont(utilityLB_CP.getFont().deriveFont(utilityLB_CP.getFont().getStyle() & ~java.awt.Font.BOLD, utilityLB_CP.getFont().getSize()+7));
+        utilityLB_CP.setForeground(new java.awt.Color(232, 72, 85));
         utilityLB_CP.setText("Data inválida");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -134,17 +138,7 @@ public class CadastroProduto extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(sairBTN_CP)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(madeLB_CP, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lavantLB_CP, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(130, Short.MAX_VALUE)
+                .addContainerGap(132, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(topicoQuantiLB_CP)
                     .addComponent(topicoNomeLB_CP)
@@ -154,7 +148,7 @@ public class CadastroProduto extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(utilityLB_CP, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(confirmarBTN_CP))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(titleLB_CP)
@@ -163,23 +157,27 @@ public class CadastroProduto extends javax.swing.JFrame {
                             .addComponent(quantidadeTF_CP)
                             .addComponent(precoTF_CP)
                             .addComponent(validadeTF_CP))))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(132, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(voltarBTN_CP)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(sairBTN_CP)
+                    .addComponent(voltarBTN_CP))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lavantLB_CP, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                    .addComponent(madeLB_CP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(madeLB_CP)
-                    .addComponent(sairBTN_CP))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lavantLB_CP)
-                .addGap(7, 7, 7)
-                .addComponent(titleLB_CP, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(sairBTN_CP)
+                .addGap(39, 39, 39)
+                .addComponent(titleLB_CP, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoNomeLB_CP)
@@ -196,11 +194,15 @@ public class CadastroProduto extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoValLB_CP)
                     .addComponent(validadeTF_CP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(utilityLB_CP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(confirmarBTN_CP)
-                .addGap(184, 184, 184)
+                .addGap(49, 49, 49)
+                .addComponent(madeLB_CP)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lavantLB_CP)
+                .addGap(75, 75, 75)
                 .addComponent(voltarBTN_CP)
                 .addContainerGap())
         );

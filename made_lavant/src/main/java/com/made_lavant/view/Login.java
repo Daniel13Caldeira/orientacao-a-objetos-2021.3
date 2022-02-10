@@ -37,11 +37,12 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
         confirmarBTN_LO.setBackground(new java.awt.Color(255, 253, 130));
-        confirmarBTN_LO.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        confirmarBTN_LO.setFont(confirmarBTN_LO.getFont().deriveFont(confirmarBTN_LO.getFont().getStyle() & ~java.awt.Font.BOLD, confirmarBTN_LO.getFont().getSize()+7));
         confirmarBTN_LO.setForeground(new java.awt.Color(232, 72, 85));
         confirmarBTN_LO.setText("Confirmar");
         confirmarBTN_LO.addActionListener(new java.awt.event.ActionListener() {
@@ -51,27 +52,28 @@ public class Login extends javax.swing.JFrame {
         });
 
         topicoLoginLB_LO.setBackground(new java.awt.Color(232, 72, 85));
-        topicoLoginLB_LO.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
+        topicoLoginLB_LO.setFont(topicoLoginLB_LO.getFont().deriveFont(topicoLoginLB_LO.getFont().getStyle() | java.awt.Font.BOLD, topicoLoginLB_LO.getFont().getSize()+25));
         topicoLoginLB_LO.setForeground(new java.awt.Color(232, 72, 85));
         topicoLoginLB_LO.setText("Login");
 
         madeLB_LO.setBackground(new java.awt.Color(255, 253, 130));
-        madeLB_LO.setFont(new java.awt.Font("Colonna MT", 0, 65)); // NOI18N
+        madeLB_LO.setFont(madeLB_LO.getFont().deriveFont(madeLB_LO.getFont().getStyle() | java.awt.Font.BOLD, madeLB_LO.getFont().getSize()+54));
         madeLB_LO.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_LO.setText("MADE");
 
         lavantLB_LO.setBackground(new java.awt.Color(232, 72, 85));
-        lavantLB_LO.setFont(new java.awt.Font("Colonna MT", 1, 65)); // NOI18N
+        lavantLB_LO.setFont(lavantLB_LO.getFont().deriveFont(lavantLB_LO.getFont().getStyle() | java.awt.Font.BOLD, lavantLB_LO.getFont().getSize()+54));
         lavantLB_LO.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_LO.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_LO.setText("Lavant");
 
         topicoSenhaLB_LO.setBackground(new java.awt.Color(232, 72, 85));
-        topicoSenhaLB_LO.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
+        topicoSenhaLB_LO.setFont(topicoSenhaLB_LO.getFont().deriveFont(topicoSenhaLB_LO.getFont().getStyle() | java.awt.Font.BOLD, topicoSenhaLB_LO.getFont().getSize()+25));
         topicoSenhaLB_LO.setForeground(new java.awt.Color(232, 72, 85));
         topicoSenhaLB_LO.setText("Senha");
 
         cadastrarBTN_LO.setBackground(new java.awt.Color(255, 253, 130));
-        cadastrarBTN_LO.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
+        cadastrarBTN_LO.setFont(cadastrarBTN_LO.getFont().deriveFont(cadastrarBTN_LO.getFont().getStyle() & ~java.awt.Font.BOLD, cadastrarBTN_LO.getFont().getSize()+13));
         cadastrarBTN_LO.setForeground(new java.awt.Color(232, 72, 85));
         cadastrarBTN_LO.setText("Cadastrar");
         cadastrarBTN_LO.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +83,7 @@ public class Login extends javax.swing.JFrame {
         });
 
         utilityLB_LO.setBackground(new java.awt.Color(232, 72, 85));
-        utilityLB_LO.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        utilityLB_LO.setFont(utilityLB_LO.getFont().deriveFont(utilityLB_LO.getFont().getStyle() & ~java.awt.Font.BOLD, utilityLB_LO.getFont().getSize()+7));
         utilityLB_LO.setForeground(new java.awt.Color(232, 72, 85));
         utilityLB_LO.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         utilityLB_LO.setText("Usuário Não Cadastrado");
@@ -91,40 +93,38 @@ public class Login extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(161, Short.MAX_VALUE)
+                .addContainerGap(152, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(cadastrarBTN_LO)
-                        .addGap(164, 164, 164))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(topicoSenhaLB_LO)
-                                    .addComponent(topicoLoginLB_LO))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(senhaPF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(loginTF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(madeLB_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lavantLB_LO))
-                            .addComponent(confirmarBTN_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(utilityLB_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(171, Short.MAX_VALUE))))
+                        .addGap(85, 85, 85)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(madeLB_LO, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
+                            .addComponent(lavantLB_LO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(confirmarBTN_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(topicoSenhaLB_LO)
+                                .addComponent(topicoLoginLB_LO))
+                            .addGap(18, 18, 18)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(senhaPF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(loginTF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(utilityLB_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(181, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cadastrarBTN_LO)
+                .addGap(24, 24, 24))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(81, 81, 81)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(madeLB_LO)
-                        .addGap(151, 151, 151))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(lavantLB_LO)
-                        .addGap(82, 82, 82)))
+                .addComponent(madeLB_LO)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lavantLB_LO)
+                .addGap(75, 75, 75)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginTF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(topicoLoginLB_LO))
@@ -132,11 +132,11 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoSenhaLB_LO)
                     .addComponent(senhaPF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(20, 20, 20)
                 .addComponent(utilityLB_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
+                .addGap(18, 18, 18)
                 .addComponent(confirmarBTN_LO)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
                 .addComponent(cadastrarBTN_LO)
                 .addContainerGap())
         );

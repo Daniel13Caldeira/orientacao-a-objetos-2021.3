@@ -50,47 +50,50 @@ public class CadastroFuncionario extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro de Funcioario");
+        setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(45, 48, 71));
 
-        madeLB_CF.setFont(new java.awt.Font("Colonna MT", 0, 24)); // NOI18N
+        madeLB_CF.setFont(madeLB_CF.getFont().deriveFont(madeLB_CF.getFont().getStyle() | java.awt.Font.BOLD, madeLB_CF.getFont().getSize()+13));
         madeLB_CF.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_CF.setText("MADE");
 
-        topicoBairroLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoBairroLB_CF.setFont(topicoBairroLB_CF.getFont().deriveFont(topicoBairroLB_CF.getFont().getStyle() & ~java.awt.Font.BOLD, topicoBairroLB_CF.getFont().getSize()+7));
         topicoBairroLB_CF.setForeground(new java.awt.Color(232, 72, 85));
         topicoBairroLB_CF.setText("Bairro");
 
-        lavantLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 24)); // NOI18N
+        lavantLB_CF.setFont(lavantLB_CF.getFont().deriveFont(lavantLB_CF.getFont().getStyle() | java.awt.Font.BOLD, lavantLB_CF.getFont().getSize()+13));
         lavantLB_CF.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_CF.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_CF.setText("Lavant");
+        lavantLB_CF.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
-        topicoNumeroLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoNumeroLB_CF.setFont(topicoNumeroLB_CF.getFont().deriveFont(topicoNumeroLB_CF.getFont().getStyle() & ~java.awt.Font.BOLD, topicoNumeroLB_CF.getFont().getSize()+7));
         topicoNumeroLB_CF.setForeground(new java.awt.Color(232, 72, 85));
         topicoNumeroLB_CF.setText("Número");
 
-        titleLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
+        titleLB_CF.setFont(titleLB_CF.getFont().deriveFont(titleLB_CF.getFont().getStyle() | java.awt.Font.BOLD, titleLB_CF.getFont().getSize()+25));
         titleLB_CF.setForeground(new java.awt.Color(232, 72, 85));
         titleLB_CF.setText("Cadastro do Funcionário");
         titleLB_CF.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        topicoUfLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoUfLB_CF.setFont(topicoUfLB_CF.getFont().deriveFont(topicoUfLB_CF.getFont().getStyle() & ~java.awt.Font.BOLD, topicoUfLB_CF.getFont().getSize()+7));
         topicoUfLB_CF.setForeground(new java.awt.Color(232, 72, 85));
         topicoUfLB_CF.setText("UF");
 
-        topicoNomeLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoNomeLB_CF.setFont(topicoNomeLB_CF.getFont().deriveFont(topicoNomeLB_CF.getFont().getStyle() & ~java.awt.Font.BOLD, topicoNomeLB_CF.getFont().getSize()+7));
         topicoNomeLB_CF.setForeground(new java.awt.Color(232, 72, 85));
         topicoNomeLB_CF.setText("Nome");
 
-        topicoCepLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoCepLB_CF.setFont(topicoCepLB_CF.getFont().deriveFont(topicoCepLB_CF.getFont().getStyle() & ~java.awt.Font.BOLD, topicoCepLB_CF.getFont().getSize()+7));
         topicoCepLB_CF.setForeground(new java.awt.Color(232, 72, 85));
         topicoCepLB_CF.setText("CEP");
 
-        topicoCidadeLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoCidadeLB_CF.setFont(topicoCidadeLB_CF.getFont().deriveFont(topicoCidadeLB_CF.getFont().getStyle() & ~java.awt.Font.BOLD, topicoCidadeLB_CF.getFont().getSize()+7));
         topicoCidadeLB_CF.setForeground(new java.awt.Color(232, 72, 85));
         topicoCidadeLB_CF.setText("Cidade");
 
-        topicoRuaLB_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoRuaLB_CF.setFont(topicoRuaLB_CF.getFont().deriveFont(topicoRuaLB_CF.getFont().getStyle() & ~java.awt.Font.BOLD, topicoRuaLB_CF.getFont().getSize()+7));
         topicoRuaLB_CF.setForeground(new java.awt.Color(232, 72, 85));
         topicoRuaLB_CF.setText("Rua");
 
@@ -113,7 +116,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         });
 
         confirmarBTN_CF.setBackground(new java.awt.Color(255, 253, 130));
-        confirmarBTN_CF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        confirmarBTN_CF.setFont(confirmarBTN_CF.getFont().deriveFont(confirmarBTN_CF.getFont().getStyle() & ~java.awt.Font.BOLD, confirmarBTN_CF.getFont().getSize()+7));
         confirmarBTN_CF.setForeground(new java.awt.Color(232, 72, 85));
         confirmarBTN_CF.setText("Confirmar");
         confirmarBTN_CF.addActionListener(new java.awt.event.ActionListener() {
@@ -132,9 +135,11 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         });
 
         voltarBTN_CF.setBackground(new java.awt.Color(255, 253, 130));
-        voltarBTN_CF.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        voltarBTN_CF.setFont(voltarBTN_CF.getFont().deriveFont(voltarBTN_CF.getFont().getStyle() & ~java.awt.Font.BOLD, 18));
         voltarBTN_CF.setForeground(new java.awt.Color(232, 72, 85));
         voltarBTN_CF.setText("Voltar");
+        voltarBTN_CF.setMaximumSize(new java.awt.Dimension(109, 31));
+        voltarBTN_CF.setMinimumSize(new java.awt.Dimension(109, 31));
         voltarBTN_CF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 voltarBTN_CFActionPerformed(evt);
@@ -142,7 +147,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         });
 
         sairBTN_CF.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_CF.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        sairBTN_CF.setFont(sairBTN_CF.getFont().deriveFont(sairBTN_CF.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_CF.getFont().getSize()+7));
         sairBTN_CF.setForeground(new java.awt.Color(232, 72, 85));
         sairBTN_CF.setText("Sair");
         sairBTN_CF.addActionListener(new java.awt.event.ActionListener() {
@@ -153,17 +158,17 @@ public class CadastroFuncionario extends javax.swing.JFrame {
 
         gerenteBTN_CF.setBackground(new java.awt.Color(45, 48, 71));
         tipoFuncionario_btnGroup.add(gerenteBTN_CF);
-        gerenteBTN_CF.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        gerenteBTN_CF.setFont(gerenteBTN_CF.getFont().deriveFont(gerenteBTN_CF.getFont().getStyle() & ~java.awt.Font.BOLD, gerenteBTN_CF.getFont().getSize()+1));
         gerenteBTN_CF.setForeground(new java.awt.Color(232, 72, 85));
         gerenteBTN_CF.setText("Gerente");
 
         funcionarioBTN_CF.setBackground(new java.awt.Color(45, 48, 71));
         tipoFuncionario_btnGroup.add(funcionarioBTN_CF);
-        funcionarioBTN_CF.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        funcionarioBTN_CF.setFont(funcionarioBTN_CF.getFont().deriveFont(funcionarioBTN_CF.getFont().getStyle() & ~java.awt.Font.BOLD, funcionarioBTN_CF.getFont().getSize()+1));
         funcionarioBTN_CF.setForeground(new java.awt.Color(232, 72, 85));
         funcionarioBTN_CF.setText("Funcionario");
 
-        utilityLB_CF.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        utilityLB_CF.setFont(utilityLB_CF.getFont().deriveFont(utilityLB_CF.getFont().getStyle() & ~java.awt.Font.BOLD, utilityLB_CF.getFont().getSize()+1));
         utilityLB_CF.setForeground(new java.awt.Color(232, 72, 85));
         utilityLB_CF.setText("Marque se é um funcionário ou um gerente que está sendo cadastrado");
 
@@ -176,65 +181,65 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(voltarBTN_CF)
+                            .addComponent(voltarBTN_CF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(topicoUfLB_CF)
                             .addComponent(topicoBairroLB_CF)
                             .addComponent(topicoNomeLB_CF)
                             .addComponent(topicoCidadeLB_CF)
                             .addComponent(topicoRuaLB_CF))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomeTF_CF)
-                            .addComponent(cidadeTF_CF)
-                            .addComponent(ruaTF_CF)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bairroTF_CF)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(topicoNumeroLB_CF)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(numeroTF_CF))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(titleLB_CF)
-                                .addGap(0, 210, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nomeTF_CF)
+                                    .addComponent(cidadeTF_CF)
+                                    .addComponent(ruaTF_CF)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(bairroTF_CF)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(topicoNumeroLB_CF)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(numeroTF_CF))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                         .addComponent(ufTF_CF)
                                         .addGap(37, 37, 37)
                                         .addComponent(topicoCepLB_CF)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lavantLB_CF)
-                                            .addComponent(madeLB_CF, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(13, 13, 13)))
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cepTF_CF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(confirmarBTN_CF, javax.swing.GroupLayout.Alignment.TRAILING)))))
+                                            .addComponent(cepTF_CF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(confirmarBTN_CF, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(titleLB_CF)
+                                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(madeLB_CF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lavantLB_CF, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(sairBTN_CF))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(gerenteBTN_CF)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(funcionarioBTN_CF, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)
-                                .addComponent(utilityLB_CF)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap()
+                        .addComponent(gerenteBTN_CF)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(funcionarioBTN_CF, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(utilityLB_CF)
+                        .addGap(0, 93, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(sairBTN_CF)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(sairBTN_CF)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
                 .addComponent(titleLB_CF)
-                .addGap(33, 33, 33)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoNomeLB_CF)
                     .addComponent(nomeTF_CF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -265,19 +270,16 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                             .addComponent(gerenteBTN_CF)
                             .addComponent(funcionarioBTN_CF)
                             .addComponent(utilityLB_CF))
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(41, 41, 41)
-                                .addComponent(voltarBTN_CF))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(madeLB_CF, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lavantLB_CF, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(57, 57, 57)
+                        .addComponent(madeLB_CF, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lavantLB_CF, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(confirmarBTN_CF)
-                        .addGap(45, 45, 45)))
-                .addGap(53, 53, 53))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(confirmarBTN_CF)
+                            .addComponent(voltarBTN_CF, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(98, 98, 98))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

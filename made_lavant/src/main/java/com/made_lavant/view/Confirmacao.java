@@ -36,6 +36,7 @@ public class Confirmacao extends javax.swing.JFrame {
         cancelarBTN_CON = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Confirmação de Venda");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
