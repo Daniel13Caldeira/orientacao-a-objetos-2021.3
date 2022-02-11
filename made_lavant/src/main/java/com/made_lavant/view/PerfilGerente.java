@@ -9,7 +9,9 @@ public class PerfilGerente extends javax.swing.JFrame {
 
     public PerfilGerente() {
         initComponents();
+        //Coloca o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
+        //Esconde os tópicos do endereço caso não tenha endereço cadastrado
         SemEndereco();
     }
     
@@ -310,28 +312,36 @@ public class PerfilGerente extends javax.swing.JFrame {
                 .addContainerGap(50, Short.MAX_VALUE))
         );
 
+        //Adiciona o bairro do funcionário no label, apenas se tiver endereço cadastrado
         String bairro = FuncionarioDados.buscarBairro(Login.getCodigo());
         if (!bairro.equals("null")){
             bairroLB_PG.setText(bairro);
         }else bairroLB_PG.setText(" ");
+        //Adiciona o uf do funcionário no label, apenas se tiver endereço cadastrado
         String uf = FuncionarioDados.buscarUF(Login.getCodigo());
         if (!uf.equals("null")){
             ufLB_PG.setText(uf);
         }else ufLB_PG.setText(" ");
+        //Adiciona a rua do funcionário no label, apenas se tiver endereço cadastrado
         String rua = FuncionarioDados.buscarRua(Login.getCodigo());
         if (!rua.equals("null")){
             ruaLB_PG.setText(rua);
         }else ruaLB_PG.setText(" ");
+        //Adiciona o id do funcionário no label
         idLB_PG.setText(Login.getCodigo());
+        //Adiciona o nome do funcionário no label
         nomeLB_PG.setText(FuncionarioDados.buscarNome(Login.getCodigo()));
+        //Adiciona o cep do funcionário no label, apenas se tiver endereço cadastrado
         String cep = FuncionarioDados.buscarCEP(Login.getCodigo());
         if (!cep.equals("null")){
             cepLB_PG.setText(cep);
         }else cepLB_PG.setText(" ");
+        //Adiciona o número do funcionário no label, apenas se tiver endereço cadastrado
         String num = FuncionarioDados.buscarNumero(Login.getCodigo());
         if (!num.equals("null")){
             numeroLB_PG.setText(num);
         }else numeroLB_PG.setText(" ");
+        //Adiciona a cidade do funcionário no label, apenas se tiver endereço cadastrado
         String cidade = FuncionarioDados.buscarCidade(Login.getCodigo());
         if (!cidade.equals("null")){
             cidadeLB_PG.setText(cidade);
@@ -352,16 +362,19 @@ public class PerfilGerente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sairBTN_PGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_PGActionPerformed
+        //Redireciona para a tela de Login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_PGActionPerformed
 
     private void voltarBTN_PGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_PGActionPerformed
+        //Volta para a tela de inicio
         this.setVisible(false);
         new InicioGerente().setVisible(true);
     }//GEN-LAST:event_voltarBTN_PGActionPerformed
 
     private void editarBTN_PGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBTN_PGActionPerformed
+        //Redireciona para a tela editarDados
         this.setVisible(false);
         new EditarDadosGerente().setVisible(true);
     }//GEN-LAST:event_editarBTN_PGActionPerformed

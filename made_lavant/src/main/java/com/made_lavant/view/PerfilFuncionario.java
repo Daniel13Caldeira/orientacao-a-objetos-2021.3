@@ -1,21 +1,20 @@
-
 package com.made_lavant.view;
 
 import com.made_lavant.dados.FuncionarioDados;
 
-
 public class PerfilFuncionario extends javax.swing.JFrame {
-
 
     public PerfilFuncionario() {
         initComponents();
+        //Coloca o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
+        //Esconde os tópicos do endereço caso não tenha endereço cadastrado
         SemEndereco();
     }
-    
-    public void SemEndereco(){
+
+    public void SemEndereco() {
         String cidade = FuncionarioDados.buscarCidade(Login.getCodigo());
-        if (cidade.equals("null")){
+        if (cidade.equals("null")) {
             titleLB_PF.setVisible(false);
             topicoBairroLB_PF.setVisible(false);
             topicoCepLB_PF.setVisible(false);
@@ -24,9 +23,8 @@ public class PerfilFuncionario extends javax.swing.JFrame {
             topicoUfLB_PF.setVisible(false);
             topicoCidadeLB_PF.setVisible(false);
         }
-        
-    }
 
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -312,31 +310,39 @@ public class PerfilFuncionario extends javax.swing.JFrame {
                 .addContainerGap(74, Short.MAX_VALUE))
         );
 
+        //Adiciona o número do funcionário no label, apenas se tiver endereço cadastrado
         String num = FuncionarioDados.buscarNumero(Login.getCodigo());
         if (!num.equals("null")){
             numeroLB_PF.setText(num);
         }else numeroLB_PF.setText(" ");
+        //Adiciona o cidade do funcionário no label, apenas se tiver endereço cadastrado
         String cidade = FuncionarioDados.buscarCidade(Login.getCodigo());
         if (!cidade.equals("null")){
             cidadeLB_PF.setText(cidade);
         }else cidadeLB_PF.setText(" ");
+        //Adiciona o uf do funcionário no label, apenas se tiver endereço cadastrado
         String uf = FuncionarioDados.buscarUF(Login.getCodigo());
         if (!uf.equals("null")){
             ufLB_PF.setText(uf);
         }else ufLB_PF.setText(" ");
+        //Adiciona o nome do funcionário no label
         nomeLB_PF.setText(FuncionarioDados.buscarNome(Login.getCodigo()));
+        //Adiciona o cep do funcionário no label, apenas se tiver endereço cadastrado
         String cep = FuncionarioDados.buscarCEP(Login.getCodigo());
         if (!cep.equals("null")){
             cepLB_PF.setText(cep);
         }else cepLB_PF.setText(" ");
+        //Adiciona o bairro do funcionário no label, apenas se tiver endereço cadastrado
         String bairro = FuncionarioDados.buscarBairro(Login.getCodigo());
         if (!bairro.equals("null")){
             bairroLB_PF.setText(bairro);
         }else bairroLB_PF.setText(" ");
+        //Adiciona o rua do funcionário no label, apenas se tiver endereço cadastrado
         String rua = FuncionarioDados.buscarRua(Login.getCodigo());
         if (!rua.equals("null")){
             ruaLB_PF.setText(rua);
         }else ruaLB_PF.setText(" ");
+        //Adiciona o id do funcionário no label
         idLB_PF.setText(Login.getCodigo());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -354,16 +360,19 @@ public class PerfilFuncionario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sairBTN_PFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_PFActionPerformed
+        //Redireciona para a tela de Login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_PFActionPerformed
 
     private void voltarBTN_PFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_PFActionPerformed
+        //Volta para a tela de inicio
         this.setVisible(false);
         new InicioFuncionario().setVisible(true);
     }//GEN-LAST:event_voltarBTN_PFActionPerformed
 
     private void editarBTN_PFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBTN_PFActionPerformed
+        //Redireciona para a tela de editar os dados
         this.setVisible(false);
         new EditarDadosFuncionario().setVisible(true);
     }//GEN-LAST:event_editarBTN_PFActionPerformed

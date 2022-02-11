@@ -9,7 +9,9 @@ public class PerfilCliente extends javax.swing.JFrame {
 
     public PerfilCliente() {
         initComponents();
+        //Coloca o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
+        //Esconde os tópicos do endereço caso não tenha endereço cadastrado
         SemEndereco();
     }
     
@@ -343,29 +345,37 @@ public class PerfilCliente extends javax.swing.JFrame {
                 .addGap(23, 23, 23))
         );
 
+        //Adiciona o nome do cliente no label
         nomeLB_PC.setText(ClienteDados.buscarNome(Login.getCodigo()));
+        //Adiciona o cpf do cliente no label
         cpfLB_PC.setText(Login.getCodigo());
+        //Adiciona a cidade do cliente no label, apenas se tiver endereço cadastrado
         String cidade = ClienteDados.buscarCidade(Login.getCodigo());
         if (!cidade.equals("null")){
             cidadeLB_PC.setText(cidade);
         }else cidadeLB_PC.setText(" ");
+        //Adiciona o uf do cliente no label, apenas se tiver endereço cadastrado
         String uf = ClienteDados.buscarUF(Login.getCodigo());
         if (!uf.equals("null")){
             ufLB_PC.setText(uf);
         }else ufLB_PC.setText(" ");
+        //Adiciona o cep do cliente no label, apenas se tiver endereço cadastrado
         String cep = ClienteDados.buscarCEP(Login.getCodigo());
         if (!cep.equals("null")){
             cepLB_PC.setText(cep);
         }else cepLB_PC.setText(" ");
+        //Adiciona o bairro do cliente no label, apenas se tiver endereço cadastrado
         String bairro = ClienteDados.buscarBairro(Login.getCodigo());
         if (!bairro.equals("null")){
             bairroLB_PC.setText(bairro);
         }else bairroLB_PC.setText(" ");
 
+        //Adiciona o rua do cliente no label, apenas se tiver endereço cadastrado
         String rua = ClienteDados.buscarRua(Login.getCodigo());
         if (!rua.equals("null")){
             ruaLB_PC.setText(rua);
         }else ruaLB_PC.setText(" ");
+        //Adiciona o número do cliente no label, apenas se tiver endereço cadastrado
         String num = ClienteDados.buscarNumero(Login.getCodigo());
         if (!num.equals("null")){
             numeroLB_PC.setText(num);
@@ -386,16 +396,19 @@ public class PerfilCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void editarBTN_PCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBTN_PCActionPerformed
+        //Redireciona para a tela de editar os dados
         this.setVisible(false);
         new EditarDadosCliente().setVisible(true);
     }//GEN-LAST:event_editarBTN_PCActionPerformed
 
     private void sairBTN_PCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_PCActionPerformed
-         this.setVisible(false);
+        //Redireciona para a tela de Login
+        this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_PCActionPerformed
 
     private void voltarBTN_PCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_PCActionPerformed
+        //Volta para a tela de inicio
         this.setVisible(false);
         new InicioCliente().setVisible(true);
     }//GEN-LAST:event_voltarBTN_PCActionPerformed

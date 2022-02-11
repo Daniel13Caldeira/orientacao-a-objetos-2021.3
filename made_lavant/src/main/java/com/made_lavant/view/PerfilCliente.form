@@ -253,7 +253,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="nomeLB_PC.setText(ClienteDados.buscarNome(Login.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o nome do cliente no label&#xd;&#xa;nomeLB_PC.setText(ClienteDados.buscarNome(Login.getCodigo()));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="lavantLB_PC">
@@ -324,7 +324,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="cpfLB_PC.setText(Login.getCodigo());"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o cpf do cliente no label&#xd;&#xa;cpfLB_PC.setText(Login.getCodigo());"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoCpfLB_PC">
@@ -358,7 +358,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String cidade = ClienteDados.buscarCidade(Login.getCodigo());&#xa;if (!cidade.equals(&quot;null&quot;)){&#xa;    cidadeLB_PC.setText(cidade);&#xa;}else cidadeLB_PC.setText(&quot; &quot;);&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona a cidade do cliente no label, apenas se tiver endere&#xe7;o cadastrado&#xa;String cidade = ClienteDados.buscarCidade(Login.getCodigo());&#xa;if (!cidade.equals(&quot;null&quot;)){&#xa;    cidadeLB_PC.setText(cidade);&#xa;}else cidadeLB_PC.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoCidadeLB_PC">
@@ -389,7 +389,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String uf = ClienteDados.buscarUF(Login.getCodigo());&#xa;if (!uf.equals(&quot;null&quot;)){&#xa;    ufLB_PC.setText(uf);&#xa;}else ufLB_PC.setText(&quot; &quot;);&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o uf do cliente no label, apenas se tiver endere&#xe7;o cadastrado&#xa;String uf = ClienteDados.buscarUF(Login.getCodigo());&#xa;if (!uf.equals(&quot;null&quot;)){&#xa;    ufLB_PC.setText(uf);&#xa;}else ufLB_PC.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoUfLB_PC">
@@ -420,7 +420,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String cep = ClienteDados.buscarCEP(Login.getCodigo());&#xa;if (!cep.equals(&quot;null&quot;)){&#xa;    cepLB_PC.setText(cep);&#xa;}else cepLB_PC.setText(&quot; &quot;);"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o cep do cliente no label, apenas se tiver endere&#xe7;o cadastrado&#xa;String cep = ClienteDados.buscarCEP(Login.getCodigo());&#xa;if (!cep.equals(&quot;null&quot;)){&#xa;    cepLB_PC.setText(cep);&#xa;}else cepLB_PC.setText(&quot; &quot;);"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoCepLB_PC">
@@ -451,7 +451,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String bairro = ClienteDados.buscarBairro(Login.getCodigo());&#xa;if (!bairro.equals(&quot;null&quot;)){&#xa;    bairroLB_PC.setText(bairro);&#xa;}else bairroLB_PC.setText(&quot; &quot;);&#xa;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o bairro do cliente no label, apenas se tiver endere&#xe7;o cadastrado&#xa;String bairro = ClienteDados.buscarBairro(Login.getCodigo());&#xa;if (!bairro.equals(&quot;null&quot;)){&#xa;    bairroLB_PC.setText(bairro);&#xa;}else bairroLB_PC.setText(&quot; &quot;);&#xa;&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoBairroLB_PC">
@@ -482,7 +482,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String rua = ClienteDados.buscarRua(Login.getCodigo());&#xa;if (!rua.equals(&quot;null&quot;)){&#xa;    ruaLB_PC.setText(rua);&#xa;}else ruaLB_PC.setText(&quot; &quot;);"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o rua do cliente no label, apenas se tiver endere&#xe7;o cadastrado&#xa;String rua = ClienteDados.buscarRua(Login.getCodigo());&#xa;if (!rua.equals(&quot;null&quot;)){&#xa;    ruaLB_PC.setText(rua);&#xa;}else ruaLB_PC.setText(&quot; &quot;);"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoRuaLB_PC">
@@ -519,7 +519,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String num = ClienteDados.buscarNumero(Login.getCodigo());&#xa;if (!num.equals(&quot;null&quot;)){&#xa;    numeroLB_PC.setText(num);&#xa;}else numeroLB_PC.setText(&quot; &quot;);"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o n&#xfa;mero do cliente no label, apenas se tiver endere&#xe7;o cadastrado&#xa;String num = ClienteDados.buscarNumero(Login.getCodigo());&#xa;if (!num.equals(&quot;null&quot;)){&#xa;    numeroLB_PC.setText(num);&#xa;}else numeroLB_PC.setText(&quot; &quot;);"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoNumeroLB_PC">
