@@ -38,19 +38,19 @@ public class ConfirmacaoGerente extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
         madeLB_CONG.setBackground(new java.awt.Color(255, 253, 130));
-        madeLB_CONG.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        madeLB_CONG.setFont(madeLB_CONG.getFont().deriveFont(madeLB_CONG.getFont().getStyle() | java.awt.Font.BOLD, madeLB_CONG.getFont().getSize()+13));
         madeLB_CONG.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_CONG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         madeLB_CONG.setText("MADE");
         madeLB_CONG.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        lavantLB_CONG.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        lavantLB_CONG.setFont(lavantLB_CONG.getFont().deriveFont(lavantLB_CONG.getFont().getStyle() | java.awt.Font.BOLD, lavantLB_CONG.getFont().getSize()+13));
         lavantLB_CONG.setForeground(new java.awt.Color(232, 72, 85));
         lavantLB_CONG.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_CONG.setText("Lavant");
 
         sairBTN_CONG.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_CONG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_CONG.setFont(sairBTN_CONG.getFont().deriveFont(sairBTN_CONG.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_CONG.getFont().getSize()+7));
         sairBTN_CONG.setForeground(new java.awt.Color(232, 72, 85));
         sairBTN_CONG.setText("Sair");
         sairBTN_CONG.addActionListener(new java.awt.event.ActionListener() {
@@ -60,27 +60,27 @@ public class ConfirmacaoGerente extends javax.swing.JFrame {
         });
 
         topicoTotalLB_CONG.setBackground(new java.awt.Color(255, 253, 130));
-        topicoTotalLB_CONG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoTotalLB_CONG.setFont(topicoTotalLB_CONG.getFont().deriveFont(topicoTotalLB_CONG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoTotalLB_CONG.getFont().getSize()+7));
         topicoTotalLB_CONG.setForeground(new java.awt.Color(232, 72, 85));
         topicoTotalLB_CONG.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         topicoTotalLB_CONG.setText("Total");
 
-        totalLB_CONG.setFont(new java.awt.Font("Colonna MT", 1, 11)); // NOI18N
+        totalLB_CONG.setFont(totalLB_CONG.getFont().deriveFont(totalLB_CONG.getFont().getStyle() & ~java.awt.Font.BOLD, totalLB_CONG.getFont().getSize()+7));
         totalLB_CONG.setForeground(new java.awt.Color(255, 253, 130));
         totalLB_CONG.setText("0000,00");
 
         topicoNomeClienteLB_CONG.setBackground(new java.awt.Color(255, 253, 130));
-        topicoNomeClienteLB_CONG.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        topicoNomeClienteLB_CONG.setFont(topicoNomeClienteLB_CONG.getFont().deriveFont(topicoNomeClienteLB_CONG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoNomeClienteLB_CONG.getFont().getSize()+3));
         topicoNomeClienteLB_CONG.setForeground(new java.awt.Color(232, 72, 85));
         topicoNomeClienteLB_CONG.setText("Nome Do Cliente");
 
         nomeClienteLB_CONG.setBackground(new java.awt.Color(255, 253, 130));
-        nomeClienteLB_CONG.setFont(new java.awt.Font("Colonna MT", 1, 11)); // NOI18N
+        nomeClienteLB_CONG.setFont(nomeClienteLB_CONG.getFont().deriveFont(nomeClienteLB_CONG.getFont().getStyle() & ~java.awt.Font.BOLD, nomeClienteLB_CONG.getFont().getSize()+3));
         nomeClienteLB_CONG.setForeground(new java.awt.Color(255, 253, 130));
         nomeClienteLB_CONG.setText("Nome");
 
         confirmarBTN_CONG.setBackground(new java.awt.Color(255, 253, 130));
-        confirmarBTN_CONG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        confirmarBTN_CONG.setFont(confirmarBTN_CONG.getFont().deriveFont(confirmarBTN_CONG.getFont().getStyle() & ~java.awt.Font.BOLD, confirmarBTN_CONG.getFont().getSize()+7));
         confirmarBTN_CONG.setForeground(new java.awt.Color(232, 72, 85));
         confirmarBTN_CONG.setText("Confirmar Carrinho");
         confirmarBTN_CONG.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +90,7 @@ public class ConfirmacaoGerente extends javax.swing.JFrame {
         });
 
         alterarCarrinhoBTN_CONG.setBackground(new java.awt.Color(255, 253, 130));
-        alterarCarrinhoBTN_CONG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        alterarCarrinhoBTN_CONG.setFont(alterarCarrinhoBTN_CONG.getFont().deriveFont(alterarCarrinhoBTN_CONG.getFont().getStyle() & ~java.awt.Font.BOLD, alterarCarrinhoBTN_CONG.getFont().getSize()+7));
         alterarCarrinhoBTN_CONG.setForeground(new java.awt.Color(232, 72, 85));
         alterarCarrinhoBTN_CONG.setText("Alterar Carrinho");
         alterarCarrinhoBTN_CONG.addActionListener(new java.awt.event.ActionListener() {
@@ -100,6 +100,7 @@ public class ConfirmacaoGerente extends javax.swing.JFrame {
         });
 
         cancelarBTN_CONG.setBackground(new java.awt.Color(255, 253, 130));
+        cancelarBTN_CONG.setFont(cancelarBTN_CONG.getFont().deriveFont(cancelarBTN_CONG.getFont().getStyle() & ~java.awt.Font.BOLD, cancelarBTN_CONG.getFont().getSize()+7));
         cancelarBTN_CONG.setForeground(new java.awt.Color(232, 72, 85));
         cancelarBTN_CONG.setText("Cancelar Venda");
         cancelarBTN_CONG.addActionListener(new java.awt.event.ActionListener() {
@@ -122,9 +123,9 @@ public class ConfirmacaoGerente extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lavantLB_CONG, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(madeLB_CONG))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lavantLB_CONG, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                    .addComponent(madeLB_CONG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(169, 169, 169)

@@ -56,7 +56,7 @@ public class CadastroProdutoGerente extends javax.swing.JFrame {
         lavantLB_CPG.setText("Lavant");
 
         sairBTN_CPG.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_CPG.setFont(sairBTN_CPG.getFont().deriveFont(sairBTN_CPG.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_CPG.getFont().getSize()+3));
+        sairBTN_CPG.setFont(sairBTN_CPG.getFont().deriveFont(sairBTN_CPG.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_CPG.getFont().getSize()+7));
         sairBTN_CPG.setForeground(new java.awt.Color(232, 72, 85));
         sairBTN_CPG.setText("Sair");
         sairBTN_CPG.addActionListener(new java.awt.event.ActionListener() {

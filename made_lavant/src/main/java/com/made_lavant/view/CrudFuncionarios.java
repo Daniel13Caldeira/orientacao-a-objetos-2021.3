@@ -57,14 +57,14 @@ public class CrudFuncionarios extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
         madeLB_CRF.setBackground(new java.awt.Color(255, 253, 130));
-        madeLB_CRF.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        madeLB_CRF.setFont(madeLB_CRF.getFont().deriveFont(madeLB_CRF.getFont().getStyle() | java.awt.Font.BOLD, madeLB_CRF.getFont().getSize()+13));
         madeLB_CRF.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_CRF.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         madeLB_CRF.setText("MADE");
         madeLB_CRF.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         addFuncBTN_CRF.setBackground(new java.awt.Color(255, 253, 130));
-        addFuncBTN_CRF.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        addFuncBTN_CRF.setFont(addFuncBTN_CRF.getFont().deriveFont(addFuncBTN_CRF.getFont().getStyle() & ~java.awt.Font.BOLD, addFuncBTN_CRF.getFont().getSize()+7));
         addFuncBTN_CRF.setForeground(new java.awt.Color(232, 72, 85));
         addFuncBTN_CRF.setText("Adicionar Funcionário");
         addFuncBTN_CRF.addActionListener(new java.awt.event.ActionListener() {
@@ -73,13 +73,13 @@ public class CrudFuncionarios extends javax.swing.JFrame {
             }
         });
 
-        lavantLB_CRF.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        lavantLB_CRF.setFont(lavantLB_CRF.getFont().deriveFont(lavantLB_CRF.getFont().getStyle() | java.awt.Font.BOLD, lavantLB_CRF.getFont().getSize()+13));
         lavantLB_CRF.setForeground(new java.awt.Color(232, 72, 85));
         lavantLB_CRF.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_CRF.setText("Lavant");
 
         removerBTN_CRF.setBackground(new java.awt.Color(255, 253, 130));
-        removerBTN_CRF.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        removerBTN_CRF.setFont(removerBTN_CRF.getFont().deriveFont(removerBTN_CRF.getFont().getStyle() & ~java.awt.Font.BOLD, removerBTN_CRF.getFont().getSize()+7));
         removerBTN_CRF.setForeground(new java.awt.Color(232, 72, 85));
         removerBTN_CRF.setText("Remover");
         removerBTN_CRF.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +89,7 @@ public class CrudFuncionarios extends javax.swing.JFrame {
         });
 
         sairBTN_CRF.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_CRF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_CRF.setFont(sairBTN_CRF.getFont().deriveFont(sairBTN_CRF.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_CRF.getFont().getSize()+7));
         sairBTN_CRF.setForeground(new java.awt.Color(232, 72, 85));
         sairBTN_CRF.setText("Sair");
         sairBTN_CRF.setToolTipText("");
@@ -100,7 +100,7 @@ public class CrudFuncionarios extends javax.swing.JFrame {
         });
 
         descricaoBTN_CRF.setBackground(new java.awt.Color(255, 253, 130));
-        descricaoBTN_CRF.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        descricaoBTN_CRF.setFont(descricaoBTN_CRF.getFont().deriveFont(descricaoBTN_CRF.getFont().getStyle() & ~java.awt.Font.BOLD, descricaoBTN_CRF.getFont().getSize()+7));
         descricaoBTN_CRF.setForeground(new java.awt.Color(232, 72, 85));
         descricaoBTN_CRF.setText("Descrição");
         descricaoBTN_CRF.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +110,7 @@ public class CrudFuncionarios extends javax.swing.JFrame {
         });
 
         voltarBTN_CRF.setBackground(new java.awt.Color(255, 253, 130));
-        voltarBTN_CRF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        voltarBTN_CRF.setFont(voltarBTN_CRF.getFont().deriveFont(voltarBTN_CRF.getFont().getStyle() & ~java.awt.Font.BOLD, voltarBTN_CRF.getFont().getSize()+7));
         voltarBTN_CRF.setForeground(new java.awt.Color(232, 72, 85));
         voltarBTN_CRF.setText("Voltar");
         voltarBTN_CRF.addActionListener(new java.awt.event.ActionListener() {
@@ -120,6 +120,7 @@ public class CrudFuncionarios extends javax.swing.JFrame {
         });
 
         jTFuncionario.setBackground(new java.awt.Color(45, 48, 71));
+        jTFuncionario.setFont(jTFuncionario.getFont().deriveFont(jTFuncionario.getFont().getStyle() & ~java.awt.Font.BOLD, jTFuncionario.getFont().getSize()+4));
         jTFuncionario.setForeground(new java.awt.Color(255, 255, 255));
         jTFuncionario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -155,24 +156,22 @@ public class CrudFuncionarios extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(sairBTN_CRF)
-                        .addGap(194, 194, 194)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
                         .addComponent(addFuncBTN_CRF)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
                         .addComponent(voltarBTN_CRF)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(removerBTN_CRF)
-                                .addGap(26, 26, 26)
-                                .addComponent(descricaoBTN_CRF)
-                                .addGap(79, 79, 79))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lavantLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(madeLB_CRF))
-                                .addGap(352, 352, 352))))))
+                        .addComponent(removerBTN_CRF)
+                        .addGap(26, 26, 26)
+                        .addComponent(descricaoBTN_CRF)
+                        .addGap(79, 79, 79))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(madeLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lavantLB_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,7 +188,7 @@ public class CrudFuncionarios extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(descricaoBTN_CRF)
-                    .addComponent(removerBTN_CRF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(removerBTN_CRF))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );

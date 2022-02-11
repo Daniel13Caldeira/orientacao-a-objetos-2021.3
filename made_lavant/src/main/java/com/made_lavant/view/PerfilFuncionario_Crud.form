@@ -196,7 +196,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String cidade = FuncionarioDados.buscarCidade(CrudFuncionarios.getCodigo());&#xa;if (!cidade.equals(&quot;null&quot;)){&#xa;    cidadeLB_PFC.setText(cidade);&#xa;}else cidadeLB_PFC.setText(&quot; &quot;);&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona a cidade do funcion&#xe1;rio no label, apenas se tiver endere&#xe7;o cadastrado&#xa;String cidade = FuncionarioDados.buscarCidade(CrudFuncionarios.getCodigo());&#xa;if (!cidade.equals(&quot;null&quot;)){&#xa;    cidadeLB_PFC.setText(cidade);&#xa;}else cidadeLB_PFC.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="bairroLB_PFC">
@@ -215,7 +215,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String bairro = FuncionarioDados.buscarBairro(CrudFuncionarios.getCodigo());&#xa;if (!bairro.equals(&quot;null&quot;)){&#xa;    bairroLB_PFC.setText(bairro);&#xa;}else bairroLB_PFC.setText(&quot; &quot;);&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o bairro do funcion&#xe1;rio no label, apenas se tiver endere&#xe7;o cadastrado&#xa;String bairro = FuncionarioDados.buscarBairro(CrudFuncionarios.getCodigo());&#xa;if (!bairro.equals(&quot;null&quot;)){&#xa;    bairroLB_PFC.setText(bairro);&#xa;}else bairroLB_PFC.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoNumeroLB_PFC">
@@ -310,7 +310,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String uf = FuncionarioDados.buscarUF(CrudFuncionarios.getCodigo());&#xa;if (!uf.equals(&quot;null&quot;)){&#xa;    ufLB_PFC.setText(uf);&#xa;}else ufLB_PFC.setText(&quot; &quot;);&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o uf do funcion&#xe1;rio no label, apenas se tiver endere&#xe7;o cadastrado&#xa;String uf = FuncionarioDados.buscarUF(CrudFuncionarios.getCodigo());&#xa;if (!uf.equals(&quot;null&quot;)){&#xa;    ufLB_PFC.setText(uf);&#xa;}else ufLB_PFC.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="ruaLB_PFC">
@@ -329,7 +329,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="String rua = FuncionarioDados.buscarRua(CrudFuncionarios.getCodigo());&#xa;if (!rua.equals(&quot;null&quot;)){&#xa;      ruaLB_PFC.setText(rua);&#xa;}else ruaLB_PFC.setText(&quot; &quot;);&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="//Adiciona a rua do funcion&#xe1;rio no label, apenas se tiver endere&#xe7;o cadastrado&#xa;String rua = FuncionarioDados.buscarRua(CrudFuncionarios.getCodigo());&#xa;if (!rua.equals(&quot;null&quot;)){&#xa;      ruaLB_PFC.setText(rua);&#xa;}else ruaLB_PFC.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="sairBTN_PFC">
@@ -365,7 +365,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="idLB_PFC.setText(CrudFuncionarios.getCodigo());"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o id do funcion&#xe1;rio no label&#xd;&#xa;idLB_PFC.setText(CrudFuncionarios.getCodigo());"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoUfLB_PFC">
@@ -413,7 +413,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="nomeLB_PFC.setText(FuncionarioDados.buscarNome(CrudFuncionarios.getCodigo()));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o nome do funcion&#xe1;rio no label&#xd;&#xa;nomeLB_PFC.setText(FuncionarioDados.buscarNome(CrudFuncionarios.getCodigo()));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoRuaLB_PFC">
@@ -450,7 +450,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String cep = FuncionarioDados.buscarCEP(CrudFuncionarios.getCodigo());&#xa;if (!cep.equals(&quot;null&quot;)){&#xa;    cepLB_PFC.setText(cep);&#xa;}else cepLB_PFC.setText(&quot; &quot;);&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o cep do funcion&#xe1;rio no label, apenas se tiver endere&#xe7;o cadastrado&#xa;String cep = FuncionarioDados.buscarCEP(CrudFuncionarios.getCodigo());&#xa;if (!cep.equals(&quot;null&quot;)){&#xa;    cepLB_PFC.setText(cep);&#xa;}else cepLB_PFC.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoIdLB_PFC">
@@ -496,7 +496,7 @@
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String num = FuncionarioDados.buscarNumero(CrudFuncionarios.getCodigo());&#xa;if (!num.equals(&quot;null&quot;)){&#xa;    numeroLB_PFC.setText(num);&#xa;}else numeroLB_PFC.setText(&quot; &quot;);&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o n&#xfa;mero do funcion&#xe1;rio no label, apenas se tiver endere&#xe7;o cadastrado&#xa;String num = FuncionarioDados.buscarNumero(CrudFuncionarios.getCodigo());&#xa;if (!num.equals(&quot;null&quot;)){&#xa;    numeroLB_PFC.setText(num);&#xa;}else numeroLB_PFC.setText(&quot; &quot;);&#xa;"/>
           </AuxValues>
         </Component>
       </SubComponents>

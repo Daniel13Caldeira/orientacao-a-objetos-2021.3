@@ -9,18 +9,25 @@ import javax.swing.table.DefaultTableModel;
 
 public class TelaCarrinho extends javax.swing.JFrame {
 
-
     public TelaCarrinho() {
         initComponents();
+        //Coloca o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
+        //Chama o método que preenche a tabela
         preencherTabela();
     }
-    
+
     private void preencherTabela() {
+        //Lista que armazena os produtos
         ArrayList<Produto> produtos = CarrinhoDados.getProdutos(Login.getCodigo());
-        DefaultTableModel model = (DefaultTableModel) jTCarrinho.getModel();        
+        DefaultTableModel model = (DefaultTableModel) jTCarrinho.getModel();
+        //Preenche a tabela com os produtos
         for (int i = 0; i < produtos.size(); i++) {
-            Object[] linha = {produtos.get(i).getNome(), produtos.get(i).getCodigo(), produtos.get(i).getPreco()};
+            String validade = produtos.get(i).getValidade();
+            if (validade.equals("null")) {
+                validade = "Inderteminado";
+            }
+            Object[] linha = {produtos.get(i).getNome(), produtos.get(i).getCodigo(), produtos.get(i).getQuantidade(), validade, produtos.get(i).getPreco()};
             model.addRow(linha);
         }
     }
@@ -236,33 +243,38 @@ public class TelaCarrinho extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sairBTN_TCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_TCActionPerformed
+        //Retorna para a tela de Login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_TCActionPerformed
 
     private void addProdBTN_TCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProdBTN_TCActionPerformed
+        //Redireciona pra tela do CRUD de produtos
         this.setVisible(false);
         new CrudProdutos_Cliente().setVisible(true);
     }//GEN-LAST:event_addProdBTN_TCActionPerformed
 
     private void voltarBTN_TCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_TCActionPerformed
+        //Retorna para tela de inicio
         this.setVisible(false);
         new InicioCliente().setVisible(true);
     }//GEN-LAST:event_voltarBTN_TCActionPerformed
 
     private void removerBTN_TCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerBTN_TCActionPerformed
+        //Remove da tabela e do arquivo do carrinho 
         if (jTCarrinho.getSelectedRow() != -1) {
             DefaultTableModel dtmProdutos = (DefaultTableModel) jTCarrinho.getModel();
-            String cod = jTCarrinho.getValueAt(jTCarrinho.getSelectedRow(), 1).toString();
+            String codigo = jTCarrinho.getValueAt(jTCarrinho.getSelectedRow(), 1).toString();
             dtmProdutos.removeRow(jTCarrinho.getSelectedRow());
-            CarrinhoDados.removerProduto(cod, WIDTH);
+            CarrinhoDados.removerProduto(Login.getCodigo(), Integer.parseInt(codigo));
         } else {
 
-            JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
+            JOptionPane.showMessageDialog(null, "Nenhum produto selecionado!");
         }
     }//GEN-LAST:event_removerBTN_TCActionPerformed
 
     private void finalizarBTN_TCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarBTN_TCActionPerformed
+        //Finaliza o carrinho e envia para o CRUD de carrinho
         boolean flag = true;
         if (entregaRBTN_TC.isSelected()) {
             CarrinhoDados.setTipoVenda(Login.getCodigo(), "entrega");
