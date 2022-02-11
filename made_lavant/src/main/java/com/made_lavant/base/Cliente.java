@@ -5,7 +5,7 @@ import com.made_lavant.dados.ClienteDados;
 public class Cliente extends Pessoa {
 
     //CPF do cliente
-    public String cpf;
+    private String cpf;
 
     //Constroi um cliente com endereço
     public Cliente(String nome, Endereco endereco, String cpf, String senha) {

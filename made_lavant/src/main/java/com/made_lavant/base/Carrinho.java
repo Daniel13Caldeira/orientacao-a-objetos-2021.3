@@ -6,9 +6,7 @@ import java.util.ArrayList;
 public class Carrinho {
 
     //Cliente ao qual pertence o carrinho
-    protected Cliente cliente;
-    //Produtos que estão no carrinho
-    protected ArrayList<Produto> produtos;
+    private Cliente cliente;
 
     //Retorna o cliente ao qual pertence o carrinho
     public Cliente getCliente() {

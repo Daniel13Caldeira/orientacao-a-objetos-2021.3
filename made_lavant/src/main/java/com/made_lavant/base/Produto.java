@@ -6,11 +6,11 @@ import com.made_lavant.dados.ProdutoDados;
 public class Produto {
 
     //Atributos do produto
-    protected String nome;
-    protected int codigo;
-    protected double preco;
-    protected String validade;
-    protected double quantidade;
+    private String nome;
+    private int codigo;
+    private double preco;
+    private String validade;
+    private double quantidade;
 
     //Retorna o nome do produto
     public String getNome() {
@@ -70,9 +70,9 @@ public class Produto {
     }
 
     //Construtor que auxilia na edição sem validade com ordem de parametros diferente dos construtores de cadastro
-    public Produto(int cod, double preco, double quantidade) {
-        this.codigo = cod;
-        this.nome = ProdutoDados.buscarNome(cod);
+    public Produto(int codigo, double preco, double quantidade) {
+        this.codigo = codigo;
+        this.nome = ProdutoDados.buscarNome(codigo);
         this.preco = preco;
         this.quantidade = quantidade;
     }

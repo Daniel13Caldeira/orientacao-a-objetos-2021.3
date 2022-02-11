@@ -29,7 +29,7 @@ public class CrudFuncionarios extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTFuncionario.getModel();
         //Preenche a tabela com os funcionários
         for (int i = 0; i < funcionarios.size(); i++) {
-            Object[] linha = {funcionarios.get(i).getNome(), funcionarios.get(i).getCod()};
+            Object[] linha = {funcionarios.get(i).getNome(), funcionarios.get(i).getCodigo()};
             model.addRow(linha);
         }
     }

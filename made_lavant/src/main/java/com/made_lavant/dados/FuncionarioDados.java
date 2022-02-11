@@ -53,7 +53,7 @@ public class FuncionarioDados {
     //adiciona um funcionario sem endereço ao arquivo de salvamento
     public static void adicionarSemEndereco(Funcionario funcionario) {
         //cria uma String com os dados do funcionário no formato padrão que está sendo utilizado
-        String info = funcionario.getCod() + ';' + funcionario.getNome() + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + funcionario.getSenha() + ';';
+        String info = funcionario.getCodigo() + ';' + funcionario.getNome() + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + null + ';' + funcionario.getSenha() + ';';
         //define o arquivo de salvamento
         File arquivo = abreArquivo();
 
@@ -73,7 +73,7 @@ public class FuncionarioDados {
 
     //semelhante ao adicionarSemEndereço
     public static void adicionar(Funcionario funcionario) {
-        String info = funcionario.getCod() + ';' + funcionario.getNome() + ';' + funcionario.getEndereco().getCidade() + ';' + funcionario.getEndereco().getRua() + ';' + funcionario.getEndereco().getBairro() + ';' + funcionario.getEndereco().getNumero() + ';' + funcionario.getEndereco().getUf() + ';' + funcionario.getEndereco().getCep() + ';' + funcionario.getSenha() + ';';
+        String info = funcionario.getCodigo() + ';' + funcionario.getNome() + ';' + funcionario.getEndereco().getCidade() + ';' + funcionario.getEndereco().getRua() + ';' + funcionario.getEndereco().getBairro() + ';' + funcionario.getEndereco().getNumero() + ';' + funcionario.getEndereco().getUf() + ';' + funcionario.getEndereco().getCep() + ';' + funcionario.getSenha() + ';';
         File arquivo = abreArquivo();
         try {
             FileWriter escrita = new FileWriter(arquivo, true); //define o escritor
@@ -237,9 +237,9 @@ public class FuncionarioDados {
     //edita os dados de um funcionário
     public static void alterar(Funcionario funcionario) {
         //verifica se o funcionário existe
-        if (buscar(funcionario.getCod()) != null) {
+        if (buscar(funcionario.getCodigo()) != null) {
             //remove o funcionário do arquivo de salvamento
-            remover(funcionario.getCod());
+            remover(funcionario.getCodigo());
             //adiciona o funcionário ao arquivo de salvamento com os novos dados
             adicionar(funcionario);
         }
@@ -247,8 +247,8 @@ public class FuncionarioDados {
 
     //semelhante a alterar
     public static void alterarSemEndereco(Funcionario funcionario) {
-        if (buscar(funcionario.getCod()) != null) {
-            remover(funcionario.getCod());
+        if (buscar(funcionario.getCodigo()) != null) {
+            remover(funcionario.getCodigo());
             adicionarSemEndereco(funcionario);
         }
     }

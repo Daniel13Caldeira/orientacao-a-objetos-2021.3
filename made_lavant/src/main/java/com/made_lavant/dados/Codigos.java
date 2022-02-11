@@ -73,16 +73,6 @@ public class Codigos {
         escreve(codProduto, codFuncionario);
     }
 
-    public static void alterarCarrinho() {
-        //pega o código do carrinho, do produto e do funcionário
-        int codProduto = buscaProduto();
-        int codFuncionario = buscaFuncionario();
-        //apaga todo o arquivo
-        apagar();
-        //insere os códigos atualizados
-        escreve(codProduto, codFuncionario);
-    }
-
     public static void alterarPrduto() {
         //pega o código do carrinho, do produto e do funcionário
         int codProduto = buscaProduto() + 1;//adiciona 1 no produto
@@ -93,7 +83,7 @@ public class Codigos {
         escreve(codProduto, codFuncionario);
     }
 
-    public static void escreve(int codProduto, int codFuncionario) {
+    private static void escreve(int codProduto, int codFuncionario) {
         //arquivo onde será feita a escrita
         File arquivo = abreArquivo();
         try {
@@ -111,7 +101,7 @@ public class Codigos {
         }
     }
 
-    public static void apagar() {
+    private static void apagar() {
         File arquivo = abreArquivo();
         try {
             FileWriter escrita = new FileWriter(arquivo, false); //apaga todo o arquivo
