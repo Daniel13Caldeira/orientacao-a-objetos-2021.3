@@ -14,10 +14,10 @@ public class InicioFuncionario extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         produtosBTN_IF = new javax.swing.JButton();
         carrinhosBTN_IF = new javax.swing.JButton();
-        madeLB_IF = new javax.swing.JLabel();
-        lavantLB_IF = new javax.swing.JLabel();
         sairBTN_IF = new javax.swing.JButton();
         perfilBTN_IF = new javax.swing.JButton();
+        madeLB_IF = new javax.swing.JLabel();
+        lavantLB_IF = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela de Início - Funcionários");
@@ -30,7 +30,7 @@ public class InicioFuncionario extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
         produtosBTN_IF.setBackground(new java.awt.Color(255, 253, 130));
-        produtosBTN_IF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        produtosBTN_IF.setFont(produtosBTN_IF.getFont().deriveFont(produtosBTN_IF.getFont().getStyle() & ~java.awt.Font.BOLD, produtosBTN_IF.getFont().getSize()+7));
         produtosBTN_IF.setForeground(new java.awt.Color(232, 72, 85));
         produtosBTN_IF.setText("Produtos");
         produtosBTN_IF.addActionListener(new java.awt.event.ActionListener() {
@@ -40,7 +40,7 @@ public class InicioFuncionario extends javax.swing.JFrame {
         });
 
         carrinhosBTN_IF.setBackground(new java.awt.Color(255, 253, 130));
-        carrinhosBTN_IF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        carrinhosBTN_IF.setFont(carrinhosBTN_IF.getFont().deriveFont(carrinhosBTN_IF.getFont().getStyle() & ~java.awt.Font.BOLD, carrinhosBTN_IF.getFont().getSize()+7));
         carrinhosBTN_IF.setForeground(new java.awt.Color(232, 72, 85));
         carrinhosBTN_IF.setText("Carrinhos");
         carrinhosBTN_IF.addActionListener(new java.awt.event.ActionListener() {
@@ -49,19 +49,8 @@ public class InicioFuncionario extends javax.swing.JFrame {
             }
         });
 
-        madeLB_IF.setBackground(new java.awt.Color(84, 83, 83));
-        madeLB_IF.setFont(new java.awt.Font("Colonna MT", 0, 65)); // NOI18N
-        madeLB_IF.setForeground(new java.awt.Color(255, 253, 130));
-        madeLB_IF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        madeLB_IF.setText("MADE");
-
-        lavantLB_IF.setFont(new java.awt.Font("Colonna MT", 1, 65)); // NOI18N
-        lavantLB_IF.setForeground(new java.awt.Color(232, 72, 85));
-        lavantLB_IF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lavantLB_IF.setText("Lavant");
-
         sairBTN_IF.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_IF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_IF.setFont(sairBTN_IF.getFont().deriveFont(sairBTN_IF.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_IF.getFont().getSize()+7));
         sairBTN_IF.setForeground(new java.awt.Color(232, 72, 85));
         sairBTN_IF.setText("Sair");
         sairBTN_IF.addActionListener(new java.awt.event.ActionListener() {
@@ -71,7 +60,7 @@ public class InicioFuncionario extends javax.swing.JFrame {
         });
 
         perfilBTN_IF.setBackground(new java.awt.Color(255, 253, 130));
-        perfilBTN_IF.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        perfilBTN_IF.setFont(perfilBTN_IF.getFont().deriveFont(perfilBTN_IF.getFont().getStyle() & ~java.awt.Font.BOLD, perfilBTN_IF.getFont().getSize()+7));
         perfilBTN_IF.setForeground(new java.awt.Color(232, 72, 85));
         perfilBTN_IF.setText("Perfil");
         perfilBTN_IF.addActionListener(new java.awt.event.ActionListener() {
@@ -80,44 +69,56 @@ public class InicioFuncionario extends javax.swing.JFrame {
             }
         });
 
+        madeLB_IF.setFont(madeLB_IF.getFont().deriveFont(madeLB_IF.getFont().getStyle() & ~java.awt.Font.BOLD, madeLB_IF.getFont().getSize()+54));
+        madeLB_IF.setForeground(new java.awt.Color(255, 253, 130));
+        madeLB_IF.setText("MADE");
+        madeLB_IF.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        lavantLB_IF.setFont(lavantLB_IF.getFont().deriveFont(lavantLB_IF.getFont().getStyle() & ~java.awt.Font.BOLD, lavantLB_IF.getFont().getSize()+54));
+        lavantLB_IF.setForeground(new java.awt.Color(232, 72, 85));
+        lavantLB_IF.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lavantLB_IF.setText("Lavant");
+        lavantLB_IF.setToolTipText("");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(sairBTN_IF)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 201, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(sairBTN_IF))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(228, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lavantLB_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(madeLB_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(50, 50, 50)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(carrinhosBTN_IF, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                                    .addComponent(produtosBTN_IF, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                                    .addComponent(perfilBTN_IF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
-                .addContainerGap(229, Short.MAX_VALUE))
+                    .addComponent(lavantLB_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(madeLB_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(207, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(carrinhosBTN_IF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(produtosBTN_IF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(perfilBTN_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(9, 9, 9)
-                .addComponent(sairBTN_IF)
-                .addGap(18, 92, Short.MAX_VALUE)
-                .addComponent(madeLB_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lavantLB_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(sairBTN_IF))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(madeLB_IF)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lavantLB_IF)))
+                .addGap(34, 34, 34)
                 .addComponent(produtosBTN_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(carrinhosBTN_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(perfilBTN_IF, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addGap(77, 77, 77))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -76,48 +76,46 @@
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
-                  <EmptySpace pref="122" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="topicoCepLB_EDC" min="-2" pref="54" max="-2" attributes="0"/>
-                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="topicoSenhaLB_EDC" min="-2" pref="54" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="senhaTF_EDC" min="-2" pref="252" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="confirmarBTN_EDC" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                      <Component id="topicoRuaLB_EDC" min="-2" pref="54" max="-2" attributes="0"/>
-                                      <Component id="topicoCidadeLB_EDC" alignment="1" min="-2" pref="54" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="topicoBairroLB_EDC" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
+                  <EmptySpace pref="93" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="topicoSenhaLB_EDC" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="senhaTF_EDC" min="-2" pref="252" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="confirmarBTN_EDC" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                  <Component id="topicoRuaLB_EDC" min="-2" pref="54" max="-2" attributes="0"/>
+                                  <Component id="topicoCidadeLB_EDC" alignment="1" min="-2" pref="54" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="ruaTF_EDC" alignment="0" min="-2" pref="554" max="-2" attributes="0"/>
-                                      <Component id="bairroTF_EDC" alignment="0" min="-2" pref="554" max="-2" attributes="0"/>
-                                      <Component id="cidadeTF_EDC" min="-2" pref="554" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="numeroTF_EDC" min="-2" pref="180" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                      <Component id="topicoNumeroLB_EDC" min="-2" pref="66" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="ufTF_EDC" min="-2" pref="115" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="topicoUfLB_EDC" min="-2" pref="47" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="cepTF_EDC" min="-2" pref="112" max="-2" attributes="0"/>
-                                  </Group>
+                              <Component id="topicoBairroLB_EDC" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
+                              <Component id="topicoCepLB_EDC" alignment="1" min="-2" pref="54" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="ruaTF_EDC" alignment="0" min="-2" pref="554" max="-2" attributes="0"/>
+                                  <Component id="bairroTF_EDC" alignment="0" min="-2" pref="554" max="-2" attributes="0"/>
+                                  <Component id="cidadeTF_EDC" min="-2" pref="554" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="numeroTF_EDC" min="-2" pref="180" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                  <Component id="topicoNumeroLB_EDC" min="-2" pref="66" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="ufTF_EDC" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="topicoUfLB_EDC" min="-2" pref="47" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cepTF_EDC" min="-2" pref="112" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="64" max="32767" attributes="0"/>
+                  <EmptySpace pref="93" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
@@ -141,9 +139,9 @@
                           <Component id="voltarBTN_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                   <Component id="titleLB_EDC" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="topicoCidadeLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="cidadeTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -159,13 +157,15 @@
                       <Component id="bairroTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="topicoNumeroLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="numeroTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="topicoCepLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="topicoUfLB_EDC" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="cepTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ufTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="topicoNumeroLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="numeroTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="topicoCepLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cepTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ufTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -198,8 +198,10 @@
         </Component>
         <Component class="javax.swing.JLabel" name="topicoUfLB_EDC">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="18" style="1"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="topicoUfLB_EDC" property="font" relativeSize="true" size="5"/>
+              </FontInfo>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
@@ -209,8 +211,10 @@
         </Component>
         <Component class="javax.swing.JLabel" name="topicoCepLB_EDC">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="18" style="1"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="topicoCepLB_EDC" property="font" relativeSize="true" size="5"/>
+              </FontInfo>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
@@ -239,8 +243,10 @@
         </Component>
         <Component class="javax.swing.JLabel" name="topicoCidadeLB_EDC">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="18" style="1"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="topicoCidadeLB_EDC" property="font" relativeSize="true" size="5"/>
+              </FontInfo>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
@@ -256,8 +262,10 @@
         </Component>
         <Component class="javax.swing.JLabel" name="topicoRuaLB_EDC">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="18" style="1"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="topicoRuaLB_EDC" property="font" relativeSize="true" size="5"/>
+              </FontInfo>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
@@ -290,8 +298,10 @@
         </Component>
         <Component class="javax.swing.JLabel" name="topicoBairroLB_EDC">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="18" style="1"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="topicoBairroLB_EDC" property="font" relativeSize="true" size="5"/>
+              </FontInfo>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
@@ -323,8 +333,10 @@
         </Component>
         <Component class="javax.swing.JLabel" name="topicoNumeroLB_EDC">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="18" style="1"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="topicoNumeroLB_EDC" property="font" relativeSize="true" size="5"/>
+              </FontInfo>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
@@ -374,8 +386,10 @@
         </Component>
         <Component class="javax.swing.JLabel" name="topicoSenhaLB_EDC">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Colonna MT" size="18" style="1"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="topicoSenhaLB_EDC" property="font" relativeSize="true" size="5"/>
+              </FontInfo>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>

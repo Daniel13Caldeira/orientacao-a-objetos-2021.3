@@ -53,35 +53,41 @@ public class EditarDadosGerente extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        topicoCepLB_EDG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        senhaTF_EDG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                senhaTF_EDGActionPerformed(evt);
+            }
+        });
+
+        topicoCepLB_EDG.setFont(topicoCepLB_EDG.getFont().deriveFont(topicoCepLB_EDG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoCepLB_EDG.getFont().getSize()+5));
         topicoCepLB_EDG.setForeground(new java.awt.Color(232, 72, 85));
         topicoCepLB_EDG.setText("CEP");
 
-        topicoUfLB_EDG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoUfLB_EDG.setFont(topicoUfLB_EDG.getFont().deriveFont(topicoUfLB_EDG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoUfLB_EDG.getFont().getSize()+5));
         topicoUfLB_EDG.setForeground(new java.awt.Color(232, 72, 85));
         topicoUfLB_EDG.setText("UF");
 
-        madeLB_EDG.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
+        madeLB_EDG.setFont(madeLB_EDG.getFont().deriveFont(madeLB_EDG.getFont().getStyle() | java.awt.Font.BOLD, madeLB_EDG.getFont().getSize()+7));
         madeLB_EDG.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_EDG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         madeLB_EDG.setText("MADE");
 
-        lavantLB_EDG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        lavantLB_EDG.setFont(lavantLB_EDG.getFont().deriveFont(lavantLB_EDG.getFont().getStyle() | java.awt.Font.BOLD, lavantLB_EDG.getFont().getSize()+7));
         lavantLB_EDG.setForeground(new java.awt.Color(232, 72, 85));
         lavantLB_EDG.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_EDG.setText("Lavant");
 
-        topicoSenhaLB_EDG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoSenhaLB_EDG.setFont(topicoSenhaLB_EDG.getFont().deriveFont(topicoSenhaLB_EDG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoSenhaLB_EDG.getFont().getSize()+5));
         topicoSenhaLB_EDG.setForeground(new java.awt.Color(232, 72, 85));
         topicoSenhaLB_EDG.setText("Senha");
 
-        titleLB_EDG.setFont(new java.awt.Font("Colonna MT", 1, 36)); // NOI18N
+        titleLB_EDG.setFont(titleLB_EDG.getFont().deriveFont(titleLB_EDG.getFont().getStyle() & ~java.awt.Font.BOLD, titleLB_EDG.getFont().getSize()+25));
         titleLB_EDG.setForeground(new java.awt.Color(232, 72, 85));
         titleLB_EDG.setText("Editar Funcionário");
         titleLB_EDG.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         titleLB_EDG.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        topicoRuaLB_EDG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoRuaLB_EDG.setFont(topicoRuaLB_EDG.getFont().deriveFont(topicoRuaLB_EDG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoRuaLB_EDG.getFont().getSize()+5));
         topicoRuaLB_EDG.setForeground(new java.awt.Color(232, 72, 85));
         topicoRuaLB_EDG.setText("Rua");
 
@@ -94,11 +100,11 @@ public class EditarDadosGerente extends javax.swing.JFrame {
             }
         });
 
-        topicoBairroLB_EDG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoBairroLB_EDG.setFont(topicoBairroLB_EDG.getFont().deriveFont(topicoBairroLB_EDG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoBairroLB_EDG.getFont().getSize()+5));
         topicoBairroLB_EDG.setForeground(new java.awt.Color(232, 72, 85));
         topicoBairroLB_EDG.setText("Bairro");
 
-        topicoCidadeLB_EDG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoCidadeLB_EDG.setFont(topicoCidadeLB_EDG.getFont().deriveFont(topicoCidadeLB_EDG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoCidadeLB_EDG.getFont().getSize()+5));
         topicoCidadeLB_EDG.setForeground(new java.awt.Color(232, 72, 85));
         topicoCidadeLB_EDG.setText("Cidade");
 
@@ -112,7 +118,7 @@ public class EditarDadosGerente extends javax.swing.JFrame {
         });
 
         sairBTN_EDG.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_EDG.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        sairBTN_EDG.setFont(sairBTN_EDG.getFont().deriveFont(sairBTN_EDG.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_EDG.getFont().getSize()+7));
         sairBTN_EDG.setForeground(new java.awt.Color(232, 72, 85));
         sairBTN_EDG.setText("Sair");
         sairBTN_EDG.addActionListener(new java.awt.event.ActionListener() {
@@ -122,7 +128,7 @@ public class EditarDadosGerente extends javax.swing.JFrame {
         });
 
         confirmarBTN_EDG.setBackground(new java.awt.Color(255, 253, 130));
-        confirmarBTN_EDG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        confirmarBTN_EDG.setFont(confirmarBTN_EDG.getFont().deriveFont(confirmarBTN_EDG.getFont().getStyle() & ~java.awt.Font.BOLD, confirmarBTN_EDG.getFont().getSize()+7));
         confirmarBTN_EDG.setForeground(new java.awt.Color(232, 72, 85));
         confirmarBTN_EDG.setText("Confirmar");
         confirmarBTN_EDG.addActionListener(new java.awt.event.ActionListener() {
@@ -132,7 +138,7 @@ public class EditarDadosGerente extends javax.swing.JFrame {
         });
 
         voltarBTN_EDG.setBackground(new java.awt.Color(255, 253, 130));
-        voltarBTN_EDG.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        voltarBTN_EDG.setFont(voltarBTN_EDG.getFont().deriveFont(voltarBTN_EDG.getFont().getStyle() & ~java.awt.Font.BOLD, voltarBTN_EDG.getFont().getSize()+7));
         voltarBTN_EDG.setForeground(new java.awt.Color(232, 72, 85));
         voltarBTN_EDG.setText("Voltar");
         voltarBTN_EDG.addActionListener(new java.awt.event.ActionListener() {
@@ -141,7 +147,7 @@ public class EditarDadosGerente extends javax.swing.JFrame {
             }
         });
 
-        topicoNumeroLB_EDG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoNumeroLB_EDG.setFont(topicoNumeroLB_EDG.getFont().deriveFont(topicoNumeroLB_EDG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoNumeroLB_EDG.getFont().getSize()+5));
         topicoNumeroLB_EDG.setForeground(new java.awt.Color(232, 72, 85));
         topicoNumeroLB_EDG.setText("Número");
 
@@ -164,12 +170,12 @@ public class EditarDadosGerente extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(sairBTN_EDG)
+                .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(sairBTN_EDG)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(voltarBTN_EDG)
-                        .addGap(396, 396, 396)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lavantLB_EDG, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(madeLB_EDG, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -177,39 +183,39 @@ public class EditarDadosGerente extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(topicoSenhaLB_EDG)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(senhaTF_EDG, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 218, Short.MAX_VALUE)
                                 .addComponent(confirmarBTN_EDG))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(topicoRuaLB_EDG)
-                                .addGap(25, 25, 25)
-                                .addComponent(ruaTF_EDG))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(topicoRuaLB_EDG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(topicoBairroLB_EDG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(topicoCepLB_EDG, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(cepTF_EDG)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(topicoNumeroLB_EDG)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(numeroTF_EDG)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(topicoUfLB_EDG)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(ufTF_EDG, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(bairroTF_EDG)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(ruaTF_EDG))))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(topicoCidadeLB_EDG)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cidadeTF_EDG))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(topicoBairroLB_EDG)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(bairroTF_EDG, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(topicoUfLB_EDG)
-                                            .addComponent(topicoSenhaLB_EDG))
-                                        .addGap(35, 35, 35)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(ufTF_EDG, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(senhaTF_EDG, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(topicoNumeroLB_EDG)
-                                    .addComponent(topicoCepLB_EDG))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cepTF_EDG)
-                                    .addComponent(numeroTF_EDG))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(cidadeTF_EDG)))
+                        .addGap(49, 49, 49))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,40 +226,38 @@ public class EditarDadosGerente extends javax.swing.JFrame {
                         .addComponent(madeLB_EDG)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lavantLB_EDG))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(sairBTN_EDG)
-                            .addComponent(voltarBTN_EDG))))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(sairBTN_EDG)
+                        .addComponent(voltarBTN_EDG)))
                 .addGap(15, 15, 15)
                 .addComponent(titleLB_EDG)
-                .addGap(36, 36, 36)
+                .addGap(130, 130, 130)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoCidadeLB_EDG)
                     .addComponent(cidadeTF_EDG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoRuaLB_EDG)
                     .addComponent(ruaTF_EDG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoBairroLB_EDG)
-                    .addComponent(bairroTF_EDG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(topicoNumeroLB_EDG)
-                    .addComponent(numeroTF_EDG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(bairroTF_EDG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cepTF_EDG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(topicoCepLB_EDG)
                     .addComponent(ufTF_EDG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(topicoUfLB_EDG))
-                .addGap(18, 18, 18)
+                    .addComponent(topicoUfLB_EDG)
+                    .addComponent(topicoNumeroLB_EDG)
+                    .addComponent(numeroTF_EDG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(confirmarBTN_EDG)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(senhaTF_EDG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(topicoSenhaLB_EDG)))
-                .addContainerGap())
+                .addGap(35, 35, 35))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -354,6 +358,10 @@ public class EditarDadosGerente extends javax.swing.JFrame {
     private void numeroTF_EDGKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numeroTF_EDGKeyTyped
         mascaraInt(numeroTF_EDG);
     }//GEN-LAST:event_numeroTF_EDGKeyTyped
+
+    private void senhaTF_EDGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaTF_EDGActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_senhaTF_EDGActionPerformed
 
     private void mascaraUF() {
         //Máscara que aceita apenas 2 letras

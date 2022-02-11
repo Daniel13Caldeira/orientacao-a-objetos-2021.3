@@ -63,60 +63,60 @@ public class PerfilGerente extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
         bairroLB_PG.setBackground(new java.awt.Color(255, 253, 130));
-        bairroLB_PG.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        bairroLB_PG.setFont(bairroLB_PG.getFont().deriveFont(bairroLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, bairroLB_PG.getFont().getSize()+9));
         bairroLB_PG.setForeground(new java.awt.Color(232, 72, 85));
         bairroLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         bairroLB_PG.setText("Nome Bairoo");
         bairroLB_PG.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        topicoNumeroLB_PG.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoNumeroLB_PG.setFont(topicoNumeroLB_PG.getFont().deriveFont(topicoNumeroLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoNumeroLB_PG.getFont().getSize()+9));
         topicoNumeroLB_PG.setForeground(new java.awt.Color(255, 253, 130));
         topicoNumeroLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         topicoNumeroLB_PG.setText("Número:");
 
-        topicoNomeLB_PG.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoNomeLB_PG.setFont(topicoNomeLB_PG.getFont().deriveFont(topicoNomeLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoNomeLB_PG.getFont().getSize()+9));
         topicoNomeLB_PG.setForeground(new java.awt.Color(255, 253, 130));
         topicoNomeLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         topicoNomeLB_PG.setText("Nome:");
 
-        topicoCidadeLB_PG.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoCidadeLB_PG.setFont(topicoCidadeLB_PG.getFont().deriveFont(topicoCidadeLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoCidadeLB_PG.getFont().getSize()+9));
         topicoCidadeLB_PG.setForeground(new java.awt.Color(255, 253, 130));
         topicoCidadeLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         topicoCidadeLB_PG.setText("Cidade:");
 
-        topicoBairroLB_PG.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoBairroLB_PG.setFont(topicoBairroLB_PG.getFont().deriveFont(topicoBairroLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoBairroLB_PG.getFont().getSize()+9));
         topicoBairroLB_PG.setForeground(new java.awt.Color(255, 253, 130));
         topicoBairroLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         topicoBairroLB_PG.setText("Bairro:");
 
-        titleLB_PG.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        titleLB_PG.setFont(titleLB_PG.getFont().deriveFont(titleLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, titleLB_PG.getFont().getSize()+9));
         titleLB_PG.setForeground(new java.awt.Color(255, 253, 130));
         titleLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleLB_PG.setText("Endereço");
 
         madeLB_PG.setBackground(new java.awt.Color(255, 253, 130));
-        madeLB_PG.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        madeLB_PG.setFont(madeLB_PG.getFont().deriveFont(madeLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, madeLB_PG.getFont().getSize()+9));
         madeLB_PG.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         madeLB_PG.setText("MADE");
         madeLB_PG.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         ufLB_PG.setBackground(new java.awt.Color(255, 253, 130));
-        ufLB_PG.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        ufLB_PG.setFont(ufLB_PG.getFont().deriveFont(ufLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, ufLB_PG.getFont().getSize()+9));
         ufLB_PG.setForeground(new java.awt.Color(232, 72, 85));
         ufLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         ufLB_PG.setText("UF");
         ufLB_PG.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         ruaLB_PG.setBackground(new java.awt.Color(255, 253, 130));
-        ruaLB_PG.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        ruaLB_PG.setFont(ruaLB_PG.getFont().deriveFont(ruaLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, ruaLB_PG.getFont().getSize()+9));
         ruaLB_PG.setForeground(new java.awt.Color(232, 72, 85));
         ruaLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         ruaLB_PG.setText("Nome Rua");
         ruaLB_PG.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         sairBTN_PG.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_PG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_PG.setFont(sairBTN_PG.getFont().deriveFont(sairBTN_PG.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_PG.getFont().getSize()+7));
         sairBTN_PG.setForeground(new java.awt.Color(232, 72, 85));
         sairBTN_PG.setText("Sair");
         sairBTN_PG.addActionListener(new java.awt.event.ActionListener() {
@@ -126,19 +126,19 @@ public class PerfilGerente extends javax.swing.JFrame {
         });
 
         idLB_PG.setBackground(new java.awt.Color(255, 253, 130));
-        idLB_PG.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        idLB_PG.setFont(idLB_PG.getFont().deriveFont(idLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, idLB_PG.getFont().getSize()+9));
         idLB_PG.setForeground(new java.awt.Color(232, 72, 85));
         idLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         idLB_PG.setText("123456789-10");
         idLB_PG.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        topicoUfLB_PG.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoUfLB_PG.setFont(topicoUfLB_PG.getFont().deriveFont(topicoUfLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoUfLB_PG.getFont().getSize()+9));
         topicoUfLB_PG.setForeground(new java.awt.Color(255, 253, 130));
         topicoUfLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         topicoUfLB_PG.setText("UF:");
 
         voltarBTN_PG.setBackground(new java.awt.Color(255, 253, 130));
-        voltarBTN_PG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        voltarBTN_PG.setFont(voltarBTN_PG.getFont().deriveFont(voltarBTN_PG.getFont().getStyle() & ~java.awt.Font.BOLD, voltarBTN_PG.getFont().getSize()+7));
         voltarBTN_PG.setForeground(new java.awt.Color(232, 72, 85));
         voltarBTN_PG.setText("Voltar");
         voltarBTN_PG.addActionListener(new java.awt.event.ActionListener() {
@@ -148,13 +148,13 @@ public class PerfilGerente extends javax.swing.JFrame {
         });
 
         nomeLB_PG.setBackground(new java.awt.Color(255, 253, 130));
-        nomeLB_PG.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        nomeLB_PG.setFont(nomeLB_PG.getFont().deriveFont(nomeLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, nomeLB_PG.getFont().getSize()+9));
         nomeLB_PG.setForeground(new java.awt.Color(232, 72, 85));
         nomeLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         nomeLB_PG.setText("Nome Funcionário");
         nomeLB_PG.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        topicoRuaLB_PG.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoRuaLB_PG.setFont(topicoRuaLB_PG.getFont().deriveFont(topicoRuaLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoRuaLB_PG.getFont().getSize()+9));
         topicoRuaLB_PG.setForeground(new java.awt.Color(255, 253, 130));
         topicoRuaLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         topicoRuaLB_PG.setText("Rua:");
@@ -162,44 +162,44 @@ public class PerfilGerente extends javax.swing.JFrame {
         topicoRuaLB_PG.setMinimumSize(new java.awt.Dimension(73, 22));
 
         cepLB_PG.setBackground(new java.awt.Color(255, 253, 130));
-        cepLB_PG.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        cepLB_PG.setFont(cepLB_PG.getFont().deriveFont(cepLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, cepLB_PG.getFont().getSize()+9));
         cepLB_PG.setForeground(new java.awt.Color(232, 72, 85));
         cepLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         cepLB_PG.setText("00000-000");
         cepLB_PG.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        topicoIdLB_PG.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoIdLB_PG.setFont(topicoIdLB_PG.getFont().deriveFont(topicoIdLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoIdLB_PG.getFont().getSize()+9));
         topicoIdLB_PG.setForeground(new java.awt.Color(255, 253, 130));
-        topicoIdLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        topicoIdLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         topicoIdLB_PG.setText("ID:");
         topicoIdLB_PG.setPreferredSize(new java.awt.Dimension(73, 22));
 
-        lavantLB_PG.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        lavantLB_PG.setFont(lavantLB_PG.getFont().deriveFont(lavantLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, lavantLB_PG.getFont().getSize()+9));
         lavantLB_PG.setForeground(new java.awt.Color(232, 72, 85));
         lavantLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_PG.setText("Lavant");
 
         numeroLB_PG.setBackground(new java.awt.Color(255, 253, 130));
-        numeroLB_PG.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        numeroLB_PG.setFont(numeroLB_PG.getFont().deriveFont(numeroLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, numeroLB_PG.getFont().getSize()+9));
         numeroLB_PG.setForeground(new java.awt.Color(232, 72, 85));
         numeroLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         numeroLB_PG.setText("Numero");
         numeroLB_PG.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        topicoCepLB_PG.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        topicoCepLB_PG.setFont(topicoCepLB_PG.getFont().deriveFont(topicoCepLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoCepLB_PG.getFont().getSize()+9));
         topicoCepLB_PG.setForeground(new java.awt.Color(255, 253, 130));
         topicoCepLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         topicoCepLB_PG.setText("CEP:");
 
         cidadeLB_PG.setBackground(new java.awt.Color(255, 253, 130));
-        cidadeLB_PG.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        cidadeLB_PG.setFont(cidadeLB_PG.getFont().deriveFont(cidadeLB_PG.getFont().getStyle() & ~java.awt.Font.BOLD, cidadeLB_PG.getFont().getSize()+9));
         cidadeLB_PG.setForeground(new java.awt.Color(232, 72, 85));
         cidadeLB_PG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         cidadeLB_PG.setText("Nome Cidade");
         cidadeLB_PG.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         editarBTN_PG.setBackground(new java.awt.Color(255, 253, 130));
-        editarBTN_PG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        editarBTN_PG.setFont(editarBTN_PG.getFont().deriveFont(editarBTN_PG.getFont().getStyle() & ~java.awt.Font.BOLD, editarBTN_PG.getFont().getSize()+7));
         editarBTN_PG.setForeground(new java.awt.Color(232, 72, 85));
         editarBTN_PG.setText("Editar");
         editarBTN_PG.addActionListener(new java.awt.event.ActionListener() {
@@ -220,44 +220,45 @@ public class PerfilGerente extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(editarBTN_PG)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(madeLB_PG)
-                            .addComponent(lavantLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(voltarBTN_PG)
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 164, Short.MAX_VALUE)
+                        .addGap(0, 199, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(topicoUfLB_PG)
-                                        .addComponent(topicoBairroLB_PG)
-                                        .addComponent(topicoCepLB_PG)
-                                        .addComponent(topicoRuaLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(topicoNumeroLB_PG)
-                                        .addComponent(topicoCidadeLB_PG))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(cidadeLB_PG)
-                                        .addComponent(ufLB_PG)
-                                        .addComponent(bairroLB_PG)
-                                        .addComponent(cepLB_PG)
-                                        .addComponent(ruaLB_PG)
-                                        .addComponent(numeroLB_PG)))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(titleLB_PG)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(topicoIdLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(idLB_PG))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(topicoNomeLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(topicoNumeroLB_PG)
+                                    .addComponent(topicoRuaLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(topicoCepLB_PG)
+                                    .addComponent(topicoUfLB_PG)
+                                    .addComponent(topicoCidadeLB_PG)
+                                    .addComponent(topicoBairroLB_PG))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cidadeLB_PG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(ufLB_PG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(numeroLB_PG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(ruaLB_PG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(cepLB_PG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bairroLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(86, 86, 86)
+                                .addComponent(titleLB_PG))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(topicoIdLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(topicoNomeLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(nomeLB_PG)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
-                .addComponent(voltarBTN_PG)
-                .addContainerGap())
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(nomeLB_PG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(idLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(177, Short.MAX_VALUE))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lavantLB_PG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(madeLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -267,25 +268,22 @@ public class PerfilGerente extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(sairBTN_PG)
                         .addComponent(editarBTN_PG))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(5, 5, 5)
-                                .addComponent(madeLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(voltarBTN_PG))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lavantLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(topicoNomeLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nomeLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(topicoIdLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(idLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(33, 33, 33)
+                    .addComponent(voltarBTN_PG))
+                .addGap(40, 40, 40)
+                .addComponent(madeLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lavantLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(topicoNomeLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nomeLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(topicoIdLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(idLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
                 .addComponent(titleLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoUfLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ufLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -295,8 +293,8 @@ public class PerfilGerente extends javax.swing.JFrame {
                     .addComponent(cidadeLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(topicoBairroLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bairroLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(bairroLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topicoBairroLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoCepLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -309,7 +307,7 @@ public class PerfilGerente extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoNumeroLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(numeroLB_PG, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         //Adiciona o bairro do funcionário no label, apenas se tiver endereço cadastrado

@@ -54,7 +54,7 @@ public class Login extends javax.swing.JFrame {
         });
 
         topicoLoginLB_LO.setBackground(new java.awt.Color(232, 72, 85));
-        topicoLoginLB_LO.setFont(topicoLoginLB_LO.getFont().deriveFont(topicoLoginLB_LO.getFont().getStyle() | java.awt.Font.BOLD, topicoLoginLB_LO.getFont().getSize()+25));
+        topicoLoginLB_LO.setFont(topicoLoginLB_LO.getFont().deriveFont(topicoLoginLB_LO.getFont().getStyle() & ~java.awt.Font.BOLD, topicoLoginLB_LO.getFont().getSize()+25));
         topicoLoginLB_LO.setForeground(new java.awt.Color(232, 72, 85));
         topicoLoginLB_LO.setText("Login");
 
@@ -70,7 +70,7 @@ public class Login extends javax.swing.JFrame {
         lavantLB_LO.setText("Lavant");
 
         topicoSenhaLB_LO.setBackground(new java.awt.Color(232, 72, 85));
-        topicoSenhaLB_LO.setFont(topicoSenhaLB_LO.getFont().deriveFont(topicoSenhaLB_LO.getFont().getStyle() | java.awt.Font.BOLD, topicoSenhaLB_LO.getFont().getSize()+25));
+        topicoSenhaLB_LO.setFont(topicoSenhaLB_LO.getFont().deriveFont(topicoSenhaLB_LO.getFont().getStyle() & ~java.awt.Font.BOLD, topicoSenhaLB_LO.getFont().getSize()+25));
         topicoSenhaLB_LO.setForeground(new java.awt.Color(232, 72, 85));
         topicoSenhaLB_LO.setText("Senha");
 
@@ -95,7 +95,7 @@ public class Login extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(152, Short.MAX_VALUE)
+                .addContainerGap(159, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(85, 85, 85)
@@ -105,15 +105,15 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(confirmarBTN_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(topicoSenhaLB_LO)
-                                .addComponent(topicoLoginLB_LO))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(topicoSenhaLB_LO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(topicoLoginLB_LO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGap(18, 18, 18)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(senhaPF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(loginTF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(utilityLB_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addContainerGap(188, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(cadastrarBTN_LO)
@@ -126,19 +126,19 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(madeLB_LO)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lavantLB_LO)
-                .addGap(75, 75, 75)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(loginTF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(topicoLoginLB_LO))
+                .addGap(85, 85, 85)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(loginTF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topicoLoginLB_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(topicoSenhaLB_LO)
-                    .addComponent(senhaPF_LO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(topicoSenhaLB_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(senhaPF_LO))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(utilityLB_LO, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(confirmarBTN_LO)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
+                .addGap(129, 129, 129)
                 .addComponent(cadastrarBTN_LO)
                 .addContainerGap())
         );

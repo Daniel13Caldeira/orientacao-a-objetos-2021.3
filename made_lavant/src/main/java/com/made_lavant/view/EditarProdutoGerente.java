@@ -36,11 +36,11 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        topicoNomeLB_EDPG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoNomeLB_EDPG.setFont(topicoNomeLB_EDPG.getFont().deriveFont(topicoNomeLB_EDPG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoNomeLB_EDPG.getFont().getSize()+7));
         topicoNomeLB_EDPG.setForeground(new java.awt.Color(232, 72, 85));
         topicoNomeLB_EDPG.setText("Nome");
 
-        madeLB_EDPG.setFont(new java.awt.Font("Colonna MT", 0, 18)); // NOI18N
+        madeLB_EDPG.setFont(madeLB_EDPG.getFont().deriveFont(madeLB_EDPG.getFont().getStyle() & ~java.awt.Font.BOLD, madeLB_EDPG.getFont().getSize()+7));
         madeLB_EDPG.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_EDPG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         madeLB_EDPG.setText("MADE");
@@ -60,13 +60,13 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
             }
         });
 
-        lavantLB_EDPG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        lavantLB_EDPG.setFont(lavantLB_EDPG.getFont().deriveFont(lavantLB_EDPG.getFont().getStyle() & ~java.awt.Font.BOLD, lavantLB_EDPG.getFont().getSize()+7));
         lavantLB_EDPG.setForeground(new java.awt.Color(232, 72, 85));
         lavantLB_EDPG.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_EDPG.setText("Lavant");
 
         confirmarBTN_EDPG.setBackground(new java.awt.Color(255, 253, 130));
-        confirmarBTN_EDPG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        confirmarBTN_EDPG.setFont(confirmarBTN_EDPG.getFont().deriveFont(confirmarBTN_EDPG.getFont().getStyle() & ~java.awt.Font.BOLD, confirmarBTN_EDPG.getFont().getSize()+7));
         confirmarBTN_EDPG.setForeground(new java.awt.Color(232, 72, 85));
         confirmarBTN_EDPG.setText("Confirmar");
         confirmarBTN_EDPG.addActionListener(new java.awt.event.ActionListener() {
@@ -84,12 +84,12 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
             }
         });
 
-        topicoPrecoLB_EDPG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoPrecoLB_EDPG.setFont(topicoPrecoLB_EDPG.getFont().deriveFont(topicoPrecoLB_EDPG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoPrecoLB_EDPG.getFont().getSize()+7));
         topicoPrecoLB_EDPG.setForeground(new java.awt.Color(232, 72, 85));
         topicoPrecoLB_EDPG.setText("Preço");
 
         sairBTN_EDPG.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_EDPG.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        sairBTN_EDPG.setFont(sairBTN_EDPG.getFont().deriveFont(sairBTN_EDPG.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_EDPG.getFont().getSize()+7));
         sairBTN_EDPG.setForeground(new java.awt.Color(232, 72, 85));
         sairBTN_EDPG.setText("Sair");
         sairBTN_EDPG.addActionListener(new java.awt.event.ActionListener() {
@@ -98,12 +98,12 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
             }
         });
 
-        topicoQuantiLB_EDPG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoQuantiLB_EDPG.setFont(topicoQuantiLB_EDPG.getFont().deriveFont(topicoQuantiLB_EDPG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoQuantiLB_EDPG.getFont().getSize()+7));
         topicoQuantiLB_EDPG.setForeground(new java.awt.Color(232, 72, 85));
         topicoQuantiLB_EDPG.setText("Quantidade");
 
         voltarBTN_EDPG.setBackground(new java.awt.Color(255, 253, 130));
-        voltarBTN_EDPG.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        voltarBTN_EDPG.setFont(voltarBTN_EDPG.getFont().deriveFont(voltarBTN_EDPG.getFont().getStyle() & ~java.awt.Font.BOLD, voltarBTN_EDPG.getFont().getSize()+7));
         voltarBTN_EDPG.setForeground(new java.awt.Color(232, 72, 85));
         voltarBTN_EDPG.setText("Voltar");
         voltarBTN_EDPG.addActionListener(new java.awt.event.ActionListener() {
@@ -112,7 +112,7 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
             }
         });
 
-        nomeLB_EDPG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        nomeLB_EDPG.setFont(nomeLB_EDPG.getFont().deriveFont(nomeLB_EDPG.getFont().getStyle() & ~java.awt.Font.BOLD, nomeLB_EDPG.getFont().getSize()+7));
         nomeLB_EDPG.setForeground(new java.awt.Color(232, 72, 85));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -130,23 +130,24 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
                     .addComponent(madeLB_EDPG, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(192, Short.MAX_VALUE)
+                .addContainerGap(193, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(titleLB_EDPG)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(topicoQuantiLB_EDPG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(topicoPrecoLB_EDPG, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(precoTF_EDPG)
-                            .addComponent(quantiTF_EDPG, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(confirmarBTN_EDPG)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(topicoNomeLB_EDPG)
                         .addGap(39, 39, 39)
-                        .addComponent(nomeLB_EDPG, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(191, Short.MAX_VALUE))
+                        .addComponent(nomeLB_EDPG, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(confirmarBTN_EDPG)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(topicoQuantiLB_EDPG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(topicoPrecoLB_EDPG, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(30, 30, 30)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(precoTF_EDPG)
+                                .addComponent(quantiTF_EDPG, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(192, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,11 +162,11 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
                 .addComponent(lavantLB_EDPG)
                 .addGap(7, 7, 7)
                 .addComponent(titleLB_EDPG)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(topicoNomeLB_EDPG)
                     .addComponent(nomeLB_EDPG, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
+                .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoPrecoLB_EDPG)
                     .addComponent(precoTF_EDPG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -173,9 +174,9 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoQuantiLB_EDPG)
                     .addComponent(quantiTF_EDPG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
+                .addGap(59, 59, 59)
                 .addComponent(confirmarBTN_EDPG)
-                .addGap(59, 59, 59))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -32,7 +32,7 @@ public class InicioCliente extends javax.swing.JFrame {
         jPanel2.setName("TelaCliente"); // NOI18N
 
         sairBTN_IC.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_IC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_IC.setFont(sairBTN_IC.getFont().deriveFont(sairBTN_IC.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_IC.getFont().getSize()+7));
         sairBTN_IC.setForeground(new java.awt.Color(232, 72, 85));
         sairBTN_IC.setText("Sair");
         sairBTN_IC.addActionListener(new java.awt.event.ActionListener() {
@@ -41,19 +41,19 @@ public class InicioCliente extends javax.swing.JFrame {
             }
         });
 
-        madeLB_IC.setFont(new java.awt.Font("Colonna MT", 0, 65)); // NOI18N
+        madeLB_IC.setFont(madeLB_IC.getFont().deriveFont(madeLB_IC.getFont().getStyle() & ~java.awt.Font.BOLD, madeLB_IC.getFont().getSize()+54));
         madeLB_IC.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_IC.setText("MADE");
         madeLB_IC.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        lavantLB_IC.setFont(new java.awt.Font("Colonna MT", 1, 65)); // NOI18N
+        lavantLB_IC.setFont(lavantLB_IC.getFont().deriveFont(lavantLB_IC.getFont().getStyle() & ~java.awt.Font.BOLD, lavantLB_IC.getFont().getSize()+54));
         lavantLB_IC.setForeground(new java.awt.Color(232, 72, 85));
         lavantLB_IC.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_IC.setText("Lavant");
         lavantLB_IC.setToolTipText("");
 
         carrinhoBTN_IC.setBackground(new java.awt.Color(255, 253, 130));
-        carrinhoBTN_IC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        carrinhoBTN_IC.setFont(carrinhoBTN_IC.getFont().deriveFont(carrinhoBTN_IC.getFont().getStyle() & ~java.awt.Font.BOLD, carrinhoBTN_IC.getFont().getSize()+7));
         carrinhoBTN_IC.setForeground(new java.awt.Color(232, 72, 85));
         carrinhoBTN_IC.setText("Carrinho");
         carrinhoBTN_IC.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +63,7 @@ public class InicioCliente extends javax.swing.JFrame {
         });
 
         produtosBTN_IC.setBackground(new java.awt.Color(255, 253, 130));
-        produtosBTN_IC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        produtosBTN_IC.setFont(produtosBTN_IC.getFont().deriveFont(produtosBTN_IC.getFont().getStyle() & ~java.awt.Font.BOLD, produtosBTN_IC.getFont().getSize()+7));
         produtosBTN_IC.setForeground(new java.awt.Color(232, 72, 85));
         produtosBTN_IC.setText("Produtos");
         produtosBTN_IC.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +73,7 @@ public class InicioCliente extends javax.swing.JFrame {
         });
 
         perfilBTN_IC.setBackground(new java.awt.Color(255, 253, 130));
-        perfilBTN_IC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        perfilBTN_IC.setFont(perfilBTN_IC.getFont().deriveFont(perfilBTN_IC.getFont().getStyle() & ~java.awt.Font.BOLD, perfilBTN_IC.getFont().getSize()+7));
         perfilBTN_IC.setForeground(new java.awt.Color(232, 72, 85));
         perfilBTN_IC.setText("Perfil");
         perfilBTN_IC.addActionListener(new java.awt.event.ActionListener() {
@@ -89,17 +89,17 @@ public class InicioCliente extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(sairBTN_IC)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
-                .addComponent(madeLB_IC, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(231, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 201, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lavantLB_IC, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(perfilBTN_IC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(carrinhoBTN_IC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(produtosBTN_IC, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(madeLB_IC, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lavantLB_IC, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(207, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(perfilBTN_IC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(produtosBTN_IC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(carrinhoBTN_IC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -107,21 +107,20 @@ public class InicioCliente extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap(41, Short.MAX_VALUE)
-                        .addComponent(madeLB_IC)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(sairBTN_IC)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(lavantLB_IC)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(carrinhoBTN_IC, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(sairBTN_IC))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(madeLB_IC)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lavantLB_IC)))
+                .addGap(34, 34, 34)
+                .addComponent(carrinhoBTN_IC, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(produtosBTN_IC, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(perfilBTN_IC, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addComponent(produtosBTN_IC, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(perfilBTN_IC, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -138,18 +137,6 @@ public class InicioCliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void perfilClienteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilClienteBTNActionPerformed
-        //vai para o perfil do cliente
-        this.setVisible(false);
-        new PerfilCliente().setVisible(true);
-    }//GEN-LAST:event_perfilClienteBTNActionPerformed
-
-    private void carrinhoBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhoBTNActionPerformed
-        //vai para o carrinho
-        this.setVisible(false);
-        new TelaCarrinho().setVisible(true);
-    }//GEN-LAST:event_carrinhoBTNActionPerformed
-
     private void sairInicioClineteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairInicioClineteBTNActionPerformed
         //retorna para a tela de login
         this.setVisible(false);
@@ -161,6 +148,18 @@ public class InicioCliente extends javax.swing.JFrame {
         this.setVisible(false);
         new CrudProdutos_Cliente().setVisible(true);
     }//GEN-LAST:event_produtosBTN_ICActionPerformed
+
+    private void carrinhoBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhoBTNActionPerformed
+        //vai para o carrinho
+        this.setVisible(false);
+        new TelaCarrinho().setVisible(true);
+    }//GEN-LAST:event_carrinhoBTNActionPerformed
+
+    private void perfilClienteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilClienteBTNActionPerformed
+        //vai para o perfil do cliente
+        this.setVisible(false);
+        new PerfilCliente().setVisible(true);
+    }//GEN-LAST:event_perfilClienteBTNActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton carrinhoBTN_IC;

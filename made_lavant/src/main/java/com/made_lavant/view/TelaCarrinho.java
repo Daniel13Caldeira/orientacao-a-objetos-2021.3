@@ -59,29 +59,28 @@ public class TelaCarrinho extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
         topicoTotalLB_TC.setBackground(new java.awt.Color(255, 253, 130));
-        topicoTotalLB_TC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoTotalLB_TC.setFont(topicoTotalLB_TC.getFont().deriveFont(topicoTotalLB_TC.getFont().getStyle() & ~java.awt.Font.BOLD, topicoTotalLB_TC.getFont().getSize()+7));
         topicoTotalLB_TC.setForeground(new java.awt.Color(232, 72, 85));
         topicoTotalLB_TC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         topicoTotalLB_TC.setText("Total");
 
-        totalLB_TC.setFont(new java.awt.Font("Colonna MT", 1, 11)); // NOI18N
-        totalLB_TC.setForeground(new java.awt.Color(255, 255, 255));
-        totalLB_TC.setText("jLabel11");
+        totalLB_TC.setFont(totalLB_TC.getFont().deriveFont(totalLB_TC.getFont().getStyle() & ~java.awt.Font.BOLD));
+        totalLB_TC.setForeground(new java.awt.Color(255, 253, 130));
 
         madeLB_TC.setBackground(new java.awt.Color(255, 253, 130));
-        madeLB_TC.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        madeLB_TC.setFont(madeLB_TC.getFont().deriveFont(madeLB_TC.getFont().getStyle() | java.awt.Font.BOLD, madeLB_TC.getFont().getSize()+9));
         madeLB_TC.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_TC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         madeLB_TC.setText("MADE");
         madeLB_TC.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        lavantLB_TC.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        lavantLB_TC.setFont(lavantLB_TC.getFont().deriveFont(lavantLB_TC.getFont().getStyle() | java.awt.Font.BOLD, lavantLB_TC.getFont().getSize()+9));
         lavantLB_TC.setForeground(new java.awt.Color(232, 72, 85));
         lavantLB_TC.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_TC.setText("Lavant");
 
         sairBTN_TC.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_TC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_TC.setFont(sairBTN_TC.getFont().deriveFont(sairBTN_TC.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_TC.getFont().getSize()+7));
         sairBTN_TC.setForeground(new java.awt.Color(232, 72, 85));
         sairBTN_TC.setText("Sair");
         sairBTN_TC.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +90,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
         });
 
         addProdBTN_TC.setBackground(new java.awt.Color(255, 253, 130));
-        addProdBTN_TC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        addProdBTN_TC.setFont(addProdBTN_TC.getFont().deriveFont(addProdBTN_TC.getFont().getStyle() & ~java.awt.Font.BOLD, addProdBTN_TC.getFont().getSize()+7));
         addProdBTN_TC.setForeground(new java.awt.Color(232, 72, 85));
         addProdBTN_TC.setText("Adicionar Produto");
         addProdBTN_TC.addActionListener(new java.awt.event.ActionListener() {
@@ -101,6 +100,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
         });
 
         removerBTN_TC.setBackground(new java.awt.Color(255, 253, 130));
+        removerBTN_TC.setFont(removerBTN_TC.getFont().deriveFont(removerBTN_TC.getFont().getSize()+7f));
         removerBTN_TC.setForeground(new java.awt.Color(232, 72, 85));
         removerBTN_TC.setText("Remover");
         removerBTN_TC.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +110,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
         });
 
         voltarBTN_TC.setBackground(new java.awt.Color(255, 253, 130));
-        voltarBTN_TC.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        voltarBTN_TC.setFont(voltarBTN_TC.getFont().deriveFont(voltarBTN_TC.getFont().getStyle() & ~java.awt.Font.BOLD, voltarBTN_TC.getFont().getSize()+7));
         voltarBTN_TC.setForeground(new java.awt.Color(232, 72, 85));
         voltarBTN_TC.setText("Voltar");
         voltarBTN_TC.addActionListener(new java.awt.event.ActionListener() {
@@ -167,40 +167,38 @@ public class TelaCarrinho extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(sairBTN_TC)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(voltarBTN_TC)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
-                                .addComponent(addProdBTN_TC)
-                                .addGap(67, 67, 67)
-                                .addComponent(topicoTotalLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(totalLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lavantLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(madeLB_TC))
-                                .addGap(0, 561, Short.MAX_VALUE)))
-                        .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(removerBTN_TC)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(entregaRBTN_TC)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(buscaRBTN_TC)
-                        .addGap(50, 50, 50))))
-            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(50, 50, 50))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(finalizarBTN_TC)
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(sairBTN_TC)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(voltarBTN_TC)
+                        .addGap(112, 112, 112)
+                        .addComponent(addProdBTN_TC)
+                        .addGap(42, 42, 42)
+                        .addComponent(topicoTotalLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(totalLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(finalizarBTN_TC)
-                .addContainerGap())
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lavantLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(madeLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -212,11 +210,11 @@ public class TelaCarrinho extends javax.swing.JFrame {
                     .addComponent(totalLB_TC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(voltarBTN_TC)
                     .addComponent(addProdBTN_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addGap(29, 29, 29)
                 .addComponent(madeLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lavantLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(removerBTN_TC)
                     .addComponent(entregaRBTN_TC)
