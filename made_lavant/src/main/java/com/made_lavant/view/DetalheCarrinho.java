@@ -1,65 +1,37 @@
-
 package com.made_lavant.view;
 
 import com.made_lavant.base.Produto;
 import com.made_lavant.dados.CarrinhoDados;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class DetalheCarrinho extends javax.swing.JFrame {
-    
+
     private ArrayList<Produto> listaDeProdutos;
 
     public DetalheCarrinho() {
         initComponents();
+        //Colocando o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
-        lerArquivo();
+        //Chama o método que preenche a tabela
+        preencherTabela();
     }
-    
-    public void lerArquivo(){
-        
-        
-        File arquivo;
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            //File arquivo = new File("caminho win");
-            arquivo = new File("dados\\carrinhos\\" +CrudCarrinho.getCodigo()+".txt");
-        }else{
-            //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//carrinhos//" +CrudCarrinho.getCodigo()+".txt");
-        }
-        try {
-            FileReader fr = new FileReader(arquivo); //define o escritor
-            BufferedReader br = new BufferedReader(fr);//buffer de escrita
-            //insere o produto e adiciona uma nova linha
-            
-            String aux;
-            String dados[];
-            DefaultTableModel model = (DefaultTableModel) jTDetalhe.getModel();
-            //Object[] linha;  //alguma linha
-                    
-            while (br.ready()) {
-                aux = br.readLine();
-                dados = aux.split(";");
-                Object[] linha = {dados[1],dados[0],dados[4],dados[3],dados[2]};
-                model.addRow(linha);
+
+    private void preencherTabela() {
+        //Lista que armazena os produtos
+        ArrayList<Produto> produtos = CarrinhoDados.getProdutos(CrudCarrinho.getCodigo());
+        DefaultTableModel model = (DefaultTableModel) jTDetalhe.getModel();
+        //Preenche a tabela com os produtos
+        for (int i = 0; i < produtos.size(); i++) {
+            String validade=produtos.get(i).getValidade();
+            if(validade.equals("null")){
+                validade = "Inderteminado";
             }
-
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Não é possível ler o arquivo no momento", "Erro", 0);
-
+            Object[] linha = {produtos.get(i).getNome(), produtos.get(i).getCodigo(), produtos.get(i).getQuantidade(), validade, produtos.get(i).getPreco()};
+            model.addRow(linha);
         }
-
     }
     
-    public String separa(String linha, int info) {
-          return linha.split(";")[info];
-    }
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -199,6 +171,7 @@ public class DetalheCarrinho extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        //Calcula o valor total do carrinho e atribui esse valor ao label
         double soma =0;
         this.listaDeProdutos = CarrinhoDados.getProdutos(CrudCarrinho.getCodigo());
         for(int i=0;i<this.listaDeProdutos.size();i++){
@@ -221,12 +194,14 @@ public class DetalheCarrinho extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void voltarBTN_DCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_DCActionPerformed
+        //Retorna para o CRUD de carrinho
         this.setVisible(false);
         new CrudCarrinho().setVisible(true);
     }//GEN-LAST:event_voltarBTN_DCActionPerformed
 
     private void sairBTN_DCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_DCActionPerformed
-       this.setVisible(false);
+        //Retorna para a tela de Login
+        this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_DCActionPerformed
 

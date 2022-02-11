@@ -2,11 +2,6 @@ package com.made_lavant.view;
 
 import com.made_lavant.base.Funcionario;
 import com.made_lavant.dados.FuncionarioDados;
-import static com.made_lavant.view.CrudProdutos.codigo;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -16,20 +11,23 @@ public class CrudFuncionarios extends javax.swing.JFrame {
     protected static String codigo;
 
     protected static String getCodigo() {
+        //Retorna o codigo do Funcionário
         return CrudFuncionarios.codigo;
     }
 
     public CrudFuncionarios() {
         initComponents();
+        //Colocando o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
+        //Chama o método que preenche a tabela
         preencherTabela();
     }
 
     private void preencherTabela() {
+        //Lista que armazena os funcionários
         ArrayList<Funcionario> funcionarios = FuncionarioDados.getFuncionarios();
-        //ArrayList<Funcionario> codigos = FuncionarioDados.buscarCodigo(funcionario);
         DefaultTableModel model = (DefaultTableModel) jTFuncionario.getModel();
-        //Object[] linha;  //alguma linha
+        //Preenche a tabela com os funcionários
         for (int i = 0; i < funcionarios.size(); i++) {
             Object[] linha = {funcionarios.get(i).getNome(), funcionarios.get(i).getCod()};
             model.addRow(linha);
@@ -202,35 +200,38 @@ public class CrudFuncionarios extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void addFuncBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addFuncBTN_CRFActionPerformed
+        //Encaminha para a tela de cadastro de funcionário
         this.setVisible(false);
         new CadastroFuncionario().setVisible(true);
     }//GEN-LAST:event_addFuncBTN_CRFActionPerformed
 
     private void sairBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CRFActionPerformed
+        //Retorna para tela de Login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_CRFActionPerformed
 
     private void descricaoBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRFActionPerformed
-
+        //Encaminha para a tela de perfil do funcionário e guarda o codigo do funcionário
         if (jTFuncionario.getSelectedRow() != -1) {
-            DefaultTableModel dtmFuncionarios = (DefaultTableModel) jTFuncionario.getModel();
             codigo = jTFuncionario.getValueAt(jTFuncionario.getSelectedRow(), 1).toString();
             this.setVisible(false);
             new PerfilFuncionario_Crud().setVisible(true);
         } else {
 
-            JOptionPane.showMessageDialog(null, "NENHUM FUNCIONÁRIO SELECIONADO!");
+            JOptionPane.showMessageDialog(null, "Nenhum funcionário selecionado!");
         }
 
     }//GEN-LAST:event_descricaoBTN_CRFActionPerformed
 
     private void voltarBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CRFActionPerformed
+        //Volta para a tela de Inicio
         this.setVisible(false);
         new InicioGerente().setVisible(true);
     }//GEN-LAST:event_voltarBTN_CRFActionPerformed
 
     private void removerBTN_CRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerBTN_CRFActionPerformed
+        //Remove o funcionário selecionado da tabela e do arquivo de funcionários 
         if (jTFuncionario.getSelectedRow() != -1) {
             DefaultTableModel dtmFuncionarios = (DefaultTableModel) jTFuncionario.getModel();
             String cod = jTFuncionario.getValueAt(jTFuncionario.getSelectedRow(), 1).toString();
@@ -238,7 +239,7 @@ public class CrudFuncionarios extends javax.swing.JFrame {
             FuncionarioDados.remover(cod);
         } else {
 
-            JOptionPane.showMessageDialog(null, "NENHUM FUNCIONÁRIO SELECIONADO!");
+            JOptionPane.showMessageDialog(null, "Nenhum funcionário selecionado!");
         }
     }//GEN-LAST:event_removerBTN_CRFActionPerformed
 

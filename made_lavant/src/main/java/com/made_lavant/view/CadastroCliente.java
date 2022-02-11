@@ -10,6 +10,7 @@ public class CadastroCliente extends javax.swing.JFrame {
 
     public CadastroCliente() {
         initComponents();
+        //Colocando o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -376,6 +377,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         }
         //retorna para a tela de login se o cadastro foi realizado
         if (cadastro) {
+            //Criando o carrinho do novo cliente
             new Carrinho(cliente);
             this.setVisible(false);
             new Login().setVisible(true);
@@ -387,9 +389,12 @@ public class CadastroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_cpfTF_CCKeyReleased
 
     private void mascaraCPF() {
+        //Máscara que aceita apenas 11 números
         String texto = cpfTF_CC.getText();
         if (texto.length() > 0) {
+            //Verifica o tamanho da string excedeu 11 caracteres e se o último caractere digitado é um número
             if (texto.length() > 11 || texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }
@@ -425,9 +430,12 @@ public class CadastroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_ufTF_CCKeyReleased
 
     private void mascaraUF() {
+        //Máscara que aceita apenas 2 letras
         String texto = ufTF_CC.getText();
         if (texto.length() > 0) {
+            //Verifica o tamanho da string excedeu 2 caracteres e se o último caractere digitado é uma letra
             if (!(texto.length() <= 2 && ((texto.charAt(texto.length() - 1) >= 'a' && texto.charAt(texto.length() - 1) <= 'z') || (texto.charAt(texto.length() - 1) >= 'A' && texto.charAt(texto.length() - 1) <= 'Z')))) {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }
@@ -435,9 +443,12 @@ public class CadastroCliente extends javax.swing.JFrame {
     }
 
     private void mascaraCEP() {
+        //Máscara que aceita apenas 8 letras
         String texto = cepTF_CC.getText();
         if (texto.length() > 0) {
+            //Verifica o tamanho da string excedeu 8 caracteres e se o último caractere digitado é um número
             if (texto.length() > 8 || texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }
@@ -445,9 +456,12 @@ public class CadastroCliente extends javax.swing.JFrame {
     }
 
     private void mascaraInt(JTextField textField) {
+        //Máscara que aceita apenas números
         String texto = textField.getText();
         if (texto.length() > 0) {
+            //Verifica se o último caractere digitado é um número
             if (texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }

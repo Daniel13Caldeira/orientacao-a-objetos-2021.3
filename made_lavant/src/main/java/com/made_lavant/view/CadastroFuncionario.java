@@ -1,4 +1,3 @@
-
 package com.made_lavant.view;
 
 import com.made_lavant.base.Endereco;
@@ -7,12 +6,11 @@ import com.made_lavant.dados.Codigos;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-
 public class CadastroFuncionario extends javax.swing.JFrame {
-
 
     public CadastroFuncionario() {
         initComponents();
+        //Colocando o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
 
     }
@@ -371,7 +369,9 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         }
         //retorna para a tela de crud de funcionários se o cadastro foi realizado
         if (cadastro) {
+            //Verifica se o tipo do funcionário
             if (identificador.equals("A")) {
+                //Popup que avisa que a senha é padrão, e mostra o login do funcionário
                 JOptionPane.showMessageDialog(null, "Gerente cadastrado com sucesso!\n"
                         + "Login: " + "A" + (Codigos.buscaFuncionario() - 1) + "\n"
                         + "Senha(Padrão): madeLavant");
@@ -410,9 +410,12 @@ public class CadastroFuncionario extends javax.swing.JFrame {
     }//GEN-LAST:event_ufTF_CFKeyReleased
 
     private void mascaraUF() {
+        //Máscara que aceita apenas 2 letras
         String texto = ufTF_CF.getText();
         if (texto.length() > 0) {
+            //Verifica o tamanho da string excedeu 2 caracteres e se o último caractere digitado é uma letra
             if (!(texto.length() <= 2 && ((texto.charAt(texto.length() - 1) >= 'a' && texto.charAt(texto.length() - 1) <= 'z') || (texto.charAt(texto.length() - 1) >= 'A' && texto.charAt(texto.length() - 1) <= 'Z')))) {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }
@@ -420,9 +423,12 @@ public class CadastroFuncionario extends javax.swing.JFrame {
     }
 
     private void mascaraCEP() {
+        //Máscara que aceita apenas 8 letras
         String texto = cepTF_CF.getText();
         if (texto.length() > 0) {
+            //Verifica o tamanho da string excedeu 8 caracteres e se o último caractere digitado é um número
             if (texto.length() > 8 || texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }
@@ -430,9 +436,12 @@ public class CadastroFuncionario extends javax.swing.JFrame {
     }
 
     private void mascaraInt(JTextField textField) {
+        //Máscara que aceita apenas números
         String texto = textField.getText();
         if (texto.length() > 0) {
+            //Verifica se o último caractere digitado é um número
             if (texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }

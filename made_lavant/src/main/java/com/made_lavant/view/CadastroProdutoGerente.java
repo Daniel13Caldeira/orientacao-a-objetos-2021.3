@@ -1,4 +1,3 @@
-
 package com.made_lavant.view;
 
 import com.made_lavant.base.Produto;
@@ -9,6 +8,7 @@ public class CadastroProdutoGerente extends javax.swing.JFrame {
 
     public CadastroProdutoGerente() {
         initComponents();
+        //Colocando o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -319,68 +319,23 @@ public class CadastroProdutoGerente extends javax.swing.JFrame {
     private javax.swing.JButton voltarBTN_CPG;
     // End of variables declaration//GEN-END:variables
 
-    private boolean verificaDataValida(String data) {
-        //dd/mm/yyyy
-        //01/34/6789
-        //separa o dia, o mês e o ano da data
-        if (data.length() != 10) {
-            return false;
-        }
-        int dia = Integer.parseInt(data.charAt(0) + "") * 10 + Integer.parseInt(data.charAt(1) + "");
-        if (dia < 1 || dia > 31) {
-            return false;
-        }
-        int mes = Integer.parseInt(data.charAt(3) + "") * 10 + Integer.parseInt(data.charAt(4) + "");
-        if (mes < 0 || mes > 12) {
-            return false;
-        }
-        int ano = Integer.parseInt(data.charAt(6) + "") * 1000 + Integer.parseInt(data.charAt(7) + "") * 100 + Integer.parseInt(data.charAt(8) + "") * 10 + Integer.parseInt(data.charAt(9) + "");
-        int maxDias = 0;
-        //verifica qual o máximo de dias que pode ter de acordo com o mês e o ano da validade
-        switch (mes) {
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12: {
-                maxDias = 31;
-            }
-            break;
-            case 4:
-            case 6:
-            case 9:
-            case 11: {
-                maxDias = 30;
-            }
-            default: {
-                if (ano % 4 == 0 && (ano % 100 != 0 || ano % 400 == 0)) {
-                    maxDias = 29;
-                } else {
-                    maxDias = 28;
-                }
-            }
-        }
-        //verifica se o dia inserido é válido
-        if (dia > maxDias || maxDias == 0) {
-            return false;
-        }
-        return verificaDataAnteriorAtual(dia, mes, ano);
-    }
-
     private boolean verificaDataAnteriorAtual(int dia, int mes, int ano) {
+        //Declaração da data atual
         Date data = new Date();
         String atual = data + "";
-        //Fri Jan 14 1 5 : 0 0 : 2 9 B R T  2022
-        //012 456 89 1112131415161718192021 23242526
+
+        //Separa o ano atual
         int anoAtual = Integer.parseInt(atual.charAt(24) + "") * 1000 + Integer.parseInt(atual.charAt(25) + "") * 100 + Integer.parseInt(atual.charAt(26) + "") * 10 + Integer.parseInt(atual.charAt(27) + "");
+
+        //Verifica se o ano atual é maior ou menor que o ano passado como parâmetro
         if (anoAtual > ano) {
             return false;
         }
         if (anoAtual < ano) {
             return true;
         }
+
+        //Define o valor númerico do mês
         String mesAtualAux = atual.substring(4, 7);
         int mesAtual = 0;
         if (mesAtualAux.equalsIgnoreCase("jan")) {
@@ -430,26 +385,84 @@ public class CadastroProdutoGerente extends javax.swing.JFrame {
                 }
             }
         }
+        //Verifica se o mês atual é maior ou menor que o passado por parâmetro
         if (mesAtual > mes) {
             return false;
         }
         if (mesAtual < mes) {
             return true;
         }
+
+        //Declara o valor númerico do dia atual
         int diaAtual = Integer.parseInt(atual.charAt(8) + "") * 10 + Integer.parseInt(atual.charAt(9) + "");
+
+        //Verifica se o dia atual é maior ou igual ao passado por parâmetro
         if (diaAtual >= dia) {
             return false;
         }
         return true;
     }
 
+    private boolean verificaDataValida(String data) {
+
+        //Separa o dia, o mês e o ano da data
+        if (data.length() != 10) {
+            return false;
+        }
+        int dia = Integer.parseInt(data.charAt(0) + "") * 10 + Integer.parseInt(data.charAt(1) + "");
+        if (dia < 1 || dia > 31) {
+            return false;
+        }
+        int mes = Integer.parseInt(data.charAt(3) + "") * 10 + Integer.parseInt(data.charAt(4) + "");
+        if (mes < 0 || mes > 12) {
+            return false;
+        }
+        int ano = Integer.parseInt(data.charAt(6) + "") * 1000 + Integer.parseInt(data.charAt(7) + "") * 100 + Integer.parseInt(data.charAt(8) + "") * 10 + Integer.parseInt(data.charAt(9) + "");
+
+        //verifica qual o máximo de dias que pode ter de acordo com o mês e o ano da validade
+        int maxDias = 0;
+        switch (mes) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12: {
+                maxDias = 31;
+            }
+            break;
+            case 4:
+            case 6:
+            case 9:
+            case 11: {
+                maxDias = 30;
+            }
+            default: {
+                if (ano % 4 == 0 && (ano % 100 != 0 || ano % 400 == 0)) {
+                    maxDias = 29;
+                } else {
+                    maxDias = 28;
+                }
+            }
+        }
+        //verifica se o dia inserido é válido
+        if (dia > maxDias || maxDias == 0) {
+            return false;
+        }
+        return verificaDataAnteriorAtual(dia, mes, ano);
+    }
+
     private void mascaraData() {
+        //Verifica o formato da data
         String texto = validadeTF_CPG.getText();
         if (texto.length() > 0) {
+            //Verifica se não excedeu o tamanho máximo e se é um número
             if (texto.length() > 10 || texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
                 texto = texto.substring(0, texto.length() - 1);
             }
             if (texto.length() == 2 || texto.length() == 5) {
+                //Adicionando o formato dd/mm/aaaa
                 texto += "/";
             }
         }
@@ -457,18 +470,23 @@ public class CadastroProdutoGerente extends javax.swing.JFrame {
     }
 
     private void mascaraDouble(JTextField textField) {
+        //Verifica se o número digitado é um valor do tipo double
         String texto = textField.getText();
         if (texto.length() > 0) {
+            //Verifica o separador decimal e se é um número
             if (!(texto.charAt(texto.length() - 1) == '.' || (texto.charAt(texto.length() - 1) >= '0' && texto.charAt(texto.length() - 1) <= '9'))) {
+                //Apaga o último caractere
                 texto = texto.substring(0, texto.length() - 1);
             }
             int cont = 0;
             for (int i = 0; i < texto.length(); i++) {
+                //Verifica se há mais de um Ponto
                 if (texto.charAt(i) == '.') {
                     cont++;
                 }
             }
             if (cont > 1) {
+                //Apaga o último caractere
                 texto = texto.substring(0, texto.length() - 1);
             }
         }

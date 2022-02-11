@@ -11,25 +11,28 @@ public class CrudCarrinhoGerente extends javax.swing.JFrame {
     protected static String codigo;
 
     public static String getCodigo() {
+        //Retorna o codigo do carrinho
         return codigo;
     }
 
     public CrudCarrinhoGerente() {
         initComponents();
+        //Colocando o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
+        //Chama o método que preenche a tabela
         preencherTabela();
     }
-    
+
     private void preencherTabela() {
+        //Lista que armazena os carrinhos
         ArrayList<Carrinho> carrinhos = CarrinhoDados.getCarrinhos();
-        //ArrayList<Funcionario> codigos = FuncionarioDados.buscarCodigo(funcionario);
-        DefaultTableModel model = (DefaultTableModel) jTCrudCarrrinhoG.getModel();
-        //Object[] linha;  //alguma linha
+        DefaultTableModel model = (DefaultTableModel) jTCrudCarrinhoG.getModel();
+        //Preenche a tabela com os carrinhos que estão prontos pra finalizar a venda
         for (int i = 0; i < carrinhos.size(); i++) {
             Object[] linha = {carrinhos.get(i).getCliente().getNome(), carrinhos.get(i).getCliente().getCpf()};
-            if (CarrinhoDados.getPronto(codigo)) {
-                 model.addRow(linha);
-            }           
+            if (CarrinhoDados.getPronto(carrinhos.get(i).getCliente().getCpf())) {
+                model.addRow(linha);
+            }
         }
     }
 
@@ -46,7 +49,7 @@ public class CrudCarrinhoGerente extends javax.swing.JFrame {
         lavantLB_CRCG = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTCrudCarrrinhoG = new javax.swing.JTable();
+        jTCrudCarrinhoG = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,7 +107,7 @@ public class CrudCarrinhoGerente extends javax.swing.JFrame {
         lavantLB_CRCG.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_CRCG.setText("Lavant");
 
-        jTCrudCarrrinhoG.setModel(new javax.swing.table.DefaultTableModel(
+        jTCrudCarrinhoG.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -112,7 +115,7 @@ public class CrudCarrinhoGerente extends javax.swing.JFrame {
                 "NOME DO CLIENTE", "CPF"
             }
         ));
-        jScrollPane1.setViewportView(jTCrudCarrrinhoG);
+        jScrollPane1.setViewportView(jTCrudCarrinhoG);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -189,26 +192,36 @@ public class CrudCarrinhoGerente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void descricaoBTN_CRCGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRCGActionPerformed
-        this.setVisible(false);
-        new DetalheCarrinhoGerente().setVisible(true);
+
+        //Encaminha para a tela detalhe carrinho e guarda o codigo do carrinho
+        if (jTCrudCarrinhoG.getSelectedRow() != -1) {
+            codigo = jTCrudCarrinhoG.getValueAt(jTCrudCarrinhoG.getSelectedRow(), 1).toString();
+            this.setVisible(false);
+            new DetalheCarrinhoGerente().setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Nenhum carrinho selecionado!");
+        }
     }//GEN-LAST:event_descricaoBTN_CRCGActionPerformed
 
     private void sairBTN_CRCGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CRCGActionPerformed
+        //Retorna para tela de Login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_CRCGActionPerformed
 
     private void voltarBTN_CRCGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CRCGActionPerformed
+        //Volta para a tela de Inicio
         this.setVisible(false);
         new InicioGerente().setVisible(true);
     }//GEN-LAST:event_voltarBTN_CRCGActionPerformed
 
     private void confirmarBTN_CRCGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_CRCGActionPerformed
-        if (jTCrudCarrrinhoG.getSelectedRow() != -1) {
-            codigo = jTCrudCarrrinhoG.getValueAt(jTCrudCarrrinhoG.getSelectedRow(), 1).toString();
+        //Encaminha para a tela de confirmação de venda e guarda o codigo do carrinho
+        if (jTCrudCarrinhoG.getSelectedRow() != -1) {
+            codigo = jTCrudCarrinhoG.getValueAt(jTCrudCarrinhoG.getSelectedRow(), 1).toString();
             this.setVisible(false);
-            new Confirmacao().setVisible(true);
-        }else{
+            new ConfirmacaoGerente().setVisible(true);
+        } else {
             JOptionPane.showMessageDialog(null, "NENHUM CLIENTE SELECIONADO!");
         }
     }//GEN-LAST:event_confirmarBTN_CRCGActionPerformed
@@ -219,7 +232,7 @@ public class CrudCarrinhoGerente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTCrudCarrrinhoG;
+    private javax.swing.JTable jTCrudCarrinhoG;
     private javax.swing.JLabel lavantLB_CRCG;
     private javax.swing.JLabel madeLB_CRCG;
     private javax.swing.JButton sairBTN_CRCG;

@@ -4,7 +4,6 @@ import com.made_lavant.base.Produto;
 import com.made_lavant.dados.CarrinhoDados;
 import com.made_lavant.dados.ProdutoDados;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -13,22 +12,23 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
     protected static String codigo;
 
     protected static String getCodigo() {
+        //Retorna o codigo do produto
         return CrudProdutos_Cliente.codigo;
     }
 
-    Hashtable<String, String> ht;
-
     public CrudProdutos_Cliente() {
         initComponents();
+        //Colocando o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
-        ht = new Hashtable<>();
+        //Chama o método que preenche a tabela
         preencherTabela();
     }
 
     private void preencherTabela() {
+        //Lista que armazena os produtos
         ArrayList<Produto> produtos = ProdutoDados.getProdutos();
         DefaultTableModel model = (DefaultTableModel) jTProdCliente.getModel();
-        //Object[] linha;  //alguma linha
+        //Preenche a tabela com os produtos
         for (int i = 0; i < produtos.size(); i++) {
             Object[] linha = {produtos.get(i).getNome(), produtos.get(i).getCodigo(), produtos.get(i).getPreco()};
             model.addRow(linha);
@@ -225,42 +225,41 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sairBTN_CRPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CRPCActionPerformed
+        //Retorna para a tela de Login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_CRPCActionPerformed
 
     private void voltarBTN_CRPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CRPCActionPerformed
-        this.setVisible(false);
+        //Volta para a tela do carrinho
+       this.setVisible(false);
         new TelaCarrinho().setVisible(true);
     }//GEN-LAST:event_voltarBTN_CRPCActionPerformed
 
     private void descricaoBTN_CRPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRPCActionPerformed
-
+        //Encaminha para a tela de perfil do produto e guarda o codigo do produto
         if (jTProdCliente.getSelectedRow() != -1) {
-            DefaultTableModel dtmProdutos = (DefaultTableModel) jTProdCliente.getModel();
             codigo = jTProdCliente.getValueAt(jTProdCliente.getSelectedRow(), 1).toString();
             this.setVisible(false);
             new DetalheProduto().setVisible(true);
         } else {
 
-            JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
+            JOptionPane.showMessageDialog(null, "Nenhum produto selecionado!");
         }
 
     }//GEN-LAST:event_descricaoBTN_CRPCActionPerformed
 
     private void adicionarBTN_CDCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarBTN_CDCActionPerformed
+        //Adiciona o produto ao carrinho 
         if (jTProdCliente.getSelectedRow() != -1) {
             codigo = jTProdCliente.getValueAt(jTProdCliente.getSelectedRow(), 1).toString();
-            
-            if (Double.parseDouble(jTextFieldQuantidade.getText())== 0) {
-                
-                    JOptionPane.showMessageDialog(null, "NENHUMA QUANTIDADE SELECIONADA!");
-            }else{
+            if (Double.parseDouble(jTextFieldQuantidade.getText()) == 0) {
+                JOptionPane.showMessageDialog(null, "Nenhuma quantidade selecionada!");
+            } else {
                 CarrinhoDados.adicionarProduto(Login.getCodigo(), Integer.parseInt(codigo), Double.parseDouble(jTextFieldQuantidade.getText()));
             }
-            
         } else {
-            JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
+            JOptionPane.showMessageDialog(null, "Nenhum produto selecionado!");
         }
     }//GEN-LAST:event_adicionarBTN_CDCActionPerformed
 

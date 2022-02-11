@@ -9,27 +9,30 @@ import javax.swing.JOptionPane;
 public class CrudCarrinho extends javax.swing.JFrame {
 
     protected static String codigo;
-//jTCrudCarrinho
+
     public static String getCodigo() {
+        //Retorna o codigo do carrinho
         return codigo;
     }
 
     public CrudCarrinho() {
         initComponents();
+        //Colocando o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
+        //Chama o método que preenche a tabela
         preencherTabela();
     }
-    
+
     private void preencherTabela() {
+        //Lista que armazena os carrinhos
         ArrayList<Carrinho> carrinhos = CarrinhoDados.getCarrinhos();
-        //ArrayList<Funcionario> codigos = FuncionarioDados.buscarCodigo(funcionario);
         DefaultTableModel model = (DefaultTableModel) jTCrudCarrinho.getModel();
-        //Object[] linha;  //alguma linha
+        //Preenche a tabela com os carrinhos que estão prontos pra finalizar a venda
         for (int i = 0; i < carrinhos.size(); i++) {
             Object[] linha = {carrinhos.get(i).getCliente().getNome(), carrinhos.get(i).getCliente().getCpf()};
-            if (CarrinhoDados.getPronto(codigo)) {
-                 model.addRow(linha);
-            }           
+            if (CarrinhoDados.getPronto(carrinhos.get(i).getCliente().getCpf())) {
+                model.addRow(linha);
+            }
         }
     }
 
@@ -189,26 +192,35 @@ public class CrudCarrinho extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void descricaoBTN_CRCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRCActionPerformed
-        this.setVisible(false);
-        new DetalheCarrinho().setVisible(true);
+        //Encaminha para a tela detalhe carrinho e guarda o codigo do carrinho
+        if (jTCrudCarrinho.getSelectedRow() != -1) {
+            codigo = jTCrudCarrinho.getValueAt(jTCrudCarrinho.getSelectedRow(), 1).toString();
+            this.setVisible(false);
+            new DetalheCarrinho().setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Nenhum carrinho selecionado!");
+        }
     }//GEN-LAST:event_descricaoBTN_CRCActionPerformed
 
     private void sairBTN_CRCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CRCActionPerformed
+        //Retorna para tela de Login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_CRCActionPerformed
 
     private void confirmarBTN_CRCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_CRCActionPerformed
+        //Encaminha para a tela de confirmação de venda e guarda o codigo do carrinho
         if (jTCrudCarrinho.getSelectedRow() != -1) {
             codigo = jTCrudCarrinho.getValueAt(jTCrudCarrinho.getSelectedRow(), 1).toString();
             this.setVisible(false);
             new Confirmacao().setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(null, "NENHUM CLIENTE SELECIONADO!");
+        } else {
+            JOptionPane.showMessageDialog(null, "Nenhum carrinho selecionado!");
         }
     }//GEN-LAST:event_confirmarBTN_CRCActionPerformed
 
     private void voltarBTN_CRCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CRCActionPerformed
+        //Volta para a tela de Inicio
         this.setVisible(false);
         new InicioFuncionario().setVisible(true);
     }//GEN-LAST:event_voltarBTN_CRCActionPerformed

@@ -13,6 +13,7 @@ public class ConfirmacaoGerente extends javax.swing.JFrame {
 
     public ConfirmacaoGerente() {
         initComponents();
+        //Colocando o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -164,12 +165,14 @@ public class ConfirmacaoGerente extends javax.swing.JFrame {
                 .addGap(61, 61, 61))
         );
 
+        //Calcula o total do preço dos produtos no carrinho e adiciona esse valor ao label
         double soma =0;
         this.listaDeProdutos = CarrinhoDados.getProdutos(CrudCarrinhoGerente.getCodigo());
         for(int i=0;i<this.listaDeProdutos.size();i++){
             soma+=this.listaDeProdutos.get(i).getPreco()*this.listaDeProdutos.get(i).getQuantidade();
         }
         totalLB_CONG.setText(soma+"");
+        //Adiciona o nome do cliente a qual o carrinho pertence
         nomeClienteLB_CONG.setText(ClienteDados.buscarNome(CrudCarrinhoGerente.getCodigo()));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -189,44 +192,42 @@ public class ConfirmacaoGerente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sairBTN_CONGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CONGActionPerformed
+        //Retorna para tela do Login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_CONGActionPerformed
 
     private void confirmarBTN_CONGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_CONGActionPerformed
-        boolean flag = false;
+        //Verifica o tipo de venda e confirma de acordo com a venda
         if (CarrinhoDados.getTipoVenda(CrudCarrinhoGerente.getCodigo()).equals("entrega")) {
             VendaDelivery confirma = new VendaDelivery(CrudCarrinhoGerente.getCodigo());
             confirma.efetuaVenda();
-            flag = true;
+            this.setVisible(false);
+            new CrudCarrinhoGerente().setVisible(true);
         } else {
-                VendaProntaEntrega confirma = new VendaProntaEntrega(CrudCarrinhoGerente.getCodigo());
-                confirma.efetuaVenda();
-                flag = true;
-        }
-        if (flag) {
+            VendaProntaEntrega confirma = new VendaProntaEntrega(CrudCarrinhoGerente.getCodigo());
+            confirma.efetuaVenda();
             this.setVisible(false);
             new CrudCarrinhoGerente().setVisible(true);
         }
     }//GEN-LAST:event_confirmarBTN_CONGActionPerformed
 
     private void alterarCarrinhoBTN_CONGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarCarrinhoBTN_CONGActionPerformed
+        //Volta para o CRUD de carrinhos
         this.setVisible(false);
         new CrudCarrinhoGerente().setVisible(true);
     }//GEN-LAST:event_alterarCarrinhoBTN_CONGActionPerformed
 
     private void cancelarBTN_CONGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarBTN_CONGActionPerformed
-        boolean flag = false;
+        //Verifica o tipo da venda e cancela de acordo
         if (CarrinhoDados.getTipoVenda(CrudCarrinhoGerente.getCodigo()).equals("entrega")) {
             VendaDelivery cancela = new VendaDelivery(CrudCarrinhoGerente.getCodigo());
             cancela.cancelaVenda();
-            flag = true;
+            this.setVisible(false);
+            new CrudCarrinhoGerente().setVisible(true);
         } else {
-                VendaProntaEntrega cancela = new VendaProntaEntrega(CrudCarrinhoGerente.getCodigo());
-                cancela.cancelaVenda();
-                flag = true;
-        }
-        if (flag) {
+            VendaProntaEntrega cancela = new VendaProntaEntrega(CrudCarrinhoGerente.getCodigo());
+            cancela.cancelaVenda();
             this.setVisible(false);
             new CrudCarrinhoGerente().setVisible(true);
         }

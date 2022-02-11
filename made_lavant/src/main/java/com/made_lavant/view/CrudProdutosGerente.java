@@ -11,19 +11,23 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
     protected static String codigo;
 
     protected static String getCodigo() {
+        //Retorna o codigo do produto
         return CrudProdutosGerente.codigo;
     }
 
     public CrudProdutosGerente() {
         initComponents();
+        //Colocando o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
+        //Chama o método que preenche a tabela
         preencherTabela();
     }
 
-   private void preencherTabela(){
+    private void preencherTabela() {
+        //Lista que armazena os produtos
         ArrayList<Produto> produtos = ProdutoDados.getProdutos();
         DefaultTableModel model = (DefaultTableModel) jTProdutosGerente.getModel();
-        //Object[] linha;  //alguma linha
+        //Preenche a tabela com os produtos
         for (int i = 0; i < produtos.size(); i++) {
             Object[] linha = {produtos.get(i).getNome(), produtos.get(i).getCodigo(), produtos.get(i).getPreco()};
             model.addRow(linha);
@@ -215,58 +219,56 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sairBTN_CRPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CRPGActionPerformed
+        //Retorna para a tela de Login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_CRPGActionPerformed
 
     private void voltarBTN_CRPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CRPGActionPerformed
+        //Volta para a tela de Inicio
         this.setVisible(false);
         new InicioGerente().setVisible(true);
     }//GEN-LAST:event_voltarBTN_CRPGActionPerformed
 
     private void addProdBTN_CRPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProdBTN_CRPGActionPerformed
+        //Encaminha para a tela de cadastro de produtos
         this.setVisible(false);
         new CadastroProdutoGerente().setVisible(true);
     }//GEN-LAST:event_addProdBTN_CRPGActionPerformed
 
     private void removerBTN_CRPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerBTN_CRPGActionPerformed
+        //Remove o produto selecionado da tabela e do arquivo de produtos 
         if (jTProdutosGerente.getSelectedRow() != -1) {
             DefaultTableModel dtmProdutos = (DefaultTableModel) jTProdutosGerente.getModel();
             String cod = jTProdutosGerente.getValueAt(jTProdutosGerente.getSelectedRow(), 1).toString();
             dtmProdutos.removeRow(jTProdutosGerente.getSelectedRow());
             ProdutoDados.remover(Integer.parseInt(cod));
         } else {
-            JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
+            JOptionPane.showMessageDialog(null, "Nenhum produto selecionado!");
         }
 
     }//GEN-LAST:event_removerBTN_CRPGActionPerformed
 
     private void editarBTN_CRPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBTN_CRPGActionPerformed
-
+        //Encaminha para a tela de editar produto e guarda o codigo do produto
         if (jTProdutosGerente.getSelectedRow() != -1) {
-            DefaultTableModel dtmProdutos = (DefaultTableModel) jTProdutosGerente.getModel();
             codigo = jTProdutosGerente.getValueAt(jTProdutosGerente.getSelectedRow(), 1).toString();
-
             this.setVisible(false);
             new EditarProdutoGerente().setVisible(true);
         } else {
-
-            JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
+            JOptionPane.showMessageDialog(null, "Nenhum produto selecionado!");
         }
 
     }//GEN-LAST:event_editarBTN_CRPGActionPerformed
 
     private void descricaoBTN_CRPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRPGActionPerformed
-
+        //Encaminha para a tela de perfil do produto e guarda o codigo do produto
         if (jTProdutosGerente.getSelectedRow() != -1) {
-            DefaultTableModel dtmProdutos = (DefaultTableModel) jTProdutosGerente.getModel();
             codigo = jTProdutosGerente.getValueAt(jTProdutosGerente.getSelectedRow(), 1).toString();
-
             this.setVisible(false);
             new DetalheProduto_Gerente().setVisible(true);
         } else {
-
-            JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
+            JOptionPane.showMessageDialog(null, "Nenhum produto selecionado!");
         }
 
     }//GEN-LAST:event_descricaoBTN_CRPGActionPerformed

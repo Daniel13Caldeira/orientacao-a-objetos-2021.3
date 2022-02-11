@@ -46,45 +46,48 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace pref="132" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="topicoQuantiLB_CP" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="topicoNomeLB_CP" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="topicoPrecoLB_CP" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="topicoValLB_CP" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="utilityLB_CP" min="-2" pref="220" max="-2" attributes="0"/>
-                          <EmptySpace pref="52" max="32767" attributes="0"/>
-                          <Component id="confirmarBTN_CP" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="titleLB_CP" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="nomeTF_CP" pref="381" max="32767" attributes="0"/>
-                              <Component id="quantidadeTF_CP" alignment="0" max="32767" attributes="0"/>
-                              <Component id="precoTF_CP" alignment="0" max="32767" attributes="0"/>
-                              <Component id="validadeTF_CP" alignment="0" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="sairBTN_CP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="voltarBTN_CP" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                  </Group>
-                  <EmptySpace pref="132" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="sairBTN_CP" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="voltarBTN_CP" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lavantLB_CP" pref="90" max="32767" attributes="0"/>
-                      <Component id="madeLB_CP" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="topicoQuantiLB_CP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoNomeLB_CP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoPrecoLB_CP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoValLB_CP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="utilityLB_CP" min="-2" pref="220" max="-2" attributes="0"/>
+                                          <EmptySpace pref="52" max="32767" attributes="0"/>
+                                          <Component id="confirmarBTN_CP" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="titleLB_CP" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="nomeTF_CP" pref="381" max="32767" attributes="0"/>
+                                              <Component id="quantidadeTF_CP" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="precoTF_CP" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="validadeTF_CP" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="lavantLB_CP" pref="90" max="32767" attributes="0"/>
+                                  <Component id="madeLB_CP" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>

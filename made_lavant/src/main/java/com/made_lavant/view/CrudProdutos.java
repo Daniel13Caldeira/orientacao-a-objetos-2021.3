@@ -11,19 +11,23 @@ public class CrudProdutos extends javax.swing.JFrame {
     protected static String codigo;
 
     protected static String getCodigo() {
+        //Retorna o codigo do produto
         return CrudProdutos.codigo;
     }
 
     public CrudProdutos() {
         initComponents();
+        //Colocando o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
+        //Chama o método que preenche a tabela
         preencherTabela();
     }
 
     private void preencherTabela() {
+        //Lista que armazena os produtos
         ArrayList<Produto> produtos = ProdutoDados.getProdutos();
         DefaultTableModel model = (DefaultTableModel) jTProdutos.getModel();
-        //Object[] linha;  //alguma linha
+        //Preenche a tabela com os produtos
         for (int i = 0; i < produtos.size(); i++) {
             Object[] linha = {produtos.get(i).getNome(), produtos.get(i).getCodigo(), produtos.get(i).getPreco()};
             model.addRow(linha);
@@ -216,49 +220,49 @@ public class CrudProdutos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sairBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_CRPActionPerformed
+        //Retorna para a tela de Login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_CRPActionPerformed
 
     private void voltarBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CRPActionPerformed
+        //Volta para a tela de Inicio
         this.setVisible(false);
         new InicioFuncionario().setVisible(true);
     }//GEN-LAST:event_voltarBTN_CRPActionPerformed
 
     private void addProdBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProdBTN_CRPActionPerformed
+        //Encaminha para a tela de cadastro de produtos
         this.setVisible(false);
         new CadastroProduto().setVisible(true);
     }//GEN-LAST:event_addProdBTN_CRPActionPerformed
 
     private void descricaoBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoBTN_CRPActionPerformed
-
+        //Encaminha para a tela de perfil do produto e guarda o codigo do produto
         if (jTProdutos.getSelectedRow() != -1) {
-            DefaultTableModel dtmProdutos = (DefaultTableModel) jTProdutos.getModel();
             codigo = jTProdutos.getValueAt(jTProdutos.getSelectedRow(), 1).toString();
             this.setVisible(false);
             new DetalheProduto_Func().setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
+            JOptionPane.showMessageDialog(null, "Nenhum produto selecionado!");
         }
 
     }//GEN-LAST:event_descricaoBTN_CRPActionPerformed
 
     private void editarBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarBTN_CRPActionPerformed
-
+        //Encaminha para a tela de editar produto e guarda o codigo do produto
         if (jTProdutos.getSelectedRow() != -1) {
-            DefaultTableModel dtmProdutos = (DefaultTableModel) jTProdutos.getModel();
             codigo = jTProdutos.getValueAt(jTProdutos.getSelectedRow(), 1).toString();
-
             this.setVisible(false);
             new EditarProduto().setVisible(true);
         } else {
-
-            JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
+            JOptionPane.showMessageDialog(null, "Nenhum produto selecionado!");
         }
 
     }//GEN-LAST:event_editarBTN_CRPActionPerformed
 
     private void removerBTN_CRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerBTN_CRPActionPerformed
+        //Remove o produto selecionado da tabela e do arquivo de produtos 
         if (jTProdutos.getSelectedRow() != -1) {
             DefaultTableModel dtmProdutos = (DefaultTableModel) jTProdutos.getModel();
             String cod = jTProdutos.getValueAt(jTProdutos.getSelectedRow(), 1).toString();
@@ -266,7 +270,7 @@ public class CrudProdutos extends javax.swing.JFrame {
             ProdutoDados.remover(Integer.parseInt(cod));
         } else {
 
-            JOptionPane.showMessageDialog(null, "NENHUM PRODUTO SELECIONADO!");
+            JOptionPane.showMessageDialog(null, "Nenhum produto selecionado!");
         }
 
     }//GEN-LAST:event_removerBTN_CRPActionPerformed
