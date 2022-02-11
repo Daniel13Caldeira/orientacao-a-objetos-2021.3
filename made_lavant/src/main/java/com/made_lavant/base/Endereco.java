@@ -2,12 +2,12 @@ package com.made_lavant.base;
 
 public class Endereco {
     //Componentes do endereço de uma pessoa
-    protected String cidade;
-    protected String cep;
-    protected String uf;
-    protected String bairro;
-    protected String rua;
-    protected String numero;
+    private String cidade;
+    private String cep;
+    private String uf;
+    private String bairro;
+    private String rua;
+    private String numero;
 
     //Retorna a cidade
     public String getCidade() {

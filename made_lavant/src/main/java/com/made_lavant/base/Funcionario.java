@@ -5,7 +5,7 @@ import com.made_lavant.dados.FuncionarioDados;
 
 public class Funcionario extends Pessoa {
 
-    protected String cod;
+    private String codigo;
 
     //cria um funcionário com endereço
     public Funcionario(String nome, Endereco endereco, String senha, String identificador) {
@@ -13,10 +13,10 @@ public class Funcionario extends Pessoa {
         super(nome, endereco, senha);
         if (identificador.equals("A")) {
             //cria gerente
-            this.cod = "A" + Codigos.buscaFuncionario();
+            this.codigo = "A" + Codigos.buscaFuncionario();
         } else {
             //cria funcionário
-            this.cod = "B" + Codigos.buscaFuncionario();
+            this.codigo = "B" + Codigos.buscaFuncionario();
         }
         //altera o código do próximo funcionário a ser criado
         Codigos.alterarFuncionario();
@@ -29,10 +29,10 @@ public class Funcionario extends Pessoa {
         super(nome, senha);
         if (identificador.equals("A")) {
             //cria gerente
-            this.cod = "A" + Codigos.buscaFuncionario();
+            this.codigo = "A" + Codigos.buscaFuncionario();
         } else {
             //cria funcionário
-            this.cod = "B" + Codigos.buscaFuncionario();
+            this.codigo = "B" + Codigos.buscaFuncionario();
         }
         //altera o código do próximo funcionário a ser criado
         Codigos.alterarFuncionario();
@@ -40,9 +40,9 @@ public class Funcionario extends Pessoa {
     }
     
     //Construtor que auxilia na edição com ordem de parametros diferente dos construtores de cadastro
-    public Funcionario(String cod, String nome, Endereco endereco, String senha) {
+    public Funcionario(String codigo, String nome, Endereco endereco, String senha) {
         super(nome, endereco, senha);
-        this.cod = cod;
+        this.codigo = codigo;
     }
 
     //Retorna o endereço do funcionário
@@ -52,8 +52,8 @@ public class Funcionario extends Pessoa {
     }
 
     //Retorna o código do funcionário
-    public String getCod() {
-        return cod;
+    public String getCodigo() {
+        return codigo;
     }
 
     //Retorna o nome do funcionário

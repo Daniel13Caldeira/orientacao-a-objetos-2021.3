@@ -7,8 +7,8 @@ import javax.swing.JOptionPane;
 
 public class VendaDelivery implements Venda {
     //Atributos da venda
-    String carrinho;
-    Date data;
+    private String carrinho;
+    private Date data;
 
     //Construtor da venda
     public VendaDelivery( String carrinho) {
