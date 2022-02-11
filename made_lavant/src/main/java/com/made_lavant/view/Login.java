@@ -16,6 +16,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         ProdutoDados.verificaValidade();
         initComponents();
+        //Deixa a tela do JFrame em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -33,6 +34,7 @@ public class Login extends javax.swing.JFrame {
         senhaPF_LO = new javax.swing.JPasswordField();
         cadastrarBTN_LO = new javax.swing.JButton();
         utilityLB_LO = new javax.swing.JLabel();
+        //o label é criado invisível
         utilityLB_LO.setVisible(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -156,7 +158,9 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void confirmarBTN_LOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_LOActionPerformed
+        //diz se o login pode ser feito
         boolean flag = true;
+        //verifica se os campos obrigatórios foram preenchidos
         if (loginTF_LO.getText().equals("") || loginTF_LO.getText().equals("Campo Obrigatório!")) {
             loginTF_LO.setText("Campo Obrigatório!");
             flag = false;
@@ -167,62 +171,85 @@ public class Login extends javax.swing.JFrame {
             flag = false;
         }
         if (flag) {
+            //se o primeiro caractere do login for 'A' o usuário é um gerente, se for 'B' é um funcionário, então suas informações estão armazenadas num arquivo txt de funcionários
             if (loginTF_LO.getText().charAt(0) == 'A' || loginTF_LO.getText().charAt(0) == 'B') {
-                String cod = FuncionarioDados.buscarCodigo(loginTF_LO.getText());
-                if (cod == null) {
+                //busca o código passado no arquivo txt
+                String codigo = FuncionarioDados.buscarCodigo(loginTF_LO.getText());
+                //verifica se o usuário foi cadastrado
+                if (codigo == null) {
                     utilityLB_LO.setText("Usuário Não Cadastrado!");
                     utilityLB_LO.setVisible(true);
                     flag = false;
                 } else {
                     utilityLB_LO.setVisible(false);
-                    String senha = FuncionarioDados.buscarSenha(cod);
+                    //busca a senha do usuário
+                    String senha = FuncionarioDados.buscarSenha(codigo);
+                    //verifica se a senha está correta
                     if (senha.equals(senhaPF_LO.getText())) {
+                        //muda o valor do atributo código para o código do usuário
                         Login.codigo = loginTF_LO.getText();
+                        //verifica o tipo de funcionário que está fazendo login
                         if (loginTF_LO.getText().charAt(0) == 'A') {
+                            //verifica se a senha cadastrada é a senha default
                             if (FuncionarioDados.buscarSenha(loginTF_LO.getText()).equals("madeLavant")) {
+                                //avisa que a senha cadastrada é a default
                                 JOptionPane.showMessageDialog(null, "Senha padrão detectada!\nRedirecionando para tela de edição.");
                                 this.setVisible(false);
+                                //redireciona para a tela de editar gerente
                                 new EditarDadosGerente().setVisible(true);
                             } else {
                                 this.setVisible(false);
+                                //redireciona para a tela de inicio do gerente
                                 new InicioGerente().setVisible(true);
-
                             }
                         } else {
+                            //verifica se a senha cadastrada é a senha default
                             if (FuncionarioDados.buscarSenha(loginTF_LO.getText()).equals("madeLavant")) {
+                                //avisa que a senha cadastrada é a default
                                 JOptionPane.showMessageDialog(null, "Senha padrão detectada!\nRedirecionando para tela de edição.");
                                 this.setVisible(false);
+                                //redireciona para a tela de editar funcionário
                                 new EditarDadosFuncionario().setVisible(true);
                             } else {
+                                //redireciona para a tela de inicio do gerente
                                 this.setVisible(false);
                                 new InicioFuncionario().setVisible(true);
                             }
                         }
                     } else {
+                        //avisa que a senha está errada
                         utilityLB_LO.setText("Senha Incorreta!");
                         utilityLB_LO.setVisible(true);
                     }
                 }
+                //o usuário é um cliente
             } else {
+                //verifica se o primeiro caractere é um número, se não for, o cpf é inválido
                 if (loginTF_LO.getText().charAt(0) >= '0' && loginTF_LO.getText().charAt(0) <= '9') {
+                    //busca o cpf do cliente no arquivo txt
                     String cod = ClienteDados.buscarCPF(loginTF_LO.getText());
                     if (cod == null) {
                         utilityLB_LO.setText("Usuário Não Cadastrado!");
                         utilityLB_LO.setVisible(true);
                         flag = false;
                     } else {
+                        //busca a senha do clinete no arquivo txt
                         utilityLB_LO.setVisible(false);
                         String senha = ClienteDados.buscarSenha(cod);
+                        //verifica se a senha está correta
                         if (senha.equals(senhaPF_LO.getText())) {
                             Login.codigo = loginTF_LO.getText();
+                            //redireciona a para o início do cliente
                             this.setVisible(false);
                             new InicioCliente().setVisible(true);
                         } else {
+                            //avisa que a senha est´incorreta
                             utilityLB_LO.setText("Senha Incorreta!");
                             utilityLB_LO.setVisible(true);
                         }
                     }
                 } else {
+                    //usuário não cadastrado
                     utilityLB_LO.setText("Usuário Não Cadastrado!");
                     utilityLB_LO.setVisible(true);
                     flag = false;
@@ -232,12 +259,12 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_confirmarBTN_LOActionPerformed
 
     private void cadastrarBTN_LOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarBTN_LOActionPerformed
+        //redireciona para a tela de cadastro de cliente
         this.setVisible(false);
         new CadastroCliente().setVisible(true);
     }//GEN-LAST:event_cadastrarBTN_LOActionPerformed
 
     public static void main(String args[]) {
-
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -257,9 +284,12 @@ public class Login extends javax.swing.JFrame {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                //verifica se tem algum funcionário cadastrado
                 if (vazio()) {
+                    //redireciona para o cadastro de gerente
                     new CadastroGerente().setVisible(true);
                 } else {
+                    //redireciona para a tela de login
                     new Login().setVisible(true);
                 }
             }
@@ -280,6 +310,7 @@ public class Login extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private static boolean vazio() {
+        //verifica se há algum funcionário cadastrado
         if (FuncionarioDados.vazio() == null) {
             return true;
         }

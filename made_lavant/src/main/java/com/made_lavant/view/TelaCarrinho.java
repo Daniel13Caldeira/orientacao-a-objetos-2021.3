@@ -3,33 +3,22 @@ package com.made_lavant.view;
 import com.made_lavant.base.Produto;
 import com.made_lavant.dados.CarrinhoDados;
 import com.made_lavant.dados.ClienteDados;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class TelaCarrinho extends javax.swing.JFrame {
 
-    Hashtable<String, String> ht;
 
     public TelaCarrinho() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
-        ht = new Hashtable<>();
         preencherTabela();
     }
     
     private void preencherTabela() {
         ArrayList<Produto> produtos = CarrinhoDados.getProdutos(Login.getCodigo());
-        DefaultTableModel model = (DefaultTableModel) jTCarrinho.getModel();
-        //Object[] linha;  //alguma linha
-        
+        DefaultTableModel model = (DefaultTableModel) jTCarrinho.getModel();        
         for (int i = 0; i < produtos.size(); i++) {
             Object[] linha = {produtos.get(i).getNome(), produtos.get(i).getCodigo(), produtos.get(i).getPreco()};
             model.addRow(linha);

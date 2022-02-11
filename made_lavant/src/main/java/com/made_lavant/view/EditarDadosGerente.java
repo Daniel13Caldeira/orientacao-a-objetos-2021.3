@@ -1,4 +1,3 @@
-
 package com.made_lavant.view;
 
 import com.made_lavant.base.Endereco;
@@ -8,10 +7,11 @@ import javax.swing.JTextField;
 
 public class EditarDadosGerente extends javax.swing.JFrame {
 
-
     public EditarDadosGerente() {
         initComponents();
+        //Preenche os text fields com as informações que foram cadastradas
         senhaTF_EDG.setText(FuncionarioDados.buscarSenha(Login.getCodigo()));
+        //verifica se tem um endereço cadastrado
         if (!FuncionarioDados.buscarBairro(Login.getCodigo()).equals("null")) {
             bairroTF_EDG.setText(FuncionarioDados.buscarBairro(Login.getCodigo()));
             cidadeTF_EDG.setText(FuncionarioDados.buscarCidade(Login.getCodigo()));
@@ -22,7 +22,6 @@ public class EditarDadosGerente extends javax.swing.JFrame {
         }
         setExtendedState(MAXIMIZED_BOTH);
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -357,9 +356,12 @@ public class EditarDadosGerente extends javax.swing.JFrame {
     }//GEN-LAST:event_numeroTF_EDGKeyTyped
 
     private void mascaraUF() {
+        //Máscara que aceita apenas 2 letras
         String texto = ufTF_EDG.getText();
         if (texto.length() > 0) {
+            //Verifica o tamanho da string excedeu 2 caracteres e se o último caractere digitado é uma letra
             if (!(texto.length() <= 2 && ((texto.charAt(texto.length() - 1) >= 'a' && texto.charAt(texto.length() - 1) <= 'z') || (texto.charAt(texto.length() - 1) >= 'A' && texto.charAt(texto.length() - 1) <= 'Z')))) {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }
@@ -367,9 +369,12 @@ public class EditarDadosGerente extends javax.swing.JFrame {
     }
 
     private void mascaraCEP() {
+        //Máscara que aceita apenas 8 letras
         String texto = cepTF_EDG.getText();
         if (texto.length() > 0) {
+            //Verifica o tamanho da string excedeu 8 caracteres e se o último caractere digitado é um número
             if (texto.length() > 8 || texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }
@@ -377,9 +382,12 @@ public class EditarDadosGerente extends javax.swing.JFrame {
     }
 
     private void mascaraInt(JTextField textField) {
+        //Máscara que aceita apenas números
         String texto = textField.getText();
         if (texto.length() > 0) {
+            //Verifica se o último caractere digitado é um número
             if (texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }

@@ -233,7 +233,7 @@
             <Property name="text" type="java.lang.String" value="Usu&#xe1;rio N&#xe3;o Cadastrado"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="utilityLB_LO.setVisible(false);"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="//o label &#xe9; criado invis&#xed;vel&#xd;&#xa;utilityLB_LO.setVisible(false);"/>
           </AuxValues>
         </Component>
       </SubComponents>

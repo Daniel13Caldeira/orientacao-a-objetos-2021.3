@@ -245,7 +245,6 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jLabel5"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="voltarBTN_EDP">

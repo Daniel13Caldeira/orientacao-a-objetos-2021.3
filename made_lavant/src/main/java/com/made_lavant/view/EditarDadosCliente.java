@@ -12,7 +12,9 @@ public class EditarDadosCliente extends javax.swing.JFrame {
 
     public EditarDadosCliente() {
         initComponents();
+        //Preenche os text fields com as informações que foram cadastradas
         senhaTF_EDC.setText(ClienteDados.buscarSenha(Login.getCodigo()));
+        //verifica se tem um endereço cadastrado
         if (!ClienteDados.buscarBairro(Login.getCodigo()).equals("null")) {
             bairroTF_EDC.setText(ClienteDados.buscarBairro(Login.getCodigo()));
             cidadeTF_EDC.setText(ClienteDados.buscarCidade(Login.getCodigo()));
@@ -21,6 +23,7 @@ public class EditarDadosCliente extends javax.swing.JFrame {
             numeroTF_EDC.setText(ClienteDados.buscarNumero(Login.getCodigo()));
             cepTF_EDC.setText(ClienteDados.buscarCEP(Login.getCodigo()));
         }
+        //Deixa o JFrame em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -285,6 +288,7 @@ public class EditarDadosCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sairBTN_EDCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_EDCActionPerformed
+        //volta para a tela de Login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_EDCActionPerformed
@@ -341,6 +345,7 @@ public class EditarDadosCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void voltarBTN_EDCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_EDCActionPerformed
+        //volta para o perfil do cliente
         this.setVisible(false);
         new PerfilCliente().setVisible(true);
     }//GEN-LAST:event_voltarBTN_EDCActionPerformed
@@ -370,9 +375,12 @@ public class EditarDadosCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_cepTF_EDCKeyTyped
 
     private void mascaraUF() {
+        //Máscara que aceita apenas 2 letras
         String texto = ufTF_EDC.getText();
         if (texto.length() > 0) {
+            //Verifica o tamanho da string excedeu 2 caracteres e se o último caractere digitado é uma letra
             if (!(texto.length() <= 2 && ((texto.charAt(texto.length() - 1) >= 'a' && texto.charAt(texto.length() - 1) <= 'z') || (texto.charAt(texto.length() - 1) >= 'A' && texto.charAt(texto.length() - 1) <= 'Z')))) {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }
@@ -380,9 +388,12 @@ public class EditarDadosCliente extends javax.swing.JFrame {
     }
 
     private void mascaraCEP() {
+        //Máscara que aceita apenas 8 letras
         String texto = cepTF_EDC.getText();
         if (texto.length() > 0) {
+            //Verifica o tamanho da string excedeu 8 caracteres e se o último caractere digitado é um número
             if (texto.length() > 8 || texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }
@@ -390,9 +401,12 @@ public class EditarDadosCliente extends javax.swing.JFrame {
     }
 
     private void mascaraInt(JTextField textField) {
+        //Máscara que aceita apenas números
         String texto = textField.getText();
         if (texto.length() > 0) {
+            //Verifica se o último caractere digitado é um número
             if (texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }

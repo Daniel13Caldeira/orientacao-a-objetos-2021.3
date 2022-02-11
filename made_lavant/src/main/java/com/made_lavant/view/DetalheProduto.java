@@ -6,6 +6,7 @@ public class DetalheProduto extends javax.swing.JFrame {
 
     public DetalheProduto() {
         initComponents();
+        //Coloca o JFrame em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -41,12 +42,10 @@ public class DetalheProduto extends javax.swing.JFrame {
         precoLB_DP.setBackground(new java.awt.Color(255, 255, 255));
         precoLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         precoLB_DP.setForeground(new java.awt.Color(255, 253, 130));
-        precoLB_DP.setText("00,00");
 
         nomeLB_DP.setBackground(new java.awt.Color(255, 255, 255));
         nomeLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         nomeLB_DP.setForeground(new java.awt.Color(255, 253, 130));
-        nomeLB_DP.setText("Nome");
 
         madeLB_DP.setBackground(new java.awt.Color(255, 253, 130));
         madeLB_DP.setFont(new java.awt.Font("Colonna MT", 0, 45)); // NOI18N
@@ -84,7 +83,6 @@ public class DetalheProduto extends javax.swing.JFrame {
         codigoLB_DP.setBackground(new java.awt.Color(255, 255, 255));
         codigoLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         codigoLB_DP.setForeground(new java.awt.Color(255, 253, 130));
-        codigoLB_DP.setText("000");
 
         topicoValLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
         topicoValLB_DP.setForeground(new java.awt.Color(232, 72, 85));
@@ -94,7 +92,6 @@ public class DetalheProduto extends javax.swing.JFrame {
         valLB_DP.setBackground(new java.awt.Color(255, 255, 255));
         valLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         valLB_DP.setForeground(new java.awt.Color(255, 253, 130));
-        valLB_DP.setText("dd/mm/aaaa");
 
         topicoQuantiDispLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
         topicoQuantiDispLB_DP.setForeground(new java.awt.Color(232, 72, 85));
@@ -104,7 +101,6 @@ public class DetalheProduto extends javax.swing.JFrame {
         quantiDispLB_DP.setBackground(new java.awt.Color(255, 255, 255));
         quantiDispLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         quantiDispLB_DP.setForeground(new java.awt.Color(255, 253, 130));
-        quantiDispLB_DP.setText("00");
 
         sairBTN_DP.setBackground(new java.awt.Color(255, 253, 130));
         sairBTN_DP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
@@ -146,13 +142,13 @@ public class DetalheProduto extends javax.swing.JFrame {
                                     .addComponent(topicoNomeLB_DP)
                                     .addComponent(topicoPrecoLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomeLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(codigoLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(precoLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(quantiDispLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(nomeLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                             .addComponent(lavantLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(valLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(precoLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(codigoLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(valLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(quantiDispLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(129, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -189,13 +185,18 @@ public class DetalheProduto extends javax.swing.JFrame {
                 .addGap(158, 158, 158))
         );
 
+        //Adiciona o preço do produto na label
         precoLB_DP.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
+        //Adiciona o nome do produto na label
         nomeLB_DP.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
+        //Adiciona o código do produto na label
         codigoLB_DP.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
+        //Adiciona a validade do produto na label
         String val = ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo()));
         if (!val.equals("null")){
             valLB_DP.setText(val);
         }else valLB_DP.setText("Indeterminado");
+        //Adiciona o quantidade do produto na label
         quantiDispLB_DP.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -213,11 +214,13 @@ public class DetalheProduto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void voltarBTN_DPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_DPActionPerformed
+        //volta para o crud de produtos
         this.setVisible(false);
         new CrudProdutos_Cliente().setVisible(true);
     }//GEN-LAST:event_voltarBTN_DPActionPerformed
 
     private void sairBTN_DPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_DPActionPerformed
+        //voltar pra tela de login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_DPActionPerformed

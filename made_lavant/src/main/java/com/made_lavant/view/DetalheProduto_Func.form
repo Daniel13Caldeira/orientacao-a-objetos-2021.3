@@ -65,12 +65,12 @@
                               <Component id="topicoNomeLB_DPF" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="nomeLB_DPF" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="codLB_DPF" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                              <Component id="precoLB_DPF" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
-                              <Component id="quantiDispLB_DPF" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                              <Component id="valLB_DPF" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="nomeLB_DPF" alignment="0" pref="200" max="32767" attributes="0"/>
+                              <Component id="precoLB_DPF" alignment="0" max="32767" attributes="0"/>
+                              <Component id="codLB_DPF" alignment="0" max="32767" attributes="0"/>
+                              <Component id="valLB_DPF" alignment="0" max="32767" attributes="0"/>
+                              <Component id="quantiDispLB_DPF" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                       </Group>
@@ -177,10 +177,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="000"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="codLB_DPF.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutos.getCodigo())));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o c&#xf3;digo do produto na label&#xd;&#xa;codLB_DPF.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutos.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoValLB_DPF">
@@ -206,10 +205,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="dd/mm/aaaa"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String val = ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos.getCodigo()));&#xa;if (!val.equals(&quot;null&quot;)){&#xa;    valLB_DPF.setText(val);&#xa;}else valLB_DPF.setText(&quot;Indeterminado&quot;);&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona a validade do produto na label&#xa;String val = ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos.getCodigo()));&#xa;if (!val.equals(&quot;null&quot;)){&#xa;    valLB_DPF.setText(val);&#xa;}else valLB_DPF.setText(&quot;Indeterminado&quot;);&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoPrecoLB_DPF">
@@ -247,10 +245,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="00,00"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="precoLB_DPF.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutos.getCodigo())));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o pre&#xe7;o do produto na label&#xd;&#xa;precoLB_DPF.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutos.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="quantiDispLB_DPF">
@@ -264,10 +261,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="00"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="quantiDispLB_DPF.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutos.getCodigo())));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona a quantidade do produto na label&#xd;&#xa;quantiDispLB_DPF.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutos.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="nomeLB_DPF">
@@ -281,10 +277,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="nomeLB_DPF.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutos.getCodigo())));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o nome do produto na label&#xd;&#xa;nomeLB_DPF.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutos.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="sairBTN_DPF">

@@ -6,6 +6,7 @@ public class DetalheProduto_Gerente extends javax.swing.JFrame {
 
     public DetalheProduto_Gerente() {
         initComponents();
+        //Deixa o JFrame em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -36,7 +37,6 @@ public class DetalheProduto_Gerente extends javax.swing.JFrame {
         precoLB_DPG.setBackground(new java.awt.Color(255, 255, 255));
         precoLB_DPG.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         precoLB_DPG.setForeground(new java.awt.Color(255, 253, 130));
-        precoLB_DPG.setText("00,00");
 
         topicoQuantiDispLB_DPG.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
         topicoQuantiDispLB_DPG.setForeground(new java.awt.Color(232, 72, 85));
@@ -51,7 +51,6 @@ public class DetalheProduto_Gerente extends javax.swing.JFrame {
         valLB_DPG.setBackground(new java.awt.Color(255, 255, 255));
         valLB_DPG.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         valLB_DPG.setForeground(new java.awt.Color(255, 253, 130));
-        valLB_DPG.setText("dd/mm/aaaa");
 
         topicoValLB_DPG.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
         topicoValLB_DPG.setForeground(new java.awt.Color(232, 72, 85));
@@ -61,7 +60,6 @@ public class DetalheProduto_Gerente extends javax.swing.JFrame {
         codLB_DPG.setBackground(new java.awt.Color(255, 255, 255));
         codLB_DPG.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         codLB_DPG.setForeground(new java.awt.Color(255, 253, 130));
-        codLB_DPG.setText("000");
 
         topicoCodLB_DPG.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
         topicoCodLB_DPG.setForeground(new java.awt.Color(232, 72, 85));
@@ -109,12 +107,10 @@ public class DetalheProduto_Gerente extends javax.swing.JFrame {
         nomeLB_DPG.setBackground(new java.awt.Color(255, 255, 255));
         nomeLB_DPG.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         nomeLB_DPG.setForeground(new java.awt.Color(255, 253, 130));
-        nomeLB_DPG.setText("Nome");
 
         quantiDispLB_DPG.setBackground(new java.awt.Color(255, 255, 255));
         quantiDispLB_DPG.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
         quantiDispLB_DPG.setForeground(new java.awt.Color(255, 253, 130));
-        quantiDispLB_DPG.setText("00");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -133,12 +129,12 @@ public class DetalheProduto_Gerente extends javax.swing.JFrame {
                             .addComponent(topicoPrecoLB_DPG, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(topicoNomeLB_DPG, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomeLB_DPG, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(codLB_DPG, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(precoLB_DPG, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(quantiDispLB_DPG, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(valLB_DPG))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(nomeLB_DPG, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(precoLB_DPG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(codLB_DPG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(valLB_DPG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(quantiDispLB_DPG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(58, 58, 58))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(voltarBTN_DPG)
@@ -186,13 +182,18 @@ public class DetalheProduto_Gerente extends javax.swing.JFrame {
                 .addGap(158, 158, 158))
         );
 
+        //Adiciona o preço do produto na label
         precoLB_DPG.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutosGerente.getCodigo())));
+        //Adiciona a validade do produto na label
         String val = ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutosGerente.getCodigo()));
         if (!val.equals("null")){
             valLB_DPG.setText(val);
         }else valLB_DPG.setText("Indeterminado");
+        //Adiciona o nome do produto na label
         codLB_DPG.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutosGerente.getCodigo())));
+        //Adiciona o nome do produto na label
         nomeLB_DPG.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutosGerente.getCodigo())));
+        //Adiciona a quantidade do produto na label
         quantiDispLB_DPG.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutosGerente.getCodigo())));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -210,11 +211,13 @@ public class DetalheProduto_Gerente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void voltarBTN_DPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_DPGActionPerformed
+        //volta para o CRUD de produtos
         this.setVisible(false);
         new CrudProdutosGerente().setVisible(true);
     }//GEN-LAST:event_voltarBTN_DPGActionPerformed
 
     private void sairBTN_DPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_DPGActionPerformed
+        //volta para a tela de login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_DPGActionPerformed

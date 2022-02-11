@@ -77,13 +77,13 @@
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="nomeLB_DP" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="codigoLB_DP" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                              <Component id="precoLB_DP" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
-                              <Component id="quantiDispLB_DP" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="nomeLB_DP" alignment="0" pref="200" max="32767" attributes="0"/>
                               <Component id="lavantLB_DP" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
-                              <Component id="valLB_DP" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
+                              <Component id="precoLB_DP" alignment="0" max="32767" attributes="0"/>
+                              <Component id="codigoLB_DP" alignment="0" max="32767" attributes="0"/>
+                              <Component id="valLB_DP" alignment="0" max="32767" attributes="0"/>
+                              <Component id="quantiDispLB_DP" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -157,10 +157,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="00,00"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="precoLB_DP.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o pre&#xe7;o do produto na label&#xd;&#xa;precoLB_DP.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="nomeLB_DP">
@@ -174,10 +173,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="nomeLB_DP.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o nome do produto na label&#xd;&#xa;nomeLB_DP.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="madeLB_DP">
@@ -263,10 +261,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="000"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="codigoLB_DP.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o c&#xf3;digo do produto na label&#xd;&#xa;codigoLB_DP.setText(ProdutoDados.buscarCodigo(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoValLB_DP">
@@ -292,10 +289,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="dd/mm/aaaa"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String val = ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo()));&#xa;if (!val.equals(&quot;null&quot;)){&#xa;    valLB_DP.setText(val);&#xa;}else valLB_DP.setText(&quot;Indeterminado&quot;);"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona a validade do produto na label&#xa;String val = ProdutoDados.buscarValidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo()));&#xa;if (!val.equals(&quot;null&quot;)){&#xa;    valLB_DP.setText(val);&#xa;}else valLB_DP.setText(&quot;Indeterminado&quot;);"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoQuantiDispLB_DP">
@@ -321,10 +317,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="82" green="fd" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="00"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="quantiDispLB_DP.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Adiciona o quantidade do produto na label&#xd;&#xa;quantiDispLB_DP.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="sairBTN_DP">

@@ -1,4 +1,3 @@
-
 package com.made_lavant.view;
 
 import com.made_lavant.base.Endereco;
@@ -6,13 +5,13 @@ import com.made_lavant.base.Funcionario;
 import com.made_lavant.dados.FuncionarioDados;
 import javax.swing.JTextField;
 
-
 public class EditarDadosFuncionario extends javax.swing.JFrame {
-
 
     public EditarDadosFuncionario() {
         initComponents();
+        //Preenche os text fields com as informações que foram cadastradas
         senhaTF_EDF.setText(FuncionarioDados.buscarSenha(Login.getCodigo()));
+        //verifica se tem um endereço cadastrado
         if (!FuncionarioDados.buscarBairro(Login.getCodigo()).equals("null")) {
             bairroTF_EDF.setText(FuncionarioDados.buscarBairro(Login.getCodigo()));
             cidadeTF_EDF.setText(FuncionarioDados.buscarCidade(Login.getCodigo()));
@@ -321,11 +320,13 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
     }//GEN-LAST:event_confirmarBTN_EDFActionPerformed
 
     private void sairBTN_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_EDFActionPerformed
+        //volta para a tela de login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_EDFActionPerformed
 
     private void voltarBTN_EDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_EDFActionPerformed
+        //volta para o perfil do funcionario
         this.setVisible(false);
         new PerfilFuncionario().setVisible(true);
     }//GEN-LAST:event_voltarBTN_EDFActionPerformed
@@ -354,11 +355,13 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
         mascaraInt(numeroTF_EDF);
     }//GEN-LAST:event_numeroTF_EDFKeyTyped
 
-
     private void mascaraUF() {
+        //Máscara que aceita apenas 2 letras
         String texto = ufTF_EDF.getText();
         if (texto.length() > 0) {
+            //Verifica o tamanho da string excedeu 2 caracteres e se o último caractere digitado é uma letra
             if (!(texto.length() <= 2 && ((texto.charAt(texto.length() - 1) >= 'a' && texto.charAt(texto.length() - 1) <= 'z') || (texto.charAt(texto.length() - 1) >= 'A' && texto.charAt(texto.length() - 1) <= 'Z')))) {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }
@@ -366,9 +369,12 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
     }
 
     private void mascaraCEP() {
+        //Máscara que aceita apenas 8 letras
         String texto = cepTF_EDF.getText();
         if (texto.length() > 0) {
+            //Verifica o tamanho da string excedeu 8 caracteres e se o último caractere digitado é um número
             if (texto.length() > 8 || texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }
@@ -376,9 +382,12 @@ public class EditarDadosFuncionario extends javax.swing.JFrame {
     }
 
     private void mascaraInt(JTextField textField) {
+        //Máscara que aceita apenas números
         String texto = textField.getText();
         if (texto.length() > 0) {
+            //Verifica se o último caractere digitado é um número
             if (texto.charAt(texto.length() - 1) < '0' || texto.charAt(texto.length() - 1) > '9') {
+                //Apaga o caractere digitado
                 texto = texto.substring(0, texto.length() - 1);
             }
         }

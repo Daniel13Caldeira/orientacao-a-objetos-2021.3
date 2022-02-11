@@ -114,7 +114,6 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
 
         nomeLB_EDPG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         nomeLB_EDPG.setForeground(new java.awt.Color(232, 72, 85));
-        nomeLB_EDPG.setText("jLabel5");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -194,7 +193,9 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void confirmarBTN_EDPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_EDPGActionPerformed
+        //diz se a edição pode ser feita
         boolean edicao = true;
+        //verifica se os campos obrigatórios foram preenchidos
         if (precoTF_EDPG.getText().equals("") || precoTF_EDPG.getText().equals("Campo obrigatório")) {
             precoTF_EDPG.setText("Campo obrigatório");
             edicao = false;
@@ -204,6 +205,7 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
             edicao = false;
         }
         if (edicao) {
+            //edita o produto
             ProdutoDados.alterar(new Produto((Integer.parseInt(CrudProdutos.getCodigo())), (Double.parseDouble(precoTF_EDPG.getText())), (Double.parseDouble(quantiTF_EDPG.getText()))));
             this.setVisible(false);
             new DetalheProduto_Gerente().setVisible(true);
@@ -211,11 +213,13 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
     }//GEN-LAST:event_confirmarBTN_EDPGActionPerformed
 
     private void sairBTN_EDPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_EDPGActionPerformed
+        //volta para a tela de login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_EDPGActionPerformed
 
     private void voltarBTN_EDPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_EDPGActionPerformed
+        //volta para o crud de produtos
         this.setVisible(false);
         new CrudProdutosGerente().setVisible(true);
     }//GEN-LAST:event_voltarBTN_EDPGActionPerformed
@@ -236,18 +240,23 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
         mascaraDouble(quantiTF_EDPG);
     }//GEN-LAST:event_quantiTF_EDPGKeyTyped
     private void mascaraDouble(JTextField textField) {
+        //Verifica se o número digitado é um valor do tipo double
         String texto = textField.getText();
         if (texto.length() > 0) {
+            //Verifica o separador decimal e se é um número
             if (!(texto.charAt(texto.length() - 1) == '.' || (texto.charAt(texto.length() - 1) >= '0' && texto.charAt(texto.length() - 1) <= '9'))) {
+                //Apaga o último caractere
                 texto = texto.substring(0, texto.length() - 1);
             }
             int cont = 0;
             for (int i = 0; i < texto.length(); i++) {
+                //Verifica se há mais de um Ponto
                 if (texto.charAt(i) == '.') {
                     cont++;
                 }
             }
             if (cont > 1) {
+                //Apaga o último caractere
                 texto = texto.substring(0, texto.length() - 1);
             }
         }

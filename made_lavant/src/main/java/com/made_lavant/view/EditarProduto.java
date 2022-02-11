@@ -8,6 +8,7 @@ public class EditarProduto extends javax.swing.JFrame {
 
     public EditarProduto() {
         initComponents();
+        //Preenche os text fields com as informações que foram cadastradas
         nomeLB_EDP.setText(ProdutoDados.buscarNome(Integer.parseInt(CrudProdutos.getCodigo())));
         quantiTF_EDP.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutos.getCodigo())));
         precoTF_EDP.setText(ProdutoDados.buscarPreco(Integer.parseInt(CrudProdutos.getCodigo())));
@@ -110,7 +111,6 @@ public class EditarProduto extends javax.swing.JFrame {
 
         nomeLB_EDP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
         nomeLB_EDP.setForeground(new java.awt.Color(232, 72, 85));
-        nomeLB_EDP.setText("jLabel5");
 
         voltarBTN_EDP.setBackground(new java.awt.Color(255, 253, 130));
         voltarBTN_EDP.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
@@ -200,12 +200,15 @@ public class EditarProduto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sairBTN_EDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairBTN_EDPActionPerformed
+        //Volta para a tela de login
         this.setVisible(false);
         new Login().setVisible(true);
     }//GEN-LAST:event_sairBTN_EDPActionPerformed
 
     private void confirmarBTN_EDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarBTN_EDPActionPerformed
+        //verifica se a edição pode ser feita
         boolean edicao = true;
+        //verifica os campos obrigatórios
         if (precoTF_EDP.getText().equals("") || precoTF_EDP.getText().equals("Campo obrigatório")) {
             precoTF_EDP.setText("Campo obrigatório");
             edicao = false;
@@ -214,6 +217,7 @@ public class EditarProduto extends javax.swing.JFrame {
             quantiTF_EDP.setText("Campo obrigatório");
             edicao = false;
         }
+        //edita o produto
         if (edicao) {
             ProdutoDados.alterar(new Produto((Integer.parseInt(CrudProdutos.getCodigo())), (Double.parseDouble(precoTF_EDP.getText())), (Double.parseDouble(quantiTF_EDP.getText()))));
             this.setVisible(false);
@@ -225,6 +229,7 @@ public class EditarProduto extends javax.swing.JFrame {
     }//GEN-LAST:event_precoTF_EDPActionPerformed
 
     private void voltarBTN_EDPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_EDPActionPerformed
+        //volta para o crud de produtos
         this.setVisible(false);
         new CrudProdutos().setVisible(true);
     }//GEN-LAST:event_voltarBTN_EDPActionPerformed
@@ -246,18 +251,23 @@ public class EditarProduto extends javax.swing.JFrame {
     }//GEN-LAST:event_quantiTF_EDPKeyTyped
 
     private void mascaraDouble(JTextField textField) {
+        //Verifica se o número digitado é um valor do tipo double
         String texto = textField.getText();
         if (texto.length() > 0) {
+            //Verifica o separador decimal e se é um número
             if (!(texto.charAt(texto.length() - 1) == '.' || (texto.charAt(texto.length() - 1) >= '0' && texto.charAt(texto.length() - 1) <= '9'))) {
+                //Apaga o último caractere
                 texto = texto.substring(0, texto.length() - 1);
             }
             int cont = 0;
             for (int i = 0; i < texto.length(); i++) {
+                //Verifica se há mais de um Ponto
                 if (texto.charAt(i) == '.') {
                     cont++;
                 }
             }
             if (cont > 1) {
+                //Apaga o último caractere
                 texto = texto.substring(0, texto.length() - 1);
             }
         }
