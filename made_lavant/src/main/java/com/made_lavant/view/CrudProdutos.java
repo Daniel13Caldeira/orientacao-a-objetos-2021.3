@@ -57,19 +57,19 @@ public class CrudProdutos extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
         madeLB_CRP.setBackground(new java.awt.Color(255, 253, 130));
-        madeLB_CRP.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        madeLB_CRP.setFont(madeLB_CRP.getFont().deriveFont(madeLB_CRP.getFont().getStyle() | java.awt.Font.BOLD, madeLB_CRP.getFont().getSize()+13));
         madeLB_CRP.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_CRP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         madeLB_CRP.setText("MADE");
         madeLB_CRP.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        lavantLB_CRP.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        lavantLB_CRP.setFont(lavantLB_CRP.getFont().deriveFont(lavantLB_CRP.getFont().getStyle() | java.awt.Font.BOLD, lavantLB_CRP.getFont().getSize()+13));
         lavantLB_CRP.setForeground(new java.awt.Color(232, 72, 85));
         lavantLB_CRP.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_CRP.setText("Lavant");
 
         sairBTN_CRP.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_CRP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_CRP.setFont(sairBTN_CRP.getFont().deriveFont(sairBTN_CRP.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_CRP.getFont().getSize()+7));
         sairBTN_CRP.setForeground(new java.awt.Color(232, 72, 85));
         sairBTN_CRP.setText("Sair");
         sairBTN_CRP.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +79,7 @@ public class CrudProdutos extends javax.swing.JFrame {
         });
 
         voltarBTN_CRP.setBackground(new java.awt.Color(255, 253, 130));
-        voltarBTN_CRP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        voltarBTN_CRP.setFont(voltarBTN_CRP.getFont().deriveFont(voltarBTN_CRP.getFont().getStyle() & ~java.awt.Font.BOLD, voltarBTN_CRP.getFont().getSize()+7));
         voltarBTN_CRP.setForeground(new java.awt.Color(232, 72, 85));
         voltarBTN_CRP.setText("Voltar");
         voltarBTN_CRP.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +89,7 @@ public class CrudProdutos extends javax.swing.JFrame {
         });
 
         addProdBTN_CRP.setBackground(new java.awt.Color(255, 253, 130));
-        addProdBTN_CRP.setFont(new java.awt.Font("Colonna MT", 1, 14)); // NOI18N
+        addProdBTN_CRP.setFont(addProdBTN_CRP.getFont().deriveFont(addProdBTN_CRP.getFont().getStyle() & ~java.awt.Font.BOLD, addProdBTN_CRP.getFont().getSize()+7));
         addProdBTN_CRP.setForeground(new java.awt.Color(232, 72, 85));
         addProdBTN_CRP.setText("Adicionar Produto");
         addProdBTN_CRP.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +99,7 @@ public class CrudProdutos extends javax.swing.JFrame {
         });
 
         removerBTN_CRP.setBackground(new java.awt.Color(255, 253, 130));
-        removerBTN_CRP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        removerBTN_CRP.setFont(removerBTN_CRP.getFont().deriveFont(removerBTN_CRP.getFont().getStyle() & ~java.awt.Font.BOLD, removerBTN_CRP.getFont().getSize()+7));
         removerBTN_CRP.setForeground(new java.awt.Color(232, 72, 85));
         removerBTN_CRP.setText("Remover");
         removerBTN_CRP.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +109,7 @@ public class CrudProdutos extends javax.swing.JFrame {
         });
 
         editarBTN_CRP.setBackground(new java.awt.Color(255, 253, 130));
-        editarBTN_CRP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        editarBTN_CRP.setFont(editarBTN_CRP.getFont().deriveFont(editarBTN_CRP.getFont().getStyle() & ~java.awt.Font.BOLD, editarBTN_CRP.getFont().getSize()+7));
         editarBTN_CRP.setForeground(new java.awt.Color(232, 72, 85));
         editarBTN_CRP.setText("Editar");
         editarBTN_CRP.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +119,7 @@ public class CrudProdutos extends javax.swing.JFrame {
         });
 
         descricaoBTN_CRP.setBackground(new java.awt.Color(255, 253, 130));
-        descricaoBTN_CRP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        descricaoBTN_CRP.setFont(descricaoBTN_CRP.getFont().deriveFont(descricaoBTN_CRP.getFont().getStyle() & ~java.awt.Font.BOLD, descricaoBTN_CRP.getFont().getSize()+7));
         descricaoBTN_CRP.setForeground(new java.awt.Color(232, 72, 85));
         descricaoBTN_CRP.setText("Descrição");
         descricaoBTN_CRP.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +129,7 @@ public class CrudProdutos extends javax.swing.JFrame {
         });
 
         jTProdutos.setBackground(new java.awt.Color(45, 48, 71));
-        jTProdutos.setForeground(new java.awt.Color(255, 255, 255));
+        jTProdutos.setFont(jTProdutos.getFont().deriveFont(jTProdutos.getFont().getSize()+4f));
         jTProdutos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -157,32 +157,30 @@ public class CrudProdutos extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(sairBTN_CRP)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 219, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
                         .addComponent(addProdBTN_CRP)
-                        .addGap(198, 198, 198)
-                        .addComponent(voltarBTN_CRP)
-                        .addContainerGap())
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
+                        .addComponent(voltarBTN_CRP))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(removerBTN_CRP)
+                        .addGap(18, 18, 18)
+                        .addComponent(editarBTN_CRP)
+                        .addGap(18, 18, 18)
+                        .addComponent(descricaoBTN_CRP))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lavantLB_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(madeLB_CRP))
-                                .addGap(330, 330, 330))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(removerBTN_CRP)
-                                .addGap(18, 18, 18)
-                                .addComponent(editarBTN_CRP)
-                                .addGap(18, 18, 18)
-                                .addComponent(descricaoBTN_CRP)
-                                .addContainerGap())))))
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(madeLB_CRP, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lavantLB_CRP, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,11 +190,11 @@ public class CrudProdutos extends javax.swing.JFrame {
                     .addComponent(sairBTN_CRP)
                     .addComponent(voltarBTN_CRP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(addProdBTN_CRP))
-                .addGap(29, 29, 29)
+                .addGap(27, 27, 27)
                 .addComponent(madeLB_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lavantLB_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(removerBTN_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(editarBTN_CRP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)

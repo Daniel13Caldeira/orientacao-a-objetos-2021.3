@@ -80,9 +80,9 @@
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Component id="ufTF_CG" pref="169" max="32767" attributes="0"/>
-                                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                           <Component id="topicoCepLB_CG" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="cepTF_CG" min="-2" pref="278" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>

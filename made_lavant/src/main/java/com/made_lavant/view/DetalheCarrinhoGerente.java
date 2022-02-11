@@ -52,25 +52,25 @@ private ArrayList<Produto> listaDeProdutos;
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
         topicoTotalLB_DCG.setBackground(new java.awt.Color(255, 253, 130));
-        topicoTotalLB_DCG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        topicoTotalLB_DCG.setFont(topicoTotalLB_DCG.getFont().deriveFont(topicoTotalLB_DCG.getFont().getStyle() & ~java.awt.Font.BOLD, topicoTotalLB_DCG.getFont().getSize()+7));
         topicoTotalLB_DCG.setForeground(new java.awt.Color(232, 72, 85));
         topicoTotalLB_DCG.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         topicoTotalLB_DCG.setText("Total");
 
         madeLB_DCG.setBackground(new java.awt.Color(255, 253, 130));
-        madeLB_DCG.setFont(new java.awt.Font("Colonna MT", 0, 20)); // NOI18N
+        madeLB_DCG.setFont(madeLB_DCG.getFont().deriveFont(madeLB_DCG.getFont().getStyle() | java.awt.Font.BOLD, madeLB_DCG.getFont().getSize()+13));
         madeLB_DCG.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_DCG.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         madeLB_DCG.setText("MADE");
         madeLB_DCG.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        lavantLB_DCG.setFont(new java.awt.Font("Colonna MT", 1, 20)); // NOI18N
+        lavantLB_DCG.setFont(lavantLB_DCG.getFont().deriveFont(lavantLB_DCG.getFont().getStyle() | java.awt.Font.BOLD, lavantLB_DCG.getFont().getSize()+13));
         lavantLB_DCG.setForeground(new java.awt.Color(232, 72, 85));
         lavantLB_DCG.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_DCG.setText("Lavant");
 
         voltarBTN_DCG.setBackground(new java.awt.Color(255, 253, 130));
-        voltarBTN_DCG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        voltarBTN_DCG.setFont(voltarBTN_DCG.getFont().deriveFont(voltarBTN_DCG.getFont().getStyle() & ~java.awt.Font.BOLD, voltarBTN_DCG.getFont().getSize()+7));
         voltarBTN_DCG.setForeground(new java.awt.Color(232, 72, 85));
         voltarBTN_DCG.setText("Voltar");
         voltarBTN_DCG.addActionListener(new java.awt.event.ActionListener() {
@@ -80,12 +80,12 @@ private ArrayList<Produto> listaDeProdutos;
         });
 
         totalLB_DCG.setBackground(new java.awt.Color(255, 255, 255));
-        totalLB_DCG.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        totalLB_DCG.setFont(totalLB_DCG.getFont().deriveFont(totalLB_DCG.getFont().getStyle() & ~java.awt.Font.BOLD, totalLB_DCG.getFont().getSize()+7));
         totalLB_DCG.setForeground(new java.awt.Color(255, 253, 130));
         totalLB_DCG.setText("000");
 
         sairBTN_DCG.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_DCG.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_DCG.setFont(sairBTN_DCG.getFont().deriveFont(sairBTN_DCG.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_DCG.getFont().getSize()+7));
         sairBTN_DCG.setForeground(new java.awt.Color(232, 72, 85));
         sairBTN_DCG.setText("Sair");
         sairBTN_DCG.addActionListener(new java.awt.event.ActionListener() {
@@ -95,6 +95,7 @@ private ArrayList<Produto> listaDeProdutos;
         });
 
         jTDetalheGerente.setBackground(new java.awt.Color(45, 48, 71));
+        jTDetalheGerente.setFont(jTDetalheGerente.getFont().deriveFont(jTDetalheGerente.getFont().getSize()+4f));
         jTDetalheGerente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -109,7 +110,7 @@ private ArrayList<Produto> listaDeProdutos;
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 645, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,15 +123,10 @@ private ArrayList<Produto> listaDeProdutos;
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 39, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lavantLB_DCG, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(madeLB_DCG))
-                        .addGap(0, 512, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(sairBTN_DCG)
                         .addGap(18, 18, 18)
@@ -138,9 +134,14 @@ private ArrayList<Produto> listaDeProdutos;
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(topicoTotalLB_DCG, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(totalLB_DCG, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(totalLB_DCG, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(madeLB_DCG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lavantLB_DCG, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

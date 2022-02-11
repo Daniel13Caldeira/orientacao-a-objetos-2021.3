@@ -275,7 +275,11 @@ public class FuncionarioDados {
             String linha = leitor.readLine();//primeira linha com produto
             while (linha != null) {
                 //adiciona o funcionario na lista
-                funcionarios.add(new Funcionario(separa(linha, 0), buscarNome(linha), new Endereco(buscarCidade(linha), buscarCEP(linha), buscarUF(linha), buscarBairro(linha), buscarRua(linha), buscarNumero(linha)), buscarSenha(linha)));//adiciona o produto na lista
+                funcionarios.add(new Funcionario(separa(linha, 0),
+                        buscarNome(separa(linha, 0)),
+                        new Endereco(buscarCidade(separa(linha, 0)), buscarCEP(separa(linha, 0)),
+                                buscarUF(separa(linha, 0)), buscarBairro(separa(linha, 0)), buscarRua(separa(linha, 0)), buscarNumero(separa(linha, 0))),
+                        buscarSenha(separa(linha, 0))));//adiciona o produto na lista
                 linha = leitor.readLine();//próxima linha
             }
         } catch (IOException ex) {

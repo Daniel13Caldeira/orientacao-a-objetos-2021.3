@@ -26,47 +26,47 @@ public class DetalheProduto extends javax.swing.JFrame {
         codigoLB_DP = new javax.swing.JLabel();
         topicoValLB_DP = new javax.swing.JLabel();
         valLB_DP = new javax.swing.JLabel();
-        topicoQuantiDispLB_DP = new javax.swing.JLabel();
-        quantiDispLB_DP = new javax.swing.JLabel();
+        topicoEstoqueLB_DP = new javax.swing.JLabel();
+        estoqueLB_DP = new javax.swing.JLabel();
         sairBTN_DP = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
-        topicoPrecoLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoPrecoLB_DP.setFont(topicoPrecoLB_DP.getFont().deriveFont(topicoPrecoLB_DP.getFont().getStyle() & ~java.awt.Font.BOLD, topicoPrecoLB_DP.getFont().getSize()+7));
         topicoPrecoLB_DP.setForeground(new java.awt.Color(232, 72, 85));
         topicoPrecoLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         topicoPrecoLB_DP.setText("Preço");
 
         precoLB_DP.setBackground(new java.awt.Color(255, 255, 255));
-        precoLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        precoLB_DP.setFont(precoLB_DP.getFont().deriveFont(precoLB_DP.getFont().getStyle() & ~java.awt.Font.BOLD, precoLB_DP.getFont().getSize()+7));
         precoLB_DP.setForeground(new java.awt.Color(255, 253, 130));
 
         nomeLB_DP.setBackground(new java.awt.Color(255, 255, 255));
-        nomeLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        nomeLB_DP.setFont(nomeLB_DP.getFont().deriveFont(nomeLB_DP.getFont().getStyle() & ~java.awt.Font.BOLD, nomeLB_DP.getFont().getSize()+7));
         nomeLB_DP.setForeground(new java.awt.Color(255, 253, 130));
 
         madeLB_DP.setBackground(new java.awt.Color(255, 253, 130));
-        madeLB_DP.setFont(new java.awt.Font("Colonna MT", 0, 45)); // NOI18N
+        madeLB_DP.setFont(madeLB_DP.getFont().deriveFont(madeLB_DP.getFont().getStyle() | java.awt.Font.BOLD, madeLB_DP.getFont().getSize()+34));
         madeLB_DP.setForeground(new java.awt.Color(255, 253, 130));
         madeLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         madeLB_DP.setText("MADE");
         madeLB_DP.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         topicoNomeLB_DP.setBackground(new java.awt.Color(255, 253, 130));
-        topicoNomeLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoNomeLB_DP.setFont(topicoNomeLB_DP.getFont().deriveFont(topicoNomeLB_DP.getFont().getStyle() & ~java.awt.Font.BOLD, topicoNomeLB_DP.getFont().getSize()+7));
         topicoNomeLB_DP.setForeground(new java.awt.Color(232, 72, 85));
-        topicoNomeLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        topicoNomeLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         topicoNomeLB_DP.setText("Nome");
 
-        lavantLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 45)); // NOI18N
+        lavantLB_DP.setFont(lavantLB_DP.getFont().deriveFont(lavantLB_DP.getFont().getStyle() | java.awt.Font.BOLD, lavantLB_DP.getFont().getSize()+34));
         lavantLB_DP.setForeground(new java.awt.Color(232, 72, 85));
         lavantLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_DP.setText("Lavant");
 
         voltarBTN_DP.setBackground(new java.awt.Color(255, 253, 130));
-        voltarBTN_DP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        voltarBTN_DP.setFont(voltarBTN_DP.getFont().deriveFont(voltarBTN_DP.getFont().getStyle() & ~java.awt.Font.BOLD, voltarBTN_DP.getFont().getSize()+7));
         voltarBTN_DP.setForeground(new java.awt.Color(232, 72, 85));
         voltarBTN_DP.setText("Voltar");
         voltarBTN_DP.addActionListener(new java.awt.event.ActionListener() {
@@ -75,35 +75,35 @@ public class DetalheProduto extends javax.swing.JFrame {
             }
         });
 
-        topicoCodLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoCodLB_DP.setFont(topicoCodLB_DP.getFont().deriveFont(topicoCodLB_DP.getFont().getStyle() & ~java.awt.Font.BOLD, topicoCodLB_DP.getFont().getSize()+7));
         topicoCodLB_DP.setForeground(new java.awt.Color(232, 72, 85));
         topicoCodLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         topicoCodLB_DP.setText("Código");
 
         codigoLB_DP.setBackground(new java.awt.Color(255, 255, 255));
-        codigoLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        codigoLB_DP.setFont(codigoLB_DP.getFont().deriveFont(codigoLB_DP.getFont().getStyle() & ~java.awt.Font.BOLD, codigoLB_DP.getFont().getSize()+7));
         codigoLB_DP.setForeground(new java.awt.Color(255, 253, 130));
 
-        topicoValLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
+        topicoValLB_DP.setFont(topicoValLB_DP.getFont().deriveFont(topicoValLB_DP.getFont().getStyle() & ~java.awt.Font.BOLD, topicoValLB_DP.getFont().getSize()+7));
         topicoValLB_DP.setForeground(new java.awt.Color(232, 72, 85));
         topicoValLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         topicoValLB_DP.setText("Validade");
 
         valLB_DP.setBackground(new java.awt.Color(255, 255, 255));
-        valLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
+        valLB_DP.setFont(valLB_DP.getFont().deriveFont(valLB_DP.getFont().getStyle() & ~java.awt.Font.BOLD, valLB_DP.getFont().getSize()+7));
         valLB_DP.setForeground(new java.awt.Color(255, 253, 130));
 
-        topicoQuantiDispLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 16)); // NOI18N
-        topicoQuantiDispLB_DP.setForeground(new java.awt.Color(232, 72, 85));
-        topicoQuantiDispLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        topicoQuantiDispLB_DP.setText("Quantidade disponível");
+        topicoEstoqueLB_DP.setFont(topicoEstoqueLB_DP.getFont().deriveFont(topicoEstoqueLB_DP.getFont().getStyle() & ~java.awt.Font.BOLD, topicoEstoqueLB_DP.getFont().getSize()+7));
+        topicoEstoqueLB_DP.setForeground(new java.awt.Color(232, 72, 85));
+        topicoEstoqueLB_DP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        topicoEstoqueLB_DP.setText("Estoque");
 
-        quantiDispLB_DP.setBackground(new java.awt.Color(255, 255, 255));
-        quantiDispLB_DP.setFont(new java.awt.Font("Colonna MT", 1, 13)); // NOI18N
-        quantiDispLB_DP.setForeground(new java.awt.Color(255, 253, 130));
+        estoqueLB_DP.setBackground(new java.awt.Color(255, 255, 255));
+        estoqueLB_DP.setFont(estoqueLB_DP.getFont().deriveFont(estoqueLB_DP.getFont().getStyle() & ~java.awt.Font.BOLD, estoqueLB_DP.getFont().getSize()+7));
+        estoqueLB_DP.setForeground(new java.awt.Color(255, 253, 130));
 
         sairBTN_DP.setBackground(new java.awt.Color(255, 253, 130));
-        sairBTN_DP.setFont(new java.awt.Font("Colonna MT", 1, 18)); // NOI18N
+        sairBTN_DP.setFont(sairBTN_DP.getFont().deriveFont(sairBTN_DP.getFont().getStyle() & ~java.awt.Font.BOLD, sairBTN_DP.getFont().getSize()+7));
         sairBTN_DP.setForeground(new java.awt.Color(232, 72, 85));
         sairBTN_DP.setText("Sair");
         sairBTN_DP.addActionListener(new java.awt.event.ActionListener() {
@@ -116,40 +116,40 @@ public class DetalheProduto extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(sairBTN_DP)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(voltarBTN_DP)
+                .addGap(27, 27, 27))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(madeLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lavantLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
+                    .addComponent(madeLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(144, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(sairBTN_DP)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 362, Short.MAX_VALUE)
-                        .addComponent(voltarBTN_DP))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(topicoValLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(topicoEstoqueLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(5, 5, 5))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(topicoValLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(topicoQuantiDispLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(35, 35, 35))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(topicoCodLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(topicoNomeLB_DP)
-                                    .addComponent(topicoPrecoLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(nomeLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                            .addComponent(lavantLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(precoLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(codigoLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(valLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(quantiDispLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(129, Short.MAX_VALUE))
+                            .addComponent(topicoCodLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(topicoPrecoLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(topicoNomeLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(precoLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(codigoLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(valLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(estoqueLB_DP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(nomeLB_DP, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,7 +162,7 @@ public class DetalheProduto extends javax.swing.JFrame {
                 .addComponent(madeLB_DP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lavantLB_DP)
-                .addGap(64, 64, 64)
+                .addGap(79, 79, 79)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(topicoNomeLB_DP)
                     .addComponent(nomeLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -180,8 +180,8 @@ public class DetalheProduto extends javax.swing.JFrame {
                     .addComponent(valLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(topicoQuantiDispLB_DP)
-                    .addComponent(quantiDispLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(topicoEstoqueLB_DP)
+                    .addComponent(estoqueLB_DP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(158, 158, 158))
         );
 
@@ -197,7 +197,7 @@ public class DetalheProduto extends javax.swing.JFrame {
             valLB_DP.setText(val);
         }else valLB_DP.setText("Indeterminado");
         //Adiciona o quantidade do produto na label
-        quantiDispLB_DP.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
+        estoqueLB_DP.setText(ProdutoDados.buscarQuantidade(Integer.parseInt(CrudProdutos_Cliente.getCodigo())));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -227,17 +227,17 @@ public class DetalheProduto extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel codigoLB_DP;
+    private javax.swing.JLabel estoqueLB_DP;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lavantLB_DP;
     private javax.swing.JLabel madeLB_DP;
     private javax.swing.JLabel nomeLB_DP;
     private javax.swing.JLabel precoLB_DP;
-    private javax.swing.JLabel quantiDispLB_DP;
     private javax.swing.JButton sairBTN_DP;
     private javax.swing.JLabel topicoCodLB_DP;
+    private javax.swing.JLabel topicoEstoqueLB_DP;
     private javax.swing.JLabel topicoNomeLB_DP;
     private javax.swing.JLabel topicoPrecoLB_DP;
-    private javax.swing.JLabel topicoQuantiDispLB_DP;
     private javax.swing.JLabel topicoValLB_DP;
     private javax.swing.JLabel valLB_DP;
     private javax.swing.JButton voltarBTN_DP;
