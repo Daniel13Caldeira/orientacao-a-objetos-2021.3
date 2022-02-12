@@ -109,7 +109,9 @@ public class CrudCarrinho extends javax.swing.JFrame {
             }
         });
 
+        jTCrudCarrinho.setBackground(new java.awt.Color(45, 48, 71));
         jTCrudCarrinho.setFont(jTCrudCarrinho.getFont().deriveFont(jTCrudCarrinho.getFont().getStyle() & ~java.awt.Font.BOLD, jTCrudCarrinho.getFont().getSize()+4));
+        jTCrudCarrinho.setForeground(new java.awt.Color(255, 255, 255));
         jTCrudCarrinho.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 

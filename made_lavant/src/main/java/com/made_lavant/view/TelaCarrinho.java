@@ -121,6 +121,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
         });
 
         jTCarrinho.setBackground(new java.awt.Color(45, 48, 71));
+        jTCarrinho.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jTCarrinho.setForeground(new java.awt.Color(255, 255, 255));
         jTCarrinho.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

@@ -110,7 +110,9 @@ public class CrudCarrinhoGerente extends javax.swing.JFrame {
         lavantLB_CRCG.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lavantLB_CRCG.setText("Lavant");
 
+        jTCrudCarrinhoG.setBackground(new java.awt.Color(45, 48, 71));
         jTCrudCarrinhoG.setFont(jTCrudCarrinhoG.getFont().deriveFont(jTCrudCarrinhoG.getFont().getStyle() & ~java.awt.Font.BOLD, jTCrudCarrinhoG.getFont().getSize()+4));
+        jTCrudCarrinhoG.setForeground(new java.awt.Color(255, 255, 255));
         jTCrudCarrinhoG.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
