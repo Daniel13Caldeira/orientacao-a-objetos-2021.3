@@ -31,6 +31,11 @@ public class Cliente extends Pessoa {
         this.cpf = cpf;
     }
 
+    public Cliente(String cpf, String nome) {
+        super(nome);
+        this.cpf = cpf;
+    }
+
     //Retorna o endereço do cliente
     @Override
     public Endereco getEndereco() {

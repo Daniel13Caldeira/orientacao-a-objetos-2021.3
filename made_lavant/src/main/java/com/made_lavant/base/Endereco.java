@@ -19,6 +19,9 @@ public class Endereco {
         return cep;
     }
 
+    public Endereco() {
+    }
+
     //Retorna a UF
     public String getUf() {
         return uf;

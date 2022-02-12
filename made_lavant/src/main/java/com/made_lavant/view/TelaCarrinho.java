@@ -9,6 +9,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class TelaCarrinho extends javax.swing.JFrame {
 
+    private ArrayList<Produto> listaProdutos;
     public TelaCarrinho() {
         initComponents();
         //Coloca o jframe em tela cheia
@@ -163,6 +164,14 @@ public class TelaCarrinho extends javax.swing.JFrame {
             }
         });
 
+        //Calcula o preço total dos produtos do carrinho
+        double soma =0;
+        this.listaProdutos = CarrinhoDados.getProdutos(Login.getCodigo());
+        for(int i=0;i<this.listaProdutos.size();i++){
+            soma+=this.listaProdutos.get(i).getPreco()*this.listaProdutos.get(i).getQuantidade();
+        }
+        totalLB_TC.setText(soma+"");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -204,12 +213,13 @@ public class TelaCarrinho extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(topicoTotalLB_TC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(sairBTN_TC)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(totalLB_TC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(voltarBTN_TC)
-                    .addComponent(addProdBTN_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(topicoTotalLB_TC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(sairBTN_TC)
+                        .addComponent(voltarBTN_TC)
+                        .addComponent(addProdBTN_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(29, 29, 29)
                 .addComponent(madeLB_TC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -289,7 +299,10 @@ public class TelaCarrinho extends javax.swing.JFrame {
             }
         }
         if (flag) {
+            JOptionPane.showMessageDialog(null, "Carrinho finalizado, aguarde que um funcionário confirme sua compra.");
             CarrinhoDados.setPronto(Login.getCodigo(), true);
+            this.setVisible(false);
+            new InicioCliente().setVisible(true);
         }
     }//GEN-LAST:event_finalizarBTN_TCActionPerformed
 

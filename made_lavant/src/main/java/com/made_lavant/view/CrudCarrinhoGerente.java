@@ -2,6 +2,7 @@ package com.made_lavant.view;
 
 import com.made_lavant.base.Carrinho;
 import com.made_lavant.dados.CarrinhoDados;
+import com.made_lavant.dados.ClienteDados;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
@@ -20,6 +21,7 @@ public class CrudCarrinhoGerente extends javax.swing.JFrame {
         //Colocando o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
         //Chama o método que preenche a tabela
+        
         preencherTabela();
     }
 
@@ -29,8 +31,8 @@ public class CrudCarrinhoGerente extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTCrudCarrinhoG.getModel();
         //Preenche a tabela com os carrinhos que estão prontos pra finalizar a venda
         for (int i = 0; i < carrinhos.size(); i++) {
-            Object[] linha = {carrinhos.get(i).getCliente().getNome(), carrinhos.get(i).getCliente().getCpf()};
-            if (CarrinhoDados.getPronto(carrinhos.get(i).getCliente().getCpf())) {
+            Object[] linha = {ClienteDados.buscarNome(carrinhos.get(i).getCodigo()), carrinhos.get(i).getCodigo()};
+            if (CarrinhoDados.getPronto(carrinhos.get(i).getCodigo())) {
                 model.addRow(linha);
             }
         }

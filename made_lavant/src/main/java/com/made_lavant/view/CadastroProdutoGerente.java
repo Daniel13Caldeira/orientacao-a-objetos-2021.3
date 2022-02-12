@@ -259,7 +259,7 @@ public class CadastroProdutoGerente extends javax.swing.JFrame {
             //se o cadastro foi realizado retorna para o crud de produtos
             if (cadastro) {
                 this.setVisible(false);
-                new CrudProdutos().setVisible(true);
+                new CrudProdutosGerente().setVisible(true);
             }
         }
     }//GEN-LAST:event_confirmarBTN_CPGActionPerformed

@@ -93,12 +93,14 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="topicoTotalLB_TC" alignment="3" max="32767" attributes="0"/>
-                      <Component id="sairBTN_TC" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="totalLB_TC" alignment="0" max="32767" attributes="0"/>
-                      <Component id="voltarBTN_TC" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="addProdBTN_TC" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="topicoTotalLB_TC" alignment="3" max="32767" attributes="0"/>
+                          <Component id="sairBTN_TC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="voltarBTN_TC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="addProdBTN_TC" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="madeLB_TC" min="-2" pref="31" max="-2" attributes="0"/>
@@ -148,6 +150,9 @@
               <Color blue="82" green="fd" red="ff" type="rgb"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePre" type="java.lang.String" value="//Calcula o pre&#xe7;o total dos produtos do carrinho&#xd;&#xa;double soma =0;&#xd;&#xa;this.listaProdutos = CarrinhoDados.getProdutos(Login.getCodigo());&#xd;&#xa;for(int i=0;i&lt;this.listaProdutos.size();i++){&#xd;&#xa;    soma+=this.listaProdutos.get(i).getPreco()*this.listaProdutos.get(i).getQuantidade();&#xd;&#xa;}&#xd;&#xa;totalLB_TC.setText(soma+&quot;&quot;);&#xd;&#xa;"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="madeLB_TC">
           <Properties>

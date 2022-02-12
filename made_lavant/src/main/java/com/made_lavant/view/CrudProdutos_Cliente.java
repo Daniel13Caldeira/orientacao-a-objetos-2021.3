@@ -31,8 +31,10 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTProdCliente.getModel();
         //Preenche a tabela com os produtos
         for (int i = 0; i < produtos.size(); i++) {
-            Object[] linha = {produtos.get(i).getNome(), produtos.get(i).getCodigo(), produtos.get(i).getPreco()};
-            model.addRow(linha);
+            if (produtos.get(i).getQuantidade()!=0) {
+                Object[] linha = {produtos.get(i).getNome(), produtos.get(i).getCodigo(), produtos.get(i).getPreco()};
+                model.addRow(linha);
+            }
         }
     }
 
@@ -247,7 +249,7 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
 
     private void voltarBTN_CRPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarBTN_CRPCActionPerformed
         //Volta para a tela do carrinho
-       this.setVisible(false);
+        this.setVisible(false);
         new TelaCarrinho().setVisible(true);
     }//GEN-LAST:event_voltarBTN_CRPCActionPerformed
 
@@ -268,11 +270,17 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
         //Adiciona o produto ao carrinho 
         if (jTProdCliente.getSelectedRow() != -1) {
             codigo = jTProdCliente.getValueAt(jTProdCliente.getSelectedRow(), 1).toString();
-            if ((Double.parseDouble(quantidadeTF_CRPC.getText()) <= 0 )|| (Double.parseDouble(quantidadeTF_CRPC.getText())> Double.parseDouble(ProdutoDados.buscarQuantidade(Integer.parseInt(codigo))))) {
+            if (quantidadeTF_CRPC.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Quantidade inválida");
             } else {
-                CarrinhoDados.adicionarProduto(Login.getCodigo(), Integer.parseInt(codigo), Double.parseDouble(quantidadeTF_CRPC.getText()));
+                if ((Double.parseDouble(quantidadeTF_CRPC.getText()) <= 0) || (Double.parseDouble(quantidadeTF_CRPC.getText()) > Double.parseDouble(ProdutoDados.buscarQuantidade(Integer.parseInt(codigo))))) {
+                    JOptionPane.showMessageDialog(null, "Quantidade inválida");
+                } else {
+                    CarrinhoDados.adicionarProduto(Login.getCodigo(), Integer.parseInt(codigo), Double.parseDouble(quantidadeTF_CRPC.getText()));
+                }
             }
+            this.setVisible(false);
+            new TelaCarrinho().setVisible(true);
         } else {
             JOptionPane.showMessageDialog(null, "Nenhum produto selecionado!");
         }

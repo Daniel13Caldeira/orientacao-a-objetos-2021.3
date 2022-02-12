@@ -208,7 +208,7 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
         }
         if (edicao) {
             //edita o produto
-            ProdutoDados.alterar(new Produto((Integer.parseInt(CrudProdutos.getCodigo())), (Double.parseDouble(precoTF_EDPG.getText())), (Double.parseDouble(quantiTF_EDPG.getText()))));
+            ProdutoDados.alterar(new Produto((Integer.parseInt(CrudProdutosGerente.getCodigo())), (Double.parseDouble(precoTF_EDPG.getText())), (Double.parseDouble(quantiTF_EDPG.getText()))));
             this.setVisible(false);
             new DetalheProduto_Gerente().setVisible(true);
         }

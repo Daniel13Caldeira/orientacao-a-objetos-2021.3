@@ -1,12 +1,12 @@
 package com.made_lavant.base;
 
 import com.made_lavant.dados.CarrinhoDados;
-import java.util.ArrayList;
 
 public class Carrinho {
 
     //Cliente ao qual pertence o carrinho
     private Cliente cliente;
+    private String codigo;
 
     //Retorna o cliente ao qual pertence o carrinho
     public Cliente getCliente() {
@@ -14,14 +14,18 @@ public class Carrinho {
     }
 
     //Constroi um carrinho para adicionar no CRUD de carrinhos
-    public Carrinho(Cliente cliente, ArrayList<Produto> produtos) {
-        this.cliente = cliente;
+    public Carrinho(String codigo) {
+        this.codigo=codigo;
     }
 
     //Controi um carrinho
     public Carrinho(Cliente cliente) {
         this.cliente = cliente;
         CarrinhoDados.criar(cliente.getCpf());
+    }
+
+    public String getCodigo() {
+        return codigo;
     }
 
 }

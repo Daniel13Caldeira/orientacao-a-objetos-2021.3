@@ -24,6 +24,10 @@ public abstract class Pessoa {
         this.senha = senha;
     }
 
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+
     //Constroi uma pessoa com endereço cadastrado
     public Pessoa(String nome, Endereco endereco, String senha) {
         this.nome = nome;

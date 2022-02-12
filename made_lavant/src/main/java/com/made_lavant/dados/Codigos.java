@@ -38,7 +38,7 @@ public class Codigos {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             String linha = leitor.readLine();//primeira linha
-            if (!linha.equals("null")) {
+            if (linha!=null) {
                 //retorna a linha 1, onde está o código do produto
                 return Integer.parseInt(linha);
             }
@@ -58,7 +58,7 @@ public class Codigos {
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             leitor.readLine();
             String linha = leitor.readLine();
-            if (!linha.equals("null")) {
+            if (linha!=null) {
                 //retorna a linha 2, onde está o código do funcionário
                 return Integer.parseInt(linha);
             }

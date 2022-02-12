@@ -1,2 +1,2 @@
-A0;Teste;A;A;A;111111;QQ;11111111;1;
-B1;A;null;null;null;null;null;null;1;
+A2;AAA;AA;AA;AA;22;AA;11111111;2;
+B1;FUNCIONARIO;A;A;A;11;AA;11111111;1;

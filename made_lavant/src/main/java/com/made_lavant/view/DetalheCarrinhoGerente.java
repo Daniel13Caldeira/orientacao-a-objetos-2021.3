@@ -20,7 +20,7 @@ private ArrayList<Produto> listaDeProdutos;
 
     private void preencherTabela() {
         //Lista que armazena os produtos
-        ArrayList<Produto> produtos = CarrinhoDados.getProdutos(CrudCarrinho.getCodigo());
+        ArrayList<Produto> produtos = CarrinhoDados.getProdutos(CrudCarrinhoGerente.getCodigo());
         DefaultTableModel model = (DefaultTableModel) jTDetalheGerente.getModel();
         //Preenche a tabela com os produtos
         for (int i = 0; i < produtos.size(); i++) {

@@ -2,6 +2,7 @@ package com.made_lavant.dados;
 
 import com.made_lavant.base.Carrinho;
 import com.made_lavant.base.Cliente;
+import com.made_lavant.base.Endereco;
 import com.made_lavant.base.Produto;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -81,7 +82,23 @@ public class CarrinhoDados {
     public static void limparCarrinhoConfirmar(String carrinho) {
         //abre o arquivo que será limpo
         File arquivo = abreArquivo(carrinho);
-
+        try{
+            FileReader leitura = new FileReader(arquivo);//define o leitor
+            BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
+            //pulas as 2 primeiras linhas
+            leitor.readLine();
+            leitor.readLine();
+            String linha = leitor.readLine();//primeira linha
+            while (linha != null) {//linha null = final do arquivo
+                //remove os produtos que não estão mais em estoque
+                if (Double.parseDouble(ProdutoDados.buscarQuantidade(Integer.parseInt(separa(linha, 0))))==0) {
+                    ProdutoDados.remover(Integer.parseInt(separa(linha, 0)));
+                }
+                linha = leitor.readLine();//pega proxima linha
+            }
+        }catch(IOException ex){
+            erro(arquivo);
+        }
         try {
             FileWriter escritaAux = new FileWriter(arquivo, false);//apaga todo o arquivo
             escritaAux.close();
@@ -426,7 +443,7 @@ public class CarrinhoDados {
             while (linha != null) {
                 if (getPronto(separa(linha, 0))) {
                     //adiciona o produto na lista
-                    carrinhos.add(new Carrinho(new Cliente(ClienteDados.buscarNome(separa(linha, 0)), ClienteDados.buscarCPF(separa(linha, 0)), ClienteDados.buscarSenha(separa(linha, 0))), getProdutos(linha)));
+                    carrinhos.add(new Carrinho(separa(linha, 0)));
                 }
                 linha = leitor.readLine();//próxima linha
             }
