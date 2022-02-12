@@ -1,0 +1,5 @@
+00000000000;j;null;null;null;null;null;null;j;
+88888888888;d;null;null;null;null;null;null;d;
+17801550005;g;null;null;null;null;null;null;g;
+31245883046;sss;null;null;null;null;null;null;sss;
+85029371036;a;a;a;a;1;aa;11111111;a;

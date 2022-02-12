@@ -20,7 +20,6 @@ public class InicioCliente extends javax.swing.JFrame {
         madeLB_IC = new javax.swing.JLabel();
         lavantLB_IC = new javax.swing.JLabel();
         carrinhoBTN_IC = new javax.swing.JButton();
-        produtosBTN_IC = new javax.swing.JButton();
         perfilBTN_IC = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -62,16 +61,6 @@ public class InicioCliente extends javax.swing.JFrame {
             }
         });
 
-        produtosBTN_IC.setBackground(new java.awt.Color(255, 253, 130));
-        produtosBTN_IC.setFont(produtosBTN_IC.getFont().deriveFont(produtosBTN_IC.getFont().getStyle() & ~java.awt.Font.BOLD, produtosBTN_IC.getFont().getSize()+7));
-        produtosBTN_IC.setForeground(new java.awt.Color(232, 72, 85));
-        produtosBTN_IC.setText("Produtos");
-        produtosBTN_IC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                produtosBTN_ICActionPerformed(evt);
-            }
-        });
-
         perfilBTN_IC.setBackground(new java.awt.Color(255, 253, 130));
         perfilBTN_IC.setFont(perfilBTN_IC.getFont().deriveFont(perfilBTN_IC.getFont().getStyle() & ~java.awt.Font.BOLD, perfilBTN_IC.getFont().getSize()+7));
         perfilBTN_IC.setForeground(new java.awt.Color(232, 72, 85));
@@ -98,7 +87,6 @@ public class InicioCliente extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(perfilBTN_IC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(produtosBTN_IC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(carrinhoBTN_IC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -116,11 +104,9 @@ public class InicioCliente extends javax.swing.JFrame {
                         .addComponent(lavantLB_IC)))
                 .addGap(34, 34, 34)
                 .addComponent(carrinhoBTN_IC, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(produtosBTN_IC, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
                 .addComponent(perfilBTN_IC, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -143,12 +129,6 @@ public class InicioCliente extends javax.swing.JFrame {
         new Login().setVisible(true);
     }//GEN-LAST:event_sairInicioClineteBTNActionPerformed
 
-    private void produtosBTN_ICActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtosBTN_ICActionPerformed
-        //vai para o crud de produtos
-        this.setVisible(false);
-        new CrudProdutos_Cliente().setVisible(true);
-    }//GEN-LAST:event_produtosBTN_ICActionPerformed
-
     private void carrinhoBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrinhoBTNActionPerformed
         //vai para o carrinho
         this.setVisible(false);
@@ -167,7 +147,6 @@ public class InicioCliente extends javax.swing.JFrame {
     private javax.swing.JLabel lavantLB_IC;
     private javax.swing.JLabel madeLB_IC;
     private javax.swing.JButton perfilBTN_IC;
-    private javax.swing.JButton produtosBTN_IC;
     private javax.swing.JButton sairBTN_IC;
     // End of variables declaration//GEN-END:variables
 }

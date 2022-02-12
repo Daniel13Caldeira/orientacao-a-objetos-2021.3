@@ -37,8 +37,11 @@ public class Codigos {
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
-            //retorna a linha 1, onde está o código do produto
-            return Integer.parseInt(leitor.readLine());//primeira linha
+            String linha = leitor.readLine();//primeira linha
+            if (!linha.equals("null")) {
+                //retorna a linha 1, onde está o código do produto
+                return Integer.parseInt(linha);
+            }
         } catch (IOException ex) {
             erro(arquivo);
         }
@@ -54,8 +57,11 @@ public class Codigos {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             leitor.readLine();
-            //retorna a linha 2, onde está o código do funcionário
-            return Integer.parseInt(leitor.readLine());
+            String linha = leitor.readLine();
+            if (!linha.equals("null")) {
+                //retorna a linha 2, onde está o código do funcionário
+                return Integer.parseInt(linha);
+            }
         } catch (IOException ex) {
             erro(arquivo);
         }

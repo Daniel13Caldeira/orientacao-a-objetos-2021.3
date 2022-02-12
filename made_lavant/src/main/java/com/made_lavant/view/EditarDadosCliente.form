@@ -76,51 +76,55 @@
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
-                  <EmptySpace pref="93" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="topicoSenhaLB_EDC" min="-2" pref="54" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="senhaTF_EDC" min="-2" pref="252" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="confirmarBTN_EDC" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                  <Component id="topicoRuaLB_EDC" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <Component id="topicoCidadeLB_EDC" alignment="1" min="-2" pref="54" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="topicoBairroLB_EDC" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
-                              <Component id="topicoCepLB_EDC" alignment="1" min="-2" pref="54" max="-2" attributes="0"/>
+                  <EmptySpace pref="92" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="titleLB_EDC" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="topicoSenhaLB_EDC" min="-2" pref="54" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="senhaTF_EDC" min="-2" pref="252" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="confirmarBTN_EDC" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="ruaTF_EDC" alignment="0" min="-2" pref="554" max="-2" attributes="0"/>
-                                  <Component id="bairroTF_EDC" alignment="0" min="-2" pref="554" max="-2" attributes="0"/>
-                                  <Component id="cidadeTF_EDC" min="-2" pref="554" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                      <Component id="topicoRuaLB_EDC" min="-2" pref="54" max="-2" attributes="0"/>
+                                      <Component id="topicoCidadeLB_EDC" alignment="1" min="-2" pref="54" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="topicoBairroLB_EDC" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
+                                  <Component id="topicoCepLB_EDC" alignment="1" min="-2" pref="54" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="numeroTF_EDC" min="-2" pref="180" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  <Component id="topicoNumeroLB_EDC" min="-2" pref="66" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="ufTF_EDC" min="-2" pref="115" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="topicoUfLB_EDC" min="-2" pref="47" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cepTF_EDC" min="-2" pref="112" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace type="unrelated" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="ruaTF_EDC" alignment="0" min="-2" pref="554" max="-2" attributes="0"/>
+                                          <Component id="bairroTF_EDC" alignment="0" min="-2" pref="554" max="-2" attributes="0"/>
+                                          <Component id="cidadeTF_EDC" min="-2" pref="554" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="cepTF_EDC" min="-2" pref="165" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
+                                      <Component id="topicoNumeroLB_EDC" min="-2" pref="66" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="numeroTF_EDC" min="-2" pref="129" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="topicoUfLB_EDC" min="-2" pref="34" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="ufTF_EDC" min="-2" pref="128" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="93" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="titleLB_EDC" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="91" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -158,13 +162,15 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="topicoUfLB_EDC" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                          <Component id="topicoUfLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ufTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="topicoNumeroLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="numeroTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="topicoCepLB_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="cepTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ufTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="numeroTF_EDC" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>

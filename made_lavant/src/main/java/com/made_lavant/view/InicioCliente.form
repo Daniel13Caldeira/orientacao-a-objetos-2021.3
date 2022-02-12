@@ -63,7 +63,6 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Component id="perfilBTN_IC" alignment="0" max="32767" attributes="0"/>
-                      <Component id="produtosBTN_IC" alignment="0" max="32767" attributes="0"/>
                       <Component id="carrinhoBTN_IC" alignment="0" min="-2" pref="173" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -87,11 +86,9 @@
                   </Group>
                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   <Component id="carrinhoBTN_IC" min="-2" pref="61" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="produtosBTN_IC" min="-2" pref="61" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Component id="perfilBTN_IC" min="-2" pref="61" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -162,25 +159,6 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carrinhoBTNActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="produtosBTN_IC">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="82" green="fd" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
-              <FontInfo relative="true">
-                <Font bold="false" component="produtosBTN_IC" property="font" relativeSize="true" size="7"/>
-              </FontInfo>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="55" green="48" red="e8" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Produtos"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="produtosBTN_ICActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="perfilBTN_IC">

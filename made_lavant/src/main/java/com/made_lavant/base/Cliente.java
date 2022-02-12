@@ -44,6 +44,18 @@ public class Cliente extends Pessoa {
 
     //verifica se o cpf do cliente é válido
     public static boolean verificaCpf(String cpf) {
+        for (int i = 0; i < 10; i++) {
+            int cont = 0;
+            for (int j = 0; j < 11; j++) {
+                if (i == Integer.parseInt(cpf.charAt(j)+"")) {
+                    cont++;
+                }
+            }
+            if (cont == 11) {
+                return false;
+            }
+        }
+
         int j = 10, soma = 0;
         //soma os 9 primeiros dígitos do cpf com seus pesos respectivos
         for (int i = 0; i < 9; i++) {

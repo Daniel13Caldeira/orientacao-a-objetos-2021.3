@@ -5,6 +5,7 @@ import com.made_lavant.dados.CarrinhoDados;
 import com.made_lavant.dados.ProdutoDados;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 public class CrudProdutos_Cliente extends javax.swing.JFrame {
@@ -136,9 +137,12 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
         );
 
         quantidadeTF_CRPC.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        quantidadeTF_CRPC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quantidadeTF_CRPCActionPerformed(evt);
+        quantidadeTF_CRPC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                quantidadeTF_CRPCKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                quantidadeTF_CRPCKeyTyped(evt);
             }
         });
 
@@ -264,8 +268,8 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
         //Adiciona o produto ao carrinho 
         if (jTProdCliente.getSelectedRow() != -1) {
             codigo = jTProdCliente.getValueAt(jTProdCliente.getSelectedRow(), 1).toString();
-            if (Double.parseDouble(quantidadeTF_CRPC.getText()) == 0) {
-                JOptionPane.showMessageDialog(null, "Nenhuma quantidade selecionada!");
+            if ((Double.parseDouble(quantidadeTF_CRPC.getText()) <= 0 )|| (Double.parseDouble(quantidadeTF_CRPC.getText())> Double.parseDouble(ProdutoDados.buscarQuantidade(Integer.parseInt(codigo))))) {
+                JOptionPane.showMessageDialog(null, "Quantidade inválida");
             } else {
                 CarrinhoDados.adicionarProduto(Login.getCodigo(), Integer.parseInt(codigo), Double.parseDouble(quantidadeTF_CRPC.getText()));
             }
@@ -274,10 +278,36 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_adicionarBTN_CDCActionPerformed
 
-    private void quantidadeTF_CRPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantidadeTF_CRPCActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_quantidadeTF_CRPCActionPerformed
+    private void quantidadeTF_CRPCKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_quantidadeTF_CRPCKeyTyped
+        mascaraDouble(quantidadeTF_CRPC);
+    }//GEN-LAST:event_quantidadeTF_CRPCKeyTyped
 
+    private void quantidadeTF_CRPCKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_quantidadeTF_CRPCKeyReleased
+        mascaraDouble(quantidadeTF_CRPC);
+    }//GEN-LAST:event_quantidadeTF_CRPCKeyReleased
+    private void mascaraDouble(JTextField textField) {
+        //Verifica se o número digitado é um valor do tipo double
+        String texto = textField.getText();
+        if (texto.length() > 0) {
+            //Verifica o separador decimal e se é um número
+            if (!(texto.charAt(texto.length() - 1) == '.' || (texto.charAt(texto.length() - 1) >= '0' && texto.charAt(texto.length() - 1) <= '9'))) {
+                //Apaga o último caractere
+                texto = texto.substring(0, texto.length() - 1);
+            }
+            int cont = 0;
+            for (int i = 0; i < texto.length(); i++) {
+                //Verifica se há mais de um Ponto
+                if (texto.charAt(i) == '.') {
+                    cont++;
+                }
+            }
+            if (cont > 1) {
+                //Apaga o último caractere
+                texto = texto.substring(0, texto.length() - 1);
+            }
+        }
+        textField.setText(texto);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addCarrinhoBTN_CRPC;
     private javax.swing.JButton addCarrinhoBTN_CRPC1;

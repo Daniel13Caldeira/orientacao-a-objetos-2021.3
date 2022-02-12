@@ -315,7 +315,8 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quantidadeTF_CRPCActionPerformed"/>
+                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="quantidadeTF_CRPCKeyReleased"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="quantidadeTF_CRPCKeyTyped"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="topicoQuantidadeLB_CRPC">

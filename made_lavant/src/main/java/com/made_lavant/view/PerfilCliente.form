@@ -68,75 +68,78 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="sairBTN_PC" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="editarBTN_PC" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="401" max="32767" attributes="0"/>
-                  <Component id="voltarBTN_PC" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="topicoNomeLB_PC" max="32767" attributes="0"/>
-                              <Component id="topicoCpfLB_PC" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="sairBTN_PC" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="cpfLB_PC" min="-2" max="-2" attributes="0"/>
-                              <Component id="nomeLB_PC" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="editarBTN_PC" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="401" max="32767" attributes="0"/>
+                          <Component id="voltarBTN_PC" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Component id="topicoCidadeLB_PC" min="-2" pref="87" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="topicoNumeroLB_PC" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="topicoNomeLB_PC" max="32767" attributes="0"/>
+                                      <Component id="topicoCpfLB_PC" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="topicoBairroLB_PC" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="cpfLB_PC" min="-2" max="-2" attributes="0"/>
+                                      <Component id="nomeLB_PC" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <Component id="topicoUfLB_PC" alignment="0" min="-2" pref="44" max="-2" attributes="0"/>
-                              <Component id="topicoCepLB_PC" min="-2" pref="57" max="-2" attributes="0"/>
-                              <Component id="topicoRuaLB_PC" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                          <Component id="numeroLB_PC" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ruaLB_PC" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="topicoCidadeLB_PC" min="-2" pref="87" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="topicoNumeroLB_PC" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="topicoBairroLB_PC" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="cepLB_PC" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="topicoUfLB_PC" alignment="0" min="-2" pref="44" max="-2" attributes="0"/>
+                                      <Component id="topicoCepLB_PC" min="-2" pref="57" max="-2" attributes="0"/>
+                                      <Component id="topicoRuaLB_PC" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="bairroLB_PC" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                                  <Component id="numeroLB_PC" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="ruaLB_PC" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="cepLB_PC" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="bairroLB_PC" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="cidadeLB_PC" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ufLB_PC" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <Component id="cidadeLB_PC" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="ufLB_PC" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace pref="93" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="titleLB_PC" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="title2LB_PC" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace pref="93" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="titleLB_PC" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="title2LB_PC" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="madeLB_PC" max="32767" attributes="0"/>
+                              <Component id="lavantLB_PC" min="-2" pref="78" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="madeLB_PC" max="32767" attributes="0"/>
-                      <Component id="lavantLB_PC" min="-2" pref="78" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -187,9 +190,9 @@
                               <Component id="topicoBairroLB_PC" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="topicoCepLB_PC" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
-                              <Component id="cepLB_PC" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="cepLB_PC" min="-2" pref="31" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -364,7 +367,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
             </Property>
-            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Nome Cidade"/>
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
@@ -469,7 +472,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="55" green="48" red="e8" type="rgb"/>
             </Property>
-            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Nome Bairoo"/>
             <Property name="verticalAlignment" type="int" value="3"/>
           </Properties>
