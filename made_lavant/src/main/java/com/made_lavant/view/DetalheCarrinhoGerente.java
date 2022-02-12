@@ -48,6 +48,7 @@ private ArrayList<Produto> listaDeProdutos;
         jTDetalheGerente = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Carrinho");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 

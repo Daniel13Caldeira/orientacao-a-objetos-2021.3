@@ -67,7 +67,7 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
         addCarrinhoBTN_CRPC1.setText("Adicionar ao Carrinho");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("TelaDeProdutosCliente");
+        setTitle("Lista de Produtos");
 
         jPanel2.setBackground(new java.awt.Color(45, 48, 71));
 

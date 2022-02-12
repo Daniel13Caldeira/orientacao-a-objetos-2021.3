@@ -50,6 +50,7 @@ public class EditarDadosGerente extends javax.swing.JFrame {
         ufTF_EDG = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Editar Funcionário");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 

@@ -59,6 +59,7 @@ public class PerfilGerente extends javax.swing.JFrame {
         editarBTN_PG = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Perfil do Funcionário");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 

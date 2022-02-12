@@ -52,6 +52,7 @@ public class CrudCarrinhoGerente extends javax.swing.JFrame {
         jTCrudCarrinhoG = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Lista de Carrinhos");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 

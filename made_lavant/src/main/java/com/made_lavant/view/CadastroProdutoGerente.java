@@ -35,7 +35,7 @@ public class CadastroProdutoGerente extends javax.swing.JFrame {
         topicoQuantiLB_CPG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Cadastro de Produtos");
+        setTitle("Cadastro");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));

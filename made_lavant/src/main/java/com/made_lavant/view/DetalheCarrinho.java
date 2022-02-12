@@ -60,6 +60,7 @@ public class DetalheCarrinho extends javax.swing.JFrame {
         jLabel20.setText("dd/mm/aaaa");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Carrinho");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 

@@ -39,7 +39,7 @@ public class CadastroGerente extends javax.swing.JFrame {
         topicoNumeroLB_CG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Cadastro do Gerente");
+        setTitle("Cadastro");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));

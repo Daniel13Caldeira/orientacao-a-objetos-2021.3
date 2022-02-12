@@ -20,7 +20,7 @@ public class InicioFuncionario extends javax.swing.JFrame {
         lavantLB_IF = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela de Início - Funcionários");
+        setTitle("Inicio");
         setAlwaysOnTop(true);
         setBackground(new java.awt.Color(84, 83, 83));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));

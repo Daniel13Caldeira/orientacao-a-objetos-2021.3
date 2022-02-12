@@ -52,6 +52,7 @@ public class CrudProdutosGerente extends javax.swing.JFrame {
         jTProdutosGerente = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Lista de Produtos");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 

@@ -3,6 +3,7 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Detalhe do Produto"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -51,38 +52,38 @@
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
-                  <EmptySpace pref="108" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="topicoEstoqueLB_DPG" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="topicoValLB_DPG" alignment="1" max="32767" attributes="0"/>
-                      <Component id="topicoNomeLB_DPG" alignment="1" max="32767" attributes="0"/>
-                      <Component id="topicoPrecoLB_DPG" alignment="1" max="32767" attributes="0"/>
-                      <Component id="topicoCodLB_DPG" alignment="1" min="-2" pref="66" max="-2" attributes="0"/>
-                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="topicoEstoqueLB_DPG" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="topicoValLB_DPG" alignment="1" max="32767" attributes="0"/>
+                              <Component id="topicoNomeLB_DPG" alignment="1" max="32767" attributes="0"/>
+                              <Component id="topicoPrecoLB_DPG" alignment="1" max="32767" attributes="0"/>
+                              <Component id="topicoCodLB_DPG" alignment="1" min="-2" pref="66" max="-2" attributes="0"/>
+                          </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="valLB_DPG" min="-2" pref="343" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="precoLB_DPG" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="nomeLB_DPG" alignment="0" min="-2" pref="344" max="-2" attributes="0"/>
-                                  <Component id="codLB_DPG" alignment="0" min="-2" pref="343" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="valLB_DPG" min="-2" pref="343" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="precoLB_DPG" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="nomeLB_DPG" alignment="0" min="-2" pref="344" max="-2" attributes="0"/>
+                                          <Component id="codLB_DPG" alignment="0" min="-2" pref="343" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="estoqueLB_DPG" min="-2" pref="343" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="estoqueLB_DPG" min="-2" pref="343" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="madeLB_DPG" max="32767" attributes="0"/>
+                          <Component id="lavantLB_DPG" min="-2" pref="181" max="-2" attributes="0"/>
                       </Group>
-                  </Group>
-                  <EmptySpace pref="110" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="madeLB_DPG" max="32767" attributes="0"/>
-                      <Component id="lavantLB_DPG" min="-2" pref="181" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -121,9 +122,9 @@
                       <Component id="valLB_DPG" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="topicoEstoqueLB_DPG" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="estoqueLB_DPG" alignment="0" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="topicoEstoqueLB_DPG" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
               </Group>

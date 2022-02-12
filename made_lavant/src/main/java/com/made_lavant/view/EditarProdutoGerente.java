@@ -33,6 +33,7 @@ public class EditarProdutoGerente extends javax.swing.JFrame {
         nomeLB_EDPG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Editar Produto");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 

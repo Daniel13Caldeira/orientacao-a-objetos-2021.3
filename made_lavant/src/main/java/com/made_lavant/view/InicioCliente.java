@@ -23,7 +23,7 @@ public class InicioCliente extends javax.swing.JFrame {
         perfilBTN_IC = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("TelaCliente");
+        setTitle("Inicio");
 
         jPanel2.setBackground(new java.awt.Color(45, 48, 71));
         jPanel2.setToolTipText("TelaCliente");

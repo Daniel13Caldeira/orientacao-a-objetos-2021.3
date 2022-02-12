@@ -31,6 +31,7 @@ public class DetalheProduto_Func extends javax.swing.JFrame {
         topicoNomeLB_DPF = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Detalhe do Produto");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 

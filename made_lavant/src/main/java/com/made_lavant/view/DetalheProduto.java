@@ -31,6 +31,7 @@ public class DetalheProduto extends javax.swing.JFrame {
         sairBTN_DP = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Detalhe do Produto");
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
