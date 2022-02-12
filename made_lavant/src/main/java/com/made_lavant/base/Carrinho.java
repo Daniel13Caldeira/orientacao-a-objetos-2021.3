@@ -8,10 +8,6 @@ public class Carrinho {
     private Cliente cliente;
     private String codigo;
 
-    //Retorna o cliente ao qual pertence o carrinho
-    public Cliente getCliente() {
-        return cliente;
-    }
 
     //Constroi um carrinho para adicionar no CRUD de carrinhos
     public Carrinho(String codigo) {
