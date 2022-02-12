@@ -254,14 +254,14 @@ public class CarrinhoDados {
         return produtos;
     }
 
-    private static String buscar(String codigo) {
+    private static String buscar(String codigo, String carrinho) {
         File arquivo;
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //Filearquivo = new File("caminho win");
-            arquivo = new File("dados\\carrinhos\\" + codigo + ".txt");
+            arquivo = new File("dados\\carrinhos\\" + carrinho + ".txt");
         } else {
             //File arquivo = new File("caminho linux");
-            arquivo = new File("dados//carrinhos//" + codigo + ".txt ");
+            arquivo = new File("dados//carrinhos//" + carrinho + ".txt ");
         }
         try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
@@ -405,9 +405,9 @@ public class CarrinhoDados {
     }
 
     //busca o nome de um cliente
-    public static String buscarProduto(String produto) {
+    public static String buscarProduto(String produto, String carrinho) {
         //busca o cliente
-        String aux = buscar(produto);
+        String aux = buscar(produto,carrinho);
         //se encontrar um cliente, o nome é separado e retornado
         if (aux != null) {
             return separa(aux, 0);
@@ -417,8 +417,8 @@ public class CarrinhoDados {
     }
 
     //semelhante a buscarNome
-    public static String buscarQuantidade(String produto) {
-        String aux = buscar(produto);
+    public static String buscarQuantidade(String produto, String carrinho) {
+        String aux = buscar(produto,carrinho);
         if (aux != null) {
             return separa(aux, 1);
         }

@@ -1,2 +1,1 @@
-A2;AAA;AA;AA;AA;22;AA;11111111;2;
-B1;FUNCIONARIO;A;A;A;11;AA;11111111;1;
+A0;a;null;null;null;null;null;null;1;

@@ -31,7 +31,7 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTProdCliente.getModel();
         //Preenche a tabela com os produtos
         for (int i = 0; i < produtos.size(); i++) {
-            if (produtos.get(i).getQuantidade()!=0) {
+            if (produtos.get(i).getQuantidade() != 0) {
                 Object[] linha = {produtos.get(i).getNome(), produtos.get(i).getCodigo(), produtos.get(i).getPreco()};
                 model.addRow(linha);
             }
@@ -267,22 +267,34 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
     }//GEN-LAST:event_descricaoBTN_CRPCActionPerformed
 
     private void adicionarBTN_CDCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarBTN_CDCActionPerformed
+        boolean flag = true;
         //Adiciona o produto ao carrinho 
         if (jTProdCliente.getSelectedRow() != -1) {
             codigo = jTProdCliente.getValueAt(jTProdCliente.getSelectedRow(), 1).toString();
             if (quantidadeTF_CRPC.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Quantidade inválida");
+                flag = false;
             } else {
                 if ((Double.parseDouble(quantidadeTF_CRPC.getText()) <= 0) || (Double.parseDouble(quantidadeTF_CRPC.getText()) > Double.parseDouble(ProdutoDados.buscarQuantidade(Integer.parseInt(codigo))))) {
                     JOptionPane.showMessageDialog(null, "Quantidade inválida");
+                    flag = false;
                 } else {
-                    CarrinhoDados.adicionarProduto(Login.getCodigo(), Integer.parseInt(codigo), Double.parseDouble(quantidadeTF_CRPC.getText()));
+                    if (CarrinhoDados.buscarProduto(codigo, Login.getCodigo()) == null) {
+                        CarrinhoDados.adicionarProduto(Login.getCodigo(), Integer.parseInt(codigo), Double.parseDouble(quantidadeTF_CRPC.getText()));
+                    } else {
+                        double quantidade = Double.parseDouble(CarrinhoDados.buscarQuantidade(codigo, Login.getCodigo()));
+                        CarrinhoDados.removerProduto(Login.getCodigo(), Integer.parseInt(codigo));
+                        CarrinhoDados.adicionarProduto(Login.getCodigo(), Integer.parseInt(codigo), quantidade + Double.parseDouble(quantidadeTF_CRPC.getText()));
+                    }
                 }
             }
-            this.setVisible(false);
-            new TelaCarrinho().setVisible(true);
         } else {
             JOptionPane.showMessageDialog(null, "Nenhum produto selecionado!");
+            flag = false;
+        }
+        if (flag) {
+            this.setVisible(false);
+            new TelaCarrinho().setVisible(true);
         }
     }//GEN-LAST:event_adicionarBTN_CDCActionPerformed
 
