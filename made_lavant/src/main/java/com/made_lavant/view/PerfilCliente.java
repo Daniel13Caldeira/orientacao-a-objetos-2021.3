@@ -1,11 +1,14 @@
-
 package com.made_lavant.view;
 
 import com.made_lavant.dados.ClienteDados;
 
-
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 public class PerfilCliente extends javax.swing.JFrame {
-
 
     public PerfilCliente() {
         initComponents();
@@ -14,10 +17,10 @@ public class PerfilCliente extends javax.swing.JFrame {
         //Esconde os tópicos do endereço caso não tenha endereço cadastrado
         SemEndereco();
     }
-    
-    public void SemEndereco(){
+
+    public void SemEndereco() {
         String cidade = ClienteDados.buscarCidade(Login.getCodigo());
-        if (cidade.equals("null")){
+        if (cidade.equals("null")) {
             title2LB_PC.setVisible(false);
             topicoBairroLB_PC.setVisible(false);
             topicoCepLB_PC.setVisible(false);
@@ -26,9 +29,8 @@ public class PerfilCliente extends javax.swing.JFrame {
             topicoUfLB_PC.setVisible(false);
             topicoCidadeLB_PC.setVisible(false);
         }
-        
-    }
 
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

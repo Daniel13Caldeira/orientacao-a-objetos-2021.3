@@ -1,6 +1,13 @@
 package com.made_lavant.base;
 
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 public class Endereco {
+
     //Componentes do endereço de uma pessoa
     private String cidade;
     private String cep;

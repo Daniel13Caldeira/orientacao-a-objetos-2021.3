@@ -6,6 +6,12 @@ import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
 
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 public class CrudProdutos extends javax.swing.JFrame {
 
     protected static String codigo;

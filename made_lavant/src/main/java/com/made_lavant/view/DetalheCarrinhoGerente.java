@@ -5,10 +5,15 @@ import com.made_lavant.dados.CarrinhoDados;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 public class DetalheCarrinhoGerente extends javax.swing.JFrame {
 
-private ArrayList<Produto> listaDeProdutos;
-
+    private ArrayList<Produto> listaDeProdutos;
 
     public DetalheCarrinhoGerente() {
         initComponents();
@@ -24,14 +29,15 @@ private ArrayList<Produto> listaDeProdutos;
         DefaultTableModel model = (DefaultTableModel) jTDetalheGerente.getModel();
         //Preenche a tabela com os produtos
         for (int i = 0; i < produtos.size(); i++) {
-            String validade=produtos.get(i).getValidade();
-            if(validade.equals("null")){
+            String validade = produtos.get(i).getValidade();
+            if (validade.equals("null")) {
                 validade = "Inderteminado";
             }
             Object[] linha = {produtos.get(i).getNome(), produtos.get(i).getCodigo(), produtos.get(i).getQuantidade(), validade, produtos.get(i).getPreco()};
             model.addRow(linha);
         }
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

@@ -1,5 +1,11 @@
 package com.made_lavant.view;
 
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 public class InicioFuncionario extends javax.swing.JFrame {
 
     public InicioFuncionario() {

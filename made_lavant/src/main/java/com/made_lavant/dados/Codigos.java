@@ -8,6 +8,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 public class Codigos {
 
     private static void erro(File arquivo) {
@@ -38,7 +44,7 @@ public class Codigos {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             String linha = leitor.readLine();//primeira linha
-            if (linha!=null) {
+            if (linha != null) {
                 //retorna a linha 1, onde está o código do produto
                 return Integer.parseInt(linha);
             }
@@ -58,7 +64,7 @@ public class Codigos {
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             leitor.readLine();
             String linha = leitor.readLine();
-            if (linha!=null) {
+            if (linha != null) {
                 //retorna a linha 2, onde está o código do funcionário
                 return Integer.parseInt(linha);
             }

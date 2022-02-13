@@ -10,6 +10,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 public class ClienteDados {
 
     private static void erro(File arquivo) {
@@ -37,7 +43,8 @@ public class ClienteDados {
         resultado = separa(resto, info - 1);
         return resultado;
     }
-    private static File abreArquivo(){
+
+    private static File abreArquivo() {
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             //File arquivo = new File("caminho win");
             return new File("dados\\cliente.txt");
@@ -46,6 +53,7 @@ public class ClienteDados {
             return new File("dados//cliente.txt");
         }
     }
+
     //adiciona um cliente sem endereço ao arquivo de salvamento
     public static void adicionarSemEndereco(Cliente cliente) {
         //cria uma String com os dados do cliente no formato padrão que está sendo utilizado

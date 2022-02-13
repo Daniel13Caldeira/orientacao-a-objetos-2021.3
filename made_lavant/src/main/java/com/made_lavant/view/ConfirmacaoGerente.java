@@ -7,6 +7,12 @@ import com.made_lavant.dados.CarrinhoDados;
 import com.made_lavant.dados.ClienteDados;
 import java.util.ArrayList;
 
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 public class ConfirmacaoGerente extends javax.swing.JFrame {
 
     private ArrayList<Produto> listaDeProdutos = new ArrayList();

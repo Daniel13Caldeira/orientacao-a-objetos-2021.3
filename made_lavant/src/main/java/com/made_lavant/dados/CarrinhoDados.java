@@ -1,8 +1,6 @@
 package com.made_lavant.dados;
 
 import com.made_lavant.base.Carrinho;
-import com.made_lavant.base.Cliente;
-import com.made_lavant.base.Endereco;
 import com.made_lavant.base.Produto;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -12,6 +10,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 
 public class CarrinhoDados {
 
@@ -82,7 +87,7 @@ public class CarrinhoDados {
     public static void limparCarrinhoConfirmar(String carrinho) {
         //abre o arquivo que será limpo
         File arquivo = abreArquivo(carrinho);
-        try{
+        try {
             FileReader leitura = new FileReader(arquivo);//define o leitor
             BufferedReader leitor = new BufferedReader(leitura);//cria um buffer de leitura
             //pulas as 2 primeiras linhas
@@ -91,12 +96,12 @@ public class CarrinhoDados {
             String linha = leitor.readLine();//primeira linha
             while (linha != null) {//linha null = final do arquivo
                 //remove os produtos que não estão mais em estoque
-                if (Double.parseDouble(ProdutoDados.buscarQuantidade(Integer.parseInt(separa(linha, 0))))==0) {
+                if (Double.parseDouble(ProdutoDados.buscarQuantidade(Integer.parseInt(separa(linha, 0)))) == 0) {
                     ProdutoDados.remover(Integer.parseInt(separa(linha, 0)));
                 }
                 linha = leitor.readLine();//pega proxima linha
             }
-        }catch(IOException ex){
+        } catch (IOException ex) {
             erro(arquivo);
         }
         try {
@@ -407,7 +412,7 @@ public class CarrinhoDados {
     //busca o nome de um cliente
     public static String buscarProduto(String produto, String carrinho) {
         //busca o cliente
-        String aux = buscar(produto,carrinho);
+        String aux = buscar(produto, carrinho);
         //se encontrar um cliente, o nome é separado e retornado
         if (aux != null) {
             return separa(aux, 0);
@@ -418,7 +423,7 @@ public class CarrinhoDados {
 
     //semelhante a buscarNome
     public static String buscarQuantidade(String produto, String carrinho) {
-        String aux = buscar(produto,carrinho);
+        String aux = buscar(produto, carrinho);
         if (aux != null) {
             return separa(aux, 1);
         }

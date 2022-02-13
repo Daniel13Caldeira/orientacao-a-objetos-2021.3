@@ -6,6 +6,12 @@ import com.made_lavant.dados.Codigos;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 public class CadastroGerente extends javax.swing.JFrame {
 
     public CadastroGerente() {

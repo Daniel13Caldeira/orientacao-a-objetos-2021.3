@@ -1,4 +1,3 @@
-
 package com.made_lavant.view;
 
 import com.made_lavant.base.Cliente;
@@ -6,9 +5,14 @@ import com.made_lavant.base.Endereco;
 import com.made_lavant.dados.ClienteDados;
 import javax.swing.JTextField;
 
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 
 public class EditarDadosCliente extends javax.swing.JFrame {
-
 
     public EditarDadosCliente() {
         initComponents();
@@ -26,7 +30,6 @@ public class EditarDadosCliente extends javax.swing.JFrame {
         //Deixa o JFrame em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

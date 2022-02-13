@@ -3,6 +3,12 @@ package com.made_lavant.base;
 import com.made_lavant.dados.Codigos;
 import com.made_lavant.dados.FuncionarioDados;
 
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 public class Funcionario extends Pessoa {
 
     private String codigo;
@@ -38,7 +44,7 @@ public class Funcionario extends Pessoa {
         Codigos.alterarFuncionario();
         FuncionarioDados.adicionarSemEndereco(this);
     }
-    
+
     //Construtor que auxilia na edição com ordem de parametros diferente dos construtores de cadastro
     public Funcionario(String codigo, String nome, Endereco endereco, String senha) {
         super(nome, endereco, senha);

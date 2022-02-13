@@ -5,6 +5,12 @@ import com.made_lavant.dados.ClienteDados;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 public class VendaProntaEntrega implements Venda {
 
     //Atributos da venda

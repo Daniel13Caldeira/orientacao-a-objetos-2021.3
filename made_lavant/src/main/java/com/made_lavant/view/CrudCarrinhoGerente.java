@@ -7,6 +7,12 @@ import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
 
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 public class CrudCarrinhoGerente extends javax.swing.JFrame {
 
     protected static String codigo;
@@ -21,7 +27,7 @@ public class CrudCarrinhoGerente extends javax.swing.JFrame {
         //Colocando o jframe em tela cheia
         setExtendedState(MAXIMIZED_BOTH);
         //Chama o método que preenche a tabela
-        
+
         preencherTabela();
     }
 

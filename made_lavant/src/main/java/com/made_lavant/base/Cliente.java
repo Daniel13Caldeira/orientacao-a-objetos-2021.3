@@ -2,6 +2,12 @@ package com.made_lavant.base;
 
 import com.made_lavant.dados.ClienteDados;
 
+/* Integrantes: 
+        Daniel Jorge Reis Caldeira - 202065555C
+         Ewerson dos Santos Rodrigues -201965029AB
+         Marcio Felipe Daniel Gonçalves - 202065519B
+         Matheus Reis Ribeiro - 201965090AB 
+ */
 public class Cliente extends Pessoa {
 
     //CPF do cliente
@@ -47,7 +53,7 @@ public class Cliente extends Pessoa {
         for (int i = 0; i < 10; i++) {
             int cont = 0;
             for (int j = 0; j < 11; j++) {
-                if (i == Integer.parseInt(cpf.charAt(j)+"")) {
+                if (i == Integer.parseInt(cpf.charAt(j) + "")) {
                     cont++;
                 }
             }
