@@ -56,6 +56,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Carrinho");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
@@ -121,6 +122,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
         });
 
         jTCarrinho.setBackground(new java.awt.Color(45, 48, 71));
+        jTCarrinho.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jTCarrinho.setForeground(new java.awt.Color(255, 255, 255));
         jTCarrinho.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -170,7 +172,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
         for(int i=0;i<this.listaProdutos.size();i++){
             soma+=this.listaProdutos.get(i).getPreco()*this.listaProdutos.get(i).getQuantidade();
         }
-        totalLB_TC.setText(soma+"");
+        totalLB_TC.setText(Math.round(soma*100.0)/100.0 + "");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

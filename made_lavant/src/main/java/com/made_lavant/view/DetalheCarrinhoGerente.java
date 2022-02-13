@@ -49,6 +49,7 @@ private ArrayList<Produto> listaDeProdutos;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Carrinho");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
 
@@ -167,7 +168,7 @@ private ArrayList<Produto> listaDeProdutos;
         for(int i=0;i<this.listaDeProdutos.size();i++){
             soma+=this.listaDeProdutos.get(i).getPreco()*this.listaDeProdutos.get(i).getQuantidade();
         }
-        totalLB_DCG.setText(soma+"");
+        totalLB_DCG.setText(Math.round(soma*100.0)/100.0 + "");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
