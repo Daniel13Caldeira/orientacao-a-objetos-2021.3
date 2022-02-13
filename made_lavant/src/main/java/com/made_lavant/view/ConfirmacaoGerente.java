@@ -170,7 +170,7 @@ public class ConfirmacaoGerente extends javax.swing.JFrame {
         for(int i=0;i<this.listaDeProdutos.size();i++){
             soma+=this.listaDeProdutos.get(i).getPreco()*this.listaDeProdutos.get(i).getQuantidade();
         }
-        totalLB_CONG.setText(Math.round(soma*100.0)/100.0 + "");
+        totalLB_CONG.setText(Math.round(soma*1000.0)/1000.0 + "");
         //Adiciona o nome do cliente a qual o carrinho pertence
         nomeClienteLB_CONG.setText(ClienteDados.buscarNome(CrudCarrinhoGerente.getCodigo()));
 

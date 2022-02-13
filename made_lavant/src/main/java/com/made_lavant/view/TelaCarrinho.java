@@ -172,7 +172,7 @@ public class TelaCarrinho extends javax.swing.JFrame {
         for(int i=0;i<this.listaProdutos.size();i++){
             soma+=this.listaProdutos.get(i).getPreco()*this.listaProdutos.get(i).getQuantidade();
         }
-        totalLB_TC.setText(Math.round(soma*100.0)/100.0 + "");
+        totalLB_TC.setText(Math.round(soma*1000.0)/1000.0 + "");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

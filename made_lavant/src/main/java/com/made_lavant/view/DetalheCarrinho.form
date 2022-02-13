@@ -206,7 +206,7 @@
             <Property name="text" type="java.lang.String" value="000"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Calcula o valor total do carrinho e atribui esse valor ao label&#xd;&#xa;double soma =0;&#xd;&#xa;this.listaDeProdutos = CarrinhoDados.getProdutos(CrudCarrinho.getCodigo());&#xd;&#xa;for(int i=0;i&lt;this.listaDeProdutos.size();i++){&#xd;&#xa;    soma+=this.listaDeProdutos.get(i).getPreco()*this.listaDeProdutos.get(i).getQuantidade();&#xd;&#xa;}&#xd;&#xa;totalLB_DC.setText(Math.round(soma*100.0)/100.0 + &quot;&quot;);&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Calcula o valor total do carrinho e atribui esse valor ao label&#xd;&#xa;double soma =0;&#xd;&#xa;this.listaDeProdutos = CarrinhoDados.getProdutos(CrudCarrinho.getCodigo());&#xd;&#xa;for(int i=0;i&lt;this.listaDeProdutos.size();i++){&#xd;&#xa;    soma+=this.listaDeProdutos.get(i).getPreco()*this.listaDeProdutos.get(i).getQuantidade();&#xd;&#xa;}&#xd;&#xa;totalLB_DC.setText(Math.round(soma*1000.0)/1000.0 + &quot;&quot;);&#xd;&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="sairBTN_DC">

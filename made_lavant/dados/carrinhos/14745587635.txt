@@ -1,3 +1,0 @@
-false
-busca
-0;7.0;

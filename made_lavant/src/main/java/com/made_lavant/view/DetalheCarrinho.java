@@ -180,7 +180,7 @@ public class DetalheCarrinho extends javax.swing.JFrame {
         for(int i=0;i<this.listaDeProdutos.size();i++){
             soma+=this.listaDeProdutos.get(i).getPreco()*this.listaDeProdutos.get(i).getQuantidade();
         }
-        totalLB_DC.setText(Math.round(soma*100.0)/100.0 + "");
+        totalLB_DC.setText(Math.round(soma*1000.0)/1000.0 + "");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

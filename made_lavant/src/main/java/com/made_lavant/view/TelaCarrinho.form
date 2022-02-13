@@ -152,7 +152,7 @@
             </Property>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePre" type="java.lang.String" value="//Calcula o pre&#xe7;o total dos produtos do carrinho&#xd;&#xa;double soma =0;&#xd;&#xa;this.listaProdutos = CarrinhoDados.getProdutos(Login.getCodigo());&#xd;&#xa;for(int i=0;i&lt;this.listaProdutos.size();i++){&#xd;&#xa;    soma+=this.listaProdutos.get(i).getPreco()*this.listaProdutos.get(i).getQuantidade();&#xd;&#xa;}&#xd;&#xa;totalLB_TC.setText(Math.round(soma*100.0)/100.0 + &quot;&quot;);&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePre" type="java.lang.String" value="//Calcula o pre&#xe7;o total dos produtos do carrinho&#xd;&#xa;double soma =0;&#xd;&#xa;this.listaProdutos = CarrinhoDados.getProdutos(Login.getCodigo());&#xd;&#xa;for(int i=0;i&lt;this.listaProdutos.size();i++){&#xd;&#xa;    soma+=this.listaProdutos.get(i).getPreco()*this.listaProdutos.get(i).getQuantidade();&#xd;&#xa;}&#xd;&#xa;totalLB_TC.setText(Math.round(soma*1000.0)/1000.0 + &quot;&quot;);&#xd;&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="madeLB_TC">

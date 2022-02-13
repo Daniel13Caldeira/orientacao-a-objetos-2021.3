@@ -1,2 +1,0 @@
-A0;a;null;null;null;null;null;null;1;
-B1;teste;null;null;null;null;null;null;1;
