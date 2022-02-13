@@ -56,6 +56,7 @@ public class PerfilFuncionario extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Perfil do Funcionário");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(45, 48, 71));
         jPanel1.setToolTipText("");

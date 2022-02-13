@@ -4,6 +4,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="Confirma&#xe7;&#xe3;o de Venda"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -29,10 +30,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -47,38 +45,34 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="sairBTN_CONG" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="289" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="topicoTotalLB_CONG" min="-2" pref="71" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="totalLB_CONG" min="-2" pref="69" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lavantLB_CONG" pref="91" max="32767" attributes="0"/>
-                      <Component id="madeLB_CONG" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="topicoNomeClienteLB_CONG" min="-2" pref="117" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          <Component id="nomeClienteLB_CONG" min="-2" pref="128" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="confirmarBTN_CONG" alignment="1" max="32767" attributes="0"/>
+                          <Component id="alterarCarrinhoBTN_CONG" alignment="1" max="32767" attributes="0"/>
+                          <Component id="cancelarBTN_CONG" alignment="1" min="-2" pref="181" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="lavantLB_CONG" max="32767" attributes="0"/>
+                          <Component id="madeLB_CONG" min="-2" pref="91" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="169" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="alterarCarrinhoBTN_CONG" max="32767" attributes="0"/>
-                      <Component id="confirmarBTN_CONG" max="32767" attributes="0"/>
-                      <Component id="cancelarBTN_CONG" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="topicoNomeClienteLB_CONG" min="-2" pref="117" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Component id="nomeClienteLB_CONG" min="-2" pref="128" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -91,22 +85,22 @@
                       <Component id="sairBTN_CONG" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="totalLB_CONG" alignment="3" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
                   <Component id="madeLB_CONG" min="-2" pref="31" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lavantLB_CONG" min="-2" pref="22" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="topicoNomeClienteLB_CONG" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="nomeClienteLB_CONG" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                  <Component id="alterarCarrinhoBTN_CONG" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                  <Component id="alterarCarrinhoBTN_CONG" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="cancelarBTN_CONG" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="cancelarBTN_CONG" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="confirmarBTN_CONG" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="confirmarBTN_CONG" min="-2" pref="50" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -193,7 +187,7 @@
             <Property name="text" type="java.lang.String" value="0000,00"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Calcula o total do pre&#xe7;o dos produtos no carrinho e adiciona esse valor ao label&#xd;&#xa;double soma =0;&#xd;&#xa;this.listaDeProdutos = CarrinhoDados.getProdutos(CrudCarrinhoGerente.getCodigo());&#xd;&#xa;for(int i=0;i&lt;this.listaDeProdutos.size();i++){&#xd;&#xa;    soma+=this.listaDeProdutos.get(i).getPreco()*this.listaDeProdutos.get(i).getQuantidade();&#xd;&#xa;}&#xd;&#xa;totalLB_CONG.setText(soma+&quot;&quot;);&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Calcula o total do pre&#xe7;o dos produtos no carrinho e adiciona esse valor ao label&#xd;&#xa;double soma =0;&#xd;&#xa;this.listaDeProdutos = CarrinhoDados.getProdutos(CrudCarrinhoGerente.getCodigo());&#xd;&#xa;for(int i=0;i&lt;this.listaDeProdutos.size();i++){&#xd;&#xa;    soma+=this.listaDeProdutos.get(i).getPreco()*this.listaDeProdutos.get(i).getQuantidade();&#xd;&#xa;}&#xd;&#xa;totalLB_CONG.setText(Math.round(soma*100.0)/100.0 + &quot;&quot;);&#xd;&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="topicoNomeClienteLB_CONG">

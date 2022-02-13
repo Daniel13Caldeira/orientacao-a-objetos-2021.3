@@ -70,6 +70,7 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lista de Produtos");
+        setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(45, 48, 71));
 
@@ -117,6 +118,7 @@ public class CrudProdutos_Cliente extends javax.swing.JFrame {
 
         jTProdCliente.setBackground(new java.awt.Color(45, 48, 71));
         jTProdCliente.setFont(jTProdCliente.getFont().deriveFont(jTProdCliente.getFont().getStyle() & ~java.awt.Font.BOLD, jTProdCliente.getFont().getSize()+4));
+        jTProdCliente.setForeground(new java.awt.Color(255, 255, 255));
         jTProdCliente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
